@@ -3,7 +3,7 @@ datosGapminder <- read.csv2("datosGapminder.csv")
 x = subset(datosGapminder, anio==2019 & Poblacion > 100000)
 t = 0.7
 
-#png("mortInf_RentaPC.png", width=1500, height=1100, res = 300)
+#png("mortInf_espVida.png", width=1500, height=1100, res = 300)
 x$RentaPC = x$RentaPC/1000
 k = dim(x)[1]
 contCodi = rep(NA, k)
@@ -36,7 +36,7 @@ for (i in 1:k) {
 par(mar = c(2, 2, 0, 5), xpd=TRUE)
 
 plot(x$mortalInf, x$EspVida, pch=21, col = "black", bg = contCodi2,
-        ylab = "", xlab = "", ylim = c(50, 85), xlim = c(-7, 125),
+        ylab = "", xlab = "", ylim = c(50, 85), xlim = c(-7, 120),
         xaxt='n', yaxt='n',  xaxs="i", cex=t+0.1)
 axis(1, seq(0, 120, by=10), tck=-0.02, las=1, cex.axis=t-0.07, padj = -0.4, xpd = NA)
 axis(2, seq(50, 85, by=5), tck=-0.02, las=1, cex.axis=t-0.07, hadj = -0.4, xpd = NA)

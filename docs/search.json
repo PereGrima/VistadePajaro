@@ -500,7 +500,10 @@
     "href": "10_Parte_Descriptiva.html",
     "title": "ESTADÍSTICA DESCRIPTIVA",
     "section": "",
-    "text": "Captar la información que contienen los datos solo a base de irlos mirando es, desde luego, misión imposible. No hace falta que el conjunto sea muy grande, nuestra mente no es hábil haciendo esa tarea. Cuando miramos un número se nos olvida otro y no somos capaces –aunque nos cueste reconocerlo– de hacernos una idea clara de todos los aspectos relevantes.\nSí somos buenos detectando patrones y analizando imágenes –en esto somos incluso mejores que los ordenadores, que nos piden que interpretemos una imagen para confirmar que somos personas y no máquinas–, por lo que analizar los datos a través de represetanciones gráficas es una excelente forma de hacerlo.\nTambién podemos resumir los datos en unos pocos valores que den una buena visión de los aspectos que interesa conocer. Es lo que llamamos síntesis numérica.\nTanto representaciones gráficas como valores de síntesis numérica los hay de varios tipos. Existen gráficos que son adecuados para representar la evolución de una característica, otros para mostrar su dispersión o la relación entre variables. Respecto a la síntesis numérica hay medidas que fijan su atención en diferentes aspectos de los datos y no hay que olvidar que la variabilidad también es muy importante.\nEn el siguiente capítulo tratamos la síntesis numérica de datos dando un repaso a las medidas de uso más habitual. En el siguiente tratamos sobre tipos de gráficos, cuales conviene usar en cada caso y caules deben evitarse."
+    "text": "Captar la información que contienen los datos solo a base de irlos mirando es, desde luego, misión imposible. No hace falta que el conjunto sea muy grande, nuestra mente no es hábil haciendo esa tarea. Cuando miramos un número se nos olvida otro y no somos capaces –aunque nos cueste reconocerlo– de hacernos una idea clara de todos los aspectos relevantes.\nSí somos buenos detectando patrones y analizando imágenes –en esto somos incluso mejores que los ordenadores, que nos piden que interpretemos una imagen para confirmar que somos personas y no máquinas–, por lo que analizar los datos a través de represetanciones gráficas es una excelente forma de hacerlo.\nTambién podemos resumir los datos en unos pocos valores que den una buena visión de los aspectos que interesa conocer. Es lo que llamamos síntesis numérica.\nTanto representaciones gráficas como valores de síntesis numérica los hay de varios tipos. Existen gráficos que son adecuados para representar la evolución de una característica, otros para mostrar su dispersión o la relación entre variables. Respecto a la síntesis numérica hay medidas que fijan su atención en diferentes aspectos de los datos y no hay que olvidar que la variabilidad también es muy importante.\nEn el siguiente capítulo tratamos la síntesis numérica de datos dando un repaso a las medidas de uso más habitual. En el siguiente tratamos sobre tipos de gráficos, cuales conviene usar en cada caso y caules deben evitarse.",
+    "crumbs": [
+      "ESTADÍSTICA DESCRIPTIVA"
+    ]
   },
   {
     "objectID": "11_sintesisNumerica.html#medidas-de-tendencia-central",
@@ -979,7 +982,7 @@
     "href": "12_graficos.html#frecuencias",
     "title": "2  Representaciones gráficas",
     "section": "2.4 Frecuencias",
-    "text": "2.4 Frecuencias\ntexto\n\n2.4.1 Diagramas de barras\ntexto\n\n\n2.4.2 Gráficos de donut\ntexto",
+    "text": "2.4 Frecuencias\ntexto\n\n\n\n\n\n\nFigura 2.4: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos\n\n\n\ntexto\n\n2.4.1 Diagramas de barras\ntexto\n\n\n2.4.2 Gráficos de donut\ntexto",
     "crumbs": [
       "ESTADÍSTICA DESCRIPTIVA",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Representaciones gráficas</span>"
@@ -990,7 +993,7 @@
     "href": "12_graficos.html#relación-entre-variables",
     "title": "2  Representaciones gráficas",
     "section": "2.3 Relación entre variables",
-    "text": "2.3 Relación entre variables\ntexto\n\n2.3.1 Las dos son cuantitativas: Diagramas bivariantes\ntexto\nV \ntexto\n\n\n\n\n\n\nFigura 2.4: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos\n\n\n\n\n\n2.3.2 Una es cuantitatica y la otra cualitativa: Boxplots estratificados\ntexto",
+    "text": "2.3 Relación entre variables\ntexto\n\n2.3.1 Las dos son cuantitativas: Diagramas bivariantes\ntexto\nV \ntexto\n Reflexión sobre esperanza de vida y ratios de mortalidad infantil.\nLa esperanza de vida está más relacionada con la mortalidad infantil que con alargar la vida de los ancianos.\nUna es cuantitatica y la otra cualitativa: ejemplo de Boxplots estratificados del principio.",
     "crumbs": [
       "ESTADÍSTICA DESCRIPTIVA",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Representaciones gráficas</span>"

@@ -123,12 +123,18 @@ V
 texto
 
 ![Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos ](representacionesGraficas/espeVida_RentaPC_mortInf.png){#fig-boxplotEstra fig-align="center" width="100%"}
+Reflexión sobre esperanza de vida y ratios de mortalidad infantil.
 
-### Una es cuantitatica y la otra cualitativa: Boxplots estratificados
+La esperanza de vida está más relacionada con la mortalidad infantil que con alargar la vida de los ancianos.
+
+Una es cuantitatica y la otra cualitativa: ejemplo de Boxplots estratificados del principio.
+
+
+## Frecuencias
 
 texto
 
-## Frecuencias
+![Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos ](representacionesGraficas/diagramaBarras.png){#fig-boxplotEstra fig-align="center" width="100%"}
 
 texto
 

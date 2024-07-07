@@ -1,19 +1,13 @@
 
 datosGapminder <- read.csv2("datosGapminder.csv")
-x = subset(datosGapminder, anio==2019 & Poblacion > 100000)
+x = subset(datosGapminder, anio==2019)
 t = 0.7
 
-#png("mortInf_RentaPC.png", width=1500, height=1100, res = 300)
+#png("espeVida_RentaPC.png", width=1500, height=1100, res = 300)
 x$RentaPC = x$RentaPC/1000
 k = dim(x)[1]
-contCodi = rep(NA, k)
+
 contCodi2 = rep(NA, k)
-af =0.5
-colAfrica = adjustcolor( "yellow", alpha.f = af)
-colAmerica = adjustcolor( "blue", alpha.f = af)
-colAsia = adjustcolor( "red", alpha.f = af)
-colEuropa = adjustcolor( "green", alpha.f = af)
-colOceania = adjustcolor( "orange", alpha.f = af)
 
 for (i in 1:k) {
   if (x$Cont[i] == "Africa") {

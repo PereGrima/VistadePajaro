@@ -146,6 +146,9 @@ texto
 
 texto
 
+![Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos ](representacionesGraficas/rectPropor.png){#fig-boxplotEstra fig-align="center" width="100%"}
+
+texto
 
 ## Gráficos a evitar
 

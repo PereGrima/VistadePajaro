@@ -80,15 +80,13 @@ texto deduciendo los valores de la mediana y los cuartiles. Podría poner antes 
 
 texto
 
-![](representacionesGraficas/boxplotEstratificado1.png){fig-align="center" width="100%"}
+![Hola](representacionesGraficas/boxplotEstratificado1.png){fig-align="center" width="100%"}
 
 ![Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos ](representacionesGraficas/boxplotEstratificado2.png){#fig-boxplotEstra fig-align="center" width="100%"}
 
 texto
 
 texto
-
-![Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos ](representacionesGraficas/boxplotEstratificado.png){#fig-boxplotEstra fig-align="center" width="100%"}
 
 
 ## Evolución
@@ -99,9 +97,17 @@ texto
 
 Evolución de la esperanza de vida en los países donde tienen más y donede tienen menos.
 
+![Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos ](representacionesGraficas/evoRentaPC.png){#fig-boxplotEstra fig-align="center" width="100%"}
+
+
 Asia: Afganistan, Japón. Menor de áfrica y otro con EV muy alta.
 
 También hay buenos datos en web de comunidd de Madrid: Indicadores de nacimientos.
+
+
+![Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos ](representacionesGraficas/evoEspVida.png){#fig-boxplotEstra fig-align="center" width="100%"}
+Que los nombres salgan por orden alfabético.
+
 ## Relación entre variables
 
 texto
@@ -109,6 +115,14 @@ texto
 ### Las dos son cuantitativas: Diagramas bivariantes
 
 texto
+
+V
+![Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos ](representacionesGraficas/espeVida_RentaPC.png){#fig-boxplotEstra fig-align="center" width="100%"}
+
+
+texto
+
+![Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos ](representacionesGraficas/espeVida_RentaPC_mortInf.png){#fig-boxplotEstra fig-align="center" width="100%"}
 
 ### Una es cuantitatica y la otra cualitativa: Boxplots estratificados
 

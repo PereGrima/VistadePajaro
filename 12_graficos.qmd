@@ -144,6 +144,10 @@ texto
 
 ### Gráficos de donut
 
+texto en la figura  [-@fig-donutPie]. Recortar arriba y abajo con programa de manipulación de imágenes.
+
+![Diagrama de donut y de pastel](representacionesGraficas/donutPiePoblacion.png){#fig-donutPie fig-align="center" width="100%"}
+
 texto
 
 ![Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos ](representacionesGraficas/rectPropor.png){#fig-boxplotEstra fig-align="center" width="100%"}

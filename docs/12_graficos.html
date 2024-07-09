@@ -340,7 +340,15 @@ window.Quarto = {
   <li><a href="#diagramas-de-barras" id="toc-diagramas-de-barras" class="nav-link" data-scroll-target="#diagramas-de-barras"><span class="header-section-number">2.4.1</span> Diagramas de barras</a></li>
   <li><a href="#gráficos-de-donut" id="toc-gráficos-de-donut" class="nav-link" data-scroll-target="#gráficos-de-donut"><span class="header-section-number">2.4.2</span> Gráficos de donut</a></li>
   </ul></li>
-  <li><a href="#gráficos-a-evitar" id="toc-gráficos-a-evitar" class="nav-link" data-scroll-target="#gráficos-a-evitar"><span class="header-section-number">2.5</span> Gráficos a evitar</a></li>
+  <li><a href="#gráficos-a-evitar" id="toc-gráficos-a-evitar" class="nav-link" data-scroll-target="#gráficos-a-evitar"><span class="header-section-number">2.5</span> Gráficos a evitar</a>
+  <ul class="collapse">
+  <li><a href="#gráficos-con-tres-dimensiones" id="toc-gráficos-con-tres-dimensiones" class="nav-link" data-scroll-target="#gráficos-con-tres-dimensiones"><span class="header-section-number">2.5.1</span> Gráficos con tres dimensiones</a></li>
+  <li><a href="#diagramas-de-pastel-especialmente-con-tres-dimensiones" id="toc-diagramas-de-pastel-especialmente-con-tres-dimensiones" class="nav-link" data-scroll-target="#diagramas-de-pastel-especialmente-con-tres-dimensiones"><span class="header-section-number">2.5.2</span> Diagramas de pastel, especialmente con tres dimensiones</a></li>
+  <li><a href="#gráficos-que-ocupan-mucho-espacio-y-contienen-poca-información" id="toc-gráficos-que-ocupan-mucho-espacio-y-contienen-poca-información" class="nav-link" data-scroll-target="#gráficos-que-ocupan-mucho-espacio-y-contienen-poca-información"><span class="header-section-number">2.5.3</span> Gráficos que ocupan mucho espacio y contienen poca información</a></li>
+  <li><a href="#gráficos-con-escalas-tendenciosas" id="toc-gráficos-con-escalas-tendenciosas" class="nav-link" data-scroll-target="#gráficos-con-escalas-tendenciosas"><span class="header-section-number">2.5.4</span> Gráficos con escalas tendenciosas</a></li>
+  <li><a href="#comparar-situaciones-usando-distintas-escalas" id="toc-comparar-situaciones-usando-distintas-escalas" class="nav-link" data-scroll-target="#comparar-situaciones-usando-distintas-escalas"><span class="header-section-number">2.5.5</span> Comparar situaciones usando distintas escalas</a></li>
+  <li><a href="#rectas-de-tendencia-cuando-los-puntos-están-muy-agrupados-en-una-parte-del-diagrama" id="toc-rectas-de-tendencia-cuando-los-puntos-están-muy-agrupados-en-una-parte-del-diagrama" class="nav-link" data-scroll-target="#rectas-de-tendencia-cuando-los-puntos-están-muy-agrupados-en-una-parte-del-diagrama"><span class="header-section-number">2.5.6</span> Rectas de tendencia cuando los puntos están muy agrupados en una parte del diagrama</a></li>
+  </ul></li>
   <li><a href="#malos-usos-y-manipulaciones" id="toc-malos-usos-y-manipulaciones" class="nav-link" data-scroll-target="#malos-usos-y-manipulaciones"><span class="header-section-number">2.6</span> Malos usos y manipulaciones</a></li>
   </ul>
 </nav>
@@ -685,23 +693,48 @@ Figura&nbsp;2.5: Diagrama de donut y de pastel
 </figcaption>
 </figure>
 </div>
-<p>texto</p>
+<p>Información más clara y mejor uso de la tinta.</p>
 <div id="fig-boxplotEstra" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-boxplotEstra-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="representacionesGraficas/rectPropor.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="representacionesGraficas/rectPropor_conRect.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-boxplotEstra-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;2.6: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos
 </figcaption>
 </figure>
 </div>
-<p>texto</p>
+<p>En el recuadro se incluyen 90 países, casi la mitad del total de paises considerados (196), pero solo representa el ***% de la poblaicón mundial.</p>
+<p>Posible polígono de frecuencias y diagrama de Pareto.</p>
 </section>
 </section>
 <section id="gráficos-a-evitar" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="gráficos-a-evitar"><span class="header-section-number">2.5</span> Gráficos a evitar</h2>
+<p>veamos algunas tentaciones que conviene evitar, especialmente en trabajos académicos donde el objetivo debe ser transmitir la información de la forma más clara y directa posible.</p>
+<section id="gráficos-con-tres-dimensiones" class="level3" data-number="2.5.1">
+<h3 data-number="2.5.1" class="anchored" data-anchor-id="gráficos-con-tres-dimensiones"><span class="header-section-number">2.5.1</span> Gráficos con tres dimensiones</h3>
+<p>Deben evitarse porque la profundidad no aporta ninguna información y dificulta la interpretación de las escalas. Algunas veces se utilizan en contextos publicitarios en los que se prioriza el impacto visual.</p>
+</section>
+<section id="diagramas-de-pastel-especialmente-con-tres-dimensiones" class="level3" data-number="2.5.2">
+<h3 data-number="2.5.2" class="anchored" data-anchor-id="diagramas-de-pastel-especialmente-con-tres-dimensiones"><span class="header-section-number">2.5.2</span> Diagramas de pastel, especialmente con tres dimensiones</h3>
 <p>texto</p>
+</section>
+<section id="gráficos-que-ocupan-mucho-espacio-y-contienen-poca-información" class="level3" data-number="2.5.3">
+<h3 data-number="2.5.3" class="anchored" data-anchor-id="gráficos-que-ocupan-mucho-espacio-y-contienen-poca-información"><span class="header-section-number">2.5.3</span> Gráficos que ocupan mucho espacio y contienen poca información</h3>
+<p>texto</p>
+</section>
+<section id="gráficos-con-escalas-tendenciosas" class="level3" data-number="2.5.4">
+<h3 data-number="2.5.4" class="anchored" data-anchor-id="gráficos-con-escalas-tendenciosas"><span class="header-section-number">2.5.4</span> Gráficos con escalas tendenciosas</h3>
+<p>texto</p>
+</section>
+<section id="comparar-situaciones-usando-distintas-escalas" class="level3" data-number="2.5.5">
+<h3 data-number="2.5.5" class="anchored" data-anchor-id="comparar-situaciones-usando-distintas-escalas"><span class="header-section-number">2.5.5</span> Comparar situaciones usando distintas escalas</h3>
+<p>texto</p>
+</section>
+<section id="rectas-de-tendencia-cuando-los-puntos-están-muy-agrupados-en-una-parte-del-diagrama" class="level3" data-number="2.5.6">
+<h3 data-number="2.5.6" class="anchored" data-anchor-id="rectas-de-tendencia-cuando-los-puntos-están-muy-agrupados-en-una-parte-del-diagrama"><span class="header-section-number">2.5.6</span> Rectas de tendencia cuando los puntos están muy agrupados en una parte del diagrama</h3>
+<p>texto</p>
+</section>
 </section>
 <section id="malos-usos-y-manipulaciones" class="level2" data-number="2.6">
 <h2 data-number="2.6" class="anchored" data-anchor-id="malos-usos-y-manipulaciones"><span class="header-section-number">2.6</span> Malos usos y manipulaciones</h2>

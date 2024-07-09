@@ -148,15 +148,43 @@ texto en la figura  [-@fig-donutPie]. Recortar arriba y abajo con programa de ma
 
 ![Diagrama de donut y de pastel](representacionesGraficas/donutPiePoblacion.png){#fig-donutPie fig-align="center" width="100%"}
 
-texto
+Información más clara y mejor uso de la tinta.
 
-![Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos ](representacionesGraficas/rectPropor.png){#fig-boxplotEstra fig-align="center" width="100%"}
+![Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos ](representacionesGraficas/rectPropor_conRect.png){#fig-boxplotEstra fig-align="center" width="100%"}
 
-texto
+En el recuadro se incluyen 90 países, casi la mitad del total de paises considerados (196), pero solo representa el ***% de la poblaicón mundial.
+
+Posible polígono de frecuencias y diagrama de Pareto.
+
 
 ## Gráficos a evitar
 
+veamos algunas tentaciones que conviene evitar, especialmente en trabajos académicos donde el objetivo debe ser transmitir la información de la forma más clara y directa posible.
+
+### Gráficos con tres dimensiones
+
+Deben evitarse porque la profundidad no aporta ninguna información y dificulta la interpretación de las escalas. Algunas veces se utilizan en contextos publicitarios en los que se prioriza el impacto visual.
+
+### Diagramas de pastel, especialmente con tres dimensiones
+
 texto
+
+### Gráficos que ocupan mucho espacio y contienen poca información
+
+texto
+
+### Gráficos con escalas tendenciosas
+
+texto
+
+### Comparar situaciones usando distintas escalas
+
+texto
+
+### Rectas de tendencia cuando los puntos están muy agrupados en una parte del diagrama
+
+texto
+
 
 ## Malos usos y manipulaciones
 

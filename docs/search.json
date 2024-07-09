@@ -982,7 +982,7 @@
     "href": "12_graficos.html#frecuencias",
     "title": "2  Representaciones gráficas",
     "section": "2.4 Frecuencias",
-    "text": "2.4 Frecuencias\ntexto\n\n\n\n\n\n\nFigura 2.4: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos\n\n\n\ntexto\n\n2.4.1 Diagramas de barras\ntexto\n\n\n2.4.2 Gráficos de donut\ntexto en la figura 2.5. Recortar arriba y abajo con programa de manipulación de imágenes.\n\n\n\n\n\n\nFigura 2.5: Diagrama de donut y de pastel\n\n\n\ntexto\n\n\n\n\n\n\nFigura 2.6: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos\n\n\n\ntexto",
+    "text": "2.4 Frecuencias\ntexto\n\n\n\n\n\n\nFigura 2.4: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos\n\n\n\ntexto\n\n2.4.1 Diagramas de barras\ntexto\n\n\n2.4.2 Gráficos de donut\ntexto en la figura 2.5. Recortar arriba y abajo con programa de manipulación de imágenes.\n\n\n\n\n\n\nFigura 2.5: Diagrama de donut y de pastel\n\n\n\nInformación más clara y mejor uso de la tinta.\n\n\n\n\n\n\nFigura 2.6: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos\n\n\n\nEn el recuadro se incluyen 90 países, casi la mitad del total de paises considerados (196), pero solo representa el ***% de la poblaicón mundial.\nPosible polígono de frecuencias y diagrama de Pareto.",
     "crumbs": [
       "ESTADÍSTICA DESCRIPTIVA",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Representaciones gráficas</span>"
@@ -1004,7 +1004,7 @@
     "href": "12_graficos.html#gráficos-a-evitar",
     "title": "2  Representaciones gráficas",
     "section": "2.5 Gráficos a evitar",
-    "text": "2.5 Gráficos a evitar\ntexto",
+    "text": "2.5 Gráficos a evitar\nveamos algunas tentaciones que conviene evitar, especialmente en trabajos académicos donde el objetivo debe ser transmitir la información de la forma más clara y directa posible.\n\n2.5.1 Gráficos con tres dimensiones\nDeben evitarse porque la profundidad no aporta ninguna información y dificulta la interpretación de las escalas. Algunas veces se utilizan en contextos publicitarios en los que se prioriza el impacto visual.\n\n\n2.5.2 Diagramas de pastel, especialmente con tres dimensiones\ntexto\n\n\n2.5.3 Gráficos que ocupan mucho espacio y contienen poca información\ntexto\n\n\n2.5.4 Gráficos con escalas tendenciosas\ntexto\n\n\n2.5.5 Comparar situaciones usando distintas escalas\ntexto\n\n\n2.5.6 Rectas de tendencia cuando los puntos están muy agrupados en una parte del diagrama\ntexto",
     "crumbs": [
       "ESTADÍSTICA DESCRIPTIVA",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Representaciones gráficas</span>"

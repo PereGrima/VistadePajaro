@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.555">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -47,13 +47,7 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
+  "limit": 20,
   "language": {
     "search-no-results-text": "Sin resultados",
     "search-matching-documents-text": "documentos encontrados",
@@ -62,7 +56,6 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "resultado adicional en este documento",
     "search-more-matches-text": "resultados adicionales en este documento",
     "search-clear-button-title": "Borrar",
-    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancelar",
     "search-submit-button-title": "Enviar",
     "search-label": "Buscar"
@@ -73,33 +66,6 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
 <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -109,12 +75,12 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./10_Parte_Descriptiva.html">ESTADÍSTICA DESCRIPTIVA</a></li><li class="breadcrumb-item"><a href="./12_graficos.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Representaciones gráficas</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./10_Parte_Descriptiva.html">ESTADÍSTICA DESCRIPTIVA</a></li><li class="breadcrumb-item"><a href="./12_graficos.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Representaciones gráficas</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
@@ -124,7 +90,7 @@ window.Quarto = {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Estadística a vista de pájaro</a> 
@@ -314,7 +280,7 @@ window.Quarto = {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -356,7 +322,7 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./10_Parte_Descriptiva.html">ESTADÍSTICA DESCRIPTIVA</a></li><li class="breadcrumb-item"><a href="./12_graficos.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Representaciones gráficas</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Representaciones gráficas</span></h1>
 </div>
@@ -371,19 +337,13 @@ window.Quarto = {
   </div>
   
 
-
 </header>
 
-
-<p>Empezamos planteando un reto: El dueño de una panadería sospecha que las barras de pan que está vendiendo tienen un peso demasiado variable, de forma que algunas pueden estar por debajo del límite que marca la ley. El pan se elabora en dos máquinas que son utilizadas por dos operarios, uno por la mañana y otro por la tarde. La tabla <a href="#tbl-panaderia" class="quarto-xref"><span>2.1</span></a> contiene los pesos (en gramos) de las muestras que se han ido recogiendo durante 20 días.</p>
+<p>Empezamos planteando un reto: El dueño de una panadería sospecha que las barras de pan que está vendiendo tienen un peso demasiado variable, de forma que algunas pueden estar por debajo del límite que marca la ley. El pan se elabora en dos máquinas que son utilizadas por dos operarios, uno por la mañana y otro por la tarde. La tabla <a href="#tbl-panaderia"><span>2.1</span></a> contiene los pesos (en gramos) de las muestras que se han ido recogiendo durante 20 días.</p>
 <div style="font-size:13px">
-<div id="tbl-panaderia" class="quarto-float anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-panaderia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Tabla&nbsp;2.1: Peso de barras de pan elaboradas en una panadería
-</figcaption>
-<div aria-describedby="tbl-panaderia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
+<div id="tbl-panaderia" class="anchored">
+<table class="table">
+<caption>Tabla&nbsp;2.1: Peso de barras de pan elaboradas en una panadería</caption>
 <colgroup>
 <col style="width: 5%">
 <col style="width: 15%">
@@ -498,14 +458,12 @@ A<br>
 </tbody>
 </table>
 </div>
-</figure>
-</div>
 </div>
 <p>El peso debe ser de 210 <span class="math inline">\(\pm\)</span> 10 g. Las preguntas que nos planteamos son: ¿Existe algún problema? ¿Qué está pasando? ¿qué hay que hacer para resolver el problema, si es que existe?</p>
 <p>Si trata de sacar conclusiones mirando los números seguramente se equivocará. Aunque en este caso solo hay 160 valores, analizarlos “a ojo” siempre es arriesgado. Tampoco es una buena idea empezar calculado medias y desviaciones típicas o, peor todavía, emnpezar planteando test estadísticos más o menos sofisticados.</p>
 <p>Cuando queremos analizar datos, lo primero que siempre conviene hacer es representarlos gráficamente. Así tenemos una primera idea –muchas veces ya suficiente– de lo que está pasando.</p>
 <p>En la figura +++++ por máquina y operario.</p>
-<p><img src="representacionesGraficas/histogramaPanaderia.png" id="fig-panaderia" class="img-fluid quarto-figure quarto-figure-center anchored" style="width:90.0%" alt="Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos"> Moraleja: +++++++++++++</p>
+<p><img src="representacionesGraficas/histogramaPanaderia.png" id="fig-panaderia" class="img-fluid" style="width:90.0%" data-fig-align="center" alt="Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos"> Moraleja: +++++++++++++</p>
 <section id="forma-de-la-distribución-valro-central-y-dispersión" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="forma-de-la-distribución-valro-central-y-dispersión"><span class="header-section-number">2.1</span> Forma de la distribución, valro central y dispersión</h2>
 <p>El tipo de gráfico que hemos usado para analizar los datos de la panadería</p>
@@ -524,7 +482,7 @@ A<br>
 <h3 data-number="2.1.3" class="anchored" data-anchor-id="boxplot"><span class="header-section-number">2.1.3</span> Boxplot</h3>
 <p>texto</p>
 <div style="font-size:13px">
-<table class="caption-top table">
+<table class="table">
 <colgroup>
 <col style="width: 7%">
 <col style="width: 4%">
@@ -597,31 +555,23 @@ A<br>
 </table>
 </div>
 <p>texto deduciendo los valores de la mediana y los cuartiles. Podría poner antes el rango intercuartílico.</p>
-<div id="fig-boxplot" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-boxplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="representacionesGraficas/boxplot.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-boxplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;2.1: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos
-</figcaption>
+<div id="fig-boxplot" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="representacionesGraficas/boxplot.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption class="figure-caption">Figura&nbsp;2.1: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos</figcaption>
 </figure>
 </div>
 <p>texto</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="representacionesGraficas/boxplotEstratificado1.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Hola</figcaption>
+<figcaption class="figure-caption">Hola</figcaption>
 </figure>
 </div>
-<div id="fig-boxplotEstra" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-boxplotEstra-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="representacionesGraficas/boxplotEstratificado2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-boxplotEstra-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;2.2: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos
-</figcaption>
+<div id="fig-boxplotEstra" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="representacionesGraficas/boxplotEstratificado2.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption class="figure-caption">Figura&nbsp;2.2: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos</figcaption>
 </figure>
 </div>
 <p>texto</p>
@@ -634,19 +584,15 @@ Figura&nbsp;2.2: Esquema de obtención de la mediana y los cuartiles en un conju
 <section id="diagrama-en-serie-de-tiempo" class="level3" data-number="2.2.1">
 <h3 data-number="2.2.1" class="anchored" data-anchor-id="diagrama-en-serie-de-tiempo"><span class="header-section-number">2.2.1</span> Diagrama en serie de tiempo</h3>
 <p>Evolución de la esperanza de vida en los países donde tienen más y donede tienen menos.</p>
-<div id="fig-boxplotEstra" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-boxplotEstra-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="representacionesGraficas/evoRentaPC.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-boxplotEstra-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;2.3: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos
-</figcaption>
+<div id="fig-boxplotEstra" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="representacionesGraficas/evoRentaPC.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption class="figure-caption">Figura&nbsp;2.3: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos</figcaption>
 </figure>
 </div>
 <p>Asia: Afganistan, Japón. Menor de áfrica y otro con EV muy alta.</p>
 <p>También hay buenos datos en web de comunidd de Madrid: Indicadores de nacimientos.</p>
-<p><img src="representacionesGraficas/evoEspVida.png" id="fig-boxplotEstra" class="img-fluid quarto-figure quarto-figure-center anchored" style="width:100.0%" alt="Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos"> Que los nombres salgan por orden alfabético.</p>
+<p><img src="representacionesGraficas/evoEspVida.png" id="fig-boxplotEstra" class="img-fluid" style="width:100.0%" data-fig-align="center" alt="Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos"> Que los nombres salgan por orden alfabético.</p>
 </section>
 </section>
 <section id="relación-entre-variables" class="level2" data-number="2.3">
@@ -655,9 +601,9 @@ Figura&nbsp;2.3: Esquema de obtención de la mediana y los cuartiles en un conju
 <section id="las-dos-son-cuantitativas-diagramas-bivariantes" class="level3" data-number="2.3.1">
 <h3 data-number="2.3.1" class="anchored" data-anchor-id="las-dos-son-cuantitativas-diagramas-bivariantes"><span class="header-section-number">2.3.1</span> Las dos son cuantitativas: Diagramas bivariantes</h3>
 <p>texto</p>
-<p>V <img src="representacionesGraficas/espeVida_RentaPC.png" id="fig-boxplotEstra" class="img-fluid quarto-figure quarto-figure-center anchored" style="width:100.0%" alt="Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos"></p>
+<p>V <img src="representacionesGraficas/espeVida_RentaPC.png" id="fig-boxplotEstra" class="img-fluid" style="width:100.0%" data-fig-align="center" alt="Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos"></p>
 <p>texto</p>
-<p><img src="representacionesGraficas/espeVida_RentaPC_mortInf.png" id="fig-boxplotEstra" class="img-fluid quarto-figure quarto-figure-center anchored" style="width:100.0%" alt="Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos"> Reflexión sobre esperanza de vida y ratios de mortalidad infantil.</p>
+<p><img src="representacionesGraficas/espeVida_RentaPC_mortInf.png" id="fig-boxplotEstra" class="img-fluid" style="width:100.0%" data-fig-align="center" alt="Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos"> Reflexión sobre esperanza de vida y ratios de mortalidad infantil.</p>
 <p>La esperanza de vida está más relacionada con la mortalidad infantil que con alargar la vida de los ancianos.</p>
 <p>Una es cuantitatica y la otra cualitativa: ejemplo de Boxplots estratificados del principio.</p>
 </section>
@@ -665,14 +611,10 @@ Figura&nbsp;2.3: Esquema de obtención de la mediana y los cuartiles en un conju
 <section id="frecuencias" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="frecuencias"><span class="header-section-number">2.4</span> Frecuencias</h2>
 <p>texto</p>
-<div id="fig-boxplotEstra" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-boxplotEstra-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="representacionesGraficas/diagramaBarras.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-boxplotEstra-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;2.4: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos
-</figcaption>
+<div id="fig-boxplotEstra" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="representacionesGraficas/diagramaBarras.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption class="figure-caption">Figura&nbsp;2.4: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos</figcaption>
 </figure>
 </div>
 <p>texto</p>
@@ -682,26 +624,18 @@ Figura&nbsp;2.4: Esquema de obtención de la mediana y los cuartiles en un conju
 </section>
 <section id="gráficos-de-donut" class="level3" data-number="2.4.2">
 <h3 data-number="2.4.2" class="anchored" data-anchor-id="gráficos-de-donut"><span class="header-section-number">2.4.2</span> Gráficos de donut</h3>
-<p>texto en la figura <a href="#fig-donutPie" class="quarto-xref"><span>2.5</span></a>. Recortar arriba y abajo con programa de manipulación de imágenes.</p>
-<div id="fig-donutPie" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-donutPie-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="representacionesGraficas/donutPiePoblacion.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-donutPie-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;2.5: Diagrama de donut y de pastel
-</figcaption>
+<p>texto en la figura <a href="#fig-donutPie"><span>2.5</span></a>. Recortar arriba y abajo con programa de manipulación de imágenes.</p>
+<div id="fig-donutPie" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="representacionesGraficas/donutPiePoblacion.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption class="figure-caption">Figura&nbsp;2.5: Diagrama de donut y de pastel</figcaption>
 </figure>
 </div>
 <p>Información más clara y mejor uso de la tinta.</p>
-<div id="fig-boxplotEstra" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-boxplotEstra-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="representacionesGraficas/rectPropor_conRect.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-boxplotEstra-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;2.6: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos
-</figcaption>
+<div id="fig-boxplotEstra" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="representacionesGraficas/rectPropor_conRect.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption class="figure-caption">Figura&nbsp;2.6: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos</figcaption>
 </figure>
 </div>
 <p>En el recuadro se incluyen 90 países, casi la mitad del total de paises considerados (196), pero solo representa el ***% de la poblaicón mundial.</p>
@@ -823,27 +757,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/peregrima\.github\.io\/VistaDePajaro\/");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+  function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
+      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -853,17 +770,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start',
+      placement: 'bottom-start'
     };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -875,130 +783,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
-          }
-        }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
-        }
-        return container.innerHTML
-      } else {
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(note);
-        }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
-      }
-    }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
-          }
-        } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
-          .then(res => res.text())
-          .then(html => {
-            const parser = new DOMParser();
-            const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
-            if (note !== null) {
-              const html = processXRef(id, note);
-              instance.setContent(html);
-            } 
-          }).finally(() => {
-            instance.enable();
-            instance.show();
-          });
-        }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
+      return note.innerHTML;
     });
   }
       let selectedAnnoteEl;
@@ -1042,7 +827,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
-            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1068,32 +852,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1155,18 +913,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./11_sintesisNumerica.html" class="pagination-link" aria-label="Síntesis numérica de datos">
+      <a href="./11_sintesisNumerica.html" class="pagination-link">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Síntesis numérica de datos</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./20_Parte_Variabilidad.html" class="pagination-link" aria-label="SOBRE LA VARIABILIDAD">
+      <a href="./20_Parte_Variabilidad.html" class="pagination-link">
         <span class="nav-page-text">SOBRE LA VARIABILIDAD</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-
 
 
 

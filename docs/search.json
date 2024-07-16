@@ -4,10 +4,7 @@
     "href": "index.html",
     "title": "Estadística a vista de pájaro",
     "section": "",
-    "text": "PRESENTACIÓN\nTodo esto son pruebas.\nDe qué va este libro\nQué pretende\nCuales son sus peculiaridades\nA quien va dirigido. Lo empezamos a escribir pensando en los profesores de enseñanza secundaria, con la idea de dar una visión general de la estadística, más amplia de la que ellos deben enseñar, que les diera perspectiva y seguridad transmitiendo las ideas clave que deben quedar en los alumnos, evitando planteamientos o enfoques exclusivamente matemáticos.\nAlgunas ideas clave:\n\nDistinguir el conocimiento basado en tradiciones, suposiciones o en el “siempre se ha considerado así” del conocimiento científico basado en datos.\nRecoger datos con la calidad y la representatividad requerida no es fácil. Conviene conocer algunas ideas clave a este respecto.\nLa información que contienen los datos se puede dar con medidas estadísticas o con representaciones gráficas.\nLos datos siempre están afectados por una cierta variabilidad aleatoria. Hay técnicas para separar la señal del ruido. Tan malo es perderse la señan como sobreinterpretar el ruido.\n\nAunque el contenido de este texto es de un nivel más básico que el habitual de los cursos generales de estadística que se imparten en muchos grados universitarios, creemos que si se entienden y se interiorizan estas ideas podemos considerar que se han cumplido los objetivos que se plantean en estos cursos.\n\nTodos los datos que se usan están aquí\n\nLicencia\n\nLA PORTADA ES DE OTRO LIBRO. Solo para ver como queda.",
-    "crumbs": [
-      "PRESENTACIÓN"
-    ]
+    "text": "PRESENTACIÓN\nTodo esto son pruebas.\nDe qué va este libro\nQué pretende\nCuales son sus peculiaridades\nA quien va dirigido. Lo empezamos a escribir pensando en los profesores de enseñanza secundaria, con la idea de dar una visión general de la estadística, más amplia de la que ellos deben enseñar, que les diera perspectiva y seguridad transmitiendo las ideas clave que deben quedar en los alumnos, evitando planteamientos o enfoques exclusivamente matemáticos.\nAlgunas ideas clave:\n\nDistinguir el conocimiento basado en tradiciones, suposiciones o en el “siempre se ha considerado así” del conocimiento científico basado en datos.\nRecoger datos con la calidad y la representatividad requerida no es fácil. Conviene conocer algunas ideas clave a este respecto.\nLa información que contienen los datos se puede dar con medidas estadísticas o con representaciones gráficas.\nLos datos siempre están afectados por una cierta variabilidad aleatoria. Hay técnicas para separar la señal del ruido. Tan malo es perderse la señan como sobreinterpretar el ruido.\n\nAunque el contenido de este texto es de un nivel más básico que el habitual de los cursos generales de estadística que se imparten en muchos grados universitarios, creemos que si se entienden y se interiorizan estas ideas podemos considerar que se han cumplido los objetivos que se plantean en estos cursos.\n\nTodos los datos que se usan están aquí\n\nLicencia\n\nLA PORTADA ES DE OTRO LIBRO. Solo para ver como queda."
   },
   {
     "objectID": "presentacion.html",
@@ -63,10 +60,7 @@
     "href": "references.html",
     "title": "Referencias",
     "section": "",
-    "text": "El País, 2024. https://elpais.com/economia/negocios/2024-05-04/mi-jefe-cobra-77-veces-mas-que-yo-estas-son-las-empresas-espanolas-con-mayor-desigualdad-salarial-entre-directivos-y-empleados.html.\n\n\nDraper, N. R., and H. Smith. 1998. Applied Regression Analysis.\n3rd ed. USA: John Wiley & Sons, Inc.\n\n\nINE. 2023. “Encuesta Anual de Estructura Salarial. Año\n2021.” Instituto Nacional de EStadística (INE), España. https://www.ine.es/prensa/ees_2021.pdf.\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.\n\n\nMontgomery, D. C., and E. A. Peck. 1992. Introduction to Linear\nRegression Analysis. 2nd ed. USA: John Wiley & Sons, Inc.\n\n\nNavidi, W. 2010. Statistics for Engineers and Scientists. 3rd\ned. USA: McGraw Hill.\n\n\nPeña, D. 2002. Regresión y Diseño de Experimentos. 1st ed.\nMadrid: Alianza Editorial.\n\n\nRyan, T. A., B. L Joiner, and B. F. Ryan. 1976. The Minitab Student\nHandbook. 1st ed. USA: Duxbury Press.\n\n\nWeisberg, S. 2014. Applied Linear Regression. 4th ed. USA: John\nWiley & Sons, Inc.\n\n\nWilson, M. E., and L. E. Mather. 1974. “Lefe Expectancy.”\nJournal of the American Medical Association 229 (11): 1421–22.\n\n\nWolfram_Data_Repository. 2016. Sample Data: Black Cherry Trees. https://doi.org/10.24097/wolfram.76288.data.",
-    "crumbs": [
-      "Referencias"
-    ]
+    "text": "El País, 2024. https://elpais.com/economia/negocios/2024-05-04/mi-jefe-cobra-77-veces-mas-que-yo-estas-son-las-empresas-espanolas-con-mayor-desigualdad-salarial-entre-directivos-y-empleados.html.\n\n\nDraper, N. R., and H. Smith. 1998. Applied Regression Analysis.\n3rd ed. USA: John Wiley & Sons, Inc.\n\n\nINE. 2023. “Encuesta Anual de Estructura Salarial. Año\n2021.” Instituto Nacional de EStadística (INE), España. https://www.ine.es/prensa/ees_2021.pdf.\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.\n\n\nMontgomery, D. C., and E. A. Peck. 1992. Introduction to Linear\nRegression Analysis. 2nd ed. USA: John Wiley & Sons, Inc.\n\n\nNavidi, W. 2010. Statistics for Engineers and Scientists. 3rd\ned. USA: McGraw Hill.\n\n\nPeña, D. 2002. Regresión y Diseño de Experimentos. 1st ed.\nMadrid: Alianza Editorial.\n\n\nRyan, T. A., B. L Joiner, and B. F. Ryan. 1976. The Minitab Student\nHandbook. 1st ed. USA: Duxbury Press.\n\n\nWeisberg, S. 2014. Applied Linear Regression. 4th ed. USA: John\nWiley & Sons, Inc.\n\n\nWilson, M. E., and L. E. Mather. 1974. “Lefe Expectancy.”\nJournal of the American Medical Association 229 (11): 1421–22.\n\n\nWolfram_Data_Repository. 2016. Sample Data: Black Cherry Trees. https://doi.org/10.24097/wolfram.76288.data."
   },
   {
     "objectID": "correlacion.html#necesidad-de-una-medida-de-relación",
@@ -500,10 +494,7 @@
     "href": "10_Parte_Descriptiva.html",
     "title": "ESTADÍSTICA DESCRIPTIVA",
     "section": "",
-    "text": "Captar la información que contienen los datos solo a base de irlos mirando es, desde luego, misión imposible. No hace falta que el conjunto sea muy grande, nuestra mente no es hábil haciendo esa tarea. Cuando miramos un número se nos olvida otro y no somos capaces –aunque nos cueste reconocerlo– de hacernos una idea clara de todos los aspectos relevantes.\nSí somos buenos detectando patrones y analizando imágenes –en esto somos incluso mejores que los ordenadores, que nos piden que interpretemos una imagen para confirmar que somos personas y no máquinas–, por lo que analizar los datos a través de represetanciones gráficas es una excelente forma de hacerlo.\nTambién podemos resumir los datos en unos pocos valores que den una buena visión de los aspectos que interesa conocer. Es lo que llamamos síntesis numérica.\nTanto representaciones gráficas como valores de síntesis numérica los hay de varios tipos. Existen gráficos que son adecuados para representar la evolución de una característica, otros para mostrar su dispersión o la relación entre variables. Respecto a la síntesis numérica hay medidas que fijan su atención en diferentes aspectos de los datos y no hay que olvidar que la variabilidad también es muy importante.\nEn el siguiente capítulo tratamos la síntesis numérica de datos dando un repaso a las medidas de uso más habitual. En el siguiente tratamos sobre tipos de gráficos, cuales conviene usar en cada caso y caules deben evitarse.",
-    "crumbs": [
-      "ESTADÍSTICA DESCRIPTIVA"
-    ]
+    "text": "Captar la información que contienen los datos solo a base de irlos mirando es, desde luego, misión imposible. No hace falta que el conjunto sea muy grande, nuestra mente no es hábil haciendo esa tarea. Cuando miramos un número se nos olvida otro y no somos capaces –aunque nos cueste reconocerlo– de hacernos una idea clara de todos los aspectos relevantes.\nSí somos buenos detectando patrones y analizando imágenes –en esto somos incluso mejores que los ordenadores, que nos piden que interpretemos una imagen para confirmar que somos personas y no máquinas–, por lo que analizar los datos a través de represetanciones gráficas es una excelente forma de hacerlo.\nTambién podemos resumir los datos en unos pocos valores que den una buena visión de los aspectos que interesa conocer. Es lo que llamamos síntesis numérica.\nTanto representaciones gráficas como valores de síntesis numérica los hay de varios tipos. Existen gráficos que son adecuados para representar la evolución de una característica, otros para mostrar su dispersión o la relación entre variables. Respecto a la síntesis numérica hay medidas que fijan su atención en diferentes aspectos de los datos y no hay que olvidar que la variabilidad también es muy importante.\nEn el siguiente capítulo tratamos la síntesis numérica de datos dando un repaso a las medidas de uso más habitual. En el siguiente tratamos sobre tipos de gráficos, cuales conviene usar en cada caso y caules deben evitarse."
   },
   {
     "objectID": "11_sintesisNumerica.html#medidas-de-tendencia-central",
@@ -579,7 +570,7 @@
     "href": "31_estimacionProporciones.html",
     "title": "5  Estimación de proporciones",
     "section": "",
-    "text": "Lo típico. Libro de respuestas.\nAnexo sobre sondeos electorales."
+    "text": "Lo típico. Libro de respuestas.\nAnexo sobre sondeos electorales.\nComo hacer una pregunta indiscreta: Se pueden hacer preguntas de manera que ni el que recibe la respuesta sepa cual es esta."
   },
   {
     "objectID": "21_variablesAleatorias.html",
@@ -960,11 +951,7 @@
     "href": "12_graficos.html#evolución",
     "title": "2  Representaciones gráficas",
     "section": "2.2 Evolución",
-    "text": "2.2 Evolución\ntexto\n\n2.2.1 Diagrama en serie de tiempo\nEvolución de la esperanza de vida en los países donde tienen más y donede tienen menos.\n\n\n\n\n\n\nFigura 2.3: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos\n\n\n\nAsia: Afganistan, Japón. Menor de áfrica y otro con EV muy alta.\nTambién hay buenos datos en web de comunidd de Madrid: Indicadores de nacimientos.\n Que los nombres salgan por orden alfabético.",
-    "crumbs": [
-      "ESTADÍSTICA DESCRIPTIVA",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Representaciones gráficas</span>"
-    ]
+    "text": "2.2 Evolución\ntexto\n\n2.2.1 Diagrama en serie de tiempo\nEvolución de la esperanza de vida en los países donde tienen más y donede tienen menos.\n\n\n\nFigura 2.3: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos\n\n\nAsia: Afganistan, Japón. Menor de áfrica y otro con EV muy alta.\nTambién hay buenos datos en web de comunidd de Madrid: Indicadores de nacimientos.\n Que los nombres salgan por orden alfabético."
   },
   {
     "objectID": "12_graficos.html#relación-entre-dos-variables",
@@ -982,54 +969,34 @@
     "href": "12_graficos.html#frecuencias",
     "title": "2  Representaciones gráficas",
     "section": "2.4 Frecuencias",
-    "text": "2.4 Frecuencias\ntexto\n\n\n\n\n\n\nFigura 2.4: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos\n\n\n\ntexto\n\n2.4.1 Diagramas de barras\ntexto\n\n\n2.4.2 Gráficos de donut\ntexto en la figura 2.5. Recortar arriba y abajo con programa de manipulación de imágenes.\n\n\n\n\n\n\nFigura 2.5: Diagrama de donut y de pastel\n\n\n\nInformación más clara y mejor uso de la tinta.\n\n\n\n\n\n\nFigura 2.6: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos\n\n\n\nEn el recuadro se incluyen 90 países, casi la mitad del total de paises considerados (196), pero solo representa el ***% de la poblaicón mundial.\nPosible polígono de frecuencias y diagrama de Pareto.",
-    "crumbs": [
-      "ESTADÍSTICA DESCRIPTIVA",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Representaciones gráficas</span>"
-    ]
+    "text": "2.4 Frecuencias\ntexto\n\n\n\nFigura 2.4: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos\n\n\ntexto\n\n2.4.1 Diagramas de barras\ntexto\n\n\n2.4.2 Gráficos de donut\ntexto en la figura 2.5. Recortar arriba y abajo con programa de manipulación de imágenes.\n\n\n\nFigura 2.5: Diagrama de donut y de pastel\n\n\nInformación más clara y mejor uso de la tinta.\n\n\n\nFigura 2.6: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos\n\n\nEn el recuadro se incluyen 90 países, casi la mitad del total de paises considerados (196), pero solo representa el ***% de la poblaicón mundial.\nPosible polígono de frecuencias y diagrama de Pareto."
   },
   {
     "objectID": "12_graficos.html#relación-entre-variables",
     "href": "12_graficos.html#relación-entre-variables",
     "title": "2  Representaciones gráficas",
     "section": "2.3 Relación entre variables",
-    "text": "2.3 Relación entre variables\ntexto\n\n2.3.1 Las dos son cuantitativas: Diagramas bivariantes\ntexto\nV \ntexto\n Reflexión sobre esperanza de vida y ratios de mortalidad infantil.\nLa esperanza de vida está más relacionada con la mortalidad infantil que con alargar la vida de los ancianos.\nUna es cuantitatica y la otra cualitativa: ejemplo de Boxplots estratificados del principio.",
-    "crumbs": [
-      "ESTADÍSTICA DESCRIPTIVA",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Representaciones gráficas</span>"
-    ]
+    "text": "2.3 Relación entre variables\ntexto\n\n2.3.1 Las dos son cuantitativas: Diagramas bivariantes\ntexto\nV \ntexto\n Reflexión sobre esperanza de vida y ratios de mortalidad infantil.\nLa esperanza de vida está más relacionada con la mortalidad infantil que con alargar la vida de los ancianos.\nUna es cuantitatica y la otra cualitativa: ejemplo de Boxplots estratificados del principio."
   },
   {
     "objectID": "12_graficos.html#gráficos-a-evitar",
     "href": "12_graficos.html#gráficos-a-evitar",
     "title": "2  Representaciones gráficas",
     "section": "2.5 Gráficos a evitar",
-    "text": "2.5 Gráficos a evitar\nveamos algunas tentaciones que conviene evitar, especialmente en trabajos académicos donde el objetivo debe ser transmitir la información de la forma más clara y directa posible.\n\n2.5.1 Gráficos con tres dimensiones\nDeben evitarse porque la profundidad no aporta ninguna información y dificulta la interpretación de las escalas. Algunas veces se utilizan en contextos publicitarios en los que se prioriza el impacto visual.\n\n\n2.5.2 Diagramas de pastel, especialmente con tres dimensiones\ntexto\n\n\n2.5.3 Gráficos que ocupan mucho espacio y contienen poca información\ntexto\n\n\n2.5.4 Gráficos con escalas tendenciosas\ntexto\n\n\n2.5.5 Comparar situaciones usando distintas escalas\ntexto\n\n\n2.5.6 Rectas de tendencia cuando los puntos están muy agrupados en una parte del diagrama\ntexto",
-    "crumbs": [
-      "ESTADÍSTICA DESCRIPTIVA",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Representaciones gráficas</span>"
-    ]
+    "text": "2.5 Gráficos a evitar\nveamos algunas tentaciones que conviene evitar, especialmente en trabajos académicos donde el objetivo debe ser transmitir la información de la forma más clara y directa posible.\n\n2.5.1 Gráficos con tres dimensiones\nDeben evitarse porque la profundidad no aporta ninguna información y dificulta la interpretación de las escalas. Algunas veces se utilizan en contextos publicitarios en los que se prioriza el impacto visual.\n\n\n2.5.2 Diagramas de pastel, especialmente con tres dimensiones\ntexto\n\n\n2.5.3 Gráficos que ocupan mucho espacio y contienen poca información\ntexto\n\n\n2.5.4 Gráficos con escalas tendenciosas\ntexto\n\n\n2.5.5 Comparar situaciones usando distintas escalas\ntexto\n\n\n2.5.6 Rectas de tendencia cuando los puntos están muy agrupados en una parte del diagrama\ntexto"
   },
   {
     "objectID": "12_graficos.html#malos-usos-y-manipulaciones",
     "href": "12_graficos.html#malos-usos-y-manipulaciones",
     "title": "2  Representaciones gráficas",
     "section": "2.6 Malos usos y manipulaciones",
-    "text": "2.6 Malos usos y manipulaciones\ntexto",
-    "crumbs": [
-      "ESTADÍSTICA DESCRIPTIVA",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Representaciones gráficas</span>"
-    ]
+    "text": "2.6 Malos usos y manipulaciones\ntexto"
   },
   {
     "objectID": "12_graficos.html#forma-de-la-distribución-valro-central-y-dispersión",
     "href": "12_graficos.html#forma-de-la-distribución-valro-central-y-dispersión",
     "title": "2  Representaciones gráficas",
-    "section": "",
-    "text": "2.1.1 Histograma\nNúmero de intervalos\nNúmeros redondos, al marcar los ejes y en la anchura de los intervalos\nSi hay valro objetivo y límites es una buena idea ponerlos.\nNo hay que esperar que cuando proviene de una distribución normal tengan formade campana\n\n\n2.1.2 Diagrama de puntos\ntexto\n\n\n2.1.3 Boxplot\ntexto\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOrden\nValores\n1\n5\n2\n7\n3\n7\n4\n9\n5\n9\n6\n9\n7\n9\n8\n9\n9\n9\n10\n9\n11\n10\n12\n11\n13\n11\n14\n11\n15\n11\n16\n11\n17\n14\n18\n15\n19\n16\n20\n18\n\n\n\n\ntexto deduciendo los valores de la mediana y los cuartiles. Podría poner antes el rango intercuartílico.\n\n\n\n\n\n\nFigura 2.1: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos\n\n\n\ntexto\n\n\n\nHola\n\n\n\n\n\n\n\n\nFigura 2.2: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos\n\n\n\ntexto\ntexto",
-    "crumbs": [
-      "ESTADÍSTICA DESCRIPTIVA",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Representaciones gráficas</span>"
-    ]
+    "section": "2.1 Forma de la distribución, valro central y dispersión",
+    "text": "2.1 Forma de la distribución, valro central y dispersión\nEl tipo de gráfico que hemos usado para analizar los datos de la panadería\n\n2.1.1 Histograma\nNúmero de intervalos\nNúmeros redondos, al marcar los ejes y en la anchura de los intervalos\nSi hay valro objetivo y límites es una buena idea ponerlos.\nNo hay que esperar que cuando proviene de una distribución normal tengan formade campana\n\n\n2.1.2 Diagrama de puntos\ntexto\n\n\n2.1.3 Boxplot\ntexto\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOrden\nValores\n1\n5\n2\n7\n3\n7\n4\n9\n5\n9\n6\n9\n7\n9\n8\n9\n9\n9\n10\n9\n11\n10\n12\n11\n13\n11\n14\n11\n15\n11\n16\n11\n17\n14\n18\n15\n19\n16\n20\n18\n\n\n\n\ntexto deduciendo los valores de la mediana y los cuartiles. Podría poner antes el rango intercuartílico.\n\n\n\nFigura 2.1: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos\n\n\ntexto\n\n\n\nHola\n\n\n\n\n\nFigura 2.2: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos\n\n\ntexto\ntexto"
   }
 ]

@@ -9,5 +9,3 @@ También podemos resumir los datos en unos pocos valores que den una buena visi�
 Tanto representaciones gráficas como valores de síntesis numérica los hay de varios tipos. Existen gráficos que son adecuados para representar la evolución de una característica, otros para mostrar su dispersión o la relación entre variables. Respecto a la síntesis numérica hay medidas que fijan su atención en diferentes aspectos de los datos y no hay que olvidar que la variabilidad también es muy importante.
 
 En el siguiente capítulo tratamos la síntesis numérica de datos dando un repaso a las medidas de uso más habitual. En el siguiente tratamos sobre tipos de gráficos, cuales conviene usar en cada caso y caules deben evitarse.
-
-

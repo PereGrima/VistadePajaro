@@ -487,7 +487,10 @@
     "href": "01_queEs.html",
     "title": "¿Qué es la estadística?",
     "section": "",
-    "text": "Estoy haciendo pruebas.\n\nEstadística y matemáticas\ntexto\n\n\nEstadística y probabilidad\ntexto\n\n\nEstadística y Data Science\ntexto"
+    "text": "Estoy haciendo pruebas.\n\nEstadística y matemáticas\ntexto\n\n\nEstadística y probabilidad\ntexto\n\n\nEstadística y Data Science\ntexto",
+    "crumbs": [
+      "¿Qué es la estadística?"
+    ]
   },
   {
     "objectID": "10_Parte_Descriptiva.html",
@@ -761,7 +764,11 @@
     "href": "42_Proceso_CH.html",
     "title": "9  Esquema de razonamiento",
     "section": "",
-    "text": "Todo provisional.\nQuizá Apéndice sobre por qué este tipo de razonamiento es controvertido (libro respuestas)."
+    "text": "Todo provisional.\nDados de Wolf\nQuizá Apéndice sobre por qué este tipo de razonamiento es controvertido (libro respuestas).",
+    "crumbs": [
+      "CONTRASTE DE HIPÓTESIS",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Esquema de razonamiento</span>"
+    ]
   },
   {
     "objectID": "41_Conceptos_CH.html",
@@ -951,7 +958,11 @@
     "href": "12_graficos.html#evolución",
     "title": "2  Representaciones gráficas",
     "section": "2.2 Evolución",
-    "text": "2.2 Evolución\ntexto\n\n2.2.1 Diagrama en serie de tiempo\nEvolución de la esperanza de vida en los países donde tienen más y donede tienen menos.\n\n\n\nFigura 2.3: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos\n\n\nAsia: Afganistan, Japón. Menor de áfrica y otro con EV muy alta.\nTambién hay buenos datos en web de comunidd de Madrid: Indicadores de nacimientos.\n Que los nombres salgan por orden alfabético."
+    "text": "2.2 Evolución\ntexto\n\n2.2.1 Diagrama en serie de tiempo\nEvolución de la esperanza de vida en los países donde tienen más y donede tienen menos.\n\n\n\n\n\n\nFigura 2.3: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos\n\n\n\nAsia: Afganistan, Japón. Menor de áfrica y otro con EV muy alta.\nTambién hay buenos datos en web de comunidd de Madrid: Indicadores de nacimientos.\n Que los nombres salgan por orden alfabético.",
+    "crumbs": [
+      "ESTADÍSTICA DESCRIPTIVA",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Representaciones gráficas</span>"
+    ]
   },
   {
     "objectID": "12_graficos.html#relación-entre-dos-variables",
@@ -969,34 +980,54 @@
     "href": "12_graficos.html#frecuencias",
     "title": "2  Representaciones gráficas",
     "section": "2.4 Frecuencias",
-    "text": "2.4 Frecuencias\ntexto\n\n\n\nFigura 2.4: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos\n\n\ntexto\n\n2.4.1 Diagramas de barras\ntexto\n\n\n2.4.2 Gráficos de donut\ntexto en la figura 2.5. Recortar arriba y abajo con programa de manipulación de imágenes.\n\n\n\nFigura 2.5: Diagrama de donut y de pastel\n\n\nInformación más clara y mejor uso de la tinta.\n\n\n\nFigura 2.6: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos\n\n\nEn el recuadro se incluyen 90 países, casi la mitad del total de paises considerados (196), pero solo representa el ***% de la poblaicón mundial.\nPosible polígono de frecuencias y diagrama de Pareto."
+    "text": "2.4 Frecuencias\ntexto\n\n\n\n\n\n\nFigura 2.4: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos\n\n\n\ntexto\n\n2.4.1 Diagramas de barras\ntexto\n\n\n2.4.2 Gráficos de donut\ntexto en la figura 2.12. Recortar arriba y abajo con programa de manipulación de imágenes.\n\n\n\n\n\n\nFigura 2.5: Diagrama de donut y de pastel\n\n\n\nInformación más clara y mejor uso de la tinta.\n\n\n\n\n\n\nFigura 2.6: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos\n\n\n\nEn el recuadro se incluyen 90 países, casi la mitad del total de paises considerados (196), pero solo representa el ***% de la poblaicón mundial.\nPosible polígono de frecuencias y diagrama de Pareto.",
+    "crumbs": [
+      "ESTADÍSTICA DESCRIPTIVA",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Representaciones gráficas</span>"
+    ]
   },
   {
     "objectID": "12_graficos.html#relación-entre-variables",
     "href": "12_graficos.html#relación-entre-variables",
     "title": "2  Representaciones gráficas",
     "section": "2.3 Relación entre variables",
-    "text": "2.3 Relación entre variables\ntexto\n\n2.3.1 Las dos son cuantitativas: Diagramas bivariantes\ntexto\nV \ntexto\n Reflexión sobre esperanza de vida y ratios de mortalidad infantil.\nLa esperanza de vida está más relacionada con la mortalidad infantil que con alargar la vida de los ancianos.\nUna es cuantitatica y la otra cualitativa: ejemplo de Boxplots estratificados del principio."
+    "text": "2.3 Relación entre variables\ntexto\n\n2.3.1 Las dos son cuantitativas: Diagramas bivariantes\ntexto\nV \ntexto\n Reflexión sobre esperanza de vida y ratios de mortalidad infantil.\nLa esperanza de vida está más relacionada con la mortalidad infantil que con alargar la vida de los ancianos.\nUna es cuantitatica y la otra cualitativa: ejemplo de Boxplots estratificados del principio.",
+    "crumbs": [
+      "ESTADÍSTICA DESCRIPTIVA",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Representaciones gráficas</span>"
+    ]
   },
   {
     "objectID": "12_graficos.html#gráficos-a-evitar",
     "href": "12_graficos.html#gráficos-a-evitar",
     "title": "2  Representaciones gráficas",
     "section": "2.5 Gráficos a evitar",
-    "text": "2.5 Gráficos a evitar\nveamos algunas tentaciones que conviene evitar, especialmente en trabajos académicos donde el objetivo debe ser transmitir la información de la forma más clara y directa posible.\n\n2.5.1 Gráficos con tres dimensiones\nDeben evitarse porque la profundidad no aporta ninguna información y dificulta la interpretación de las escalas. Algunas veces se utilizan en contextos publicitarios en los que se prioriza el impacto visual.\n\n\n2.5.2 Diagramas de pastel, especialmente con tres dimensiones\ntexto\n\n\n2.5.3 Gráficos que ocupan mucho espacio y contienen poca información\ntexto\n\n\n2.5.4 Gráficos con escalas tendenciosas\ntexto\n\n\n2.5.5 Comparar situaciones usando distintas escalas\ntexto\n\n\n2.5.6 Rectas de tendencia cuando los puntos están muy agrupados en una parte del diagrama\ntexto"
+    "text": "2.5 Gráficos a evitar\nveamos algunas tentaciones que conviene evitar, especialmente en trabajos académicos donde el objetivo debe ser transmitir la información de la forma más clara y directa posible.\n\nGráficos con tres dimensiones\nDeben evitarse porque la profundidad no aporta ninguna información y dificulta la interpretación de las escalas. Algunas veces se utilizan en contextos publicitarios en los que se prioriza el impacto visual.\n\n\n\n\n\n\nFigura 2.7: Tres dimensiones\n\n\n\n\n\nDiagramas de pastel, especialmente con tres dimensiones\nEstos diagramas no son muy aprecidos en contextos científico-técnicos donde -en general- se prefieren los diagramas de barras. Si se representan en tres dimensiones y desgajando un sector que se quiere destacar ya entramos en el terreno de los gráficos tendenciosos. Un gráfico similar que transmite la información de forma más clara son los diagramas de donut.\n===Comentar que en el gráfico 3d no es lo que parece===\n\n\n\n\n\n\nFigura 2.8: Tres dimensiones\n\n\n\n\n\nGráficos que ocupan mucho espacio y contienen poca información\nUtilizamos los gráficos para resumir de forma visual la información que contienen los datos. Construir un gráfico para representar un solo dato no parece -en general- una buena . Así pues, contruir -por ejemplo- un gran diagrama de pastel para decir que la proporción de mujeres en un determinado ámbito es del 53% no parece una buena idea. Es más grave si en un informe o en una presentación oral se van presentando este tipo de gráficos de forma repetitiva. ===no caeremos en nuestra propia trampa poniendo un ejemplo===\n\n\nGráficos con escalas inapropiadas\nUno de los recursos más utilizados para que el gráfico dé la impresión que interesa es adaptar la escala vertical para exagerar o disimular las diferencias, según convenga. La figura +++++ prodría representar las medidas de audiencia de cuatro cadenas de televisión, en el gráfico de la izquierda se observan unas diferencias muy claras y TV1 parece tener la mitad de la audiencia que TV4 sin embargo, si la escala parte de cero -que es lo correcto cuando se hacen comparaciones- apenas se aprecian esad diferencias.\n\n\n\n\n\n\nFigura 2.9: Diagrama de donut y de pastel\n\n\n\nNo hay que dejarse engañar con añadidos como el de la figura ++++\n\n\n\n\n\n\nFigura 2.10: Diagrama de donut y de pastel\n\n\n\nYa sabemos que si el eje horizontal representa el tiempo es mejor utilizar gráficos de líneas y estos son también muy sensibles a la escala vertical. Los dos gráficos de la figura ++++ representan los mismos datos:\n\n\n\n\n\n\nFigura 2.11: Diagrama de donut y de pastel\n\n\n\ntexto\nUna buena opción\n\n\n\n\n\n\nFigura 2.12: Diagrama de donut y de pastel\n\n\n\n\n\n2.5.1 Comparar situaciones usando distintas escalas\ntexto\n\n\n2.5.2 Rectas de tendencia cuando los puntos están muy agrupados en una parte del diagrama\ntexto",
+    "crumbs": [
+      "ESTADÍSTICA DESCRIPTIVA",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Representaciones gráficas</span>"
+    ]
   },
   {
     "objectID": "12_graficos.html#malos-usos-y-manipulaciones",
     "href": "12_graficos.html#malos-usos-y-manipulaciones",
     "title": "2  Representaciones gráficas",
     "section": "2.6 Malos usos y manipulaciones",
-    "text": "2.6 Malos usos y manipulaciones\ntexto"
+    "text": "2.6 Malos usos y manipulaciones\ntexto\n\n\n\n\n\n\nOjo con ir a la búsqueda del gazapo\n\n\n\npuede ser muy instructivo buscar ejemplos de gráficos que por falta de habilidad o por mala fe transmiten una información falsa, pero tampoco hay que transmitir la idea de que todo el mundo nos quiere engañar. En la prensa seria la mayoría de los gráficos -que pueden ser más o menos afortunados- se hacen de buena fe, con el ánimo de informar con",
+    "crumbs": [
+      "ESTADÍSTICA DESCRIPTIVA",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Representaciones gráficas</span>"
+    ]
   },
   {
     "objectID": "12_graficos.html#forma-de-la-distribución-valro-central-y-dispersión",
     "href": "12_graficos.html#forma-de-la-distribución-valro-central-y-dispersión",
     "title": "2  Representaciones gráficas",
-    "section": "2.1 Forma de la distribución, valro central y dispersión",
-    "text": "2.1 Forma de la distribución, valro central y dispersión\nEl tipo de gráfico que hemos usado para analizar los datos de la panadería\n\n2.1.1 Histograma\nNúmero de intervalos\nNúmeros redondos, al marcar los ejes y en la anchura de los intervalos\nSi hay valro objetivo y límites es una buena idea ponerlos.\nNo hay que esperar que cuando proviene de una distribución normal tengan formade campana\n\n\n2.1.2 Diagrama de puntos\ntexto\n\n\n2.1.3 Boxplot\ntexto\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOrden\nValores\n1\n5\n2\n7\n3\n7\n4\n9\n5\n9\n6\n9\n7\n9\n8\n9\n9\n9\n10\n9\n11\n10\n12\n11\n13\n11\n14\n11\n15\n11\n16\n11\n17\n14\n18\n15\n19\n16\n20\n18\n\n\n\n\ntexto deduciendo los valores de la mediana y los cuartiles. Podría poner antes el rango intercuartílico.\n\n\n\nFigura 2.1: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos\n\n\ntexto\n\n\n\nHola\n\n\n\n\n\nFigura 2.2: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos\n\n\ntexto\ntexto"
+    "section": "",
+    "text": "2.1.1 Histograma\nNúmero de intervalos\nNúmeros redondos, al marcar los ejes y en la anchura de los intervalos\nSi hay valro objetivo y límites es una buena idea ponerlos.\nNo hay que esperar que cuando proviene de una distribución normal tengan formade campana\n\n\n2.1.2 Diagrama de puntos\ntexto\n\n\n2.1.3 Boxplot\ntexto\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOrden\nValores\n1\n5\n2\n7\n3\n7\n4\n9\n5\n9\n6\n9\n7\n9\n8\n9\n9\n9\n10\n9\n11\n10\n12\n11\n13\n11\n14\n11\n15\n11\n16\n11\n17\n14\n18\n15\n19\n16\n20\n18\n\n\n\n\ntexto deduciendo los valores de la mediana y los cuartiles. Podría poner antes el rango intercuartílico.\n\n\n\n\n\n\nFigura 2.1: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos\n\n\n\ntexto\n\n\n\nHola\n\n\n\n\n\n\n\n\nFigura 2.2: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos\n\n\n\ntexto\ntexto",
+    "crumbs": [
+      "ESTADÍSTICA DESCRIPTIVA",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Representaciones gráficas</span>"
+    ]
   }
 ]

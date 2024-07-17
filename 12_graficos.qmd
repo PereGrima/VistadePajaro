@@ -161,21 +161,47 @@ Posible polígono de frecuencias y diagrama de Pareto.
 
 veamos algunas tentaciones que conviene evitar, especialmente en trabajos académicos donde el objetivo debe ser transmitir la información de la forma más clara y directa posible.
 
-### Gráficos con tres dimensiones
+### Gráficos con tres dimensiones  {.unnumbered}
 
 Deben evitarse porque la profundidad no aporta ninguna información y dificulta la interpretación de las escalas. Algunas veces se utilizan en contextos publicitarios en los que se prioriza el impacto visual.
 
-### Diagramas de pastel, especialmente con tres dimensiones
+![Tres dimensiones](representacionesGraficas/graficos3D.png){#fig-donutPie fig-align="center" width="100%"}
+
+### Diagramas de pastel, especialmente con tres dimensiones {.unnumbered}
+
+Estos diagramas no son muy aprecidos en contextos científico-técnicos donde -en general- se prefieren los diagramas de barras. Si se representan en tres dimensiones y desgajando un sector que se quiere destacar ya entramos en el terreno de los gráficos tendenciosos. Un gráfico similar que transmite la información de forma más clara son los diagramas de donut.
+
+===Comentar que en el gráfico 3d no es lo que parece===
+                                             
+![Tres dimensiones](representacionesGraficas/Pastel3D.png){#fig-donutPie fig-align="center" width="100%"}
+
+### Gráficos que ocupan mucho espacio y contienen poca información {.unnumbered}
+
+Utilizamos los gráficos para resumir de forma visual la información que contienen los datos. Construir un gráfico para representar un solo dato no parece -en general- una buena . Así pues, contruir -por ejemplo- un gran diagrama de pastel para decir que la proporción de mujeres en un determinado ámbito es del 53% no parece una buena idea. Es más grave si en un informe o en una presentación oral se van presentando este tipo de gráficos de forma repetitiva. ===no caeremos en nuestra propia trampa poniendo un ejemplo===
+
+### Gráficos con escalas inapropiadas {.unnumbered}
+
+Uno de los recursos más utilizados para que el gráfico dé la impresión que interesa es adaptar la escala vertical para exagerar o disimular las diferencias, según convenga. La figura +++++ prodría representar las medidas de audiencia de cuatro cadenas de televisión, en el gráfico de la izquierda se observan unas diferencias muy claras y TV1 parece tener la mitad de la audiencia que TV4 sin embargo, si la escala parte de cero -que es lo correcto cuando se hacen comparaciones- apenas se aprecian esad diferencias.
+
+![Diagrama de donut y de pastel](representacionesGraficas/escalaBarras.png){#fig-donutPie fig-align="center" width="100%"}
+
+
+No hay que dejarse engañar con añadidos como el de la figura ++++
+
+
+![Diagrama de donut y de pastel](representacionesGraficas/escalaBarras2.png){#fig-donutPie fig-align="center" width="50%"}
+
+Ya sabemos que si el eje horizontal representa el tiempo es mejor utilizar gráficos de líneas y estos son también muy sensibles a la escala vertical. Los dos gráficos de la figura ++++ representan los mismos datos:
+
+![Diagrama de donut y de pastel](representacionesGraficas/escalaLineas.png){#fig-donutPie fig-align="center" width="100%"}
 
 texto
 
-### Gráficos que ocupan mucho espacio y contienen poca información
+Una buena opción
 
-texto
+![Diagrama de donut y de pastel](representacionesGraficas/escalaLineas2.png){#fig-donutPie fig-align="left" width="80%"}
 
-### Gráficos con escalas tendenciosas
 
-texto
 
 ### Comparar situaciones usando distintas escalas
 
@@ -190,5 +216,9 @@ texto
 
 texto
 
+::: callout-note
+## Ojo con ir a la búsqueda del gazapo
 
+puede ser muy instructivo buscar ejemplos de gráficos que por falta de habilidad o por mala fe transmiten una información falsa, pero tampoco hay que transmitir la idea de que todo el mundo nos quiere engañar. En la prensa seria la mayoría de los gráficos -que pueden ser más o menos afortunados- se hacen de buena fe, con el ánimo de informar con 
+:::
 

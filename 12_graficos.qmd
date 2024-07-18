@@ -199,7 +199,11 @@ texto
 
 Una buena opción
 
-![Diagrama de donut y de pastel](representacionesGraficas/escalaLineas2.png){#fig-donutPie fig-align="left" width="80%"}
+![Diagrama de donut y de pastel](representacionesGraficas/escalaLineas2.png){#fig-donutPie fig-align="center" width="100%"}
+
+texto
+
+![Diagrama de donut y de pastel](representacionesGraficas/valorAcciones.png){#fig-donutPie fig-align="center" width="100%"}
 
 
 

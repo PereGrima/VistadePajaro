@@ -205,6 +205,17 @@ texto
 
 ![Diagrama de donut y de pastel](representacionesGraficas/valorAcciones.png){#fig-donutPie fig-align="center" width="100%"}
 
+text
+
+![Diagrama de donut y de pastel](representacionesGraficas/salariosInflacion.png){#fig-donutPie fig-align="center" width="100%"}
+
+text
+
+![Diagrama de donut y de pastel](representacionesGraficas/poderAdquisitivo.png){#fig-donutPie fig-align="center" width="100%"}
+
+text
+
+![Diagrama de donut y de pastel](representacionesGraficas/paro.png){#fig-donutPie fig-align="center" width="100%"}
 
 
 ### Comparar situaciones usando distintas escalas

@@ -497,7 +497,10 @@
     "href": "10_Parte_Descriptiva.html",
     "title": "ESTADÍSTICA DESCRIPTIVA",
     "section": "",
-    "text": "Captar la información que contienen los datos solo a base de irlos mirando es, desde luego, misión imposible. No hace falta que el conjunto sea muy grande, nuestra mente no es hábil haciendo esa tarea. Cuando miramos un número se nos olvida otro y no somos capaces –aunque nos cueste reconocerlo– de hacernos una idea clara de todos los aspectos relevantes.\nSí somos buenos detectando patrones y analizando imágenes –en esto somos incluso mejores que los ordenadores, que nos piden que interpretemos una imagen para confirmar que somos personas y no máquinas–, por lo que analizar los datos a través de represetanciones gráficas es una excelente forma de hacerlo.\nTambién podemos resumir los datos en unos pocos valores que den una buena visión de los aspectos que interesa conocer. Es lo que llamamos síntesis numérica.\nTanto representaciones gráficas como valores de síntesis numérica los hay de varios tipos. Existen gráficos que son adecuados para representar la evolución de una característica, otros para mostrar su dispersión o la relación entre variables. Respecto a la síntesis numérica hay medidas que fijan su atención en diferentes aspectos de los datos y no hay que olvidar que la variabilidad también es muy importante.\nEn el siguiente capítulo tratamos la síntesis numérica de datos dando un repaso a las medidas de uso más habitual. En el siguiente tratamos sobre tipos de gráficos, cuales conviene usar en cada caso y caules deben evitarse."
+    "text": "Captar la información que contienen los datos solo a base de irlos mirando es, desde luego, misión imposible. No hace falta que el conjunto sea muy grande, nuestra mente no es hábil haciendo esa tarea. Cuando miramos un número se nos olvida otro y no somos capaces –aunque nos cueste reconocerlo– de hacernos una idea clara de todos los aspectos relevantes.\nSí somos buenos detectando patrones y analizando imágenes –en esto somos incluso mejores que los ordenadores, que nos piden que interpretemos una imagen para confirmar que somos personas y no máquinas–, por lo que analizar los datos a través de represetanciones gráficas es una excelente forma de hacerlo.\nTambién podemos resumir los datos en unos pocos valores que den una buena visión de los aspectos que interesa conocer. Es lo que llamamos síntesis numérica.\nTanto representaciones gráficas como valores de síntesis numérica los hay de varios tipos. Existen gráficos que son adecuados para representar la evolución de una característica, otros para mostrar su dispersión o la relación entre variables. Respecto a la síntesis numérica hay medidas que fijan su atención en diferentes aspectos de los datos y no hay que olvidar que la variabilidad también es muy importante.\nEn el siguiente capítulo tratamos la síntesis numérica de datos dando un repaso a las medidas de uso más habitual. En el siguiente tratamos sobre tipos de gráficos, cuales conviene usar en cada caso y caules deben evitarse.",
+    "crumbs": [
+      "ESTADÍSTICA DESCRIPTIVA"
+    ]
   },
   {
     "objectID": "11_sintesisNumerica.html#medidas-de-tendencia-central",
@@ -559,7 +562,10 @@
     "href": "20_Parte_Variabilidad.html",
     "title": "SOBRE LA VARIABILIDAD",
     "section": "",
-    "text": "Importancia de saberse mover en un contexto de variabilidad. No todas las variabilidades son iguales.\nEstoy pensando en empezar planteando el tema de la fecha de nacimiento de los futbolistas profesionales y a partir de ahí introducir la distribución binomial y su utilidad para separar señal y ruido.\nSiguiendo con el mundo de futbol, podría introducir la distribución de Poisson con el ejemplo del número de goles por partido.\nLa distribución Normal se puede introducir como límite de histograma. También partiendo de la distribución Normal.\nNo creo que -al menos aquí- haya que hablar de distribuciones de referencia teóricas: t-Student, Chi-cuadrado, F de Snededor."
+    "text": "Explicar que la variabilidad está presente en todas partes (ejemplos: una vacuna no se prueba con una sola persona, ni para saber con qué peso estan saliendo las unidades de una línea en envasado se pesa una sola unidad)… Necesitamos un lenguaje para movernos en ese contexto. No tener las palabras adecuadas no nos deja pensar bien.\nNecesidad de tratar con variables aleatorias.\nLas distribuciones de probabilidad como descripción del comportamiento de las variables aleatorias\nImportancia de saberse mover en un contexto de variabilidad. No todas las variabilidades son iguales.",
+    "crumbs": [
+      "SOBRE LA VARIABILIDAD"
+    ]
   },
   {
     "objectID": "32_estimacionMedias.html",
@@ -580,14 +586,22 @@
     "href": "21_variablesAleatorias.html",
     "title": "3  Variables aleatorias",
     "section": "",
-    "text": "Importancia, tipos, propiedades."
+    "text": "Importancia, tipos, propiedades.",
+    "crumbs": [
+      "SOBRE LA VARIABILIDAD",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Variables aleatorias</span>"
+    ]
   },
   {
     "objectID": "22_distribucionesProbabilidad.html",
     "href": "22_distribucionesProbabilidad.html",
     "title": "4  Distribuciones de probabilidad",
     "section": "",
-    "text": "Binomial, Poisson, Normal, otras (uniforme, equiprobable, curiosidades: unif+unif = triangular)"
+    "text": "Binomial, Poisson, Normal, otras (uniforme, equiprobable, curiosidades: unif+unif = triangular)\nEstoy pensando en empezar planteando el tema de la fecha de nacimiento de los futbolistas profesionales y a partir de ahí introducir la distribución binomial y su utilidad para separar señal y ruido.\nSiguiendo con el mundo de futbol, podría introducir la distribución de Poisson con el ejemplo del número de goles por partido.\nLa distribución Normal se puede introducir como límite de histograma. También partiendo de la distribución Normal.\nNo creo que -al menos aquí- haya que hablar de distribuciones de referencia teóricas: t-Student, Chi-cuadrado, F de Snededor.",
+    "crumbs": [
+      "SOBRE LA VARIABILIDAD",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Distribuciones de probabilidad</span>"
+    ]
   },
   {
     "objectID": "30_Parte_Estimacion.html",
@@ -1028,6 +1042,16 @@
     "crumbs": [
       "ESTADÍSTICA DESCRIPTIVA",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Representaciones gráficas</span>"
+    ]
+  },
+  {
+    "objectID": "20_Parte_Variabilidad.html#footnotes",
+    "href": "20_Parte_Variabilidad.html#footnotes",
+    "title": "SOBRE LA VARIABILIDAD",
+    "section": "",
+    "text": "El circuito es defectuoso si su intensidad está por debajo de 7A o por encima de 13A, es decir, si la resistencia que se coloca está por encima de 14,3 \\(\\Omega\\) o por debajo de 7,7 \\(\\Omega\\). Para huir de esos valores lo mejor es pedir un valor nominal que esté en el centro, es decir: (7,7+14,3)/2 = 11 \\(\\Omega\\).↩︎",
+    "crumbs": [
+      "SOBRE LA VARIABILIDAD"
     ]
   }
 ]

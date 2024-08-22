@@ -10,4 +10,4 @@ La distribución Normal se puede introducir como límite de histograma. También
 
 No creo que -al menos aquí- haya que hablar de distribuciones de referencia teóricas: t-Student, Chi-cuadrado, F de Snededor.
 
-
+La distribución Normal y el boxplot. ¿por qué el 1,5? probabilidades a 1 y a 2 IQR

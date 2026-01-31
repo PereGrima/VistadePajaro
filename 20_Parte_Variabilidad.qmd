@@ -1,0 +1,32 @@
+# SOBRE LA VARIABILIDAD
+
+Considerar la variabilidad es fundamental para describir la realidad, para entenderla y para tomar mejores decisiones.
+
+Necesitamos definir los conceptos y los términos que nos permiten describir esa realidad impregnada de variabilidad. No se puede pensar ni razonar de forma adequada si no tenemos los términos adecuados para ello.
+
+En nuestra vida cotidiana tendemos a ignorar la variabilidad, y no disponemos de los términos ni de los conceptos para razonar adecuadamente.
+
+Mujer tenía que ser: ¿Conducen las mujeres peor que los hombres?
+Esta es una pregunta que no tiene respuesta desde el rigor del análisis de la realidad de forma objetiva. En primer lugar porque no todas las mujeres conducen igual, ni tampoco todos los hombres. Habrá mujeres que conducen bien y otras que conducen mal, igual que los hombres, pero la pregunta, tal como está planteada, parece ignorar este detalle. Además hay otra dificultad: ¿qué significa conducir bien? ¿cómo se mide? +++más cosas+++
+
+Lo que es una variable aleatoria y lo que es una distribición de probabilidad. ---Carpintero tipos de madera
+
+
+
+La variabilidad está presente allí donde miremos. Existe variabilidad en las características físicas de las personas y también en sus opiniones sobre lo que ocurre en nuestro entorno. No todos los árboles, ni todas las plantas de un huerto, dan exactamente la misma cosecha, aunque tengan el mismo origen y hayan crecido en exactamente las mismas condiciones. Si en un lote de piezas han aparecido 3 defectuosas, en otro lote fabricado en idénticas condiciones podría no aparecer ninguna, que haya cinco. Las visitas a una página web en dos días seguidos no necesarimente son idénticas, aunque nada haya cambiado de un día al siguiente.
+
+Alargar más lo de medicina.
+
+En el ámbito de la ingeniería ignorar la variabilidad también conduce a una visión equivocada de las cosas. Veamos un ejemplo donde usaremos la ley de Ohm (recuerde: I=V/R, si esto no le suena de nada puede saltarse este párrafo). Supongamos que nos encargan fabricar un lote de circuitos muy sencillos que solo constan de una fuente de alimentación (V) y de una resistencia (R). Vamos a suponer que el voltaje de la fuente de alimentación siempre es igual a 100 V mientras que las resistencias presentan cierta variabilidad y tienen un valor real que es igual al nominal $\pm$ 5 $\Omega$. Se desea que en cada circuito la intensidad sea de 10A y se considerará que el circuito es defectuoso si su intensidad está fuera del intervalo 10 $\pm$ 3 A ¿de qué valor nominal se deben pedir las resistencias para minimizar la proporción de circuitos defectuosos? Quizá está pensando que si se quiere tener I=10A, si V=100V se debe pedir R=10 $\Omega$. Esto sería verdad si no hubiera variabilidad pero en nuestro caso habría que pedirlas de 11 $\Omega$[^1]
+
+
+
+Explicar que la variabilidad está presente en todas partes (ejemplos: una vacuna no se prueba con una sola persona, ni para saber con qué peso estan saliendo las unidades de una línea en envasado se pesa una sola unidad)... Necesitamos un lenguaje para movernos en ese contexto. No tener las palabras adecuadas no nos deja pensar bien.
+
+Necesidad de tratar con variables aleatorias.
+
+Las distribuciones de probabilidad como descripción del comportamiento de las variables aleatorias
+
+Importancia de saberse mover en un contexto de variabilidad. No todas las variabilidades son iguales.
+
+[^1]: El circuito es defectuoso si su intensidad está por debajo de 7A o por encima de 13A, es decir, si la resistencia que se coloca está por encima de 14,3 $\Omega$ o por debajo de 7,7 $\Omega$. Para huir de esos valores lo mejor es pedir un valor nominal que esté en el centro, es decir: (7,7+14,3)/2 = 11 $\Omega$.

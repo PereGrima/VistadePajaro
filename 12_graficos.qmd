@@ -1,0 +1,347 @@
+# Representaciones gráficas
+
+Empezamos planteando un reto: El dueño de una panadería sospecha que las barras de pan que está vendiendo tienen un peso demasiado variable, de forma que algunas pueden estar por debajo del límite que marca la ley. El pan se elabora en dos máquinas que son utilizadas por dos operarios, uno por la mañana y otro por la tarde. La tabla [-@tbl-panaderia] contiene los pesos (en gramos) de las muestras que se han ido recogiendo durante 20 días.
+
+::: {style="font-size:13px"}
++:-----------:+:-----------:+:------------------------------------------:+:------------------------------------------:+
+| Día         | Operario    | Máquina 1                                  | Máquina 2                                  |
++-------------+-------------+--------------------------------------------+--------------------------------------------+
+| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
+| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
+| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
+| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
+| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
+| \           | \           | \                                          | \                                          |
+| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
+| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
+| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
+| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
+| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
+| \           | \           | \                                          | \                                          |
+| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
+| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
+| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
+| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
+| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
+| \           | \           | \                                          | \                                          |
+| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
+| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
+| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
+| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
+| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
++-------------+-------------+--------------------------------------------+--------------------------------------------+
+
+: Peso de barras de pan elaboradas en una panadería {#tbl-panaderia} : {tbl-colwidths="\[5, 15, 40, 40\]"}
+:::
+
+El peso debe ser de 210 $\pm$ 10 g. Las preguntas que nos planteamos son: ¿Existe algún problema? ¿Qué está pasando? ¿qué hay que hacer para resolver el problema, si es que existe?
+
+Si trata de sacar conclusiones mirando los números seguramente se equivocará. Aunque en este caso solo hay 160 valores, analizarlos "a ojo" siempre es arriesgado. Tampoco es una buena idea empezar calculado medias y desviaciones típicas o, peor todavía, emnpezar planteando test estadísticos más o menos sofisticados.
+
+Cuando queremos analizar datos, lo primero que siempre conviene hacer es representarlos gráficamente. Así tenemos una primera idea --muchas veces ya suficiente-- de lo que está pasando.
+
+En la figura +++++ por máquina y operario.
+
+![Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos](representacionesGraficas/histogramaPanaderia.png){#fig-panaderia fig-align="center" width="90%"} Moraleja: +++++++++++++
+
+## Forma de la distribución, valro central y dispersión
+
+El tipo de gráfico que hemos usado para analizar los datos de la panadería
+
+### Histograma
+
+Número de intervalos
+
+Números redondos, al marcar los ejes y en la anchura de los intervalos
+
+Si hay valro objetivo y límites es una buena idea ponerlos.
+
+No hay que esperar que cuando proviene de una distribución normal tengan formade campana
+
+### Diagrama de puntos
+
+texto
+
+### Boxplot
+
+texto
+
+::: {style="font-size:13px"}
+<table style="width:86%;">
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><p><em>Orden</em><br />
+<strong>Valores</strong></p></td>
+<td style="text-align: center;"><p><em>1</em><br />
+<strong>5</strong></p></td>
+<td style="text-align: center;"><p><em>2</em><br />
+<strong>7</strong></p></td>
+<td style="text-align: center;"><p><em>3</em><br />
+<strong>7</strong></p></td>
+<td style="text-align: center;"><p><em>4</em><br />
+<strong>9</strong></p></td>
+<td style="text-align: center;"><p><em>5</em><br />
+<strong>9</strong></p></td>
+<td style="text-align: center;"><p><em>6</em><br />
+<strong>9</strong></p></td>
+<td style="text-align: center;"><p><em>7</em><br />
+<strong>9</strong></p></td>
+<td style="text-align: center;"><p><em>8</em><br />
+<strong>9</strong></p></td>
+<td style="text-align: center;"><p><em>9</em><br />
+<strong>9</strong></p></td>
+<td style="text-align: center;"><p><em>10</em><br />
+<strong>9</strong></p></td>
+<td style="text-align: center;"><p><em>11</em><br />
+<strong>10</strong></p></td>
+<td style="text-align: center;"><p><em>12</em><br />
+<strong>11</strong></p></td>
+<td style="text-align: center;"><p><em>13</em><br />
+<strong>11</strong></p></td>
+<td style="text-align: center;"><p><em>14</em><br />
+<strong>11</strong></p></td>
+<td style="text-align: center;"><p><em>15</em><br />
+<strong>11</strong></p></td>
+<td style="text-align: center;"><p><em>16</em><br />
+<strong>11</strong></p></td>
+<td style="text-align: center;"><p><em>17</em><br />
+<strong>14</strong></p></td>
+<td style="text-align: center;"><p><em>18</em><br />
+<strong>15</strong></p></td>
+<td style="text-align: center;"><p><em>19</em><br />
+<strong>16</strong></p></td>
+<td style="text-align: center;"><p><em>20</em><br />
+<strong>18</strong></p></td>
+</tr>
+</tbody>
+</table>
+:::
+
+texto deduciendo los valores de la mediana y los cuartiles. Podría poner antes el rango intercuartílico.
+
+![Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos](representacionesGraficas/boxplot.png){#fig-boxplot fig-align="center" width="100%"}
+
+texto
+
+![Hola](representacionesGraficas/boxplotEstratificado1.png){fig-align="center" width="100%"}
+
+![Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos](representacionesGraficas/boxplotEstratificado2.png){#fig-boxplotEstra fig-align="center" width="100%"}
+
+texto
+
+texto
+
+## Evolución
+
+texto
+
+### Diagrama en serie de tiempo
+
+Evolución de la esperanza de vida en los países donde tienen más y donede tienen menos.
+
+![Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos](representacionesGraficas/evoRentaPC.png){fig-align="center" width="100%"}
+
+Asia: Afganistan, Japón. Menor de áfrica y otro con EV muy alta.
+
+También hay buenos datos en web de comunidd de Madrid: Indicadores de nacimientos.
+
+![Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos](representacionesGraficas/evoEspVida.png){fig-align="center" width="100%"} Que los nombres salgan por orden alfabético.
+
+## Relación entre variables
+
+texto
+
+### Las dos son cuantitativas: Diagramas bivariantes
+
+texto
+
+V ![Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos](representacionesGraficas/espeVida_RentaPC.png){fig-align="center" width="100%"}
+
+texto
+
+![Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos](representacionesGraficas/espeVida_RentaPC_mortInf.png){fig-align="center" width="100%"} Reflexión sobre esperanza de vida y ratios de mortalidad infantil.
+
+La esperanza de vida está más relacionada con la mortalidad infantil que con alargar la vida de los ancianos.
+
+Una es cuantitatica y la otra cualitativa: ejemplo de Boxplots estratificados del principio.
+
+## Frecuencias
+
+texto
+
+![Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos](representacionesGraficas/diagramaBarras.png){fig-align="center" width="100%"}
+
+texto
+
+### Diagramas de barras
+
+texto
+
+### Gráficos de donut
+
+texto en la figura [-@fig-donutPie]. Recortar arriba y abajo con programa de manipulación de imágenes.
+
+![Diagrama de donut y de pastel](representacionesGraficas/donutPiePoblacion.png){#fig-donutPie fig-align="center" width="100%"}
+
+Información más clara y mejor uso de la tinta.
+
+![Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos](representacionesGraficas/rectPropor_conRect.png){fig-align="center" width="100%"}
+
+En el recuadro se incluyen 90 países, casi la mitad del total de paises considerados (196), pero solo representa el \*\*\*% de la poblaicón mundial.
+
+Posible polígono de frecuencias y diagrama de Pareto.
+
+## Gráficos a evitar
+
+veamos algunas tentaciones que conviene evitar, especialmente en trabajos académicos donde el objetivo debe ser transmitir la información de la forma más clara y directa posible.
+
+### Gráficos con tres dimensiones {.unnumbered}
+
+Deben evitarse porque la profundidad no aporta ninguna información y dificulta la interpretación de las escalas. Algunas veces se utilizan en contextos publicitarios en los que se prioriza el impacto visual.
+
+![Tres dimensiones](representacionesGraficas/graficos3D.png){fig-align="center" width="100%"}
+
+### Diagramas de pastel, especialmente con tres dimensiones {.unnumbered}
+
+Estos diagramas no son muy aprecidos en contextos científico-técnicos donde -en general- se prefieren los diagramas de barras. Si se representan en tres dimensiones y desgajando un sector que se quiere destacar ya entramos en el terreno de los gráficos tendenciosos. Un gráfico similar que transmite la información de forma más clara son los diagramas de donut.
+
+===Comentar que en el gráfico 3d no es lo que parece===
+
+![Tres dimensiones](representacionesGraficas/Pastel3D.png){fig-align="center" width="100%"}
+
+### Gráficos que ocupan mucho espacio y contienen poca información {.unnumbered}
+
+Utilizamos los gráficos para resumir de forma visual la información que contienen los datos. Construir un gráfico para representar un solo dato no parece -en general- una buena . Así pues, contruir -por ejemplo- un gran diagrama de pastel para decir que la proporción de mujeres en un determinado ámbito es del 53% no parece una buena idea. Es más grave si en un informe o en una presentación oral se van presentando este tipo de gráficos de forma repetitiva. ===no caeremos en nuestra propia trampa poniendo un ejemplo===
+
+### Gráficos con escalas inapropiadas {.unnumbered}
+
+Uno de los recursos más utilizados para que el gráfico dé la impresión que interesa es adaptar la escala vertical para exagerar o disimular las diferencias, según convenga. La figura +++++ prodría representar las medidas de audiencia de cuatro cadenas de televisión, en el gráfico de la izquierda se observan unas diferencias muy claras y TV1 parece tener la mitad de la audiencia que TV4 sin embargo, si la escala parte de cero -que es lo correcto cuando se hacen comparaciones- apenas se aprecian esad diferencias.
+
+![Diagrama de donut y de pastel](representacionesGraficas/escalaBarras.png){fig-align="center" width="100%"}
+
+No hay que dejarse engañar con añadidos como el de la figura ++++
+
+![Diagrama de donut y de pastel](representacionesGraficas/escalaBarras2.png){fig-align="center" width="50%"}
+
+Ya sabemos que si el eje horizontal representa el tiempo es mejor utilizar gráficos de líneas y estos son también muy sensibles a la escala vertical. Los dos gráficos de la figura ++++ representan los mismos datos:
+
+![Diagrama de donut y de pastel](representacionesGraficas/escalaLineas.png){fig-align="center" width="100%"}
+
+texto
+
+Una buena opción
+
+![Diagrama de donut y de pastel](representacionesGraficas/escalaLineas2.png){fig-align="center" width="100%"}
+
+texto
+
+![Diagrama de donut y de pastel](representacionesGraficas/valorAcciones.png){fig-align="center" width="100%"}
+
+text
+
+::: {layout-ncol="2"}
+![](surus.png)
+
+![](hanno.png)
+:::
+
+![Diagrama de donut y de pastel](representacionesGraficas/salariosInflacion.png){fig-align="center" width="100%"}
+
+text
+
+::: grid
+::: g-col-5
+::: {style="font-size:14.5px"}
++:--------:+:--------:+:--------:+:-----------:+
+| \        | \        | \        | Poder\      |
+| Año      | Precios  | Salarios | adquisitivo |
++----------+----------+----------+-------------+
+| 1\       | 100,0\   | 100\     | 100\        |
+| 2\       | 115,0\   | 110\     | 95,7\       |
+| 3\       | 132,3\   | 115\     | 87,0\       |
+| 4\       | 152,1\   | 130\     | 85,5\       |
+| 5\       | 174,9\   | 130\     | 74,3\       |
+| 6\       | 201,1\   | 135\     | 67,1\       |
+| 7\       | 231,3\   | 140\     | 60,5\       |
+| 8\       | 266,0\   | 150\     | 56,4\       |
+| 9\       | 305,9\   | 180\     | 58,8\       |
+| 10\      | 351,8\   | 200\     | 56,9\       |
++----------+----------+----------+-------------+
+
+: {tbl-colwidths="\[15, 20, 20, 20\]"}
+:::
+:::
+
+::: g-col-7
+![Salarios y poder adquisitivo](representacionesGraficas/poderAdquisitivo.png){fig-align="center" width="100%"}
+:::
+:::
+
+text
+
+![Diagrama de donut y de pastel](representacionesGraficas/paro.png){fig-align="center" width="100%"}
+
+texto
+
+![Diagrama de donut y de pastel](representacionesGraficas/casaSinRayas.png){fig-align="center" width="100%"}
+
+texto
+
+![Diagrama de donut y de pastel](representacionesGraficas/casaConRayas.png){fig-align="center" width="100%"}
+
+texto
+
+![Diagrama de donut y de pastel](representacionesGraficas/circulos.png){fig-align="center" width="100%"}
+
+text
+
+![Diagrama de donut y de pastel](representacionesGraficas/escalaHorizontalBarras.png){fig-align="center" width="100%"}
+
+text
+
+![Diagrama de donut y de pastel](representacionesGraficas/escalaHorizontalLineas.png){fig-align="center" width="100%"}
+
+### Comparar situaciones usando distintas escalas
+
+texto
+
+![Diagrama de donut y de pastel](representacionesGraficas/histoDifEscalas.png){fig-align="center" width="100%"}
+
+### Rectas de tendencia cuando los puntos están muy agrupados en una parte del diagrama
+
+texto
+
+![Diagrama de donut y de pastel](representacionesGraficas/rectaTendencia.png){fig-align="center" width="100%"}
+
+## Malos usos y manipulaciones
+
+texto
+
+::: callout-note
+## Ojo con ir a la búsqueda del gazapo
+
+puede ser muy instructivo buscar ejemplos de gráficos que por falta de habilidad o por mala fe transmiten una información falsa, pero tampoco hay que transmitir la idea de que todo el mundo nos quiere engañar. En la prensa seria la mayoría de los gráficos -que pueden ser más o menos afortunados- se hacen de buena fe, con el ánimo de informar con
+:::

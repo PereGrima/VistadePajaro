@@ -1,0 +1,5 @@
+# Variables aleatorias
+
+Importancia, tipos, propiedades.
+
+

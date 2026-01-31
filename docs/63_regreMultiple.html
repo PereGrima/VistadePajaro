@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Roberto Behar / Pere Grima / Lluís Marco-Almagro">
 
-<title>Estadística a vista de pájaro</title>
+<title>11&nbsp; Regresión Múltiple – Estadística a vista de pájaro</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./01_Prologo.html" rel="next">
+<link href="./EPILOGO.html" rel="next">
+<link href="./62_regreSimple.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">PRESENTACIÓN</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./60_CORRELACION.html">CORRELACIÓN Y REGRESIÓN</a></li><li class="breadcrumb-item"><a href="./63_regreMultiple.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Regresión Múltiple</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -112,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PRESENTACIÓN</span></a>
   </div>
 </li>
@@ -132,11 +132,11 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="./20_DESCRIPTIVA.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ESTADÍSTICA DESCRIPTIVA</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./21_sintesisNumerica.html" class="sidebar-item-text sidebar-link">
@@ -155,11 +155,11 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="./30_VARIABILIDAD.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DESCRIBIR LO ALEATORIO</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./31_variablesAleatorias.html" class="sidebar-item-text sidebar-link">
@@ -178,11 +178,11 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="./40_MUESTRA_POBLACION.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DE LA MUESTRA A LA POBLACIÓN</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./41_muestreo.html" class="sidebar-item-text sidebar-link">
@@ -201,11 +201,11 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="./50_SIGNIFICATIVO.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ESTADÍSTICAMENTE SIGNIFICATIVO</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./51_contrasteHipotesis.html" class="sidebar-item-text sidebar-link">
@@ -243,7 +243,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./63_regreMultiple.html" class="sidebar-item-text sidebar-link">
+  <a href="./63_regreMultiple.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Regresión Múltiple</span></span></a>
   </div>
 </li>
@@ -273,36 +273,28 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#presentación" id="toc-presentación" class="nav-link active" data-scroll-target="#presentación">PRESENTACIÓN</a></li>
+  <li><a href="#las-cosas-no-son-como-parecen" id="toc-las-cosas-no-son-como-parecen" class="nav-link active" data-scroll-target="#las-cosas-no-son-como-parecen"><span class="header-section-number">11.1</span> Las cosas no son como parecen</a></li>
+  <li><a href="#fuerza-bruta.-aquí-va-en-serio." id="toc-fuerza-bruta.-aquí-va-en-serio." class="nav-link" data-scroll-target="#fuerza-bruta.-aquí-va-en-serio."><span class="header-section-number">11.2</span> Fuerza bruta. Aquí va en serio.</a></li>
+  <li><a href="#un-caso-sencillo-una-variable-cuantitativa-y-otra-cualitativa" id="toc-un-caso-sencillo-una-variable-cuantitativa-y-otra-cualitativa" class="nav-link" data-scroll-target="#un-caso-sencillo-una-variable-cuantitativa-y-otra-cualitativa"><span class="header-section-number">11.3</span> Un caso sencillo: Una variable cuantitativa y otra cualitativa</a></li>
+  <li><a href="#ojo-con-las-explicaciones-milagrosas" id="toc-ojo-con-las-explicaciones-milagrosas" class="nav-link" data-scroll-target="#ojo-con-las-explicaciones-milagrosas"><span class="header-section-number">11.4</span> Ojo con las explicaciones milagrosas</a></li>
+  <li><a href="#modelos-explicativos-y-modelos-predictivos" id="toc-modelos-explicativos-y-modelos-predictivos" class="nav-link" data-scroll-target="#modelos-explicativos-y-modelos-predictivos"><span class="header-section-number">11.5</span> Modelos explicativos y modelos predictivos</a></li>
+  <li><a href="#a-tener-en-cuenta" id="toc-a-tener-en-cuenta" class="nav-link" data-scroll-target="#a-tener-en-cuenta"><span class="header-section-number">11.6</span> A tener en cuenta</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./60_CORRELACION.html">CORRELACIÓN Y REGRESIÓN</a></li><li class="breadcrumb-item"><a href="./63_regreMultiple.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Regresión Múltiple</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Estadística a vista de pájaro</h1>
-<p class="subtitle lead">Estoy haciendo pruebas</p>
+<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Regresión Múltiple</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor/a</div>
-    <div class="quarto-title-meta-contents">
-             <p>Roberto Behar / Pere Grima / Lluís Marco-Almagro </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Fecha de publicación</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">31 ene 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -312,28 +304,33 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-
-<section id="presentación" class="level1 unnumbered">
-<h1 class="unnumbered">PRESENTACIÓN</h1><p><img src="cover.jpg" title="Estadística a vista de pájaro" class="quarto-cover-image nolightbox img-fluid"></p>
-<p><strong>Todo esto son pruebas.</strong></p>
-<p>De qué va este libro</p>
-<p>Qué pretende</p>
-<p>Cuales son sus peculiaridades</p>
-<p>A quien va dirigido. Lo empezamos a escribir pensando en los profesores de enseñanza secundaria, con la idea de dar una visión general de la estadística, más amplia de la que ellos deben enseñar, que les diera perspectiva y seguridad transmitiendo las ideas clave que deben quedar en los alumnos, evitando planteamientos o enfoques exclusivamente matemáticos.</p>
-<p>Algunas ideas clave:</p>
-<ul>
-<li><p>Distinguir el conocimiento basado en tradiciones, suposiciones o en el “siempre se ha considerado así” del conocimiento científico basado en datos.</p></li>
-<li><p>Recoger datos con la calidad y la representatividad requerida no es fácil. Conviene conocer algunas ideas clave a este respecto.</p></li>
-<li><p>La información que contienen los datos se puede dar con medidas estadísticas o con representaciones gráficas.</p></li>
-<li><p>Los datos siempre están afectados por una cierta variabilidad aleatoria. Hay técnicas para separar la señal del ruido. Tan malo es perderse la señan como sobreinterpretar el ruido.</p></li>
-</ul>
-<p>Aunque el contenido de este texto es de un nivel más básico que el habitual de los cursos generales de estadística que se imparten en muchos grados universitarios, creemos que si se entienden y se interiorizan estas ideas podemos considerar que se han cumplido los objetivos que se plantean en estos cursos.</p>
-<hr>
-<p>Todos los datos que se usan están aquí</p>
-<hr>
-<p>Licencia</p>
-<hr>
-<p><em>LA PORTADA ES DE OTRO LIBRO.</em> Solo para ver como queda.</p>
+<p>Texto</p>
+<section id="las-cosas-no-son-como-parecen" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="las-cosas-no-son-como-parecen"><span class="header-section-number">11.1</span> Las cosas no son como parecen</h2>
+<p>Ejemplo con 3 variables. Ejemplo examen.</p>
+</section>
+<section id="fuerza-bruta.-aquí-va-en-serio." class="level2" data-number="11.2">
+<h2 data-number="11.2" class="anchored" data-anchor-id="fuerza-bruta.-aquí-va-en-serio."><span class="header-section-number">11.2</span> Fuerza bruta. Aquí va en serio.</h2>
+<p>Best subsets</p>
+</section>
+<section id="un-caso-sencillo-una-variable-cuantitativa-y-otra-cualitativa" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="un-caso-sencillo-una-variable-cuantitativa-y-otra-cualitativa"><span class="header-section-number">11.3</span> Un caso sencillo: Una variable cuantitativa y otra cualitativa</h2>
+<p>peso, altura, sexo, y datos UFFI (creo)</p>
+</section>
+<section id="ojo-con-las-explicaciones-milagrosas" class="level2" data-number="11.4">
+<h2 data-number="11.4" class="anchored" data-anchor-id="ojo-con-las-explicaciones-milagrosas"><span class="header-section-number">11.4</span> Ojo con las explicaciones milagrosas</h2>
+<p>Tantos parámetros como datos</p>
+</section>
+<section id="modelos-explicativos-y-modelos-predictivos" class="level2" data-number="11.5">
+<h2 data-number="11.5" class="anchored" data-anchor-id="modelos-explicativos-y-modelos-predictivos"><span class="header-section-number">11.5</span> Modelos explicativos y modelos predictivos</h2>
+<p>texto</p>
+</section>
+<section id="a-tener-en-cuenta" class="level2" data-number="11.6">
+<h2 data-number="11.6" class="anchored" data-anchor-id="a-tener-en-cuenta"><span class="header-section-number">11.6</span> A tener en cuenta</h2>
+<p>Análisis exploratoio más complicado Lo mismo con el análisis de los residuos</p>
+<p>Otras medidas de calidad del ajuste.</p>
+<p>La regresión no sirve para todo.</p>
+<p>El valor de un coeficiente, si no va acompañado del valor de su desviación típica, no sirve prácticamente para nada.</p>
 
 
 </section>
@@ -741,10 +738,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./62_regreSimple.html" class="pagination-link" aria-label="Regresión simple">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Regresión simple</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./01_Prologo.html" class="pagination-link" aria-label="Prólogo">
-        <span class="nav-page-text">Prólogo</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./EPILOGO.html" class="pagination-link" aria-label="EPÍLOGO">
+        <span class="nav-page-text">EPÍLOGO</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

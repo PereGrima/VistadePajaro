@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Roberto Behar / Pere Grima / Lluís Marco-Almagro">
 
-<title>Estadística a vista de pájaro</title>
+<title>DESCRIBIR LO ALEATORIO – Estadística a vista de pájaro</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./01_Prologo.html" rel="next">
+<link href="./31_variablesAleatorias.html" rel="next">
+<link href="./22_Graficos.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -72,6 +72,35 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <script src="https://kit.fontawesome.com/98a945d90a.js" crossorigin="anonymous"></script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -85,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">PRESENTACIÓN</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./30_VARIABILIDAD.html">DESCRIBIR LO ALEATORIO</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -112,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PRESENTACIÓN</span></a>
   </div>
 </li>
@@ -153,7 +182,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./30_VARIABILIDAD.html" class="sidebar-item-text sidebar-link">
+            <a href="./30_VARIABILIDAD.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">DESCRIBIR LO ALEATORIO</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -268,41 +297,22 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Tabla de contenidos</h2>
-   
-  <ul>
-  <li><a href="#presentación" id="toc-presentación" class="nav-link active" data-scroll-target="#presentación">PRESENTACIÓN</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Estadística a vista de pájaro</h1>
-<p class="subtitle lead">Estoy haciendo pruebas</p>
+<h1 class="title">DESCRIBIR LO ALEATORIO</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor/a</div>
-    <div class="quarto-title-meta-contents">
-             <p>Roberto Behar / Pere Grima / Lluís Marco-Almagro </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Fecha de publicación</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">31 ene 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -312,30 +322,25 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-
-<section id="presentación" class="level1 unnumbered">
-<h1 class="unnumbered">PRESENTACIÓN</h1><p><img src="cover.jpg" title="Estadística a vista de pájaro" class="quarto-cover-image nolightbox img-fluid"></p>
-<p><strong>Todo esto son pruebas.</strong></p>
-<p>De qué va este libro</p>
-<p>Qué pretende</p>
-<p>Cuales son sus peculiaridades</p>
-<p>A quien va dirigido. Lo empezamos a escribir pensando en los profesores de enseñanza secundaria, con la idea de dar una visión general de la estadística, más amplia de la que ellos deben enseñar, que les diera perspectiva y seguridad transmitiendo las ideas clave que deben quedar en los alumnos, evitando planteamientos o enfoques exclusivamente matemáticos.</p>
-<p>Algunas ideas clave:</p>
-<ul>
-<li><p>Distinguir el conocimiento basado en tradiciones, suposiciones o en el “siempre se ha considerado así” del conocimiento científico basado en datos.</p></li>
-<li><p>Recoger datos con la calidad y la representatividad requerida no es fácil. Conviene conocer algunas ideas clave a este respecto.</p></li>
-<li><p>La información que contienen los datos se puede dar con medidas estadísticas o con representaciones gráficas.</p></li>
-<li><p>Los datos siempre están afectados por una cierta variabilidad aleatoria. Hay técnicas para separar la señal del ruido. Tan malo es perderse la señan como sobreinterpretar el ruido.</p></li>
-</ul>
-<p>Aunque el contenido de este texto es de un nivel más básico que el habitual de los cursos generales de estadística que se imparten en muchos grados universitarios, creemos que si se entienden y se interiorizan estas ideas podemos considerar que se han cumplido los objetivos que se plantean en estos cursos.</p>
-<hr>
-<p>Todos los datos que se usan están aquí</p>
-<hr>
-<p>Licencia</p>
-<hr>
-<p><em>LA PORTADA ES DE OTRO LIBRO.</em> Solo para ver como queda.</p>
+<p>Considerar la variabilidad es fundamental para describir la realidad, para entenderla y para tomar mejores decisiones.</p>
+<p>Necesitamos definir los conceptos y los términos que nos permiten describir esa realidad impregnada de variabilidad. No se puede pensar ni razonar de forma adequada si no tenemos los términos adecuados para ello.</p>
+<p>En nuestra vida cotidiana tendemos a ignorar la variabilidad, y no disponemos de los términos ni de los conceptos para razonar adecuadamente.</p>
+<p>Mujer tenía que ser: ¿Conducen las mujeres peor que los hombres? Esta es una pregunta que no tiene respuesta desde el rigor del análisis de la realidad de forma objetiva. En primer lugar porque no todas las mujeres conducen igual, ni tampoco todos los hombres. Habrá mujeres que conducen bien y otras que conducen mal, igual que los hombres, pero la pregunta, tal como está planteada, parece ignorar este detalle. Además hay otra dificultad: ¿qué significa conducir bien? ¿cómo se mide? +++más cosas+++</p>
+<p>Lo que es una variable aleatoria y lo que es una distribición de probabilidad. —Carpintero tipos de madera</p>
+<p>La variabilidad está presente allí donde miremos. Existe variabilidad en las características físicas de las personas y también en sus opiniones sobre lo que ocurre en nuestro entorno. No todos los árboles, ni todas las plantas de un huerto, dan exactamente la misma cosecha, aunque tengan el mismo origen y hayan crecido en exactamente las mismas condiciones. Si en un lote de piezas han aparecido 3 defectuosas, en otro lote fabricado en idénticas condiciones podría no aparecer ninguna, que haya cinco. Las visitas a una página web en dos días seguidos no necesarimente son idénticas, aunque nada haya cambiado de un día al siguiente.</p>
+<p>Alargar más lo de medicina.</p>
+<p>En el ámbito de la ingeniería ignorar la variabilidad también conduce a una visión equivocada de las cosas. Veamos un ejemplo donde usaremos la ley de Ohm (recuerde: I=V/R, si esto no le suena de nada puede saltarse este párrafo). Supongamos que nos encargan fabricar un lote de circuitos muy sencillos que solo constan de una fuente de alimentación (V) y de una resistencia (R). Vamos a suponer que el voltaje de la fuente de alimentación siempre es igual a 100 V mientras que las resistencias presentan cierta variabilidad y tienen un valor real que es igual al nominal <span class="math inline">\(\pm\)</span> 5 <span class="math inline">\(\Omega\)</span>. Se desea que en cada circuito la intensidad sea de 10A y se considerará que el circuito es defectuoso si su intensidad está fuera del intervalo 10 <span class="math inline">\(\pm\)</span> 3 A ¿de qué valor nominal se deben pedir las resistencias para minimizar la proporción de circuitos defectuosos? Quizá está pensando que si se quiere tener I=10A, si V=100V se debe pedir R=10 <span class="math inline">\(\Omega\)</span>. Esto sería verdad si no hubiera variabilidad pero en nuestro caso habría que pedirlas de 11 <span class="math inline">\(\Omega\)</span><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>Explicar que la variabilidad está presente en todas partes (ejemplos: una vacuna no se prueba con una sola persona, ni para saber con qué peso estan saliendo las unidades de una línea en envasado se pesa una sola unidad)… Necesitamos un lenguaje para movernos en ese contexto. No tener las palabras adecuadas no nos deja pensar bien.</p>
+<p>Necesidad de tratar con variables aleatorias.</p>
+<p>Las distribuciones de probabilidad como descripción del comportamiento de las variables aleatorias</p>
+<p>Importancia de saberse mover en un contexto de variabilidad. No todas las variabilidades son iguales.</p>
 
 
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>El circuito es defectuoso si su intensidad está por debajo de 7A o por encima de 13A, es decir, si la resistencia que se coloca está por encima de 14,3 <span class="math inline">\(\Omega\)</span> o por debajo de 7,7 <span class="math inline">\(\Omega\)</span>. Para huir de esos valores lo mejor es pedir un valor nominal que esté en el centro, es decir: (7,7+14,3)/2 = 11 <span class="math inline">\(\Omega\)</span>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
@@ -741,10 +746,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./22_Graficos.html" class="pagination-link" aria-label="Representaciones gráficas">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Representaciones gráficas</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./01_Prologo.html" class="pagination-link" aria-label="Prólogo">
-        <span class="nav-page-text">Prólogo</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./31_variablesAleatorias.html" class="pagination-link" aria-label="Variables aleatorias">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Variables aleatorias</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

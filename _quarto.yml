@@ -9,47 +9,47 @@ book:
   date: today
   date-format: medium
   author: "Roberto Behar / Pere Grima / Lluís Marco-Almagro"
+  sidebar:
+      collapse-level: 0
   cover-image: cover.jpg
   site-url: https://peregrima.github.io/VistadePajaro/
 
   chapters:
     - index.qmd
     - 01_Prologo.qmd
-    
-    - part: 10_Parte_Descriptiva.qmd
+    - 10_INTRODUCCION.qmd
+     
+    - part: 20_DESCRIPTIVA.qmd                  # I ESTADÍSTICA DESCRIPTIVA
       chapters: 
-        - 11_sintesisNumerica.qmd
-        - 12_graficos.qmd
+        - 21_sintesisNumerica.qmd               # 2. Síntesis numérica de datos
+        - 22_Graficos.qmd                       # 3. Representaciones gráficas
         
-    - part: 20_Parte_Variabilidad.qmd
-      chapters: 
-        - 21_variablesAleatorias.qmd
-        - 22_distribucionesProbabilidad.qmd
-        
-    - part: 30_Parte_Estimacion.qmd
-      chapters: 
-        - 31_estimacionProporciones.qmd
-        - 32_estimacionMedias.qmd
-        - 33_estimacionTamañoPoblacion.qmd
-        
-    - part: 40_Parte_Contraste.qmd
-      chapters: 
-        - 41_Conceptos_CH.qmd
-        - 42_Proceso_CH.qmd
-        - 43_tiposError_CH.qmd    
-        
-    - part: 50_Parte_Experimentos.qmd
-      chapters: 
-        - 51_floresAspirina.qmd
-        - 52_duracionPilas.qmd   
-        
-    - part: 60_Parte_Corre_Regre.qmd
+    - part: 30_VARIABILIDAD.qmd                 # II DESCRIBIR LO ALEATORIO
       chapters:
-        - 61_correlacion.qmd
-        - 62_regresionSimple.qmd
-        - 63_regresionMultiple.qmd
+        - 31_variablesAleatorias.qmd            # 4. Variables aleatorias    
+        - 32_distribucionesProbabilidad.qmd     # 5. Distribuciones de probabilidad
         
-    - references.qmd
+    - part: 40_MUESTRA_POBLACION.qmd            # III DE LA MUESTRA A LA POBLACIÓN
+      chapters: 
+        - 41_muestreo.qmd                       # 6. Muestreo. Encuestas
+        - 42_estimacion.qmd                     # 7. Estimación de características de la población
+        
+    - part: 50_SIGNIFICATIVO.qmd                # IV ESTADÍSTICAMENTE SIGNIFICATIVO
+      chapters: 
+        - 51_contrasteHipotesis.qmd             # 8. Contraste de hipótesis
+        - 52_algunosTest.qmd                    # 9. Algunos test clásicos
+
+    - part: 60_CORRELACION.qmd                  # V CORRELACIÓN Y REGRESIÓN
+      chapters: 
+        - 61_relacionLineal.qmd                 # 10. Medidas de relación lineal
+        - 62_regreSimple.qmd                    # 11. Regresión simple
+        - 63_regreMultiple.qmd                  # 12. Regresión múltiple
+        
+    - part: EPILOGO.qmd                         # EPÍLOGO
+      
+    - part: ORIGEN_DATOS.qmd                    # Origen de los datos
+             
+    - references.qmd                            # Referencias
 
 # Referencias
 biblio-title: "Referencias"

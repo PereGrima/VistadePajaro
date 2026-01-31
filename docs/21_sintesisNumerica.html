@@ -1,0 +1,1748 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>1&nbsp; Síntesis numérica de datos – Estadística a vista de pájaro</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./22_Graficos.html" rel="next">
+<link href="./20_DESCRIPTIVA.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-2cf3c65c5b6db5ec86e992953759863e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<script src="https://kit.fontawesome.com/98a945d90a.js" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./20_DESCRIPTIVA.html">ESTADÍSTICA DESCRIPTIVA</a></li><li class="breadcrumb-item"><a href="./21_sintesisNumerica.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Síntesis numérica de datos</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Estadística a vista de pájaro</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PRESENTACIÓN</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_Prologo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prólogo</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10_INTRODUCCION.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">INTRODUCCIÓN</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./20_DESCRIPTIVA.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ESTADÍSTICA DESCRIPTIVA</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./21_sintesisNumerica.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Síntesis numérica de datos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./22_Graficos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Representaciones gráficas</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./30_VARIABILIDAD.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SOBRE LA VARIABILIDAD</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./31_variablesAleatorias.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estimación de medias</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./32_distribucionesProbabilidad.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Distribuciones de probabilidad</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./40_MUESTRA_POBLACION.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ESTIMACIÓN</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./41_muestreo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">CONTRASTE DE HIPÓTESIS</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./42_estimacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Variables aleatorias</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./50_SIGNIFICATIVO.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Esquema de razonamiento</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./51_contrasteHipotesis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Tipos de error</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./52_algunosTest.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">¿La Aspirina alarga la vida de las flores?</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./60_CORRELACION.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">¿Duran más las pilas caras?</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./61_relacionLineal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">DISEÑO DE EXPERIMENTOS</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./62_regreSimple.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">CORRELACIÓN Y REGRESIÓN</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./63_regreMultiple.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Regresión Múltiple</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Prólogo</span></span>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Prólogo</span></span>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Referencias</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#medidas-de-tendencia-central" id="toc-medidas-de-tendencia-central" class="nav-link active" data-scroll-target="#medidas-de-tendencia-central"><span class="header-section-number">1.1</span> Medidas de tendencia central</a>
+  <ul class="collapse">
+  <li><a href="#media-aritmética" id="toc-media-aritmética" class="nav-link" data-scroll-target="#media-aritmética">Media aritmética</a></li>
+  <li><a href="#mediana" id="toc-mediana" class="nav-link" data-scroll-target="#mediana">Mediana</a></li>
+  <li><a href="#moda" id="toc-moda" class="nav-link" data-scroll-target="#moda">Moda</a></li>
+  </ul></li>
+  <li><a href="#medidas-de-dispersión" id="toc-medidas-de-dispersión" class="nav-link" data-scroll-target="#medidas-de-dispersión"><span class="header-section-number">1.2</span> Medidas de dispersión</a>
+  <ul class="collapse">
+  <li><a href="#rango" id="toc-rango" class="nav-link" data-scroll-target="#rango">Rango</a></li>
+  <li><a href="#desviación-media" id="toc-desviación-media" class="nav-link" data-scroll-target="#desviación-media">Desviación media</a></li>
+  <li><a href="#varianza" id="toc-varianza" class="nav-link" data-scroll-target="#varianza">Varianza</a></li>
+  <li><a href="#desviación-típica" id="toc-desviación-típica" class="nav-link" data-scroll-target="#desviación-típica">Desviación típica</a></li>
+  <li><a href="#el-coeficiente-de-variación" id="toc-el-coeficiente-de-variación" class="nav-link" data-scroll-target="#el-coeficiente-de-variación">El coeficiente de variación</a></li>
+  </ul></li>
+  <li><a href="#medidas-de-posición" id="toc-medidas-de-posición" class="nav-link" data-scroll-target="#medidas-de-posición"><span class="header-section-number">1.3</span> Medidas de posición</a>
+  <ul class="collapse">
+  <li><a href="#cuartiles" id="toc-cuartiles" class="nav-link" data-scroll-target="#cuartiles">Cuartiles</a></li>
+  <li><a href="#percentiles" id="toc-percentiles" class="nav-link" data-scroll-target="#percentiles">Percentiles</a></li>
+  </ul></li>
+  <li><a href="#apéndice-1.1-otras-medias" id="toc-apéndice-1.1-otras-medias" class="nav-link" data-scroll-target="#apéndice-1.1-otras-medias">Apéndice 1.1: Otras medias</a>
+  <ul class="collapse">
+  <li><a href="#media-geométrica" id="toc-media-geométrica" class="nav-link" data-scroll-target="#media-geométrica">Media geométrica</a></li>
+  <li><a href="#media-armónica" id="toc-media-armónica" class="nav-link" data-scroll-target="#media-armónica">Media armónica</a></li>
+  </ul></li>
+  <li><a href="#apéndice-1.2-por-qué-dividimos-por-n-1" id="toc-apéndice-1.2-por-qué-dividimos-por-n-1" class="nav-link" data-scroll-target="#apéndice-1.2-por-qué-dividimos-por-n-1">Apéndice 1.2: ¿Por qué dividimos por n-1?</a></li>
+  <li><a href="#apéndice-1.3-porcentajes" id="toc-apéndice-1.3-porcentajes" class="nav-link" data-scroll-target="#apéndice-1.3-porcentajes">Apéndice 1.3: Porcentajes</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./20_DESCRIPTIVA.html">ESTADÍSTICA DESCRIPTIVA</a></li><li class="breadcrumb-item"><a href="./21_sintesisNumerica.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Síntesis numérica de datos</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Síntesis numérica de datos</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Si tiene que describir la cara de alguien al que ha visto cometer un delito es posible que se centre en aspectos poco relevantes o que utilice unos términos que su interlocutor no sepa interpretar tal como usted pretende. Sin embargo, los policías que están entrenados para realizar este tipo de descripciones saben en que aspectos se deben fijar y en como describir cada uno de ellos. También, por supuesto, el que recibe la información debe saber interpretar la información que recibe.</p>
+<p>Con la síntesis numérica de datos pasa algo parecido, se trata de saber en qué aspectos nos tenemos que fijar, en como describirlos –en este caso medirlos– y en como interpretar los resultados obtenidos.</p>
+<p>Estas medidas de síntesis numérica se pueden agrupar en varios tipos:</p>
+<ul>
+<li><p>Medidas de tendencia central: Indican en torno a que valor se mueven los datos. Típicamente se consideran la media, la mediana y la moda, auqneu esta última –en generl– no es demasiado relevante.</p></li>
+<li><p>Medidas de dispersión: Informan sobre la variabilidad de los datos. Los valores 0 y 1000 tienen media 500, como 550 y 450, pero la variabilidad -que muchas veces es lo más importante- es muy distinta. Medias típicas de dispersión son: el rango, la desviación media, la la varianza y desviación típica. El coeficiente de variación no es exactamente una medida de dispersión pero también la colocamos en este grupo.</p></li>
+<li><p>Medidas de posición: Sirven para entender la posición de un valor dentro de un conjunto. Si quiere saber si en su empresa está entre el 25% que tiene mejor salario o en el 25% de los que lo tienen más bajo, solo necesita saber el primer y el tercer cuartil de la distribución delos salarios. Además de los cuartiles hablaremos de deciles y percentiles, una simple generalización.</p></li>
+<li><p>Porcentajes: Muchas veces se utilizan para describir situaciones numéricas, parecen fáciles pero no lo son tanto y pesamos que vale la pena dedeciarles tambien un apartado.</p></li>
+</ul>
+<section id="medidas-de-tendencia-central" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="medidas-de-tendencia-central"><span class="header-section-number">1.1</span> Medidas de tendencia central</h2>
+<p>La cantinela “media, mediana y moda” –medidas de tendencia central por excelencia– constitue para muchos el primer recuerdo de su recorrido por el curso de estadística. Vamos a repasar el significado, los peligros y lo que se puede esperar de cada una de estas medidas.</p>
+<section id="media-aritmética" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="media-aritmética">Media aritmética</h3>
+<p>Tanto el cálculo como el significado de la media aritmética son bien conocidos por los estudiantes. Además de que la idea es sencilla, su cálculo tiene interés para saber si se aprobará una asignatura a la vista de las notas del curso. [<em>pretendo empezar con un toque de humor pero no sé si se entiende</em>]</p>
+<p>Cuando los datos se presentan tabulados no hay que olvidar que cada uno se repite tantas veces como indica su <strong>frecuencia absoluta</strong>. En la <a href="#tbl-hijosFamilia" class="quarto-xref">Tabla&nbsp;<span>1.1</span></a>, la variable considerada es el número de hijos por familia (<span class="math inline">\(x\)</span>) y el número de familias para cada uno de esos valores es la frecuencia absoluta (<span class="math inline">\(n\)</span>).</p>
+<div id="tbl-hijosFamilia" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-hijosFamilia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;1.1: Número de hijos por familia
+</figcaption>
+<div aria-describedby="tbl-hijosFamilia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td>Número de hijos (<span class="math inline">\(x\)</span>):</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr class="even">
+<td>Número de familias (<span class="math inline">\(n\)</span>):</td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">21</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>El valor medio (<span class="math inline">\(\bar{x}\)</span>) del número de hijos por famila es igual a:</p>
+<p><span class="math display">\[ \bar{x} = \frac{\sum_{i} n_i \, x_i }{N} \:  = \:  1,48 \]</span></p>
+<p>Donde <span class="math inline">\(N\)</span> es el número total de datos (en este caso <span class="math inline">\(N=60\)</span>) e <span class="math inline">\(i\)</span> es el índice que aquí va de 1 a 6 para valores de <span class="math inline">\(x\)</span> de 0 a 5.</p>
+<p>Para cada valor de <span class="math inline">\(x_i\)</span> su <strong>frecuencia relativa</strong> es <span class="math inline">\(f_i = n_i/N\)</span>. También podemos calcular la media usando la expresión:</p>
+<p><span class="math display">\[ \bar{x} = \sum_{i} f_i \, x_i   =  1,48 \]</span> Esta expresión es análoga a la de la esperanza matemática (solo hay que cambiar frecuencia relativa por probabilidad) que veremos más adelante,</p>
+<div id="tbl-letters" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[10,90]">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-letters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;1.2: Ajuste a ojo. Ventajas e inconvenientes
+</figcaption>
+<div aria-describedby="tbl-letters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 90%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>PROS</strong> <i class="fa-solid fa-thumbs-up fa-xl" style="color: #0ca701;"></i></td>
+<td><ul>
+<li>Medida de tendencia central más conocida y utilizada.</li>
+<li>Fácil de interpretar</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td><strong>CONS</strong> <i class="fa-solid fa-thumbs-down fa-xl" style="color: #f03333;"></i></td>
+<td><ul>
+<li>Muy influenciable por valores extremos</li>
+<li>Poco representativa si la distribución es muy asimétrica</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ojo con la media
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La media es un concepto tan fácil que a veces lo tratamos con descuido y nos da sorpresas. Si usted pregunta la edad a un grupo de personas, en rigor la edad media no es el promedio de los valores que le diagan (aunque todos digan la verdad). Es el promedio más 0,5 años.</p>
+<p>También hay que estar atento a las medias que no está claro como se han calculado. Un ejemplo sencillo: ¿cómo se calcula la temperatura media de un día? ¿Se toman cada minuto y se hace el promedio? ¿o se toman cada hora o cada 6 horas? Se se hace el promedio de las temperaturas máxima y mínima no se le debería llamar temperatura media.</p>
+</div>
+</div>
+</section>
+<section id="mediana" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="mediana">Mediana</h3>
+<p>Se ordenan los valores y el que queda en centro es la mediana. Si el número de valores es par se toma como mediana el promedio de los dos centrales.</p>
+<p>La mediana tiene unas propiedades de las que carece la media, por lo que es un buen complemento informativo e incluso puede ser más útil en algunos casos. Sus ventajas respecto a la media son:</p>
+<ul>
+<li><p>Es más robusta frente a la presencia de valores anómalos. Supongamos que nuestros datos son:<br>
+<span class="math display">\[2, \, 5, \, 6, \,7 \,\text{ y  }\, 9\]</span> La media es 5,6 y la mediana es 6. Si al introducir los datos al ordenador nos equivocamos y en último lugar en vez de 9 introducimos 99, la media pasa a ser 23,8 mientras que la mediana sigue siendo 6. Esto hace que la mediana sea útil cuando nos enfrentamos a un conjunto de datos que puede contener valores anómalos (posibles errores, problemas con la importación…) ya que da una idea menos contaminada por esos valores anomálos, del valor en torno al cual se mueven los datos.</p></li>
+<li><p>Por su propia definición, la mediana deja un 50% de las observaciones por debajo y otro 50% por encima y esto le da unas ventajas que la media no tiene. Si queremos saber si en nuestra empresa estamos entre los que cobran más o entre los que cobran menos, debemos comparar nuestro salario con la mediana, no con la media. Si sólo hay 10 trabajadores y los salarios son (en las unidades que corresponda):<br>
+<span class="math display">\[8, \, 8, \, 9, \,9, \, 10, \, 10, \, 11, \,11, \, 12 \,\text{ y  }\, 100\]</span> todos menos uno (en este caso el 90%) están por debajo de la media, que es 18,8. Esto no pasa nunca con la mediana: si estamos por encima de la mediana, estamos con el 50% de los que más cobra. Otro ejemplo. Si en un examen las notas van de 0 a 10 y se aprueba sacando una nota igual o superior a 5, si la nota media es 5 no sabemos cuántos han aprobado. Si se han examinado 50 estudiantes, puede ser que 41 hayan suspendido con un 4; 8 hayan sacado un 10 y uno haya obtenido un 6. Esto da media 5, aunque el 82 % ha suspendido. Si la mediana es 5, seguro que la mitad han aprobado.</p></li>
+</ul>
+<p>Si la distribución de los datos es simétrica, la media y la mediana coinciden y entonces todo son ventajas. Por ejemplo, en una distribución Normal la media y la mediana son iguales, por tanto, si los valores que tenemos provienen de una Normal, la media y la mediana no andarán muy lejos una de otra. En cualquier caso, siempre podemos calcular las dos y aprovechar lo mejor de cada una.</p>
+<p>Según publicó el diario El País <span class="citation" data-cites="ElPAisEjecutivo">(<a href="references.html#ref-ElPAisEjecutivo" role="doc-biblioref">El País, 2024</a>)</span>, el ejecutivo de las empresas cotizadas en la bolsa española mejor pagado en 2023 tuvo unos ingresos de 23,77 millones de euros. Esta empresa tenía ese año 2299 empleados en España, suponiendo que ese ejecutivo formara parte de la plantilla y que todos menos él cobraran solo el salario mínimo (15.120 €/año), se podría decir que en promedio cobran 25.453 €/año, un 68 % más de lo que cobrarían todos menos uno. [<em>no sé si poner este párrafo, quizá se podría poner ejercicio y que busquen los datos</em>]</p>
+<div id="tbl-letters" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[10,90]">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-letters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;1.3: Ajuste a ojo. Ventajas e inconvenientes
+</figcaption>
+<div aria-describedby="tbl-letters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 90%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>PROS</strong> <i class="fa-solid fa-thumbs-up fa-xl" style="color: #0ca701;"></i></td>
+<td><ul>
+<li>Insensible a la presencia de valores extremos.</li>
+<li>Muy útil cuando la distribución de los datos es muy asimétrica.</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td><strong>CONS</strong> <i class="fa-solid fa-thumbs-down fa-xl" style="color: #f03333;"></i></td>
+<td><ul>
+<li>No tiene fórmula. No la dan las calculadoras de uso académico.</li>
+<li>Su uso no está tan popularizado como el de la media.</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="moda" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="moda">Moda</h3>
+<p>Dado un conjunto de valores, la moda es el que más se repite. A difencia de la media y la mediana puede no ser única y se puede aplicar también a varibles cualitativas (no numéricas). Si realizamos sobre el método de transporte que usan los estudiantes para ir a su centro de estudio la moda puede ser el autobús o ir andando. No es una medida muy relevante. Siempre aparece en los libros pero rara vez en los resúmenes estadísticos.</p>
+<div id="tbl-letters" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[10,90]">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-letters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;1.4: Ajuste a ojo. Ventajas e inconvenientes
+</figcaption>
+<div aria-describedby="tbl-letters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 90%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>PROS</strong> <i class="fa-solid fa-thumbs-up fa-xl" style="color: #0ca701;"></i></td>
+<td><ul>
+<li>También se puede aplicar a datos cualitativos.</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td><strong>CONS</strong> <i class="fa-solid fa-thumbs-down fa-xl" style="color: #f03333;"></i></td>
+<td><ul>
+<li>En general tiene poco interés práctico y es poco usada.</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>A modo de resumen de este apartado, la figura <a href="#fig-salariosINE" class="quarto-xref"><span>1.1</span></a> muestra la distribución de los salarios en España en 2021. Tiene dos “Salarios más frecuentes” (observe que se evita el término “moda”, quizá porque se puede prestar a malas interpretaciones). Cuando se da esta circunstancia se dice que la distribución es bimodal. El salario medio es mayor que el mediano porque los salarios muy altos tiran de la media pero apenas afectan a la mediana. <br><br></p>
+<div id="fig-salariosINE" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-salariosINE-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras/distribucionSalariosINE.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-salariosINE-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1.1: Distribución de los salarios en España en 2021. <span class="citation" data-cites="salariosINE2021">(Fuente: <a href="references.html#ref-salariosINE2021" role="doc-biblioref">INE 2023</a>)</span>.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="medidas-de-dispersión" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="medidas-de-dispersión"><span class="header-section-number">1.2</span> Medidas de dispersión</h2>
+<p>Quizá lo más importante de este capítulo -y de todo el libro- es interiorizar la importancia de considerar la variabilidad para para describir datos, para analizarlos y para tomar decisiones.</p>
+<p>Todos hemos oido algún chiste que ridiculiza esa interpretación de la realidad basada solo en valores medios (pero eso no es buena estadística!):</p>
+<ul>
+<li><p>Si un señor se come un pollo y otro no come nada la estadística lo explica diciendo que han comido un promedio de medio pollo cada uno.</p></li>
+<li><p>Si usted va a la cocina de su casa, pone la cabeza en el horno y los pies en el frigorífico tendrá el cuerpo a la temperatura media ideal.</p></li>
+<li><p>Aunque no sabía nadar se atrevió a cruzar el rio cuando le dijeron que la profundidad media era solo de un metro. Se ahogó.</p></li>
+</ul>
+<p>En ocasiones la práctica habitual no está muy alejada de esas caricaturas. Estamos acostumbrados a clasificar los países por su renta per cápita y eso es el medio pollo que se come cada uno. La variabilidad en la renta también es un excelente indicador del nivel de desarrollo y bienestar de un país. Un caso similar en un terreno que nos queda cercano son los resultados de las pruebas PISA, estamos acostumbrados a ver la clasificación de los valores medios por países pero apenas se habla de la variabilidad dentro de cada país.</p>
+<p>En el ámbito de la ingeniría y del control de calidad, la variabilidad suele ser el enemigo más importante al que hay que enfrentarse. En general, en los análisis estadísticos hay que saber distinguir entre esa variabilidad de fondo, inevitable, que muchas veces denominamos “ruido” de lo que es una variación debida a una causa concreta que conviene identificar, lo que llamamos “señal”. En fin, lo primero será saber como medir la variabilidad. Vamos a repasar las medidas más habituales.</p>
+<section id="rango" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="rango">Rango</h3>
+<p>Es la diferencia entre los valores máximo y mínimo. Si el rango de edades de los asistentes a un concierto es de 5 años significa que todos son de edades similares, pero si es de 50 años es que ese tipo de música interesa a personas de varias generaciones.</p>
+<div id="tbl-letters" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[10,90]">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-letters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;1.5: Rango. Ventajas e inconvenientes
+</figcaption>
+<div aria-describedby="tbl-letters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 90%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>PROS</strong> <i class="fa-solid fa-thumbs-up fa-xl" style="color: #0ca701;"></i></td>
+<td><ul>
+<li>Muy fácil de entender y de calcular.</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td><strong>CONS</strong> <i class="fa-solid fa-thumbs-down fa-xl" style="color: #f03333;"></i></td>
+<td><ul>
+<li>Solo cuentan los valores extremos, que pueden ser anómalos o no representativos del conjunto de datos</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="desviación-media" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="desviación-media">Desviación media</h3>
+<p>Interesa una medida de dispersión en la que todos los valores tengan algo que decir, tal como ocurre con la media aritmética. En esta línea, una medida de dispersión podría ser el promedio de las distancias de cada valor respecto a la media, Pero una de las propiedades de la media aritmética es que equibra esas distancias de manera que esa expresión siempre será igual a cero. No importa que hay mucha o poca dispersión, siempre vale lo mismo, por tanto, está claro que no sirve para nada.</p>
+<p>Existen dos formas de resolver ese problema. Una de ellas es usar las distancias en valor aboluto. En este caso tenemos lo que llamamos Distancia Media, que sí es una medida de variabilidad (a más variabilidad, mayor desviación media). Si nuestros valores son: <span class="math inline">\(x_1,\, x_2, \, \dotsc \, x_N\)</span> y su valor medio es <span class="math inline">\(\bar{x}\)</span>, tendremos:</p>
+<p><span class="math display">\[ DM = \frac{\sum_{i=1}^N |x_i - \bar{x}|}{N} \]</span> Es interesante observar que la distancia media está relacionada de forma más natural con la mediana que con la media aritmética. Consideremos la función:</p>
+<p><span class="math display">\[ f(a) =  \frac{\sum_{i=1}^N |x_i -a|}{N} \]</span> Como la distancia promedio solo depende de <span class="math inline">\(a\)</span> le hemos llamado <span class="math inline">\(f(a)\)</span>. El valor que minimiza esta función y que, por tanto, puede considerarse el mejor representate de los datos con el criterio aplicado no es la media sinó la mediana.</p>
+<p>La otra forma de resolver el problema de la anulación de las diferencias es elevándolas al cuadrado. Parece una complicación innecesaria pero tiene muchas ventajas, es lo que llamamos varianza.</p>
+<div id="tbl-letters" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[10,90]">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-letters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;1.6: Desviación media. Ventajas e inconvenientes
+</figcaption>
+<div aria-describedby="tbl-letters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 90%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>PROS</strong> <i class="fa-solid fa-thumbs-up fa-xl" style="color: #0ca701;"></i></td>
+<td><ul>
+<li>Fácil de explicar y de justificar.</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td><strong>CONS</strong> <i class="fa-solid fa-thumbs-down fa-xl" style="color: #f03333;"></i></td>
+<td><ul>
+<li>Tiene poco recorrido en la teoría estadística</li>
+<li>Existe otra medida –la desviación típica– con más posibilidades de aplicación y mejores propiedades</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="varianza" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="varianza">Varianza</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>¿Varianza o variancia?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Las dos son válidas según el diccionario de la Real Academia Española. Nosotros usaremos <em>varianza</em>.</p>
+</div>
+</div>
+<p>Simplemente elevamos las diferencias al cuadrado en vez de usar su valor absoluto. Si tenemos un conjunto de <span class="math inline">\(N\)</span> datos con media <span class="math inline">\(\mu\)</span> y queremos conocer la varianza de <strong>esos datos</strong><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> usamos la expresión:</p>
+<p><span class="math display">\[ \sigma^2 = \frac{\sum_{i=1}^N ( x_i - \mu )^2}{N} \]</span> Repitiendo el análisis que hemos hecho para la <span class="math inline">\(DM\)</span>, vamos a elegir el valor de <span class="math inline">\(a\)</span> que minimiza la función:</p>
+<p><span class="math display">\[g(a) =  \frac{\sum_{i=1}^N ( x_i - a )^2}{N} \]</span> En este caso lo podemos deducir derivando <span class="math inline">\(g(a)\)</span> con respecto a <span class="math inline">\(a\)</span>, igualando a cero y despejando su valor. Veamos:</p>
+<p><span class="math display">\[\frac{\partial g(a)}{\partial a} = \frac{-2}{N} \sum_{i=1}^{N}(x_i-a) = 0\]</span></p>
+<p>Por tanto <span class="math inline">\(\sum_{i=1}^{N}(x_i-a) = 0\)</span>, de donde se deduce que <span class="math inline">\(\sum x_i =N \cdot a\)</span> y despejando <span class="math inline">\(a\)</span> tenemos:</p>
+<p><span class="math display">\[a = \sum_{i=1}^{N} \frac{x_i}{N} \]</span></p>
+<p>En este caso el valor de <span class="math inline">\(a\)</span> sí coincide con la media aritmética (le llamamos <span class="math inline">\(\mu\)</span>). Si hacemos la segunda derivada vemos que siempre es positiva, lo cual confirma que el punto crítico es <span class="math inline">\(a=\mu\)</span> y que el valor mínimo de <span class="math inline">\(g(a)\)</span> es la varianza de <span class="math inline">\(X\)</span>.</p>
+<p>El principal problema de la varianza es que sus unidades son el cuadrado de las unidades de los datos. Esto dificulta su interpretación pero este problema se resuelve fácilmente usando como medida su raiz cuadrada, es lo que llamamos desviación típica</p>
+<section id="por-qué-se-prefiere-usar-la-varianza-en-vez-de-la-distancia-media" class="level6 unnumbered">
+<h6 class="unnumbered anchored" data-anchor-id="por-qué-se-prefiere-usar-la-varianza-en-vez-de-la-distancia-media"><strong>¿Por qué se prefiere usar la varianza en vez de la distancia media?</strong></h6>
+<p>Elevar al cuadrado las diferencias pudiendo trabajar con su valor absoluto parece una complicación innecesaria, pero la varianza tienes unas ventajas que la <span class="math inline">\(DM\)</span> no tiene, veamos algunas:</p>
+<ul>
+<li><p>En los desarrollos anteriores hemos visto que la media, medida descriptiva por excelencia, está asociada de forma más natural con la varianza que con la <span class="math inline">\(DM\)</span>.</p></li>
+<li><p>La <span class="math inline">\(DM\)</span> incluye en su expresión la función “valor absoluto” que se comporta mal desde un punto de vista matemático, mientras que la función cuadrática es muy fácilmente tratable. Observe, por ejemplo, que la demostración de que la media hace mínimo el promedio de los cuadrados se ha realizado de forma casi inmediata, mientras que probar que la mediana hace mínima la media de las distancias es bastante más complejo.</p></li>
+<li><p>La varianza es una suma de cuadrados que se puede descomponer en diversos sumandos dando origen al llamado ``Análisis de la Varianza’’. El desarrollo de la teoría de los modelos lineales está basado en gran parte en el criterio de los mínimos cuadrados, que es el mismo en que está basada la varianza. Cuando la población origen de los datos es Normal, el cociente de varianzas muestrales sigue una distribución conocida, llamada <span class="math inline">\(F\)</span> de Snedecor.</p></li>
+<li><p>La varianza de una suma de variables aleatorias se calcula de una forma muy fácil, especialmente si las variables son independientes. Por ejemplo, en un proceso de envasado, si el peso del envase tiene una varianza <span class="math inline">\(V(X)\)</span> y la varianza del contenido es <span class="math inline">\(V(Y)\)</span>, la varianza del conjunto es <span class="math inline">\(V(X+Y) = V(X) + V(Y)\)</span>.</p></li>
+<li><p>La raiz cuadrada de la varianza –la desviación típica– es uno de los parámetros que definen la distribución Normal (el otro es la media). Esto posibilita la construcción de intervalos de confianza para estimar, por ejemplo, la media de la población, lo que sería mucho más complejo si se usara la <span class="math inline">\(DM\)</span>.</p></li>
+</ul>
+</section>
+<section id="se-divide-por-n-o-por-n-1" class="level6 unnumbered">
+<h6 class="unnumbered anchored" data-anchor-id="se-divide-por-n-o-por-n-1"><strong>¿Se divide por</strong> <span class="math inline">\(n\)</span> o por <span class="math inline">\(n-1\)</span>?</h6>
+<p>Cuando tenemos un conjunto de datos y nos interesa conocer la varianza de <strong>esos datos</strong> dividimos por el número de los que tenemos, pero aunque esta parece la situación más habitual, no es así. Lo habitual es que nuestro interés no sea tanto conocer la varianza de los datos dispobles como <strong>estimar la varianza de la población</strong> de la cual provienen y de la que solo tenemos unos representantes.</p>
+<p>En este caso tampoco se conoce la media de la población de manera que debemos sustituir su valor por la media de la muestra (<span class="math inline">\(\bar{x}\)</span>). Esta sustitución tiene más influencia de la que parece ya que la media de de la muestra se adapta a los datos con los que se calcula y la variabilidad obtenida tiende a subestimar la varianza de la población. Puede demostrarse que se si en vez de dividir por el número de datos <span class="math inline">\(n\)</span> (al número de elementos de la muestra le llamamos <span class="math inline">\(n\)</span> minúscula) se divide por <span class="math inline">\(n-1\)</span> esa subestimación –se llama <em>sesgo</em>– ya no se da. Por tanto, la fórmula que usamos en la práctica es:</p>
+<p><span class="math display">\[ s^2 = \frac{\sum_{i=1}^n ( x_i - \bar{x})^2}{n-1} \]</span></p>
+<p>Esta corrección es especialmente importante cuando se tienen muestras pequeñas ya que puede haber una diferencia importante entre dividir por <span class="math inline">\(n\)</span> o hacerlo por <span class="math inline">\(n-1\)</span>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Cálculo de la varianza con calculadora u ordenador
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>En algunas calculadoras y en hojas de cálculo como Excel, existen las dos opciones para calcular la varianza: dividiendo por <span class="math inline">\(N\)</span> o por <span class="math inline">\(n-1\)</span> según se tenga una población o una muestra. En los paquetes de software estadístico cuando se piede la varianza siempre la dan dividiendo por <span class="math inline">\(n-1\)</span> porque en la práctica siempre tenemos muestras. Si en algún caso interesa conocer el valor dividiendo por <span class="math inline">\(n\)</span> el truco consiste en añadir la media como un dato más.</p>
+</div>
+</div>
+<p>Como este tema puede ser controvertido, le dedicamos un apéndice que profundiza en este tema sin abandonar la visión intuitiva.</p>
+<div id="tbl-letters" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[10,90]">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-letters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;1.7: Varianza. Ventajas e inconvenientes
+</figcaption>
+<div aria-describedby="tbl-letters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 90%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>PROS</strong> <i class="fa-solid fa-thumbs-up fa-xl" style="color: #0ca701;"></i></td>
+<td><ul>
+<li>Excelentes propiedades que no tiene ninguna otra medida. |</li>
+<li>Constituye uno de los ejes centrales de muchos métodos estadísticos.</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td><strong>CONS</strong> <i class="fa-solid fa-thumbs-down fa-xl" style="color: #f03333;"></i></td>
+<td><ul>
+<li>Sus unidades son el cuadrado de las unidades de los datos, lo que dificulta su interpretación.</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+</section>
+<section id="desviación-típica" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="desviación-típica">Desviación típica</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Otros nombres para la desviación típica
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>También se puede llamar desviación estándar, pero no de otra manera, aunque algunos textos se refieren a ella como desviación tipo o desvío típico.</p>
+</div>
+</div>
+<p>Es la raiz cuadrada de la varianza. En el caso más habitual de tener una muestra:</p>
+<p><span class="math display">\[s = \sqrt {\frac{\sum_{i=1}^n ( x_i - \bar{x} )^2}{n-1}}\]</span></p>
+<p>La raiz cuadrada hace que sus unidades sean las mismas que las de los datos. El precio a pagar es la pérdida de las propiedades algebraicas que tiene la varianza, por lo que en los desarrollos teóricos en muy habitual que el protagonismo lo tenga esta última.</p>
+<p>Entre los muchos méritos de la desviación típica podemos decir que, junto con la media, forman una pareja perfecta para describir el comportamiento de muchas variables aleatorias. En particular, forman parte del <em>“ADN”</em> de la distribución Normal. Si una variable sigue esta distribución basta conocer su media y su desviación típica para calcular cualquier probabilidad relacionada con los valores que puede tomar. Si el peso de unos paquetes de azúcar sigue una distribución Normal con una media de 1000 g y una desviación típica de 15 g, podemos decir que –en números redondos– el 95% de los paquetes tendrán un peso comprendido entre 970 y 1030 g, y también podemos decir que el 68% tendrá un peso comprendido entre 985 y 1015. Además, podríamos responder cualquier pregunta similar, por ejemplo qué porcentaje de paquetes tendrá un peso por debajo de 980 g (será el 9%).</p>
+<p>También destaca su presencia en la estimación del valor de la media poblacional <span class="math inline">\(\mu\)</span>. Lo hacemos tomando una muestra de tamaño <span class="math inline">\(n\)</span> y calculando su media <span class="math inline">\(\bar{x}\)</span>. El problema es que cada vez que tomemos una muestra, el valor de <span class="math inline">\(\bar{x}\)</span> cambiará, así que mejor que apostar por un valor concreto preferimos dar un intervalo de valores razonables para <span class="math inline">\(\mu\)</span>. Para calcular ese intervalo necesitamos conocer la variabilidad que presentan los valores de <span class="math inline">\(\bar{x}\)</span>. Pues bien, la desviación típica de <span class="math inline">\(\bar{x}\)</span> <strong>siempre</strong> es igual a la desviación típica de la población dividida por <span class="math inline">\(\sqrt{n}\)</span>. Esto es verdad para <strong>todas</strong> las distribuciones, no solo para la Normal.</p>
+<p>En definitiva, la desviación típica aparece en muchos contextos y con mucha relevancia. El calificativo ``típica’’ resulta en este caso apropiado y bien merecido.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>¿Qué desviación típica tienen las estaturas?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si un extraterrestre le pregunta como somos los terrícolas usted le puede decir que nuestra estatura media es de aproximadamente 1,70, pero solo con esa información el extraterrestre puede pensar que hay terrícolas de 40 cm y también de 3 m. Le podría decir que casi todos estamos entre 1,40 y 2 m, por poner números redondos, pero ¿y si le quiere dar la desviación típica?</p>
+<p>Si una variable sigue una distribución Normal –y la estatura podemos considerar que la sigue– se dan unas proporciones que siempre son las mismas, no importa si estamos hablando de estaturas, del peso de paquetes de azúcar o de las longitudes de los pétalos de un determinado tipo de flor. Estas proporciones son:</p>
+<p><span class="math display">\[\mu \pm \sigma: \;\; 68\, \%\]</span></p>
+<p><span class="math display">\[\mu \pm 2 \sigma: \;\; 95\, \%\]</span></p>
+<p><span class="math display">\[\mu \pm 3 \sigma: \;\; 99,7\, \%\]</span></p>
+<p>Dando por bueno 1,70 m como valor de la media y fijándonos en el intervalor <span class="math inline">\(\mu \pm 3 \sigma\)</span> ¿qué valor de la estutura será superado por el 1-2 por mil de los individuos? (el 3 por mil que queda fuera del intervalo lo repartimos entre los dos extremos). Si ese valor es 1,91 m la desviación típica será 7 cm. (1,70 + 3·0,07 = 1,91)</p>
+</div>
+</div>
+<div id="tbl-letters" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[10,90]">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-letters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;1.8: Desviación típica. Ventajas e inconvenientes
+</figcaption>
+<div aria-describedby="tbl-letters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 90%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>PROS</strong> <i class="fa-solid fa-thumbs-up fa-xl" style="color: #0ca701;"></i></td>
+<td><ul>
+<li>Es la medida de dispersión más utilizada.</li>
+<li>Con la media forman una pareja perfecta. Son los parámetros que definen la distribución Normal.</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td><strong>CONS</strong> <i class="fa-solid fa-thumbs-down fa-xl" style="color: #f03333;"></i></td>
+<td><ul>
+<li>Malas propiedades algebraicas.</li>
+<li>Su interpretación no es intuitiva.</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="el-coeficiente-de-variación" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="el-coeficiente-de-variación">El coeficiente de variación</h3>
+<p>Suponga que tiene delante 4 gatos con los siguientes pesos: 1,5; 2,0; 6,0; 6,5 kg. Y ahora piense en 4 vacas cuyos pesos son: 490, 495, 505, 510 kg. ¿En que grupo de animales hay más variabilidad? Seguramente pensará que en el del los gatos, donde uno pesa más 4 veces más que otro, sin embargo verá las vacas practicamente iguales. Pero si calcula las desviaciones típicas obtendrá:</p>
+<p><span class="math display">\[ s_{gatos} = 2,61\, kg\]</span> <span class="math display">\[ s_{vacas} = 9,13\, kg\]</span> Es mayor la desviación típica del peso de las vacas. Esto es así porque las diferencias respecto a la media (4 en el caso de los gatos y 500 en el de las vacas) son para los gatos: 2,5; 2,0; 2,0; 2,5 y para las vacas: 10, 5, 5, 10. Como estas diferencia son mayores en el caso de las vacas, su desviación típica es mayor.</p>
+<p>En un caso como este lo que interesa es la variabilidad respecto a la media, y para esto usamos el coeficiente de variación <span class="math inline">\(CV\)</span> que se define como:</p>
+<p><span class="math display">\[CV = \frac{s}{\bar{x}}\]</span> Con frecuentcia ese valor se multiplica por 100 para darlo como porcentaje. Ennuestro ejemplo, para los gatos tenemos un <span class="math inline">\(CV\)</span> del 65,35% mientras que para las vacas es solo del 1,83%.</p>
+<p>Para comaprar la variabilidad de conjuntos de datos con valores medios muy disitntos es mejor utilizar el coeficiente de variación.</p>
+<div id="tbl-letters" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[10,90]">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-letters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;1.9: Coeficiente de variación. Ventajas e inconvenientes
+</figcaption>
+<div aria-describedby="tbl-letters-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 90%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>PROS</strong> <i class="fa-solid fa-thumbs-up fa-xl" style="color: #0ca701;"></i></td>
+<td><ul>
+<li>Permite interpretar la variabilidad en el contexto del nivel de respuesta (valor medio)</li>
+<li>Es adimensional. Permite comparar situaciones medidas con diferentes unidades</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td><strong>CONS</strong> <i class="fa-solid fa-thumbs-down fa-xl" style="color: #f03333;"></i></td>
+<td><ul>
+<li>Tiene poco juego en la descripción de variables aleatorias y en de la estimación de característica de la población</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+</section>
+<section id="medidas-de-posición" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="medidas-de-posición"><span class="header-section-number">1.3</span> Medidas de posición</h2>
+<p>Sirven para establecer unas parcas que delimitan zonas en el conjunto de los datos. Así, dado un valor se sabe a qué zona pertenerce, si está entre los mayores o entre los menores.</p>
+<section id="cuartiles" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="cuartiles">Cuartiles</h3>
+<p>Ordenados los datos de menor a mayor, la mediana es el que los separa en dos mitades. Pues bien, el primer cuartil (Q1) es la mediana de la primera mitad dejando, por tanto, el 25% de valores por debajo y el 75% por encima. La mediana de la segunda mitad es el tercer cuartil (Q3), que deja el 75% por debajo y el 25% por encima (figura <a href="#fig-cuartiles" class="quarto-xref"><span>1.2</span></a>).</p>
+<div id="fig-cuartiles" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cuartiles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="sintesisNumerica/cuartiles.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cuartiles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1.2: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos ===pensar en poner color y en mejorar visualmente===
+</figcaption>
+</figure>
+</div>
+<p>Si usted conoce la mediana y los cuartiles de los salarios de su empresa, puede posicionar facilmente el suyo. Si Q1 = 1.300€, la mediana 1.500€ y Q3 = 1.800€, si usted cobra 1.400€ está entre el 25% que menos gana. Si su salario es de 1.600€ está en entre la mitad de los que más ganan pero como mínimo el 25% de los empleados gana más que usted. Si cobra 2.000€ está entre el 25% de privilegiados que más ganan.</p>
+<p>Una forma fácil de determinar el valor de los cuartiles consiste en calcular primero su posición y después su valor. Si los datos son (ya los hemos ordenado):</p>
+<p><span class="math display">\[2, \; 3, \; 5, \; 7, \; 8, \; 13, \; 14, \; 16\]</span></p>
+<p>Determinamos las posiciones mediante las expresiones:</p>
+<p><span class="math display">\[P_{Q_1} = 0.25(n+1)\]</span> <span class="math display">\[P_{Q_3} = 0.75(n+1)\]</span></p>
+<p>Como en este caso <span class="math inline">\(n=8\)</span> tenemos que <span class="math inline">\(P_{Q_1} = 2.25\)</span> y <span class="math inline">\(P_{Q_3} = 6.75\)</span></p>
+<p>Como las posiciones son números decimales, siendo <span class="math inline">\(x_k\)</span> es el valor en la posición <span class="math inline">\(k\)</span>, interpolamos de la forma:</p>
+<p><span class="math display">\[Q_1 = x_2 + 0.25(x_3 - x_2) = 3 + 0,25(5-3) = 3.5\]</span> <span class="math display">\[Q_3 = x_6 + 0.75(x_7 - x_6) = 13 + 0,75(14-13) = 13.75\]</span> Existen otras formas de determinar el valor de los cuartiles y no todas dan exactamente el mismo resultado (para sorpresa y preocupación…).</p>
+<p>Por ejemplo, Excel dispone de la función CUARTIL que identifica la posición de los cuartiles mediante las expresiones: (0,25(n-1)+1) y (0,75(n-1)+1) y los calcula interpolando igual que hace Minitab. Seguramente no satisfechos con su forma de identificar los cuartiles, en las últimas versiones se ha mantenido esa función (se indica que por compatibilidad con versiones anteriores) y se han añadido:</p>
+<ul>
+<li>CUARTIL.INC: Coincide con la función CUARTIL.</li>
+<li>CUARTIL.EXC: Identifica los cuartiles de la misma forma que Minitab.</li>
+</ul>
+<p>En la figura <a href="#fig-cuartilesExcel" class="quarto-xref"><span>1.3</span></a> se muestran los cuartiles de nuestros datos con las funciones de Excel (versión 2019).</p>
+<div id="fig-cuartilesExcel" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cuartilesExcel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="sintesisNumerica/Cuartiles_4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cuartilesExcel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1.3: Cálculo de los cuartiles con Excel
+</figcaption>
+</figure>
+</div>
+<p>Otros criterios para calcular los cuartiles pueden verse en <a href="https://mathworld.wolfram.com/Quartile.html">Wolfram MathWorld</a> y también la <a href="https://en.wikipedia.org/wiki/Quartile">Wikipedia</a>. Esta diversidad de criterios que además dan resultados distintos desconcierta a los estudiantes. En realidad el problema no es grave porque los cuartiles nos interesan cuando tenemos muchos datos o para describir poblaciones, nunca con tan pocos datos como en nuestros ejemplo. Con muchos datos, las dieferencias entre los valores obtenidos con los diferentes criterios no son relevantes a efectos prácticos.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Los cuartiles como zona
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Aunque un cuartil es un número y no una zona, a veces se dice que un valor pertenece al primer o al tercer cuartil y lo que eso significa no siempre está claro. Podria pensarse que pertenecer al primer cuartil significa que es menor que <span class="math inline">\(Q_1\)</span> y que pertenece al tercero cuando es mayor que la mediana y menor que <span class="math inline">\(Q_3\)</span>, pero no siempre es así. La relevancia de las revistas científicas se mide por su “factor de impacto”, un valor relacionado con el número de citas que tienen los artículos que publican. Para cada ámbito de conocimiento se realizan rankings de revistas según su factor de impacto y todos queremos publicar en las que lo tienen más alto, que no son las del cuarto, seguido por las del tercer cuartil, sino en del primero y el segundo. El ranking se hace de más a menos.</p>
+</div>
+</div>
+</section>
+<section id="percentiles" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="percentiles">Percentiles</h3>
+<p>Se usan para identificar la posición de un valor en el conjunto al que pertenece. Si la estatura de un niño está en el percentil del 46% significa que el 46% de aquellos con los que se comparara (los de su edad y sexo) tienen una estatura menor que la suya, el 54% la tienen más mayor.</p>
+<p>En un test de inteligencia o de otras habilidades, o en concursos de matemáticas a los que se presentan muchos estudiantes, se informa mejor del resultado obtenido dando el percentil en el que se ha quedado que dando una nota, especialmente si no está clara la escala que se usa ni si es fácil o difícil obtener notas altas. Si se dice que ha quedado en el percentil del 98% está claro que su puntución ha sido muy buena ya que solo ha sido superada por el 2%.</p>
+<p>También en la valoración de méritos para la admisión en cursos de postgrado, muchas universidades están más interesadas por el percentil en que quedó el aspirante entre los de su promoción en los estudios de grado que en las calificciones obtenidas, dificilmente comparables entre varios tipos de estudio y distintas universidades.</p>
+<p>Al igual que ocurre con los cuartiles, existen diferentes criterios para determinar los percentiles. Una forma sencilla y razonable es identificar primero su posición mediante la expresión <span class="math inline">\(p(N+1)\)</span> siendo <span class="math inline">\(p\)</span> el percentil en escala de 0 a 1 y <span class="math inline">\(N\)</span> el número total de datos y si es. un número decimal interpolar tal como hemos hecho con los cuartiles.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Deciles
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Son los percentiles del 10, 20,… , 100%</p>
+</div>
+</div>
+</section>
+</section>
+<section id="apéndice-1.1-otras-medias" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="apéndice-1.1-otras-medias">Apéndice 1.1: Otras medias</h2>
+<p>Citar también la media ponderada y la media truncada.</p>
+<section id="media-geométrica" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="media-geométrica">Media geométrica</h3>
+<p>Si una población tenía 10.000 habitantes en el año cero, creció el primer año a una tasa del 5 %, el segundo a una tasa del 20 % y el tercer año al 50 % ¿A que tasa promedio ha crecido en estos tres años?</p>
+<div id="tbl-evolucionpoblacion1" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[10,20,20,20]">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-evolucionpoblacion1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;1.10: Evolución de la población
+</figcaption>
+<div aria-describedby="tbl-evolucionpoblacion1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Año</th>
+<th style="text-align: center;">Población inicial</th>
+<th style="text-align: center;">Tasa de crecimiento</th>
+<th style="text-align: center;">Factor de expansión</th>
+<th style="text-align: center;">Población al final del año</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">10.000</td>
+<td style="text-align: center;">0,05</td>
+<td style="text-align: center;">1,05</td>
+<td style="text-align: center;">10.500</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">10.500</td>
+<td style="text-align: center;">0,20</td>
+<td style="text-align: center;">1,20</td>
+<td style="text-align: center;">12.600</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">12.600</td>
+<td style="text-align: center;">0,50</td>
+<td style="text-align: center;">1,50</td>
+<td style="text-align: center;">18.900</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Si calculamos la media aritmética de la tasa de crecimiento tenemos: <span class="math inline">\((0,05 + 0,20 + 0,50)/3 = 0,25\)</span> y el factor medio de expansión sería <span class="math inline">\(1,25\)</span>. Pero si la población hubiera crecido los tres años de esta forma, no se llegaría al mismo resultado final:</p>
+<div id="tbl-evolucionpoblacion1-tbl-colwidths10202020" class="hover quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-evolucionpoblacion1-tbl-colwidths10202020-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;1.11: Evolución de la población
+</figcaption>
+<div aria-describedby="tbl-evolucionpoblacion1-tbl-colwidths10202020-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table-hover caption-top table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 18%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Año</th>
+<th style="text-align: center;">Población inicial</th>
+<th style="text-align: center;">Tasa de crecimiento</th>
+<th style="text-align: center;">Factor de expansión</th>
+<th style="text-align: center;">Población al final del año</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">10.000</td>
+<td style="text-align: center;">0,25</td>
+<td style="text-align: center;">1,25</td>
+<td style="text-align: center;">12.500</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">12.500</td>
+<td style="text-align: center;">0,25</td>
+<td style="text-align: center;">1,25</td>
+<td style="text-align: center;">15.625</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">15.625</td>
+<td style="text-align: center;">0,25</td>
+<td style="text-align: center;">1,25</td>
+<td style="text-align: center;">19.531</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Por tanto, la media aritmética no es un buen indicador de la tasa media de crecimiento.</p>
+<p>Si la población crece a una tasa constante <span class="math inline">\(i\)</span>, para que al final del tercer año tenga el mismo efecto que las tasas del ejemplo, se debe verificar que:</p>
+<p><span class="math display">\[ 10\,000(1+i)(1+i)(1+i)=10\,000(1+0,05)(1+0,20)(1+0,50) \]</span> De donde:</p>
+<p><span class="math display">\[(1+i)= \sqrt[3]{1,05 \cdot 1,20 \cdot 1,50}=1,2364\]</span></p>
+<p>Si se hubiera tenido este factor de expansión cada año (nótese que es la media geométrica), hubiera conducido a una población final igual a la que tenemos.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Curiosidades sobre la media geométrica
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>A diferencia de la media aritmética, la media geométrica sólo se define para números positivos.</p></li>
+<li><p>La media geométrica nunca es mayor que la media aritmética. La demostración para el caso de 2 valores es fácil por reducción al absurdo. Supongamos que: <span class="math inline">\(\sqrt{ab} &gt; (a+b)/2\)</span>, entonces <span class="math inline">\(ab &gt; (a^2+2ab+b^2)/4\)</span>, de donde: <span class="math inline">\(0 &gt;a^2-2ab+b^2\)</span>. Como <span class="math inline">\(a^2-2ab+b^2=(a-b)^2\)</span> es imposible que este valor sea negativo, luego es imposible que <span class="math inline">\(\sqrt{ab}&gt;(a+b)/2\)</span>.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="media-armónica" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="media-armónica">Media armónica</h3>
+<p>Se define la media armónica de <span class="math inline">\(x_1, x_2, ..., x_N\)</span> como:</p>
+<p><span class="math display">\[Mh = \frac{N}{\large{\frac{1}{x_1}+\frac{1}{x_2}+...+\frac{1}{x_N}}}\]</span></p>
+<p>Parece que esto sea un retorcimiento sin ningún interés, pero no. Si un coche recorre cierta distancia a una velocidad de 100 km/h y vuelve por el mismo camino a 120 km/h, la velocidad media a que ha realizado el viaje es:</p>
+<p><span class="math display">\[Mh = \frac{2}{\large{\frac{1}{100}+\frac{1}{120}}} = 109,1 \text{ km/h}\]</span></p>
+<p>y no 110 km/h como en principio se podría pensar.</p>
+<p>Observe que la velocidad es igual a la distancia recorrida dividida por el tiempo tardado en recorrerla, es decir <span class="math inline">\(v=d/t\)</span> y por tanto <span class="math inline">\(t=d/v\)</span>. En nuestro caso, si la distancia a recorrer es <span class="math inline">\(d\)</span>, el tiempo tardado en la ida es <span class="math inline">\(t_1 =d/100\)</span> y el tiempo tardado en el regreso es <span class="math inline">\(t_2 =d/120\)</span>. De esta manera el tiempo total invertido en todo el recorrido <span class="math inline">\((2d)\)</span> será <span class="math inline">\(t=t_1+t_2\)</span> y la velocidad media se calcula de la forma:</p>
+<p><span class="math display">\[ \text{Velocidad media} = \frac{\text{Distancia total recorrida}}{\text{Tiempo total empleado}} = \frac{2d}{\large{\frac{d}{100}+\frac{d}{120}}} \]</span> Otro ejemplo: Un avión recorre 3000 km. Los 1000 primeros a 700 km/h, los 1000 siguientes a 800 km/h, y los 1000 restantes a 900 km/h ¿Cuál ha sido su velocidad media? No ha sido 800 km/h sino 791,6 km/h.</p>
+</section>
+</section>
+<section id="apéndice-1.2-por-qué-dividimos-por-n-1" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="apéndice-1.2-por-qué-dividimos-por-n-1">Apéndice 1.2: ¿Por qué dividimos por n-1?</h2>
+<p>Vamos a trabajar con un ejemplo suponiendo que conocemos la población completa, lujo que no tendremos en la práctica. Los elementos que componen la población, junto con sus mediciones respectivas, son:</p>
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">(A)</td>
+<td style="text-align: center;">(B)</td>
+<td style="text-align: center;">(C)</td>
+<td style="text-align: center;">(D)</td>
+<td style="text-align: center;">(D)</td>
+<td style="text-align: center;">(E)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">12</td>
+</tr>
+</tbody>
+</table>
+<p>En primer lugar ilustraremos la propiedad de insesgamiento de un estimador para el caso de la media, con la cual estamos más familiarizados, y luego repetiremos la experiencia para el caso que nos ocupa de la varianza.</p>
+<p>La media poblacional <span class="math inline">\(\mu\)</span>, de los datos del ejemplo, es:</p>
+<p><span class="math display">\[\mu = \frac{2+6+8+10+10+12}{6}=8\]</span> Supongamos que nosotros queremos estimar (“hacernos una idea”) el valor <span class="math inline">\(\mu\)</span>, usando una muestra aleatoria de <span class="math inline">\(n = 2\)</span> unidades. En este caso, en que la población consta sólo de 6 unidades, podemos hacer un listado de todas las muestras que pueden resultar al escoger dos unidades al azar. Estas muestras aparecen enumeradas en la siguiente tabla.</p>
+<h8>
+    <table width="650" cellpadding="10" border="0" class="center">
+<tbody><tr style="border-bottom:0.5px solid grey">
+<td colspan="100%"></td>
+  </tr>
+<tr>
+<td style="text-align:center">Muestra nº</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">15</td>
+</tr>
+<tr style="border-bottom:0.5px solid grey">
+
+</tr><tr>
+<td style="text-align:center">Unidades de <br> la muestra</td>
+<td style="text-align:center">A <br> B</td>
+<td style="text-align:center">A <br> C</td>
+<td style="text-align:center">A <br> D</td>
+<td style="text-align:center">A <br> E</td>
+<td style="text-align:center">A <br> F</td>
+<td style="text-align:center">B <br> C</td>
+<td style="text-align:center">B <br> D</td>
+<td style="text-align:center">B <br> E</td>
+<td style="text-align:center">B <br> F</td>
+<td style="text-align:center">C <br> D</td>
+<td style="text-align:center">C <br> E</td>
+<td style="text-align:center">C <br> F</td>
+<td style="text-align:center">D <br> E</td>
+<td style="text-align:center">D <br> F</td>
+<td style="text-align:center">E <br> F</td>
+</tr>
+<tr style="border-bottom:0.5px solid grey">
+   
+</tr><tr>
+<td style="text-align:center">Valores de <br> la muestra</td>
+<td style="text-align:center">2 <br> 6</td>
+<td style="text-align:center">2 <br> 8</td>
+<td style="text-align:center">2 <br> 10</td>
+<td style="text-align:center">2 <br> 10</td>
+<td style="text-align:center">2 <br> 12</td>
+<td style="text-align:center">6 <br> 8</td>
+<td style="text-align:center">6 <br> 10</td>
+<td style="text-align:center">6 <br> 10</td>
+<td style="text-align:center">6 <br> 12</td>
+<td style="text-align:center">8 <br> 10</td>
+<td style="text-align:center">8 <br> 10</td>
+<td style="text-align:center">8 <br> 12</td>
+<td style="text-align:center">10 <br> 10</td>
+<td style="text-align:center">10 <br> 12</td>
+<td style="text-align:center">10 <br> 12</td>
+</tr>
+<tr style="border-bottom:0.5px solid grey">
+
+ </tr><tr>
+<td style="text-align:center">Media <br> muestral</td>
+<td style="text-align:center">4 </td>
+<td style="text-align:center">5 </td>
+<td style="text-align:center">6 </td>
+<td style="text-align:center">6 </td>
+<td style="text-align:center">7 </td>
+<td style="text-align:center">7 </td>
+<td style="text-align:center">8 </td>
+<td style="text-align:center">8 </td>
+<td style="text-align:center">9 </td>
+<td style="text-align:center">9 </td>
+<td style="text-align:center">9 </td>
+<td style="text-align:center">10 </td>
+<td style="text-align:center">10 </td>
+<td style="text-align:center">11 </td>
+<td style="text-align:center">11 </td>
+</tr>
+ <tr style="border-bottom:0.5px solid grey">
+  
+</tr></tbody></table>
+<p>Cuando se seleccione al azar una muestra de dos unidades, el resultado será necesariamente alguna de estas 15 posibles combinaciones de 2 elementos, con su media <span class="math inline">\(\bar{x}\)</span> correspondiente.</p>
+<p>Decimos que <span class="math inline">\(\bar{x}\)</span> es un estimador insesgado de <span class="math inline">\(\mu\)</span> si el promedio de todas las posibles medias coincide exactamente con la media de la población. Para verificarlo, hagamos el promedio de nuestras 15 posibles medias:</p>
+<p><span class="math display">\[ \frac{4+5+6+6+7+7+8+8+9+9+9+10+10+11+11}{15}=8 \]</span></p>
+<p>El promedio coincide con <span class="math inline">\(\mu\)</span>. Esto pasa en todos los casos, independientemente del tipo de población o del tamaño de la muestra, por eso decimos que <span class="math inline">\(\bar{x}\)</span> es un estimador insesgado de <span class="math inline">\(\mu\)</span>.</p>
+<p>Veamos ahora si el estadístico:</p>
+<p><span class="math display">\[  S_{n}^{2}= \frac{ \sum_{i=1}^{n}{(x_i-\bar{x})^2} }{n} \]</span></p>
+<p>donde <span class="math inline">\(n\)</span> es el tamaño de las muestras, es un estimador insesgado para la varianza <span class="math inline">\(\sigma_{N}^{2}\)</span>, calculada como:</p>
+<p><span class="math display">\[  \sigma_{N}^{2}= \frac{ \sum_{i=1}^{N}{(x_i-\mu)^2} }{N} \]</span></p>
+<p>donde <span class="math inline">\(N\)</span> es el tamaño de la población. Queremos saber si el promedio de los valores de <span class="math inline">\(S_{n}^{2}\)</span>, para cada una de las posibles muestras, da el valor de <span class="math inline">\(\sigma_{N}^{2}\)</span> y para averiguarlo, en primer lugar vamos a calcular la varianza poblacional:</p>
+<p><span class="math display">\[\sigma_{N}^{2}= \frac{(2-8)^2+(6-8)^2+(8-8)^2+...+(12-8)^2}{6} = 10,67 \]</span></p>
+<p>Ahora calculamos la varianza para cada muestra de 2 unidades, con la fórmula:</p>
+<p><span class="math display">\[  S_{n}^{2}= \frac{ (x_1 - \bar{x})^2 + (x_2 - \bar{x})^2 }{2} \]</span></p>
+<p>obteniéndose los resultados que aparecen en la siguiente tabla:</p>
+<h8>
+    <table width="650" cellpadding="10" border="0" class="center">
+<tbody><tr style="border-bottom:0.5px solid grey">
+<td colspan="100%"></td>
+  </tr>
+<tr>
+<td style="text-align:center">Muestra nº</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">15</td>
+</tr>
+<tr style="border-bottom:0.5px solid grey">
+   
+</tr><tr>
+<td style="text-align:center">Valores de <br> la muestra</td>
+<td style="text-align:center">2 <br> 6</td>
+<td style="text-align:center">2 <br> 8</td>
+<td style="text-align:center">2 <br> 10</td>
+<td style="text-align:center">2 <br> 10</td>
+<td style="text-align:center">2 <br> 12</td>
+<td style="text-align:center">6 <br> 8</td>
+<td style="text-align:center">6 <br> 10</td>
+<td style="text-align:center">6 <br> 10</td>
+<td style="text-align:center">6 <br> 12</td>
+<td style="text-align:center">8 <br> 10</td>
+<td style="text-align:center">8 <br> 10</td>
+<td style="text-align:center">8 <br> 12</td>
+<td style="text-align:center">10 <br> 10</td>
+<td style="text-align:center">10 <br> 12</td>
+<td style="text-align:center">10 <br> 12</td>
+</tr>
+<tr style="border-bottom:0.5px solid grey">
+
+ </tr><tr>
+<td style="text-align:center">Varianza <br> muestral</td>
+<td style="text-align:center">4 </td>
+<td style="text-align:center">9 </td>
+<td style="text-align:center">16 </td>
+<td style="text-align:center">16 </td>
+<td style="text-align:center">25 </td>
+<td style="text-align:center">1 </td>
+<td style="text-align:center">4 </td>
+<td style="text-align:center">4 </td>
+<td style="text-align:center">9 </td>
+<td style="text-align:center">1 </td>
+<td style="text-align:center">1 </td>
+<td style="text-align:center">4 </td>
+<td style="text-align:center">0 </td>
+<td style="text-align:center">1 </td>
+<td style="text-align:center">1 </td>
+</tr>
+ <tr style="border-bottom:0.5px solid grey">
+  
+</tr></tbody></table>
+<p>Veamos si el promedio de las posibles varianzas muestrales, coincide con 10,67 que es el valor obtenido para <span class="math inline">\(\sigma_{N}^{2}\)</span>.</p>
+<p><span class="math display">\[ \bar{S}^2 = \frac{4+9+16+16+25+1+4+4+9+...+1}{15} = 6,4 \]</span></p>
+<p>No coincide y, por tanto, <span class="math inline">\(S_{n}^{2}\)</span> no es un estimador insesgado de <span class="math inline">\(\sigma_{N}^{2}\)</span>. Sin embargo <span class="math inline">\(S_{n-1}^{2}\)</span>, definido de la forma:</p>
+<p><span class="math display">\[S_{n-1}^{2}= \frac{ \sum_{i=1}^{n}{(x_i-\bar{x})^2} }{n-1} \]</span></p>
+<p>aunque tampoco es un estimador insesgado para <span class="math inline">\(\sigma_{N}^{2}\)</span>, sí lo es para <span class="math inline">\(\sigma_{N-1}^{2}\)</span> definido como:</p>
+<p><span class="math display">\[\sigma_{N-1}^{2}= \frac{ \sum_{i=1}^{N-1}{(x_i-\mu)^2} }{N-1} \]</span></p>
+<p>Efectivamente, <span class="math inline">\(\sigma_{N-1}^{2}\)</span> tiene el valor:</p>
+<p><span class="math display">\[\sigma_{N-1}^{2}= \frac{(2-8)^2+(6-8)^2+(8-8)^2+...+(12-8)^2}{6-1} = 12,8 \]</span></p>
+<p>Y si calculamos <span class="math inline">\(S_{n-1}^{2}\)</span> para cada una de nuestras muestras deberemos aplicar la fórmula:</p>
+<p><span class="math display">\[S_{n-1}^{2}= \frac{ (x_1 - \bar{x})^2 + (x_2 - \bar{x})^2 }{2-1} = \frac{ (x_1 - \bar{x})^2 + (x_2 - \bar{x})^2 }{1}  \]</span></p>
+<p>Es decir que todos los valores de la varianza que aparecen en la tabla anterior, quedan ahora multiplicados por 2 y por lo tanto la media de las varianzas queda también multiplicada por 2, es decir:</p>
+<p><span class="math display">\[\bar{S}_{n-1}^{2}= 2\cdot 6,4 = 12,8 \]</span></p>
+<p>Quizá este resultado decepcione, y hasta sorprenda, porque seguramente lo esperado era que <span class="math inline">\(S_{n-1}^{2}\)</span> fuera un estimador insesgado de <span class="math inline">\(\sigma_{N}^{2}\)</span> y no de <span class="math inline">\(\sigma_{N-1}^{2}\)</span>, pero no hay que preocuparse demasiado. A efectos prácticos es casi lo mismo cuando la población es grande, y nosotros no vamos a estimar a través de muestras las características de una población de 6 elementos (en nuestro ejemplo esta ha sido una población “de juguete” para entender lo que estábamos haciendo). Cuando estimemos la varianza de una población se tratará de una población grande, en la que <span class="math inline">\(\sigma_{N}^{2}\)</span> será prácticamente igual a <span class="math inline">\(\sigma_{N-1}^{2}\)</span>. En realidad, el caso más frecuente es tener poblaciones teóricas (infinitas), en las que es exactamente lo mismo <span class="math inline">\(\sigma_{N}^{2}\)</span> que <span class="math inline">\(\sigma_{N-1}^{2}\)</span>.</p>
+</h8></h8></section>
+<section id="apéndice-1.3-porcentajes" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="apéndice-1.3-porcentajes">Apéndice 1.3: Porcentajes</h2>
+<p>Son de uso habitual para presentar información numérica pero no forman parte del elenco de medidas estadísticas quizá porque parecen simples y no hay mucho que decir sobre ellos. Sin embargo, conviene tenerlos presentes porque se prestan a confusiones y malas interpretaciones.</p>
+<section id="cálculo-del-porcentaje" class="level6 unnumbered">
+<h6 class="unnumbered anchored" data-anchor-id="cálculo-del-porcentaje"><strong>Cálculo del porcentaje</strong></h6>
+<p>iempre se debe referir al valor inicial. Si el año pasado las naranjas costaban 4 €/kg y este año cuestan 5, su precio ha aumentado un 25%. Si pasan de 5 a 4 habrán disminuido un 20%. o hay simetría al aumentar y disminuir.</p>
+</section>
+<section id="operaciones-con-procentajes" class="level6 unnumbered">
+<h6 class="unnumbered anchored" data-anchor-id="operaciones-con-procentajes"><strong>Operaciones con procentajes</strong></h6>
+<p>Las operaciones con porcentajes no son triviales. Hacer un 50% de descuento y después otro 20% no es lo mismo que hacer el 70%. Si el valor inicial era 100€, en el primer caso queda en 40 € mientras que el segundo el valor final es de 30 €. Si el IVA es del 21%, vender sin IVA no es hacer un 21% de descuento. A veces se dan situaciones paradójicas: si usted está vendiendo al mismo precio que la competencia puede hacer un 33% de descuento y decir que la competencia está vendiendo un 50% más caro.</p>
+<p>Los problemas con porcentajes pueden pareer triviales y no serlo. Uno de los más famosos es la llamada “paradoja de las patatas”: Supongamos que tenemos 100 kg de patatas cuyo peso está compuesto por agua en un 99%. Con el paso del tiempo las patatas pierden humedad ¿Cuanto pesarán cuando el porcentaje de humedad sea del 98%? En la <a href="https://es.wikipedia.org/wiki/Paradoja_de_las_patatas">Wikipedia</a> puede ver si si sus calculos són correctos.</p>
+</section>
+<section id="porcentajes-y-puntos-porcentuales" class="level6 unnumbered">
+<h6 class="unnumbered anchored" data-anchor-id="porcentajes-y-puntos-porcentuales"><strong>Porcentajes y puntos porcentuales</strong></h6>
+<p>Si los beneficios han pasado del 2 al 4% no han aumentado un 2% sino el 100% (suponiendo que la base sobre la que se calculan se haya mantenido constante). También podemos decir que han aumentado 2 puntos porcentuales. Es necesario cuidar el lenguaje y no confundir una cosa con otra.</p>
+<p>Curiosidad: Si los beneficios se han multiplicado por 5 no han aumentado un 500% sino un 400%. En efecto, si se doblan han aumentado un 100%, si se triplican habrán aumentado un 200%, y así sucesivamente.</p>
+</section>
+<section id="porcentajes-basados-en-niveles-y-en-cambios-de-nivel" class="level6 unnumbered">
+<h6 class="unnumbered anchored" data-anchor-id="porcentajes-basados-en-niveles-y-en-cambios-de-nivel"><strong>Porcentajes basados en niveles y en cambios de nivel</strong></h6>
+<p>Un vendedor vendió el año pasado por valor de 10 millones de euros. Su objetivo para este año era aumentar su factruración un 6%, es decir, vender por valor de 10,6 millones. El vendedor solo ha logrado vender por valor de 10,3 millones, ¿qué porcentaje de objetivo ha logrado? Si el objetivo era el incremento, se ha quedado en la mitad y por tanto solo ha conseguido el 50%, pero si era vender 10,6 millones y ha vendido 10,3 se ha quedado en el 97,2%. En general, los objetivos siempre son sobre el incremento, no sobre el valor absoluto, y esto debe quedar claro.</p>
+</section>
+<section id="no-olvidar-los-valores-a-partir-de-los-cuales-se-calculan-los-porcentajes" class="level6 unnumbered">
+<h6 class="unnumbered anchored" data-anchor-id="no-olvidar-los-valores-a-partir-de-los-cuales-se-calculan-los-porcentajes"><strong>No olvidar los valores a partir de los cuales se calculan los porcentajes</strong></h6>
+<p>Si se realiza un estudio y resulta que 66,7% de los consumidores prefiere el producto X puede ser que se haya consultado a 3 y lo prefieran 2 o que se haya entrevistado a 3.000 y lo hayan preferido 2.000. La información que da ese porcentaje no es la misma en un caso y en otro.</p>
+<p>El porcetaje global para un colectivo formado por varios grupos puede sugerir unas conclusiones que no se dan en ningno de los grupos, es lo que se conoce como “Paradoja de Simpson”: Una empresa crea 250 nuevos puestos de trabajo en sus departamentos de compras, fabricación y ventas. En total se presentan 355 hombres y 325 mujeres de los cuales son admitidos 190 hombres (el 53,5%) y solo 60 mujeres (el 18,5%). Se comprueba que el nivel de preparación de hombres y mujeres es similar entre los aspirantes a cada departamento. ¿Podemos asegurar que se ha discriminado a las mujeres? La respuesta es no. Los datos son los siguientes:</p>
+<h8>
+<table>
+    <tbody><tr> 
+        <td style="vertical-align: middle"> Departamento</td>
+        <td style="vertical-align: middle" align="center"> Plazas</td>
+        <td align="center" colspan="2">Aspirantes - Admitidos <br>Hombres &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Mujeres</td>
+        <td align="center" colspan="2">% Admitidos<br>Hombres &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Mujeres</td>
+
+    </tr>
+    
+    <tr>   
+    <td>Compras <br> Fabricación <br> Ventas <br> <total> </total></td> <td align="center">30 <br> 200 <br> 20 </td> <td align="center">25 - 5 <br> 250 - 180 <br> 80 - 5 </td> <td align="center">100 - 25 <br> 25 - 20 <br> 200 - 15</td>   <td align="center">20 % <br> 72 %<br> 6,25 %</td> <td align="center"><b>25 % <br> 80 %<br> 7,5 %</b></td>
+    </tr>
+
+<tr>   
+<td> <b>TOTAL</b></td> <td align="center">250</td> <td align="center">355 - 190</td> <td align="center">325 - 60</td>  <td align="center"><b>53,5 %</b></td> <td align="center">18,5 %</td>
+    </tr>
+</tbody></table>
+</h8>
+<p>En realidad han sido las mujeres las que han tenido mayor proporción de admitidos en los tres departamentos. La clave está en que al departamento que ofrece más plazas se han presentado muchos hombres y pocas mujeres, mientras que ocurre lo contrario en los departamentos en que se ofrecen menos plazas.</p>
+</section>
+<section id="porcentaje-de-qué" class="level6 unnumbered">
+<h6 class="unnumbered anchored" data-anchor-id="porcentaje-de-qué"><strong>Porcentaje ¿de qué?</strong></h6>
+<p>Ante un porcentaje siempre conviene preguntarse qué significa y cómo se han medido los valores con los que se ha calculado. Ya sabemos que en el mundo de la publidad esas preguntas no suelen tener respuesta: si una crema reduce las arrugas un 33% no está claro si elimina una de cada tres o si reduce un tercio la profundidad de todas ellas. El problema es que estas ambiguedades se presentan también en otros ámbitos, quizá también en los porcentajes que nosotros manejamos. Es necesario que esté claro a qué nos estamos refiriendo.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-ElPAisEjecutivo" class="csl-entry" role="listitem">
+El País, 2024. <a href="https://elpais.com/economia/negocios/2024-05-04/mi-jefe-cobra-77-veces-mas-que-yo-estas-son-las-empresas-espanolas-con-mayor-desigualdad-salarial-entre-directivos-y-empleados.html">https://elpais.com/economia/negocios/2024-05-04/mi-jefe-cobra-77-veces-mas-que-yo-estas-son-las-empresas-espanolas-con-mayor-desigualdad-salarial-entre-directivos-y-empleados.html</a>.
+</div>
+<div id="ref-salariosINE2021" class="csl-entry" role="listitem">
+INE. 2023. <span>«Encuesta Anual de Estructura Salarial. Año 2021»</span>. Instituto Nacional de EStadística (INE), España. <a href="https://www.ine.es/prensa/ees_2021.pdf">https://www.ine.es/prensa/ees_2021.pdf</a>.
+</div>
+</div>
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>leyenda nota pie de página<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/peregrima\.github\.io\/VistadePajaro\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./20_DESCRIPTIVA.html" class="pagination-link" aria-label="ESTADÍSTICA DESCRIPTIVA">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">ESTADÍSTICA DESCRIPTIVA</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./22_Graficos.html" class="pagination-link" aria-label="Representaciones gráficas">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Representaciones gráficas</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -87,3 +87,13 @@ Una peculiaridad de esos algoritmos es que actúan como \`\`cajas negras'' en la
 Es un tema controvertido si la \`\`Ciencia de Datos'' debe ser considerada una parte de la estadística o si se trata de una nueva disciplina. Nuestra opinión es que depende de lo que entendamos por estadística. Si estadística es la parte de las matemáticas que se dedica a crear métodos estadísticos, entonces realmente la ciencia de datos es una nueva disciplina, mucho más orientada a la resolución de problemas prácticos. Si la estadística es la disciplina que trata de la recogida y el análisis de datos para responder a las preguntas que nos planteamos, creemos que la ciencia de datos encaja perfectamente en esa definición.
 
 En cualquier caso, entender el funcionamiento de esos algoritmos, ser capaces de programar y de interactuar con grandes volúmenes de datos, así como conocer las posibilidades de almacenamiento y computación en la nube son habilidades muy demandadas y con un gran futuro.
+
+## Lo que encontrará en este libro
+
+El contenido está organizado en torno a los temas que típicamente conforman los cursos generales de estadística. Empezamos con la estadística descriptiva y acabamos con los modelos de regresión, pasando por las características de las variables aleatorias, las distribuciones de probabilidad, el muestreo, la estimación y el contraste de hipótesis. No tratamos algunos temas que también suelen aparecer, como el análisis de la varianza. Lo que sí hacemos --quizá de forma machacona-- es insistir en las ideas clave, en particular en las que intervienen en el contraste de hipótesis.
+
+En los apéndices se incluyen temas que habitualmente no se tratan, pero que nos parecen importantes. Por ejemplo, en el contexto de la síntesis numérica de datos tratamos del número de decimales con el que es razonable presentar los resultados, o sobre el uso de los porcentajes y sus posibles malas interpretaciones. También nos entretenemos en los test de Normalidad, más para destacar sus limitaciones que sus virtudes, y en los posibles criterios que se pueden usar para ajustar un modelo de regresión. 
+
+No hay ejercicios al final de cada tema, pero en el epílogo se proponen algunos trabajos que ayudan a reforzar las ideas clave. Otro buen ejercicio es reproducir los análisis que se realizan, aunque para ello conviene estar familiarizado con algún software de análisis de datos. Si se sabe programar se pueden repetir las simulaciones que se realizan y llegar uno mismo a las conclusiones que se presentan, y si no se sabe, esta puede ser una buena razón para aprender. 
+
+

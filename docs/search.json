@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Estadística a vista de pájaro",
     "section": "",
-    "text": "PRESENTACIÓN\nEmpezamos a escribir este libro pensando en los profesores de enseñanza preuniversitaria que deben explicar estadística, muchas veces como parte de la asignatura de matemáticas. La idea era ofrecer una visión general de esta disciplina que les diera una mayor perspectiva a la hora de transmitir las ideas clave desde un punto de vista práctico. El resultado ha sido un texto que recoge los temas que típicamente conforman los cursos introductorios de estadística que se imparten en muchos grados universitarios; por ello, pensamos que igualmente puede resultar útil a profesores y estudiantes de esos cursos (los que usan libros, ya sabemos que son pocos).\nHemos intentado situar el estilo a medio camino entre un libro de texto y uno de divulgación. Explicamos lo de siempre, pero intentamos que sea en un tono coloquial y cercano, sin abandonar el rigor ni eludir temas o aspectos que puedan resultar espinosos. Evitamos planteamientos o enfoques exclusivamente matemáticos, aunque –por supuesto– sin esquivar el uso de fórmulas ni de deducciones matemáticas cuando lo consideramos relevante.\nAunque seguramente contiene menos test y menos distribuciones de las que aparecen en algunos cursos, creemos que si se interiorizan estas ideas –aunque solo sea eso– ya nos podemos dar por satisfechos.\n\nTodos los datos que se usan están aquí\n\nLicencia\n\nLA PORTADA ES DE OTRO LIBRO. Solo para ver como queda.",
+    "text": "PRESENTACIÓN\nEmpezamos a escribir este libro pensando en los profesores de enseñanza preuniversitaria que deben explicar estadística, muchas veces como parte de la asignatura de matemáticas. La idea era ofrecer una visión general de esta disciplina que les diera una mayor perspectiva a la hora de transmitir las ideas clave desde un punto de vista práctico. El resultado ha sido un texto que recoge los temas que típicamente conforman los cursos introductorios de estadística que se imparten en muchos grados universitarios; por ello, pensamos que igualmente puede resultar útil a profesores y estudiantes de esos cursos (los que usan libros, ya sabemos que son pocos).\nHemos intentado situar el estilo a medio camino entre un libro de texto y uno de divulgación. Explicamos lo de siempre, pero intentamos que sea en un tono coloquial y cercano, sin abandonar el rigor ni eludir temas o aspectos que puedan resultar espinosos. Evitamos planteamientos o enfoques exclusivamente matemáticos, aunque –por supuesto– sin esquivar el uso de fórmulas ni de deducciones matemáticas cuando lo consideramos relevante.\n\nTodos los datos que se usan están aquí\n\nLicencia\n\nLA PORTADA ES DE OTRO LIBRO. Solo para ver como queda.",
     "crumbs": [
       "PRESENTACIÓN"
     ]
@@ -494,6 +494,16 @@
     "title": "INTRODUCCIÓN",
     "section": "",
     "text": "Una de las características del cálculo de probabilidades es que es muy fácil pensar ejercicios sobre este tema y también es fácil corregirlos. Quizá eso tiene algo que ver con su papel protagonista en los cursos de estadística.↩︎",
+    "crumbs": [
+      "INTRODUCCIÓN"
+    ]
+  },
+  {
+    "objectID": "10_INTRODUCCION.html#lo-que-encontrará-en-este-libro",
+    "href": "10_INTRODUCCION.html#lo-que-encontrará-en-este-libro",
+    "title": "INTRODUCCIÓN",
+    "section": "Lo que encontrará en este libro",
+    "text": "Lo que encontrará en este libro\nEl contenido está organizado en torno a los temas que típicamente conforman los cursos generales de estadística. Empezamos con la estadística descriptiva y acabamos con los modelos de regresión, pasando por las características de las variables aleatorias, las distribuciones de probabilidad, el muestreo, la estimación y el contraste de hipótesis. No tratamos algunos temas que también suelen aparecer, como el análisis de la varianza. Lo que sí hacemos –quizá de forma machacona– es insistir en las ideas clave, en particular en las que intervienen en el contraste de hipótesis.\nEn los apéndices se incluyen temas que habitualmente no se tratan, pero que nos parecen importantes. Por ejemplo, en el contexto de la síntesis numérica de datos tratamos del número de decimales con el que es razonable presentar los resultados, o sobre el uso de los porcentajes y sus posibles malas interpretaciones. También nos entretenemos en los test de Normalidad, más para destacar sus limitaciones que sus virtudes, y en los posibles criterios que se pueden usar para ajustar un modelo de regresión.\nNo hay ejercicios al final de cada tema, pero en el epílogo se proponen algunos trabajos que ayudan a reforzar las ideas clave. Otro buen ejercicio es reproducir los análisis que se realizan, aunque para ello conviene estar familiarizado con algún software de análisis de datos. Si se sabe programar se pueden repetir las simulaciones que se realizan y llegar uno mismo a las conclusiones que se presentan, y si no se sabe, esta puede ser una buena razón para aprender.",
     "crumbs": [
       "INTRODUCCIÓN"
     ]

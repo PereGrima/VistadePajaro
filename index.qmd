@@ -4,8 +4,6 @@ Empezamos a escribir este libro pensando en los profesores de enseñanza preuniv
 
 Hemos intentado situar el estilo a medio camino entre un libro de texto y uno de divulgación. Explicamos lo de siempre, pero intentamos que sea en un tono coloquial y cercano, sin abandonar el rigor ni eludir temas o aspectos que puedan resultar espinosos. Evitamos planteamientos o enfoques exclusivamente matemáticos, aunque --por supuesto-- sin esquivar el uso de fórmulas ni de deducciones matemáticas cuando lo consideramos relevante. 
 
-Aunque seguramente contiene menos test y menos distribuciones de las que aparecen en algunos cursos, creemos que si se interiorizan estas ideas --aunque solo sea eso-- ya nos podemos dar por satisfechos.
-
 ------------------------------------------------------------------------
 
 Todos los datos que se usan están aquí

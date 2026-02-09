@@ -8,7 +8,7 @@ book:
   subtitle: "Estoy haciendo pruebas"
   date: today
   date-format: medium
-  author: "Roberto Behar / Pere Grima / Lluís Marco-Almagro"
+  author: "Roberto Behar / Pere Grima"
   sidebar:
       collapse-level: 0
   cover-image: cover.jpg

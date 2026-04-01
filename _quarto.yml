@@ -4,11 +4,14 @@ project:
 lang: es
 
 book: 
-  title: "Estadística a vista de pájaro"
-  subtitle: "Estoy haciendo pruebas"
+  title: |
+      <span style="font-size: 1.5em;">Estadística</span><br>
+      <span style="font-size: 1em;">Entender - Aplicar - Enseñar</span>
+  #subtitle: |
+  #  <span style="font-size: 1em;">Entender - Aplicar - Enseñar</span>
   date: today
   date-format: medium
-  author: "Roberto Behar / Pere Grima"
+  author: "Roberto Behar G. / Pere Grima"
   sidebar:
       collapse-level: 0
   cover-image: cover.jpg

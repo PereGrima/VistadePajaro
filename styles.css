@@ -16,8 +16,14 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 1.5rem;
 }
 
+#quarto-sidebar {
+  font-size: 1.2rem;
+}
 
-
+#quarto-sidebar .sidebar-title,
+#quarto-sidebar h1 {
+  font-size: 0.97rem !important;
+}
 
 
 /* Images */

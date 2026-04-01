@@ -2,7 +2,7 @@
 
 Empezamos a escribir este libro pensando en los profesores de enseñanza preuniversitaria que deben explicar estadística, muchas veces como parte de la asignatura de matemáticas. La idea era ofrecer una visión general de esta disciplina que les diera una mayor perspectiva a la hora de transmitir las ideas clave desde un punto de vista práctico. El resultado ha sido un texto que recoge los temas que típicamente conforman los cursos introductorios de estadística que se imparten en muchos grados universitarios; por ello, pensamos que igualmente puede resultar útil a profesores y estudiantes de esos cursos (los que usan libros, ya sabemos que son pocos).
 
-Hemos intentado situar el estilo a medio camino entre un libro de texto y uno de divulgación. Explicamos lo de siempre, pero intentamos que sea en un tono coloquial y cercano, sin abandonar el rigor ni eludir temas o aspectos que puedan resultar espinosos. Evitamos planteamientos o enfoques exclusivamente matemáticos, aunque --por supuesto-- sin esquivar el uso de fórmulas ni de deducciones matemáticas cuando lo consideramos relevante. 
+Hemos intentado situar el estilo a medio camino entre un libro de texto y uno de divulgación. Explicamos lo de siempre, pero intentamos que sea en un tono coloquial y cercano, sin abandonar el rigor ni eludir temas o aspectos que puedan resultar espinosos. Evitamos planteamientos o enfoques exclusivamente matemáticos, aunque --por supuesto-- sin esquivar el uso de fórmulas ni de deducciones matemáticas cuando lo consideramos relevante.
 
 ------------------------------------------------------------------------
 

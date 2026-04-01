@@ -4,14 +4,21 @@ Empezamos a escribir este libro pensando en los profesores de enseñanza preuniv
 
 Hemos intentado situar el estilo a medio camino entre un libro de texto y uno de divulgación. Explicamos lo de siempre, pero intentamos que sea en un tono coloquial y cercano, sin abandonar el rigor ni eludir temas o aspectos que puedan resultar espinosos. Evitamos planteamientos o enfoques exclusivamente matemáticos, aunque --por supuesto-- sin esquivar el uso de fórmulas ni de deducciones matemáticas cuando lo consideramos relevante.
 
-------------------------------------------------------------------------
+### Autores
 
-Todos los datos que se usan están aquí
+::: poco-espacio
+[Roberto Behar](https://die.udistrital.edu.co/comunidad/roberto_behar_gutierrez), profesor en la Universidad del Valle, en Cali, Colombia.
 
-------------------------------------------------------------------------
+[Pere Grima](https://www-eio.upc.es/~grima/index.html), profesor en la Universitat Politècnica de Catalunya, en Barcelona, España
+:::
 
-Licencia
+### Libro impreso
 
-------------------------------------------------------------------------
+Se puede comprar en [Amazon.es](https://amzn.eu/d/hGbwqAH "Amazon.es") o [Amazon.com](https://www.amazon.com/dp/B09SL18YRT "Comprar en Amazon.com"). Está impreso en color, encuadernado con tapa blanda e incluye prólogo, índices y referencias.
+
+### Licencia
+
+Se publica bajo una licencia Creative Commons: [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es "Licencia Creative Commons").
+
 
 *LA PORTADA ES DE OTRO LIBRO.* Solo para ver como queda.

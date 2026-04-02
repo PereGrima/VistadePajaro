@@ -1,4 +1,4 @@
-# INTRODUCCIÓN {.unnumbered}
+# Introducción
 
 ## Estadística: qué es y para qué sirve
 

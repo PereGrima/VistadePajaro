@@ -6,11 +6,11 @@ Con la síntesis numérica de datos ocurre algo parecido, se trata de saber en q
 
 Estas medidas se pueden agrupar en varios tipos:
 
-- **Medidas de tendencia central**: indican en torno a qué valor se mueven los datos. Típicamente se considera la media, la mediana y la moda, aunque esta última –en general– no es demasiado relevante.
-	
-- **Medidas de dispersión**: informan sobre la variabilidad de los datos. Los valores 0 y 100 tienen media 50, igual que 55 y 45, pero la dispersión --que muchas veces es lo más importante-- es muy diferente. Medidas típicas de dispersión son: el rango, la desviación media, la varianza y la desviación típica. El coeficiente de variación no es exactamente una medida de dispersión pero también lo incluimos en este grupo.
-	
-- **Medidas de posición**: sirven para situar la posición de un valor dentro de un conjunto. Si quiere saber si está entre el 25\% de los que tienen mejor salario en su empresa o entre el 25\% de los que lo tienen más bajo, solo necesita saber el primer y el tercer cuartil de la distribución de los salarios. Además de los cuartiles hablaremos de deciles y percentiles, una simple generalización.
+-   **Medidas de tendencia central**: indican en torno a qué valor se mueven los datos. Típicamente se considera la media, la mediana y la moda, aunque esta última –en general– no es demasiado relevante.
+
+-   **Medidas de dispersión**: informan sobre la variabilidad de los datos. Los valores 0 y 100 tienen media 50, igual que 55 y 45, pero la dispersión --que muchas veces es lo más importante-- es muy diferente. Medidas típicas de dispersión son: el rango, la desviación media, la varianza y la desviación típica. El coeficiente de variación no es exactamente una medida de dispersión pero también lo incluimos en este grupo.
+
+-   **Medidas de posición**: sirven para situar la posición de un valor dentro de un conjunto. Si quiere saber si está entre el 25% de los que tienen mejor salario en su empresa o entre el 25% de los que lo tienen más bajo, solo necesita saber el primer y el tercer cuartil de la distribución de los salarios. Además de los cuartiles hablaremos de deciles y percentiles, una simple generalización.
 
 También --en un apéndice-- comentaremos algunos aspectos relacionados con el cálculo y el uso de los porcentajes. Se utilizan con frecuencia para describir situaciones numéricas y apenas se les presta atención en este contexto aunque no son tan fáciles e inocentes como parece.
 
@@ -351,29 +351,29 @@ Citar también la media ponderada y la media truncada.
 
 Si una población tenía 10.000 habitantes en el año cero, creció el primer año a una tasa del 5 %, el segundo a una tasa del 20 % y el tercer año al 50 % ¿A que tasa promedio ha crecido en estos tres años?
 
-+-----------+-------------------+---------------------+---------------------+----------------------------+
-| Año       | Población inicial | Tasa de crecimiento | Factor de expansión | Población al final del año |
-+:=========:+:=================:+:===================:+:===================:+:==========================:+
-| 1         | 10.000            | 0,05                | 1,05                | 10.500                     |
-+-----------+-------------------+---------------------+---------------------+----------------------------+
-| 2         | 10.500            | 0,20                | 1,20                | 12.600                     |
-+-----------+-------------------+---------------------+---------------------+----------------------------+
-| 3         | 12.600            | 0,50                | 1,50                | 18.900                     |
-+-----------+-------------------+---------------------+---------------------+----------------------------+
++------------+-------------------+---------------------+---------------------+----------------------------+
+| Año        | Población inicial | Tasa de crecimiento | Factor de expansión | Población al final del año |
++:==========:+:=================:+:===================:+:===================:+:==========================:+
+| 1          | 10.000            | 0,05                | 1,05                | 10.500                     |
++------------+-------------------+---------------------+---------------------+----------------------------+
+| 2          | 10.500            | 0,20                | 1,20                | 12.600                     |
++------------+-------------------+---------------------+---------------------+----------------------------+
+| 3          | 12.600            | 0,50                | 1,50                | 18.900                     |
++------------+-------------------+---------------------+---------------------+----------------------------+
 
 : Evolución de la población {#tbl-evolucionPoblacion1} : {tbl-colwidths="\[10,20,20,20\]"}
 
 \noindent Si calculamos la media aritmética de la tasa de crecimiento \index{tasa de crecimiento} tenemos: $(0,05 + 0,20 + 0,50)/3 = 0,25$ y el factor medio de expansión sería $1,25$. Pero si la población hubiera crecido los tres años de esta forma, no se llegaría al mismo resultado final:
 
-+-----------+-------------------+---------------------+---------------------+----------------------------+
-| Año       | Población inicial | Tasa de crecimiento | Factor de expansión | Población al final del año |
-+:=========:+:=================:+:===================:+:===================:+:==========================:+
-| 1         | 10.000            | 0,25                | 1,25                | 12.500                     |
-+-----------+-------------------+---------------------+---------------------+----------------------------+
-| 2         | 12.500            | 0,25                | 1,25                | 15.625                     |
-+-----------+-------------------+---------------------+---------------------+----------------------------+
-| 3         | 15.625            | 0,25                | 1,25                | 19.531                     |
-+-----------+-------------------+---------------------+---------------------+----------------------------+
++------------+-------------------+---------------------+---------------------+----------------------------+
+| Año        | Población inicial | Tasa de crecimiento | Factor de expansión | Población al final del año |
++:==========:+:=================:+:===================:+:===================:+:==========================:+
+| 1          | 10.000            | 0,25                | 1,25                | 12.500                     |
++------------+-------------------+---------------------+---------------------+----------------------------+
+| 2          | 12.500            | 0,25                | 1,25                | 15.625                     |
++------------+-------------------+---------------------+---------------------+----------------------------+
+| 3          | 15.625            | 0,25                | 1,25                | 19.531                     |
++------------+-------------------+---------------------+---------------------+----------------------------+
 
 : Evolución de la población {#tbl-evolucionPoblacion1} : {tbl-colwidths="\[10,20,20,20\]"} :{.hover}
 

@@ -15,8 +15,10 @@ book:
   sidebar:
       collapse-level: 0
   cover-image: cover.jpg
-  site-url: https://peregrima.github.io/VistadePajaro/
-
+  #site-url: https://peregrima.github.io/VistadePajaro/
+  repo-url: https://github.com/PereGrima/VistadePajaro/
+  repo-actions: [issue] # 'issue' adds the report link
+  
   chapters:
     - index.qmd
     - 01_Prologo.qmd

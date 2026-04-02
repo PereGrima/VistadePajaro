@@ -9,10 +9,9 @@ El objetivo es que el lector logre entender, apreciar, aplicar y –llegado el c
 ### Autores
 
 ::: poco-espacio
-[Roberto Behar](https://die.udistrital.edu.co/comunidad/roberto_behar_gutierrez), es doctor en matemáticas y ha sido profesor titular y
-director de la carrera de estadística en la Universidad de Valle en Cali, Colombia.<br> [Pere Grima](https://www-eio.upc.es/~grima/index.html), es catedrático en el departamento de Estadística e Investigación
-Operativa de la Universitat Politècnica de Catalunya, en Barcelona, España
+[Roberto Behar](https://die.udistrital.edu.co/comunidad/roberto_behar_gutierrez), es doctor en matemáticas y ha sido profesor titular y director de la carrera de estadística en la Universidad de Valle en Cali, Colombia.<br> [Pere Grima](https://www-eio.upc.es/~grima/index.html), es catedrático en el departamento de Estadística e Investigación Operativa de la Universitat Politècnica de Catalunya, en Barcelona, España
 :::
+[Mensaje a los autores](mailto:robehar@gmail.com,pere.grima@upc.edu) (Comunicar erratas, errores, sugerencias, comentarios...)
 
 ### Libro impreso
 

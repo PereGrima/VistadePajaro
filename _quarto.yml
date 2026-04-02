@@ -9,9 +9,9 @@ book:
       <span style="font-size: 1em;">Entender - Aplicar - Enseñar</span>
   #subtitle: |
   #  <span style="font-size: 1em;">Entender - Aplicar - Enseñar</span>
-  date: today
-  date-format: medium
-  author: "Roberto Behar G. / Pere Grima"
+  # date: today
+  # date-format: medium
+  # author: "Roberto Behar G. / Pere Grima"
   sidebar:
       collapse-level: 0
   cover-image: cover.jpg

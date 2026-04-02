@@ -1,24 +1,25 @@
 # PRESENTACIÓN {.unnumbered}
 
-Empezamos a escribir este libro pensando en los profesores de enseñanza preuniversitaria que deben explicar estadística, muchas veces como parte de la asignatura de matemáticas. La idea era ofrecer una visión general de esta disciplina que les diera una mayor perspectiva a la hora de transmitir las ideas clave desde un punto de vista práctico. El resultado ha sido un texto que recoge los temas que típicamente conforman los cursos introductorios de estadística que se imparten en muchos grados universitarios; por ello, pensamos que igualmente puede resultar útil a profesores y estudiantes de esos cursos (los que usan libros, ya sabemos que son pocos).
+A medio camino entre el libro de texto y la divulgación, trata los temas que conforman los cursos introductorios de estadística. Las ideas fundamentales se presentan con un lenguaje cercano, recurriendo a la intuición, a analogías y a casos prácticos, para que el lector las comprenda con claridad y vea también sus posibilidades de aplicación.
 
-Hemos intentado situar el estilo a medio camino entre un libro de texto y uno de divulgación. Explicamos lo de siempre, pero intentamos que sea en un tono coloquial y cercano, sin abandonar el rigor ni eludir temas o aspectos que puedan resultar espinosos. Evitamos planteamientos o enfoques exclusivamente matemáticos, aunque --por supuesto-- sin esquivar el uso de fórmulas ni de deducciones matemáticas cuando lo consideramos relevante.
+El protagonismo no lo tienen los razonamientos matemáticos, aunque tampoco se evitan. Los que nos han parecido más relevantes se incluyen en anexos o se exponen de manera que su omisión no comprometa el seguimiento del texto.
+
+El objetivo es que el lector logre entender, apreciar, aplicar y –llegado el caso– explicar la estadística, mostrándola como una disciplina ligada al método científico y capaz de proporcionar información valiosa en muy diversos ámbitos.
 
 ### Autores
 
 ::: poco-espacio
-[Roberto Behar](https://die.udistrital.edu.co/comunidad/roberto_behar_gutierrez), profesor en la Universidad del Valle, en Cali, Colombia.
-
-[Pere Grima](https://www-eio.upc.es/~grima/index.html), profesor en la Universitat Politècnica de Catalunya, en Barcelona, España
+[Roberto Behar](https://die.udistrital.edu.co/comunidad/roberto_behar_gutierrez), es doctor en matemáticas y ha sido profesor titular y
+director de la carrera de estadística en la Universidad de Valle en Cali, Colombia.<br> [Pere Grima](https://www-eio.upc.es/~grima/index.html), es catedrático en el departamento de Estadística e Investigación
+Operativa de la Universitat Politècnica de Catalunya, en Barcelona, España
 :::
 
 ### Libro impreso
 
-Se puede comprar en [Amazon.es](https://amzn.eu/d/hGbwqAH "Amazon.es") o [Amazon.com](https://www.amazon.com/dp/B09SL18YRT "Comprar en Amazon.com"). Está impreso en color, encuadernado con tapa blanda e incluye prólogo, índices y referencias.
+Se puede comprar en [Amazon.es](https://amzn.eu/d/hGbwqAH "Amazon.es") o [Amazon.com](https://www.amazon.com/dp/B09SL18YRT "Comprar en Amazon.com"). Puede darle un vistazo [aquí](https://drive.google.com/file/d/1woCtMeYIWyHVrC-05THeJYa5Ugw9Ptr5/view).
 
 ### Licencia
 
 Se publica bajo una licencia Creative Commons: [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es "Licencia Creative Commons").
-
 
 *LA PORTADA ES DE OTRO LIBRO.* Solo para ver como queda.

@@ -1,3 +1,30 @@
 # Prólogo {.unnumbered}
 
-Estoy haciendo pruebas.
+Empezamos a escribir este libro pensando en los profesores de enseñanza preuniversitaria que deben explicar estadística, muchas veces como parte de la asignatura de matemáticas. La idea era ofrecer una visión general de esta disciplina que les diera una mayor perspectiva a la hora de transmitir las ideas clave desde un punto de vista práctico. El resultado ha sido un texto que recoge los temas que típicamente conforman los cursos introductorios de estadística que se imparten en muchos grados universitarios; por ello, pensamos que igualmente puede resultar útil a profesores y estudiantes de esos cursos (los que usan libros, ya sabemos que son pocos).
+
+Hemos intentado situar el estilo a medio camino entre un libro de texto y uno de divulgación. Explicamos lo de siempre, pero intentamos que sea en un tono coloquial y cercano, sin abandonar el rigor ni eludir temas o aspectos que puedan resultar espinosos. Evitamos planteamientos o enfoques exclusivamente matemáticos, aunque --por supuesto-- sin esquivar el uso de fórmulas ni de deducciones matemáticas cuando lo consideramos relevante.
+
+Nos hemos movido en la contradicción de no dejarnos nada en el tintero, pero tampoco escribir un texto demasiado largo. La solución ha sido incluir muchas notas finales y también apéndices que el lector es libre de saltarse o de leerlos si el tema despierta su interés. Las ideas que articulan el libro —y que nos gustaría que el lector retuviera incluso si olvida los detalles— son las siguientes:
+
+-   Distinguir entre el conocimiento basado en tradiciones, suposiciones o en el "siempre se ha considerado así" del conocimiento científico basado en datos que reflejen la realidad de forma objetiva. Lo vemos directamente en el capítulo de introducción y en el epílogo, pero también *sobrevuela* todo el libro.
+
+-   Obtener datos con la calidad y la representatividad requerida no es fácil. Las encuestas son una forma de recoger datos, pero no es la única (hacer estadística no es hacer encuestas). Intentamos que el mensaje se vaya repitiendo, y se hace evidente si se realiza alguno de los trabajos que se plantean en el epílogo.
+
+-   Las medidas de estadística descriptiva aportan información relevante pero hay que saber cuál es la que mejor informa sobre el aspecto que interesa, sin olvidar la importancia de la variabilidad. De esto trata el capítulo 2.
+
+-   Los gráficos son una excelente forma de descubrir y de mostrar la información que contienen los datos, pero hay que saber cuáles conviene usar en cada caso y cuáles es mejor evitar. También hay que estar atento a posibles usos malintencionados. Está en el capítulo 3.
+
+-   Nos movemos en un mundo donde muchos resultados están afectados por variabilidad aleatoria, por el azar. El comportamiento de ese azar puede ser de diversos tipos, y saberlo clasificar nos permite hacer uso de todo lo que ya se sabe sobre él. De esto trata el capítulo 5, utilizando ideas y conceptos presentados en el capítulo 4.
+
+-   Esa variabilidad aleatoria siempre está presente en las muestras a partir de las cuales se estiman características de la población. No pretendemos acertar en los valores exactos de nuestras estimaciones, pero sí las podemos dar informando sobre el nivel de incertidumbre que presentan usando el lenguaje de la probabilidad. Este es el tema de los capítulos 6 y 7.
+
+-   En estadística usamos un método de razonamiento llamado contraste de hipótesis. Eso son los test estadísticos. Lo que hacemos es analizar si las diferencias observadas se pueden atribuir al azar. A estos temas dedicamos los capítulos 8 y 9.
+
+-   Tenemos formas de estudiar --y de cuantificar-- la relación entre variables y de plantear modelos que expliquen el comportamiento de una en función de otras, pero los datos con los que se construyen esos modelos son muestras y, por tanto, también hay que tener en cuenta la variabilidad que eso conlleva. Este es el contenido de la última parte, que incluye los capítulos 10, 11 y 12.
+
+Dejando claro que cualquier falta de virtud en este trabajo es de exclusiva responsabilidad de los autores, deseamos expresar nuestro agradecimiento a todos los que nos han aportado comentarios y sugerencias que han servido para mejorarlo. También nuestro reconocimiento a los compañeros en las tareas docentes que --muchas veces en nuestras conversaciones y tertulias de sobremesa-- han sido fuente de inspiración de muchas de nuestras ideas.
+
+Un agradecimiento especial a nuestro colega y amigo Lluís Marco, que leyó con detalle todo el original y puso de manifiesto algunos aspectos que debían mejorarse. Esperamos haberlo conseguido.
+
+
+\noindent Barcelona y Santiago de Cali, Marzo de 2026.

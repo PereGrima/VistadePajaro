@@ -18,10 +18,8 @@ El objetivo es que el lector logre entender, apreciar, aplicar y –llegado el c
 
 ### Libro impreso
 
-Se puede comprar en [Amazon.es](https://amzn.eu/d/hGbwqAH "Amazon.es") o [Amazon.com](https://www.amazon.com/dp/B09SL18YRT "Comprar en Amazon.com"). Puede darle un vistazo [aquí](https://drive.google.com/file/d/1XbNemLWI20_Da5GCf6EPmLw-jFjBqUgz/view?usp=sharing).
-
-### Licencia
-
-Se publica bajo una licencia Creative Commons: [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es "Licencia Creative Commons").
+::: poco-espacio
+Se puede comprar en [Amazon.es](https://amzn.eu/d/hGbwqAH "Amazon.es") o [Amazon.com](https://www.amazon.com/dp/B09SL18YRT "Comprar en Amazon.com"). Puede darle un vistazo [aquí](https://drive.google.com/file/d/1fc6IzkGLUxiCgxfc0rZkKO-Pr53qJ-uj/view?usp=sharing).<br>Se publica bajo una licencia Creative Commons: [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es "Licencia Creative Commons").
+:::
 
 *LA PORTADA ES DE OTRO LIBRO.* Solo para ver como queda.

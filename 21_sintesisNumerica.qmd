@@ -7,29 +7,58 @@ Con la síntesis numérica de datos ocurre algo parecido, se trata de saber en q
 Estas medidas se pueden agrupar en varios tipos:
 
 -   **Medidas de tendencia central**: indican en torno a qué valor se mueven los datos. Típicamente se considera la media, la mediana y la moda, aunque esta última –en general– no es demasiado relevante.
-
+	
 -   **Medidas de dispersión**: informan sobre la variabilidad de los datos. Los valores 0 y 100 tienen media 50, igual que 55 y 45, pero la dispersión --que muchas veces es lo más importante-- es muy diferente. Medidas típicas de dispersión son: el rango, la desviación media, la varianza y la desviación típica. El coeficiente de variación no es exactamente una medida de dispersión pero también lo incluimos en este grupo.
-
+	
 -   **Medidas de posición**: sirven para situar la posición de un valor dentro de un conjunto. Si quiere saber si está entre el 25% de los que tienen mejor salario en su empresa o entre el 25% de los que lo tienen más bajo, solo necesita saber el primer y el tercer cuartil de la distribución de los salarios. Además de los cuartiles hablaremos de deciles y percentiles, una simple generalización.
-
-También --en un apéndice-- comentaremos algunos aspectos relacionados con el cálculo y el uso de los porcentajes. Se utilizan con frecuencia para describir situaciones numéricas y apenas se les presta atención en este contexto aunque no son tan fáciles e inocentes como parece.
+	
+\noindent También --en un apéndice-- comentaremos algunos aspectos relacionados con el cálculo y el uso de los porcentajes. Se utilizan con frecuencia para describir situaciones numéricas y apenas se les presta atención en este contexto aunque no son tan fáciles e inocentes como parece.
 
 ## Medidas de tendencia central
 
-La cantinela "media, mediana y moda" --medidas de tendencia central por excelencia-- constitue para muchos el primer recuerdo de su recorrido por el curso de estadística. Vamos a repasar el significado, los peligros y lo que se puede esperar de cada una de estas medidas.
+La cantinela “media, mediana y moda” –medidas de tendencia central por excelencia– constituye para muchos el primer recuerdo de su paso por el curso de estadística. Vamos a repasar el significado, los posibles peligros y lo que se puede esperar de cada una de estas medidas.
 
 ### Media aritmética {.unnumbered}
 
-Tanto el cálculo como el significado de la media aritmética son bien conocidos por los estudiantes. Además de que la idea es sencilla, su cálculo tiene interés para saber si se aprobará una asignatura a la vista de las notas del curso. \[*pretendo empezar con un toque de humor pero no sé si se entiende*\]
+Tanto el cálculo como el significado de la media aritmética son bien conocidos por los estudiantes. Además de que la idea es sencilla, su cálculo tiene interés para saber si se aprobará una asignatura a la vista de las notas que se han ido obteniendo.
 
-Cuando los datos se presentan tabulados no hay que olvidar que cada uno se repite tantas veces como indica su **frecuencia absoluta**. En la @tbl-hijosFamilia, la variable considerada es el número de hijos por familia ($x$) y el número de familias para cada uno de esos valores es la frecuencia absoluta ($n$).
+Cuando los datos se presentan tabulados no hay que olvidar que cada uno se repite tantas veces como indica su **frecuencia absoluta**. En la [@tbl-tablaHijos], la variable considerada es el número de hijos por familia ($x$) y el número de familias para cada uno de esos valores es la frecuencia absoluta ($n$).
 
-|                           |     |     |     |     |     |     |
-|---------------------------|:---:|:---:|:---:|:---:|:---:|:---:|
-| Número de hijos ($x$):    |  0  |  1  |  2  |  3  |  4  |  5  |
-| Número de familias ($n$): | 13  | 21  | 15  |  8  |  1  |  2  |
+```{=html} 
+<table id="tbl-tablaHijos" class="tabla-0201"> 
+<caption> 
+  Número de hijos por familia 
+</caption> 
+<colgroup> 
+  <col style="width: 200px;"> 
+  <col style="width: 40px;"> 
+  <col style="width: 40px;"> 
+  <col style="width: 40px;"> 
+  <col style="width: 40px;"> 
+  <col style="width: 40px;"> 
+  <col style="width: 40px;"> 
+</colgroup>
 
-: Número de hijos por familia {#tbl-hijosFamilia}
+<tr> 
+  <td class="fila-titulo">Número de hijos (<i>x</i>):</td> 
+  <td>0</td> 
+  <td>1</td> 
+  <td>2</td> 
+  <td>3</td> 
+  <td>4</td> 
+  <td>5</td> 
+</tr> 
+
+<tr> <td class="fila-titulo">Número de familias (<i>n</i>):</td> 
+  <td>13</td> 
+  <td>21</td> 
+  <td>15</td> 
+  <td>8</td> 
+  <td>1</td> 
+  <td>2</td> 
+</tr> 
+</table>
+```
 
 El valor medio ($\bar{x}$) del número de hijos por famila es igual a:
 

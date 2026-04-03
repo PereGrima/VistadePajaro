@@ -22,7 +22,7 @@ La cantinela “media, mediana y moda” –medidas de tendencia central por exc
 
 Tanto el cálculo como el significado de la media aritmética son bien conocidos por los estudiantes. Además de que la idea es sencilla, su cálculo tiene interés para saber si se aprobará una asignatura a la vista de las notas que se han ido obteniendo.
 
-Cuando los datos se presentan tabulados no hay que olvidar que cada uno se repite tantas veces como indica su **frecuencia absoluta**. En la [@tbl-tablaHijos], la variable considerada es el número de hijos por familia ($x$) y el número de familias para cada uno de esos valores es la frecuencia absoluta ($n$).
+Cuando los datos se presentan tabulados no hay que olvidar que cada uno se repite tantas veces como indica su **frecuencia absoluta**. En la [@tbl-tablaHijos], la variable considerada es el número de hijos por familia ($x$) y el número de familias para cada uno de esos valores es la frecuencia absolutaaaaa ($n$).
 
 ```{=html} 
 <table id="tbl-tablaHijos" class="tabla-0201"> 

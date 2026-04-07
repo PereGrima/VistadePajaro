@@ -18,7 +18,7 @@ book:
   #site-url: https://peregrima.github.io/VistadePajaro/
   #repo-url: https://github.com/PereGrima/VistadePajaro/
   #repo-actions: [issue] # 'issue' adds the report link
-  
+
   chapters:
     - index.qmd
     
@@ -62,8 +62,6 @@ book:
 biblio-title: "Referencias"
 link-citations: true
 link-bibliography: true
-cite-method: citeproc         # Solo PDF
-biblio-style: 'authoryear'    # Solo PDF
 citations-hover: true         # Solo HTML
 bibliography: references.bib 
 
@@ -71,19 +69,21 @@ bibliography: references.bib
 mainfont: Calibri
 monofont: Verdana
 mathfont: CambriaMath
-fontfamily: baskervald    # -> Solo en PDF
 fontsize: 13pt
 # systemfonts::system_fonts(): Lista de fuentes disponibles en el ordenador.
 
 format:
   html:
+    preview:
+        serve: false
     theme: cosmo
     code-fold: true
+    allow-html: true
     css: styles.css
-    header-includes:
-      <script src="https://kit.fontawesome.com/98a945d90a.js" crossorigin="anonymous"></script>
-  pdf:
-    documentclass: scrreprt
-
+    include-in-header:
+      - text: |
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+execute:
+  daemon: false
+  
 editor: visual
-

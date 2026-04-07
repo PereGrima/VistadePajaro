@@ -25,66 +25,170 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.97rem !important;
 }
 
-/*** Tablas 2.1  ***/
+*** Tabla 2.1  ***/
 
 .tabla-0201 {
+  margin: auto;
+  max-width: 600px;
   font-size: 0.97em;
   border-collapse: collapse;
-  margin: auto;
-  margin-top: 8px;   /* poco espacio antes */
-  margin-bottom: 25px; /* más espacio después */
-  table-layout: fixed;
-  display: table;
-  width: 440px;
 }
 
 .tabla-0201 caption {
   caption-side: top;
+  text-align: center;
   margin-bottom: 0px;
-  font-size: 1.1em;
+  font-size: 0.97em;
+  padding: 5px;
+  color: #888 !important;
 }
 
+/* EXCEPCIÓN: primera columna */
+.tabla-0201 th:first-child,
 .tabla-0201 td:first-child {
-  width: 200px;
+  text-align: left;
+  padding-left: 8px;
 }
 
-.tabla-0201 td:not(:first-child) {
-  width: 40px;
+.tabla-0201 thead th {
+    font-weight: 400;
+    text-align: center;     /* celdas centradas */
+    padding: 4px 4px;       /* top botom */
+    line-height: 1.3;       /* compacta como en LaTeX */
+    border-top: 1px solid #888;
+    border-bottom: 1px solid #888;
 }
 
 .tabla-0201 td {
-  padding: 3px 4px;     /* altura de fila más pequeña */
-  line-height: 1.15;    /* compacta como en LaTeX */
+  text-align: center;    /* celdas centradas */
+  padding: 4px 4px;      /* altura de fila más pequeña */
+  line-height: 1.1;      /* compacta como en LaTeX */
+}
+
+.tabla-0201 thead tr {
+  border-top: 1px solid #888;
+  border-bottom: 1px solid #888;
+}
+
+.tabla-0201 tbody tr:last-child {
+  border-top: 1px solid #888;
+  border-bottom: 1px solid #888;
+}
+
+.tabla-wrapper0201 {
+  width: 80%;
+  margin-top: 3ex;
+  margin-bottom: 5ex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ========================= */
+/* TABLA Media PROS/CONS */
+/* ========================= */
+
+.tabla-MediaPC {
+  margin: auto;
+  max-width: 600px;
+  font-size: 0.97em;
+  border-collapse: collapse;
+}
+
+.tabla-MediaPC caption {
+  caption-side: top;
+  text-align: center;
+  margin-bottom: 0px;
+  font-size: 0.97em;
+  padding: 5px;
+  color: #888 !important;
+}
+
+/* Compactar espacio de la tabla */
+#tbl-MediaPC .table td {
+  padding: 8px 15px 8px 18px;
+  vertical-align: top;
   text-align: center;
 }
 
-/* Primera columna alineada a la izquierda */
-.tabla-0201 .fila-titulo {
-  text-align: left;
-  padding-right: 20px;
+/* Compactar listas */
+#tbl-MediaPC ul {
+  margin-bottom: 2px;
+  line-height: 1.2;
 }
 
-/* Líneas horizontales tipo LaTeX */
-.tabla-0201 tr:first-child td {
-  border-top: 1px solid black;
+#tbl-MediaPC li {
+  margin-bottom: 6px;
+  padding-bottom: 0;
 }
 
-.tabla-0201 tr:first-child td,
-.tabla-0201 tr:last-child td {
-  border-bottom: 1px solid black;
+.tabla-wrapperMediaPC {
+  width: 100%;
+  margin-top: 3ex;
+  margin-bottom: 6ex;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* ========================= */
+/* TABLA PROS/CONS */
+/* ========================= */
 
+.tabla-ProsCons {
+  margin: auto;
+  max-width: 600px;
+  font-size: 0.97em;
+  border-collapse: collapse;
+}
 
+.tabla-ProsCons caption {
+  caption-side: top;
+  text-align: center;
+  margin-bottom: 0px;
+  font-size: 0.97em;
+  padding: 5px;
+  color: #888 !important;
+}
 
+/* Compactar espacio de la tabla */
+#tbl-ProsCons .table td {
+  padding: 8px 15px 8px 18px;
+  vertical-align: top;
+  text-align: center;
+}
 
+/* Compactar listas */
+#tbl-ProsCons ul {
+  margin-bottom: 2px;
+  line-height: 1.2;
+}
 
+#tbl-ProsCons li {
+  margin-bottom: 6px;
+  padding-bottom: 0;
+}
 
+.tabla-wrapperProsCons {
+  width: 100%;
+  margin-top: 3ex;
+  margin-bottom: 4ex;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+/* ========================= */
+/* FIGURAS                   */
+/* ========================= */
 
+.fig-normal {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
 
-
-
-
+.fig-normal2 {
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+  text-align: center;
+}
 
 

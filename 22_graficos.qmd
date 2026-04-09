@@ -2,37 +2,72 @@
 
 Empezamos planteando un reto: El dueño de una panadería sospecha que las barras de pan que está vendiendo tienen un peso demasiado variable, de forma que algunas pueden estar por debajo del límite que marca la ley. El pan se elabora en dos máquinas que son utilizadas por dos operarios, uno por la mañana y otro por la tarde. La tabla [-@tbl-panaderia] contiene los pesos (en gramos) de las muestras que se han ido recogiendo durante 20 días.
 
-::: {style="font-size:13px"}
-+:-----------:+:-----------:+:------------------------------------------:+:------------------------------------------:+
-| Día         | Operario    | Máquina 1                                  | Máquina 2                                  |
-+-------------+-------------+--------------------------------------------+--------------------------------------------+
-| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
-| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
-| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
-| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
-| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
-| \           | \           | \                                          | \                                          |
-| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
-| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
-| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
-| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
-| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
-| \           | \           | \                                          | \                                          |
-| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
-| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
-| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
-| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
-| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
-| \           | \           | \                                          | \                                          |
-| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
-| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
-| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
-| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
-| 2\          | A\          | 220,3       215,5       219,1       219,2\ | 220,3       215,5       219,1       219,2\ |
-+-------------+-------------+--------------------------------------------+--------------------------------------------+
+```{=html}
+<div id="tbl-Panaderia" class="tabla-wrapper42">
+<table class="tabla-0301">
 
-: Peso de barras de pan elaboradas en una panadería {#tbl-panaderia} : {tbl-colwidths="\[5, 15, 40, 40\]"}
-:::
+<caption>Tabla 3.1: Datos tomados en una panadería</caption>
+
+<colgroup>
+    <col style="width: 6%;">
+    <col style="width: 14%;">
+    <col style="width: 9.5%;">
+    <col style="width: 9.5%;">
+    <col style="width: 9.5%;">
+    <col style="width: 9.5%;">
+    <col style="width: 4%;">
+    <col style="width: 9.5%;">
+    <col style="width: 9.5%;">
+    <col style="width: 9.5%;">
+    <col style="width: 9.5%;">
+  </colgroup>
+  
+  <thead>
+      <tr>
+        <th style="vertical-align: middle; text-align: center;"> Día </th>
+        <th style="vertical-align: middle; text-align: center;"> Operario </th>
+        <th colspan="4" style="vertical-align: middle; text-align: center;"> Máquina 1 </th>
+        <th>&nbsp;</th>
+        <th colspan="4" style="vertical-align: middle; text-align: center;"> Máquina 2 </th>
+      </tr>
+   </thead>
+    <tbody>
+      <tr>
+        <td>1</td> <td>B</td> <td>220,3</td> <td>215,8</td> <td>220,4</td> <td>221,5</td> <td>&nbsp;</td> <td>217,7</td> <td>214,9</td> <td>214,7</td> <td>218,2</td>
+      </tr>
+      <tr>
+        <td>2</td> <td>A</td> <td>217,7</td> <td>222,7</td> <td>216,0</td> <td>219,4</td> <td>&nbsp;</td> <td>214,1</td> <td>216,2</td> <td>213,1</td> <td>214,7</td>
+      </tr>
+      <tr>
+        <td>3</td> <td>A</td> <td>219,8</td> <td>220,2</td> <td>218,0</td> <td>219,3</td> <td>&nbsp;</td> <td>216,8</td> <td>214,2</td> <td>215,4</td> <td>215,9</td>
+      </tr>
+      <tr>
+        <td>4</td> <td>B</td> <td>220,0</td> <td>223,9</td> <td>220,1</td> <td>216,9</td> <td>&nbsp;</td> <td>218,9</td> <td>218,8</td> <td>215,2</td> <td>219,9</td>
+      </tr>
+      <tr>
+        <td>5</td> <td>B</td> <td>217,9</td> <td>224,2</td> <td>214,1</td> <td>221,1</td> <td>&nbsp;</td> <td>216,5</td> <td>218,0</td> <td>213,8</td> <td>215,2</td>
+      </tr>
+      
+      <tr>
+        <td>6</td> <td>A</td> <td>215,5</td> <td>222,0</td> <td>221,7</td> <td>227,0</td> <td>&nbsp;</td> <td>220,1</td> <td>217,6</td> <td>217,9</td> <td>218,4</td>
+      </tr>
+      <tr>
+        <td>7</td> <td>B</td> <td>225,3</td> <td>215,1</td> <td>218,8</td> <td>218,3</td> <td>&nbsp;</td> <td>216,5</td> <td>217,5</td> <td>216,2</td> <td>215,8</td>
+      </tr>
+      <tr>
+        <td>8</td> <td>B</td> <td>222,6</td> <td>219,5</td> <td>223,9</td> <td>221,6</td> <td>&nbsp;</td> <td>218,9</td> <td>215,4</td> <td>215,0</td> <td>215,4</td>
+      </tr>
+      <tr>
+        <td>9</td> <td>B</td> <td>214,1</td> <td>220,6</td> <td>218,8</td> <td>221,6</td> <td>&nbsp;</td> <td>212,8</td> <td>213,4</td> <td>215,1</td> <td>220,8</td>
+      </tr>
+      <tr>
+        <td>10</td> <td>A</td> <td>225,7</td> <td>216,2</td> <td>219,7</td> <td>225,0</td> <td>&nbsp;</td> <td>221,4</td> <td>216,7</td> <td>215,9</td> <td>212,9</td>
+      </tr>
+  </tbody>
+</table>
+</div>
+```
+
 
 El peso debe ser de 210 $\pm$ 10 g. Las preguntas que nos planteamos son: ¿Existe algún problema? ¿Qué está pasando? ¿qué hay que hacer para resolver el problema, si es que existe?
 
@@ -67,29 +102,29 @@ texto
 texto
 
 ::: {style="font-size:13px"}
-<table style="width:86%;">
+<table style="width:47%;">
 <colgroup>
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
-<col style="width: 4%" />
+<col style="width: 2%" />
+<col style="width: 2%" />
+<col style="width: 2%" />
+<col style="width: 2%" />
+<col style="width: 2%" />
+<col style="width: 2%" />
+<col style="width: 2%" />
+<col style="width: 2%" />
+<col style="width: 2%" />
+<col style="width: 2%" />
+<col style="width: 2%" />
+<col style="width: 2%" />
+<col style="width: 2%" />
+<col style="width: 2%" />
+<col style="width: 2%" />
+<col style="width: 2%" />
+<col style="width: 2%" />
+<col style="width: 2%" />
+<col style="width: 2%" />
+<col style="width: 2%" />
+<col style="width: 2%" />
 </colgroup>
 <tbody>
 <tr class="odd">

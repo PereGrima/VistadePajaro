@@ -1,3 +1,7 @@
+/* ========================= */
+/*     Aspecto general       */
+/* ========================= */
+
 /* Títulos del libro */
 h1, h2, h3, h4, h5, h6 {
   color: #0038CF;
@@ -6,7 +10,6 @@ h1, h2, h3, h4, h5, h6 {
 .header-section-number {
   color: inherit;
 }
-
 
 .part-intro {
   margin-top: 0.5rem;
@@ -25,7 +28,42 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.97rem !important;
 }
 
-*** Tabla 2.1  ***/
+/* ========================= */
+/*         TABLAS            */
+/* ========================= */
+
+/*** ProsCons  ***/
+
+.tabla-ProsCons {
+  margin: auto;
+  max-width: 600px;
+  width: 90%;
+  font-size: 0.97em;
+  border-collapse: collapse;
+}
+
+.tabla-ProsCons caption {
+  caption-side: top;
+  text-align: center;
+  margin-bottom: 0px;
+  font-size: 1em;
+  padding: 5px;
+  color: #888 !important;
+}
+
+/* Compactar listas */
+#tbl-ProsCons ul {
+  margin-bottom: 2px;
+  line-height: 1.2;
+}
+
+#tbl-ProsCons li {
+  margin-bottom: 6px;
+  padding-bottom: 0;
+}
+
+
+/*** Tabla 2.1  ***/
 
 .tabla-0201 {
   margin: auto;
@@ -75,99 +113,108 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid #888;
 }
 
-.tabla-wrapper0201 {
-  width: 80%;
-  margin-top: 3ex;
-  margin-bottom: 5ex;
-  margin-left: auto;
-  margin-right: auto;
-}
+/*** Tabla en 2.12  ***/
 
-/* ========================= */
-/* TABLA Media PROS/CONS */
-/* ========================= */
-
-.tabla-MediaPC {
+.tabla-0212 {
   margin: auto;
+  width: 90%;
   max-width: 600px;
-  font-size: 0.97em;
+  font-size: 1em;
+  vertical-align: middle;
+  border: none;
   border-collapse: collapse;
 }
 
-.tabla-MediaPC caption {
-  caption-side: top;
-  text-align: center;
-  margin-bottom: 0px;
-  font-size: 0.97em;
-  padding: 5px;
-  color: #888 !important;
+.tabla-0212 th {
+    font-weight: 400;
+    text-align: center;    /* celdas centradas */
+    padding-top: 3px; 
+    padding-bottom: 3px;      /* altura de fila más pequeña */
+    line-height: 1.1;      /* compacta como en LaTeX */
+    font-size: 1em;
 }
 
-/* Compactar espacio de la tabla */
-#tbl-MediaPC .table td {
-  padding: 8px 15px 8px 18px;
-  vertical-align: top;
-  text-align: center;
+.tabla-0212 td {
+  font-size: 0.95em;      /* equivalente a \footnotesize */
+  text-align: center;    /* celdas centradas */
+  padding: 2px 6px;      /* altura de fila más pequeña */
+  line-height: 1.4;      /* compacta como en LaTeX */
 }
 
-/* Compactar listas */
-#tbl-MediaPC ul {
-  margin-bottom: 2px;
-  line-height: 1.2;
+.tabla-0212 tr:first-child th {
+  border-top: 1px solid #000;
 }
 
-#tbl-MediaPC li {
-  margin-bottom: 6px;
-  padding-bottom: 0;
+.tabla-0212 tr:last-child td {
+  border-bottom: 1px solid #000;
+}
+/*** Esto último es para que no salga raya entre las dos primeras líneas ***/
+
+/*** Tabla 2. Apendice 2D 1 ***/
+
+.tabla-02Ape2D_1 {
+  margin: auto;
+  width: 55%;
+  max-width: 600px;
+  border-top: 0px solid #d3d3d3;
+  border-bottom: 0px solid #d3d3d3;
+  margin-bottom: 0;
 }
 
-.tabla-wrapperMediaPC {
+.tabla-02Ape2D_1 td {
+  text-align: center;    /* celdas centradas */
+  padding: 2px 2px;      /* altura de fila más pequeña */
+  line-height: 1.1;      /* compacta como en LaTeX */
+  border-top: 0px solid #d3d3d3;
+  border-bottom: 0px solid #d3d3d3;
+}
+
+/*** Tablas 2 y 3. Apendice 2D 2 y 3 ***/
+
+.tabla-02Ape2D_2_3 {
+  margin: auto;
   width: 100%;
-  margin-top: 3ex;
-  margin-bottom: 6ex;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ========================= */
-/* TABLA PROS/CONS */
-/* ========================= */
-
-.tabla-ProsCons {
-  margin: auto;
-  max-width: 600px;
-  font-size: 0.97em;
+  max-width: 650px;
+  font-size: 0.95em;
+  vertical-align: middle;
   border-collapse: collapse;
 }
 
-.tabla-ProsCons caption {
-  caption-side: top;
-  text-align: center;
-  margin-bottom: 0px;
-  font-size: 0.97em;
-  padding: 5px;
-  color: #888 !important;
+.tabla-02Ape2D_2_3 th {
+    font-weight: 400;
+    text-align: center;    /* celdas centradas */
+    padding-top: 4px; 
+    padding-bottom: 4px;      /* altura de fila más pequeña */
+    line-height: 1.15;      /* compacta como en LaTeX */
+    font-size: 0.95em;
+    border: none;
 }
 
-/* Compactar espacio de la tabla */
-#tbl-ProsCons .table td {
-  padding: 8px 15px 8px 18px;
-  vertical-align: top;
-  text-align: center;
+.tabla-02Ape2D_2_3 td {
+  font-size: 1em;      /* equivalente a \footnotesize */
+  text-align: center;    /* celdas centradas */
+  padding: 3px 4px;      /* altura de fila más pequeña */
+  line-height: 1.15;      /* compacta como en LaTeX */
+  border: none;
 }
 
-/* Compactar listas */
-#tbl-ProsCons ul {
-  margin-bottom: 2px;
-  line-height: 1.2;
+.tabla-02Ape2D_2_3 tr {
+  border-bottom: 0.5px solid black;
+  border-top: 0.5px solid black;
 }
 
-#tbl-ProsCons li {
-  margin-bottom: 6px;
-  padding-bottom: 0;
+tr.total td {
+  border-top: 1px solid black;
 }
 
-.tabla-wrapperProsCons {
+/* ======Tabla Wrapper====== */
+
+.tabla-wrapper00 {
+  margin-bottom: 0ex;
+  margin-top: 0ex;
+}
+
+.tabla-wrapper34 {
   width: 100%;
   margin-top: 3ex;
   margin-bottom: 4ex;
@@ -175,12 +222,26 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: auto;
 }
 
+.tabla-wrapper35 {
+  width: 80%;
+  margin-top: 3ex;
+  margin-bottom: 5ex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabla-wrapper42 {
+  margin-bottom: 4ex;
+  margin-top: 2ex;
+}
+
+
 /* ========================= */
-/* FIGURAS                   */
+/*         FIGURAS           */
 /* ========================= */
 
-.fig-normal {
-  margin-top: 1em;
+.fig-normal1 {
+  margin-top: 1.25em;
   margin-bottom: 0.5em;
   text-align: center;
 }
@@ -190,5 +251,13 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1.5em;
   text-align: center;
 }
+
+
+
+
+
+
+
+
 
 

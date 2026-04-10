@@ -308,11 +308,11 @@ window.Quarto = {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#forma-de-la-distribución-valro-central-y-dispersión" id="toc-forma-de-la-distribución-valro-central-y-dispersión" class="nav-link active" data-scroll-target="#forma-de-la-distribución-valro-central-y-dispersión"><span class="header-section-number">3.1</span> Forma de la distribución, valro central y dispersión</a>
+  <li><a href="#forma-de-la-distribución-valor-central-y-dispersión" id="toc-forma-de-la-distribución-valor-central-y-dispersión" class="nav-link active" data-scroll-target="#forma-de-la-distribución-valor-central-y-dispersión"><span class="header-section-number">3.1</span> Forma de la distribución, valor central y dispersión</a>
   <ul class="collapse">
-  <li><a href="#histograma" id="toc-histograma" class="nav-link" data-scroll-target="#histograma"><span class="header-section-number">3.1.1</span> Histograma</a></li>
-  <li><a href="#diagrama-de-puntos" id="toc-diagrama-de-puntos" class="nav-link" data-scroll-target="#diagrama-de-puntos"><span class="header-section-number">3.1.2</span> Diagrama de puntos</a></li>
-  <li><a href="#boxplot" id="toc-boxplot" class="nav-link" data-scroll-target="#boxplot"><span class="header-section-number">3.1.3</span> Boxplot</a></li>
+  <li><a href="#histograma" id="toc-histograma" class="nav-link" data-scroll-target="#histograma">Histograma</a></li>
+  <li><a href="#diagrama-de-puntos" id="toc-diagrama-de-puntos" class="nav-link" data-scroll-target="#diagrama-de-puntos">Diagrama de puntos</a></li>
+  <li><a href="#boxplot" id="toc-boxplot" class="nav-link" data-scroll-target="#boxplot">Boxplot</a></li>
   </ul></li>
   <li><a href="#evolución" id="toc-evolución" class="nav-link" data-scroll-target="#evolución"><span class="header-section-number">3.2</span> Evolución</a>
   <ul class="collapse">
@@ -362,7 +362,7 @@ window.Quarto = {
 </header>
 
 
-<p>Empezamos planteando un reto: El dueño de una panadería sospecha que las barras de pan que está vendiendo tienen un peso demasiado variable, de forma que algunas pueden estar por debajo del límite que marca la ley. El pan se elabora en dos máquinas que son utilizadas por dos operarios, uno por la mañana y otro por la tarde. La tabla <span class="quarto-unresolved-ref">?tbl-panaderia</span> contiene los pesos (en gramos) de las muestras que se han ido recogiendo durante 20 días.</p>
+<p>Empezamos planteando un reto: la <a href="#tbl-Panaderia">Tabla 3.1</a> contiene los pesos de una muestra de las barras de pan producidas en una panadería. El pan es elaborado en dos máquinas que son utilizadas por dos operarios, uno por la mañana y otro por la tarde. El peso debe ser de <span class="math inline">\(220 \pm 10\)</span> g. ¿Observa algún problema? Si lo hay, ¿qué se debería hacer para resolverlo?</p>
 <div id="tbl-Panaderia" class="tabla-wrapper42 anchored">
 
 <table class="tabla-0301 caption-top table">
@@ -520,198 +520,562 @@ window.Quarto = {
 <td>215,9</td>
 <td>212,9</td>
 </tr>
+<tr class="odd">
+<td>11</td>
+<td>A</td>
+<td>219,1</td>
+<td>218,9</td>
+<td>220.6</td>
+<td>219,5</td>
+<td>&nbsp;</td>
+<td>218,0</td>
+<td>223,5</td>
+<td>216,9</td>
+<td>213,4</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>B</td>
+<td>223,0</td>
+<td>219,6</td>
+<td>217,9</td>
+<td>216,7</td>
+<td>&nbsp;</td>
+<td>216,0</td>
+<td>214,2</td>
+<td>221,6</td>
+<td>213,1</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>A</td>
+<td>221,1</td>
+<td>222,4</td>
+<td>219,6</td>
+<td>218,8</td>
+<td>&nbsp;</td>
+<td>206,5</td>
+<td>212,5</td>
+<td>212,0</td>
+<td>210,3</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>A</td>
+<td>224,3</td>
+<td>219,5</td>
+<td>218,4</td>
+<td>220,6</td>
+<td>&nbsp;</td>
+<td>212,1</td>
+<td>210,6</td>
+<td>211,0</td>
+<td>208,2</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>A</td>
+<td>222,2</td>
+<td>219,9</td>
+<td>222,4</td>
+<td>222,7</td>
+<td>&nbsp;</td>
+<td>211,1</td>
+<td>208,2</td>
+<td>209,8</td>
+<td>210,7</td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td>B</td>
+<td>219,2</td>
+<td>213,6</td>
+<td>219,6</td>
+<td>222,5</td>
+<td>&nbsp;</td>
+<td>209,4</td>
+<td>211,0</td>
+<td>210,4</td>
+<td>212,2</td>
+</tr>
+<tr class="odd">
+<td>17</td>
+<td>B</td>
+<td>218,0</td>
+<td>217,3</td>
+<td>213,0</td>
+<td>224,1</td>
+<td>&nbsp;</td>
+<td>209,4</td>
+<td>211,8</td>
+<td>212,7</td>
+<td>212,5</td>
+</tr>
+<tr class="even">
+<td>18</td>
+<td>B</td>
+<td>217,7</td>
+<td>219,9</td>
+<td>221,9</td>
+<td>219,9</td>
+<td>&nbsp;</td>
+<td>211,6</td>
+<td>211,9</td>
+<td>207,9</td>
+<td>212,0</td>
+</tr>
+<tr class="odd">
+<td>19</td>
+<td>A</td>
+<td>217,4</td>
+<td>219,6</td>
+<td>217,9</td>
+<td>222,6</td>
+<td>&nbsp;</td>
+<td>217,7</td>
+<td>215,4</td>
+<td>214,9</td>
+<td>216,5</td>
+</tr>
+<tr class="even">
+<td>20</td>
+<td>A</td>
+<td>216,1</td>
+<td>220,4</td>
+<td>224,5</td>
+<td>222,2</td>
+<td>&nbsp;</td>
+<td>214,3</td>
+<td>221,4</td>
+<td>213,4</td>
+<td>215,0</td>
+</tr>
 </tbody>
 </table>
 
 </div>
-<p>El peso debe ser de 210 <span class="math inline">\(\pm\)</span> 10 g. Las preguntas que nos planteamos son: ¿Existe algún problema? ¿Qué está pasando? ¿qué hay que hacer para resolver el problema, si es que existe?</p>
-<p>Si trata de sacar conclusiones mirando los números seguramente se equivocará. Aunque en este caso solo hay 160 valores, analizarlos “a ojo” siempre es arriesgado. Tampoco es una buena idea empezar calculado medias y desviaciones típicas o, peor todavía, emnpezar planteando test estadísticos más o menos sofisticados.</p>
-<p>Cuando queremos analizar datos, lo primero que siempre conviene hacer es representarlos gráficamente. Así tenemos una primera idea –muchas veces ya suficiente– de lo que está pasando.</p>
-<p>En la figura +++++ por máquina y operario.</p>
-<p><img src="representacionesGraficas/histogramaPanaderia.png" id="fig-panaderia" class="img-fluid quarto-figure quarto-figure-center anchored" style="width:90.0%" alt="Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos"> Moraleja: +++++++++++++</p>
-<section id="forma-de-la-distribución-valro-central-y-dispersión" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="forma-de-la-distribución-valro-central-y-dispersión"><span class="header-section-number">3.1</span> Forma de la distribución, valro central y dispersión</h2>
-<p>El tipo de gráfico que hemos usado para analizar los datos de la panadería</p>
-<section id="histograma" class="level3" data-number="3.1.1">
-<h3 data-number="3.1.1" class="anchored" data-anchor-id="histograma"><span class="header-section-number">3.1.1</span> Histograma</h3>
-<p>Número de intervalos</p>
-<p>Números redondos, al marcar los ejes y en la anchura de los intervalos</p>
-<p>Si hay valro objetivo y límites es una buena idea ponerlos.</p>
-<p>No hay que esperar que cuando proviene de una distribución normal tengan formade campana</p>
-</section>
-<section id="diagrama-de-puntos" class="level3" data-number="3.1.2">
-<h3 data-number="3.1.2" class="anchored" data-anchor-id="diagrama-de-puntos"><span class="header-section-number">3.1.2</span> Diagrama de puntos</h3>
-<p>texto</p>
-</section>
-<section id="boxplot" class="level3" data-number="3.1.3">
-<h3 data-number="3.1.3" class="anchored" data-anchor-id="boxplot"><span class="header-section-number">3.1.3</span> Boxplot</h3>
-<p>texto</p>
-<div style="font-size:13px">
-<table class="table">
+<p>Si trata de sacar conclusiones solo mirando los números es fácil que se equivoque. Aunque solo hay 160 valores, analizarlos “a ojo” siempre es arriesgado. Tampoco es una buena idea empezar calculando medias y desviaciones típicas o, peor todavía, empezar planteando test estadísticos más o menos sofisticados.</p>
+<p>Después de valorar la calidad de los datos, es decir, de reflexionar sobre si son representativos del conjunto sobre el que se pretende sacar conclusiones, lo primero que conviene hacer es representarlos gráficamente. De esta manera tenemos una primera idea –muchas veces ya suficiente– de lo que está pasando. También podemos detectar posibles valores anómalos (en nuestro ejemplo no los hay) que si pasan desapercibidos pueden alterar completamente las conclusiones finales.</p>
+<p>En la <a href="#fig-histoPanaderia" class="quarto-xref">Figura&nbsp;<span>3.1</span></a> tenemos los histogramas de nuestros datos separados primero por máquina y después por operario. Siempre es una buena idea analizar los datos según su origen. También habíamos construido histogramas específicos para los datos de cada operario en cada máquina ya que el problema podría estar concentrado en el uso que uno de los operarios hace de una de las máquinas, pero vimos que esto no ocurre.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Analizar los datos separándolos según su origen
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Cuando se busca la causa de un problema siempre conviene analizar los datos separándolos según su procedencia, por si el problema se concentra en un origen concreto. Pero esto solo es posible si los datos se han recogido teniendo en cuenta ese interés. Si en la panadería se hubieran anotado únicamente los pesos, sin identificar su origen, sería imposible comparar las máquinas y, por tanto, descubrir el origen del problema.</p>
+</div>
+</div>
+<p>Lo que nuestros gráficos indican es que la máquina 2 está desajustada: está fabricando aproximadamente en torno a 215 g cuando debería hacerlo en torno a 220. Sobre el peso de las unidades de la máquina 1 no hay objeciones. Respecto a los operarios, aunque –como es natural– sus histogramas no son iguales, no se observa ninguna diferencia que sugiera un comportamiento distinto.</p>
+<p>En resumen: habría que ajustar la máquina 2 para que -en promedio- dé el peso objetivo. Respecto a la máquina 1 y a los operarios, no aparece ninguna información relevante.</p>
+<div id="fig-histoPanaderia" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-histoPanaderia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras/f0301_histogramaPanaderia.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-histoPanaderia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3.1: Histogramas de los datos recogidos en una panadería estratificados por máquina y por operario.
+</figcaption>
+</figure>
+</div>
+<section id="forma-de-la-distribución-valor-central-y-dispersión" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="forma-de-la-distribución-valor-central-y-dispersión"><span class="header-section-number">3.1</span> Forma de la distribución, valor central y dispersión</h2>
+<p>Cuando el interés se centra en conocer la forma que presenta la distribución (si es simétrica, bimodal, …), el gráfico de uso más habitual es el histograma, aunque cuando se tienen pocos datos es preferible usar diagramas de puntos.</p>
+<p>Una alternativa a los histogramas son los boxplots, que permiten resumir en poco espacio la información más relevante de grandes volúmenes de datos, destacando de forma explícita los posibles valores anómalos.</p>
+<section id="histograma" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="histograma">Histograma</h3>
+<p>En la <a href="#tbl-Tabulacion">Tabla 3.1</a> están tabulados los valores obtenidos en la máquina 1. El histograma es la representación gráfica de esa tabla y, por lo general, se construye a partir de las frecuencias absolutas. No obstante, cuando se comparan situaciones con distinto número de datos, puede resultar más adecuado emplear frecuencias relativas o porcentajes. El aspecto del histograma no cambia al pasar de un tipo de frecuencia a otro; únicamente se modifica la escala vertical.</p>
+<div id="tbl-Tabulacion" ;="" class="tabla-wrapper42 anchored">
+
+<table class="tabla-0302 caption-top table">
+<caption>Tabla 3.2: Tabulación de los valores obtenidos en la máquina 1.</caption>
 <colgroup>
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
 </colgroup>
+<thead>
+<tr class="header">
+<th rowspan="2" data-quarto-table-cell-role="th" style="text-align: center; vertical-align: middle;">Pesos</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; vertical-align: middle;">Frecuencia</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; vertical-align: middle;">Frecuencia</th>
+<th rowspan="2" data-quarto-table-cell-role="th" style="text-align: center; vertical-align: middle;">Porcentaje</th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">absoluta (<em>n</em>)</th>
+<th data-quarto-table-cell-role="th">absoluta (<em>f</em>)</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">
-<p>
-<em>Orden</em><br> <strong>Valores</strong>
-</p>
-</td>
-<td style="text-align: center;">
-<p>
-<em>1</em><br> <strong>5</strong>
-</p>
-</td>
-<td style="text-align: center;">
-<p>
-<em>2</em><br> <strong>7</strong>
-</p>
-</td>
-<td style="text-align: center;">
-<p>
-<em>3</em><br> <strong>7</strong>
-</p>
-</td>
-<td style="text-align: center;">
-<p>
-<em>4</em><br> <strong>9</strong>
-</p>
-</td>
-<td style="text-align: center;">
-<p>
-<em>5</em><br> <strong>9</strong>
-</p>
-</td>
-<td style="text-align: center;">
-<p>
-<em>6</em><br> <strong>9</strong>
-</p>
-</td>
-<td style="text-align: center;">
-<p>
-<em>7</em><br> <strong>9</strong>
-</p>
-</td>
-<td style="text-align: center;">
-<p>
-<em>8</em><br> <strong>9</strong>
-</p>
-</td>
-<td style="text-align: center;">
-<p>
-<em>9</em><br> <strong>9</strong>
-</p>
-</td>
-<td style="text-align: center;">
-<p>
-<em>10</em><br> <strong>9</strong>
-</p>
-</td>
-<td style="text-align: center;">
-<p>
-<em>11</em><br> <strong>10</strong>
-</p>
-</td>
-<td style="text-align: center;">
-<p>
-<em>12</em><br> <strong>11</strong>
-</p>
-</td>
-<td style="text-align: center;">
-<p>
-<em>13</em><br> <strong>11</strong>
-</p>
-</td>
-<td style="text-align: center;">
-<p>
-<em>14</em><br> <strong>11</strong>
-</p>
-</td>
-<td style="text-align: center;">
-<p>
-<em>15</em><br> <strong>11</strong>
-</p>
-</td>
-<td style="text-align: center;">
-<p>
-<em>16</em><br> <strong>11</strong>
-</p>
-</td>
-<td style="text-align: center;">
-<p>
-<em>17</em><br> <strong>14</strong>
-</p>
-</td>
-<td style="text-align: center;">
-<p>
-<em>18</em><br> <strong>15</strong>
-</p>
-</td>
-<td style="text-align: center;">
-<p>
-<em>19</em><br> <strong>16</strong>
-</p>
-</td>
-<td style="text-align: center;">
-<p>
-<em>20</em><br> <strong>18</strong>
-</p>
-</td>
+<td>&gt;212 - 214</td>
+<td>2</td>
+<td>0,025</td>
+<td>2,5</td>
+</tr>
+<tr class="even">
+<td>&gt;214 - 216</td>
+<td>7</td>
+<td>0,0875</td>
+<td>8,75</td>
+</tr>
+<tr class="odd">
+<td>&gt;216 - 218</td>
+<td>12</td>
+<td>0,15</td>
+<td>15</td>
+</tr>
+<tr class="even">
+<td>&gt;218 - 220</td>
+<td>23</td>
+<td>0,2875</td>
+<td>28,75</td>
+</tr>
+<tr class="odd">
+<td>&gt;220 - 222</td>
+<td>16</td>
+<td>0,02</td>
+<td>20</td>
+</tr>
+<tr class="even">
+<td>&gt;222 - 224</td>
+<td>12</td>
+<td>0,015</td>
+<td>15</td>
+</tr>
+<tr class="odd">
+<td>&gt;224 - 226</td>
+<td>7</td>
+<td>0,0875</td>
+<td>8,75</td>
+</tr>
+<tr class="even">
+<td>&gt;226 - 228</td>
+<td>1</td>
+<td>0,0125</td>
+<td>1,25</td>
+</tr>
+<tr class="odd">
+<td>Total</td>
+<td><em>N</em> = 80</td>
+<td>1</td>
+<td>100</td>
 </tr>
 </tbody>
 </table>
+
 </div>
-<p>texto deduciendo los valores de la mediana y los cuartiles. Podría poner antes el rango intercuartílico.</p>
-<div id="fig-boxplot" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<p>Los histogramas se construyen para variables continuas (las que pueden tomar cualquier valor dentro de un intervalo: peso, longitud, tiempo,…) de forma que cuando acaba una barra empieza otra, sin espacio entre ellas.</p>
+<p>Si la variable es discreta (solo toma valores concretos: número de hijos por familia, número de pedidos que se reciben cada día, …) hablamos de diagrama de barras. En este caso se levanta una barra sobre cada uno de los valores posibles (o grupos de ellos) y las barras pueden no tocarse.</p>
+<p>Algunos aspectos a considerar en la construcción de los histogramas son:</p>
+<ul>
+<li><p>Conviene tener unos <strong>25 datos como mínimo</strong>. Con menos datos no es capaz de reflejar de forma adecuada la información relevante.</p></li>
+<li><p>Existen fórmulas para orientar en la selección del <strong>número de intervalos</strong> (<span class="math inline">\(h\)</span>) en función del número de datos (<span class="math inline">\(N\)</span>). La más sencilla es <span class="math inline">\(h=\sqrt{N}\)</span>, aunque no interesa tener menos de 5 ni suelen ser necesarios más de 15. En cualquier caso, lo más importante es que la escala del eje horizontal, así como los extremos y la anchura de los intervalos sean números redondos, fáciles de leer y de interpretar. Esta tarea no la suelen hacer bien los paquetes de software y conviene editar el gráfico o hacer uso de las opciones disponibles para colocar los valores que interesan.</p></li>
+<li><p>Cuando se construyen tablas de frecuencia o histogramas siempre surge la duda de a qué intervalo asignar los <strong>valores frontera</strong>. La respuesta es que no importa, solo hay que ser coherente y usar el mismo criterio en todos los intervalos. Nosotros hemos asignado los valores frontera al extremo superior, tal como lo hace por defecto el programa R. Si con los mismos datos, misma anchura de intervalo, mismos valores de los extremos, en fin, todo igual, hacemos el histograma con Minitab<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, sale distinto. La razón es que Minitab asigna los valores frontera al extremo inferior.</p></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>La forma del histograma no es única.
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Fijando las escalas de los ejes, la forma del histograma depende de la anchura que se elija para los intervalos y también del punto en que se empiezan a construir. Si decidimos que la anchura sea igual a 2, el perfil del histograma no será el mismo si los extremos son 0, 2, 4, 6,.. que si son 1, 3, 5, 7,… Aún así, si tenemos suficientes datos, aunque el perfil cambie, la impresión que dará será la misma.</p>
+</div>
+</div>
+<p>Un último comentario sobre los histogramas: no hay que esperar que cuando provienen de una distribución Normal su perfil sea simétrico y con la típica forma de campana. Eso hay que esperar cuando se tienen muchos datos (pongamos que más de 1000), pero no cuando se tienen 50 o 100. Lo volveremos a comentar con ejemplos gráficos cuando hablemos de la distribución Normal.</p>
+<div id="tbl-ProsCons" ;="" class="tabla-wrapper34 anchored">
+
+<table class="tabla-ProsCons caption-top table">
+<caption>Tabla 3.3: Histograma. Pros y contras</caption>
+<colgroup>
+<col style="width: 10%">
+<col style="width: 90%">
+</colgroup>
+<tbody>
+<tr class="odd" style="border-top: 1px solid #dee2e6; border-bottom: 1px solid #dee2e6;">
+<td style="text-align: center; padding: 22px 0px 8px 0px; vertical-align: top;"><!-- top right bottom left -->
+<div style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+<strong>PROS</strong> <span class="fa-solid fa-thumbs-up fa-xl" style="color: #0ca701;"></span>
+</div></td>
+<td style="padding: 12px 15px 8px 0px; vertical-align: top"><ul>
+<li>Da una visión de la forma de la distribución, del valor en torno al que se mueven los datos y de su dispersión.</li>
+<li>Si se añaden las tolerancias y el valor objetivo, ayuda a valorar como está saliendo la producción en procesos industriales.</li>
+</ul></td>
+</tr>
+<tr class="even" style="border-top: 1px solid #dee2e6; border-bottom: 1px solid #dee2e6;">
+<td style="text-align: center; padding: 22px 0px 8px 0px; vertical-align: top;"><div style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+<strong>CONS</strong> <span class="fa-solid fa-thumbs-down fa-xl" style="color: #f03333; "></span>
+</div></td>
+<td style="padding: 12px 15px 8px 0px; vertical-align: top"><ul>
+<li>No es útil si se tienen pocos datos.</li>
+<li>Su aspecto depende del número de intervalos y de los valores en que están situados.</li>
+<li>No informa sobre posibles tendencias o evolución de los datos.</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</section>
+<section id="diagrama-de-puntos" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="diagrama-de-puntos">Diagrama de puntos</h3>
+<p>Cuando se tienen pocos datos, y especialmente cuando se trata de comparar los de varios grupos, los diagramas de puntos son una herramienta clara y sencilla. Basta construir una escala y colocar cada valor donde le corresponde. Naturalmente, si se comparan varios grupos la escala debe ser la misma para todos ellos.</p>
+<p>Se puede pensar que si se tienen pocos datos no vale la pena representarlos gráficamente, pero los gráficos siempre ayudan a ver de forma más clara los resultados obtenidos y también a detectar posibles valores anómalos, si los hay.</p>
+<p>Observe los siguientes valores que podrían corresponder a los resultados obtenidos con dos tratamientos, A y B:</p>
+<table class="tabla-03sn1 caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Grupo A:</td>
+<td>14,0</td>
+<td>16,0</td>
+<td>14,5</td>
+<td>13,9</td>
+<td>15,3</td>
+<td>12,9</td>
+<td>14,7</td>
+<td>15,1</td>
+<td>15,9</td>
+<td>13,5</td>
+</tr>
+<tr class="even">
+<td>Grupo B:</td>
+<td>17,9</td>
+<td>17,3</td>
+<td>17,3</td>
+<td>15,4</td>
+<td>16,3</td>
+<td>16,9</td>
+<td>17,8</td>
+<td>17,6</td>
+<td>15,7</td>
+<td>16,6</td>
+</tr>
+</tbody>
+</table>
+<p>Seguramente solo mirando los números ya se dará cuenta de que en el grupo B los valores son más altos, pero la situación queda mucho más clara a la vista del diagrama de puntos (<a href="#fig-dotplot" class="quarto-xref">Figura&nbsp;<span>3.2</span></a>).</p>
+<div id="fig-dotplot" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-boxplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="representacionesGraficas/boxplot.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<div aria-describedby="fig-dotplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras/f0302_dotplot.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-boxplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;3.1: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dotplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3.2: Diagramas de puntos para comparar los resultados de dos tratamientos.
 </figcaption>
 </figure>
 </div>
-<p>texto</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="representacionesGraficas/boxplotEstratificado1.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Hola</figcaption>
-</figure>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<div id="fig-boxplotEstra" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>¿Qué aportaría un test estadístico formal?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A la vista de estos diagramas de puntos estamos prácticamente seguros de que el nivel de respuesta con el tratamiento B es mayor que con el A. No hace falta realizar análisis más sofisticados para llegar a esa conclusión. Cuando a la vista del gráfico hay dudas, un test estadístico formal no las aclara, simplemente les asigna un valor numérico (una probabilidad) relacionado con la discrepancia observada. Ese valor ayuda a decidir si nos inclinamos a considerar que hay diferencias o que no las hay. Tratamos este tema con más detalle en el capítulo 8.</p>
+</div>
+</div>
+<div id="tbl-ProsCons" ;="" class="tabla-wrapper34 anchored">
+
+<table class="tabla-ProsCons caption-top table">
+<caption>Tabla 2.3: Mediana. Pros y contras</caption>
+<colgroup>
+<col style="width: 10%">
+<col style="width: 90%">
+</colgroup>
+<tbody>
+<tr class="odd" style="border-top: 1px solid #dee2e6; border-bottom: 1px solid #dee2e6;">
+<td style="text-align: center; padding: 8px 0px 8px 0px; vertical-align: top;"><!-- top right bottom left -->
+<div style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+<strong>PROS</strong> <span class="fa-solid fa-thumbs-up fa-xl" style="color: #0ca701;"></span>
+</div></td>
+<td style="padding: 12px 15px 8px 0px; vertical-align: top"><ul>
+<li>Especialmente útil para comparar situaciones con pocos datos.</li>
+<li>Es fácil de construir --incluso a mano-- y de interpretar.</li>
+</ul></td>
+</tr>
+<tr class="even" style="border-top: 1px solid #dee2e6; border-bottom: 1px solid #dee2e6;">
+<td style="text-align: center; padding: 8px 0px 8px 0px; vertical-align: top;"><div style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+<strong>CONS</strong> <span class="fa-solid fa-thumbs-down fa-xl" style="color: #f03333; "></span>
+</div></td>
+<td style="padding: 18px 15px 24px 0px; vertical-align: top"><ul>
+<li>Hay alternativas mejores cuando se tienen muchos datos.</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</section>
+<section id="boxplot" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="boxplot">Boxplot</h3>
+<p>Capta los aspectos más relevantes de grandes volúmenes de datos: valor central, simetría y dispersión, destacando de forma individual cada uno de los valores que se podrían considerar anómalos.</p>
+<p>Su interpretación exige recordar algunas de las medidas que definimos en el capítulo anterior. Vamos a construir uno paso a paso usando un sencillo conjunto de 15 valores que ya presentamos ordenados:</p>
+<table class="tabla-03sn2 caption-top table">
+<tbody>
+<tr class="odd">
+<td><em>1</em></td>
+<td><em>2</em></td>
+<td><em>3</em></td>
+<td><em>4</em></td>
+<td><em>5</em></td>
+<td><em>6</em></td>
+<td><em>7</em></td>
+<td><em>8</em></td>
+<td><em>9</em></td>
+<td><em>10</em></td>
+<td><em>11</em></td>
+<td><em>12</em></td>
+<td><em>13</em></td>
+<td><em>14</em></td>
+<td><em>15</em></td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>17</td>
+<td>24</td>
+<td>27</td>
+<td>27</td>
+<td>30</td>
+<td>31</td>
+<td>32</td>
+<td>33</td>
+<td>35</td>
+<td>39</td>
+<td>39</td>
+<td>50</td>
+<td>60</td>
+<td>62</td>
+</tr>
+</tbody>
+</table>
+<p>Empezamos calculando los siguientes valores:</p>
+<ul>
+<li><p>Mediana (<span class="math inline">\(Me\)</span>). Como tenemos 15 valores, la mediana será el que queda en la posición 8, por tanto: <span class="math inline">\(Me = 32\)</span>.</p></li>
+<li><p>Cuartiles (<span class="math inline">\(Q_1\)</span> y <span class="math inline">\(Q_3\)</span>). Primero identificamos la posición (<span class="math inline">\(P\)</span>) y después calculamos los valores. Como en este caso la posición nos da números enteros no hace falta interpolar. <span class="math display">\[P_{Q_1}=0,25(n+1) = 4  \rightarrow Q_1 = 27\]</span> <span class="math display">\[P_{Q_3}=0,75(n+1) = 12  \rightarrow Q_3 = 39\]</span></p></li>
+<li><p>Rango intercuartílico: <span class="math inline">\(IQR = Q_3 - Q_1 = 39 -27 = 12\)</span></p></li>
+<li><p>Valores frontera (<span class="math inline">\(F_1\)</span> y <span class="math inline">\(F_3\)</span>): Marcan el inicio de la zona de anomalías y se sitúan a una distancia de 1,5 veces el rango intercuartílico a partir de cada cuartil, es decir: <span class="math display">\[F_1 = Q_1 -1,5 \cdot IQR = 9\]</span> <span class="math display">\[F_3 = Q_3 +1,5 \cdot IQR = 57\]</span> Ya podemos construir el boxplot. Tomando como referencia una escala que abarque el rango de variación de nuestros datos, seguimos los siguientes pasos:</p></li>
+</ul>
+<ol type="1">
+<li><p>Construir la caja (rectángulo) cuyos extremos inferior y superior corresponden al valor de los cuartiles <span class="math inline">\(Q_1\)</span> y <span class="math inline">\(Q_3\)</span>. El ancho de la caja no importa. Dentro de la caja se traza una línea correspondiente al valor de la mediana.</p></li>
+<li><p>Colocar las “patas”. La de arriba va desde <span class="math inline">\(Q_3\)</span> hasta la última observación antes de entrar en la zona de anomalías. Esta zona empieza en <span class="math inline">\(F_3 = 57\)</span>. La última observación antes de llegar a 57 es igual a 50 por tanto, hasta ahí llegará la pata superior. El valor frontera en la parte inferior es <span class="math inline">\(F_1 = 9\)</span>, el último valor antes de llegar a 9 es 17 y hasta ahí llega la pata inferior.</p></li>
+<li><p>Añadir los valores anómalos. Se coloca un símbolo, normalmente un asterisco, en el lugar correspondiente de la escala.<br></p></li>
+</ol>
+<div id="fig-boxplotConstruccion" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-boxplotEstra-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="representacionesGraficas/boxplotEstratificado2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<div aria-describedby="fig-boxplotConstruccion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras/f0303_boxplotConstruccion.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-boxplotEstra-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;3.2: Esquema de obtención de la mediana y los cuartiles en un conjunto de 30 datos
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-boxplotConstruccion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3.3: Construcción de un boxplot. Las patas llegan hasta la última observación antes de entrar en la zona de anomalías.
 </figcaption>
 </figure>
 </div>
-<p>texto</p>
-<p>texto</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Otros nombres para el boxplot
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Boxplot se puede traducir por “diagrama de caja”. Para que el nombre incluya la referencia a las patas también se le ha llamado “box-and-whisker plot” y como <em>whisker</em> se traduce como “bigote”, a veces en español se le ha denominado “diagrama de caja y bigotes”. En aras de la brevedad nosotros le llamaremos simplemente boxplot. Meter los bigotes seguramente solo sirve para llamar la atención.</p>
+</div>
+</div>
+<p>Volvamos a los datos de la panadería. En la <a href="#fig-boxplotPanaderia" class="quarto-xref">Figura&nbsp;<span>3.4</span></a> comparamos los pesos de cada máquina y de cada operario usando boxplots. Igual que en los histogramas, puede verse que la máquina 1 produce en torno al valor objetivo y con una variabilidad que es compatible con las tolerancias establecidas, mientras que la máquina 2 está claramente desajustada. Entre los operarios, tal como habíamos visto, no se aprecia una diferencia relevante.</p>
+<div id="fig-boxplotPanaderia" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-boxplotPanaderia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras/f0304_boxplotPanaderia.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-boxplotPanaderia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3.4: Datos de la panadería. Boxplots para comparar máquinas y operarios.
+</figcaption>
+</figure>
+</div>
+<p>La figura <span class="math inline">\(\ref{boxplotEspeVida}\)</span> muestra la esperanza de vida en 2019 para cada uno de los 196 países del mundo, agrupados según el continente al que pertenecen (datos: Gapminder). En el gráfico de la izquierda, la esperanza de vida de cada país se representa con un punto en la columna correspondiente a su continente. Los puntos se desplazan ligeramente de forma aleatoria en el eje horizontal para evitar la superposición y facilitar la percepción de su densidad.</p>
+<p>A la derecha se muestran los boxplots correspondientes. En un caso como este, ambos tipos de gráfico pueden resultar apropiados. Sin embargo, si el número de datos fuera muy elevado, sería preferible utilizar los boxplots, ya que en el gráfico de puntos los valores acabarían formando masas compactas en las que no sería posible distinguir unos puntos de otros.</p>
+<p>En los boxplots hemos añadido los nombres de los países que aparecen como anomalías en cada continente. En África y en América lo son por tener una esperanza de vida singularmente baja, y en Oceanía, por tenerla alta. Los paquetes de software suelen tener opciones para identificar con facilidad el origen de esos puntos, que muchas veces son los más interesantes.</p>
+<div id="fig-boxplotEspeVida" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-boxplotEspeVida-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras/f0305_boxplotEspeVida.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-boxplotEspeVida-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3.5: Dos formas de representar la esperanza de vida en los 196 países del mundo según el continente al que pertenecen.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>¿Son siempre “anómalos” los valores marcados como anomalías?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Cuando provienen de una distribución Normal (forma de campana simétrica y con la mayoría de observaciones agrupadas en torno al valor central) si un valor aparece como anomalía significa que está bastante más lejos de donde “debería estar” y vale la pena prestarle atención. Si los datos provienen de otro tipo de distribución, como distribuciones asimétricas con cola larga hacia un lado, estos valores pueden ser perfectamente normales y no deberían considerarse anómalos.</p>
+</div>
+</div>
+<div id="tbl-ProsCons" ;="" class="tabla-wrapper34 anchored">
+
+<table class="tabla-ProsCons caption-top table">
+<caption>Tabla 2.3: Mediana. Pros y contras</caption>
+<colgroup>
+<col style="width: 10%">
+<col style="width: 90%">
+</colgroup>
+<tbody>
+<tr class="odd" style="border-top: 1px solid #dee2e6; border-bottom: 1px solid #dee2e6;">
+<td style="text-align: center; padding: 8px 0px 8px 0px; vertical-align: top;"><!-- top right bottom left -->
+<div style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+<strong>PROS</strong> <span class="fa-solid fa-thumbs-up fa-xl" style="color: #0ca701;"></span>
+</div></td>
+<td style="padding: 12px 15px 8px 0px; vertical-align: top"><ul>
+<li>Pueden resumir en poco espacio la información más relevante de grandes volúmenes de datos.</li>
+<li>Muy útiles para comparar varios grupos, especialmente si el número de datos es muy grande.</li>
+</ul></td>
+</tr>
+<tr class="even" style="border-top: 1px solid #dee2e6; border-bottom: 1px solid #dee2e6;">
+<td style="text-align: center; padding: 8px 0px 8px 0px; vertical-align: top;"><div style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+<strong>CONS</strong> <span class="fa-solid fa-thumbs-down fa-xl" style="color: #f03333; "></span>
+</div></td>
+<td style="padding: 18px 15px 24px 0px; vertical-align: top"><ul>
+<li>No se puede deducir con cuantos datos se ha construido y este es un valor relevante para poderlo interpretar adecuadamente.</li>
+<li>Su interpretación no es intuitiva.</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+
+</div>
 </section>
 </section>
 <section id="evolución" class="level2" data-number="3.2">
@@ -760,14 +1124,14 @@ Figura&nbsp;3.2: Esquema de obtención de la mediana y los cuartiles en un conju
 </section>
 <section id="gráficos-de-donut" class="level3" data-number="3.4.2">
 <h3 data-number="3.4.2" class="anchored" data-anchor-id="gráficos-de-donut"><span class="header-section-number">3.4.2</span> Gráficos de donut</h3>
-<p>texto en la figura <a href="#fig-donutPie" class="quarto-xref"><span>3.3</span></a>. Recortar arriba y abajo con programa de manipulación de imágenes.</p>
+<p>texto en la figura <a href="#fig-donutPie" class="quarto-xref"><span>3.6</span></a>. Recortar arriba y abajo con programa de manipulación de imágenes.</p>
 <div id="fig-donutPie" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-donutPie-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="representacionesGraficas/donutPiePoblacion.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-donutPie-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;3.3: Diagrama de donut y de pastel
+Figura&nbsp;3.6: Diagrama de donut y de pastel
 </figcaption>
 </figure>
 </div>
@@ -1028,6 +1392,12 @@ adquisitivo</td>
 </div>
 
 
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p><small>R y Minitab son paquetes de software estadístico.</small><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->

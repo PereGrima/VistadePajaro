@@ -45,10 +45,9 @@ h1, h2, h3, h4, h5, h6 {
 .tabla-ProsCons caption {
   caption-side: top;
   text-align: center;
-  margin-bottom: 0px;
   font-size: 1em;
-  padding: 5px;
-  color: #888 !important;
+  padding-bottom: 5px;
+  color: #666 !important;
 }
 
 /* Compactar listas */
@@ -75,10 +74,9 @@ h1, h2, h3, h4, h5, h6 {
 .tabla-0201 caption {
   caption-side: top;
   text-align: center;
-  margin-bottom: 0px;
-  font-size: 0.97em;
-  padding: 5px;
-  color: #888 !important;
+  font-size: 1em;
+  padding-bottom: 5px;
+  color: #666 !important;
 }
 
 /* EXCEPCIÓN: primera columna */
@@ -125,6 +123,14 @@ h1, h2, h3, h4, h5, h6 {
   border-collapse: collapse;
 }
 
+.tabla-0212 caption {
+  caption-side: top;
+  text-align: center;
+  font-size: 1em;
+  padding-bottom: 5px;
+  color: #666 !important;
+}
+
 .tabla-0212 th {
     font-weight: 400;
     text-align: center;    /* celdas centradas */
@@ -161,6 +167,14 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
 }
 
+.tabla-02Ape2D_1 caption {
+  caption-side: top;
+  text-align: center;
+  font-size: 1em;
+  padding-bottom: 5px;
+  color: #666 !important;
+}
+
 .tabla-02Ape2D_1 td {
   text-align: center;    /* celdas centradas */
   padding: 2px 2px;      /* altura de fila más pequeña */
@@ -178,6 +192,14 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.95em;
   vertical-align: middle;
   border-collapse: collapse;
+}
+
+.tabla-02Ape2D_2_3 caption {
+  caption-side: top;
+  text-align: center;
+  font-size: 1em;
+  padding-bottom: 5px;
+  color: #666 !important;
 }
 
 .tabla-02Ape2D_2_3 th {
@@ -198,35 +220,23 @@ h1, h2, h3, h4, h5, h6 {
   border: none;
 }
 
-.tabla-02Ape2D_2_3 tr {
-  border-bottom: 0.5px solid black;
-  border-top: 0.5px solid black;
-}
-
-tr.total td {
-  border-top: 1px solid black;
-}
-
-/*** Tabla 2. Apendice 2D 1 ***/
-
-.tabla-02Ape2D_1 {
-  margin: auto;
-  width: 55%;
-  max-width: 600px;
-  border-top: 0px solid #d3d3d3;
-  border-bottom: 0px solid #d3d3d3;
-  margin-bottom: 0;
-}
-
 /*** Tabla en 3.1  ***/
 
 .tabla-0301 {
   margin: auto;
-  width: 90%;
+  width: 80%;
   max-width: 600px;
   font-size: 0.97em;
   vertical-align: middle;
   border-collapse: collapse;
+}
+
+.tabla-0301 caption {
+  caption-side: top;
+  text-align: center;
+  font-size: 1em;
+  padding-bottom: 5px;
+  color: #666 !important;
 }
 
 .tabla-0301 th {
@@ -244,15 +254,33 @@ tr.total td {
   text-align: center;    /* celdas centradas */
   padding: 2px 6px;      /* altura de fila más pequeña */
   border: none;
-  line-height: 1;      /* compacta como en LaTeX */
+  line-height: 1.05;      /* compacta como en LaTeX */
 }
 
 .tabla-0301 tr:first-child th {
   border-top: 1px solid #000;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.tabla-0301 tbody tr:nth-child(1) td {
+  padding-top: 6px;
+}
+
+.tabla-0301 tbody tr:nth-child(20) td {
+  padding-bottom: 6px;
 }
 
 .tabla-0301 tbody tr:nth-child(5) td {
-  padding-bottom: 12px;
+  padding-bottom: 10px;
+}
+
+.tabla-0301 tbody tr:nth-child(10) td {
+  padding-bottom: 10px;
+}
+
+.tabla-0301 tbody tr:nth-child(15) td {
+  padding-bottom: 10px;
 }
 
 /* (Opcional) línea final de la tabla */
@@ -260,6 +288,97 @@ tr.total td {
   border-bottom: 1px solid black;
 }
 
+/*** Tabla en 3.2  ***/
+
+.tabla-0302 {
+  margin: auto;
+  width: 75%;
+  max-width: 600px;
+  font-size: 1em;
+  vertical-align: middle;
+  border-collapse: collapse;
+}
+
+.tabla-0302 caption {
+  caption-side: top;
+  text-align: center;
+  font-size: 1em;
+  padding-bottom: 5px;
+  color: #666 !important;
+}
+
+.tabla-0302 th {
+    font-weight: 400;
+    text-align: center;    /* celdas centradas */
+    border: none;
+    padding-top: 3px; 
+    padding-bottom: 3px;      /* altura de fila más pequeña */
+    line-height: 1.1;      /* compacta como en LaTeX */
+    font-size: 1em;
+}
+
+.tabla-0302 td {
+  font-size: 0.95em;      /* equivalente a \footnotesize */
+  text-align: center;    /* celdas centradas */
+  border: none;
+  padding: 2px 6px;      /* altura de fila más pequeña */
+  line-height: 1.1;      /* compacta como en LaTeX */
+}
+
+.tabla-0302 tr:first-child th {
+  border-top: 1px solid #000;
+  padding-top: 4px;
+  padding-bottom: 0px;
+}
+
+.tabla-0302 tr:last-child th {
+  padding-top: 0px;
+  padding-bottom: 4px;
+}
+.tabla-0302 tr:last-child td {
+  border-bottom: 1px solid #000;
+  border-top: 1px solid #000;
+}
+
+/*** Tabla del diagrama de puntos. Sin numeración ***/
+
+.tabla-03sn1 {
+  margin: auto;
+  width: 90%;
+  max-width: 600px;
+  font-size: 1em;
+  border-collapse: collapse;
+  border: none; !important;
+}
+
+.tabla-03sn1 td {
+  border: none !important;
+  line-height: 0.5;    
+}
+
+/*** Tabla del boxplot. Sin numeración ***/
+
+.tabla-03sn2 {
+  margin: auto;
+  width: 90%;
+  max-width: 600px;
+  font-size: 1em;
+  text-align: center;
+  border-collapse: collapse;
+  border: none; !important;
+}
+
+.tabla-03sn2 td {
+  border: none !important;
+  line-height: 0.5;    
+}
+
+.tabla-03sn2 tr:first-child td {
+  border-bottom: 1px solid #000;
+  border-top: 1px solid #000;
+  font-size: 0.85em;
+  color: #666 !important;
+}
 
 /* ======Tabla Wrapper====== */
 
@@ -289,7 +408,6 @@ tr.total td {
   margin-top: 2ex;
 }
 
-
 /* ========================= */
 /*         FIGURAS           */
 /* ========================= */
@@ -300,15 +418,43 @@ tr.total td {
   text-align: center;
 }
 
+.fig-normal1 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  margin-bottom: 0px;
+  font-size: 1em;
+  padding: 5px;
+  color: #666 !important;
+}
+
 .fig-normal2 {
   margin-top: 0.5em;
   margin-bottom: 1.5em;
   text-align: center;
 }
 
+.fig-normal2 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  margin-bottom: 0px;
+  font-size: 1em;
+  padding: 5px;
+  color: #666 !important;
+}
 
+.fig-normal3 {
+  margin-top: 0.75em;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
 
-
+.fig-normal3 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 1em;
+  padding-bottom: 15px;
+  color: #666 !important;
+}
 
 
 

@@ -1,0 +1,16 @@
+# Datos frente a opiniones
+
+Plantearse una pregunta cuya respuesta requiera obtener y analizar datos es, seguramente, la mejor manera de entender de qué trata la estadística. Conviene que la pregunta tenga cierto interés y que no sea de respuesta obvia ni trivial. Mejor aún si ya existe una opinión popular al respecto, pero que no está respaldada por ninguna evidencia objetiva. Para valorar la viabilidad del estudio, antes de empezar conviene tener claro:
+
+-   ¿Qué datos harán falta para responder a la pregunta planteada?
+
+-   ¿Cómo se conseguirán esos datos? ¿Existen? ¿Será fácil obtenerlos en un tiempo razonable?
+
+-   ¿Serán fiables? ¿Están actualizados? ¿Responden exactamente a lo que se quiere saber?
+
+-   ¿Cómo se analizarán esos datos? No hace falta pensar en análisis complicados, pueden ser simples representaciones gráficas.
+
+Desde luego, también hay que abordar la pregunta con espíritu crítico y teniendo claro el significado de los términos que se emplean. Por ejemplo, preguntarse si conducen mejor los hombres que las mujeres (o viceversa) no es una buena pregunta, porque no está claro qué significa «conducir mejor». Podría reformularse preguntándose si tienen más accidentes los hombres que las mujeres, aunque habría que tener en cuenta que los datos disponibles seguramente solo recogen los accidentes graves. Además, sería necesario considerar el número de horas que conducen hombres y mujeres, un dato que probablemente no es fácil de obtener.
+
+Las preguntas pueden dividirse en aquellas que requieren datos que ya existen --aunque puede ser difícil encontrarlos-- y aquellas en las que los datos no existen y hay que obtenerlos, ya sea mediante encuestas o realizando experimentos. Veamos algunas preguntas que pueden ser abordadas en el proceso de aprendizaje.
+

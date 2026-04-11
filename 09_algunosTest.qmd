@@ -1,0 +1,7 @@
+# Algunos test clásicos
+
+Planteamiento de la pregunta de manera clara y concreta
+
+Diseño de la recogida de los datos
+
+Análisis de los resultados (distribución binomial)

@@ -22,49 +22,40 @@ book:
   chapters:
     - index.qmd
     
-    - part: 01_Prologo.qmd
+    - part: 00_Prologo.qmd
       chapters:
-        - 10_INTRODUCCION.qmd
+        - 01_Introduccion.qmd
      
-    - part: 20_DESCRIPTIVA.qmd                  # I ESTADÍSTICA DESCRIPTIVA
+    - part: _01_tapaDescriptiva.qmd                  # I ESTADÍSTICA DESCRIPTIVA
       chapters: 
-        - 21_sintesisNumerica.qmd               # 2. Síntesis numérica de datos
-        - 22_Graficos.qmd                       # 3. Representaciones gráficas
+        - 02_sintesisNumerica.qmd               # 2. Síntesis numérica de datos
+        - 03_Graficos.qmd                       # 3. Representaciones gráficas
         
-    - part: 30_VARIABILIDAD.qmd                 # II DESCRIBIR LO ALEATORIO
+    - part: _02_tapaVariabilidad.qmd                 # II DESCRIBIR LO ALEATORIO
       chapters:
-        - 31_variablesAleatorias.qmd            # 4. Variables aleatorias    
-        - 32_distribucionesProbabilidad.qmd     # 5. Distribuciones de probabilidad
+        - 04_variablesAleatorias.qmd            # 4. Variables aleatorias    
+        - 05_distribucionesProbabilidad.qmd     # 5. Distribuciones de probabilidad
         
-    - part: 40_MUESTRA_POBLACION.qmd            # III DE LA MUESTRA A LA POBLACIÓN
+    - part: _03_tapaMuestraPoblacion.qmd            # III DE LA MUESTRA A LA POBLACIÓN
       chapters: 
-        - 41_muestreo.qmd                       # 6. Muestreo. Encuestas
-        - 42_estimacion.qmd                     # 7. Estimación de características de la población
+        - 06_muestreo.qmd                       # 6. Muestreo. Encuestas
+        - 07_estimacion.qmd                     # 7. Estimación de características de la población
         
-    - part: 50_SIGNIFICATIVO.qmd                # IV ESTADÍSTICAMENTE SIGNIFICATIVO
+    - part: _04_tapaSignificativo.qmd                # IV ESTADÍSTICAMENTE SIGNIFICATIVO
       chapters: 
-        - 51_contrasteHipotesis.qmd             # 8. Contraste de hipótesis
-        - 52_algunosTest.qmd                    # 9. Algunos test clásicos
+        - 08_contrasteHipotesis.qmd             # 8. Contraste de hipótesis
+        - 09_algunosTest.qmd                    # 9. Algunos test clásicos
 
-    - part: 60_CORRELACION.qmd                  # V CORRELACIÓN Y REGRESIÓN
+    - part: _05_tapaCorrelacion.qmd                  # V CORRELACIÓN Y REGRESIÓN
       chapters: 
-        - 61_relacionLineal.qmd                 # 10. Medidas de relación lineal
-        - 62_regreSimple.qmd                    # 11. Regresión simple
-        - 63_regreMultiple.qmd                  # 12. Regresión múltiple
-        
-    - part: EPILOGO.qmd                         # EPÍLOGO
+        - 10_relacionLineal.qmd                 # 10. Medidas de relación lineal
+        - 11_regreSimple.qmd                    # 11. Regresión simple
+        - 12_regreMultiple.qmd                  # 12. Regresión múltiple
+    
+    - part: _06_tapaEpilogo.qmd                  # V CORRELACIÓN Y REGRESIÓN
+      chapters: 
+        - 13_Epilogo.qmd                         # EPÍLOGO
       
-    - part: ORIGEN_DATOS.qmd                    # Origen de los datos
-             
-    - references.qmd                            # Referencias
-
-# Referencias
-biblio-title: "Referencias"
-link-citations: true
-link-bibliography: true
-citations-hover: true         # Solo HTML
-bibliography: references.bib 
-
 # Fuentes ----------------------------
 mainfont: Calibri
 monofont: Verdana

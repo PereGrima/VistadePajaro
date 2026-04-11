@@ -1,0 +1,4 @@
+{.unnumbered}
+
+[@fig-diagramaBarras]
+

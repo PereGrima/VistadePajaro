@@ -26,7 +26,7 @@ book:
       chapters:
         - 01_Introduccion.qmd
      
-    - part: _01_tapaDescriptiva.qmd                  # I ESTADÍSTICA DESCRIPTIVA
+    - part: 01_tapaDescriptiva.qmd                  # I ESTADÍSTICA DESCRIPTIVA
       chapters: 
         - 02_sintesisNumerica.qmd               # 2. Síntesis numérica de datos
         - 03_Graficos.qmd                       # 3. Representaciones gráficas

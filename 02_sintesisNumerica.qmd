@@ -67,7 +67,6 @@ Cuando los datos se presentan tabulados no hay que olvidar que cada uno se repit
 </table>
 </div>
 ```
-
 El valor medio ($\bar{x}$) del número de hijos por famila es igual a:
 
 $$ \bar{x} = \frac{\sum_{i} n_i \, x_i }{N} \:  = \:  1,\!48 $$
@@ -127,7 +126,6 @@ Para cada valor $x_i$ su \textbf{frecuencia relativa}\index{Frecuencia!relativa}
 </table>
 </div>
 ```
-
 ::: callout-note
 ## A veces no está claro cómo se ha calculado la media
 
@@ -211,7 +209,6 @@ El ejecutivo mejor pagado de las empresas cotizadas en la bolsa española en 202
 </table>
 </div>
 ```
-
 ### Moda {.unnumbered}
 
 Dado un conjunto de valores, la moda es el que más se repite. A diferencia de la media y la mediana, puede no ser única y se puede aplicar también a variables cualitativas (no numéricas). Si realizamos un estudio sobre el método de transporte que usan los estudiantes para ir a su escuela, la moda puede ser el autobús o ir andando. No es una medida muy relevante. Siempre aparece en los libros pero rara vez en los resúmenes estadísticos.
@@ -266,7 +263,6 @@ Dado un conjunto de valores, la moda es el que más se repite. A diferencia de l
 </table>
 </div>
 ```
-
 A modo de resumen de este apartado, la figura [-@fig-salariosINE] muestra la distribución de los salarios en España en 2021. Tiene dos "Salarios más frecuentes" (observe que se evita el término "moda", quizá porque se puede prestar a malas interpretaciones). Cuando se da esta circunstancia se dice que la distribución es bimodal. El salario medio es mayor que el mediano porque los salarios muy altos tiran de la media, pero apenas afectan a la mediana.
 
 ![Distribución de los salarios en España en 2021. Fuente: [INE](https://www.ine.es/prensa/ees_2021.pdf)](Figuras/f0201_distribucionSalariosINE.png){#fig-salariosINE .fig-normal1 fig-align="center" width="85%"}
@@ -341,7 +337,6 @@ Es la diferencia entre los valores máximo y mínimo. Si el rango de edades de l
 </table>
 </div>
 ```
-
 ### Desviación media {.unnumbered}
 
 Interesa una medida de dispersión en la que todos los valores tengan algo que decir, tal como ocurre con la media. Con esta idea, una medida de dispersión podría ser el promedio de las distancias de cada valor respecto a la media, pero una de las propiedades de la media es que equilibra esas distancias de manera que el promedio siempre será igual a cero. Si el resultado siempre es el mismo, haya mucha o poca dispersión, está claro que esta medida no nos sirve.
@@ -400,7 +395,6 @@ Existen dos formas de resolver este problema. Una de ellas es usar las distancia
 </table>
 </div>
 ```
-
 ### Varianza {.unnumbered}
 
 ::: callout-note
@@ -465,7 +459,6 @@ El principal problema de la varianza es que sus unidades son el cuadrado de las 
 </table>
 </div>
 ```
-
 #### ¿Se divide por $n$ o por $n-1$? {.unnumbered}
 
 Cuando tenemos un conjunto de datos y nos interesa conocer la varianza de **esos datos** dividimos por el número de los que tenemos, pero aunque esta parece la situación más habitual, no es así. Lo habitual es que nuestro interés no sea tanto conocer la varianza de los datos disponibles como **estimar la varianza de la población** de la cual provienen.
@@ -550,7 +543,6 @@ También se puede llamar desviación estándar, pero no de otra manera, aunque a
 </table>
 </div>
 ```
-
 ### Coeficiente de variación {.unnumbered}
 
 Suponga que tiene delante cuatro gatos con los siguientes pesos: 1,5; 2,0; 6,0 y 6,5 kg. Ahora piense en cuatro vacas cuyos pesos son: 490, 495, 505 y 510 kg. ¿En qué grupo de animales hay más variabilidad? Seguramente pensará que en el de los gatos, donde hay dos bastante canijos y otros dos muy gordos, mientras que verá las vacas prácticamente iguales. Pero si calcula las desviaciones típicas obtendrá:
@@ -616,7 +608,6 @@ Para comparar la variabilidad de conjuntos de datos con valores medios muy disti
 </table>
 </div>
 ```
-
 ## Medidas de posición
 
 Sirven para establecer unas marcas que delimitan zonas en el conjunto ordenado de los datos. Así, dado un valor, al compararlo con esas marcas se sabe a qué zona pertenece, y si está entre los valores mayores o entre los menores.
@@ -696,7 +687,6 @@ Aunque un cuartil es un número y no una zona, a veces se dice que un valor pert
 </table>
 </div>
 ```
-
 ### Percentiles {.unnumbered}
 
 Se usan para identificar la posición de un valor en el conjunto al que pertenece. Si la estatura de un niño está en el percentil del 46% significa que el 46% de aquellos con los que se compara tienen una estatura menor que la suya.
@@ -759,16 +749,13 @@ Los deciles son los percentiles del 10, 20,… , 100%.
 </table>
 </div>
 ```
-
 ## APÉNDICE 2.A: Otras medias {.unnumbered}
 
 #### Media ponderada {.unnumbered}
 
-La media ponderada se realiza cuando no se da el mismo peso a todos los valores. Si en una asignatura se tienen dos notas, 6 y 3, la media aritmética es 4,5, pero si se calcula una media ponderada de manera que la primera tenga el doble de peso que la segunda, el resultado es:
-$$ \bar{x}_p = \frac{2\cdot 6+1 \cdot 3}{3}=5$$
+La media ponderada se realiza cuando no se da el mismo peso a todos los valores. Si en una asignatura se tienen dos notas, 6 y 3, la media aritmética es 4,5, pero si se calcula una media ponderada de manera que la primera tenga el doble de peso que la segunda, el resultado es: $$ \bar{x}_p = \frac{2\cdot 6+1 \cdot 3}{3}=5$$
 
-En general, siendo $x_i$ los valores y $p_i$ los pesos asignados a cada valor, tenemos:
-$$\bar{x}_p = \frac{\sum_i p_i x_i}{\sum_i p_i}$$
+En general, siendo $x_i$ los valores y $p_i$ los pesos asignados a cada valor, tenemos: $$\bar{x}_p = \frac{\sum_i p_i x_i}{\sum_i p_i}$$
 
 #### Media truncada {.unnumbered}
 
@@ -776,27 +763,26 @@ Hemos visto que uno de los problemas de la media aritmética es el de ser muy in
 
 #### Media geométrica {.unnumbered}
 
-La media geométrica ($MG$) de un conjunto de valores $x_1, x_2, \cdots , x_n$ es:
-$$MG = \sqrt[n]{\prod_{i=1}^{n} x_i}$$
+La media geométrica ($MG$) de un conjunto de valores $x_1, x_2, \cdots , x_n$ es: $$MG = \sqrt[n]{\prod_{i=1}^{n} x_i}$$
 
 Se aplica para calcular tasas medias de crecimiento o tasas medias de interés cuanto este varía cada año. Si deposita 1000 € en un banco, el primer año le dan un 2% de interés y el segundo año un 4% no le están dando un promedio del 3%. Al final del segundo año tendrá: $1000 \cdot 1.02 \cdot 1.04 = 1060,8$€. Si el promedio fuera del 3% podría sustituir el interés de cada año por ese valor, pero el resultado no es el mismo: $1000 \cdot 1.03 \cdot 1.03 = 1060,9$€.
 
 Si al interés medio (en tanto por uno) le llamamos $x$ y a $1+x$ lo llamamos factor de expansión, el valor medio de ese factor de expansión será tal que:
 
+```{=tex}
 \begin{equation*} \label{eq1}
-	\begin{split}
-		1000 \cdot (1+x)(1+x) &= 1000\cdot(1+0.02)(1+0.03)\\[5pt]
-		(1+x)^2 &= (1+0.2)(1+0.3)\\[5pt]
-		1+x &= \sqrt{(1+0.2)(1+0.3)}
-	\end{split}
+    \begin{split}
+        1000 \cdot (1+x)(1+x) &= 1000\cdot(1+0.02)(1+0.03)\\[5pt]
+        (1+x)^2 &= (1+0.2)(1+0.3)\\[5pt]
+        1+x &= \sqrt{(1+0.2)(1+0.3)}
+    \end{split}
 \end{equation*}
-
+```
 De donde $x=1.249$, la media geométrica de las tasas anuales.
 
 #### Media armónica {.unnumbered}
 
-Si en un viaje de ida y vuelta realiza la ida a 100 km/h y la vuelta, por el mismo camino, a 120 km/h su velocidad media no es 110 km/h. En efecto, sea $d$ la distancia tanto de ida como de vuelta. El tiempo tardado en la ida es $t_1=d/100$ y en la vuelta $t_2=d/120$ por tanto, la velocidad global será:
-$$ v = \frac{2d}{\frac{d}{100}+\frac{d}{120}} = \frac{2}{\frac{1}{100}+\frac{1}{120}} = 109.1 \text{ km/h} $$
+Si en un viaje de ida y vuelta realiza la ida a 100 km/h y la vuelta, por el mismo camino, a 120 km/h su velocidad media no es 110 km/h. En efecto, sea $d$ la distancia tanto de ida como de vuelta. El tiempo tardado en la ida es $t_1=d/100$ y en la vuelta $t_2=d/120$ por tanto, la velocidad global será: $$ v = \frac{2d}{\frac{d}{100}+\frac{d}{120}} = \frac{2}{\frac{1}{100}+\frac{1}{120}} = 109.1 \text{ km/h} $$
 
 Esto es la media armónica.
 
@@ -812,12 +798,9 @@ Cuando se presenta un informe o un trabajo académico, no es buena idea dar deci
 
 Por otra parte, si se trabaja con valores de una variable continua, un número excesivo de decimales no solo da una información innecesaria sino también incorrecta. Para verlo claro, supongamos que tenemos 7 cajas de fruta con los siguientes pesos, en kg:
 
-$$8.7; \;\; 8.4; \;\; 8.9; \;\; 8.1; \;\; 8.8; \;\; 8.1; \;\; 8.7$$
-Si se introducen estos valores en una calculadora se obtiene: 
-$$ \text{Media} = 8.52857...\text{ kg} \quad \quad  \text{Desv. típica} = 0,33022...\text{ kg}$$
-¿Por qué tantos decimales, además de irrelevantes, son incorrectos? La clave está en que, cuando nos dicen que una caja pesa 8,7 kg, no nos están diciendo que pesa 8,7000000... kg sino que su peso puede ser cualquier valor entre 8,65 y 8,7499... (si fuera 8,75 ya se redondearía a 8,8). Por tanto, no podemos pretender que los resultados de cálculos realizados con estos datos redondeados conduzcan a valores con toda la precisión deseada. 
+$$8.7; \;\; 8.4; \;\; 8.9; \;\; 8.1; \;\; 8.8; \;\; 8.1; \;\; 8.7$$ Si se introducen estos valores en una calculadora se obtiene: $$ \text{Media} = 8.52857...\text{ kg} \quad \quad  \text{Desv. típica} = 0,33022...\text{ kg}$$ ¿Por qué tantos decimales, además de irrelevantes, son incorrectos? La clave está en que, cuando nos dicen que una caja pesa 8,7 kg, no nos están diciendo que pesa 8,7000000... kg sino que su peso puede ser cualquier valor entre 8,65 y 8,7499... (si fuera 8,75 ya se redondearía a 8,8). Por tanto, no podemos pretender que los resultados de cálculos realizados con estos datos redondeados conduzcan a valores con toda la precisión deseada.
 
-En la figura [-@fig-valoresRedondeados] tenemos los valores que podrían corresponder a los pesos reales medidos con mucha precisión (los nuestros son esos mismos valores redondeados con un solo decimal) junto con la media y la desviación típica que podemos considerar como las reales de los pesos de esas cajas. Usando los valores redondeados, los resultados son distintos. El primer decimal sí es el mismo, el segundo cambia, aunque no está muy alejado del verdadero, el tercero ya no tiene nada que ver. 
+En la figura [-@fig-valoresRedondeados] tenemos los valores que podrían corresponder a los pesos reales medidos con mucha precisión (los nuestros son esos mismos valores redondeados con un solo decimal) junto con la media y la desviación típica que podemos considerar como las reales de los pesos de esas cajas. Usando los valores redondeados, los resultados son distintos. El primer decimal sí es el mismo, el segundo cambia, aunque no está muy alejado del verdadero, el tercero ya no tiene nada que ver.
 
 ![Media y desviación típica de los valores sin redondear y redondeados calculados con Excel. Los pesos reales se han generado con la expresión: =8+aleatorio().](Figuras/f0203_valoresRedondeados.png){#fig-valoresRedondeados .fig-normal2 fig-align="center" width="45%"}
 
@@ -837,9 +820,9 @@ Siempre se debe referir al valor inicial. Si el año pasado las naranjas costaba
 
 Las operaciones con porcentajes no son triviales. Hacer un 50% de descuento y después otro 20% no es lo mismo que hacer el 70%. Si el valor inicial era 100 €, en el primer caso queda en 40 € mientras que en el segundo el valor final es de 30 €. Si el IVA es del 21%, vender sin IVA no es hacer un 21% de descuento. A veces se dan situaciones paradójicas: si usted está vendiendo al mismo precio que la competencia puede hacer un 33% de descuento y decir que la competencia está vendiendo un 50% más caro.
 
-Los problemas con porcentajes pueden parecer triviales y no serlo. Uno de los más famosos es la llamada “paradoja de las patatas”: supongamos que tenemos 100 kg de patatas cuyo peso está compuesto por agua en un 99%. Con el paso del tiempo las patatas pierden humedad ¿Cuánto pesarán cuando el porcentaje de humedad sea del 98%?[^20_Patatas].
+Los problemas con porcentajes pueden parecer triviales y no serlo. Uno de los más famosos es la llamada “paradoja de las patatas”: supongamos que tenemos 100 kg de patatas cuyo peso está compuesto por agua en un 99%. Con el paso del tiempo las patatas pierden humedad ¿Cuánto pesarán cuando el porcentaje de humedad sea del 98%?[^02_sintesisnumerica-1].
 
-[^20_Patatas]: <small>Después de secarse sigue habiendo 1 kg de "polvo de patata"; si ese kg es un 2% del total, el total son 50 kg.</small>\
+[^02_sintesisnumerica-1]: <small>Después de secarse sigue habiendo 1 kg de "polvo de patata"; si ese kg es un 2% del total, el total son 50 kg.</small>\
 
 #### Porcentajes y puntos porcentuales {.unnumbered}
 
@@ -914,7 +897,6 @@ El porcentaje global para un colectivo formado por varios grupos puede sugerir u
 </table>
 </div>
 ```
-
 En realidad, han sido las mujeres las que han tenido una mayor proporción de admitidos en los tres departamentos. La clave está en que al departamento que ofrece más plazas se han presentado muchos hombres y pocas mujeres, mientras que ocurre lo contrario en los departamentos en los que se ofrecen menos plazas.
 
 #### Porcentaje ¿de qué? {.unnumbered}
@@ -950,12 +932,9 @@ Vamos a trabajar con un ejemplo suponiendo que conocemos la población completa,
  </table>
 </div>
 ```
-
 La media poblacional ($\mu$), de estos datos es:
 
-$$\mu = \frac{2+6+8+10+10+12}{6}=8$$
-Supongamos que queremos estimar (“hacernos una idea”) el valor ($\mu$), usando una muestra aleatoria de $n = 2$ unidades. En este caso, en el que la población consta solo de 6 unidades, podemos hacer un listado de todas las muestras que pueden resultar al elegir dos unidades al azar. Estas muestras aparecen enumeradas en la siguiente tabla.
-
+$$\mu = \frac{2+6+8+10+10+12}{6}=8$$ Supongamos que queremos estimar (“hacernos una idea”) el valor ($\mu$), usando una muestra aleatoria de $n = 2$ unidades. En este caso, en el que la población consta solo de 6 unidades, podemos hacer un listado de todas las muestras que pueden resultar al elegir dos unidades al azar. Estas muestras aparecen enumeradas en la siguiente tabla.
 
 ```{=html}
 <div id="tbl-Dividir_n-1"; class="tabla-wrapper42">
@@ -1061,26 +1040,19 @@ Supongamos que queremos estimar (“hacernos una idea”) el valor ($\mu$), usan
 </table>
 </div
 ```
-
 Cuando seleccionemos una muestra de dos unidades el resultado será necesariamente alguna de estas 15 posibles combinaciones de dos elementos, con su media $\bar{x}$ correspondiente.
-		
-Decimos que $\bar{x}$ es un estimador insesgado de $\mu$ si el promedio de todas las posibles medias coincide exactamente con la media de la población. Para verificarlo, hagamos el promedio de nuestras 15 posibles medias: 
-		
-$$ \frac{4+5+6+6+7+7+8+8+9+9+9+10+10+11+11}{15}=8 $$
-El promedio coincide con $\mu$. Esto pasa en todos los casos, independientemente del tipo de población o del tamaño de la muestra.
 
-Veamos ahora si el estadístico:
-$$  S_{n}^{2}= \frac{ \sum_{i=1}^{n}{(x_i-\bar{x})^2} }{n} $$
-donde $n$ es el tamaño de la muestra, es un estimador insesgado para la varianza $\sigma_{N}^{2}$, calculada como:
+Decimos que $\bar{x}$ es un estimador insesgado de $\mu$ si el promedio de todas las posibles medias coincide exactamente con la media de la población. Para verificarlo, hagamos el promedio de nuestras 15 posibles medias:
 
-$$  \sigma_{N}^{2}= \frac{ \sum_{i=1}^{N}{(x_i-\mu)^2}}{N} $$ 
-donde $N$ es el tamaño de la población. Queremos saber si el promedio de los valores de $S_{n}^{2}$, para cada una de las posibles muestras, da el valor de $\sigma_{N}^{2}$ y para averiguarlo, en primer lugar vamos a calcular la varianza poblacional:
+$$ \frac{4+5+6+6+7+7+8+8+9+9+9+10+10+11+11}{15}=8 $$ El promedio coincide con $\mu$. Esto pasa en todos los casos, independientemente del tipo de población o del tamaño de la muestra.
 
-$$  \sigma_{N}^{2}= \frac{(2-8)^2+(6-8)^2+(8-8)^2+...+(12-8)^2}{6} = 10.67 $$
-Ahora calculamos la varianza para cada muestra de 2 unidades, con la fórmula:
+Veamos ahora si el estadístico: $$  S_{n}^{2}= \frac{ \sum_{i=1}^{n}{(x_i-\bar{x})^2} }{n} $$ donde $n$ es el tamaño de la muestra, es un estimador insesgado para la varianza $\sigma_{N}^{2}$, calculada como:
 
-$$  S_{n}^{2}= \frac{ (x_1 - \bar{x})^2 + (x_2 - \bar{x})^2 }{2} $$
-obteniéndose los resultados que aparecen en la siguiente tabla:
+$$  \sigma_{N}^{2}= \frac{ \sum_{i=1}^{N}{(x_i-\mu)^2}}{N} $$ donde $N$ es el tamaño de la población. Queremos saber si el promedio de los valores de $S_{n}^{2}$, para cada una de las posibles muestras, da el valor de $\sigma_{N}^{2}$ y para averiguarlo, en primer lugar vamos a calcular la varianza poblacional:
+
+$$  \sigma_{N}^{2}= \frac{(2-8)^2+(6-8)^2+(8-8)^2+...+(12-8)^2}{6} = 10.67 $$ Ahora calculamos la varianza para cada muestra de 2 unidades, con la fórmula:
+
+$$  S_{n}^{2}= \frac{ (x_1 - \bar{x})^2 + (x_2 - \bar{x})^2 }{2} $$ obteniéndose los resultados que aparecen en la siguiente tabla:
 
 ```{=html}
 <div class="tabla-wrapper42">
@@ -1166,18 +1138,6 @@ obteniéndose los resultados que aparecen en la siguiente tabla:
 </table>
 </div
 ```
-
 Veamos si el promedio de las posibles varianzas muestrales coincide con 10,67, que es el valor obtenido para $\sigma_{N}^{2}$.
 
-$$ \bar{S}^2 = \frac{4+9+16+16+25+1+4+4+9+...+1}{15} = 6.4 $$
-No coincide y, por tanto, $S_{n}^{2}$ no es un estimador insesgado de $\sigma_{N}^{2}$. Sin embargo $S_{n-1}^{2}$, definido de la forma:
-$$  S_{n-1}^{2}= \frac{ \sum_{i=1}^{n}{(x_i-\bar{x})^2} }{n-1} $$
-aunque tampoco es un estimador insesgado para $\sigma_{N}^{2}$, sí lo es para $\sigma_{N-1}^{2}$ definido como:
-$$  \sigma_{N-1}^{2}= \frac{ \sum_{i=1}^{N-1}{(x_i-\mu)^2} }{N-1} $$
-Efectivamente, $\sigma_{N-1}^{2}$  tiene el valor:
-$$  \sigma_{N-1}^{2}= \frac{(2-8)^2+(6-8)^2+(8-8)^2+...+(12-8)^2}{6-1} = 12.8 $$
-Y si calculamos $S_{n-1}^{2}$ para cada una de nuestras muestras deberemos aplicar la fórmula:
-$$  S_{n-1}^{2}= \frac{ (x_1 - \bar{x})^2 + (x_2 - \bar{x})^2 }{2-1} = \frac{ (x_1 - \bar{x})^2 + (x_2 - \bar{x})^2 }{1}  $$
-Es decir, que todos los valores de la varianza que aparecen en la tabla anterior quedan ahora multiplicados por dos y, por lo tanto, la media de las varianzas queda también multiplicada por dos, es decir: 
-$$ \bar{S}_{n-1}^{2}= 2\cdot 6.4 = 12.8 $$
-Quizá este resultado sorprenda, y hasta decepcione, porque seguramente lo esperado era que \( S_{n-1}^{2}\) fuera un estimador insesgado de $\sigma_{N}^{2}$ y no de $\sigma_{N-1}^{2}$, pero no hay que preocuparse demasiado. A efectos prácticos es casi lo mismo cuando la población es grande, y  nosotros no vamos a estimar a través de muestras las características de una población de 6 elementos (en nuestro ejemplo esta ha sido una población “de juguete” para entender lo que estábamos haciendo). Cuando estimemos la varianza de una población, se tratará de una población grande, en la que $\sigma_{N}^{2}$ será prácticamente igual a $\sigma_{N-1}^{2}$. En realidad, el caso más frecuente es el de tener poblaciones teóricas (infinitas), en las que es exactamente lo mismo $\sigma_{N}^{2}$ que $\sigma_{N-1}^{2}$.
+$$ \bar{S}^2 = \frac{4+9+16+16+25+1+4+4+9+...+1}{15} = 6.4 $$ No coincide y, por tanto, $S_{n}^{2}$ no es un estimador insesgado de $\sigma_{N}^{2}$. Sin embargo $S_{n-1}^{2}$, definido de la forma: $$  S_{n-1}^{2}= \frac{ \sum_{i=1}^{n}{(x_i-\bar{x})^2} }{n-1} $$ aunque tampoco es un estimador insesgado para $\sigma_{N}^{2}$, sí lo es para $\sigma_{N-1}^{2}$ definido como: $$  \sigma_{N-1}^{2}= \frac{ \sum_{i=1}^{N-1}{(x_i-\mu)^2} }{N-1} $$ Efectivamente, $\sigma_{N-1}^{2}$ tiene el valor: $$  \sigma_{N-1}^{2}= \frac{(2-8)^2+(6-8)^2+(8-8)^2+...+(12-8)^2}{6-1} = 12.8 $$ Y si calculamos $S_{n-1}^{2}$ para cada una de nuestras muestras deberemos aplicar la fórmula: $$  S_{n-1}^{2}= \frac{ (x_1 - \bar{x})^2 + (x_2 - \bar{x})^2 }{2-1} = \frac{ (x_1 - \bar{x})^2 + (x_2 - \bar{x})^2 }{1}  $$ Es decir, que todos los valores de la varianza que aparecen en la tabla anterior quedan ahora multiplicados por dos y, por lo tanto, la media de las varianzas queda también multiplicada por dos, es decir: $$ \bar{S}_{n-1}^{2}= 2\cdot 6.4 = 12.8 $$ Quizá este resultado sorprenda, y hasta decepcione, porque seguramente lo esperado era que ( S\_{n-1}\^{2}) fuera un estimador insesgado de $\sigma_{N}^{2}$ y no de $\sigma_{N-1}^{2}$, pero no hay que preocuparse demasiado. A efectos prácticos es casi lo mismo cuando la población es grande, y nosotros no vamos a estimar a través de muestras las características de una población de 6 elementos (en nuestro ejemplo esta ha sido una población “de juguete” para entender lo que estábamos haciendo). Cuando estimemos la varianza de una población, se tratará de una población grande, en la que $\sigma_{N}^{2}$ será prácticamente igual a $\sigma_{N-1}^{2}$. En realidad, el caso más frecuente es el de tener poblaciones teóricas (infinitas), en las que es exactamente lo mismo $\sigma_{N}^{2}$ que $\sigma_{N-1}^{2}$.

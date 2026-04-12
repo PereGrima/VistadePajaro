@@ -466,7 +466,7 @@ h1, h2, h3, h4, h5, h6 {
   caption-side: bottom;
   text-align: center;
   margin-bottom: 0px;
-  font-size: 1em;
+  font-size: 0.97em;
   padding: 5px;
   color: #666 !important;
 }
@@ -518,7 +518,36 @@ figure:has(img.fig-normal4) > figcaption {
   color: #666 !important;
 }
 
+#fig-fotoflores {
+  margin-top: 2em !important;
+  margin-bottom: 1.5em !important;
+}
 
+#fig-fotoflores figcaption {
+  text-align: center;
+  font-size: 0.97em !important;
+  line-height: 1.3; 
+  padding-top: 0px;
+  margin-bottom: 0px !important;
+  margin-top: -7px !important;
+  padding-bottom: 15px !important;
+  color: #666 !important;
+}
 
+/* Tamaño de TODAS las endnotes (en HTML son .footnotes) */
+.footnotes {
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+/* Espacio entre notas */
+.footnotes li {
+  margin-bottom: 0.3em;
+}
+
+/* Número de la nota (superíndice en el texto) */
+.footnote-ref {
+  font-size: 0.95em;
+}
 
 

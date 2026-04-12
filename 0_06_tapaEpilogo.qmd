@@ -1,4 +1,4 @@
-# EPILOGO
+# EPÍLOGO
 
 El objetivo de la estadística no es hacer tests ni construir tablas de frecuencias, sino diseñar estrategias de recogida y análisis de datos para responder a preguntas que nos planteamos. El motor de todo estudio estadístico es el interés por responder a esas preguntas a partir de datos que reflejen la realidad de forma objetiva.
 

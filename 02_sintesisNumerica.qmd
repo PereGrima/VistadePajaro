@@ -155,8 +155,10 @@ En una población cuyos valores se distribuyen de forma simétrica respecto a su
 ::: callout-note
 ## Distribución de los salarios
 
-El ejecutivo mejor pagado de las empresas cotizadas en la bolsa española en 2023 tuvo unos [ingresos de 23,77 millones de euros](https://elpais.com/economia/negocios/2024-05-04/mi-jefe-cobra-77-veces-mas-que-yo-estas-son-las-empresas-espanolas-con-mayor-desigualdad-salarial-entre-directivos-y-empleados.html). Su empresa tenía ese año 2.299 empleados en España, suponiendo que todos menos él cobraran solo el salario mínimo (15.120 €/año), se podría decir que en promedio cobraron 25.453 €/año, un 68% más de lo que en realidad cobrarían todos menos uno.
+El ejecutivo mejor pagado de las empresas cotizadas en la bolsa española en 2023 tuvo unos ingresos de 23,77 millones de euros[^02_sintesisnumerica-1]. Su empresa tenía ese año 2.299 empleados en España, suponiendo que todos menos él cobraran solo el salario mínimo (15.120 €/año), se podría decir que en promedio cobraron 25.453 €/año, un 68% más de lo que en realidad cobrarían todos menos uno.
 :::
+
+[^02_sintesisnumerica-1]: Ver la noticia [aquí](https://elpais.com/economia/negocios/2024-05-04/mi-jefe-cobra-77-veces-mas-que-yo-estas-son-las-empresas-espanolas-con-mayor-desigualdad-salarial-entre-directivos-y-empleados.html).
 
 ```{=html}
 <div id="tbl-ProsCons"; class="tabla-wrapper34">
@@ -199,7 +201,7 @@ El ejecutivo mejor pagado de las empresas cotizadas en la bolsa española en 202
       </td>
       
        <!-- ✅ SEGUNDA CELDA -->
-      <td style="padding: 18px 15px 24px 0px; vertical-align: top;">
+      <td style="padding: 20px 15px 22px 0px; vertical-align: top;">
         <ul style="margin: 0; padding-left: 18px; line-height: 1.2;">
           <li>No tiene fórmula. No la dan las calculadoras.</li>
         </ul>
@@ -263,9 +265,11 @@ Dado un conjunto de valores, la moda es el que más se repite. A diferencia de l
 </table>
 </div>
 ```
-A modo de resumen de este apartado, la figura [-@fig-salariosINE] muestra la distribución de los salarios en España en 2021. Tiene dos "Salarios más frecuentes" (observe que se evita el término "moda", quizá porque se puede prestar a malas interpretaciones). Cuando se da esta circunstancia se dice que la distribución es bimodal. El salario medio es mayor que el mediano porque los salarios muy altos tiran de la media, pero apenas afectan a la mediana.
+A modo de resumen de este apartado, la [@fig-salariosINE] muestra la distribución de los salarios en España en 2021. Tiene dos "Salarios más frecuentes" (observe que se evita el término "moda", quizá porque se puede prestar a malas interpretaciones). Cuando se da esta circunstancia se dice que la distribución es bimodal. El salario medio es mayor que el mediano porque los salarios muy altos tiran de la media, pero apenas afectan a la mediana.
 
-![Distribución de los salarios en España en 2021. Fuente: [INE](https://www.ine.es/prensa/ees_2021.pdf)](Figuras/f0201_distribucionSalariosINE.png){#fig-salariosINE .fig-normal1 fig-align="center" width="85%"}
+![Distribución de los salarios en España en 2021. Fuente: INE[^02_sintesisnumerica-2].](Figuras/f0201_distribucionSalariosINE.png){#fig-salariosINE .fig-normal1 fig-align="center" width="85%"}
+
+[^02_sintesisnumerica-2]: INE: "[Encuesta Anual de Estructura Salarial. Año 2021](https://www.ine.es/prensa/ees_2021.pdf)"
 
 ## Medidas de dispersión
 
@@ -384,7 +388,7 @@ Existen dos formas de resolver este problema. Una de ellas es usar las distancia
       
        <!-- ✅ SEGUNDA CELDA -->
       <td style="padding: 10px 15px 10px 0px; vertical-align: top;">
-        <ul style="margin: 0; padding-left: 18px; line-height: 1.2;">
+        <ul style="margin: 0; padding-left: 18px; line-height: 1.5;">
           <li>Tiene poco recorrido en la teoría estadística.</li>
           <li>Existe otra medida --la desviación típica-- con más posibilidades de aplicación y mejores propiedades.</li>
         </ul>
@@ -479,7 +483,7 @@ Es la raíz cuadrada de la varianza. En el caso más habitual de tener una muest
 
 La raíz cuadrada hace que sus unidades sean las mismas que las de los datos. El precio a pagar es la pérdida de las propiedades algebraicas que tiene la varianza, por lo que en los desarrollos teóricos es muy habitual que el protagonismo lo tenga esta última.
 
-Entre los muchos méritos de la desviación típica, podemos decir que, junto con la media, forman una pareja perfecta para describir el comportamiento de muchas variables aleatorias. En particular, constituye el \<<ADN>\> de la distribución Normal. Si una variable sigue esta distribución basta conocer su media y su desviación típica para calcular cualquier probabilidad relacionada con los valores que puede tomar. Si el peso de unos paquetes de azúcar sigue una distribución Normal con una media de 1000 g y una desviación típica de 15 g, podemos decir que --en números redondos-- el 95% de los paquetes tendrán un peso comprendido entre 970 y 1030 g, y también que el 68% tendrá un peso comprendido entre 985 y 1015. Además, podríamos responder cualquier pregunta similar, por ejemplo, qué porcentaje de paquetes tendrá un peso por debajo de 980 g (será el 9%).
+Entre los muchos méritos de la desviación típica, podemos decir que, junto con la media, forman una pareja perfecta para describir el comportamiento de muchas variables aleatorias. En particular, constituye el "ADN" de la distribución Normal. Si una variable sigue esta distribución basta conocer su media y su desviación típica para calcular cualquier probabilidad relacionada con los valores que puede tomar. Si el peso de unos paquetes de azúcar sigue una distribución Normal con una media de 1000 g y una desviación típica de 15 g, podemos decir que --en números redondos-- el 95% de los paquetes tendrán un peso comprendido entre 970 y 1030 g, y también que el 68% tendrá un peso comprendido entre 985 y 1015. Además, podríamos responder cualquier pregunta similar, por ejemplo, qué porcentaje de paquetes tendrá un peso por debajo de 980 g (será el 9%).
 
 También destaca su presencia en la estimación del valor de la media poblacional $\mu$. Lo hacemos tomando una muestra de tamaño $n$ y calculando su media $\bar{x}$. El problema es que cada vez que tomemos una muestra, el valor de $\bar{x}$ cambiará, así que, mejor que apostar por un valor concreto, preferimos dar un intervalo de valores razonables para $\mu$. Para calcular ese intervalo necesitamos conocer la variabilidad que presentan los valores de $\bar{x}$. Pues bien, la desviación típica de $\bar{x}$ **siempre** es igual a la desviación típica de la población dividida por $\sqrt{n}$. Esto es verdad para **todas** las distribuciones, no solo para la Normal.
 
@@ -616,7 +620,7 @@ Sirven para establecer unas marcas que delimitan zonas en el conjunto ordenado d
 
 Sabemos que ordenados los datos de menor a mayor, la mediana es el que los separa en dos mitades. Pues bien, conceptualmente (otra cosa es cómo se determina el valor exacto), el primer cuartil ($Q_1$) es la mediana de la primera mitad dejando, por tanto, el 25% de los valores por debajo y el 75% por encima. La mediana de la segunda mitad es el tercer cuartil ($Q_3$), que deja el 75% por debajo y el 25% por encima (figura [-@fig-cuartiles]).
 
-![Situación de la mediana y de los cuartiles en un conjunto de 30 datos.](Figuras/f0202_Cuartiles2.png){#fig-cuartiles .fig-normal2 fig-align="center" width="67%"}
+![Situación de la mediana y de los cuartiles en un conjunto de 30 datos.](Figuras/f0202_Cuartiles2.png){#fig-cuartiles .fig-normal3 fig-align="center" width="67%"}
 
 Si usted conoce la mediana y los cuartiles de los salarios de su empresa, puede situar fácilmente el suyo. Si $Q_1$ es 1.300€, la mediana es 1.500€ y $Q_3$ es 1.800€, entonces, si usted cobra 1.200€ está entre el 25% que menos gana. Si su salario es de 1.600€ está entre la mitad de los que más ganan, pero como mínimo el 25% de los empleados gana más que usted. Si cobra 2.000€ está entre el 25% de los privilegiados que más ganan.
 
@@ -802,7 +806,7 @@ $$8.7; \;\; 8.4; \;\; 8.9; \;\; 8.1; \;\; 8.8; \;\; 8.1; \;\; 8.7$$ Si se introd
 
 En la figura [-@fig-valoresRedondeados] tenemos los valores que podrían corresponder a los pesos reales medidos con mucha precisión (los nuestros son esos mismos valores redondeados con un solo decimal) junto con la media y la desviación típica que podemos considerar como las reales de los pesos de esas cajas. Usando los valores redondeados, los resultados son distintos. El primer decimal sí es el mismo, el segundo cambia, aunque no está muy alejado del verdadero, el tercero ya no tiene nada que ver.
 
-![Media y desviación típica de los valores sin redondear y redondeados calculados con Excel. Los pesos reales se han generado con la expresión: =8+aleatorio().](Figuras/f0203_valoresRedondeados.png){#fig-valoresRedondeados .fig-normal2 fig-align="center" width="45%"}
+![Media y desviación típica de los valores sin redondear y redondeados calculados con Excel. Los pesos reales se han generado con la expresión: =8+aleatorio().](Figuras/f0203_valoresRedondeados.png){#fig-valoresRedondeados .fig-normal3 fig-align="center" width="45%"}
 
 Hemos analizado solo un caso concreto, pero la lógica que hay detrás es fácilmente generalizable.
 
@@ -820,9 +824,9 @@ Siempre se debe referir al valor inicial. Si el año pasado las naranjas costaba
 
 Las operaciones con porcentajes no son triviales. Hacer un 50% de descuento y después otro 20% no es lo mismo que hacer el 70%. Si el valor inicial era 100 €, en el primer caso queda en 40 € mientras que en el segundo el valor final es de 30 €. Si el IVA es del 21%, vender sin IVA no es hacer un 21% de descuento. A veces se dan situaciones paradójicas: si usted está vendiendo al mismo precio que la competencia puede hacer un 33% de descuento y decir que la competencia está vendiendo un 50% más caro.
 
-Los problemas con porcentajes pueden parecer triviales y no serlo. Uno de los más famosos es la llamada “paradoja de las patatas”: supongamos que tenemos 100 kg de patatas cuyo peso está compuesto por agua en un 99%. Con el paso del tiempo las patatas pierden humedad ¿Cuánto pesarán cuando el porcentaje de humedad sea del 98%?[^02_sintesisnumerica-1].
+Los problemas con porcentajes pueden parecer triviales y no serlo. Uno de los más famosos es la llamada “paradoja de las patatas”: supongamos que tenemos 100 kg de patatas cuyo peso está compuesto por agua en un 99%. Con el paso del tiempo las patatas pierden humedad ¿Cuánto pesarán cuando el porcentaje de humedad sea del 98%?[^02_sintesisnumerica-3].
 
-[^02_sintesisnumerica-1]: <small>Después de secarse sigue habiendo 1 kg de "polvo de patata"; si ese kg es un 2% del total, el total son 50 kg.</small>\
+[^02_sintesisnumerica-3]: Después de secarse sigue habiendo 1 kg de "polvo de patata"; si ese kilo es un 2% del total, el total son 50 kg.
 
 #### Porcentajes y puntos porcentuales {.unnumbered}
 

@@ -1,7 +1,9 @@
 # CORRELACIÓN Y REGRESIÓN
 
-Pregunta clara y concreta
+Una de las preguntas que solemos plantearnos es si existe algún tipo de relación entre dos variables, por ejemplo, si en los resultados de las pruebas PISA existe alguna relación entre la nota de matemáticas y la de comprensión lectora. Para responder a esta pregunta lo primero será conseguir los datos de una fuente fiable (en este caso es muy fácil) y representarlos en un diagrama bivariante. Si el resultado está muy claro, ahí se ha acabado el análisis, pero si puede ser discutible, necesitamos medidas que de una manera objetiva midan ese grado de relación. Sobre estas medidas trata el capítulo 10.
 
-Diseño de la recogida de los datos con todas sus vicisitudes.
+Una vez constatada esa relación, nos puede interesar resumirla en la ecuación de una recta que marque la tendencia de la nube de puntos que vemos en el gráfico. Cuando se trata de explicar la relación entre una variable ($X$) que llamamos "independiente" o "regresora" con otra ($Y$) que es la "variable dependiente" o "respuesta" decimos que ajustamos a un modelo de regresión simple, pero si tratamos de explicar esa respuesta usando varias variables regresoras estamos ante un modelo de regresión múltiple.
 
-Análisis de los datos. Prueba no paramétrica y t-Student.
+En la regresión múltiple las cosas se complican, en primer lugar porque la representación gráfica no es posible (con dos variables regresoras se podría usar un gráfico 3D). Además, aunque los paquetes de software estadístico dan los resultados sin pestañear, las cosas no son tan fáciles y hay aspectos poco intuitivos y paradojas que conviene tener presentes. El capítulo 11 lo dedicamos a la regresión simple, y el 12 a la múltiple.
+
+Por cierto, las notas de matemáticas y comprensión lectora obtenidas por cada país en las pruebas PISA están muy relacionadas. Su coeficiente de correlación es  $r$=0,92, con un $p$-valor = 0,000. Vamos a ver lo que esto significa.

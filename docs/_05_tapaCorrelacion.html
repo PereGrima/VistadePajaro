@@ -73,6 +73,35 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -302,9 +331,10 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Pregunta clara y concreta</p>
-<p>Diseño de la recogida de los datos con todas sus vicisitudes.</p>
-<p>Análisis de los datos. Prueba no paramétrica y t-Student.</p>
+<p>Una de las preguntas que solemos plantearnos es si existe algún tipo de relación entre dos variables, por ejemplo, si en los resultados de las pruebas PISA existe alguna relación entre la nota de matemáticas y la de comprensión lectora. Para responder a esta pregunta lo primero será conseguir los datos de una fuente fiable (en este caso es muy fácil) y representarlos en un diagrama bivariante. Si el resultado está muy claro, ahí se ha acabado el análisis, pero si puede ser discutible, necesitamos medidas que de una manera objetiva midan ese grado de relación. Sobre estas medidas trata el capítulo 10.</p>
+<p>Una vez constatada esa relación, nos puede interesar resumirla en la ecuación de una recta que marque la tendencia de la nube de puntos que vemos en el gráfico. Cuando se trata de explicar la relación entre una variable (<span class="math inline">\(X\)</span>) que llamamos “independiente” o “regresora” con otra (<span class="math inline">\(Y\)</span>) que es la “variable dependiente” o “respuesta” decimos que ajustamos a un modelo de regresión simple, pero si tratamos de explicar esa respuesta usando varias variables regresoras estamos ante un modelo de regresión múltiple.</p>
+<p>En la regresión múltiple las cosas se complican, en primer lugar porque la representación gráfica no es posible (con dos variables regresoras se podría usar un gráfico 3D). Además, aunque los paquetes de software estadístico dan los resultados sin pestañear, las cosas no son tan fáciles y hay aspectos poco intuitivos y paradojas que conviene tener presentes. El capítulo 11 lo dedicamos a la regresión simple, y el 12 a la múltiple.</p>
+<p>Por cierto, las notas de matemáticas y comprensión lectora obtenidas por cada país en las pruebas PISA están muy relacionadas. Su coeficiente de correlación es <span class="math inline">\(r\)</span>=0,92, con un <span class="math inline">\(p\)</span>-valor = 0,000. Vamos a ver lo que esto significa.</p>
 
 
 

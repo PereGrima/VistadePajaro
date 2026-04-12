@@ -1,13 +1,9 @@
 # DE LA MUESTRA A LA POBLACIÓN
 
-Lo típico. Como estimar las características de una población a partir de los datos de una muestra.
+Con frecuencia interesa conocer algún aspecto de los elementos de una población, pero  no es posible analizar cada uno de ellos. La principal razón es que resulta económicamente inviable: no se puede preguntar a todos los ciudadanos de un país qué opinan sobre un determinado tema. Sin embargo, sí se puede obtener una muestra representativa de esa población --aunque nunca es fácil hacerlo-- y, a partir de sus resultados, estimar la opinión general. 
 
-Propiedades que deseamos tener en los estimadores
+También hay otras razones que impiden conocer toda la población exhaustivamente, como cuando interesa la resistencia de las piezas de un lote y hay que romper la pieza para medirla. Otras veces la población es un concepto teórico, como cuando ajustamos una máquina y producimos unas piezas para ver como salen: esas piezas son una muestra de las infinitas que se podrían producir en esas condiciones, pero que en realidad no existen.
 
-Estimación de proporciones. Intervalo de confianza, margen de error, etc.
+Estimar el valor de una característica de la población significa obtener un valor aproximado de cuanto vale. Podemos apostar por un valor concreto, un "**estimador puntual**" o podemos dar un intervalo y afirmar que --con un cierto nivel de seguridad-- el valor en la población estará dentro. Es lo que llamamos "**intervalo de confianza**".
 
-Estimación de medias
-
-Estimación del tamaño de una población (peces y taxis)
-
-Anexo: Sondeos electorales.
+En los capítulos de esta parte comentamos algunos aspectos relacionados con la obtención de muestras representativas y veremos la forma de estimar el valor medio o una determinada proporción en una población. Finalmente, alejándonos un poco de los contenidos habituales de los cursos introductorios, comentamos como estimar el tamaño de la población en algunos casos concretos.

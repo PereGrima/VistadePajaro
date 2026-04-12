@@ -1188,5 +1188,65 @@
     "crumbs": [
       "ESTADÍSTICA DESCRIPTIVA"
     ]
+  },
+  {
+    "objectID": "0_01_tapaDescriptiva.html",
+    "href": "0_01_tapaDescriptiva.html",
+    "title": "ESTADÍSTICA DESCRIPTIVA",
+    "section": "",
+    "text": "Captar la información que contienen los datos solo a base de irlos mirando es, desde luego, misión imposible. No hace falta que el conjunto sea muy grande, nuestra mente no es hábil para realizar esa tarea. Cuando miramos un número se nos olvida otro y no somos capaces –aunque nos cueste reconocerlo– de hacernos una idea clara de todos los aspectos relevantes.\nSí somos buenos detectando patrones y analizando imágenes –en esto somos incluso mejores que los ordenadores, que nos piden que interpretemos una imagen para confirmar que somos personas y no máquinas–, por lo que analizar los datos a través de representaciones gráficas es una excelente forma de hacerlo.\nTambién podemos resumir los datos en unos pocos valores que den una buena visión de los aspectos que interesa conocer. Es lo que llamamos síntesis numérica.\nTanto representaciones gráficas como valores de síntesis numérica los hay de varios tipos. Existen gráficos que son adecuados para representar la evolución de una variable, otros para mostrar su dispersión o su relación con otras variables. Respecto a la síntesis numérica hay medidas que fijan su atención en los diferentes aspectos que son de interés, entre los cuales no hay que olvidar la variabilidad.\nEn el siguiente capítulo tratamos la síntesis numérica de datos, dando un repaso a las medidas de mayor interés. A continuación, presentamos los gráficos de uso más habitual, indicando cuáles conviene usar en cada caso y cuáles es mejor evitar.",
+    "crumbs": [
+      "ESTADÍSTICA DESCRIPTIVA"
+    ]
+  },
+  {
+    "objectID": "0_02_tapaVariabilidad.html",
+    "href": "0_02_tapaVariabilidad.html",
+    "title": "DESCRIBIR LO ALEATORIO",
+    "section": "",
+    "text": "Cuando se hacen afirmaciones sobre un todo –la población– analizando solo una parte –una muestra– se debe asumir que los resultados estarán afectados por una cierta variabilidad aleatoria. Es posible que el 30 % de los consultados en una muestra manifiesten su intención de votar a un determinado partido, pero que en otra muestra de las mismas características ese porcentaje sea del 28 o del 33 %.\nPara saber si el uso de un abono aumentará la cosecha no se pueden tomar solo dos plantas, aplicarlo a una de ellas, y si esa produce mayor cosecha considerar que el abono es eficaz. No se puede hacer de esta forma porque dos plantas que han crecido en las mismas condiciones no dan exactamente la misma cosecha. Puede ser que el abono no sea eficaz y que –por causalidad– la planta que lo tiene dé mayor producción. Hay que comparar la diferencia entre la producción de ambas plantas con la variabilidad que presenta la cosecha en las condiciones habituales.\nPor último, todos sabemos que cuando se prueba una vacuna o un nuevo medicamento no se hace con una sola persona (¡que fácil y rápido sería!) porque existe variabilidad entre personas –no todos reaccionamos igual– y eso complica bastante las cosas.\nLa variabilidad y el azar juegan un papel fundamental en los análisis estadísticos. Necesitamos manejar un lenguaje y unos conceptos que nos permitan ordenar las ideas y movernos con seguridad en este terreno. A este tema dedicamos los dos capítulos de esta parte. Lo que se explica son matemáticas que nos serán muy útiles en nuestros razonamientos para sacar conclusiones a partir de los datos disponibles.",
+    "crumbs": [
+      "DESCRIBIR LO ALEATORIO"
+    ]
+  },
+  {
+    "objectID": "0_03_tapaMuestraPoblacion.html",
+    "href": "0_03_tapaMuestraPoblacion.html",
+    "title": "DE LA MUESTRA A LA POBLACIÓN",
+    "section": "",
+    "text": "Con frecuencia interesa conocer algún aspecto de los elementos de una población, pero no es posible analizar cada uno de ellos. La principal razón es que resulta económicamente inviable: no se puede preguntar a todos los ciudadanos de un país qué opinan sobre un determinado tema. Sin embargo, sí se puede obtener una muestra representativa de esa población –aunque nunca es fácil hacerlo– y, a partir de sus resultados, estimar la opinión general.\nTambién hay otras razones que impiden conocer toda la población exhaustivamente, como cuando interesa la resistencia de las piezas de un lote y hay que romper la pieza para medirla. Otras veces la población es un concepto teórico, como cuando ajustamos una máquina y producimos unas piezas para ver como salen: esas piezas son una muestra de las infinitas que se podrían producir en esas condiciones, pero que en realidad no existen.\nEstimar el valor de una característica de la población significa obtener un valor aproximado de cuanto vale. Podemos apostar por un valor concreto, un “estimador puntual” o podemos dar un intervalo y afirmar que –con un cierto nivel de seguridad– el valor en la población estará dentro. Es lo que llamamos “intervalo de confianza”.\nEn los capítulos de esta parte comentamos algunos aspectos relacionados con la obtención de muestras representativas y veremos la forma de estimar el valor medio o una determinada proporción en una población. Finalmente, alejándonos un poco de los contenidos habituales de los cursos introductorios, comentamos como estimar el tamaño de la población en algunos casos concretos.",
+    "crumbs": [
+      "DE LA MUESTRA A LA POBLACIÓN"
+    ]
+  },
+  {
+    "objectID": "0_04_tapaSignificativo.html",
+    "href": "0_04_tapaSignificativo.html",
+    "title": "ESTADÍSTICAMENTE SIGNIFICATIVO",
+    "section": "",
+    "text": "Solemos usar la palabra significativo como sinónimo de relevante, grande o importante. Sin embargo, en el contexto de los análisis estadísticos tiene un significado muy concreto que no tiene nada que ver con esas acepciones. Decimos que una diferencia es estadísticamente significativa cuando no la explica el azar. No importa si es grande o pequeña, si es importante o si no tiene ninguna relevancia. Si la variabilidad aleatoria de los datos no explica esa diferencia, entonces es estadísticamente significativa.\nLo que hacen los test estadísticos es analizar si las diferencias son estadísticamente significativas, porque diferencias siempre las hay. Si en un proceso de envasado tomamos una muestra, seguramente la media de sus pesos no coincidirá exactamente con el valor nominal, pero eso no implica que el proceso esté desajustado. De la misma forma, si a un grupo de pacientes se le administra un nuevo fármaco y a otro grupo similar se le da un placebo, lo más probable es que los resultados no serán idénticos en los dos grupos, aunque el nuevo fármaco sea totalmente ineficaz.\nRealizamos un test estadístico para analizar si la diferencia observada puede ser atribuida a la variabilidad aleatoria que presentan los datos o si es más razonable considerar que existe una causa que la provoca. El test cuantifica el nivel de duda y nos ayuda a tomar una decisión.\nDedicamos esta parte a comentar la filosofía que hay detrás de los test estadísticos y a detallar cómo se realizan los más habituales.",
+    "crumbs": [
+      "ESTADÍSTICAMENTE SIGNIFICATIVO"
+    ]
+  },
+  {
+    "objectID": "0_05_tapaCorrelacion.html",
+    "href": "0_05_tapaCorrelacion.html",
+    "title": "CORRELACIÓN Y REGRESIÓN",
+    "section": "",
+    "text": "Una de las preguntas que solemos plantearnos es si existe algún tipo de relación entre dos variables, por ejemplo, si en los resultados de las pruebas PISA existe alguna relación entre la nota de matemáticas y la de comprensión lectora. Para responder a esta pregunta lo primero será conseguir los datos de una fuente fiable (en este caso es muy fácil) y representarlos en un diagrama bivariante. Si el resultado está muy claro, ahí se ha acabado el análisis, pero si puede ser discutible, necesitamos medidas que de una manera objetiva midan ese grado de relación. Sobre estas medidas trata el capítulo 10.\nUna vez constatada esa relación, nos puede interesar resumirla en la ecuación de una recta que marque la tendencia de la nube de puntos que vemos en el gráfico. Cuando se trata de explicar la relación entre una variable (\\(X\\)) que llamamos “independiente” o “regresora” con otra (\\(Y\\)) que es la “variable dependiente” o “respuesta” decimos que ajustamos a un modelo de regresión simple, pero si tratamos de explicar esa respuesta usando varias variables regresoras estamos ante un modelo de regresión múltiple.\nEn la regresión múltiple las cosas se complican, en primer lugar porque la representación gráfica no es posible (con dos variables regresoras se podría usar un gráfico 3D). Además, aunque los paquetes de software estadístico dan los resultados sin pestañear, las cosas no son tan fáciles y hay aspectos poco intuitivos y paradojas que conviene tener presentes. El capítulo 11 lo dedicamos a la regresión simple, y el 12 a la múltiple.\nPor cierto, las notas de matemáticas y comprensión lectora obtenidas por cada país en las pruebas PISA están muy relacionadas. Su coeficiente de correlación es \\(r\\)=0,92, con un \\(p\\)-valor = 0,000. Vamos a ver lo que esto significa.",
+    "crumbs": [
+      "CORRELACIÓN Y REGRESIÓN"
+    ]
+  },
+  {
+    "objectID": "0_06_tapaEpilogo.html",
+    "href": "0_06_tapaEpilogo.html",
+    "title": "EPILOGO",
+    "section": "",
+    "text": "El objetivo de la estadística no es hacer tests ni construir tablas de frecuencias, sino diseñar estrategias de recogida y análisis de datos para responder a preguntas que nos planteamos. El motor de todo estudio estadístico es el interés por responder a esas preguntas a partir de datos que reflejen la realidad de forma objetiva.\nEn el ámbito de la enseñanza, no podemos pretender responder con rigor a preguntas de gran escala —como quién ganará las próximas elecciones o si un nuevo fármaco es más eficaz que el habitual—, pero sí podemos plantear interrogantes cuya respuesta exija recorrer los mismos caminos que se transitan en esos estudios de mayor envergadura.",
+    "crumbs": [
+      "EPILOGO"
+    ]
   }
 ]

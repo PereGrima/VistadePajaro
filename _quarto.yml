@@ -26,33 +26,33 @@ book:
       chapters:
         - 01_Introduccion.qmd
      
-    - part: 01_tapaDescriptiva.qmd                  # I ESTADÍSTICA DESCRIPTIVA
+    - part: 0_01_tapaDescriptiva.qmd                  # I ESTADÍSTICA DESCRIPTIVA
       chapters: 
         - 02_sintesisNumerica.qmd               # 2. Síntesis numérica de datos
         - 03_Graficos.qmd                       # 3. Representaciones gráficas
         
-    - part: _02_tapaVariabilidad.qmd                 # II DESCRIBIR LO ALEATORIO
+    - part: 0_02_tapaVariabilidad.qmd                 # II DESCRIBIR LO ALEATORIO
       chapters:
         - 04_variablesAleatorias.qmd            # 4. Variables aleatorias    
         - 05_distribucionesProbabilidad.qmd     # 5. Distribuciones de probabilidad
         
-    - part: _03_tapaMuestraPoblacion.qmd            # III DE LA MUESTRA A LA POBLACIÓN
+    - part: 0_03_tapaMuestraPoblacion.qmd            # III DE LA MUESTRA A LA POBLACIÓN
       chapters: 
         - 06_muestreo.qmd                       # 6. Muestreo. Encuestas
         - 07_estimacion.qmd                     # 7. Estimación de características de la población
         
-    - part: _04_tapaSignificativo.qmd                # IV ESTADÍSTICAMENTE SIGNIFICATIVO
+    - part: 0_04_tapaSignificativo.qmd                # IV ESTADÍSTICAMENTE SIGNIFICATIVO
       chapters: 
         - 08_contrasteHipotesis.qmd             # 8. Contraste de hipótesis
         - 09_algunosTest.qmd                    # 9. Algunos test clásicos
 
-    - part: _05_tapaCorrelacion.qmd                  # V CORRELACIÓN Y REGRESIÓN
+    - part: 0_05_tapaCorrelacion.qmd                  # V CORRELACIÓN Y REGRESIÓN
       chapters: 
         - 10_relacionLineal.qmd                 # 10. Medidas de relación lineal
         - 11_regreSimple.qmd                    # 11. Regresión simple
         - 12_regreMultiple.qmd                  # 12. Regresión múltiple
     
-    - part: _06_tapaEpilogo.qmd                  # V CORRELACIÓN Y REGRESIÓN
+    - part: 0_06_tapaEpilogo.qmd                  # V CORRELACIÓN Y REGRESIÓN
       chapters: 
         - 13_Epilogo.qmd                         # EPÍLOGO
       

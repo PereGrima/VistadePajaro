@@ -670,4 +670,10 @@ figure:has(img.fig-normal4) > figcaption {
   font-size: 0.95em;
 }
 
-
+.eq-left mjx-container[display="true"] {
+  display: inline-block !important;
+  margin: 0.5em;
+  vertical-align: middle;
+  font-weight: 400;
+  font-size: 1em;
+}

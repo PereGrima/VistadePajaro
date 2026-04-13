@@ -422,10 +422,6 @@ Echando mano de las fórmulas correspondientes y suponiendo que los 12 pesos son
 Pensemos ahora en la variable "peso de un huevo multiplicado por 12", es decir, la variable $12X$. Ahora tendremos:
 
                     $\text{E}(12X)=12 \cdot \text{E}(X)$
-
-::: {style="height: 5px;"}
-:::
-
                     $\text{V}(12X)=12^2 \cdot \text{V}(X)=144 \cdot \text{V}(X)$
 
 Vamos a ver que estas fórmulas reflejan lo que ocurre en la realidad a través de una mirada intuitiva al problema. Cuando formamos una docena de huevos, aunque tomemos uno singularmente pequeño, no hay que temer que esta docena salga con un peso muy por debajo del valor medio, ya que seguramente también habrá otros con un peso por encima de lo normal, de manera que los grandes compensarán el peso de los pequeños y viceversa ([@fig-huevos1]).
@@ -512,5 +508,96 @@ Es muy fácil plantear ejercicios sobre estos temas y no nos hemos podido resist
 
 [^04_variablesaleatorias-8]: Probabilidad de que una pieza sea defectuosa: 0,2 + 0,5 - 0,2·0,05 = 0,24. Todas buenas: (1-0,24)<sup>20</sup> = 0,76<sup>20</sup>. Alguna defectuosa: 1-0,76<sup>20</sup> = 0,9958.
 
+## Apéndice 4.A: Variabilidad en resistencias eléctricas: Consecuencias inesperadas {.unnumbered}
+
+Estamos acostumbrados a considerar que las magnitudes con las que trabajamos toman el valor exacto que se les asigna o el que se deduce aplicando las fórmulas adecuadas. En el terreno de la física, la intensidad de la corriente $I$ que circula por un circuito formado por una fuente de alimentación $V$ y una resistencia $R$ es $I=V/R$ (ley de Ohm). Si nos dicen que $V= 100$ voltios y que $R=10$ ohmios, la intensidad será $I= 10$ amperios. No hay discusión.
+
+Sin embargo, en la práctica no podemos evitar una cierta variabilidad añadida a los resultados que dan las fórmulas. Cuando tomamos una resistencia de una caja cuya etiqueta indica que son de 10 $\Omega$, puede tener un valor real de 9,7 o de 10,4  $\Omega$ y, por tanto, la intensidad que circulará por nuestro circuito ya no será de 10 $A$, sino de 10$\,\pm \,\varepsilon$ siendo $\varepsilon$ un valor que tiene que ver con el valor real de las variables que intervienen en la fórmula y quizá con el de otras variables que también influyen y que no se han tenido en cuenta. Puede ser que el valor de $\varepsilon$ sea irrelevante a efectos prácticos, pero también puede tener consecuencias importantes.
+
+Supongamos que debemos construir muchos circuitos como el que hemos comentado y que la fuente de alimentación será siempre de 100 voltios, pero la resistencia para cada circuito la tomaremos de una caja donde el valor real de cada una de ellas será igual a $R_n \pm 3$ ohmios, siendo $R_n$ su valor nominal. Serán defectuosos los circuitos por los que circule una intensidad que esté fuera del intervalo 10 $\pm$ 3 amperios, ¿qué valor debemos elegir para $R_n$?
+
+Parece que si el objetivo es $I = 10\,A$ y tenemos $V = 100\,V$, recordando la ley de Ohm, deberemos pedir las resistencias de $R_n = V/I = 100V/10A = 10\,\Omega$, pero no es así. Para minimizar el número de defectos debemos pedir las resistencias con  $R_n = 11\,\Omega$.
+
+El valor de $R$ que hace que circulen 7$\,A$ es $R = V/I = 100V/7A = 14.3\,\Omega$, y para que circulen 13$\,A$ debe ser: $R = V/I = 100V/13\,A = 7.7\,\Omega$. Si colocamos una resistencia de más de 14,3$\,\Omega$ pasarán menos de 7$\,A$ y el circuito será defectuoso. Por otro lado, si colocamos una de menos de 7,7$\,\Omega$ pasarán más de 13 $A$ y también será defectuoso. Debemos alejarnos de esos dos extremos y para ello lo mejor es pedir las resistencias con un valor nominal que esté en el centro de ese intervalo, es decir: $(7.7\,\Omega + 14.3\,\Omega)/2 = 11\,\Omega$.
+
+![El valor de $R_n$ no debe ser de 10 sino de 11$\,\Omega$.](Figuras/f0407_circuito.png){#fig-circuito .fig-normal3 fig-align="center" width="95%"}
+
+## Apéndice 4.B: Esperanza matemática para reparto justo {.unnumbered}
+
+Una de las primeras discusiones sobre cálculo de probabilidades manejando conceptos matemáticos se encuentra en la correspondencia que mantuvieron Pascal y Fermat acerca de un problema planteado por el Chevalier de Méré, que trata sobre cómo repartir un premio entre dos jugadores si se lo debía llevar el primero en ganar un cierto número de partidas, pero hubiera que interrumpir el juego sin que ninguno de los dos hubiera llegado a ese valor[^04_variablesaleatorias-9].
+
+[^04_variablesaleatorias-9]: Para más información, puede consultar la Wikipedia: "Problema de la partida interrumpida">>".
+
+Supongamos que el premio es de 40 monedas, que se lo lleva el primero en ganar 3 partidas y que deben interrumpir el juego cuando el jugador A ha ganado dos partidas y el B solo una. ¿Cuál es la forma más razonable de repartir las monedas?
+
+Una solución podría ser que se lo quede todo el que va ganando, o que se lo repartan a partes iguales, o de forma proporcional al número de partidas que ha ganado cada uno, pero supongamos que pueden seguir jugando y que la probabilidad de ganar una partida es la misma para los dos jugadores. El juego acabará de uno de los siguientes modos:
+
+1.    La siguiente partida la gana A. Como ya irán 3 a 1 el juego se acaba y A se lleva las 40 monedas. La probabilidad de que esto ocurra es de 0,5.
+
+2.    La siguiente partida la gana B, de manera que quedan 2 a 2 y siguen jugando. A continuación gana A, con lo que se ponen 3 a 2 a favor de A y termina el juego. La probabilidad de ir por este camino es 0,5·0,5 = 0,25 (gane B y gane A).
+
+3.    La siguiente partida la gana B y a continuación vuelve a ganar B. En este caso acaban 2 a 3 y B gana el juego. La probabilidad de que esto ocurra también es: 0,5·0,5 = 0,25.
+
+![Posibles resultados si se siguiera jugando.](Figuras/f0408_partida.png){#fig-partida .fig-normal3 fig-align="center" width="95%"}
+
+Por tanto, si pudieran seguir jugando, la probabilidad de que ganara A sería 0,75 (0,50 + 0,25), mientras que para B sería 0,25. Podemos considerar que el premio es una variable aleatoria que puede tomar solo dos valores: 0 y 40. Si pudieran seguir jugando, la esperanza matemática \index{Esperanza matemática} del premio para cada jugador sería:
+
+\begin{equation*}
+	\begin{split}
+		\text{para A}:\;\;\text{E}(P_A) &= 40 \cdot 0.75 + 0 \cdot 0.25 = 30 \\
+		\text{para B}:\;\;\text{E}(P_B) &= 0 \cdot 0.75 + 40 \cdot 0.25 = 10
+	\end{split}
+\end{equation*}
+
+Dicho de otro modo, si pudieran jugar muchas veces partiendo del resultado de $2 - 1$ a favor de A, en promedio A ganaría 30 monedas por partida y B solo 10. Es razonable que el reparto se haga de acuerdo con esas proporciones.
+
+## Apéndice 4.C: Probabilidades y paradojas {.unnumbered}
+
+Cuando debemos estudiar un tema del que no sabemos nada, decimos que partimos de cero. Este no es el caso del cálculo de probabilidades: partimos de un valor negativo.
+
+Nuestra intuición nos sugiere respuestas que nos parecen muy claras pero que son falsas. Aprender a calcular probabilidades exige también hacer un esfuerzo para dejarse llevar por esa intuición. Daniel Kahneman, que fue premio nobel de economía, en su *bestselle*r* "Pensar rápido, pensar despacio" explica cómo a través de numerosos experimentos (que tienen mucho que ver con la estadística) realizados con su colega Amos Tversky pusieron de manifiesto como, ante la incertidumbre, nuestro cerebro no calcula probabilidades de una forma "racional" sino que aplica unas reglas o "atajos mentales" que a menudo conducen a evaluaciones erróneas.
+
+Quizá su ejemplo más famoso es el que describe un personaje ficticio (Linda) y a continuación se plantea una pregunta sobre su ocupación actual: 
+
+ <blockquote>
+
+Linda estudió economía y siempre fue muy sensible a las injusticias sociales. En su época universitaria formó parte activa de la delegación de estudiantes y lideró varias protestas. Pasó varias temporadas realizando trabajos de voluntariado en países en vías de desarrollo.
+	
+Ahora Linda ronda los 40 años y lo más probable es que:
+
+a) Trabaje en un banco.
+b) Trabaje en un banco y sea activista en el movimiento feminista.
+
+</blockquote>
+
+Ante esta pregunta un alto porcentaje de personas elige la opción b), aunque sabemos que la probabilidad de que ocurra una cosa \underline{y} otra es el producto de las probabilidades individuales y ese producto nunca puede ser mayor que ellas. Visto de otra forma, la opción b) exige que se cumpla la opción a) y \underline{además} que sea activista.
+
+Otro ejemplo, debido al psicólogo Peter Watson y que recoge John Allen Paulos en "Un matemático lee el periódico", dice:
+
+<blockquote>
+	Tenemos cuatro tarjetas con los símbolos A, D, 3 y 7 en una cara, y sabemos que todas ellas tienen un número en una cara y una letra en la otra. ¿Que tarjetas se deben girar para verificar que se cumple la regla: *si una tarjeta tiene una A en una cara, entonces tiene un 3 en la otra*?
+</blockquote>
+
+La mayoría responde que la A y la 3, pero la 3 no hace falta girarla, porque no importa la letra que haya al otro lado. La que debe girarse es el 7 porque si en la otra cara tiene una A no se cumple la regla. En este caso el "atajo" nos hace confundir la implicación en un sentido (si tiene una A en una cara debe tener un 3 en la otra) con la implicación en sentido contrario (si tiene un 3 en una cara debe tener una A en la otra), pero esto último no es lo que se dice.
+
+Una de las paradojas más conocidas es la llamada paradoja del cumpleaños: ¿Cuál es la probabilidad de que en un grupo de, pongamos, $n =$ 30 personas, dos o más celebren su cumpleaños el mismo día?
+
+Este problema tiene un resultado mucho mayor del que intuitivamente se espera. Con $n =$ 23 ya está ligeramente por encima del 50\%, con $n =$ 30 es del 71%, y con $n =$ 40 alcanza el 90%.
+
+Para realizar los cálculos consideramos que un año tiene 365 días (ignoramos los bisiestos) y que la probabilidad de nacer es la misma para todos los días del año. Empezaremos calculando la probabilidad de que todos los integrantes de un grupo de $n = 2, 3, \cdots$ personas hayan nacido en días diferentes (tabla \ref{cumpleaños}).
+
+***************
+Aquí la tabla
+***************
+
+En un grupo de 30 personas solo se pueden dar dos situaciones: todos han nacido en días diferentes o, como mínimo, dos han nacido el mismo día, no pueden haber situaciones intermedias. Por tanto, si la probabilidad de que todos hayan nacido en días diferentes es $Q(30) = 0.2937$, la de que dos o más hayan nacido el mismo día será:
+$$ P(30) = 1- Q(30) = 1-0.2937 = 0.7063 $$
+
+Es inmediato deducir que la expresión general para $P(n)$ es: 
+ $$P(n) = 1-Q(n) = 1- \frac{365!}{365^n(365-n)!} $$
+
+Con ayuda de una hoja de cálculo se puede contruir la curva que relaciona la probabilidad de coincidencia con el número de personas ([@fig-probabilidadCoincidencia]).
+
+![Construcción de la curva que relaciona la probabilidad de coincidencia en la fecha del cumpleaños y el número de personas en un grupo.](Figuras/f0409_probabilidadCoincidencia.png){#fig-probabilidadCoincidencia .fig-normal3 fig-align="center" width="95%"}
 
 

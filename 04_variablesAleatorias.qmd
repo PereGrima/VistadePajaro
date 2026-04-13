@@ -1,3 +1,516 @@
 # Variables aleatorias
 
-Similar a estimación de proporciones.
+Decimos que una variable es aleatoria cuando el valor que toma está afectado --en mayor o menor medida-- por el azar[^04_variablesaleatorias-1].
+
+[^04_variablesaleatorias-1]: También podríamos añadir que esa influencia del azar es relevante a efectos prácticos, porque todas las mediciones de magnitudes físicas están afectadas por un cierto error de medida.
+
+Cuando queremos poner un ejemplo de este tipo de variables los primeros que se nos ocurren son los relacionados con los juegos de azar: la suma de los resultados al lanzar dos dados o el número de caras al lanzar cinco veces una moneda al aire, pero el azar no solo está en el mundo del juego.
+
+En el contexto de los análisis estadísticos, cuando estimamos las características de una población a través de una muestra, los valores obtenidos presentan variabilidad ya que dependen de los elementos que --por casualidad-- hayan caído en la muestra. En este terreno siempre nos movemos entre variables aleatorias y debemos conocer sus características y las reglas que nos permiten trabajar con ellas.
+
+Para describir su comportamiento, vamos a dividirlas en dos grandes tipos que estudiaremos por separado: las variables aleatorias discretas y las continuas.
+
+::: {style="height: 3px;"}
+:::
+
+::: callout-note
+## Notación
+
+En general, las variables aleatorias se designan con letras mayúsculas y los valores que pueden tomar se designan esa misma letra en minúscula. En la expresión $P(X>x)$, la $X$ mayúscula representa una variable aleatoria --podría ser el número de correos electrónicos que recibimos en un día-- y la $x$ minúscula, un número concreto --por ejemplo, 10--.
+:::
+
+::: {style="height: 18px;"}
+:::
+
+## Variables aleatorias discretas
+
+Una variable aleatoria es discreta cuando solo puede tomar valores aislados, de manera que, fijados dos valores consecutivos no puede haber ningún otro entre ellos. Ejemplos de variables aleatorias discretas son:
+
+-   El número de pasajeros que tienen billete pero no se presentan a la salida de su vuelo. Si se han vendido $n$ billetes, los valores que puede tomar son: $0, 1, \cdots, n$, aunque a partir de un cierto número, la probabilidad de que se dé ese valor es prácticamente igual a cero.
+
+-   El número de personas que se declaran \<<de izquierdas>\> en una muestra de 100. Puede tomar valores desde 0 hasta 100, aunque serán muy poco probables los valores muy pequeños o muy grandes dentro de ese rango.
+
+-   El número de veces que una línea de producción se para por causas imprevistas durante una semana. Puede ir desde cero hasta un máximo que no está definido.
+
+-   El número de pasas que aparecen en una cucharada de muesli. También puede tomar valores desde cero hasta un máximo no definido.
+
+-   La suma de los valores que se obtienen al lanzar dos dados. Puede ir de 2 a 12 y serán más probables los valores centrales.
+
+En este último ejemplo es muy fácil calcular las probabilidades asociadas a cada valor, son las que se indican en la [Tabla 4.1](#tbl-sumaDados).
+
+```{=html}
+<div id="tbl-sumaDados" class="tabla-wrapper35b">
+<table class="tabla-0401">
+
+<caption>Tabla 4.1: Valores que puede tomar la variable aleatoria <i>S</i>: suma de resultados al lanzar dos dados, con su probabilidad de aparición.</caption>
+
+<colgroup>
+  <col style="width: 20.9%"/>
+  <col style="width: 7.2%"/>
+  <col style="width: 7.2%"/>
+  <col style="width: 7.2%"/>
+  <col style="width: 7.2%"/>
+  <col style="width: 7.2%"/>
+  <col style="width: 7.2%"/>
+  <col style="width: 7.2%"/>
+  <col style="width: 7.2%"/>
+  <col style="width: 7.2%"/>
+  <col style="width: 7.2%"/>
+  <col style="width: 7.2%"/>
+  <col style="width: 7.2%"/>
+</colgroup>
+  
+<thead>
+<tr>
+<th>Valores de (<i>s</i>):</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th>12</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>P(<i>S</i> = <i>s</i>):</td> 
+<td><sup>1</sup>/<sub>36</sub></td>
+<td><sup>2</sup>/<sub>36</sub></td>
+<td><sup>3</sup>/<sub>36</sub></td>
+<td><sup>4</sup>/<sub>36</sub></td>
+<td><sup>5</sup>/<sub>36</sub></td>
+<td><sup>6</sup>/<sub>36</sub></td>
+<td><sup>5</sup>/<sub>36</sub></td>
+<td><sup>4</sup>/<sub>36</sub></td>
+<td><sup>3</sup>/<sub>36</sub></td>
+<td><sup>2</sup>/<sub>36</sub></td>
+<td><sup>1</sup>/<sub>36</sub></td>
+</tr>
+</tbody>
+</table>
+</div>
+```
+Una variable aleatoria discreta se puede definir mediante una tabla como la que acabamos de ver o --de una manera más compacta pero no siempre más clara-- dando la función que relaciona cada uno de estos valores con sus respectivas probabilidades. Esta función se llama **función de probabilidad**. En nuestro caso podemos escribir: $$ P(S = s) = \frac {6 \, - \lvert s - 7 \rvert} {36}  \;\;\; \text {para} \;\; s = 2, 3, 4, \dotsb, 12.$$
+
+Observe que si la variable puede tomar $n$ valores distintos seguro que: $$\sum_{i=1}^{n} P(X=x_i)=1$$
+
+Si esta igualdad no se cumple es que la variable no está bien definida.
+
+::: {style="height: 3px;"}
+:::
+
+::: callout-note
+## Una variable aleatoria discreta también puede tomar infinitos valores
+
+En teoria, claro, porque en la práctica no hay infinitos. Podemos pensar en una variable aleatoria definida para todos los números naturales de manera que al número $n$ le correspoponda una probabilidad $P(n) = 1/2^n$ puesto que $\sum_{n=1}^{\infty}\frac {1}{2^n}=1$.
+:::
+
+::: {style="height: 12px;"}
+:::
+
+Una forma clara de visualizar las características de una variable aleatoria discreta es representar su función de probabilidad. En la [@fig-ejemplosFuncionProbabilidad]) (izquierda), la variable aleatoria es el número de pasajeros que no se presentan a la salida de su vuelo si se han vendido $n=180$ billetes y la probabilidad de que un pasajero no se presente es $p=0.01$. En la figura de la derecha, la variable es el número de paradas por causas imprevistas que se producen en una línea de producción durante una semana laboral (5 días) sabiendo que, por esas causas, se para en promedio una vez cada dos días.
+
+![Representación de funciones de probabilidad de variables discretas.](Figuras/f0401_ejemplosFuncionProbabilidad.png){#fig-ejemplosFuncionProbabilidad .fig-normal3 fig-align="center" width="90%"}
+
+En el siguiente capítulo veremos que calcular estas probabilidades es mucho más fácil de lo que parece.
+
+## Variables aleatorias continuas
+
+Decimos que una variable aleatoria es continua cuando puede tomar cualquier valor dentro de un intervalo. Son variables aleatorias continuas:
+
+-   La duración de un componente electrónico.
+
+-   El peso de los frutos que da un árbol en una cosecha.
+
+-   La longitud de una pieza que debe ensamblarse con otras para formar un mecanismo.
+
+-   El tiempo que transcurre entre la llegada de dos personas a la cola del cajero de un supermercado.
+
+-   El valor que da una hoja de cálculo cuando se le pide un número aleatorio.
+
+Podemos decir que --en general-- el valor de las variables aleatorias discretas "se cuenta", mientras que el de las continuas "se mide".
+
+La caracterización de una variable aleatoria continua no se puede realizar como en las discretas, asignando una probabilidad a cada uno de los valores que puede tomar, ya que en este caso la probabilidad de que tome un valor concreto --con infinitos decimales-- siempre es igual a cero, tal como veremos más adelante[^04_variablesaleatorias-2].
+
+[^04_variablesaleatorias-2]: Un argumento falaz, pero muchas veces convincente haciendo mención a aquello de los casos favorables partido por los casos posibles, es considerar que si la variable puede tomar infinitos valores, la probabilidad de que tome uno en concreto es cero. Esto es falso porque la regla de casos favorables partido por casos posibles solo vale cuando todos los sucesos tienen la misma probabilidad de ocurrir y este no es nuestro caso. Por otra parte, es perfectamente posible que una variable pueda tomar infinitos valores y que ninguno de ellos tenga probabilidad cero, tal como se ha visto para las variables aleatorias discretas.
+
+Las variables aleatorias continuas se definen utilizando la llamada **función densidad de probabilidad**. Para ver cómo se construye y cómo se utiliza esta función vamos a recorrer el camino que va desde el histograma de unos datos hasta la representación de la población de la que provienen.
+
+### De la frecuencia a la densidad de frecuencia {.unnumbered}
+
+Al construir un histograma lo habitual es colocar la frecuencia --absoluta o relativa-- en el eje vertical, pero también se puede usar la **densidad de frecuencia**[^04_variablesaleatorias-3].
+
+[^04_variablesaleatorias-3]: Usar la densidad de frecuencia es la mejor opción cuando no todos los intervalos tienen la misma anchura.
+
+Para cada intervalo $i$ la densidad de frecuencia $f_i^*$ es igual a la frecuencia relativa $f_i$ dividida por la anchura del intervalo $c_i$. Es decir: $f_i^\ast= f_i/c_i$. De esta forma el área de cada barra (base$\times$altura: $c_i\cdot f_i/c_i$) es igual a la frecuencia relativa correspondiente a su intervalo.
+
+Supongamos que tenemos una muestra de 5000 valores de una variable aleatoria $X$. En el lado izquierdo de la [@fig-densidadDeFrecuencia]) hemos representado su histograma "clásico", con la frecuencia absoluta en el eje de ordenadas. Si tuviera una escala más detallada podríamos ver que, por ejemplo, entre 0,5 y 0,6 tenemos 295 observaciones. La frecuencia relativa en este intervalo es igual a 295/5000 = 0,059.
+
+En el lado derecho tenemos el mismo histograma pero con la densidad de frecuencia. Es inmediato deducir que su valor entre 0,5 y 0,6 es igual a 0,59, que multiplicado por la anchura del intervalo (0,1) nos da la frecuencia relativa y también el área de esa barra. La suma de las frecuencias relativas debe ser igual a 1 y, por tanto, también la suma de las áreas de todas las barras.
+
+![Histograma con frecuencias absolutas (izquierda) y con densidad de frecuencia (derecha).](Figuras/f0402_densidadDeFrecuencia.png){#fig-densidadDeFrecuencia .fig-normal3 fig-align="center" width="95%"}
+
+### De la densidad de frecuencia a la densidad de probabilidad {.unnumbered}
+
+Está claro que si en el eje de ordenadas tenemos la densidad de frecuencia, el cálculo de la frecuencia relativa se convierte en un cálculo de áreas. En la [@fig-areasProbabilidades] (izquierda), el área de la zona sombreada es igual a la frecuencia relativa entre 0,5 y 1,5. En la derecha hemos superpuesto dos líneas que parece razonable considerar que representan a la población de la que provienen esos datos. La función que describe esas líneas es la \textbf{función densidad de probabilidad}. Respecto a las muestras hablamos de **frecuencia**, mientras que en el contexto de las poblaciones, usamos el término **probabilidad**.
+
+![Histograma con frecuencias absolutas (izquierda) y con densidad de frecuencia (derecha).](Figuras/f0403_areasProbabilidades.png){#fig-areasProbabilidades .fig-normal3 fig-align="center" width="95%"}
+
+En este caso, la función densidad de probabilidad $f(x)$ es: \begin{equation*}
+    f(x) = \left \{
+    \begin{aligned}
+        x\;\; & \quad\text{para}\;\; 0<x \leq 1 \\
+        2-x & \quad\text{para}\;\; 1<x \leq 2 
+    \end{aligned}
+    \right.
+\end{equation*}
+
+En la muestra, la frecuencia relativa entre 0,5 y 1,5 es igual al área de las barras que se encuentran entre esos valores. Para la población, la probabilidad de que \$ X \$ se encuentre en ese intervalo es igual al área que definida en el triángulo. Esta área se puede calcular haciendo: $$P(0,5 \leq x \leq 1,5) = \int_{0,5}^1 x \; dx + \int_1^{1,5}(2-x) \; dx =\frac{3}{4}$$
+
+Si la función densidad de probabilidad tiene una forma tan sencilla como la que acabamos de ver, podemos calcular las áreas haciendo integrales o también aplicando reglas de geometría. La probabilidad de tener valores mayores de 1,5 es: $$P(X > 1.5) = \int_{1.5}^{2}(2-x) \; dx = 0.125$$
+
+Pero también, observando que la altura del triángulo para $x=1.5$ es igual a 0,5, el área entre 1,5 y 2 será: $0.5 \times 0.5/2 = 0.125$.
+
+Si la expresión de $f(x)$ es más complicada --que es lo que suele ocurrir en la práctica--, el cálculo de las áreas puede ser más laborioso, pero el planteamiento es exactamente el mismo.
+
+::: callout-note
+## Función densidad de probabilidad
+
+Para que una función pueda ser considerada \textit{densidad de probabilidad} debe cumplir dos condiciones: que tome únicamente valores no negativos (es decir, positivos o cero) y que la integral en el intervalo en que está definida sea igual a 1.
+:::
+
+## Esperanza matemática y varianza de una variable aleatoria
+
+De la misma forma que la media y la desviación típica (o la varianza) son un buen resumen de las características de un conjunto de datos, en el caso de las variables aleatorias tenemos unos valores análogos: la esperanza matemática y la varianza. Vamos a ver cómo se calculan y cuáles son sus características, primero para las variables discretas y después para las continuas.
+
+::: callout-note
+## Promedio, media y esperanza matemática
+
+A la *media* aritmética de un conjunto de datos también le podemos llamar *promedio*. Respecto a una variable aleatoria, los términos *media* y *esperanza matemática* son equivalentes. *Media* sirve en los dos casos.
+:::
+
+### Esperanza matemática {.unnumbered}
+
+#### Variables aleatorias discretas {.unnumbered}
+
+Recordemos que si tenemos una muestra con $k$ valores distintos, cada uno de ellos con una frecuencia relativa $f_i$ podemos calcular su media mediante la expresión: $$\bar{x} = \sum_{i=1}^k x_i \, f_i$$ Si lo que tenemos es una variable aleatoria $X$, su media o esperanza matemática $\text{E}(X)$ tiene una expresión similar a la anterior, pero en este caso no hablamos de frecuencias sino de probabilidades:
+
+$$\text{E}(X) = \sum_{i=1}^k  x_i \, p(x_i)$$ En el caso que habíamos comentado de la variable aleatoria $S$: suma de los resultados obtenidos al lanzar dos dados ([Tabla 4.1](#tbl-sumaDados)) su esperanza matemática es: $$ \text{E}(S) = \sum_{i=1}^{11} s_i \, p(s_i)   = 2 \cdot \frac{1}{36} + 3\cdot\frac{2}{36} + \dotsm + 11\cdot\frac{2}{36} + 12\cdot\frac{1}{36} = 7$$ En un juego de azar, la esperanza matemática de beneficio es el que se obtendría en promedio si se jugara muchas veces. Si el que organiza el juego no se ha equivocado, esa esperanza matemática seguro que será negativa. Supongamos que se realiza una rifa con 10.000 boletos numerados que se venden a un euro y con los siguientes premios:
+
+```{=html}
+<div class="tabla-wrapper00">
+<table class="tabla-02Ape2D_1">
+
+<tr>
+<td>1º:&ensp;400 €</td>
+</tr>
+
+<tr>
+<td>2º:&ensp;200 €</td>
+</tr>
+
+<tr>
+<td>3º:&ensp;100 €</td>
+</tr>
+
+ </table>
+</div>
+```
+¿Cuál es la esperanza matemática de beneficio si se compra uno de estos boletos? Los valores que puede tomar la variable aleatoria "beneficio" (es una variable aleatoria puesto que su valor depende del azar) son los que se indican en la [Tabla 4.2](#tbl-Juego).
+
+```{=html}
+<div id="tbl-Juego"; class="tabla-wrapper42">
+<table class="tabla-0212">
+
+<caption>Tabla 4.2: Valores para el cálculo de la esperanza matemática del beneficio</caption>
+
+<colgroup>
+    <col style="width: 20%;">
+    <col style="width: 20%;">
+    <col style="width: 20%;">
+  </colgroup>
+  <thead>
+     <tr>
+        <th> Beneficio (<i>x</i>) </th>
+        <th> Probabilidad (<i>P(x)</i>) </th>
+        <th> <i>x · P(x)</i> </th>
+    </tr>
+    </thead>
+    
+    <tr>
+    <TD ALIGN=center>399 €<br> 199 €<br>99 € <br>-1 €</TD>
+    <TD ALIGN=center> 0,0001 <br> 0,0001 <br>0,0001<br>0.9997 </TD>
+    <TD ALIGN=center> 0,0399 €<br> 0.0199 €<br> 0.0099 € <br>-0,9997 € </TD>
+    </TR>
+    <tr class="total">
+<td align="center">Suma...</td>
+<td align="center"></td>
+<td align="center">-0,93 €</td>
+</tr>
+</table>
+</div>
+```
+Tenemos que $\text{E}(X) = -0.93$ € por tanto, en promedio, perderemos 0,93 € por cada boleto que compremos. Si los compráramos todos nos costarían 10.000 € y nos tocarán 700, habríamos perdido 9.300 €, exactamente 0,93 por boleto.
+
+#### Variables aleatorias continuas {.unnumbered}
+
+Se calcula mediante una expresión análoga a la que hemos visto para las variables discretas, cambiando el sumatorio por una integral y la probabilidad $p(x)$ por $f(x)\,\mathrm{d}x$. Tenemos: $$\text{E}(X) = \int_{-\infty}^{\infty} x \, f(x) \, \mathrm{d}x$$ Observe que $f(x)$ no es una probabilidad (es una densidad de probabilidad) pero multiplicada por $\mathrm{d}x$ ya pasa a serlo. Si la distribución es simétrica, la esperanza matemática coincide con el valor de $X$ situado en el eje de simetría. En el caso de la distribución triangular que hemos visto anteriormente ([@fig-areasProbabilidades]), podemos asegurar que $\text{E}(X)=1$ sin necesidad de hacer ningún cálculo.
+
+Si la distribución no es simétrica, como en la figura [@fig-ejercicio], el cálculo ya no es tan inmediato.
+
+![Función densidad de probabilidad con forma triangular.](Figuras/f0404_ejercicio.png){#fig-ejercicio .fig-normal3 fig-align="center" width="100%"}
+
+Esta función se puede escribir de la forma:
+
+```{=tex}
+\begin{equation*}
+    f(x) = \left \{
+    \begin{aligned}
+        \frac{x}{10}\;\; & \quad\text{para}\;\; 0<x \leq 4 \\
+        2-0.4x & \quad\text{para}\;\; 4<x \leq 5 
+    \end{aligned}
+    \right.
+\end{equation*}
+```
+Podemos comprobar que está bien definida: siempre toma valores positivos y el área que define es igual a 1. Su esperanza matemática es: $$\text{E}(X) = \int_{0}^{4} x \frac{x}{10} \,\mathrm{d}x + \int_{4}^{5} x (2 -0.4x) \,\mathrm{d}x = 3$$
+
+::: {style="height: 3px;"}
+:::
+
+::: callout-note
+## Esperanza matemática en una distribución triangular
+
+Si una variable aleatoria $X$ tiene distribución triangular definida en el intervalo $(a, b)$ y su valor máximo está en $c$, su esperanza matemática es $\text{E}(X) = \frac{a+b+c}{3}$. Así de sencillo. Si tiene tiempo puede entretenerse en demostrarlo[^04_variablesaleatorias-4].
+:::
+
+[^04_variablesaleatorias-4]: Sean $a$ y $b$ los extremos del intervalo y $c$ la moda. La función densidad de probabilidad es: \begin{equation*}
+        f(x) = \left \{
+        \begin{aligned}
+            \frac{2(x-a)}{(b-a)(c-a)}\;\; & \quad\text{para}\;\; a \leq x \leq c \\
+            \frac{2(b-x)}{(b-a)(b-c)}\;\;  & \quad\text{para}\;\; c \leq x \leq b 
+        \end{aligned}
+        \right.
+    \end{equation*} La integral es inmediata, pero la simplificación de la expresión obtenida exige un poco de paciencia y alguna idea feliz. \begin{equation*}
+    \begin{split}
+        \text{E}(X) &=\int_a^c x \frac{2(x-a)}{(b-a)(c-a)} \mathrm{d}x + \int_c^b x \frac{2(b-x)}{(b-a)(b-c)} \mathrm{d}x = \\[5pt]
+        &= \frac{2}{(b-a)(c-a)} \left(\frac{c^3}{3} - \frac{a^3}{3} - \frac{ac^2}{2} + \frac{a^3}{2} \right) + \frac{2}{(b-a)(b-c)} \left(\frac{b^3}{2} - \frac{bc^2}{2} - \frac{b^3}{3} + \frac{c^3}{3} \right) = \\[5pt]
+        &= \frac{ac^3-bc^3-a^3c+b^3c-ab^3+a^3b}{3(b-c)(b-a)(c-a)} = \frac{(b-c)(b-a)(c-a)(a+b+c)}{3(b-c)(b-a)(c-a)} = \frac{a+b+c}{3}
+    \end{split}
+    \end{equation*}
+
+::: {style="height: 3px;"}
+:::
+
+#### Varianza {.unnumbered}
+
+También se calcula con una expresión similar a la que usamos para calcular la varianza de una muestra. Si se trata de una variable aleatoria discreta, solo cambiamos la media de la muestra por la esperanza matemática de la población y la frecuencia relativa por la probabilidad, es decir: $$\text{V}(X) = \sum_{i=1}^k  [x_i - \text{E}(X)]^2 \, p(x_i)$$ Para el cálculo de la varianza del beneficio tenemos los valores de la tabla \ref{varBeneficio}:
+
+```{=html}
+<div id="tbl-Juego"; class="tabla-wrapper42">
+<table class="tabla-0402">
+
+<caption>Tabla 4.3: Valores para el cálculo de la varianza del beneficio</caption>
+
+<colgroup>
+    <col style="width: 20%;">
+    <col style="width: 20%;">
+    <col style="width: 20%;">
+    <col style="width: 20%;">
+  </colgroup>
+  <thead>
+     <tr>
+        <th>$$x$$</th>
+        <th>$$P(x)$$ </th>
+        <th>$$[x - \text{E}(x)]^2$$</th>
+        <th>$$[x - \text{E}(x)]^2 \cdot P(x)$$</th>
+    </tr>
+    </thead>
+    
+    <tr>
+    <TD ALIGN=center>399 €<br> 199 €<br>99 € <br>-1 € </TD>
+    <TD ALIGN=center> 0,0001 <br> 0,0001 <br>0,0001<br>0.9997 </TD>
+    <TD ALIGN=center> 159944,005<br> 39972,0049<br> 9986,0049 € <br>0,0049 </TD>
+    <TD ALIGN=center> 15,9944 €<sup>2</sup><br> 3,9972 €<sup>2</sup><br> 0,9986 €<sup>2</sup> <br>0,0049 €<sup>2</sup> </TD>
+    </TR>
+    <tr class="total">
+<td align="center">Suma...</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">20,9951 €<sup>2</sup></td>
+</tr>
+</table>
+</div>
+```
+El resultado, V(<i>X</i>)=20.9951 €<sup>2</sup>, es la varianza de los valores del beneficio que se obtendría con cada boleto si los compramos todos.
+
+De forma análoga, para las variables aleatorias continuas tenemos: $$\text{V}(X) = \int_{-\infty}^{\infty} [x - \text{E}(X)]^2 \, f(x) \, \mathrm{d}x$$ En la distribución de la [@fig-ejercicio] tenemos:
+
+$$ \text{V}(X) = \int_{0}^{4} (x-3)^2 \frac{x}{10} \, \mathrm{d}x + \int_{4}^{5} (x-3)^2  (2 -0.4x) \, \mathrm{d}x = \frac{7}{6}$$ Ciertamente, este valor de la varianza no nos dice nada[^04_variablesaleatorias-5], pero lo podemos comparar con el que se obtiene para la distribución de la [@fig-areasProbabilidades] que deberá ser menor, al ser también menor el rango en que se mueve. En este caso, como $E(X)=1$, tenemos:
+
+[^04_variablesaleatorias-5]: Aunque algo sí que dice. Existe una curiosa propiedad denominada desigualdad de Chebyshev, que afirma que la probabilidad de que una variable aleatoria (con varianza finita, para ser rigurosos) se encuentre en el intervalo $\mu \pm k\sigma$ es como mínimo de $1-1/k^2$. Por tanto, en nuestro caso, a la vista del valor de la varianza y tomando $k=\sqrt{2}$, podemos afirmar que la probabilidad de que la variable se encuentre en el intervalo \$3 \pm \sqrt{2} \sqrt{7/6} \$ (es decir: $3 \pm 1.5275$) es, como mínimo, del 50%. Haciendo el cálculo exacto resulta ser del 84,7%.
+
+$$\text{V}(X) = \int_{0}^{1} (x-1)^2 x \, \mathrm{d}x + \int_{1}^{2} (x-1)^2  (2 -x) \, \mathrm{d}x = \frac{1}{6}$$ Efectivamente es menor, exactamente siete veces menor.
+
+### Moda y mediana {.unnumbered}
+
+A veces nos referimos a la moda, la mediana, los cuartiles o, en general, los percentiles de una variable aleatoria. Es más habitual usarlo para las continuas, por lo que solo nos referimos a estas.
+
+La moda es el valor de $x$ para el cual $f(x)$ tiene un máximo. Si existen dos máximos, se dice que es una distribución bimodal. En los ejemplos que hemos visto, las modas son 1 ([@fig-areasProbabilidades]) y 4 ([@fig-ejercicio]).
+
+La mediana es el valor que tiene una probabilidad del 50% de ser superado. Si la distribución es simétrica, la mediana coincide con la esperanza matemática; así pues, en el primer ejemplo la mediana es igual a 1.
+
+En el segundo ejemplo no es evidente cuál es ese valor, pero a la vista de la geometría de la distribución podemos asegurar que será menor que 4 y por tanto nos centramos en la primera parte de la expresión. Podemos escribir: $$\int_{0}^{Me} \frac{x}{10} \, \mathrm{d}x = 0.5$$ Y de esta expresión despejamos el valor de la mediana, obteniendo $Me = \sqrt{10}$.
+
+Si la forma de la distribución de probabilidad es geométricamente sencilla, este cálculo también se puede realizar aplicando reglas de geometría. Por ejemplo, el primer cuartil $Q_1$ verificará: $$ \frac{Q_1 \cdot f(Q_1)}{2} = 0.25 $$ Es decir, $Q_1 \cdot \frac{Q_1}{10} = 0.5$, luego $Q_1 = \sqrt{5}$.
+
+## Operaciones con variables aleatorias
+
+Vamos a dar algunas reglas que nos serán útiles para realizar cálculos o para justificar algunas de las expresiones que utilizaremos más adelante. No importa si la variable es discreta o continua. Si $a$ y $b$ son constantes y $X$ y $Y$ son variables aleatorias, se verifica:
+
+-   $\text{E}(a+bX) = a+b \cdot \text{E}(X)$
+
+    ::: {style="height: 5px;"}
+    :::
+
+-   $\text{V}(a+bX) = b^2 \cdot \text{V}(X)$
+
+    ::: {style="height: 5px;"}
+    :::
+
+-   $\text{E}(X+Y) = \text{E}(X) + \text{E}(Y)$
+
+    ::: {style="height: 5px;"}
+    :::
+
+-   $\text{V}(X+Y) = \text{V}(X) + \text{V}(Y) + 2\,\text{Cov}(X,Y)$
+
+    ::: {style="height: 5px;"}
+    :::
+
+-   $\text{V}(X-Y) = \text{V}(X) + \text{V}(Y) - 2\,\text{Cov}(X,Y)$
+
+::: callout-note
+## Si X e Y son independientes: V(X+Y) = V(X-Y)
+
+Puede comprobarlo generando números aleatorios en una columna de una hoja de cálculo; en la columna de al lado, genere otros tantos de la misma o de otra distribución. Puede comprobar que la varianza de la suma de esas dos columnas es muy parecida a la varianza de la diferencia. Será tanto más parecida cuanto más números haya generado. En la mayoría de las hojas de cálculo pulsando F9, se renuevan los números aleatorios.
+:::
+
+### No es lo mismo sumar $k$ veces que multiplicar por $k$ {.unnumbered}
+
+El resultado es el mismo cuando las cantidades a que nos referimos son magnitudes constantes. Para saber cuántos huevos hay en 8 docenas, como el número de huevos en una docena es una constante, podemos sumar 12 huevos 8 veces o multiplicar 12 por 8 (¡evidente!). Pero, si lo que tenemos es una variable aleatoria, como el peso de un huevo, esto ya no es verdad.
+
+No es lo mismo el peso de una docena de huevos que el peso de un huevo multiplicado por 12 porque, aunque estas dos variables tienen la misma media, no tienen la misma variabilidad y, por tanto, no podemos decir que son iguales.
+
+Para entender por qué esto es así, aclararemos en primer lugar el significado de la notación que vamos a utilizar. Llamaremos $X$ a la variable aleatoria que consideramos (en nuestro ejemplo es el peso de un huevo). Si tomamos una docena, designaremos los pesos como $X_1, X_2, \ldots, X_{12}$. Cada una de las $X_i$ es una variable aleatoria con la misma distribución que $X$. En realidad, son extracciones de la misma población, el subíndice sólo indica el orden en que se extraen.
+
+Echando mano de las fórmulas correspondientes y suponiendo que los 12 pesos son independientes, tendremos que la esperanza matemática y la varianza del peso de una docena serán:
+
+```{=tex}
+\begin{equation*}
+    \begin{split}
+        \text{E}(X_1+X_2+\ldots+X_{12}) &= \text{E}(X_1)+ \ldots + \text{E}(X_{12})=12 \cdot \text{E}(X) \\[3pt]
+        \text{V}(X_1+X_2+\ldots+X_{12}) &= \text{V}(X_1)+ \ldots + \text{V}(X_{12})=12 \cdot \text{V}(X)
+        \end{split}
+\end{equation*}
+```
+Pensemos ahora en la variable "peso de un huevo multiplicado por 12", es decir, la variable $12X$. Ahora tendremos:
+
+                    $\text{E}(12X)=12 \cdot \text{E}(X)$
+
+::: {style="height: 5px;"}
+:::
+
+                    $\text{V}(12X)=12^2 \cdot \text{V}(X)=144 \cdot \text{V}(X)$
+
+Vamos a ver que estas fórmulas reflejan lo que ocurre en la realidad a través de una mirada intuitiva al problema. Cuando formamos una docena de huevos, aunque tomemos uno singularmente pequeño, no hay que temer que esta docena salga con un peso muy por debajo del valor medio, ya que seguramente también habrá otros con un peso por encima de lo normal, de manera que los grandes compensarán el peso de los pequeños y viceversa ([@fig-huevos1]).
+
+![Una docena de huevos (exagerando las diferencias).](Figuras/f0405_huevos1.png){#fig-huevos1 .fig-normal3 fig-align="center" width="90%"}
+
+\noindent Sin embargo, en la variable \<\<peso de un huevo multiplicado por 12\>\>, si el huevo elegido resulta ser pequeño, es como tener una docena de huevos pequeños, y si es grande sería como una docena de huevos grandes, con lo que tendremos pesos totales con más dispersión que en el caso anterior, ya que en este caso no se compensan los grandes con los pequeños ([@fig-huevos2]).
+
+![Un huevo multiplicado por 12. Si es pequeño es como tener una docena de huevos pequeños. Igual si es grande.](Figuras/f0406_huevos2.png){#fig-huevos2 .fig-normal3 fig-align="center" width="100%"}
+
+Por tanto, tiene más dispersión la variable aleatoria "peso de un huevo multiplicado por 12" que la variable "peso de una docena". Y si la variabilidad es distinta, las variables son distintas.
+
+## Cálculo de probabilidades
+
+El cálculo de probabilidades es un terreno apasionante que permite entender las leyes que regulan los patrones que se presentan en el mundo del azar, o que pasen con más frecuencia unas cosas que otras sin razón aparente, observar curiosas paradojas y entender por qué ocurren. También es verdad que no sirve para aumentar las probabilidades de que nos toque la lotería y que, para muchas personas, resulta un tema enredado y muy poco intuitivo.
+
+Si usted está entre estos últimos, no se preocupe. Para tener una visión general de la estadística y para manejar los conceptos y las técnicas más habituales no hace falta ser un experto en cálculo de probabilidades. Basta con tener algunas ideas claras. A continuación comentamos las que nos parecen más importantes.
+
+### Casos favorables partido por casos posibles: Sí pero no siempre {.unnumbered}
+
+Esta famosa regla funciona cuando todos los casos tienen la misma probabilidad de ocurrir. Por ejemplo:
+
+-   Se realiza un sorteo para el que se venden 1000 boletos numerados. Si alguien ha comprado 5 de esos boletos, la probabilidad de que le toque es 5/1000 (todos los números tienen la misma probabilidad de salir).
+
+-   En una oficina donde trabajan 40 personas van a elegir a 3 al azar para realizar una cierta actividad. La probabilidad de que le toque a un trabajador cualquiera es 3/40 (todos tienen la misma probabilidad de ser elegidos).
+
+-   En una caja que contiene 50 piezas hay 3 defectuosas, si elegimos una al azar, la probabilidad de que sea la defectuosa es 3/50 (todas las piezas tienen la misma probabilidad de ser defectuosas).
+
+Pero si la probabilidad no es la misma para todos los casos posibles entonces no se puede aplicar esta regla, por ejemplo:
+
+-   Lanzamos dos dados: ¿cuál es la probabilidad de que la suma sea igual a 5? Antes hemos visto que existen 11 resultados posibles y 5 es uno de ellos, pero no todos tienen la misma probabilidad de ocurrir. Hemos visto en la tabla \ref{sumaDosDados} que esta probabilidad es 1/9, no 1/11.
+
+-   Una máquina produce un 40% de unidades defectuosas, si se toma una muestra de 10 unidades ¿cuál es la probabilidad de que se encuentren 3 defectos? Hay 11 casos posibles (encontrar 0, 1, 2,..., 10 unidades defectuosas) pero la probabilidad no es 1/11 sino 0,215, tal como veremos en el siguiente capítulo.
+
+-   Hemos comprobado que el número de coches que llegan cada día a una gasolinera entre las 9 y las 10 de la mañana está entre 25 y 75, ¿cuál es la probabilidad de que un día lleguen entre 50 y 60? No es razonable considerar que todos los valores son igualmente probables. También en el capítulo siguiente veremos que --bajo unas hipótesis muy razonables-- esa probabilidad está en torno a 0,45.
+
+### Probabilidad de que ocurra un suceso *y* otro. (Regla de la *y*) {.unnumbered}
+
+Es igual al producto de las probabilidades de que ocurra cada uno de ellos si la ocurrencia de uno no altera la probabilidad de ocurrencia del otro (decimos que son **independientes**). Veamos algunos ejemplos:
+
+-   Si el 40% de la población está a favor de una determinada política del gobierno y elegimos a 3 personas al azar, la probabilidad de que las tres estén a favor será igual a la probabilidad de que lo esté el primero **y** el segundo **y** el tercero, es decir: $0.4^3 = 0.064$, **pero** si elegimos a tres personas del mismo grupo familiar esta regla ya no funciona porque los resultados no se pueden considerar independientes. Si uno está a favor es más probable que los otros también lo estén, porque los grupos familiares suelen tener un mismo perfil ideológico.
+
+-   La probabilidad de que al lanzar dos veces una moneda salga cara y cara es $0,5 \cdot 0,5$ porque la probabilidad de que la segunda sea cara no está afectada por el resultado obtenido en la primera, pero si la probabilidad de sacar un as de una baraja es 1/12, la probabilidad de sacar dos ases no es $(1/12)^2$ porque la probabilidad de que la segunda sea un as depende de si lo ha sido la primera.
+
+-   En una zona llueve el 40% de los días. La probabilidad de que llueva dos días tomados al azar es $0.4^2$, pero esa no es la probabilidad de que llueva dos días seguidos, porque la probabilidad de que llueva un día seguramente es mayor si ha llovido el día anterior.
+
+### Probabilidad de que ocurra un suceso *u* otro. (Regla de la *o*) {.unnumbered}
+
+Es la suma de las probabilidades de ocurrencia de cada uno de ellos, siempre y cuando no puedan ocurrir los dos a la vez, en cuyo caso habrá que restar esa probabilidad. Ejemplos:
+
+-   Un producto puede tener dos tipos de defecto, el A y el B, con $P(A)=0.08$ y $P(B)=0.07$. Si ambos defectos son incompatibles (por ejemplo, o pesa mucho o pesa poco), la probabilidad de que una unidad sea defectuosa (tenga el defecto A o el B) es $P(A)+P(B) = 0.15$. Supongamos ahora que sí puede tener los dos tipos de defecto (por ejemplo, sucio y rallado) y supongamos que las probabilidades son $P(A)=0.6$ y $P(B)=0.7$. En este caso, la probabilidad de que un producto sea defectuoso es igual a $P(A)+P(B) - P(A y B)= 0.88$. Con los números que hemos puesto no se nos puede olvidar restar la probabilidad de que ocurran los dos sucesos a la vez, porque si no lo hacemos la probabilidad saldría mayor que 1.
+
+-   Elegimos una carta de la baraja, ¿cuál es la probabilidad de que sea de copas o de espadas? La probabilidad de que sea de copas es 1/4 y la misma que sea de espadas. Como no puede ser las dos cosas a la vez, la probabilidad de que sea de copas o de espadas es: 1/4 + 1/4 = 1/2. Pero, ¿cuál es la probabilidad de que sea un as o del palo de copas? La probabilidad de que sea un as es 1/12 y de que sea de copas 1/4, pero también puede ser las dos cosas a la vez con una probabilidad 1/48. Por tanto, la probabilidad buscada es: $1/12 + 1/4 -1/48 = 15/48$
+
+### Cálculo a través del complementario {.unnumbered}
+
+Si el conjunto de resultados posibles se puede dividir en dos grupos y la probabilidad de que esté es un grupo es $p$, la probabilidad de que esté en el otro, al que llamamos complementario, es $1-p$.
+
+A veces es mucho más fácil calcular la probabilidad del complementario. Por ejemplo, ¿cuál es la probabilidad de que al lanzar 5 veces una moneda al aire salga alguna cara? Se podría calcular la probabilidad de que salga una, dos, tres, cuatro y cinco caras y sumar esos resultados, pero es más rápido calcular la probabilidad de que solo salgan cruces, que es $0.5^5 = 0.03124$, por lo que la probabilidad buscada es: $1-0,03124 = 0,96875$.
+
+La probabilidad de que, siguiendo un cierto tratamiento, un enfermo se cure antes de un mes es del 10%. Si se aplica el tratamiento a un grupo de 10 enfermos, ¿cuál es la probabilidad de que alguno se cure antes de un mes? De forma análoga al ejemplo anterior, lo más fácil es calcular la probabilidad de que ninguno se cure: $0.9^{10}$ y el valor que buscamos será $1 - 0,9^{10} = 0.65$.
+
+::: callout-note
+## El valor de la probabilidad
+
+La probabilidad se expresa como un número entre 0 y 1 (malas noticias si sus cálculos dan un número negativo o mayor que 1), aunque también se puede multiplicar por 100 y expresarlo en porcentaje.
+:::
+
+### Tres ejercicios (no triviales) para practicar {.unnumbered}
+
+\noindent Una cosa es conocer las reglas y otra es identificar cuándo hay que aplicarlas.
+
+Es muy fácil plantear ejercicios sobre estos temas y no nos hemos podido resistir a poner alguno. Si se entretiene en resolverlos le ayudarán a consolidar las ideas que hemos comentado. Encontrará las soluciones en las notas finales.
+
+[**Ejercicio 1**]{style="color: #0038CF;"}: La probabilidad de que una pieza sea defectuosa es 0,01, ¿cuál es la probabilidad de que en un lote de 100 piezas haya alguna defectuosa?[^04_variablesaleatorias-6].
+
+[^04_variablesaleatorias-6]: Probabilidad de que todas sean correctas (la 1ª y la 2ª y la 3ª y …) = 0,99<sup>100</sup> = 0,37. Probabilidad de que alguna sea defectuosa: 1-0,37=0,63
+
+[**Ejercicio 2**]{style="color: #0038CF;"}: Un juguete electrónico sale defectuoso con una probabilidad de 0,001. También existe una falsificación que ocupa una cuota de mercado del 10%, y la probabilidad de que la falsificación sea defectuosa es del 50%, ¿cuál es la probabilidad de que si se compra uno de estos juguetes salga defectuoso?[^04_variablesaleatorias-7].
+
+[^04_variablesaleatorias-7]: Probabilidad de original y defectuoso o falsificado y defectuoso: 0,9·0,001 + 0,1·0,5 = 0,0509
+
+[**Ejercicio 3**]{style="color: #0038CF;"}: Una pieza puede tener dos tipos de defecto: el A con una probabilidad de 0,2 y el B con probabilidad 0,05. Ambos defectos son independientes, es decir, la ocurrencia de uno no afecta a la probabilidad de ocurrencia del otro. ¿Cuál es la probabilidad de que en un conjunto de 20 piezas haya alguna defectuosa (tenga el defecto A, el B o los dos)?[^04_variablesaleatorias-8].
+
+[^04_variablesaleatorias-8]: Probabilidad de que una pieza sea defectuosa: 0,2 + 0,5 - 0,2·0,05 = 0,24. Todas buenas: (1-0,24)<sup>20</sup> = 0,76<sup>20</sup>. Alguna defectuosa: 1-0,76<sup>20</sup> = 0,9958.
+
+
+

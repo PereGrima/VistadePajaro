@@ -365,10 +365,7 @@ window.Quarto = {
 <p>Decimos que una variable es aleatoria cuando el valor que toma está afectado –en mayor o menor medida– por el azar<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
 <p>Cuando queremos poner un ejemplo de este tipo de variables los primeros que se nos ocurren son los relacionados con los juegos de azar: la suma de los resultados al lanzar dos dados o el número de caras al lanzar cinco veces una moneda al aire, pero el azar no solo está en el mundo del juego.</p>
 <p>En el contexto de los análisis estadísticos, cuando estimamos las características de una población a través de una muestra, los valores obtenidos presentan variabilidad ya que dependen de los elementos que –por casualidad– hayan caído en la muestra. En este terreno siempre nos movemos entre variables aleatorias y debemos conocer sus características y las reglas que nos permiten trabajar con ellas.</p>
-<p>Para describir su comportamiento, vamos a dividirlas en dos grandes tipos que estudiaremos por separado: las variables aleatorias discretas y las continuas.</p>
-<div style="height: 3px;">
-
-</div>
+<p>Para describir su comportamiento, vamos a dividirlas en dos grandes tipos que estudiaremos por separado: las variables aleatorias discretas y las continuas.<br> <span style="display:block; margin-top:35px;"></span></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -749,23 +746,11 @@ Figura&nbsp;4.4: Función densidad de probabilidad con forma triangular.
 <h2 data-number="4.4" class="anchored" data-anchor-id="operaciones-con-variables-aleatorias"><span class="header-section-number">4.4</span> Operaciones con variables aleatorias</h2>
 <p>Vamos a dar algunas reglas que nos serán útiles para realizar cálculos o para justificar algunas de las expresiones que utilizaremos más adelante. No importa si la variable es discreta o continua. Si <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> son constantes y <span class="math inline">\(X\)</span> y <span class="math inline">\(Y\)</span> son variables aleatorias, se verifica:</p>
 <ul>
-<li><p><span class="math inline">\(\text{E}(a+bX) = a+b \cdot \text{E}(X)\)</span></p>
-<div style="height: 5px;">
-
-</div></li>
-<li><p><span class="math inline">\(\text{V}(a+bX) = b^2 \cdot \text{V}(X)\)</span></p>
-<div style="height: 5px;">
-
-</div></li>
-<li><p><span class="math inline">\(\text{E}(X+Y) = \text{E}(X) + \text{E}(Y)\)</span></p>
-<div style="height: 5px;">
-
-</div></li>
-<li><p><span class="math inline">\(\text{V}(X+Y) = \text{V}(X) + \text{V}(Y) + 2\,\text{Cov}(X,Y)\)</span></p>
-<div style="height: 5px;">
-
-</div></li>
-<li><p><span class="math inline">\(\text{V}(X-Y) = \text{V}(X) + \text{V}(Y) - 2\,\text{Cov}(X,Y)\)</span></p></li>
+<li><p><span class="math inline">\(\text{E}(a+bX) = a+b \cdot \text{E}(X)\)</span></p></li>
+<li><p><span class="math inline">\(\text{V}(a+bX) = b^2 \cdot \text{V}(X)\)</span></p></li>
+<li><p><span class="math inline">\(\text{E}(X+Y) = \text{E}(X) + \text{E}(Y)\)</span></p></li>
+<li><p><span class="math inline">\(\text{V}(X+Y) = \text{V}(X) + \text{V}(Y) + 2\,\text{Cov}(X,Y)\)</span></p></li>
+<li><p><span class="math inline">\(\text{V}(X-Y) = \text{V}(X) + \text{V}(Y) - 2\,\text{Cov}(X,Y)\)</span> <br> <span style="display:block; margin-top:35px;"></span></p></li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -780,6 +765,7 @@ Figura&nbsp;4.4: Función densidad de probabilidad con forma triangular.
 <p>Puede comprobarlo generando números aleatorios en una columna de una hoja de cálculo; en la columna de al lado, genere otros tantos de la misma o de otra distribución. Puede comprobar que la varianza de la suma de esas dos columnas es muy parecida a la varianza de la diferencia. Será tanto más parecida cuanto más números haya generado. En la mayoría de las hojas de cálculo pulsando F9, se renuevan los números aleatorios.</p>
 </div>
 </div>
+<p><br> <span style="display:block; margin-top:-35px;"></span></p>
 <section id="no-es-lo-mismo-sumar-k-veces-que-multiplicar-por-k" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="no-es-lo-mismo-sumar-k-veces-que-multiplicar-por-k">No es lo mismo sumar <span class="math inline">\(k\)</span> veces que multiplicar por <span class="math inline">\(k\)</span></h3>
 <p>El resultado es el mismo cuando las cantidades a que nos referimos son magnitudes constantes. Para saber cuántos huevos hay en 8 docenas, como el número de huevos en una docena es una constante, podemos sumar 12 huevos 8 veces o multiplicar 12 por 8 (¡evidente!). Pero, si lo que tenemos es una variable aleatoria, como el peso de un huevo, esto ya no es verdad.</p>
@@ -793,7 +779,7 @@ Figura&nbsp;4.4: Función densidad de probabilidad con forma triangular.
         \end{split}
 \end{equation*}\]</span>
 <p>Pensemos ahora en la variable “peso de un huevo multiplicado por 12”, es decir, la variable <span class="math inline">\(12X\)</span>. Ahora tendremos:</p>
-<p>                    <span class="math inline">\(\text{E}(12X)=12 \cdot \text{E}(X)\)</span>                     <span class="math inline">\(\text{V}(12X)=12^2 \cdot \text{V}(X)=144 \cdot \text{V}(X)\)</span></p>
+<p><span class="math inline">\(\qquad \qquad \qquad \qquad \qquad \qquad \text{E}(12X)=12 \cdot \text{E}(X)\)</span> <span class="math inline">\(\qquad \qquad \qquad \qquad \qquad \qquad \text{V}(12X)=12^2 \cdot \text{V}(X)=144 \cdot \text{V}(X)\)</span></p>
 <p>Vamos a ver que estas fórmulas reflejan lo que ocurre en la realidad a través de una mirada intuitiva al problema. Cuando formamos una docena de huevos, aunque tomemos uno singularmente pequeño, no hay que temer que esta docena salga con un peso muy por debajo del valor medio, ya que seguramente también habrá otros con un peso por encima de lo normal, de manera que los grandes compensarán el peso de los pequeños y viceversa (<a href="#fig-huevos1" class="quarto-xref">Figura&nbsp;<span>4.5</span></a>).</p>
 <div id="fig-huevos1" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
@@ -951,9 +937,58 @@ Tenemos cuatro tarjetas con los símbolos A, D, 3 y 7 en una cara, y sabemos que
 <p>La mayoría responde que la A y la 3, pero la 3 no hace falta girarla, porque no importa la letra que haya al otro lado. La que debe girarse es el 7 porque si en la otra cara tiene una A no se cumple la regla. En este caso el “atajo” nos hace confundir la implicación en un sentido (si tiene una A en una cara debe tener un 3 en la otra) con la implicación en sentido contrario (si tiene un 3 en una cara debe tener una A en la otra), pero esto último no es lo que se dice.</p>
 <p>Una de las paradojas más conocidas es la llamada paradoja del cumpleaños: ¿Cuál es la probabilidad de que en un grupo de, pongamos, <span class="math inline">\(n =\)</span> 30 personas, dos o más celebren su cumpleaños el mismo día?</p>
 <p>Este problema tiene un resultado mucho mayor del que intuitivamente se espera. Con <span class="math inline">\(n =\)</span> 23 ya está ligeramente por encima del 50%, con <span class="math inline">\(n =\)</span> 30 es del 71%, y con <span class="math inline">\(n =\)</span> 40 alcanza el 90%.</p>
-<p>Para realizar los cálculos consideramos que un año tiene 365 días (ignoramos los bisiestos) y que la probabilidad de nacer es la misma para todos los días del año. Empezaremos calculando la probabilidad de que todos los integrantes de un grupo de <span class="math inline">\(n = 2, 3, \cdots\)</span> personas hayan nacido en días diferentes (tabla <span class="math inline">\(\ref{cumpleaños}\)</span>).</p>
-<hr>
-<p>Aquí la tabla ***************</p>
+<p>Para realizar los cálculos consideramos que un año tiene 365 días (ignoramos los bisiestos) y que la probabilidad de nacer es la misma para todos los días del año. Empezaremos calculando la probabilidad de que todos los integrantes de un grupo de <span class="math inline">\(n = 2, 3, \cdots\)</span> personas hayan nacido en días diferentes ((<a href="#tbl-Tabulacion">Tabla 4.1</a>)).</p>
+<div id="tbl-Tabulacion" class="tabla-wrapper42 anchored">
+
+<table class="tabla-0404 caption-top table">
+<caption>Tabla 4.4: Probabilidad (<em>Q</em>) de que <em>n</em> personas hayan nacido en días diferentes.</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 80%">
+</colgroup>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: center; vertical-align: middle;">Número de personas <em>n</em></th>
+<th data-quarto-table-cell-role="th" style="text-align: center; vertical-align: middle;">Probabilidad de haber nacido en días diferentes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2</td>
+<td>$$Q(2) = \frac{365}{365} \cdot \frac{364}{365} = 0.9973$$</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>La primera ha podido nacer cualquier día del año (365 casos favorables sobre 365 casos posibles) y la segunda también cualquier día menos el día que nació la primera.</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>$$Q(3) = \frac{365}{365} \cdot \frac{364}{365} \cdot \frac{363}{365} = 0.9918$$</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>El tercero ha podido nacer cualquier día menos los días que nacieron los otros dos.</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>$$Q(4) = \frac{365}{365} \cdot \frac{364}{365} \cdot \frac{363}{365} \cdot \frac{362}{365} = 0.9836$$</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>De forma análoga a los casos anteriores.</td>
+</tr>
+<tr class="odd">
+<td>$$\cdots$$</td>
+<td>$$\cdots$$</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td>$$Q(30) = \frac{365}{365} \cdot \frac{364}{365} \cdot \frac{363}{365} \cdot \frac{362}{365} \cdots \frac{336}{365} = 0.2937$$</td>
+</tr>
+</tbody>
+</table>
+
+</div>
 <p>En un grupo de 30 personas solo se pueden dar dos situaciones: todos han nacido en días diferentes o, como mínimo, dos han nacido el mismo día, no pueden haber situaciones intermedias. Por tanto, si la probabilidad de que todos hayan nacido en días diferentes es <span class="math inline">\(Q(30) = 0.2937\)</span>, la de que dos o más hayan nacido el mismo día será: <span class="math display">\[ P(30) = 1- Q(30) = 1-0.2937 = 0.7063 \]</span></p>
 <p>Es inmediato deducir que la expresión general para <span class="math inline">\(P(n)\)</span> es: <span class="math display">\[P(n) = 1-Q(n) = 1- \frac{365!}{365^n(365-n)!} \]</span></p>
 <p>Con ayuda de una hoja de cálculo se puede contruir la curva que relaciona la probabilidad de coincidencia con el número de personas (<a href="#fig-probabilidadCoincidencia" class="quarto-xref">Figura&nbsp;<span>4.9</span></a>).</p>

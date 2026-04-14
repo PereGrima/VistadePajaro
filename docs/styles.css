@@ -440,7 +440,7 @@ h1, h2, h3, h4, h5, h6 {
   caption-side: top;
   text-align: center;
   font-size: 1em;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   line-height: 1.3; 
   color: #666 !important;
 }
@@ -499,7 +499,7 @@ h1, h2, h3, h4, h5, h6 {
   caption-side: top;
   text-align: center;
   font-size: 1em;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   line-height: 1.5
   color: #666 !important;
 }
@@ -535,6 +535,76 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid #000;
 }
 /*** Esto último es para que no salga raya entre las dos primeras líneas ***/
+
+/*** Tabla en 4.4  ***/
+
+.tabla-0404 {
+  margin: auto;
+  width: 100%;
+  max-width: 600px;
+  font-size: 1em;
+  vertical-align: middle;
+}
+
+.tabla-0404 caption {
+  caption-side: top;
+  text-align: left;
+  font-size: 1em;
+  padding-bottom: 15px;
+  color: #666 !important;
+}
+
+.tabla-0404 th {
+    font-weight: 400;
+    text-align: left;    /* celdas centradas */
+    border-bottom: 1px solid #000;
+    padding-top: 50px; 
+    padding-bottom: 50px;      /* altura de fila más pequeña */
+    line-height: 1.2;      /* compacta como en LaTeX */
+    font-size: 1em;
+}
+
+.tabla-0404 td {
+  font-size: 0.95em;      /* equivalente a \footnotesize */
+  text-align: left;    /* celdas centradas */
+  line-height: 1.3;      /* compacta como en LaTeX */
+  border: none;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+.tabla-0404 td mjx-container[display="true"] {
+  display: inline-block !important;
+  margin: 0.2em 0 !important;
+}
+
+.tabla-0404 tr:first-child th {
+  border-top: 1px solid #000;
+  padding-top: 6px;
+  padding-bottom: 8px;
+}
+
+/* EXCEPCIÓN: primera columna */
+.tabla-0404 th:first-child,
+.tabla-0404 td:first-child {
+  text-align: center;
+}
+
+.tabla-0404 tr:nth-child(2) td,
+  tr:nth-child(4) td,
+  tr:nth-child(6) td,
+tr:nth-child(7) td´{
+  padding-top: 0px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid black;
+}
+
+.tabla-0404 tr:nth-child(8) td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
 
 /* ======Tabla Wrapper====== */
 

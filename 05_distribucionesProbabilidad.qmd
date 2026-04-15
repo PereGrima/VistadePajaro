@@ -525,12 +525,62 @@ Adolphe Quetelet (1796-1874), uno de los pioneros de la estadística moderna, de
 Llamar "normal" a esta distribución no fue muy buena idea. Ocupa un lugar muy destacado en la descripción de la variabilidad aleatoria, pero es tan normal como muchas otras. Para evitar ese nombre algunos textos se refieren a ella como distribución Gaussiana. Nosotros le llamamos Normal, pero escrito en mayúsculas, como nombre propio.
 :::
 
+### Descripción y geometría {.unnumbered}
 
+La función que describe la distribución Normal, es decir, su función densidad de probabilidad, es[^8]:
+$$f(x) = \frac{1}{\sigma\sqrt{2 \pi}} e^{-\frac{(x-\mu)^2}{2 \sigma^2}} $$
+[^8]: El primero en deducirla, como límite de la distribución binomial cuando $n \rightarrow \infty$ y $ 0 < p < 1$,  fue el  matemático francés Abraham de Moivre en 1733. Posteriormente, Gauss puso de manifiesto su utilidad para describir los errores de medición y su nombre quedó asociado a esta distribución. La deducción no es elemental, los interesados le pueden dar un primer vistazo consultando la Wikipedia: "De Moivre–Laplace theorem">>", en inglés
 
+Puede observarse que $f(x)$ solo depende de dos parámetros: $\mu$ y $\sigma$, siendo $ \mathrm E(X)=\mu$ y $ \mathrm V(X)=\sigma^2$, por tanto, esos dos parámetros son su media ($\mu$) y su desviación típica ($\sigma$). La notación que usamos para referirnos a una variable aleatoria con distribución Normal es: $X \sim \text{N} (\mu; \sigma)$. 
 
+La distribución está centrada en $X=\mu$ y el valor de $\sigma$ coincide con la distancia entre $\mu$ y los valores de $x$ donde se encuentran los puntos de inflexión de la curva (pasa de cóncava a convexa)[^9], tal como se indica en la [@fig-geomNormal]. Observe que en las distribuciones de la derecha, solo la de arriba representa una distribución con $\sigma = 2$. Cuando se calculan probabilidades vale la pena realizar un pequeño dibujo de la distribución y marcar la zona correspondiente al área que se está buscando. Si el dibujo se ha realizado manteniendo las proporciones que debe tener (naturalmente, no hace falta que sea muy exacto) la primera evaluación realizada a la vista de ese esquema debe ser coherente con el resultado de los cálculos.
 
+[^9]: Que está centrada en $\mu$ es fácil de deducir a la vista de su función densidad de probabilidad, ya que el valor de $x$ solo aparece en el exponente de $e$ de la forma $(x-\mu)^2$ de manera que las diferencias respecto a $\mu$ producen el mismo resultado tanto si son positivas como negativas. También es fácil deducir que el máximo de $f(x)$ está en $X=\mu$ ya que en este caso el exponente de $e$ --que es negativo-- es igual a cero. La demostración de que tiene puntos de inflexión en $\mu \pm \sigma$ no es tan evidente, se trata de un problema de derivación de funciones, sencillo pero un poco farragoso, que se puede ver [aquí](https://statproofbook.github.io/P/norm-infl.html).
 
+![Desviación típica en una distribución Normal. A la derecha, si se pretende representar una distribución con $\sigma = 2$, la de abajo está claramente mal dibujada.](Figuras/f0511_geomNormal.png){#fig-geomNormal .fig-normal3 fig-align="center" width="90%"}
 
+Si dos distribuciones tienen la misma desviación típica, $\sigma$, tienen también la misma forma y deslizándolas sobre el eje de las $x$ se pueden superponer. Si tienen la misma media, $\mu$ pero distinta $\sigma$ están centradas en el mismo valor, pero la de menor $\sigma$ se verá más esbelta ([@fig-Normales]). 
 
+![Desviación típica en una distribución Normal. A la derecha, si se pretende representar una distribución con $\sigma = 2$, la de abajo está claramente mal dibujada.](Figuras/f0512_Normales.png){#fig-Normales .fig-normal3 fig-align="center" width="90%"}
 
+::: callout-note
+## El área bajo la campana siempre debe ser igual a 1.
+
+Cuando se representan dos distribuciones en los mismos ejes	o con la misma escala, si una es más alta debe ser más estrecha, y si es más baja será más ancha, tal como aparecen en la [@fig-Normales]. En todos los casos el área que encierran debe ser la misma e igual a 1.
+:::
+
+### Importancia {.unnumbered}
+
+Este patrón de variabilidad se puede observar en ámbitos que van desde las medidas del cuerpo humano hasta los valores que toman ciertas características de los productos a la salida de su proceso de producción. Ejemplos de variables que es razonable considerar que siguen una distribución Normal son:
+
+-   El peso de los bebés al nacer, estratificado según sean niños o niñas. También, por ejemplo, la estatura a los 10 años o cuando son adultos.	
+-   El peso real del contenido de los productos envasados (no todos los paquetes de azúcar de 1 kg pesan exactamente $1\,000.00$ g).
+	
+-   Valores de determinadas dimensiones u otras características mecánicas (dureza, resistencia,...) de un lote de piezas fabricadas.
+	
+-   Errores de medición. Cuando medimos una magnitud física, el valor que obtenemos no necesariamente coincide con el valor real de la magnitud que estamos midiendo. Influye el aparato de medida --que no es perfecto--, la habilidad del que mide y, quizá también, las condiciones ambientales. 
+	
+Seguramente el ejemplo al que más recurrimos en las clases de estadística es el de la distribución de las estaturas: la mayoría se encuentra cerca del valor medio y, cuanto más nos alejamos de ese valor, menor es su frecuencia de aparición. Un ejemplo clásico lo constituyen los datos recopilados por Karl Pearson (1857-1936) sobre la estatura de 1375 mujeres y la de una de las hijas adultas de cada una de ellas[^10]. Los histogramas de las estaturas de madres e hijas se encuentran en la [@fig-Normales]. Puede observarse que ambos se adaptan muy bien a la distribución Normal.
+
+[^10]: Información detallada sobre este conjunto de datos y sobre como obtenerlos se encuentra en: S. Weisberg: "Applied Linear Regression" 4ª.edición (2014). Ed. Wiley, pág. 2. 
+
+![Histogramas de las estaturas de 1375 mujeres y también de las de una hija de cada una de ellas. Datos recopilados por Karl Pearson a finales del siglo XIX.](Figuras/f0513_PearsonData.png){#fig-PearsonData .fig-normal3 fig-align="center" width="90%"}
+
+Pero, además de por explicar muy bien un tipo de variabilidad que observamos en nuestro entorno, hay otra razón por la que la distribución Normal es muy importante: a partir de cierto tamaño de muestra, su media --que es la materia prima con que trabajamos en muchos análisis estadísticos-- puede considerarse una variable aleatoria con distribución Normal, con independencia de cuál sea la distribución de la que provengan los datos de esa muestra.
+
+Ya hemos visto (figura \ref{sumaUniformes}) que la suma de variables aleatorias con distribución uniforme va tomando el aspecto de una distribución Normal a medida que aumenta el número de sumandos. Lo mismo ocurre con la media, que no es más que esa suma dividida por una constante.
+
+Podemos repetir este análisis, pero ahora con la variable <<resultado obtenido al lanzar un dado>>, que sigue una distribución equiprobable. Esta es una distribución totalmente distinta de la Normal, no solo todos los valores tienen la misma probabilidad de ocurrir, sino que, además, es una variable discreta. Esta distribución está representada en el primer diagrama de la figura [@fig-sumaEquiprobable]; en el segundo tenemos la distribución de los valores medios que se pueden obtener al lanzar dos dados. En este caso ya no todos los posibles valores tienen la misma probabilidad de salir: para que la media sea igual a uno tienen que salir dos unos, lo cual es menos probable que obtener una media de 3,5, ya que hay más resultados que conducen a ese valor. Si lanzamos cuatro dados todavía es más difícil obtener valores en los extremos. Si consideramos la media de los valores obtenidos al lanzar ocho dados, el perfil de la campana ya es claramente reconocible.
+
+![La distribución de la media de valores de una distribución equiprobable tiende a la distribución Normal a medida que aumenta el tamaño de la muestra.](Figuras/f0514_sumaEquiprobable.png){#fig-sumaEquiprobable .fig-normal3 fig-align="center" width="90%"}
+
+::: callout-note
+## El teorema central del límite
+
+La formalización de que la suma de variables aleatorias independientes de cualquier distribución tiende a la  Normal a medida que aumenta el número de sumandos se conoce con el nombre de Teorema Central del Límite. A veces se escribe "Teorema del Límite Central", pero "Central" es un adjetivo del teorema, en el sentido de principal, o fundamental, como cuando se habla de la estación eentral o el banco central. El límite es como todos los límites.
+:::
+
+### Cálculo de probabilidades en la distribución Normal {.unnumbered}
+
+Como ocurre con todas las variables aleatorias continuas, la probabilidad de que tome valores dentro de un intervalo es igual al área bajo la curva de su función densidad de probabilidad en ese intervalo (figura \ref{probNormal}).
 

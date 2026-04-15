@@ -324,7 +324,12 @@ window.Quarto = {
   <li><a href="#binomial-y-poisson" id="toc-binomial-y-poisson" class="nav-link" data-scroll-target="#binomial-y-poisson">Binomial y Poisson</a></li>
   </ul></li>
   <li><a href="#distribución-uniforme" id="toc-distribución-uniforme" class="nav-link" data-scroll-target="#distribución-uniforme"><span class="header-section-number">5.4</span> Distribución uniforme</a></li>
-  <li><a href="#distribución-normal" id="toc-distribución-normal" class="nav-link" data-scroll-target="#distribución-normal"><span class="header-section-number">5.5</span> Distribución Normal</a></li>
+  <li><a href="#distribución-normal" id="toc-distribución-normal" class="nav-link" data-scroll-target="#distribución-normal"><span class="header-section-number">5.5</span> Distribución Normal</a>
+  <ul class="collapse">
+  <li><a href="#descripción-y-geometría" id="toc-descripción-y-geometría" class="nav-link" data-scroll-target="#descripción-y-geometría">Descripción y geometría</a></li>
+  <li><a href="#importancia" id="toc-importancia" class="nav-link" data-scroll-target="#importancia">Importancia</a></li>
+  <li><a href="#cálculo-de-probabilidades-en-la-distribución-normal" id="toc-cálculo-de-probabilidades-en-la-distribución-normal" class="nav-link" data-scroll-target="#cálculo-de-probabilidades-en-la-distribución-normal">Cálculo de probabilidades en la distribución Normal</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -966,8 +971,100 @@ Figura&nbsp;5.10: Histograma y distribución Normal que mejor se adapta a los da
 <p>Llamar “normal” a esta distribución no fue muy buena idea. Ocupa un lugar muy destacado en la descripción de la variabilidad aleatoria, pero es tan normal como muchas otras. Para evitar ese nombre algunos textos se refieren a ella como distribución Gaussiana. Nosotros le llamamos Normal, pero escrito en mayúsculas, como nombre propio.</p>
 </div>
 </div>
+<section id="descripción-y-geometría" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="descripción-y-geometría">Descripción y geometría</h3>
+<p>La función que describe la distribución Normal, es decir, su función densidad de probabilidad, es[^8]: <span class="math display">\[f(x) = \frac{1}{\sigma\sqrt{2 \pi}} e^{-\frac{(x-\mu)^2}{2 \sigma^2}} \]</span> [^8]: El primero en deducirla, como límite de la distribución binomial cuando <span class="math inline">\(n \rightarrow \infty\)</span> y $ 0 &lt; p &lt; 1$, fue el matemático francés Abraham de Moivre en 1733. Posteriormente, Gauss puso de manifiesto su utilidad para describir los errores de medición y su nombre quedó asociado a esta distribución. La deducción no es elemental, los interesados le pueden dar un primer vistazo consultando la Wikipedia: “De Moivre–Laplace theorem”&gt;&gt;“, en inglés</p>
+<p>Puede observarse que <span class="math inline">\(f(x)\)</span> solo depende de dos parámetros: <span class="math inline">\(\mu\)</span> y <span class="math inline">\(\sigma\)</span>, siendo $ E(X)=$ y $ V(X)=^2<span class="math inline">\(, por tanto, esos dos parámetros son su media (\)</span><span class="math inline">\() y su desviación típica (\)</span>$). La notación que usamos para referirnos a una variable aleatoria con distribución Normal es: <span class="math inline">\(X \sim \text{N} (\mu; \sigma)\)</span>.</p>
+<p>La distribución está centrada en <span class="math inline">\(X=\mu\)</span> y el valor de <span class="math inline">\(\sigma\)</span> coincide con la distancia entre <span class="math inline">\(\mu\)</span> y los valores de <span class="math inline">\(x\)</span> donde se encuentran los puntos de inflexión de la curva (pasa de cóncava a convexa)<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>, tal como se indica en la <a href="#fig-geomNormal" class="quarto-xref">Figura&nbsp;<span>5.11</span></a>. Observe que en las distribuciones de la derecha, solo la de arriba representa una distribución con <span class="math inline">\(\sigma = 2\)</span>. Cuando se calculan probabilidades vale la pena realizar un pequeño dibujo de la distribución y marcar la zona correspondiente al área que se está buscando. Si el dibujo se ha realizado manteniendo las proporciones que debe tener (naturalmente, no hace falta que sea muy exacto) la primera evaluación realizada a la vista de ese esquema debe ser coherente con el resultado de los cálculos.</p>
+<div id="fig-geomNormal" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-geomNormal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras/f0511_geomNormal.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-geomNormal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;5.11: Desviación típica en una distribución Normal. A la derecha, si se pretende representar una distribución con <span class="math inline">\(\sigma = 2\)</span>, la de abajo está claramente mal dibujada.
+</figcaption>
+</figure>
+</div>
+<p>Si dos distribuciones tienen la misma desviación típica, <span class="math inline">\(\sigma\)</span>, tienen también la misma forma y deslizándolas sobre el eje de las <span class="math inline">\(x\)</span> se pueden superponer. Si tienen la misma media, <span class="math inline">\(\mu\)</span> pero distinta <span class="math inline">\(\sigma\)</span> están centradas en el mismo valor, pero la de menor <span class="math inline">\(\sigma\)</span> se verá más esbelta (<a href="#fig-Normales" class="quarto-xref">Figura&nbsp;<span>5.12</span></a>).</p>
+<div id="fig-Normales" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Normales-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras/f0512_Normales.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Normales-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;5.12: Desviación típica en una distribución Normal. A la derecha, si se pretende representar una distribución con <span class="math inline">\(\sigma = 2\)</span>, la de abajo está claramente mal dibujada.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>El área bajo la campana siempre debe ser igual a 1.
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Cuando se representan dos distribuciones en los mismos ejes o con la misma escala, si una es más alta debe ser más estrecha, y si es más baja será más ancha, tal como aparecen en la <a href="#fig-Normales" class="quarto-xref">Figura&nbsp;<span>5.12</span></a>. En todos los casos el área que encierran debe ser la misma e igual a 1.</p>
+</div>
+</div>
+</section>
+<section id="importancia" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="importancia">Importancia</h3>
+<p>Este patrón de variabilidad se puede observar en ámbitos que van desde las medidas del cuerpo humano hasta los valores que toman ciertas características de los productos a la salida de su proceso de producción. Ejemplos de variables que es razonable considerar que siguen una distribución Normal son:</p>
+<ul>
+<li><p>El peso de los bebés al nacer, estratificado según sean niños o niñas. También, por ejemplo, la estatura a los 10 años o cuando son adultos.<br>
+</p></li>
+<li><p>El peso real del contenido de los productos envasados (no todos los paquetes de azúcar de 1 kg pesan exactamente <span class="math inline">\(1\,000.00\)</span> g).</p></li>
+<li><p>Valores de determinadas dimensiones u otras características mecánicas (dureza, resistencia,…) de un lote de piezas fabricadas.</p></li>
+<li><p>Errores de medición. Cuando medimos una magnitud física, el valor que obtenemos no necesariamente coincide con el valor real de la magnitud que estamos midiendo. Influye el aparato de medida –que no es perfecto–, la habilidad del que mide y, quizá también, las condiciones ambientales.</p></li>
+</ul>
+<p>Seguramente el ejemplo al que más recurrimos en las clases de estadística es el de la distribución de las estaturas: la mayoría se encuentra cerca del valor medio y, cuanto más nos alejamos de ese valor, menor es su frecuencia de aparición. Un ejemplo clásico lo constituyen los datos recopilados por Karl Pearson (1857-1936) sobre la estatura de 1375 mujeres y la de una de las hijas adultas de cada una de ellas<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>. Los histogramas de las estaturas de madres e hijas se encuentran en la <a href="#fig-Normales" class="quarto-xref">Figura&nbsp;<span>5.12</span></a>. Puede observarse que ambos se adaptan muy bien a la distribución Normal.</p>
+<div id="fig-PearsonData" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-PearsonData-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras/f0513_PearsonData.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-PearsonData-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;5.13: Histogramas de las estaturas de 1375 mujeres y también de las de una hija de cada una de ellas. Datos recopilados por Karl Pearson a finales del siglo XIX.
+</figcaption>
+</figure>
+</div>
+<p>Pero, además de por explicar muy bien un tipo de variabilidad que observamos en nuestro entorno, hay otra razón por la que la distribución Normal es muy importante: a partir de cierto tamaño de muestra, su media –que es la materia prima con que trabajamos en muchos análisis estadísticos– puede considerarse una variable aleatoria con distribución Normal, con independencia de cuál sea la distribución de la que provengan los datos de esa muestra.</p>
+<p>Ya hemos visto (figura <span class="math inline">\(\ref{sumaUniformes}\)</span>) que la suma de variables aleatorias con distribución uniforme va tomando el aspecto de una distribución Normal a medida que aumenta el número de sumandos. Lo mismo ocurre con la media, que no es más que esa suma dividida por una constante.</p>
+<p>Podemos repetir este análisis, pero ahora con la variable &lt;<resultado obtenido="" al="" lanzar="" un="" dado="">&gt;, que sigue una distribución equiprobable. Esta es una distribución totalmente distinta de la Normal, no solo todos los valores tienen la misma probabilidad de ocurrir, sino que, además, es una variable discreta. Esta distribución está representada en el primer diagrama de la figura <a href="#fig-sumaEquiprobable" class="quarto-xref">Figura&nbsp;<span>5.14</span></a>; en el segundo tenemos la distribución de los valores medios que se pueden obtener al lanzar dos dados. En este caso ya no todos los posibles valores tienen la misma probabilidad de salir: para que la media sea igual a uno tienen que salir dos unos, lo cual es menos probable que obtener una media de 3,5, ya que hay más resultados que conducen a ese valor. Si lanzamos cuatro dados todavía es más difícil obtener valores en los extremos. Si consideramos la media de los valores obtenidos al lanzar ocho dados, el perfil de la campana ya es claramente reconocible.</resultado></p>
+<div id="fig-sumaEquiprobable" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sumaEquiprobable-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras/f0514_sumaEquiprobable.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sumaEquiprobable-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;5.14: La distribución de la media de valores de una distribución equiprobable tiende a la distribución Normal a medida que aumenta el tamaño de la muestra.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>El teorema central del límite
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La formalización de que la suma de variables aleatorias independientes de cualquier distribución tiende a la Normal a medida que aumenta el número de sumandos se conoce con el nombre de Teorema Central del Límite. A veces se escribe “Teorema del Límite Central”, pero “Central” es un adjetivo del teorema, en el sentido de principal, o fundamental, como cuando se habla de la estación eentral o el banco central. El límite es como todos los límites.</p>
+</div>
+</div>
+</section>
+<section id="cálculo-de-probabilidades-en-la-distribución-normal" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="cálculo-de-probabilidades-en-la-distribución-normal">Cálculo de probabilidades en la distribución Normal</h3>
+<p>Como ocurre con todas las variables aleatorias continuas, la probabilidad de que tome valores dentro de un intervalo es igual al área bajo la curva de su función densidad de probabilidad en ese intervalo (figura <span class="math inline">\(\ref{probNormal}\)</span>).</p>
 
 
+</section>
 </section>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
@@ -986,6 +1083,8 @@ Figura&nbsp;5.10: Histograma y distribución Normal que mejor se adapta a los da
 <li id="fn5"><p>Se puede consultar <a href="https://archive.org/details/dasgesetzderklei00bortrich">en línea</a>.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn6"><p>Si los intervalos en que están definidas tienen distinta anchura, la distribución de la suma tiene forma de trapecio isósceles. La zona plana de <span class="math inline">\(f(x)\)</span> empieza en <span class="math inline">\(a+c+\text{min}(b-a, \; d-c)\)</span>.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn7"><p>Estos datos se pueden ver en: Paul F. Velleman y David C. Hoaglin (1981): “Applications, Basics, and Computing of Exploratory Data Analysis” Duxbury Press, pág. 259. <a href="https://books.google.es/books?id=yDMoAAAAYAAJ">Publicación original</a>, ver página 400.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>Que está centrada en <span class="math inline">\(\mu\)</span> es fácil de deducir a la vista de su función densidad de probabilidad, ya que el valor de <span class="math inline">\(x\)</span> solo aparece en el exponente de <span class="math inline">\(e\)</span> de la forma <span class="math inline">\((x-\mu)^2\)</span> de manera que las diferencias respecto a <span class="math inline">\(\mu\)</span> producen el mismo resultado tanto si son positivas como negativas. También es fácil deducir que el máximo de <span class="math inline">\(f(x)\)</span> está en <span class="math inline">\(X=\mu\)</span> ya que en este caso el exponente de <span class="math inline">\(e\)</span> –que es negativo– es igual a cero. La demostración de que tiene puntos de inflexión en <span class="math inline">\(\mu \pm \sigma\)</span> no es tan evidente, se trata de un problema de derivación de funciones, sencillo pero un poco farragoso, que se puede ver <a href="https://statproofbook.github.io/P/norm-infl.html">aquí</a>.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>Información detallada sobre este conjunto de datos y sobre como obtenerlos se encuentra en: S. Weisberg: “Applied Linear Regression” 4ª.edición (2014). Ed. Wiley, pág. 2.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 

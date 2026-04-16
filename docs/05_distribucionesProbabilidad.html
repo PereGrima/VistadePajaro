@@ -333,8 +333,8 @@ window.Quarto = {
   <li><a href="#de-la-binomial-a-la-normal-a-través-del-quincunx" id="toc-de-la-binomial-a-la-normal-a-través-del-quincunx" class="nav-link" data-scroll-target="#de-la-binomial-a-la-normal-a-través-del-quincunx">De la binomial a la Normal a través del Quincunx</a></li>
   <li><a href="#la-distribución-normal-como-aproximación-a-la-binomial" id="toc-la-distribución-normal-como-aproximación-a-la-binomial" class="nav-link" data-scroll-target="#la-distribución-normal-como-aproximación-a-la-binomial">La distribución Normal como aproximación a la binomial</a></li>
   </ul></li>
-  <li><a href="#apéndice-5.a-por-qué-z-sim-textn0-1" id="toc-apéndice-5.a-por-qué-z-sim-textn0-1" class="nav-link" data-scroll-target="#apéndice-5.a-por-qué-z-sim-textn0-1">Apéndice 5.A: ¿Por qué <span class="math inline">\(Z \sim \text{N}(0; 1)\)</span>?</a></li>
-  <li><a href="#apéndice-5.a-esperanza-y-varianza-de-una-variable-con-distribución-binomial" id="toc-apéndice-5.a-esperanza-y-varianza-de-una-variable-con-distribución-binomial" class="nav-link" data-scroll-target="#apéndice-5.a-esperanza-y-varianza-de-una-variable-con-distribución-binomial">Apéndice 5.A: Esperanza y varianza de una variable con distribución binomial</a></li>
+  <li><a href="#apéndice-5.a-por-qué-bastan-las-tablas-de-la-z-sim-textn0-1" id="toc-apéndice-5.a-por-qué-bastan-las-tablas-de-la-z-sim-textn0-1" class="nav-link" data-scroll-target="#apéndice-5.a-por-qué-bastan-las-tablas-de-la-z-sim-textn0-1">Apéndice 5.A: ¿Por qué bastan las tablas de la <span class="math inline">\(Z \sim \text{N}(0; 1)\)</span>?</a></li>
+  <li><a href="#apéndice-5.b-esperanza-y-varianza-de-una-variable-con-distribución-binomial" id="toc-apéndice-5.b-esperanza-y-varianza-de-una-variable-con-distribución-binomial" class="nav-link" data-scroll-target="#apéndice-5.b-esperanza-y-varianza-de-una-variable-con-distribución-binomial">Apéndice 5.B: Esperanza y varianza de una variable con distribución binomial</a></li>
   </ul>
 </nav>
     </div>
@@ -1230,8 +1230,8 @@ Figura&nbsp;5.19: Probabilidades en una distribución binomial aproximadas a tra
 </div>
 </section>
 </section>
-<section id="apéndice-5.a-por-qué-z-sim-textn0-1" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="apéndice-5.a-por-qué-z-sim-textn0-1">Apéndice 5.A: ¿Por qué <span class="math inline">\(Z \sim \text{N}(0; 1)\)</span>?</h2>
+<section id="apéndice-5.a-por-qué-bastan-las-tablas-de-la-z-sim-textn0-1" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="apéndice-5.a-por-qué-bastan-las-tablas-de-la-z-sim-textn0-1">Apéndice 5.A: ¿Por qué bastan las tablas de la <span class="math inline">\(Z \sim \text{N}(0; 1)\)</span>?</h2>
 <p>Aunque las tablas estadísticas ya son algo del pasado, es interesante ver por qué habiendo infinitas distribuciones Normales (tantas como parejas <span class="math inline">\(\mu\)</span>, $$) basta la tabla de solo una para poder calcular probabilidades en todas ellas.</p>
 <p>Lo veremos con razonamientos básicamente geométricos. Sea <span class="math inline">\(X \sim \text{N}(\mu; \sigma)\)</span> y deseamos calcular <span class="math inline">\(P(X&gt;x)\)</span>. Si definimos <span class="math inline">\(Y = X - \mu\)</span>, está claro que <span class="math inline">\(Y \sim N(0; \sigma)\)</span>, y con ayuda de la figura <a href="#fig-Normal01_1" class="quarto-xref">Figura&nbsp;<span>5.20</span></a> es fácil observar que <span class="math inline">\(P(X&gt;x)=P(Y&gt;x-\mu)\)</span> ya que la forma de las dos distribuciones es idéntica y al punto <span class="math inline">\(x\)</span> en la distribución de <span class="math inline">\(X\)</span> le corresponde <span class="math inline">\(x-\mu\)</span> en la de <span class="math inline">\(Y\)</span>.</p>
 <div id="fig-Normal01_1" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
@@ -1270,8 +1270,8 @@ Figura&nbsp;5.22: Transformación de <span class="math inline">\(Y \sim N(0; \si
 </div>
 <p>Si la forma de las campanas es la misma, y solo hemos sustituido el punto <span class="math inline">\(x - \mu\)</span> por el <span class="math inline">\(\frac{x - \mu}{\sigma}\)</span>, resulta claro que <span class="math inline">\(P \left( Z &gt; \frac{x -\mu}{\sigma} \right) = P\left( Y &gt; X - \mu \right)\)</span> y, por tanto, <span class="math inline">\(P\left( X&gt;x\right) = P\left(Z&gt; \frac{x-\mu}{\sigma}\right)\)</span>.</p>
 </section>
-<section id="apéndice-5.a-esperanza-y-varianza-de-una-variable-con-distribución-binomial" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="apéndice-5.a-esperanza-y-varianza-de-una-variable-con-distribución-binomial">Apéndice 5.A: Esperanza y varianza de una variable con distribución binomial</h2>
+<section id="apéndice-5.b-esperanza-y-varianza-de-una-variable-con-distribución-binomial" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="apéndice-5.b-esperanza-y-varianza-de-una-variable-con-distribución-binomial">Apéndice 5.B: Esperanza y varianza de una variable con distribución binomial</h2>
 <p>Una variable aleatoria <span class="math inline">\(Y\)</span> sigue una distribución de Bernoulli cuando solo puede tomar dos valores: 1 (“éxito”) con probabilidad <span class="math inline">\(p\)</span> y 0 (“fracaso”) con probabilidad <span class="math inline">\(1-p\)</span>. En la tabla <span class="math inline">\(\ref{bernouilli}\)</span> se deduce que <span class="math inline">\(E(Y) = p\)</span> y <span class="math inline">\(V(Y) = p(1-p)\)</span>.</p>
 <div id="tbl-Tabulacion" class="tabla-wrapper42 anchored">
 

@@ -708,7 +708,7 @@ La [@fig-aproxBinoNormal] muestra las probabilidades correspondientes a algunos 
 Dicen los expertos que la esfera es una de las formas geométricas más abundantes en el universo; pero ¿cuántos objetos hay que sean exactamente una esfera tal como se define en matemáticas? Ninguno. Entonces, si no hay esferas, ¿por qué estudiamos las fórmulas de su área y su volumen? Porque dan resultados suficientemente aproximados a efectos prácticos. Lo mismo ocurre con las distribuciones de probabilidad. Seguramente nuestros datos no siguen "exactamente" el modelo que se supone (las estaturas no siguen "exactamente" una distribución Normal) pero permiten calcular probabilidades y realizar previsiones suficientemente aproximadas a efectos prácticos.
 :::
 
-## Apéndice 5.A: ¿Por qué  $Z \sim \text{N}(0; 1)$? {.unnumbered}
+## Apéndice 5.A: ¿Por qué  bastan las tablas de la $Z \sim \text{N}(0; 1)$? {.unnumbered}
 
 Aunque las tablas estadísticas ya son algo del pasado, es interesante ver por qué habiendo infinitas distribuciones Normales (tantas como parejas $\mu$, $\sigma $) basta la tabla de solo una para poder calcular probabilidades en todas ellas.
 
@@ -734,7 +734,7 @@ Si hacemos $k= \frac{1}{\sigma}$ tendremos $Z = \frac{Y}{\sigma}$, o lo que es l
 
 Si la forma de las campanas es la misma, y solo hemos sustituido el punto $x - \mu$ por el $\frac{x - \mu}{\sigma}$, resulta claro que $P \left( Z > \frac{x -\mu}{\sigma} \right) = P\left( Y > X - \mu \right)$ y, por tanto, $P\left( X>x\right) = P\left(Z> \frac{x-\mu}{\sigma}\right)$.
 
-## Apéndice 5.A: Esperanza y varianza de una variable con distribución binomial {.unnumbered}
+## Apéndice 5.B: Esperanza y varianza de una variable con distribución binomial {.unnumbered}
 
 Una variable aleatoria $Y$ sigue una distribución de Bernoulli \index{Distribución! de Bernouilli} cuando solo puede tomar dos valores: 1 ("éxito") con probabilidad $p$ y 0 ("fracaso") con probabilidad $1-p$. En la tabla \ref{bernouilli} se deduce que $E(Y) = p$ y $V(Y) = p(1-p)$.
 

@@ -829,6 +829,51 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid #666;
 }
 
+/*** Tabla en 5.6  ***/
+
+.tabla-0506 {
+  margin: auto;
+  width: 100%;
+  max-width: 600px;
+  font-size: 1em;
+  vertical-align: middle;
+  border-collapse: collapse;
+}
+
+.tabla-0506 caption {
+  caption-side: top;
+  text-align: center;
+  font-size: 1em;
+  padding-bottom: 15px;
+  margin-top: 5px;
+  line-height: 1.15;
+  color: #666 !important;
+}
+
+.tabla-0506 th {
+    font-weight: 400;
+    text-align: center;    /* celdas centradas */
+    padding-top: 5px; 
+    padding-bottom: 5px;      /* altura de fila más pequeña */
+    vertical-align: middle;
+    line-height: 1.15;      /* compacta como en LaTeX */
+    font-size: 1em;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+}
+
+.tabla-0506 td {
+  font-size: 0.96em;      /* equivalente a \footnotesize */
+  text-align: center;    /* celdas centradas */
+  padding: 3px 3px;      /* altura de fila más pequeña */
+  line-height: 1.15;      /* compacta como en LaTeX */
+  border: none;
+  
+}
+
+.tabla-0506 tr:last-child td {
+  border-bottom: 1px solid #666;  
+}
 
 /* ======Tabla Wrapper====== */
 
@@ -895,6 +940,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tabla-wrapper_T0505 {
+  margin-top: 2ex;
+  margin-bottom: 4ex;
+}
+
+.tabla-wrapper_T0506 {
   margin-top: 2ex;
   margin-bottom: 4ex;
 }
@@ -980,6 +1030,18 @@ figure:has(img.fig-normal4) > figcaption {
   padding-bottom: 15px !important;
   color: #666 !important;
 }
+
+.fig-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.fig-row img {
+  width: 30%;
+}
+
+
 
 /* Tamaño de TODAS las endnotes (en HTML son .footnotes) */
 .footnotes {

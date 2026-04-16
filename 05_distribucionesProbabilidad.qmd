@@ -570,7 +570,7 @@ Pero, además de por explicar muy bien un tipo de variabilidad que observamos en
 
 Ya hemos visto (figura \ref{sumaUniformes}) que la suma de variables aleatorias con distribución uniforme va tomando el aspecto de una distribución Normal a medida que aumenta el número de sumandos. Lo mismo ocurre con la media, que no es más que esa suma dividida por una constante.
 
-Podemos repetir este análisis, pero ahora con la variable <<resultado obtenido al lanzar un dado>>, que sigue una distribución equiprobable. Esta es una distribución totalmente distinta de la Normal, no solo todos los valores tienen la misma probabilidad de ocurrir, sino que, además, es una variable discreta. Esta distribución está representada en el primer diagrama de la figura [@fig-sumaEquiprobable]; en el segundo tenemos la distribución de los valores medios que se pueden obtener al lanzar dos dados. En este caso ya no todos los posibles valores tienen la misma probabilidad de salir: para que la media sea igual a uno tienen que salir dos unos, lo cual es menos probable que obtener una media de 3,5, ya que hay más resultados que conducen a ese valor. Si lanzamos cuatro dados todavía es más difícil obtener valores en los extremos. Si consideramos la media de los valores obtenidos al lanzar ocho dados, el perfil de la campana ya es claramente reconocible.
+Podemos repetir este análisis, pero ahora con la variable <<resultado obtenido al lanzar un dado>>, que sigue una distribución equiprobable. Esta es una distribución totalmente distinta de la Normal, no solo todos los valores tienen la misma probabilidad de ocurrir, sino que, además, es una variable discreta. Esta distribución está representada en el primer diagrama de la [@fig-sumaEquiprobable]; en el segundo tenemos la distribución de los valores medios que se pueden obtener al lanzar dos dados. En este caso ya no todos los posibles valores tienen la misma probabilidad de salir: para que la media sea igual a uno tienen que salir dos unos, lo cual es menos probable que obtener una media de 3,5, ya que hay más resultados que conducen a ese valor. Si lanzamos cuatro dados todavía es más difícil obtener valores en los extremos. Si consideramos la media de los valores obtenidos al lanzar ocho dados, el perfil de la campana ya es claramente reconocible.
 
 ![La distribución de la media de valores de una distribución equiprobable tiende a la distribución Normal a medida que aumenta el tamaño de la muestra.](Figuras/f0514_sumaEquiprobable.png){#fig-sumaEquiprobable .fig-normal3 fig-align="center" width="90%"}
 
@@ -582,5 +582,115 @@ La formalización de que la suma de variables aleatorias independientes de cualq
 
 ### Cálculo de probabilidades en la distribución Normal {.unnumbered}
 
-Como ocurre con todas las variables aleatorias continuas, la probabilidad de que tome valores dentro de un intervalo es igual al área bajo la curva de su función densidad de probabilidad en ese intervalo (figura \ref{probNormal}).
+Como ocurre con todas las variables aleatorias continuas, la probabilidad de que tome valores dentro de un intervalo es igual al área bajo la curva de su función densidad de probabilidad en ese intervalo ([@fig-calProbNormal]).
+
+![Cálculo de probabilidades en la distribución Normal.](Figuras/f0515_calProbNormal.png){#fig-calProbNormal .fig-normal3 fig-align="center" width="100%"}
+
+En general, esas áreas se calculan integrando la función entre los límites establecidos, pero en el caso de la Normal esto no es posible, ya que su función densidad de probabilidad, $f(x)$, no tiene primitiva; es decir, no existe ninguna función cuya derivada sea $f(x)$. Naturalmente, se puede integrar por métodos numéricos, y los programas de *software* estadístico, las hojas de cálculo o las calculadoras avanzadas lo hacen sin ningún problema.
+
+::: callout-note
+## Si $\mathbf{X}$ es continua, $\mathbf{P(X>a) = P(X \geq a)}$
+
+Porque $\mathrm{P}(X=a)=0$. Análogamente, $\mathrm{P}(a \leq X \leq b) = \mathrm{P}(a < X < b)$.
+:::
+
+Cuando se buscan probabilidades hay que tener claro qué información proporciona el instrumento que se está utilizando. Las hojas de cálculo habituales dan probabilidades acumuladas hasta un valor (área a la izquierda de $x$). Si $X \sim \mathrm{N}(\mu=10; \sigma = 2)$ tenemos:
+
+
+-   $\text{P}(X < 7)$ <br> Probabilidad acumulada hasta el valor de $X = 7$.
+![](Figuras/f05sn_ProbNormal_1.png){#fig-calProbNormal .fig-normal3 fig-align="center" width="100%"}
+El cuarto valor dentro del paréntesis indica si se desea obtener la probabilidad acumulada (VERDADERO o 1) o el valor de la función densidad de probabilidad (FALSO o 0). Si se calculan probabilidades en una variable continua, siempre hay que poner 1. El valor de la función densidad de probabilidad solo interesa si queremos dibujar la curva de la campana.
+
+-   $\text{P}(X > 7)$ <br> Como el área total bajo la campana es igual a 1 y la variable solo puede ser mayor o menor que 7 (no hay posibilidades intermedias), podemos escribir: $\mathrm{P}(X > 7) = 1-  \mathrm{P}(X < 7)$
+![](Figuras/f05sn_ProbNormal_2.png){.fig-normal3 fig-align="center" width="100%"}	
+
+-   $\text{P}(8 < X < 13)$ <br> Es igual a $\text{P}(X < 13) - \text{P}(X < 8)$ 
+![](Figuras/f05sn_ProbNormal_3.png){.fig-normal3 fig-align="center" width="100%"}	
+
+::: callout-note
+## No es necesario dar tantos decimales
+
+Aunque los medios de cálculo pueden dar muchos decimales, no es necesario --ni conveniente-- darlos todos. Presentar muchos dígitos hace que la atención se disperse entre los que son importantes y los absolutamente irrelevantes.
+:::
+
+### La distribución Normal estandarizada: N(0; 1) {.unnumbered}
+
+Resulta que si $X \sim \text{N}(\mu; \sigma)$ entonces la nueva variable aleatoria:
+$$Z = \frac{X-\mu}{\sigma}$$
+sigue una distribución $\text{N}(0; 1)$, con independencia de cuáles sean los valores[^11] de $\mu$ y de $\sigma$. A esta distribución N(0;\;1) la llamamos Normal estandarizada y tiene unas propiedades que nos resultan muy útiles; en particular, resulta que (ver justificación en Apéndice 5.A):
+
+[^11]: $\displaystyle \text{E} \left ( \frac{X - \mu}{\sigma} \right) = \frac{1}{\sigma} \text{E} (X - \mu) = \frac{1}{\sigma} \left[  \text{E}(X)  - \text{E}(\mu) \right] = 0$, ya que: $\text{E}(X) \!= \! \mu$ y $\text{E}(\mu) \!= \! \mu$.
+$\displaystyle \text{V} \left ( \frac{X - \mu}{\sigma} \right) = \frac{1}{\sigma^2} \text{V} (X - \mu) = \frac{1}{\sigma^2} \left[  \text{V}(X)  - \text{V}(\mu) \right] = \frac{\sigma^2}{\sigma^2} = 1$, ya que: $\text{V}(X) \!= \! \sigma^2$ y $\text{V}(\mu) \!= \! 0$.
+También usamos la propiedad de que una combinación lineal de variables aleatorias con distribución Normal también sigue una Normal, pero la teoría necesaria para su demostración va más allá de un curso introductorio.
+
+$$\text{P}(X > x) = \text{P} \left ( Z > \frac{x - \mu}{\sigma} \right)$$
+Esto nos permite determinar probabilidades asociadas a cualquier variable con distribución Normal, teniendo tabuladas solo las de la distribución N(0; 1), que caben en una sola hoja. Por ejemplo, si $X \sim \text{N} (10; 2)$, para determinar la probabilidad de que $ X > 10.5$ hacemos:
+$$\text{P}(X>10.5) = \text{P} \left ( Z > \frac{10.5 - 10}{2} \right ) = \text{P}(Z>0.25) = 0,4013$$
+Las tablas ya apenas se usan para calcular probabilidades, pero usaremos esta propiedad de la distribución N(0; 1) en el capítulo 7, para introducir la expresión de los calcular intervalos de confianza.
+
+### De la binomial a la Normal a través del Quincunx {.unnumbered}
+
+Francis Galton (1822-1911) fue un científico con intereses muy variados, entre ellos la estadística. Entre sus muchas aportaciones se encuentra el diseño de un dispositivo conocido como *quincunx* (o máquina de Galton) que sirve para poner de manifiesto cómo emerge el patrón de variabilidad de la distribución Normal a partir de un movimiento aparentemente caótico.
+
+Consiste en un tablero dispuesto en posición vertical en cuya parte superior se coloca un conjunto de bolas que se van dejando caer a través de una zona de clavijas colocadas al tresbolillo  ([@fig-quincunx], izquierda). Al descender, las bolas van chocando contra las clavijas y tras cada choque caen a derecha o izquierda al azar, entrando finalmente en una zona de pequeños canales donde se van acumulando. Se observa que la mayoría de las bolas se acumulan en los canales más cercanos al punto donde se dejan caer, disminuyendo su frecuencia a medida que nos alejamos de ese punto, tanto por un lado como por el otro.
+
+En la derecha de la [@fig-quincunx] tenemos el esquema de una bola que va a caer por una zona de clavijas con 4 filas y que acabará en uno de los compartimientos numerados del 0 al 4. Calcular la probabilidad de que caiga en cada uno de ellos es fácil si lo relacionamos con el problema del número de caras que se obtienen al lanzar $n$ veces una moneda al aire. 
+
+En efecto, para que caiga en el compartimento 4 la bola tiene que rebotar siempre hacia la derecha. Como después de cada choque tiene una probabilidad del 50 % de ir para cada lado, la probabilidad de que esto ocurra es la misma que la de obtener 4 caras al lanzar 4 veces una moneda al aire.
+
+![Quincunx con finalidad didáctica y esquema de caida de una bola por un tresbolillo de 4 filas. [Origen foto](https://www.mathsisfun.com/data/quincunx.html)](Figuras/f0516_quincunx.png){#fig-quincunx .fig-normal3 fig-align="center" width="70%"}
+
+Para que caiga en el compartimento 3 debe ir tres veces hacia la derecha y una hacia la izquierda, no importa en que clavija vaya hacia un lado o hacia el otro. La probabilidad de que esto ocurra es la misma que la de tener 3 caras al lanzar 4 veces una moneda al aire. Para que caiga en el compartimento 2 debe rebotar dos veces a la derecha y otras dos a la izquierda. Tampoco importa en qué clavijas rebote hacia un lado o hacia otro, por lo que esta probabilidad es la misma que la de obtener 2 caras al lanzar la moneda 4 veces. Siguiendo con este razonamiento (o quedándonos aquí y asignando las probabilidades que faltan por simetría) obtenemos los valores de la [Tabla 5.6](#tbl-BinoPoisson).
+
+```{=html}
+<div id="tbl-Bola"; class="tabla-wrapper42b">
+<table class="tabla-0506">
+
+<div class="tabla-caption">
+  Tabla 5.6: Probabilidad de que la bola caiga en cada compartimento.
+</div>
+
+<colgroup>
+  <col style="width: 25%;">
+  <col style="width: 20%;">
+</colgroup>
+<thead>
+  <tr>
+    <th>Compartimento <br> (Núm. de caras)</th>
+    <th>Probabilidad</th>
+  </tr>
+</thead>
+
+<tbody>
+  <tr> 
+    <td>0</td> <td>0,0625</td> 
+  </tr>
+  <tr> 
+    <td>1</td> <td>0,25</td> 
+  </tr>
+  <tr> 
+    <td>2</td> <td>0,375</td> 
+  </tr>
+  <tr> 
+    <td>3</td> <td>0,25</td> 
+  </tr>
+  <tr> 
+    <td>4</td> <td>0,0625</td> 
+  </tr>
+</tbody>
+</table>
+</div>
+```
+
+Este argumento se puede generalizar para cualquier número de filas. En internet es fácil encontrar simuladores de *quincunx* como el de la figura \ref{simulador} que tiene 14 filas y en el que hemos dejado caer 3566 bolas ( aunque en el histograma solo suman 3552 porque 14 todavía están en camino). Podemos calcular las probabilidades de que caigan en cada compartimento y a partir de estas, comparar las frecuencias teóricas con las observadas.
+
+![Quincunx con finalidad didáctica y esquema de caida de una bola por un tresbolillo de 4 filas. [Origen foto](https://www.mathsisfun.com/data/quincunx.html)](Figuras/f0517_quincunxSimulador.png){#fig-quincunxSimulador .fig-normal3 fig-align="center" width="100%"}
+
+
+
+
+
+
+
+
 

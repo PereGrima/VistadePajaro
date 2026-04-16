@@ -329,6 +329,8 @@ window.Quarto = {
   <li><a href="#descripción-y-geometría" id="toc-descripción-y-geometría" class="nav-link" data-scroll-target="#descripción-y-geometría">Descripción y geometría</a></li>
   <li><a href="#importancia" id="toc-importancia" class="nav-link" data-scroll-target="#importancia">Importancia</a></li>
   <li><a href="#cálculo-de-probabilidades-en-la-distribución-normal" id="toc-cálculo-de-probabilidades-en-la-distribución-normal" class="nav-link" data-scroll-target="#cálculo-de-probabilidades-en-la-distribución-normal">Cálculo de probabilidades en la distribución Normal</a></li>
+  <li><a href="#la-distribución-normal-estandarizada-n0-1" id="toc-la-distribución-normal-estandarizada-n0-1" class="nav-link" data-scroll-target="#la-distribución-normal-estandarizada-n0-1">La distribución Normal estandarizada: N(0; 1)</a></li>
+  <li><a href="#de-la-binomial-a-la-normal-a-través-del-quincunx" id="toc-de-la-binomial-a-la-normal-a-través-del-quincunx" class="nav-link" data-scroll-target="#de-la-binomial-a-la-normal-a-través-del-quincunx">De la binomial a la Normal a través del Quincunx</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -1034,7 +1036,7 @@ Figura&nbsp;5.13: Histogramas de las estaturas de 1375 mujeres y también de las
 </div>
 <p>Pero, además de por explicar muy bien un tipo de variabilidad que observamos en nuestro entorno, hay otra razón por la que la distribución Normal es muy importante: a partir de cierto tamaño de muestra, su media –que es la materia prima con que trabajamos en muchos análisis estadísticos– puede considerarse una variable aleatoria con distribución Normal, con independencia de cuál sea la distribución de la que provengan los datos de esa muestra.</p>
 <p>Ya hemos visto (figura <span class="math inline">\(\ref{sumaUniformes}\)</span>) que la suma de variables aleatorias con distribución uniforme va tomando el aspecto de una distribución Normal a medida que aumenta el número de sumandos. Lo mismo ocurre con la media, que no es más que esa suma dividida por una constante.</p>
-<p>Podemos repetir este análisis, pero ahora con la variable &lt;<resultado obtenido="" al="" lanzar="" un="" dado="">&gt;, que sigue una distribución equiprobable. Esta es una distribución totalmente distinta de la Normal, no solo todos los valores tienen la misma probabilidad de ocurrir, sino que, además, es una variable discreta. Esta distribución está representada en el primer diagrama de la figura <a href="#fig-sumaEquiprobable" class="quarto-xref">Figura&nbsp;<span>5.14</span></a>; en el segundo tenemos la distribución de los valores medios que se pueden obtener al lanzar dos dados. En este caso ya no todos los posibles valores tienen la misma probabilidad de salir: para que la media sea igual a uno tienen que salir dos unos, lo cual es menos probable que obtener una media de 3,5, ya que hay más resultados que conducen a ese valor. Si lanzamos cuatro dados todavía es más difícil obtener valores en los extremos. Si consideramos la media de los valores obtenidos al lanzar ocho dados, el perfil de la campana ya es claramente reconocible.</resultado></p>
+<p>Podemos repetir este análisis, pero ahora con la variable &lt;<resultado obtenido="" al="" lanzar="" un="" dado="">&gt;, que sigue una distribución equiprobable. Esta es una distribución totalmente distinta de la Normal, no solo todos los valores tienen la misma probabilidad de ocurrir, sino que, además, es una variable discreta. Esta distribución está representada en el primer diagrama de la <a href="#fig-sumaEquiprobable" class="quarto-xref">Figura&nbsp;<span>5.14</span></a>; en el segundo tenemos la distribución de los valores medios que se pueden obtener al lanzar dos dados. En este caso ya no todos los posibles valores tienen la misma probabilidad de salir: para que la media sea igual a uno tienen que salir dos unos, lo cual es menos probable que obtener una media de 3,5, ya que hay más resultados que conducen a ese valor. Si lanzamos cuatro dados todavía es más difícil obtener valores en los extremos. Si consideramos la media de los valores obtenidos al lanzar ocho dados, el perfil de la campana ya es claramente reconocible.</resultado></p>
 <div id="fig-sumaEquiprobable" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-sumaEquiprobable-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1061,7 +1063,121 @@ Figura&nbsp;5.14: La distribución de la media de valores de una distribución e
 </section>
 <section id="cálculo-de-probabilidades-en-la-distribución-normal" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="cálculo-de-probabilidades-en-la-distribución-normal">Cálculo de probabilidades en la distribución Normal</h3>
-<p>Como ocurre con todas las variables aleatorias continuas, la probabilidad de que tome valores dentro de un intervalo es igual al área bajo la curva de su función densidad de probabilidad en ese intervalo (figura <span class="math inline">\(\ref{probNormal}\)</span>).</p>
+<p>Como ocurre con todas las variables aleatorias continuas, la probabilidad de que tome valores dentro de un intervalo es igual al área bajo la curva de su función densidad de probabilidad en ese intervalo (<a href="#fig-calProbNormal" class="quarto-xref">Figura&nbsp;<span>5.15</span></a>).</p>
+<div id="fig-calProbNormal" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-calProbNormal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras/f0515_calProbNormal.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-calProbNormal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;5.15: Cálculo de probabilidades en la distribución Normal.
+</figcaption>
+</figure>
+</div>
+<p>En general, esas áreas se calculan integrando la función entre los límites establecidos, pero en el caso de la Normal esto no es posible, ya que su función densidad de probabilidad, <span class="math inline">\(f(x)\)</span>, no tiene primitiva; es decir, no existe ninguna función cuya derivada sea <span class="math inline">\(f(x)\)</span>. Naturalmente, se puede integrar por métodos numéricos, y los programas de <em>software</em> estadístico, las hojas de cálculo o las calculadoras avanzadas lo hacen sin ningún problema.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Si <span class="math inline">\(\mathbf{X}\)</span> es continua, <span class="math inline">\(\mathbf{P(X&gt;a) = P(X \geq a)}\)</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Porque <span class="math inline">\(\mathrm{P}(X=a)=0\)</span>. Análogamente, <span class="math inline">\(\mathrm{P}(a \leq X \leq b) = \mathrm{P}(a &lt; X &lt; b)\)</span>.</p>
+</div>
+</div>
+<p>Cuando se buscan probabilidades hay que tener claro qué información proporciona el instrumento que se está utilizando. Las hojas de cálculo habituales dan probabilidades acumuladas hasta un valor (área a la izquierda de <span class="math inline">\(x\)</span>). Si <span class="math inline">\(X \sim \mathrm{N}(\mu=10; \sigma = 2)\)</span> tenemos:</p>
+<ul>
+<li><p><span class="math inline">\(\text{P}(X &lt; 7)\)</span> <br> Probabilidad acumulada hasta el valor de <span class="math inline">\(X = 7\)</span>. <img src="Figuras/f05sn_ProbNormal_1.png" id="fig-calProbNormal" class="fig-normal3 img-fluid quarto-figure quarto-figure-center anchored" style="width:100.0%"> El cuarto valor dentro del paréntesis indica si se desea obtener la probabilidad acumulada (VERDADERO o 1) o el valor de la función densidad de probabilidad (FALSO o 0). Si se calculan probabilidades en una variable continua, siempre hay que poner 1. El valor de la función densidad de probabilidad solo interesa si queremos dibujar la curva de la campana.</p></li>
+<li><p><span class="math inline">\(\text{P}(X &gt; 7)\)</span> <br> Como el área total bajo la campana es igual a 1 y la variable solo puede ser mayor o menor que 7 (no hay posibilidades intermedias), podemos escribir: <span class="math inline">\(\mathrm{P}(X &gt; 7) = 1-  \mathrm{P}(X &lt; 7)\)</span> <img src="Figuras/f05sn_ProbNormal_2.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center" style="width:100.0%"></p></li>
+<li><p><span class="math inline">\(\text{P}(8 &lt; X &lt; 13)\)</span> <br> Es igual a <span class="math inline">\(\text{P}(X &lt; 13) - \text{P}(X &lt; 8)\)</span> <img src="Figuras/f05sn_ProbNormal_3.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center" style="width:100.0%"></p></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>No es necesario dar tantos decimales
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Aunque los medios de cálculo pueden dar muchos decimales, no es necesario –ni conveniente– darlos todos. Presentar muchos dígitos hace que la atención se disperse entre los que son importantes y los absolutamente irrelevantes.</p>
+</div>
+</div>
+</section>
+<section id="la-distribución-normal-estandarizada-n0-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="la-distribución-normal-estandarizada-n0-1">La distribución Normal estandarizada: N(0; 1)</h3>
+<p>Resulta que si <span class="math inline">\(X \sim \text{N}(\mu; \sigma)\)</span> entonces la nueva variable aleatoria: <span class="math display">\[Z = \frac{X-\mu}{\sigma}\]</span> sigue una distribución <span class="math inline">\(\text{N}(0; 1)\)</span>, con independencia de cuáles sean los valores<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a> de <span class="math inline">\(\mu\)</span> y de <span class="math inline">\(\sigma\)</span>. A esta distribución N(0;;1) la llamamos Normal estandarizada y tiene unas propiedades que nos resultan muy útiles; en particular, resulta que (ver justificación en Apéndice 5.A):</p>
+<p><span class="math display">\[\text{P}(X &gt; x) = \text{P} \left ( Z &gt; \frac{x - \mu}{\sigma} \right)\]</span> Esto nos permite determinar probabilidades asociadas a cualquier variable con distribución Normal, teniendo tabuladas solo las de la distribución N(0; 1), que caben en una sola hoja. Por ejemplo, si <span class="math inline">\(X \sim \text{N} (10; 2)\)</span>, para determinar la probabilidad de que $ X &gt; 10.5$ hacemos: <span class="math display">\[\text{P}(X&gt;10.5) = \text{P} \left ( Z &gt; \frac{10.5 - 10}{2} \right ) = \text{P}(Z&gt;0.25) = 0,4013\]</span> Las tablas ya apenas se usan para calcular probabilidades, pero usaremos esta propiedad de la distribución N(0; 1) en el capítulo 7, para introducir la expresión de los calcular intervalos de confianza.</p>
+</section>
+<section id="de-la-binomial-a-la-normal-a-través-del-quincunx" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="de-la-binomial-a-la-normal-a-través-del-quincunx">De la binomial a la Normal a través del Quincunx</h3>
+<p>Francis Galton (1822-1911) fue un científico con intereses muy variados, entre ellos la estadística. Entre sus muchas aportaciones se encuentra el diseño de un dispositivo conocido como <em>quincunx</em> (o máquina de Galton) que sirve para poner de manifiesto cómo emerge el patrón de variabilidad de la distribución Normal a partir de un movimiento aparentemente caótico.</p>
+<p>Consiste en un tablero dispuesto en posición vertical en cuya parte superior se coloca un conjunto de bolas que se van dejando caer a través de una zona de clavijas colocadas al tresbolillo (<a href="#fig-quincunx" class="quarto-xref">Figura&nbsp;<span>5.16</span></a>, izquierda). Al descender, las bolas van chocando contra las clavijas y tras cada choque caen a derecha o izquierda al azar, entrando finalmente en una zona de pequeños canales donde se van acumulando. Se observa que la mayoría de las bolas se acumulan en los canales más cercanos al punto donde se dejan caer, disminuyendo su frecuencia a medida que nos alejamos de ese punto, tanto por un lado como por el otro.</p>
+<p>En la derecha de la <a href="#fig-quincunx" class="quarto-xref">Figura&nbsp;<span>5.16</span></a> tenemos el esquema de una bola que va a caer por una zona de clavijas con 4 filas y que acabará en uno de los compartimientos numerados del 0 al 4. Calcular la probabilidad de que caiga en cada uno de ellos es fácil si lo relacionamos con el problema del número de caras que se obtienen al lanzar <span class="math inline">\(n\)</span> veces una moneda al aire.</p>
+<p>En efecto, para que caiga en el compartimento 4 la bola tiene que rebotar siempre hacia la derecha. Como después de cada choque tiene una probabilidad del 50 % de ir para cada lado, la probabilidad de que esto ocurra es la misma que la de obtener 4 caras al lanzar 4 veces una moneda al aire.</p>
+<div id="fig-quincunx" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-quincunx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras/f0516_quincunx.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-quincunx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;5.16: Quincunx con finalidad didáctica y esquema de caida de una bola por un tresbolillo de 4 filas. <a href="https://www.mathsisfun.com/data/quincunx.html">Origen foto</a>
+</figcaption>
+</figure>
+</div>
+<p>Para que caiga en el compartimento 3 debe ir tres veces hacia la derecha y una hacia la izquierda, no importa en que clavija vaya hacia un lado o hacia el otro. La probabilidad de que esto ocurra es la misma que la de tener 3 caras al lanzar 4 veces una moneda al aire. Para que caiga en el compartimento 2 debe rebotar dos veces a la derecha y otras dos a la izquierda. Tampoco importa en qué clavijas rebote hacia un lado o hacia otro, por lo que esta probabilidad es la misma que la de obtener 2 caras al lanzar la moneda 4 veces. Siguiendo con este razonamiento (o quedándonos aquí y asignando las probabilidades que faltan por simetría) obtenemos los valores de la <a href="#tbl-BinoPoisson">Tabla 5.6</a>.</p>
+<div id="tbl-Bola" ;="" class="tabla-wrapper42b anchored">
+<div class="tabla-caption">
+  Tabla 5.6: Probabilidad de que la bola caiga en cada compartimento.
+</div><table class="tabla-0506">
+
+
+
+<colgroup>
+  <col style="width: 25%;">
+  <col style="width: 20%;">
+</colgroup>
+<thead>
+  <tr>
+    <th>Compartimento <br> (Núm. de caras)</th>
+    <th>Probabilidad</th>
+  </tr>
+</thead>
+
+<tbody>
+  <tr> 
+    <td>0</td> <td>0,0625</td> 
+  </tr>
+  <tr> 
+    <td>1</td> <td>0,25</td> 
+  </tr>
+  <tr> 
+    <td>2</td> <td>0,375</td> 
+  </tr>
+  <tr> 
+    <td>3</td> <td>0,25</td> 
+  </tr>
+  <tr> 
+    <td>4</td> <td>0,0625</td> 
+  </tr>
+</tbody>
+</table>
+</div>
+<p>Este argumento se puede generalizar para cualquier número de filas. En internet es fácil encontrar simuladores de <em>quincunx</em> como el de la figura <span class="math inline">\(\ref{simulador}\)</span> que tiene 14 filas y en el que hemos dejado caer 3566 bolas ( aunque en el histograma solo suman 3552 porque 14 todavía están en camino). Podemos calcular las probabilidades de que caigan en cada compartimento y a partir de estas, comparar las frecuencias teóricas con las observadas.</p>
+<div id="fig-quincunxSimulador" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-quincunxSimulador-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras/f0517_quincunxSimulador.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-quincunxSimulador-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;5.17: Quincunx con finalidad didáctica y esquema de caida de una bola por un tresbolillo de 4 filas. <a href="https://www.mathsisfun.com/data/quincunx.html">Origen foto</a>
+</figcaption>
+</figure>
+</div>
 
 
 </section>
@@ -1085,6 +1201,7 @@ Figura&nbsp;5.14: La distribución de la media de valores de una distribución e
 <li id="fn7"><p>Estos datos se pueden ver en: Paul F. Velleman y David C. Hoaglin (1981): “Applications, Basics, and Computing of Exploratory Data Analysis” Duxbury Press, pág. 259. <a href="https://books.google.es/books?id=yDMoAAAAYAAJ">Publicación original</a>, ver página 400.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn8"><p>Que está centrada en <span class="math inline">\(\mu\)</span> es fácil de deducir a la vista de su función densidad de probabilidad, ya que el valor de <span class="math inline">\(x\)</span> solo aparece en el exponente de <span class="math inline">\(e\)</span> de la forma <span class="math inline">\((x-\mu)^2\)</span> de manera que las diferencias respecto a <span class="math inline">\(\mu\)</span> producen el mismo resultado tanto si son positivas como negativas. También es fácil deducir que el máximo de <span class="math inline">\(f(x)\)</span> está en <span class="math inline">\(X=\mu\)</span> ya que en este caso el exponente de <span class="math inline">\(e\)</span> –que es negativo– es igual a cero. La demostración de que tiene puntos de inflexión en <span class="math inline">\(\mu \pm \sigma\)</span> no es tan evidente, se trata de un problema de derivación de funciones, sencillo pero un poco farragoso, que se puede ver <a href="https://statproofbook.github.io/P/norm-infl.html">aquí</a>.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn9"><p>Información detallada sobre este conjunto de datos y sobre como obtenerlos se encuentra en: S. Weisberg: “Applied Linear Regression” 4ª.edición (2014). Ed. Wiley, pág. 2.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p><span class="math inline">\(\displaystyle \text{E} \left ( \frac{X - \mu}{\sigma} \right) = \frac{1}{\sigma} \text{E} (X - \mu) = \frac{1}{\sigma} \left[  \text{E}(X)  - \text{E}(\mu) \right] = 0\)</span>, ya que: <span class="math inline">\(\text{E}(X) \!= \! \mu\)</span> y <span class="math inline">\(\text{E}(\mu) \!= \! \mu\)</span>. <span class="math inline">\(\displaystyle \text{V} \left ( \frac{X - \mu}{\sigma} \right) = \frac{1}{\sigma^2} \text{V} (X - \mu) = \frac{1}{\sigma^2} \left[  \text{V}(X)  - \text{V}(\mu) \right] = \frac{\sigma^2}{\sigma^2} = 1\)</span>, ya que: <span class="math inline">\(\text{V}(X) \!= \! \sigma^2\)</span> y <span class="math inline">\(\text{V}(\mu) \!= \! 0\)</span>. También usamos la propiedad de que una combinación lineal de variables aleatorias con distribución Normal también sigue una Normal, pero la teoría necesaria para su demostración va más allá de un curso introductorio.<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 

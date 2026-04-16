@@ -875,6 +875,73 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid #666;  
 }
 
+/*** Tabla en 5.7  ***/
+
+.tabla-0507 {
+  margin: auto;
+  width: 100%;
+  max-width: 600px;
+  font-size: 1em;
+  vertical-align: middle;
+}
+
+.tabla-0507 caption {
+  caption-side: top;
+  text-align: left;
+  font-size: 1em;
+  padding-bottom: 15px;
+  color: #666 !important;
+}
+
+.tabla-0507 th {
+    font-weight: 400;
+    text-align: left;    /* celdas centradas */
+    border-bottom: 1px solid #000;
+    padding-top: 50px; 
+    padding-bottom: 50px;      /* altura de fila más pequeña */
+    line-height: 1.2;      /* compacta como en LaTeX */
+    font-size: 1em;
+}
+
+.tabla-0507 td {
+  font-size: 0.95em;      /* equivalente a \footnotesize */
+  text-align: left;    /* celdas centradas */
+  line-height: 1.3;      /* compacta como en LaTeX */
+  border: none;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+.tabla-0507 td mjx-container[display="true"] {
+  display: inline-block !important;
+  margin: 0.2em 0 !important;
+}
+
+.tabla-0507 tr:first-child th {
+  border-top: 1px solid #000;
+  padding-top: 6px;
+  padding-bottom: 8px;
+}
+
+.tabla-0507 tr:nth-child(1) td,
+.tabla-0507  tr:nth-child(4) td {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.tabla-0507  tr:nth-child(2) td {
+  padding-top: 5px;
+  padding-bottom: 0px;
+  border-top: 1px solid black;
+}
+
+.tabla-0507  tr:nth-child(3) td {
+  padding-top: 0px;
+  padding-bottom: 5px;
+}
+
 /* ======Tabla Wrapper====== */
 
 .tabla-wrapper00 {

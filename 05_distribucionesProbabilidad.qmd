@@ -638,18 +638,18 @@ En la derecha de la [@fig-quincunx] tenemos el esquema de una bola que va a caer
 
 En efecto, para que caiga en el compartimento 4 la bola tiene que rebotar siempre hacia la derecha. Como después de cada choque tiene una probabilidad del 50 % de ir para cada lado, la probabilidad de que esto ocurra es la misma que la de obtener 4 caras al lanzar 4 veces una moneda al aire.
 
-![Quincunx con finalidad didáctica y esquema de caida de una bola por un tresbolillo de 4 filas. [Origen foto](https://www.mathsisfun.com/data/quincunx.html)](Figuras/f0516_quincunx.png){#fig-quincunx .fig-normal3 fig-align="center" width="70%"}
+![Quincunx con finalidad didáctica y esquema de caida de una bola por un tresbolillo de 4 filas.](Figuras/f0516_quincunx.png){#fig-quincunx .fig-normal3 fig-align="center" width="70%"}
 
 Para que caiga en el compartimento 3 debe ir tres veces hacia la derecha y una hacia la izquierda, no importa en que clavija vaya hacia un lado o hacia el otro. La probabilidad de que esto ocurra es la misma que la de tener 3 caras al lanzar 4 veces una moneda al aire. Para que caiga en el compartimento 2 debe rebotar dos veces a la derecha y otras dos a la izquierda. Tampoco importa en qué clavijas rebote hacia un lado o hacia otro, por lo que esta probabilidad es la misma que la de obtener 2 caras al lanzar la moneda 4 veces. Siguiendo con este razonamiento (o quedándonos aquí y asignando las probabilidades que faltan por simetría) obtenemos los valores de la [Tabla 5.6](#tbl-BinoPoisson).
 
 ```{=html}
-<div id="tbl-Bola"; class="tabla-wrapper42b">
-<table class="tabla-0506">
+<div id="tbl-Bola" class="tabla-wrapper42b">
 
 <div class="tabla-caption">
   Tabla 5.6: Probabilidad de que la bola caiga en cada compartimento.
 </div>
 
+<table class="tabla-0506">
 <colgroup>
   <col style="width: 25%;">
   <col style="width: 20%;">
@@ -684,13 +684,119 @@ Para que caiga en el compartimento 3 debe ir tres veces hacia la derecha y una h
 
 Este argumento se puede generalizar para cualquier número de filas. En internet es fácil encontrar simuladores de *quincunx* como el de la figura \ref{simulador} que tiene 14 filas y en el que hemos dejado caer 3566 bolas ( aunque en el histograma solo suman 3552 porque 14 todavía están en camino). Podemos calcular las probabilidades de que caigan en cada compartimento y a partir de estas, comparar las frecuencias teóricas con las observadas.
 
-![Quincunx con finalidad didáctica y esquema de caida de una bola por un tresbolillo de 4 filas. [Origen foto](https://www.mathsisfun.com/data/quincunx.html)](Figuras/f0517_quincunxSimulador.png){#fig-quincunxSimulador .fig-normal3 fig-align="center" width="100%"}
+![[Simulador de quincunx](https://www.mathsisfun.com/data/quincunx.html) y tabla con las frecuencias teóricas y observadas.](Figuras/f0517_quincunxSimulador.png){#fig-quincunxSimulador .fig-normal3 fig-align="center" width="100%"}
+
+La [@fig-binoNormal] (izquierda) compara las frecuencias teóricas y las observadas en nuestro caso con 14 filas y después de que hayan caído 3552 bolas. A la derecha tenemos las probabilidades teóricas si se tienen 100 filas. En este caso, con $n=100$ y $p=0.5$, tenemos que: 
+$\mu = np=50$ y $\sigma = \sqrt {n p(1-p)}=\sqrt {100 \cdot 0.25}= 5$. Superponiendo una distribución Normal con esos mismos parámetros, los perfiles de las dos distribuciones prácticamente coinciden. A medida que $n$ va creciendo, cada vez se parecen más. Cuando $n \rightarrow \infty$ ambas distribuciones tienden a coincidir.
+
+![Resultados de la [@fig-quincunxSimulador] y probabilidades en un quincunx que tenga 100 filas de clavijas (101 canales), con la distribución Normal superpuesta.](Figuras/f0518_binoNormal.png){#fig-binoNormal .fig-normal3 fig-align="center" width="100%"}
+
+
+### La distribución Normal como aproximación a la binomial {.unnumbered}
+
+Hasta la aparición de los ordenadores, el cálculo de probabilidades con la distribución binomial podía ser muy laborioso, especialmente si se trataba de calcular probabilidades acumuladas con valores grandes de $n$ y $x$. Usar la distribución Normal como aproximación a la binomial facilita mucho los cálculos, aunque actualmente su interés, más que para facilitar los cálculos, tiene  que ver con la justificación de algunas expresiones que utilizamos para los intervalos de confianza. 
+
+Sabemos que si $X \sim \text{Bin} (n; p)$ los valores de su esperanza matemática y su varianza son: $\text{E}(X) = np$ y $\text{V}(X) = np(1-p)$. Si aproximamos $X$ a una distribución Normal tenemos que $ X \sim N(np; \sqrt{np(1-p)})$. Lo aproximado es la Normalidad de la distribución, los valores de la esperanza matemática y la desviación típica son los valores exactos.
+
+La [@fig-aproxBinoNormal] muestra las probabilidades correspondientes a algunos valores de una variable con distribución binomial y su aproximación con la distribución Normal. Observe que cuando se utiliza la distribución Normal se aplica la llamada "corrección por continuidad". La probabilidad de $X=6$ calculada con la distribución Normal sería igual a cero si no aplicamos esa corrección. Lo que hacemos es: $\mathrm P(X=6) = \mathrm P(X < 6.5) - \mathrm P(X < 5.5)$ ya que la probabilidad de que $X$ esté entre 5,5 y 6,5 es una buena aproximación de $\mathrm P(X=6)$. También $\mathrm P(X<3) = \mathrm P(X<2.5)$ y $\mathrm P(4 \leq X \leq 5)$ será igual a $\mathrm P(X < 5.5) - \mathrm P(X < 3.5)$.
+
+![Probabilidades en una distribución binomial aproximadas a través de una Normal. En la distribución Normal: $\sigma = \sqrt{np(1-p)} = 1.54919$.](Figuras/f0519_aproxBinoNormal.png){#fig-aproxBinoNormal .fig-normal3 fig-align="center" width="100%"}
+
+::: callout-note
+## Los modelos y la realidad
+
+Dicen los expertos que la esfera es una de las formas geométricas más abundantes en el universo; pero ¿cuántos objetos hay que sean exactamente una esfera tal como se define en matemáticas? Ninguno. Entonces, si no hay esferas, ¿por qué estudiamos las fórmulas de su área y su volumen? Porque dan resultados suficientemente aproximados a efectos prácticos. Lo mismo ocurre con las distribuciones de probabilidad. Seguramente nuestros datos no siguen "exactamente" el modelo que se supone (las estaturas no siguen "exactamente" una distribución Normal) pero permiten calcular probabilidades y realizar previsiones suficientemente aproximadas a efectos prácticos.
+:::
+
+## Apéndice 5.A: ¿Por qué  $Z \sim \text{N}(0; 1)$? {.unnumbered}
+
+Aunque las tablas estadísticas ya son algo del pasado, es interesante ver por qué habiendo infinitas distribuciones Normales (tantas como parejas $\mu$, $\sigma $) basta la tabla de solo una para poder calcular probabilidades en todas ellas.
+
+Lo veremos con razonamientos básicamente geométricos. Sea $X \sim \text{N}(\mu; \sigma)$ y deseamos calcular $P(X>x)$. Si definimos $Y = X - \mu$, está claro que  $Y \sim N(0; \sigma)$, y con ayuda de la figura [@fig-Normal01_1] es fácil observar que $P(X>x)=P(Y>x-\mu)$ ya que la forma de las dos distribuciones es idéntica y al punto $x$ en la distribución de $X$ le corresponde $x-\mu$ en la de $Y$.
+
+![Transformación de $X \sim N(\mu; \sigma)$ en $Y \sim N(0; \sigma)$.](Figuras/f0520_Normal01_1.png){#fig-Normal01_1 .fig-normal3 fig-align="center" width="100%"}
+
+Si $Y \sim \text{N}(0; \sigma)$ y $k$ es una constante, entonces $kY \sim \text{N}(0; k\sigma)$ ya que $\text{E}(kY) = k\text{E}(Y) = 0$ y $\text{V}(kY) = k^2 \sigma^2$. Veamos ahora cómo representar la distribución de $kY$.
+
+Si representamos $f(Y)$ y $f(kY)$ utilizando los mismos ejes, las formas de las distribuciones serán distintas, por tener distinto valor de $ \sigma $. Pero también podemos representarlas usando la misma forma para la distribución (la misma campana) y cambiar las escalas de los ejes, tal como se indica en la figura \ref{Figura030502}.
+
+![Distribución Normal con $\mu$=0 y con $\sigma $=1 o $\sigma = k$ según la escala.](Figuras/f0521_Normal01_2.png){#fig-Normal01_2 .fig-normal3 fig-align="center" width="100%"}
+
+Recordando que la función densidad de probabilidad de $Y \sim \text{N}(0; \sigma)$ es: 
+$$f(y) = \frac{1}{\sigma \sqrt{2 \pi}}e^{- \frac{y^2}{2\sigma^2}}$$
+se deduce que:
+$$f(ky) = \frac{1}{k\sigma \sqrt{2 \pi}}e^{- \frac{k^2y^2}{2 k^2 \sigma^2}} = \frac{1}{k} \cdot \frac{1}{\sigma \sqrt{2 \pi}}e^{- \frac{y^2}{2\sigma^2}} = \frac{1}{k}f(y)$$
+Por tanto, las campanas se pueden representar de forma idéntica multiplicando por $k$ el eje de abscisas y dividiendo por el mismo valor el de ordenadas (que no hemos representado). 
+
+Si hacemos $k= \frac{1}{\sigma}$ tendremos $Z = \frac{Y}{\sigma}$, o lo que es lo mismo: $Z = (X-\mu)/ \sigma$. Por lo comentado anteriormente, la distribución de $Z$ se puede representar con la misma campana que la utilizada para la distribución de $Y$ ([@fig-Normal01_3]).
+
+![Transformación de  $Y \sim N(0; \sigma)$ en $Z \sim N(0; 1)$.](Figuras/f0522_Normal01_3.png){#fig-Normal01_3 .fig-normal3 fig-align="center" width="100%"}
+
+Si la forma de las campanas es la misma, y solo hemos sustituido el punto $x - \mu$ por el $\frac{x - \mu}{\sigma}$, resulta claro que $P \left( Z > \frac{x -\mu}{\sigma} \right) = P\left( Y > X - \mu \right)$ y, por tanto, $P\left( X>x\right) = P\left(Z> \frac{x-\mu}{\sigma}\right)$.
+
+## Apéndice 5.A: Esperanza y varianza de una variable con distribución binomial {.unnumbered}
+
+Una variable aleatoria $Y$ sigue una distribución de Bernoulli \index{Distribución! de Bernouilli} cuando solo puede tomar dos valores: 1 ("éxito") con probabilidad $p$ y 0 ("fracaso") con probabilidad $1-p$. En la tabla \ref{bernouilli} se deduce que $E(Y) = p$ y $V(Y) = p(1-p)$.
+
+```{=html}
+<div id="tbl-Tabulacion" class="tabla-wrapper42">
+<table class="tabla-0507">
+
+<caption>Tabla 5.7: Deducción de la esperanza y la varianza de una variable de Bernouilli.</caption>
+
+<colgroup>
+    <col style="width: 10%;">
+    <col style="width: 15%;">
+    <col style="width: 25%;">
+    <col style="width: 35%;">
+</colgroup>
 
 
 
+<tbody>
+  <tr>
+    <td style="text-align: center;"> $$Y$$</td>
+    <td style="text-align: center;"> $$P(Y)$$</td>
+    <td style="text-align: center;"> $$E(Y) = Y \cdot P(Y)$$</td>
+    <td style="text-align: center;"> $$V(Y) = (Y - E(Y))^2 \cdot P(Y)$$</td>
+  </tr>
 
+  <tr>
+    <td style="text-align: center;"> $$0$$</td>
+    <td style="text-align: center;"> $$1-p$$</td>
+    <td style="text-align: center;"> $$0 \cdot (1-p)$$</td>
+    <td style="text-align: center;"> $$(0-p)^2 (1-p)$$</td>
+  </tr>
 
+   <tr>
+    <td style="text-align: center;"> $$1$$</td>
+    <td style="text-align: center;"> $$p$$</td>
+    <td style="text-align: center;"> $$1 \cdot p$$</td>
+    <td style="text-align: center;"> $$(1-p)^2 p$$</td>
+	</tr>
+	
+	 <tr>
+    <td>Suma</td>
+    <td></td>
+    <td>$$p$$</td>
+    <td>$$p(1-p)$$</td>
+	</tr>
 
+</tbody>
 
+</table>
+</div>
+```
 
+Recordando la definición que hemos dado para una variable aleatoria con distribución binomial (número de éxitos al realizar $n$ experimentos con una probabilidad de éxito constante e igual a $p$), está claro que la suma de $n$ variables aleatorias independientes $(Y_1, Y_2, ..., Y_n)$ con distribución de Bernoulli y parámetro $p$ es una variable aleatoria $X$ con distribución binomial y parámetros $n$ y $p$. Por tanto:
 
+\begin{equation*}
+	\begin{split}
+		\mathrm E(X) &= \mathrm E(Y_1 + Y_2 + \cdots + Y_n) = \mathrm E(Y_1) + \mathrm E(Y_2) + \cdots + \mathrm E(Y_n) = np\\[5pt]
+		\mathrm V(X) &= \mathrm V(Y_1 + Y_2 + \cdots + Y_n) = \mathrm V(Y_1) + \mathrm V(Y_2) + \cdots + \mathrm V(Y_n) = np(1-p)
+	\end{split}
+\end{equation*}
+
+Si en vez de considerar el número de éxitos $X$, consideramos su proporción $\hat{p}=X/n$ ($\hat{p}$ es el valor estimado de $p$), recordando que $\mathrm{V}(aX) = a^2 \mathrm{V}(X)$, tenemos que:
+$$\mathrm V(\hat{p}) = \frac{1}{n^2} \mathrm V(X) = \frac{p(1-p)}{n}$$
+Utilizaremos esta expresión en el Apéndice 6.B para analizar el aumento de la variabilidad al estimar una proporción cuando la encuesta incorpora un procedimiento que asegura la confidencialidad de las respuestas.

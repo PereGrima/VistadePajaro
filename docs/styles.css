@@ -942,6 +942,59 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 5px;
 }
 
+/*** Tabla en 6.1  ***/
+
+.tabla-0601 {
+  margin: auto;
+  width: 100%;
+  max-width: 600px;
+  font-size: 1em;
+  vertical-align: middle;
+  border-collapse: collapse;
+  border: none;
+}
+
+.tabla-0601 caption {
+  caption-side: top;
+  text-align: center;
+  font-size: 1em;
+  padding-bottom: 15px;
+  margin-top: 5px;
+  line-height: 1.2;
+  color: #666 !important;
+}
+
+.tabla-0601 th {
+    font-weight: 400;
+    text-align: center;    /* celdas centradas */
+    padding-top: 5px; 
+    padding-bottom: 5px;      /* altura de fila más pequeña */
+    vertical-align: middle;
+    line-height: 1;      /* compacta como en LaTeX */
+    font-size: 1em;
+    border: none;
+}
+
+.tabla-0601 td {
+  font-size: 0.95em;      /* equivalente a \footnotesize */
+  text-align: center;    /* celdas centradas */
+  padding: 2px 6px;      /* altura de fila más pequeña */
+  line-height: 1;      /* compacta como en LaTeX */
+  border: none;
+}
+
+.tabla-0601 tr:last-child td {
+  border-bottom: 1px solid #666;
+}
+
+.tabla-0601 tr:nth-child(1) th {
+  border-top: 1px solid #666;
+}
+
+.tabla-0601 tr:nth-child(2) th {
+  border-bottom: 1px solid #666;
+}
+
 /* ======Tabla Wrapper====== */
 
 .tabla-wrapper00 {

@@ -32,7 +32,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./07_estimacion.html" rel="next">
-<link href="./_03_tapaMuestraPoblacion.html" rel="prev">
+<link href="./0_03_tapaMuestraPoblacion.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -73,6 +73,35 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -86,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./_03_tapaMuestraPoblacion.html">DE LA MUESTRA A LA POBLACIÓN</a></li><li class="breadcrumb-item"><a href="./06_muestreo.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Muestreo. Encuestas</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0_03_tapaMuestraPoblacion.html">DE LA MUESTRA A LA POBLACIÓN</a></li><li class="breadcrumb-item"><a href="./06_muestreo.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Muestreo. Encuestas</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -136,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./_01_tapaDescriptiva.html" class="sidebar-item-text sidebar-link">
+            <a href="./0_01_tapaDescriptiva.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ESTADÍSTICA DESCRIPTIVA</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -159,7 +188,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./_02_tapaVariabilidad.html" class="sidebar-item-text sidebar-link">
+            <a href="./0_02_tapaVariabilidad.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DESCRIBIR LO ALEATORIO</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -182,7 +211,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./_03_tapaMuestraPoblacion.html" class="sidebar-item-text sidebar-link">
+            <a href="./0_03_tapaMuestraPoblacion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DE LA MUESTRA A LA POBLACIÓN</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -205,7 +234,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./_04_tapaSignificativo.html" class="sidebar-item-text sidebar-link">
+            <a href="./0_04_tapaSignificativo.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ESTADÍSTICAMENTE SIGNIFICATIVO</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -228,7 +257,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./_05_tapaCorrelacion.html" class="sidebar-item-text sidebar-link">
+            <a href="./0_05_tapaCorrelacion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">CORRELACIÓN Y REGRESIÓN</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -257,8 +286,8 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./_06_tapaEpilogo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">CORRELACIÓN Y REGRESIÓN</span></a>
+            <a href="./0_06_tapaEpilogo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EPÍLOGO</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -267,7 +296,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./13_Epilogo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">EPÍLOGO</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Datos frente a opiniones</span></span></a>
   </div>
 </li>
       </ul>
@@ -277,13 +306,42 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#población-y-muestra" id="toc-población-y-muestra" class="nav-link active" data-scroll-target="#población-y-muestra"><span class="header-section-number">6.1</span> Población y muestra</a></li>
+  <li><a href="#selección-de-la-muestra" id="toc-selección-de-la-muestra" class="nav-link" data-scroll-target="#selección-de-la-muestra"><span class="header-section-number">6.2</span> Selección de la muestra</a>
+  <ul class="collapse">
+  <li><a href="#muestreo-probabilístico" id="toc-muestreo-probabilístico" class="nav-link" data-scroll-target="#muestreo-probabilístico">Muestreo probabilístico</a></li>
+  <li><a href="#muestreo-no-probabilístico" id="toc-muestreo-no-probabilístico" class="nav-link" data-scroll-target="#muestreo-no-probabilístico">Muestreo no probabilístico</a></li>
+  <li><a href="#es-lo-mismo-muestra-aleatoria-que-muestra-representativa" id="toc-es-lo-mismo-muestra-aleatoria-que-muestra-representativa" class="nav-link" data-scroll-target="#es-lo-mismo-muestra-aleatoria-que-muestra-representativa">¿Es lo mismo muestra aleatoria que muestra representativa?</a></li>
+  <li><a href="#como-saber-si-mi-muestra-es-representativa" id="toc-como-saber-si-mi-muestra-es-representativa" class="nav-link" data-scroll-target="#como-saber-si-mi-muestra-es-representativa">¿Como saber si mi muestra es representativa?</a></li>
+  </ul></li>
+  <li><a href="#encuestas.-aspectos-a-tener-en-cuenta" id="toc-encuestas.-aspectos-a-tener-en-cuenta" class="nav-link" data-scroll-target="#encuestas.-aspectos-a-tener-en-cuenta"><span class="header-section-number">6.3</span> Encuestas. Aspectos a tener en cuenta</a>
+  <ul class="collapse">
+  <li><a href="#la-influencia-de-la-pregunta-y-de-cómo-se-hace" id="toc-la-influencia-de-la-pregunta-y-de-cómo-se-hace" class="nav-link" data-scroll-target="#la-influencia-de-la-pregunta-y-de-cómo-se-hace">La influencia de la pregunta y de cómo se hace</a></li>
+  <li><a href="#cómo-hacer-preguntas-indiscretas-manteniendo-la-confidencialidad" id="toc-cómo-hacer-preguntas-indiscretas-manteniendo-la-confidencialidad" class="nav-link" data-scroll-target="#cómo-hacer-preguntas-indiscretas-manteniendo-la-confidencialidad">Cómo hacer preguntas indiscretas manteniendo la confidencialidad</a></li>
+  <li><a href="#encuestas-informales" id="toc-encuestas-informales" class="nav-link" data-scroll-target="#encuestas-informales">Encuestas “informales”</a></li>
+  <li><a href="#conocer-la-opinión-sin-hacer-encuestas" id="toc-conocer-la-opinión-sin-hacer-encuestas" class="nav-link" data-scroll-target="#conocer-la-opinión-sin-hacer-encuestas">Conocer la opinión sin hacer encuestas</a></li>
+  </ul></li>
+  <li><a href="#inspección-por-muestreo" id="toc-inspección-por-muestreo" class="nav-link" data-scroll-target="#inspección-por-muestreo"><span class="header-section-number">6.4</span> Inspección por muestreo</a>
+  <ul class="collapse">
+  <li><a href="#plan-de-muestreo.-riesgo-del-comprador-y-riesgo-del-vendedor" id="toc-plan-de-muestreo.-riesgo-del-comprador-y-riesgo-del-vendedor" class="nav-link" data-scroll-target="#plan-de-muestreo.-riesgo-del-comprador-y-riesgo-del-vendedor">Plan de muestreo. Riesgo del comprador y riesgo del vendedor</a></li>
+  <li><a href="#curva-característica-de-un-plan-de-muestreo" id="toc-curva-característica-de-un-plan-de-muestreo" class="nav-link" data-scroll-target="#curva-característica-de-un-plan-de-muestreo">Curva característica de un plan de muestreo</a></li>
+  <li><a href="#otra-vez-insistimos-atención-a-como-se-selecciona-la-muestra" id="toc-otra-vez-insistimos-atención-a-como-se-selecciona-la-muestra" class="nav-link" data-scroll-target="#otra-vez-insistimos-atención-a-como-se-selecciona-la-muestra">Otra vez insistimos: Atención a como se selecciona la muestra</a></li>
+  </ul></li>
+  <li><a href="#apéndice-6.a-por-qué-cuesta-acertar-en-los-sondeos-electorales" id="toc-apéndice-6.a-por-qué-cuesta-acertar-en-los-sondeos-electorales" class="nav-link" data-scroll-target="#apéndice-6.a-por-qué-cuesta-acertar-en-los-sondeos-electorales">APÉNDICE 6.A: ¿Por qué cuesta acertar en los sondeos electorales?</a></li>
+  <li><a href="#apéndice-6.b-el-precio-de-la-confidencialidad" id="toc-apéndice-6.b-el-precio-de-la-confidencialidad" class="nav-link" data-scroll-target="#apéndice-6.b-el-precio-de-la-confidencialidad">Apéndice 6.B: El precio de la confidencialidad</a></li>
+  <li><a href="#apéndice-6.c-diseño-de-planes-de-muestreo" id="toc-apéndice-6.c-diseño-de-planes-de-muestreo" class="nav-link" data-scroll-target="#apéndice-6.c-diseño-de-planes-de-muestreo">Apéndice 6.C: Diseño de planes de muestreo</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./_03_tapaMuestraPoblacion.html">DE LA MUESTRA A LA POBLACIÓN</a></li><li class="breadcrumb-item"><a href="./06_muestreo.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Muestreo. Encuestas</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0_03_tapaMuestraPoblacion.html">DE LA MUESTRA A LA POBLACIÓN</a></li><li class="breadcrumb-item"><a href="./06_muestreo.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Muestreo. Encuestas</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Muestreo. Encuestas</span></h1>
 </div>
@@ -302,10 +360,331 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>No tengo claros los detalles de lo que habría que poner aquí.</p>
-<p>Las ideas clave están en el libro de Preguntas Frecuentes.</p>
+<p>Una de las actividades típicas de la estadística es estimar las características de una población a partir de los resultados de una muestra. Aunque a menudo nos referimos a la muestra sin dar detalles sobre su origen y cualidades, conviene tener presente que esa es la materia prima con la que vamos a trabajar, y una materia prima de mala calidad conduce inevitablemente a un mal producto.</p>
+<p>Conseguir que una muestra sea representativa no es sencillo, especialmente cuando los recursos son limitados. Por ello, vale la pena prestar atención a los procedimientos que permiten obtener muestras de calidad, para evitar que los análisis posteriores —por muy sofisticados que sean— resulten inútiles.</p>
+<section id="población-y-muestra" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="población-y-muestra"><span class="header-section-number">6.1</span> Población y muestra</h2>
+<p>Definimos la población como el conjunto de elementos –o de individuos, de ahí su nombre– que son objeto de estudio. Parece fácil, pero conviene distinguir entre lo que denominamos <strong>población objetivo</strong>, que es ese conjunto que tenemos interés en conocer, y la población de la cual se extrae la muestra, que llamamos <strong>población elegible</strong> y que no necesariamente coinciden.</p>
+<p>Cuando en la universidad, a finales de curso, se pide a los estudiantes que respondan en clase a unas encuestas de valoración de sus profesores, la población elegible (los estudiantes que van a clase a finales del curso) no coincide con la población objetivo, que son todos los estudiantes, también los que no van a clase, quizá porque consideran que el profesor es aburrido o que no les sirve para aprender.</p>
+<p>Si la encuesta se realiza a través de una página web y se puede responder en cualquier momento, ese mayor peso de los que van a clase se dará menos, pero si en clase se insiste en la importancia de responder la encuesta y se les da tiempo para que lo hagan allí mismo, ese fenómeno seguramente también se va a dar. Algo parecido ocurre cuando se hacen encuestas por vía telefónica: una cosa es la población general, y otra aquellos a los que se puede acceder llamándolos por teléfono. Si la población elegible se puede considerar representativa de la población objetivo la diferencia entre ambas tiene poca importancia, pero hay que estar atento porque si no coinciden los resultados pueden favorecer la opinión del grupo más fácilmente accesible.</p>
+<p>La <strong>muestra</strong> es el conjunto de elementos seleccionados de la población a través de cuyo análisis se pretende conocer los aspectos de interés de la población en general. La toma de la muestra se denomina <strong>muestreo</strong> y la forma de hacerlo determina su calidad y propiedades. Hay que andarse con cuidado porque –a diferencia de otras materias primas– solo viéndola no es posible saber si tiene o no la calidad deseada. Hay que saber cómo se ha obtenido.</p>
+</section>
+<section id="selección-de-la-muestra" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="selección-de-la-muestra"><span class="header-section-number">6.2</span> Selección de la muestra</h2>
+<p>Los tipos de muestreo se pueden dividir en dos grandes grupos: muestreo <em>probabilístico</em> y muestreo <em>no probabilístico</em>.</p>
+<section id="muestreo-probabilístico" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="muestreo-probabilístico">Muestreo probabilístico</h3>
+<p>La idea es seleccionar la muestra siguiendo una estrategia en la que el protagonismo lo tiene el azar, lo cual le confiere unas propiedades que se pueden deducir a partir de modelos matemáticos. Según la estrategia seguida, el muestreo probabilístico puede ser (la lista no es exhaustiva):</p>
+<ul>
+<li><p><span style="color: #0038CF;"><strong>Aleatorio simple</strong></span>: Se elige la muestra al azar de entre todo el conjunto de la población. Seguramente el más fácil de tratar en la teoría y el más difícil de llevar a cabo en la práctica.</p></li>
+<li><p><span style="color: #0038CF;"><strong>Estratificado</strong></span>: Se divide la población en estratos homogéneos y se extrae una muestra de cada estrato. Dado un mismo tamaño de muestra global permite realizar estimaciones más precisas para cada estrato.</p></li>
+<li><p><span style="color: #0038CF;"><strong>Sistemático</strong></span>: Se selecciona la muestra siguiendo un criterio que facilita la selección y evita discrecionalidad, que en general no es lo mismo que aleatoriedad. Por ejemplo, en unas elecciones, en las encuestas a pie de urna, ir preguntando a uno de cada 10 por orden de salida. En este caso, que no haya regla de selección puede provocar un sesgo en los resultados si el entrevistador evita a las personas que le parecen antipáticas y tiende a seleccionar a las que le caen bien.</p></li>
+<li><p><span style="color: #0038CF;"><strong>Multietápico</strong></span>: Primero se seleccionan zonas (barrios, estanterías del almacén,…) y dentro de cada zona se seleccionan unidades (individuos, piezas,…). En general es menos costoso porque las unidades están agrupadas y cuesta menos llegar a ellas.</p></li>
+</ul>
+</section>
+<section id="muestreo-no-probabilístico" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="muestreo-no-probabilístico">Muestreo no probabilístico</h3>
+<p>Es el que se utiliza cuando la selección al azar no es viable. En este caso, las estimaciones no se realizan basándose en las propiedades de las distribuciones de probabilidad que correspondan, sino en argumentos que justifican la representatividad de la muestra. Muestreos de este tipo son:</p>
+<ul>
+<li><p><span style="color: #0038CF;"><strong>Muestreo por cuotas</strong></span>: Se trata de definir grupos con la mayor homogeneidad posible. La selección dentro de cada grupo no se realiza al azar, sino que cualquier individuo que cumpla los requisitos del grupo puede ser incluido en la muestra (al haber poca variabilidad interna cualquier individuo se considera un buen representante). Este procedimiento se adapta muy bien a las entrevistas telefónicas. La entrevista se realiza a la persona que responde si el grupo al que pertenece aún tiene vacantes, o se puede preguntar si en el hogar hay alguien con el perfil de un grupo que todavía esté sin completar. Cuando todos los grupos se han completado, se entiende que la muestra es un buen reflejo de la población.</p></li>
+<li><p><span style="color: #0038CF;"><strong>Muestreo razonado</strong></span>: En ocasiones lo más conveniente puede ser tomar una muestra que responda a unas características específicas. Por ejemplo, si se viene comprobando que los resultados en un colegio electoral son un buen reflejo de lo que ocurre en todo el país, tomar a los votantes de ese colegio como muestra de todo el país puede ser una buena estrategia.</p></li>
+</ul>
+<p>Un muestreo no probabilístico puede ser muy útil y aportar información valiosa, pero sus conclusiones no deben presentarse como si la muestra hubiera sido elegida de forma aleatoria, ni tras la típica cantinela de: “Bajo la hipótesis de muestreo aleatorio simple…”. Es como si decimos: “Supongamos que una castaña es una esfera…” y, a partir de ahí llegamos a una serie de conclusiones sobre las características de las castañas<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>No hay ninguna garantía de que esas conclusiones sean ciertas, no porque el método usado para obtenerlas sea incorrecto, sino porque la hipótesis en que se basa es falsa. En la presentación de trabajos académicos, suponer que la muestra es aleatoria permite introducir una terminología (niveles de confianza, márgenes de error,…) con la pretensión de dar un aire de mayor rigor científico pero en realidad hacen lo contrario.</p>
+</section>
+<section id="es-lo-mismo-muestra-aleatoria-que-muestra-representativa" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="es-lo-mismo-muestra-aleatoria-que-muestra-representativa">¿Es lo mismo muestra aleatoria que muestra representativa?</h3>
+<p>No, no es lo mismo. Ni por ser aleatoria ya es representativa, ni que sea representativa implica que sea aleatoria.</p>
+<p>Para que una muestra aleatoria sea representativa es necesario que tenga un cierto tamaño. Si en la población existen siete estratos sociales y se toma una muestra de cinco individuos, por muy aleatoria que sea, no podrá ser representativa de la diversidad de esa población.</p>
+<p>Por otro lado, es posible obtener muestras representativas sin selección aleatoria. Esto es lo que se pretende con el muestreo por cuotas. Naturalmente, hay que tener muy clara la estructura de la población, saber dividirla en grupos homogéneos y asignar a cada grupo el peso o el tamaño que le corresponde. Si todo se hace correctamente, esa muestra puede considerarse representativa, aunque el entrevistador se haga una autoentrevista, y se la haga también a sus padres o allegados, siempre que pertenezcan a los grupos especificados en el plan de muestreo. Algunas consideraciones sobre la representatividad son:</p>
+<ul>
+<li><p>El término “representativo”, o “representante”, muchas veces se utiliza con un sentido distinto al que damos en estadística. Así, por ejemplo, cuando se pregunta por un escritor representativo de Colombia en muchas ocasiones se responde que Gabriel García Márquez, aunque seguramente este es el más atípico de los escritores colombianos. O cuando se habla de los atletas representantes de un país en unas olimpiadas, seguro que no son representativos -al menos en forma física- de los ciudadanos de ese país.</p></li>
+<li><p>Tenemos una tendencia innata a considerar representativa y, por tanto, a generalizar, en base a muestras muy pequeñas. A veces en base a una sola observación: “Este remedio va muy bien, a mi vecino le funcionó”.</p></li>
+<li><p>Las muestras autoseleccionadas nunca son representativas. Es una práctica habitual hacer encuestas enviando cuestionarios y sacando conclusiones a partir de los que responden, como si esos fueran una muestra representativa. Los que responden son los que están interesados en el tema de la encuesta, si se pregunta sobre cuánto se recicla responderán más los que están más sensibilizados con los problemas del medio ambiente y, por tanto, los que más reciclan.</p>
+<p>Si usted quiere estimar las características de una población de 1000 empresas y envía un cuestionario a todas ellas, con mucha suerte le responderán 200. Quizá este le parezca un buen número y piense que a partir de ahí se pueden sacar unas buenas conclusiones, pero será mucho más representativa una muestra de 50 empresas elegidas al azar y perseguidas hasta tener su opinión que la de 200 autoseleccionadas. Claro que el margen de error le saldrá mayor con 50 empresas que con 200, pero el primero será cierto y útil y el otro ni una cosa ni otra.</p></li>
+</ul>
+</section>
+<section id="como-saber-si-mi-muestra-es-representativa" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="como-saber-si-mi-muestra-es-representativa">¿Como saber si mi muestra es representativa?</h3>
+<p>No existen pruebas formales para verificar la representatividad de una muestra, y es una lástima, porque en muchos estudios estadísticos, donde hay profusión de test de todo tipo, se pasa por alto la justificación de la representatividad de la muestra como si esta fuera una característica innata de todas las muestras y no fuera necesario justificarla.</p>
+<p>Una forma de validar la representatividad es comprobar que se resiste un duro interrogatorio que lo ponga en duda. Imagínese que le cuestionan esa representatividad por todas las razones que pueda imaginar (por ejemplo, usted solo ha entrevistado a los que vio con actitud de querer colaborar, y esos tendían a tener un determinada opinión…). Solo si es capaz de rebatir de manera convincente todas y cada una de esas objeciones, podrá considerar que su muestra es razonablemente representativa.</p>
+</section>
+</section>
+<section id="encuestas.-aspectos-a-tener-en-cuenta" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="encuestas.-aspectos-a-tener-en-cuenta"><span class="header-section-number">6.3</span> Encuestas. Aspectos a tener en cuenta</h2>
+<p>Cuando los elementos de la muestra son personas y la información que se busca –ya sean opiniones, hábitos o preferencias– se obtiene preguntándoles, decimos que se hace una encuesta.</p>
+<section id="la-influencia-de-la-pregunta-y-de-cómo-se-hace" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="la-influencia-de-la-pregunta-y-de-cómo-se-hace">La influencia de la pregunta y de cómo se hace</h3>
+<p>La representatividad de la muestra es una condición necesaria –pero no suficiente– para que las conclusiones obtenidas a través de una encuesta sean fiables.</p>
+<p>En los resultados influye la forma de plantear las preguntas y también las palabras que se utilizan. Si se realiza una encuesta para saber si los aficionados de un equipo de futbol están de acuerdo con la destitución de su entrenador, seguramente se obtendrán resultados distintos si se pregunta:</p>
+<blockquote class="blockquote">
+<em>¿Está de acuerdo en que se haya echado al entrenador a media liga?</em>
+</blockquote>
+<p>que si la pregunta se realiza de la forma:</p>
+<blockquote class="blockquote">
+<em>¿Le parece bien que, de acuerdo con la decisión de la junta directiva, se haya sustituido al entrenador?</em>
+</blockquote>
+<p>Del mismo modo, si se pregunta por acciones militares, no es lo mismo preguntar si se está de acuerdo:</p>
+<blockquote class="blockquote">
+<em>en que nuestro ejército participe en la coalición internacional para resolver el conflicto de…</em>
+</blockquote>
+<p>que si se está de acuerdo con que:</p>
+<blockquote class="blockquote">
+<em>nuestro ejército se implique en la guerra de…</em>
+</blockquote>
+<p>El orden en que se realizan las preguntas y el de las posibles respuestas también puede influir en los resultados. En un sondeo electoral, si el orden de lectura de los partidos o candidatos es siempre el mismo, la primera y la última mención tienen, en general, mayores probabilidades de ser seleccionadas simplemente por aparecer en esa posición<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. También los comentarios del entrevistador pueden influir en las respuestas, por eso está muy pautado lo que deben decir.</p>
+<p>Por otra parte, hay preguntas que tocan aspectos personales que a la gente no le gusta responder, o lo hace diciendo lo que considera políticamente correcto o lo que supone que al entrevistador le gustará oír. Lograr que las personas respondan y que lo hagan con sinceridad no es fácil. Se requiere entrenamiento, el tiempo y la motivación necesarios para hacerlo bien. Los errores por falta de rigor al redactar o al hacer las preguntas pueden ser enormes y nunca aparecen en ninguna parte.</p>
+</section>
+<section id="cómo-hacer-preguntas-indiscretas-manteniendo-la-confidencialidad" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="cómo-hacer-preguntas-indiscretas-manteniendo-la-confidencialidad">Cómo hacer preguntas indiscretas manteniendo la confidencialidad</h3>
+<p>Cuando se pregunta si se ha realizado algún tipo de actividad reprobable o socialmente mal vista, es muy posible que el entrevistado tienda a ocultarlo no siendo sincero en su respuesta o, simplemente, negándose a contestar. En estos casos, existe una forma de mantener la confidencialidad incluso ante el entrevistador.</p>
+<p>Se pide al entrevistado que realice una acción cuyo resultado depende del azar y solo él puede ver. Según cual sea ese resultado, debe responder “sí” (sea cual sea la verdad) o responder sinceramente a la pregunta formulada. Por ejemplo, si lanza una moneda, debe responder “sí” si sale cara, y ser sincero si sale cruz.</p>
+<p>Aunque es imposible saber si un “sí” se debe a que le ha salido cara o a que ha respondido a la pregunta de interés, es posible estimar la proporción de los que han realizado esa actividad. Si se realizan 1:!000 entrevistas y 600 personas responden sí, cabe esperar que unas 500 hayan dado esa respuesta porque les ha salido cara, mientras que de las otras 500 –las que han respondido a la pregunta de interés– 100 han respondido de forma afirmativa. Luego, la estimación de la proporción será <span class="math inline">\(p\)</span> = 100/500 = 0,2.</p>
+<p>También es verdad que esta forma de garantizar la confidencialidad no sale gratis. El precio que se paga es un aumento de la variabilidad en la estimación de la proporción de interés <span class="math inline">\(p\)</span>, y este aumento depende de la probabilidad, <span class="math inline">\(\alpha\)</span>, de que se responda a la pregunta de interés. Si esa probabilidad es baja, por ejemplo, que salga un seis al lanzar un dado, el entrevistado se sentirá seguro de que no es posible saber la verdad en su caso, pero se pierde precisión en la estimación. Si es alta, como sacar una carta de una baraja y responder a la pregunta planteada si no es un as, tendremos mayor precisión en la estimación, pero el encuestado se sentirá menos protegido (es muy probable que tenga que decir la verdad) y puede mentir.</p>
+<p>Hemos simulado el número de síes que se obtendrían para diferentes valores de <span class="math inline">\(\alpha\)</span> si la proporción de interés fuera <span class="math inline">\(p=0.2\)</span>. Repitiendo <span class="math inline">\(100\;\!000\)</span> veces esta simulación, hemos identificado los percentiles del 2,5 % y del 97,5 % (dentro queda el 95 %) y, tal como hemos comentado anteriormente, pasamos del número total de síes a la estimación del número de los que responden afirmativamente a la pregunta de interés. La <a href="#tbl-Sies">Tabla 6.1</a> resume los resultados obtenidos. Observe como el intervalo se va haciendo más estrecho al aumentar el valor de <span class="math inline">\(\alpha\)</span>.</p>
+<div id="tbl-Sies" ;="" class="tabla-wrapper42 anchored">
+
+<table class="tabla-0601 caption-top table">
+<caption>Tabla 6.1: Percentiles obtenidos por simulación cuando la proporción estimada es p = 0,2 según sea la probabilidad de responder a la pregunta de interés (α)</caption>
+<colgroup>
+<col style="width: 10%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th rowspan="2" data-quarto-table-cell-role="th">α</th>
+<th colspan="2" data-quarto-table-cell-role="th">Total de síes</th>
+<th colspan="2" data-quarto-table-cell-role="th">Sí a la pregunta de interés</th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">2,5%</th>
+<th data-quarto-table-cell-role="th">97,5%</th>
+<th data-quarto-table-cell-role="th">2,5%</th>
+<th data-quarto-table-cell-role="th">97,5%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0,2</td>
+<td>817</td>
+<td>863</td>
+<td>8,5 %</td>
+<td>31,0 %</td>
+</tr>
+<tr class="even">
+<td>0,3</td>
+<td>733</td>
+<td>786</td>
+<td>11,0 %</td>
+<td>28,7 %</td>
+</tr>
+<tr class="odd">
+<td>0,4</td>
+<td>651</td>
+<td>709</td>
+<td>12,8 %</td>
+<td>27,3 %</td>
+</tr>
+<tr class="even">
+<td>0,5</td>
+<td>570</td>
+<td>630</td>
+<td>14,0 %</td>
+<td>26,0 %</td>
+</tr>
+<tr class="odd">
+<td>0,6</td>
+<td>489</td>
+<td>551</td>
+<td>14,8 %</td>
+<td>25,2 %</td>
+</tr>
+<tr class="even">
+<td>0,7</td>
+<td>409</td>
+<td>471</td>
+<td>15,6 %</td>
+<td>24,4 %</td>
+</tr>
+<tr class="odd">
+<td>0,8</td>
+<td>330</td>
+<td>390</td>
+<td>16,3 %</td>
+<td>23,8 %</td>
+</tr>
+<tr class="even">
+<td>0,9</td>
+<td>252</td>
+<td>308</td>
+<td>16,9 %</td>
+<td>23,1 %</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>176</td>
+<td>225</td>
+<td>17,6 %</td>
+<td>22,5 %</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<p>Si, por ejemplo, <span class="math inline">\(\alpha = 0.5\)</span> (el resultado de lanzar una moneda), el 95 % de las veces el número de &lt;<síes>&gt; se encuentra entre 570 y 630. Si es 570 entendemos que 70 son los síes verdaderos y nuestra estimación de los que responden “sí” a la pregunta de interés será 70/500 = 14 %. En el Apéndice 6.B se deduce la relación entre el valor de <span class="math inline">\(\alpha\)</span> y la varianza de la estimación.</síes></p>
+</section>
+<section id="encuestas-informales" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="encuestas-informales">Encuestas “informales”</h3>
+<p>Si en un programa de televisión dicen: “Salimos a la calle y preguntamos la opinión de los ciudadanos sobre…” conviene ser escépticos. Más allá del tamaño de la muestra –que suele ser muy reducido–, los que pasan por ese sitio a esa hora y se prestan a responder delante de la cámara no son una muestra representativa de la población. Casi siempre es evidente que se trata de un <em>divertimento</em>. Lo grave es cuando en un trabajo académico se realiza una encuesta más o menos de este tipo y se pretende dar a los resultados un valor que no tienen (a veces incluyendo niveles de confianza y márgenes de error).</p>
+<p>También, en algunas ocasiones se nos pide que rellenemos un cuestionario dando nuestra opinión sobre un producto o servicio. En general, solo responden quienes están muy descontentos o muy satisfechos. La encuesta puede servir para detectar esos casos extremos, pero es evidente que sus resultados no se pueden extrapolar al conjunto de los clientes. Incluso puede ocurrir que este tipo de cuestionarios se ponga a disposición del público solo para &lt;<quedar bien="">&gt;, para dar la impresión de que interesa su opinión, pero solo para eso.</quedar></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Hacer un estudio estadístico no es hacer una encuesta
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Algunas personas piensan que realizar un estudio estadístico exige realizar una encuesta. En absoluto. La estadística va mucho más allá de las encuestas. Muchas veces los datos que se necesitan ya existen (aunque quizá no sea fácil encontrarlos) o hay que obtenerlos realizando experimentos.</p>
+</div>
+</div>
+</section>
+<section id="conocer-la-opinión-sin-hacer-encuestas" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="conocer-la-opinión-sin-hacer-encuestas">Conocer la opinión sin hacer encuestas</h3>
+<p>Para conocer la opinión de una población de interés, existen otros métodos además de las encuestas. En estudios de mercado suelen utilizarse los llamados <em>focus group</em>. Se trata de reunir un grupo reducido de personas –en torno a ocho o diez– que represente distintos sectores de la población de interés. Las conversaciones y debates con estas personas, dirigidos por personal experto, permiten obtener información para valorar el nivel de satisfacción con un producto o servicio y también generar ideas para mejorarlo.</p>
+</section>
+</section>
+<section id="inspección-por-muestreo" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="inspección-por-muestreo"><span class="header-section-number">6.4</span> Inspección por muestreo</h2>
+<p>El muestreo no solo se aplica en el ámbito de las encuestas. También se usa, por ejemplo, para evaluar el nivel de calidad de un lote de productos sin necesidad de inspeccionarlos todos, uno a uno.</p>
+<p>Este tipo de inspección lo puede realizar la propia empresa fabricante, para comprobar que no existen problemas de calidad que hayan pasado desapercibidos durante el proceso de producción, o también en el control de recepción de los componentes adquiridos a proveedores, con el fin de verificar que se cumplen los estándares de calidad establecidos.</p>
+<section id="plan-de-muestreo.-riesgo-del-comprador-y-riesgo-del-vendedor" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="plan-de-muestreo.-riesgo-del-comprador-y-riesgo-del-vendedor">Plan de muestreo. Riesgo del comprador y riesgo del vendedor</h3>
+<p>Vamos a centrarnos en el control de recepción y supongamos que compramos un lote de unidades, cada una de las cuales se puede clasificar como correcta o defectuosa. Pueden ser componentes para un producto que se va a fabricar o también frutas u hortalizas que se van a comercializar.</p>
+<p>Si estamos dispuestos a tolerar un 5 % de unidades defectuosas, podemos tomar una muestra de 100 unidades y si aparecen como máximo 5 defectos (el 5 %) considerar que el lote es correcto, mientras que si se encuentran más de 5 considerar que no cumple con lo pactado y devolverlo o realizar las acciones que se hayan establecido si esto sucede.</p>
+<p>Parece que este procedimiento, al tolerar el mismo porcentaje de defectos en la muestra que en el lote, es el más justo, pero tiene algunos inconvenientes. Vamos a echar mano del cálculo de probabilidades para analizar lo que puede suceder.</p>
+<p>Supongamos que recibimos un lote con el 3 % de unidades defectuosas. Como está por debajo del 5 % deberíamos aceptarlo, pero puede ocurrir que –por casualidad– caigan muchas unidades defectuosas en la muestra y rechacemos el lote de manera injusta. Si el tamaño del lote es mucho mayor que el de la muestra -que es lo habitual– podemos considerar constante la probabilidad de que al extraer una unidad esta sea defectuosa<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> y podemos usar la distribución binomial para calcular la probabilidad de devolver “injustamente” ese lote con el 3 % de defectos. Sea <span class="math inline">\(X\)</span> el número de defectos encontrado en una muestra de <span class="math inline">\(n=100\)</span> unidades. Tenemos:</p>
+<p><span class="math display">\[\mathrm P(X &gt; 5; n=100; p=0.03) = 0.2115\]</span> También puede ocurrir que un lote que no cumple con lo establecido sea aceptado. Si el porcentaje de defectos es del 6% la probabilidad de ser aceptado es: <span class="math display">\[\mathrm P(X \leq 5; n=100; p=0.06) = 0.4407 \]</span> A la probabilidad de rechazar injustamente un lote que cumple con los requisitos establecidos se le denomina <strong>riesgo del vendedor</strong>, y la probabilidad de aceptarlo cuando no los cumple es el <strong>riesgo del comprador</strong>. En un contexto más general, se habla de falso positivo y falso negativo.</p>
+</section>
+<section id="curva-característica-de-un-plan-de-muestreo" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="curva-característica-de-un-plan-de-muestreo">Curva característica de un plan de muestreo</h3>
+<p>Dado un plan de muestreo, es decir, dados los valores de <span class="math inline">\(n\)</span> (número de unidades a inspeccionar) y <span class="math inline">\(c\)</span> (número máximo de defectos tolerado), la mejor forma de visualizar su comportamiento es mediante la curva que representa la probabilidad de aceptar el lote en función de la proporción de defectos que contiene. Esta curva se denomina <strong>curva característica del plan de muestreo</strong>.</p>
+<p>La <a href="#fig-curvaCaracteristica_100_5" class="quarto-xref">Figura&nbsp;<span>6.1</span></a>. muestra su construcción para el plan definido por <span class="math inline">\(n=100\)</span> y <span class="math inline">\(c=5\)</span> utilizando una hoja de cálculo. En la columna A se indica la proporción de defectos en el lote (<span class="math inline">\(p\)</span>) y en la columna C la probabilidad de aceptarlo: <span class="math inline">\(\text{P}(X \leq 5; n=100; p=p)\)</span>. También se incluye la que sería la &lt;<curva ideal="">&gt;, con una probabilidad de aceptación igual a 1 para cualquier valor de la proporción de defectos menor o igual a 0,05, e igual a cero para valores mayores de esa proporción, pero esta curva solo se puede conseguir inspeccionando el lote completo.</curva></p>
+<div id="fig-curvaCaracteristica_100_5" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-curvaCaracteristica_100_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras/f0601_curvaCaracteristica_100_5.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-curvaCaracteristica_100_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;6.1: Construcción de la curva característica del plan de muestreo definido por n = 100 y c = 5. En trazo negro se muestra la que sería la curva ideal si se está dispuesto a tolerar un 5 % de defectos.
+</figcaption>
+</figure>
+</div>
+<p>La curva característica también sirve para observar que un plan de muestreo no es necesariamente más riguroso por el hecho de no tolerar ni un solo defecto en la muestra (<span class="math inline">\(c=0\)</span>). La <a href="#fig-curvaCaracteristica_Compara" class="quarto-xref">Figura&nbsp;<span>6.2</span></a> añade la curva correspondiente al plan definido por <span class="math inline">\(n=10\)</span> y <span class="math inline">\(c=0\)</span>, donde puede observarse que la probabilidad de aceptación es muy alta para proporciones de defectos por encima de lo establecido. Esta figura también incluye la curva correspondiente al plan definido por <span class="math inline">\(n=500\)</span> y <span class="math inline">\(c=25\)</span>. A medida que aumenta el tamaño de la muestra, manteniendo una proporción de defectos igual a la permitida en el lote, la curva característica se va acercando a la curva ideal.</p>
+<div id="fig-curvaCaracteristica_Compara" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-curvaCaracteristica_Compara-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras/f0602_curvaCaracteristica_Compara.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-curvaCaracteristica_Compara-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;6.2: Curvas características de los planes de muestreo que se indican. A medida que se aumenta el tamaño de la muestra, la curva se va acercando a la curva ideal.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="otra-vez-insistimos-atención-a-como-se-selecciona-la-muestra" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="otra-vez-insistimos-atención-a-como-se-selecciona-la-muestra">Otra vez insistimos: Atención a como se selecciona la muestra</h3>
+<p>La selección de la muestra para que sea representativa del conjunto que se desea evaluar suele ser el eslabón más débil de la cadena. Dar instrucciones de &lt;<elegir al="" azar="">&gt;, sin más, puede ser interpretado como elegir con preferencia lo que está más a mano, lo cual puede ser representativo de una parte, pero no del todo. Además, puede ser una parte especialmente ``mimada’’, si el proveedor conoce esa práctica.</elegir></p>
+<p>Conviene dar instrucciones precisas de cómo debe seleccionarse la muestra para que sea representativa de todo el conjunto, aunque esto puede ser mucho más laborioso que hacerlo a discreción del inspector. Si esas instrucciones se dan de manera que se puede verificar su cumplimiento, quizá mediante algún tipo de muestreo sistemático si las unidades están numeradas, estaremos más seguros de que el muestreo se ha ejecutado correctamente.</p>
+</section>
+</section>
+<section id="apéndice-6.a-por-qué-cuesta-acertar-en-los-sondeos-electorales" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="apéndice-6.a-por-qué-cuesta-acertar-en-los-sondeos-electorales">APÉNDICE 6.A: ¿Por qué cuesta acertar en los sondeos electorales?</h2>
+<p>Cuando se estiman las características de una población a partir de una muestra, siempre hay que asumir un cierto margen de error; pero cuando ese error va más allá de lo esperado, es señal de que falla algo. No es que la teoría estadística sea incorrecta, lo que no se cumple son los principios en que se basa, ya sea por falta de recursos o porque en la práctica es muy difícil cumplirlos. Veamos algunas de estas dificultades.</p>
+<section id="conseguir-que-la-muestra-sea-representativa" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="conseguir-que-la-muestra-sea-representativa">Conseguir que la muestra sea representativa</h4>
+<p>Este no es un problema específico de los sondeos electorales, pero es más difícil conseguir la muestra adecuada si una parte de la población se muestra renuente a responder preguntas sobre sus ideas políticas. Si las razones de la no respuesta fueran independientes de las preferencias de voto, el problema tendría solución desde la estadística. Sin embargo, la práctica ha demostrado que esto no es así: hay más voto oculto en unas opciones políticas que en otras, y el problema se complica.</p>
+</section>
+<section id="la-intención-de-voto-va-cambiando" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="la-intención-de-voto-va-cambiando">La intención de voto va cambiando</h4>
+<p>Los sondeos electorales se basan en encuestas realizadas varios días, o incluso varias semanas, antes de las elecciones. En algunos países está prohibido publicar resultados de sondeos electorales durante un cierto periodo antes de las elecciones. Por tanto, nos encontramos con dos tipos de extrapolaciones: 1) la que se hace desde la muestra hacia la población, siendo esta la que trata la teoría estadística del muestreo, y 2) la que generaliza los resultados de las fechas en que se ha hecho el sondeo, al día de las elecciones. Pero los partidos se emplean a fondo en sus campañas electorales: se organizan debates, pueden ocurrir sucesos sobre los que se posicionan los candidatos, y todo esto puede afectar a la decisión final del electorado.</p>
+</section>
+<section id="a-quién-votarán-los-indecisos" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="a-quién-votarán-los-indecisos">¿A quién votarán los indecisos?</h4>
+<p>Los indecisos suelen representar un porcentaje importante de la población y, dependiendo de lo que estos acaben votando, los resultados serán unos u otros. Realizar las estimaciones ignorando a los indecisos no es una buena idea, porque estos acabarán votando (al menos una gran parte). Suponer que entre los indecisos se reproducirán las mismas proporciones que entre los que ya han decidido su voto también es mucho suponer.</p>
+<p>Las empresas especializadas en realizar sondeos electorales tienen sus procedimientos para asignar el voto a los indecisos. Las entrevistas empiezan con preguntas &lt;<fáciles>&gt; (edad, profesión,…) que permiten asignar un cierto perfil socioeconómico a los entrevistados. A continuación, se pueden hacer preguntas más relacionadas con la ideología, como su opinión sobre un tema polémico en el que derecha e izquierda tienen opiniones contrapuestas, su valoración de algunos líderes políticos o a quién votó en las últimas elecciones. La respuesta a estas preguntas marca un perfil al que se asigna un voto. La correcta asignación de este voto responde más a conocimientos relacionados con la sociología y con la política que con la estadística, y en esa asignación está el éxito o el fracaso de los resultados del sondeo.</fáciles></p>
+</section>
+<section id="la-falta-de-sinceridad-en-las-respuestas" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="la-falta-de-sinceridad-en-las-respuestas">La falta de sinceridad en las respuestas</h4>
+<p>La redacción de las preguntas y el orden en que se realizan son aspectos críticos para conseguir la participación y la sinceridad de los encuestados. Por otra parte, conseguir que el entrevistado se sienta cómodo y responda con sinceridad requiere entrevistadores bien entrenados y motivados (léase bien pagados).</p>
+<p>A veces la situación política hace que algunos ciudadanos prefieran disimular sus preferencias declarando que votarán a las opciones que consideran “mejor vistas”. También puede ocurrir que se muestren indecisos cuando en realidad se trata de “decisos cautos”.</p>
+<section id="del-porcentaje-de-votos-al-número-de-escaños" class="level5 unnumbered">
+<h5 class="unnumbered anchored" data-anchor-id="del-porcentaje-de-votos-al-número-de-escaños">Del porcentaje de votos al número de escaños</h5>
+<p>En muchas ocasiones lo verdaderamente relevante no es el porcentaje de votos sino el número de escaños que va a obtener cada partido. Pequeñas variaciones en el porcentaje de votos –imposibles de precisar mediante muestreo– provocan cambios en el número de escaños.</p>
+<p>Otro problema es que algunas legislaciones electorales exigen un mínimo porcentaje de votos para entrar en el reparto. Si ese porcentaje es del 5 % y la estimación de voto para un partido es del 4 % <span class="math inline">\(\pm\)</span> 2 % no se puede saber si llegará o no al mínimo necesario, y el hecho de que llegue o no llegue afectará también al número de escaños del resto de partidos.</p>
+<p><span style="color: #0038CF;"><span class="math display">\[\bullet \;\;\;\;\; \bullet \;\;\;\;\; \bullet \]</span></span></p>
+<p>A pesar de las dificultades comentadas, las empresas especializadas saben cómo hacer las estimaciones en base a su experiencia, aplicando técnicas y conocimientos que van más allá de los procedimientos clásicos de estimación estadística. Sus resultados siempre son esperados con interés y, muchas veces el grado de acercamiento a lo que al final acaba ocurriendo es espectacular. Claro que, como en otros ámbitos, siempre se destacan más los fallos que los aciertos.</p>
+</section>
+</section>
+</section>
+<section id="apéndice-6.b-el-precio-de-la-confidencialidad" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="apéndice-6.b-el-precio-de-la-confidencialidad">Apéndice 6.B: El precio de la confidencialidad</h2>
+<p>Sea <span class="math inline">\(p\)</span> el verdadero valor de la proporción estimada, y <span class="math inline">\(\alpha\)</span> la probabilidad de que el encuestado deba responder a la pregunta de interés. La probabilidad de obtener un &lt;<sí>&gt; como respuesta es: <span class="math display">\[P_{si} = (1 - \alpha) + \alpha \cdot p \]</span> Despejamos <span class="math inline">\(p\)</span>: <span class="math display">\[p = \frac{P_{si}-(1-\alpha)}{\alpha} \]</span> Cuando tenemos los resultados de la encuesta, no tenemos el valor poblacional de <span class="math inline">\(p\)</span>, sino una proporción que estima ese valor. A esa proporción le llamamos <span class="math inline">\(\hat{p}\)</span>. La proporción de síes que obtenemos en la encuesta también es una variable aleatoria, le llamamos <span class="math inline">\(\hat{P}_{si}\)</span>. Por tanto, a partir de la muestra, tendremos: <span class="math display">\[\hat{p} = \frac{\hat{P}_{si}-(1-\alpha)}{\alpha} \]</span> Recordando que <span class="math inline">\(\mathrm{V}(aX + b) = a^2 \mathrm{V}(X)\)</span> (Apéndice 5.A): <span class="math display">\[\mathrm V(\hat{p}) = \mathrm V \left ( \frac{\hat{P}_{si} - (1 - \alpha)}{\alpha} \right) = \frac{1}{\alpha^2} \mathrm V (\hat{P}_{si})\]</span> Como <span class="math inline">\(\hat{P}_{si}\)</span> es una proporción referida a una variable aleatoria con distribución binomial (número de entrevistados que responden &lt;<sí>&gt;), tenemos que su varianza es: <span class="math display">\[\mathrm V (\hat{P}_{si}) = \frac{P_{si} (1 - P_{si})}{n} \]</span> Sustituyendo en la expresión anterior de <span class="math inline">\(\mathrm V(\hat{p})\)</span>: <span class="math display">\[\mathrm V (\hat{p}) = \frac{P_{si} (1 - P_{si})}{n \cdot \alpha^2} \]</span> Ya solo nos falta sustituir <span class="math inline">\(P_{si}\)</span> por su expresión:<span class="math inline">\(P_{si} = (1 - \alpha) + \alpha \cdot p\)</span>, y tras un poco de manipulación algebraica, llegamos a: <span class="math display">\[\mathrm V(\hat{p}) = \frac{p(1-p)}{n} + \frac{(1 - \alpha)(1 - p)}{n \cdot \alpha} \]</span> El primer término, <span class="math inline">\(p(1-p)/n\)</span>, es la varianza que tendríamos haciendo la pregunta de forma directa. El segundo es la variabilidad adicional que se añade debido al procedimiento seguido para garantizar la confidencialidad. Ese aumento de la variabilidad es el precio a pagar. Si <span class="math inline">\(\alpha = 1\)</span> (siempre se responde a la pregunta de interés), el segundo término se anula y obtenemos la varianza convencional.</sí></sí></p>
+</section>
+<section id="apéndice-6.c-diseño-de-planes-de-muestreo" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="apéndice-6.c-diseño-de-planes-de-muestreo">Apéndice 6.C: Diseño de planes de muestreo</h2>
+<p>Conscientes de que cuando se decide en base a una muestra siempre se corren unos riesgos, lo que hacemos es fijar esos riesgos y determinar el plan de muestreo que mejor se adapta a ellos. Fijamos los siguientes cuatro valores:</p>
+<ul>
+<li><p>Porcentaje de defectos que estamos dispuestos a aceptar. Se denomina AQL, siglas de <em>Acceptance Quality Level</em> y podría ser, por ejemplo, del 1 %. Si el lote viene con esa proporción de defectos queremos que la probabilidad de aceptarlo sea alta.</p></li>
+<li><p>Probabilidad de rechazar un lote que tiene una proporción de defectos igual al AQL. Le llamamos <span class="math inline">\(\alpha\)</span> e interesa que esa probabilidad sea pequeña, podría ser <span class="math inline">\(\alpha = 0.05\)</span>.</p></li>
+<li><p>Proporción de defectos que consideramos demasiado alta. Se denomina RQL (de <em>Rejectable Quality Level</em>) y si un lote viene con esa proporción de defectos queremos que la probabilidad de aceptarlo sea baja. Un valor para el RQL podría ser el 6 %.</p></li>
+<li><p>Probabilidad de aceptar un lote con una proporción de defectos igual al RQL. Le llamamos <span class="math inline">\(\beta\)</span> y queremos que esa probabilidad sea baja. La podemos fijar, por ejemplo, en el 10 %.</p></li>
+</ul>
+<p>Podemos asignar valores más bajos a <span class="math inline">\(\alpha\)</span> y <span class="math inline">\(\beta\)</span> pero cuanto menores sean estos (menos riesgos queramos correr) mayor saldrá el tamaño de la muestra.</p>
+<p>Los valores de AQL y <span class="math inline">\(1-\alpha\)</span> así como RQL y <span class="math inline">\(\beta\)</span> definen dos puntos en el gráfico de probabilidad de aceptación frente a la proporción de unidades defectuosas (<a href="#fig-puntosClave" class="quarto-xref">Figura&nbsp;<span>6.3</span></a>). Se trata de encontrar los valores de <span class="math inline">\(n\)</span> y <span class="math inline">\(c\)</span> que corresponden a la curva característica que más se acerca a esos puntos. Con los valores de la figura, este plan es el definido por <span class="math inline">\(n=87\)</span> y <span class="math inline">\(c=2\)</span>.</p>
+<div id="fig-puntosClave" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-puntosClave-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras/f0603_puntosClave.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-puntosClave-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;6.3: Curva característica del plan de muestreo (<span class="math inline">\(n=87\)</span>, <span class="math inline">\(c=2\)</span>) que mejor se adapta a los puntos previamente definidos.
+</figcaption>
+</figure>
+</div>
+<p>Las expresiones que usamos para deducir los valores de <span class="math inline">\(n\)</span> y <span class="math inline">\(c\)</span> en función de AQL, RQL, <span class="math inline">\(\alpha\)</span> y <span class="math inline">\(\beta\)</span> se encuentran en la <a href="#fig-calculoPlanMuestreo" class="quarto-xref">Figura&nbsp;<span>6.4</span></a>. No parece fácil despejar los valores de <span class="math inline">\(n\)</span> y <span class="math inline">\(c\)</span> de esas expresiones, pero podemos elaborar un programa que para todas las parejas de valores <span class="math inline">\(n\)</span> y <span class="math inline">\(c\)</span> (dentro de unos límites, por ejemplo <span class="math inline">\(n \leq 200\)</span> y <span class="math inline">\(c \leq 6\)</span>) identifique la que corresponde al plan que mejor se adapta a los requisitos establecidos.</p>
+<div id="fig-calculoPlanMuestreo" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-calculoPlanMuestreo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras/f0604_calculoPlanMuestreo.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:55.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-calculoPlanMuestreo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;6.4: Curva característica del plan de muestreo (<span class="math inline">\(n=87\)</span>, <span class="math inline">\(c=2\)</span>) que mejor se adapta a los puntos previamente definidos.
+</figcaption>
+</figure>
+</div>
+<p>El tema de los planes de inspección por muestreo no se acaba aquí. Existen otros tipos de plan como los de muestreo doble, en los que tras tomar una primera muestra el lote se acepta si el número de defectos es menor o igual que un valor <span class="math inline">\(c_1\)</span> y se rechaza si es mayor o igual que <span class="math inline">\(c_2\)</span>, mientras que si está entre <span class="math inline">\(c_1\)</span> y <span class="math inline">\(c_2\)</span> se saca otra muestra y se toma una decisión a la vista del número de defectos total. Estos planes tienen la ventaja de que exigen menos esfuerzo de inspección si el lote es muy bueno o muy malo, dedicando más esfuerzo a los lotes que son dudosos.</p>
+<p>Es muy habitual aplicar planes de inspección por muestreo basándose en lo que establecen Normas como las ISO 2859-1:1999 que también contienen otros aspectos como la adaptación del rigor de la inspección al historial del proveedor, usando mayores tamaños de muestra para los proveedores a los que se ha hallado mayor cantidad de defectos en sus últimas entregas. <br></p>
+<div style="text-align: center; font-size: 1.1em;">
+<p>________________________ <span style="margin: 0 0.4em;">◇</span> ________________________</p>
+</div>
+<p><br></p>
 
 
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>En España es obligatorio publicar una llamada “ficha técnica” de los sondeos que se publican durante la campaña electoral. La ficha técnica incluye niveles de confianza y márgenes de error muchas veces calculados bajo la hipótesis de muestreo aleatorio simple, aunque es evidente que el muestreo realizado no ha sido de ese tipo.}.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Ferrándiz, J.P. y Camas García, F. (2019). La Cocina electoral en España, Ed. Catarata, p.&nbsp;225.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>El muestreo se realiza sin reposición, de manera que la proporción de unidades defectuosas va cambiando a medida que las vamos extrayendo. Sin embargo, si el tamaño del lote es mucho mayor que el de la muestra, los cambios en la proporción de defectos serán muy pequeños, de manera que pueden ser ignorados y considerar que la proporción se mantiene constante.}<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -710,7 +1089,7 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./_03_tapaMuestraPoblacion.html" class="pagination-link" aria-label="DE LA MUESTRA A LA POBLACIÓN">
+      <a href="./0_03_tapaMuestraPoblacion.html" class="pagination-link" aria-label="DE LA MUESTRA A LA POBLACIÓN">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">DE LA MUESTRA A LA POBLACIÓN</span>
       </a>          
   </div>

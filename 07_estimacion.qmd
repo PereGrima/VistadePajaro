@@ -106,10 +106,10 @@ Supongamos que la población está formada por solo 5 elementos, cada uno de ell
 
 El valor medio de esos 5 elementos --la media de la población-- es:
 $$\mu = \frac{3 + 6 + 9 + 12 + 15}{5} = 9$$
-Existen 10 maneras de seleccionar una muestra de 3 elementos de esta población (combinaciones de 5 elementos tomados de 3 en 3). Por tanto, si tomamos una muestra con toda seguridad será una de las que se incluyen en la  tabla \ref{tablaMedias}, puesto que están todas.
+Existen 10 maneras de seleccionar una muestra de 3 elementos de esta población (combinaciones de 5 elementos tomados de 3 en 3). Por tanto, si tomamos una muestra con toda seguridad será una de las que se incluyen en la  [Tabla 7.1](#tbl-Medias), puesto que están todas.
 
 ```{=html}
-<div id="tbl-Dividir_n-1"; class="tabla-wrapper_T0701">
+<div id="tbl-Medias"; class="tabla-wrapper_T0701">
 <table class="tabla-0701">
 
 <caption>Tabla 7.1: Medias de las 10 muestras de 3 observaciones que se pueden obtener de una población con 5 elementos.</caption>
@@ -491,4 +491,81 @@ y despejando el valor de $n$:
 $$n = \frac{z_{\alpha/2}^2 \, N \, p(1 - p)}{E^2 (N - 1) + z_{\alpha/2}^2 \, p(1 - p)}$$
 Esta es una fórmula cerrada que no tiene ningún misterio. El nivel de confianza está relacionado con el valor de $z_{\alpha/2}$. Para un nivel de confianza del 95 % ($1-\alpha = 0.95$ y, por tanto, $\alpha/2 = 0.025$) tenemos que $z_{0.025} = 1.96$. Observe también que si $N$ es muy grande en el denominador se puede ignorar el valor del segundo término frente al primero y considerando $N \thickapprox N-1$ nos queda la expresión que ya habíamos obtenido:
 $$n = \frac{p(1-p) \cdot z_{\alpha/2}^2}{E^2}$$
-Con la ayuda de una hoja de cálculo se puede construir una tabla como la \ref{tamañosMuestra} donde se indica el tamaño de muestra necesario para estimar una proporción en función del tamaño de la población y el margen de error que se está dispuesto a asumir. Los valores que figuran son para un nivel de confianza del 95 %, pero la tabla se puede construir de manera que ese valor se pueda cambiar fácilmente.
+Con la ayuda de una hoja de cálculo se puede construir una tabla como la [7.4](#tbl-tamañoMuestra) donde se indica el tamaño de muestra necesario para estimar una proporción en función del tamaño de la población y el margen de error que se está dispuesto a asumir. Los valores que figuran son para un nivel de confianza del 95 %, pero la tabla se puede construir de manera que ese valor se pueda cambiar fácilmente.
+
+```{=html}
+<div id="tbl-tamañoMuestra" class="tabla-wrapper_T0704">
+
+  <div class="tabla-caption">
+    Tabla 7.4: Tamaño de la muestra para estimar una proporción con un nivel de confianza del 95 % y el margen de error indicado según sea el tamaño de la población.
+  </div>
+
+  <table class="tabla-0704">
+
+<colgroup>
+  <col style="width: 20%;">
+  <col style="width: 10%;">
+  <col style="width: 10%;">
+  <col style="width: 10%;">
+  <col style="width: 10%;">
+  <col style="width: 10%;">
+  <col style="width: 10%;">
+</colgroup>
+<thead>
+  <tr>
+    <th rowspan="2">Tamaño de la población</th>
+    <th colspan="7">Margen de error</th>
+  </tr>
+  <tr>
+    <th>&plusmn; 1 %</th>
+    <th>&plusmn; 2 %</th>
+    <th>&plusmn; 3 %</th>
+    <th>&plusmn; 4 %</th>
+    <th>&plusmn; 5 %</th>
+    <th>&plusmn; 10 %</th>
+  </tr>
+ </thead>
+
+<tbody>
+<tr> <td>500</td> <td>476</td> <td>414</td> <td>341</td> <td>273</td> <td>218</td> <td>81</td> </tr>
+<tr> <td> 1,000   </td> <td>  906 </td> <td>  707 </td> <td>  517 </td> <td>  376 </td> <td>  278 </td> <td>  88 </td></tr>
+<tr> <td>	1.500   </td> <td> 1.298 </td> <td> 924 </td> <td> 624 </td> <td> 429 </td> <td> 306 </td> <td> 91 </td></tr>
+<tr> <td>	2.000   </td> <td> 1.656 </td> <td> 1.092 </td> <td> 697 </td> <td> 462 </td> <td> 323 </td> <td> 92 </td></tr>
+<tr> <td>	2.500   </td> <td> 1.984 </td> <td> 1.225 </td> <td> 749 </td> <td> 485 </td> <td> 334 </td> <td> 93 </td></tr>
+<tr> <td>	3.000   </td> <td> 2.287 </td> <td> 1.334 </td> <td> 788 </td> <td> 501 </td> <td> 341 </td> <td> 94 </td></tr>
+<tr> <td>	3.500   </td> <td> 2.566 </td> <td> 1.425 </td> <td> 818 </td> <td> 513 </td> <td> 347 </td> <td> 94 </td></tr>
+<tr> <td>	4.000   </td> <td> 2.825 </td> <td> 1.501 </td> <td> 843 </td> <td> 523 </td> <td> 351 </td> <td> 94 </td></tr>
+<tr> <td>	4.500   </td> <td> 3.065 </td> <td> 1.566 </td> <td> 863 </td> <td> 530 </td> <td> 355 </td> <td> 95 </td></tr>
+<tr> <td>	5.000   </td> <td> 3.289 </td> <td> 1.623 </td> <td> 880 </td> <td> 536 </td> <td> 357 </td> <td> 95 </td></tr>
+<tr> <td>	6.000   </td> <td> 3.694 </td> <td> 1.715 </td> <td> 907 </td> <td> 546 </td> <td> 362 </td> <td> 95 </td></tr>
+<tr> <td>	7.000   </td> <td> 4.050 </td> <td> 1.788 </td> <td> 927 </td> <td> 553 </td> <td> 365 </td> <td> 95 </td></tr>
+<tr> <td>	8.000   </td> <td> 4.365 </td> <td> 1.847 </td> <td> 942 </td> <td> 559 </td> <td> 367 </td> <td> 95 </td></tr>
+<tr> <td>	9.000   </td> <td> 4.647 </td> <td> 1.896 </td> <td> 955 </td> <td> 563 </td> <td> 369 </td> <td> 96 </td></tr>
+<tr> <td>	10.000  </td> <td> 4.900 </td> <td> 1.937 </td> <td> 965 </td> <td> 567 </td> <td> 370 </td> <td> 96 </td></tr>
+<tr> <td>	15.000  </td> <td> 5.856 </td> <td> 2.070 </td> <td> 997 </td> <td> 578 </td> <td> 375 </td> <td> 96 </td></tr>
+<tr> <td>	20.000  </td> <td> 6.489 </td> <td> 2.144 </td> <td> 1.014 </td> <td> 583 </td> <td> 377 </td> <td> 96 </td></tr>
+<tr> <td>	25.000      </td> <td> 6.939 </td> <td> 2.191 </td> <td> 1.024 </td> <td> 587 </td> <td> 379 </td> <td> 96 </td></tr>
+<tr> <td>	50.000      </td> <td> 8.057 </td> <td> 2.291 </td> <td> 1.045 </td> <td> 594 </td> <td> 382 </td> <td> 96 </td></tr>
+<tr> <td>	100.000     </td> <td> 8.763 </td> <td> 2.345 </td> <td> 1.056 </td> <td> 597 </td> <td> 383 </td> <td> 96 </td></tr>
+<tr> <td>	500.000     </td> <td> 9.423 </td> <td> 2.390 </td> <td> 1.065 </td> <td> 600 </td> <td> 384 </td> <td> 97 </td></tr>
+<tr> <td>	1.000.000   </td> <td> 9.513 </td> <td> 2.396 </td> <td> 1.066 </td> <td> 600 </td> <td> 384 </td> <td> 97 </td></tr>
+<tr> <td>	1.500.000   </td> <td> 9.543 </td> <td> 2.398 </td> <td> 1.067 </td> <td> 600 </td> <td> 384 </td> <td> 97 </td></tr>
+<tr> <td>	2.000.000   </td> <td> 9.558 </td> <td> 2.399 </td> <td> 1.067 </td> <td> 601 </td> <td> 385 </td> <td> 97 </td></tr>
+<tr> <td>	50.000.000  </td> <td> 9.602 </td> <td> 2.401 </td> <td> 1.068 </td> <td> 601 </td> <td> 385 </td> <td> 97 </td></tr> 
+</tbody>
+</table>
+</div>
+```
+
+#### Relación entre el tamaño de la muestra y el tamaño de la población {.unnumbered}
+
+Guiándonos solo por la intuición parece lógico pensar que el tamaño de la muestra debe estar muy relacionado con el de la población. Nos parece que para un país con 50 millones de habitantes hará falta una muestra mucho mayor que para una ciudad con 50 mil. Incluso hay quien desconfía de un estudio porque "la muestra no llega ni al 10 % de la población". Pero lo cierto es que esa idea de proporcionalidad entre tamaño de muestra y de población, por muy razonable que parezca, es errónea.
+
+::: callout-note
+## ¿Para saber mi grupo sanguineo se necesita una muestra del 10 % de mi sangre?
+
+No, basta una gota, porque todas las gotas son iguales. La misma cantidad de sangre se requiere para un recién nacido que pesa 3 kg que para su padre de 85 kg.
+:::
+
+En la [Tabla 7.4](#tbl-tamañoMuestra) fijándonos, por ejemplo, en la columna que corresponde a un margen de error del 3 % vemos que el tamaño de muestra aumenta con el tamaño de la población, pero a partir de cierto tamaño de la población aumenta muy lentamente. Para una población de 50.000 individuos hace falta una muestra de 1.045, pero si multiplicamos por 10 el tamaño de la población (pasamos de 50 a 500 mil) el tamaño de muestra apenas cambia (pasa de 1.045 a 1.065) y a partir de ahí se mantiene prácticamente constante.
+

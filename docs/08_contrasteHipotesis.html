@@ -73,6 +73,35 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -101,7 +130,10 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./"><span style="font-size: 1.5em;">Estadística</span><br> <span style="font-size: 1em;">Entender - Aplicar - Enseñar</span></a> 
+      <a href="./">
+      &lt;span style="font-size: 1.5em;"&gt;Estadística&lt;/span&gt;&lt;br&gt;
+&lt;span style="font-size: 1em;"&gt;Entender - Aplicar - Enseñar&lt;/span&gt;
+      </a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -277,8 +309,18 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#empezamos-con-un-reto-los-dados-de-wolf" id="toc-empezamos-con-un-reto-los-dados-de-wolf" class="nav-link active" data-scroll-target="#empezamos-con-un-reto-los-dados-de-wolf"><span class="header-section-number">8.1</span> Empezamos con un reto: Los dados de Wolf</a>
+  <ul class="collapse">
+  <li><a href="#representación-gráfica-de-los-datos" id="toc-representación-gráfica-de-los-datos" class="nav-link" data-scroll-target="#representación-gráfica-de-los-datos"><span class="header-section-number">8.1.1</span> Representación gráfica de los datos</a></li>
+  <li><a href="#medida-de-discrepancia-entre-resultados-teóricos-y-observados" id="toc-medida-de-discrepancia-entre-resultados-teóricos-y-observados" class="nav-link" data-scroll-target="#medida-de-discrepancia-entre-resultados-teóricos-y-observados">Medida de discrepancia entre resultados teóricos y observados</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -302,17 +344,77 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Este título es provisional</p>
-<div id="tbl-tamañoMuestra" class="tabla-wrapper_T0704 anchored">
+<p>Los test estadísticos se basan en un esquema de razonamiento llamado <em>contraste de hipótesis</em>. Consiste en plantear una hipótesis conservadora (hipótesis nula), por ejemplo: &lt;“os resultados en el grupo tratado con el nuevo fármaco no son mejores que los del grupo tratado con un placebo”. Frente a ella, se plantea una hipótesis alternativa, que corresponde a lo que asumimos si los datos –la evidencia empírica– están en contradicción con la hipótesis inicial. Entendemos que existe contradicción cuando, de ser cierta la hipótesis conservadora, resultaría muy poco probable obtener unos datos como los observados.</p>
+<p>Típicamente, este análisis consiste en realizar ciertos cálculos con los datos para obtener un número que luego se compara con los que aparecen en una tabla para llegar a lo que llamamos “<span class="math inline">\(p\)</span>-valor”, una especie de número mágico que indica la decisión que se debe tomar. Ese <span class="math inline">\(p\)</span>-valor también se puede obtener directamente mediante un programa informático, pero tanto si se calcula a mano o con ordenador, con frecuencia no se llega a comprender la lógica que hay detrás del proceso seguido.</p>
+<p>En este capítulo, de una forma quizá un poco heterodoxa, vamos a ver en qué consiste esto del contraste de hipótesis.</p>
+<section id="empezamos-con-un-reto-los-dados-de-wolf" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="empezamos-con-un-reto-los-dados-de-wolf"><span class="header-section-number">8.1</span> Empezamos con un reto: Los dados de Wolf</h2>
+<p>Rudolf Wolf (1816-1893) fue un astrónomo suizo conocido por sus investigaciones sobre las manchas solares. También tenía interés –los científicos de la época solían tener una amplia gama de intereses– en el cálculo de probabilidades. Algunas fuentes<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> indican que, para verificar el cumplimiento de las leyes del cálculo de probabilidades, lanzó 20;!000 veces un par de dados –uno blanco y otro rojo– obteniendo los resultados que se muestran en la <a href="#fig-tablaDadosWolf" class="quarto-xref">Figura&nbsp;<span>8.1</span></a>.</p>
+<div id="fig-tablaDadosWolf" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tablaDadosWolf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_08/f0801_tablaDadosWolf.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tablaDadosWolf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;8.1: Resultados obtenidos por R. Wolf al lanzar 20.000 veces dos dados (Reproducido de: M. G. Bulner: Principles of Statistics, Ed. Dover, 1979).
+</figcaption>
+</figure>
+</div>
+<p>Vamos a fijarnos en los resultados obtenidos con cada dado de forma independiente. No esperamos que todos los resultados aparezcan el mismo número de veces; sabemos que si, por ejemplo, lanzamos 60 veces un dado, no necesariamente va a salir 10 veces cada uno de los resultados posibles, sino que existirá una cierta variabilidad en torno a ese 10, que es el valor teórico esperado. De la misma forma, en nuestro caso, el número de veces que saldrá cada valor estará en torno a <span class="math inline">\(3\;\!333.33\)</span> (<span class="math inline">\(=20\;\!000/6\)</span>). Sin embargo, al observar los totales que aparecen en la tabla, podría dar la impresión de que la variabilidad es demasiado grande.</p>
+<p>El reto que nos planteamos es responder a la pregunta: ¿podemos afirmar que esos dados no estaban bien equilibrados?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>¿Qué entendemos por “dados equilibrados”?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Consideramos que los dados están equilibrados, a menos que los resultados obtenidos al lanzarlos contradigan esa suposición. Desde una perspectiva puramente matemática, es seguro que un dado real no está perfectamente equilibrado —no todos los resultados tienen <strong><em>exactamente</em></strong> la misma probabilidad de ocurrir–, pero nosotros nos situamos en el terreno de la práctica, no de los modelos teóricos.</p>
+</div>
+</div>
+<p>Suponemos que el proceso de lanzamiento de los dados es correcto y que la anotación de los resultados se ha realizado sin errores. Seguramente esto es fácil si se realizan unos pocos lanzamientos, pero si se realizan <span class="math inline">\(20\;\!000\)</span> ya no lo es tanto. En cualquier caso, si los resultados no son los esperados, vamos a atribuir esa desviación a los dados y no al proceso de lanzamiento.</p>
+<section id="representación-gráfica-de-los-datos" class="level3" data-number="8.1.1">
+<h3 data-number="8.1.1" class="anchored" data-anchor-id="representación-gráfica-de-los-datos"><span class="header-section-number">8.1.1</span> Representación gráfica de los datos</h3>
+<p>Aunque en este caso tenemos pocos datos, siempre es una buena idea representarlos gráficamente (figura <span class="math inline">\(\ref{grafDadosWolf}\)</span>).</p>
+<div id="fig-grafDadosWolf" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-grafDadosWolf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_08/f0802_grafDadosWolf.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-grafDadosWolf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;8.2: Resultados obtenidos en el experimento de Wolf. Dado B: blanco, R: rojo.).
+</figcaption>
+</figure>
+</div>
+<p>Vemos que los valores 3 y 4 –especialmente el 4– aparecen claramente menos de lo previsto en ambos dados. También destaca el valor 6 del dado blanco, que aparece bastante más. El quid de la cuestión está en dilucidar si esas diferencias son fruto del azar y, por tanto, perfectamente normales o si es muy poco probable que se den por casualidad, en cuyo caso sería más razonable considerar que los dados no están equilibrados.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>¡Gráficos!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Aunque pueda parecer innecesario, una adecuada representación gráfica de los datos siempre ayuda a ver más claramente la información que contienen, y permiten detectar patrones o anomalías que podrían pasar desapercibidos en una tabla.</p>
+</div>
+</div>
+<p>Unos opinarán una cosa y otros otra, pero ya sabemos que no necesariamente tendrá razón el que defienda su punto de vista con más vehemencia. Lo que nos interesa son argumentos –seguramente usando el lenguaje de la probabilidad– que sean convincentes. Vamos a ver como encontrar esos argumentos.</p>
+</section>
+<section id="medida-de-discrepancia-entre-resultados-teóricos-y-observados" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="medida-de-discrepancia-entre-resultados-teóricos-y-observados">Medida de discrepancia entre resultados teóricos y observados</h3>
+<p>La tabla <span class="math inline">\(\ref{tablaDadosWolf}\)</span> resume los valores obtenidos con cada dado y su diferencia con el valor teórico (<span class="math inline">\(=3\;\!333\)</span>) en valor absoluto.</p>
+<div id="tbl-dadosWolf" ;="" class="tabla-wrapper_T0801 anchored">
 
-  <div class="tabla-caption">
-    Tabla 7.4: Tamaño de la muestra para estimar una proporción con un nivel de confianza del 95 % y el margen de error indicado según sea el tamaño de la población.
-  </div>
-
-  
-<table class="tabla-0704 caption-top table">
+<table class="tabla-0801 caption-top table">
+<caption>Tabla 8.1: Discrepancia entre los resultados obtenidos y los teóricos (=20.000/6).</caption>
 <colgroup>
-<col style="width: 20%">
+<col style="width: 10%">
+<col style="width: 25%">
 <col style="width: 10%">
 <col style="width: 10%">
 <col style="width: 10%">
@@ -320,254 +422,85 @@ ul.task-list li input[type="checkbox"] {
 <col style="width: 10%">
 <col style="width: 10%">
 </colgroup>
-<thead>
-<tr class="header">
-<th rowspan="2" data-quarto-table-cell-role="th">Tamaño de la población</th>
-<th colspan="6" data-quarto-table-cell-role="th">Margen de error</th>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">± 1 %</th>
-<th data-quarto-table-cell-role="th">± 2 %</th>
-<th data-quarto-table-cell-role="th">± 3 %</th>
-<th data-quarto-table-cell-role="th">± 4 %</th>
-<th data-quarto-table-cell-role="th">± 5 %</th>
-<th data-quarto-table-cell-role="th">± 10 %</th>
-</tr>
-</thead>
 <tbody>
 <tr class="odd">
-<td>500</td>
-<td>476</td>
-<td>414</td>
-<td>341</td>
-<td>273</td>
-<td>218</td>
-<td>81</td>
+<td></td>
+<td></td>
+<td colspan="6">Resultados</td>
 </tr>
 <tr class="even">
-<td>1,000</td>
-<td>906</td>
-<td>707</td>
-<td>517</td>
-<td>376</td>
-<td>278</td>
-<td>88</td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
 </tr>
 <tr class="odd">
-<td>1.500</td>
-<td>1.298</td>
-<td>924</td>
-<td>624</td>
-<td>429</td>
-<td>306</td>
-<td>91</td>
+<td rowspan="3">Dado<br>
+Blanco</td>
+<td>Valor obtenido</td>
+<td>3.246</td>
+<td>3.449</td>
+<td>2.897</td>
+<td>2.841</td>
+<td>3.635</td>
+<td>3.932</td>
 </tr>
 <tr class="even">
-<td>2.000</td>
-<td>1.656</td>
-<td>1.092</td>
-<td>697</td>
-<td>462</td>
-<td>323</td>
-<td>92</td>
+<td>Discrepancia</td>
+<td rowspan="2">87</td>
+<td rowspan="2">116</td>
+<td rowspan="2">436</td>
+<td rowspan="2">492</td>
+<td rowspan="2">302</td>
+<td rowspan="2">599</td>
 </tr>
 <tr class="odd">
-<td>2.500</td>
-<td>1.984</td>
-<td>1.225</td>
-<td>749</td>
-<td>485</td>
-<td>334</td>
-<td>93</td>
+<td>|Obtenido - Teórico|</td>
 </tr>
 <tr class="even">
-<td>3.000</td>
-<td>2.287</td>
-<td>1.334</td>
-<td>788</td>
-<td>501</td>
-<td>341</td>
-<td>94</td>
+<td rowspan="3">Dado<br>
+Rojo</td>
+<td>Valor obtenido</td>
+<td>3.407</td>
+<td>3.631</td>
+<td>3.176</td>
+<td>2.916</td>
+<td>3.448</td>
+<td>3.422</td>
 </tr>
 <tr class="odd">
-<td>3.500</td>
-<td>2.566</td>
-<td>1.425</td>
-<td>818</td>
-<td>513</td>
-<td>347</td>
-<td>94</td>
+<td>Discrepancia</td>
+<td rowspan="2">74</td>
+<td rowspan="2">298</td>
+<td rowspan="2">157</td>
+<td rowspan="2">417</td>
+<td rowspan="2">115</td>
+<td rowspan="2">89</td>
 </tr>
 <tr class="even">
-<td>4.000</td>
-<td>2.825</td>
-<td>1.501</td>
-<td>843</td>
-<td>523</td>
-<td>351</td>
-<td>94</td>
-</tr>
-<tr class="odd">
-<td>4.500</td>
-<td>3.065</td>
-<td>1.566</td>
-<td>863</td>
-<td>530</td>
-<td>355</td>
-<td>95</td>
-</tr>
-<tr class="even">
-<td>5.000</td>
-<td>3.289</td>
-<td>1.623</td>
-<td>880</td>
-<td>536</td>
-<td>357</td>
-<td>95</td>
-</tr>
-<tr class="odd">
-<td>6.000</td>
-<td>3.694</td>
-<td>1.715</td>
-<td>907</td>
-<td>546</td>
-<td>362</td>
-<td>95</td>
-</tr>
-<tr class="even">
-<td>7.000</td>
-<td>4.050</td>
-<td>1.788</td>
-<td>927</td>
-<td>553</td>
-<td>365</td>
-<td>95</td>
-</tr>
-<tr class="odd">
-<td>8.000</td>
-<td>4.365</td>
-<td>1.847</td>
-<td>942</td>
-<td>559</td>
-<td>367</td>
-<td>95</td>
-</tr>
-<tr class="even">
-<td>9.000</td>
-<td>4.647</td>
-<td>1.896</td>
-<td>955</td>
-<td>563</td>
-<td>369</td>
-<td>96</td>
-</tr>
-<tr class="odd">
-<td>10.000</td>
-<td>4.900</td>
-<td>1.937</td>
-<td>965</td>
-<td>567</td>
-<td>370</td>
-<td>96</td>
-</tr>
-<tr class="even">
-<td>15.000</td>
-<td>5.856</td>
-<td>2.070</td>
-<td>997</td>
-<td>578</td>
-<td>375</td>
-<td>96</td>
-</tr>
-<tr class="odd">
-<td>20.000</td>
-<td>6.489</td>
-<td>2.144</td>
-<td>1.014</td>
-<td>583</td>
-<td>377</td>
-<td>96</td>
-</tr>
-<tr class="even">
-<td>25.000</td>
-<td>6.939</td>
-<td>2.191</td>
-<td>1.024</td>
-<td>587</td>
-<td>379</td>
-<td>96</td>
-</tr>
-<tr class="odd">
-<td>50.000</td>
-<td>8.057</td>
-<td>2.291</td>
-<td>1.045</td>
-<td>594</td>
-<td>382</td>
-<td>96</td>
-</tr>
-<tr class="even">
-<td>100.000</td>
-<td>8.763</td>
-<td>2.345</td>
-<td>1.056</td>
-<td>597</td>
-<td>383</td>
-<td>96</td>
-</tr>
-<tr class="odd">
-<td>500.000</td>
-<td>9.423</td>
-<td>2.390</td>
-<td>1.065</td>
-<td>600</td>
-<td>384</td>
-<td>97</td>
-</tr>
-<tr class="even">
-<td>1.000.000</td>
-<td>9.513</td>
-<td>2.396</td>
-<td>1.066</td>
-<td>600</td>
-<td>384</td>
-<td>97</td>
-</tr>
-<tr class="odd">
-<td>1.500.000</td>
-<td>9.543</td>
-<td>2.398</td>
-<td>1.067</td>
-<td>600</td>
-<td>384</td>
-<td>97</td>
-</tr>
-<tr class="even">
-<td>2.000.000</td>
-<td>9.558</td>
-<td>2.399</td>
-<td>1.067</td>
-<td>601</td>
-<td>385</td>
-<td>97</td>
-</tr>
-<tr class="odd">
-<td>50.000.000</td>
-<td>9.602</td>
-<td>2.401</td>
-<td>1.068</td>
-<td>601</td>
-<td>385</td>
-<td>97</td>
+<td>|Obtenido - Teórico|</td>
 </tr>
 </tbody>
 </table>
 
 </div>
+<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyLXRpdGxl"><span style="font-size: 1.5em;">Estadística</span><br> <span style="font-size: 1em;">Entender - Aplicar - Enseñar</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXItdGl0bGU="><span style="font-size: 1.5em;">Estadística</span><br> <span style="font-size: 1em;">Entender - Aplicar - Enseñar</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uZXh0"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Algunos test clásicos</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1wcmV2">ESTADÍSTICAMENTE SIGNIFICATIVO</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9pbmRleC5odG1sUFJFU0VOVEFDScOTTg==">PRESENTACIÓN</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMQ==">Prólogo</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi8wMV9JbnRyb2R1Y2Npb24uaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+MTwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5JbnRyb2R1Y2Npw7NuPC9zcGFuPg=="><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMg==">ESTADÍSTICA DESCRIPTIVA</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi8wMl9zaW50ZXNpc051bWVyaWNhLmh0bWw8c3Bhbi1jbGFzcz0nY2hhcHRlci1udW1iZXInPjI8L3NwYW4+LS08c3Bhbi1jbGFzcz0nY2hhcHRlci10aXRsZSc+U8OtbnRlc2lzLW51bcOpcmljYS1kZS1kYXRvczwvc3Bhbj4="><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Síntesis numérica de datos</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi8wM19HcmFmaWNvcy5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz4zPC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPlJlcHJlc2VudGFjaW9uZXMtZ3LDoWZpY2FzPC9zcGFuPg=="><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Representaciones gráficas</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMw==">DESCRIBIR LO ALEATORIO</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi8wNF92YXJpYWJsZXNBbGVhdG9yaWFzLmh0bWw8c3Bhbi1jbGFzcz0nY2hhcHRlci1udW1iZXInPjQ8L3NwYW4+LS08c3Bhbi1jbGFzcz0nY2hhcHRlci10aXRsZSc+VmFyaWFibGVzLWFsZWF0b3JpYXM8L3NwYW4+"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Variables aleatorias</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi8wNV9kaXN0cmlidWNpb25lc1Byb2JhYmlsaWRhZC5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz41PC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPkRpc3RyaWJ1Y2lvbmVzLWRlLXByb2JhYmlsaWRhZDwvc3Bhbj4="><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribuciones de probabilidad</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tNA==">DE LA MUESTRA A LA POBLACIÓN</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi8wNl9tdWVzdHJlby5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz42PC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPk11ZXN0cmVvLi1FbmN1ZXN0YXM8L3NwYW4+"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Muestreo. Encuestas</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi8wN19lc3RpbWFjaW9uLmh0bWw8c3Bhbi1jbGFzcz0nY2hhcHRlci1udW1iZXInPjc8L3NwYW4+LS08c3Bhbi1jbGFzcz0nY2hhcHRlci10aXRsZSc+RXN0aW1hY2nDs24tZGUtY2FyYWN0ZXLDrXN0aWNhcy1kZS1sYS1wb2JsYWNpw7NuPC9zcGFuPg=="><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Estimación de características de la población</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tNQ==">ESTADÍSTICAMENTE SIGNIFICATIVO</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi8wOF9jb250cmFzdGVIaXBvdGVzaXMuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+ODwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5Db250cmFzdGUtZGUtaGlww7N0ZXNpczwvc3Bhbj4="><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Contraste de hipótesis</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi8wOV9hbGd1bm9zVGVzdC5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz45PC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPkFsZ3Vub3MtdGVzdC1jbMOhc2ljb3M8L3NwYW4+"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Algunos test clásicos</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tNg==">CORRELACIÓN Y REGRESIÓN</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi8xMF9yZWxhY2lvbkxpbmVhbC5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz4xMDwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5NZWRpZGFzLWRlLXJlbGFjacOzbi1saW5lYWw8L3NwYW4+"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Medidas de relación lineal</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi8xMV9yZWdyZVNpbXBsZS5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz4xMTwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5SZWdyZXNpw7NuLXNpbXBsZTwvc3Bhbj4="><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Regresión simple</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi8xMl9yZWdyZU11bHRpcGxlLmh0bWw8c3Bhbi1jbGFzcz0nY2hhcHRlci1udW1iZXInPjEyPC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPlJlZ3Jlc2nDs24tTcO6bHRpcGxlPC9zcGFuPg=="><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Regresión Múltiple</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tNw==">EPÍLOGO</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi8xM19FcGlsb2dvLmh0bWw8c3Bhbi1jbGFzcz0nY2hhcHRlci1udW1iZXInPjEzPC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPkRhdG9zLWZyZW50ZS1hLW9waW5pb25lczwvc3Bhbj4="><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Datos frente a opiniones</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWJyZWFkY3J1bWJzLUVTVEFEw41TVElDQU1FTlRFLVNJR05JRklDQVRJVk8=">ESTADÍSTICAMENTE SIGNIFICATIVO</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWJyZWFkY3J1bWJzLTxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+ODwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5Db250cmFzdGUtZGUtaGlww7N0ZXNpczwvc3Bhbj4="><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Contraste de hipótesis</span></span></p>
+</section></section></main></div>
 
 
 
-</main> <!-- /main -->
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Nosotros descubrimos estos datos en el libro de M. G. Bulner: Principles of Statistics, Ed. Dover, 1979. La publicación original que se cita (Czuber, 1903) puede consultarse <a href="https://archive.org/details/wahrscheinlichk01czubgoog">aquí</a>, pág. 118).<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+ <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -980,7 +913,7 @@ ul.task-list li input[type="checkbox"] {
       </a>
   </div>
 </nav>
-</div> <!-- /content -->
+ <!-- /content -->
 
 
 

@@ -1044,6 +1044,16 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
 }
 
+.tabla-0702 caption {
+  caption-side: top;
+  text-align: center;
+  font-size: 0.97em;
+  padding-bottom: 15px;
+  margin-top: 5px;
+  line-height: 1.15;
+  color: #666 !important;
+}
+
 .tabla-0702 td {
   text-align: center;    /* celdas centradas */
   padding: 2px 2px;      /* altura de fila más pequeña */
@@ -1066,7 +1076,7 @@ h1, h2, h3, h4, h5, h6 {
 .tabla-0704 caption {
   caption-side: top;
   text-align: center;
-  font-size: 1em;
+  font-size: 0.97em;
   padding-bottom: 15px;
   margin-top: 5px;
   line-height: 1.2;
@@ -1084,7 +1094,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tabla-0704 td {
-  font-size: 0.9em;      /* equivalente a \footnotesize */
+  font-size: 0.85em;      /* equivalente a \footnotesize */
   text-align: center;    /* celdas centradas */
   padding: 2px 6px;      /* altura de fila más pequeña */
   line-height: 1;      /* compacta como en LaTeX */
@@ -1125,6 +1135,64 @@ h1, h2, h3, h4, h5, h6 {
 
 .tabla-0704 tbody tr:nth-child(25) td {
   padding-bottom: 10px;
+}
+
+/*** Apendice 7B ***/
+
+.tabla-Ape7B {
+  margin: auto;
+  width: 100%;
+  max-width: 600px;
+  border-collapse: collapse;
+  border: none;
+  padding-bottom: 2px;
+}
+
+.tabla-Ape7B td {
+  text-align: left;    /* celdas centradas */
+  padding: 4px 4px;      /* altura de fila más pequeña */
+  border: none;
+  line-height: 1.1;      /* compacta como en LaTeX */
+ }
+    
+.tabla-Ape7B td:first-child {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/*** Tabla 8.1 ***/
+
+.tabla-0801 {
+  margin: auto;
+  width: 100%;
+  max-width: 650px;
+  font-size: 0.95em;
+  vertical-align: middle;
+}
+
+.tabla-0801 caption {
+  caption-side: top;
+  text-align: center;
+  font-size: 1em;
+  padding-bottom: 10px;
+  color: #666 !important;
+  line-height: 1.2;
+}
+
+.tabla-0801 td {
+  font-size: 0.97em;      /* equivalente a \footnotesize */
+  text-align: center;    /* celdas centradas */
+  padding: 3px 4px;      /* altura de fila más pequeña */
+  line-height: 1.15;      /* compacta como en LaTeX */
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+
+/* EXCEPCIÓN: primera columna */
+.tabla-0801 th:first-child,
+.tabla-0801 td:first-child {
+  border-top: 0px solid #666;
+  border-bottom: 0px solid #666;
 }
 
 /* ======Tabla Wrapper====== */
@@ -1226,7 +1294,7 @@ h1, h2, h3, h4, h5, h6 {
 .tabla-wrapper_T0704 .tabla-caption {
   width: 100%;
   text-align: center;
-  font-size: 0.99em;
+  font-size: 0.97em;
   line-height: 1.2;
   padding-top: 5px;
   padding-bottom: 15px;
@@ -1237,7 +1305,24 @@ h1, h2, h3, h4, h5, h6 {
   width: 90%;
   margin: 0 auto;
 }
+
+.tabla-wrapper_T07_Ape_B {
+  margin-top: 0ex;
+  margin-bottom: 0ex;
+  width: 100%;
+  font-size: 0.97em;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+.tabla-wrapper_T0801 {
+  width: 100%;
+  margin-top: 2ex;
+  margin-bottom: 2ex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* ========================= */
 /*         FIGURAS           */
 /* ========================= */

@@ -179,7 +179,7 @@ Si la expresión de $f(x)$ es más complicada --que es lo que suele ocurrir en l
 ::: callout-note
 ## Función densidad de probabilidad
 
-Para que una función pueda ser considerada \textit{densidad de probabilidad} debe cumplir dos condiciones: que tome únicamente valores no negativos (es decir, positivos o cero) y que la integral en el intervalo en que está definida sea igual a 1.
+Para que una función pueda ser considerada *densidad de probabilidad* debe cumplir dos condiciones: que tome únicamente valores no negativos (es decir, positivos o cero) y que la integral en el intervalo en que está definida sea igual a 1.
 :::
 
 ## Esperanza matemática y varianza de una variable aleatoria

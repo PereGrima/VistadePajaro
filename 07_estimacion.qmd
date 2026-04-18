@@ -393,6 +393,102 @@ Por tanto, dadas las evidencias que tenemos ($n$=100; $X$=58) podemos afirmar qu
 
 ![](Figuras_07/f_Tabla0703.png){fig-align="center" width="70%"}
 
+#### Usando la distribución Normal como aproximación a la binomial {.unnumbered}
+
+Al final de capítulo 5 ("La distribución Normal como aproximación a la binomial") vimos que una variable aleatoria con distribución binomial y $p=0,5$ presenta una distribución simétrica en torno a su valor medio, y a medida que aumenta el valor de $n$ su forma se parece cada vez más a la de una distribución Normal. Si $p \neq 0.5$ la distribución también puede considerarse simétrica si el valor de $n$ es <<grande>>. Lo que significa <<grande>> depende de lo alejado que esté $p$ de 0,5.  Una regla empírica es considerar que la distribución Normal es una buena aproximación a la binomial cuando se cumple que $np>5$ y $n(1-p)>5$.
+
+Recordadas las condiciones en que se puede realizar la aproximación, volvamos a nuestros datos. Se ha realizado una encuesta entre los estudiantes de una universidad y en una muestra de $n=100$ estudiantes hay 58 con cuenta en una determinada red social. Queremos dar un intervalo de confianza para la proporción de estudiantes de esa universidad que tienen cuenta. El número de cumplidores, $X$, que aparecen en la muestra es una variable aleatoria con distribución binomial, por tanto:
+
+\begin{equation*} 
+	\begin{split}
+		\text{E}(X) &=np\\
+		\text{V}(X) & = np(1-p)
+	\end{split}
+\end{equation*}
+
+En nuestro caso se cumplen sobradamente las condiciones para poder aproximar la distribución de $X$ a través de una Normal, por tanto, podemos considerar que:
+$$X \sim \text{N} \left (np; \sqrt{np(1-p)} \right )$$
+Si en vez del número de cumplidores consideramos su proporción $\frac{X}{n}$, recordando las reglas para operar con variables aleatorias, tenemos:
+
+\begin{equation*} 
+	\begin{split}
+		\text{E} \left ( \frac{X}{n} \right ) &= \frac{1}{n} E(X) = p\\[5pt]
+		\text{V} \left ( \frac{X}{n} \right) & =\frac{1}{n^2} V(X) = \frac{p(1-p)}{n}\\
+	\end{split}
+\end{equation*}
+
+Si $X$ sigue una distribución Normal, también seguirá esa distribución la variable $\frac{X}{n}$. Llamando $\hat{p}$ a la proporción en la muestra, tenemos:
+$$\hat{p} \sim N \left ( p; \sqrt{\frac{p(1-p)}{n}} \right ) $$
+
+\noindent Siguiendo el razonamiento que ya habíamos realizado para deducir la expresión del intervalo de confianza para la media, el intervalo de confianza $1-\alpha$ para el valor de $p$ será:
+$$\hat{p} \pm z_{\alpha/2} \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}  $$
+
+Algunas consideraciones sobre este intervalo:
+
+-   En la expresión de la desviación típica sustituimos el valor de $p$ (valor real en la población) por su estimación $\hat{p}$. La razón es que no hay más remedio, puesto que el valor de $p$ no lo conocemos.
+	
+-   Consideramos que:
+    $$\frac{p\; - \;\hat{p}}{\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}}$$
+sigue una distribución $\text{N}(0; 1)$ aunque los valores de $\hat{p}$ que usamos para estimar la desviación típica son estimados. Es una aproximación razonable si el tamaño de muestra es grande, y seguramente así será si se está usando la aproximación Normal. Si se trabaja con tamaños de muestra pequeños es mejor usar el método exacto.
+	
+-   El tamaño de la población, $N$, no aparece en la fórmula ya que se considera infinito. Esto no es una exageración. Lo habitual es que la población sea grande, y los resultados apenas cambian si la población es grande, muy grande o enorme. Más adelante lo comentamos con detalle.
+	
+Con nuestros valores y para una confianza del 95 %, recordando que $z_{0.025} = 1.96$, tenemos:
+$$0.58 \pm 1.96 \sqrt{\frac{0.58 \cdot 0.42}{100}} = 0.58 \pm  0.098 = (0.483;\; 0,677)^{}$$
+Este intervalo es prácticamente el mismo que el obtenido con el método exacto. La anchura del intervalo no es proporcional a su nivel de confianza. Es más probable que el verdadero valor se encuentre dentro del intervalo de confianza del 50 % que en las «extensiones» que añadimos para pasar de una confianza del 99 % al 99,99 %, aunque estas últimas sean mucho más anchas ([@fig-anchuraIntervalos_2]). 
+
+![Intervalos con distinto nivel de confianza para una proporción a partir de una muestra de 100 observaciones y 58 con la característica analizada.](Figuras_07/f0707_anchuraIntervalos_2.png){#fig-anchuraIntervalos_2 .fig-normal3 fig-align="center" width="95%"}
+
+::: callout-note
+## El intervalo de confianza  no es homogéneo
+
+Un intervalo de confianza lo podemos imaginar como muchos pequeños intervalos puestos uno a continuación de otro. La probabilidad de incluir el valor estimado no es la misma para todos esos intervalos. Será más probable en los más cercanos al estimador puntual y menos en los pegados a los extremos.
+:::
+
+## Cálculo del tamaño de muestra
+
+Cuando se calcula el tamaño que debe tener una muestra para poder estimar el valor de interés con el nivel de confianza y el margen de error deseados, lo habitual es considerar que el tamaño de la población es infinito. Salvo raras excepciones, el tamaño de la población será muy grande respecto al de la muestra y en este caso no hay diferencia entre considerar que la población es de un millón de individuos, de cien millones o infinita. También suele ocurrir que cuando nos referimos a la población no nos estamos refiriendo al "conjunto de individuos o elementos objeto de estudio" sino a modelos teóricos que caracterizan el comportamiento de los datos. Las expresiones de los intervalos de confianza que hemos deducido consideran que la población es infinita o --lo que sería equivalente a efectos prácticos-- mucho mayor que el tamaño de muestra utilizado.
+
+Vamos a calcular las expresiones del tamaño de muestra para el caso más habitual de considerar que la población es infinita. Para el caso de la estimación de una proporción planteamos también el caso de población finita para poder analizar la relación entre el tamaño de la muestra y el de la población, tema sobre el que existen algunos malentendidos.
+
+### Para estimar la media {.unnumbered}
+
+\noindent Partiendo de la expresión del intervalo de confianza para la media de la población, vamos a determinar el tamaño de muestra necesario para estimar el peso medio de los paquetes de café (ejemplo del apartado 7.3) con una confianza del 95 % y un margen de error de 2 g. Considerando que el tamaño de muestra resultante será mayor de 30 unidades[^7-6], podemos usar la distribución Normal estandarizada  igualando el margen de error al valor deseado. Tenemos:
+
+[^7-6]:	Si, finalmente, el tamaño de muestra resulta ser menor de 30 se pueden recalcular los valores del margen de error o del nivel de confianza usando una $t$ de Student con un número de grados de libertad en relación con el tamaño de muestra obtenido. Este puede ser un proceso iterativo aunque no es necesario hilar muy fino porque las diferencias no suelen ser relevantes a efectos prácticos.
+
+$$z_{0.025} \frac{\sigma}{\sqrt{n}} =2 $$
+El valor de $\sigma$ se puede conocer a partir de datos históricos, o se puede establecer un valor razonable intentando pecar más bien por exceso. Otra opción es estimarlo a partir de los valores de una primera muestra piloto tomada con este objetivo\endnote{Una opción conservadora puede ser calcular un intervalo de confianza para el valor de $s$ y quedarnos con el extremo superior. Otra opción es replantearse el valor de $s$ a la vista de los valores de la muestra obtenida.}. En nuestro caso, considerando que la muestra piloto son las 6 unidades del ejemplo ($s = 8.542$), llamando $E$ al margen de error y despejando $n$ de la expresión anterior:
+$$n = \left ( \frac{z_{\alpha/2}\sigma}{E} \right )^2 = \left ( \frac{1.96 \cdot 8.542}{2} \right )^2 = 70.1 $$
+El tamaño de muestra siempre se redondea por exceso para que el margen de error no supere el valor establecido, de manera que el resultado final es $n=71$. A la vista de la desviación típica obtenida en las 71 observaciones se puede actualizar el margen de error o, si es necesario, realizar nuevas observaciones para llegar al margen de error previamente establecido.
+
+Observe que --como es lógico-- el tamaño de muestra requerido aumenta si se desea un mayor nivel de confianza (aumenta el valor de $z_{\alpha/2}$) o un menor margen de error (está en el denominador). También aumenta al aumentar la variabilidad de los datos, ya que mayor variabilidad significa también una mayor incertidumbre que solo se compensa con una mayor cantidad de datos.
+
+### Para estimar una proporción {.unnumbered}
+
+Despejando el valor de $n$ en la expresión del margen de error de su intervalo de confianza:
+$$n = \frac{p(1-p) \cdot z_{\alpha/2}^2}{E^2} $$
+El valor de $p$ no lo conocemos cuando nos planteamos qué tamaño debe tener la muestra, puesto que ese es el valor que queremos estimar. Lo habitual es ponerse en el caso más desfavorable y considerar $p=0.5$ de manera que $p(1-p) = 0.25$ que es el valor máximo que puede tomar ese producto. Si finalmente el valor de $p$ es distinto de 0,5, el margen de error será menor que el previamente considerado, pero nunca mayor. Si estamos seguros que la proporción que buscamos es como máximo del 20 %, podemos poner $p=0.2$.
+
+En el ejemplo de la estimación de la proporción de estudiantes que tienen cuenta en una determinada red social, si queremos realizar esa estimación con un nivel de confianza del 95 %  y un margen de error del 5 %, considerando[^7-8] $p=0.5$ se obtiene $n=384.1 \rightarrow 385$.
+
+[^7-8]: A $1-p$ se le denomina $q$, y este supuesto se encuentra muchas veces planteado de la forma $p=q=50 %$
+
+#### Población finita {.unnumbered}
+
+La peculiaridad de las poblaciones finitas tiene que ver con que el muestreo se realiza sin reposición. Una vez elegido un elemento de la población ese ya no forma parte de los elegibles y, en consecuencia, las probabilidades de incorporar a la muestra elementos de un cierto tipo depende de cuantos hayan salido ya de ese tipo. Este problema se resuelve aplicando un factor de corrección a la desviación típica del estimador puntual, es lo que llamamos  "factor de corrección por población finita". Siendo $N$ el tamaño de la población y $n$ el de la muestra, tiene la expresión[^7-9]:
+
+[^7-9]: La deducción de este factor de corrección no es trivial. Los lectores interesados pueden consultar, por ejemplo: Steven K. Thompson: "Sampling", Wiley, 2012, pp: 20-22, o el clásico: William G. Cochran: Sampling Techniques, Wiley, 1977, pp: 21-27.
 
 
+$$f = \sqrt{\frac{N-n}{N-1}}$$
+Si lo población es infinita no importa cuantos elementos hayan salido de un tipo, su proporción se mantiene constante. Si es finita pero $N \gg n$ en la expresión anterior se ve que el valor de $f$ es prácticamente igual a 1.	
 
+Incluyendo este factor de corrección, la expresión del intervalo de confianza para una proporción queda:
+$$\hat{p} \pm z_{\alpha/2} \sqrt{\frac{N-n}{N-1}} \cdot \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}  $$
+
+y despejando el valor de $n$:
+$$n = \frac{z_{\alpha/2}^2 \, N \, p(1 - p)}{E^2 (N - 1) + z_{\alpha/2}^2 \, p(1 - p)}$$
+Esta es una fórmula cerrada que no tiene ningún misterio. El nivel de confianza está relacionado con el valor de $z_{\alpha/2}$. Para un nivel de confianza del 95 % ($1-\alpha = 0.95$ y, por tanto, $\alpha/2 = 0.025$) tenemos que $z_{0.025} = 1.96$. Observe también que si $N$ es muy grande en el denominador se puede ignorar el valor del segundo término frente al primero y considerando $N \thickapprox N-1$ nos queda la expresión que ya habíamos obtenido:
+$$n = \frac{p(1-p) \cdot z_{\alpha/2}^2}{E^2}$$
+Con la ayuda de una hoja de cálculo se puede construir una tabla como la \ref{tamañosMuestra} donde se indica el tamaño de muestra necesario para estimar una proporción en función del tamaño de la población y el margen de error que se está dispuesto a asumir. Los valores que figuran son para un nivel de confianza del 95 %, pero la tabla se puede construir de manera que ese valor se pueda cambiar fácilmente.

@@ -323,6 +323,10 @@ window.Quarto = {
   <li><a href="#estimación-puntual-1" id="toc-estimación-puntual-1" class="nav-link" data-scroll-target="#estimación-puntual-1">Estimación puntual</a></li>
   <li><a href="#intervalo-de-confianza-1" id="toc-intervalo-de-confianza-1" class="nav-link" data-scroll-target="#intervalo-de-confianza-1">Intervalo de confianza</a></li>
   </ul></li>
+  <li><a href="#cálculo-del-tamaño-de-muestra" id="toc-cálculo-del-tamaño-de-muestra" class="nav-link" data-scroll-target="#cálculo-del-tamaño-de-muestra"><span class="header-section-number">7.5</span> Cálculo del tamaño de muestra</a>
+  <ul class="collapse">
+  <li><a href="#para-estimar-la-media" id="toc-para-estimar-la-media" class="nav-link" data-scroll-target="#para-estimar-la-media">Para estimar la media</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -745,9 +749,82 @@ Tabla 7.3: Determinación de la proporción en la población (p) que da una prob
 <p><img src="Figuras_07/f_Tabla0703.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
 </figure>
 </div>
-
-
 </section>
+<section id="usando-la-distribución-normal-como-aproximación-a-la-binomial" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="usando-la-distribución-normal-como-aproximación-a-la-binomial">Usando la distribución Normal como aproximación a la binomial</h4>
+<p>Al final de capítulo 5 (“La distribución Normal como aproximación a la binomial”) vimos que una variable aleatoria con distribución binomial y <span class="math inline">\(p=0,5\)</span> presenta una distribución simétrica en torno a su valor medio, y a medida que aumenta el valor de <span class="math inline">\(n\)</span> su forma se parece cada vez más a la de una distribución Normal. Si <span class="math inline">\(p \neq 0.5\)</span> la distribución también puede considerarse simétrica si el valor de <span class="math inline">\(n\)</span> es &lt;<grande>&gt;. Lo que significa &lt;<grande>&gt; depende de lo alejado que esté <span class="math inline">\(p\)</span> de 0,5. Una regla empírica es considerar que la distribución Normal es una buena aproximación a la binomial cuando se cumple que <span class="math inline">\(np&gt;5\)</span> y <span class="math inline">\(n(1-p)&gt;5\)</span>.</grande></grande></p>
+<p>Recordadas las condiciones en que se puede realizar la aproximación, volvamos a nuestros datos. Se ha realizado una encuesta entre los estudiantes de una universidad y en una muestra de <span class="math inline">\(n=100\)</span> estudiantes hay 58 con cuenta en una determinada red social. Queremos dar un intervalo de confianza para la proporción de estudiantes de esa universidad que tienen cuenta. El número de cumplidores, <span class="math inline">\(X\)</span>, que aparecen en la muestra es una variable aleatoria con distribución binomial, por tanto:</p>
+<p><span class="math display">\[\begin{equation*}
+    \begin{split}
+        \text{E}(X) &amp;=np\\
+        \text{V}(X) &amp; = np(1-p)
+    \end{split}
+\end{equation*}\]</span></p>
+<p>En nuestro caso se cumplen sobradamente las condiciones para poder aproximar la distribución de <span class="math inline">\(X\)</span> a través de una Normal, por tanto, podemos considerar que: <span class="math display">\[X \sim \text{N} \left (np; \sqrt{np(1-p)} \right )\]</span> Si en vez del número de cumplidores consideramos su proporción <span class="math inline">\(\frac{X}{n}\)</span>, recordando las reglas para operar con variables aleatorias, tenemos:</p>
+<p><span class="math display">\[\begin{equation*}
+    \begin{split}
+        \text{E} \left ( \frac{X}{n} \right ) &amp;= \frac{1}{n} E(X) = p\\[5pt]
+        \text{V} \left ( \frac{X}{n} \right) &amp; =\frac{1}{n^2} V(X) = \frac{p(1-p)}{n}\\
+    \end{split}
+\end{equation*}\]</span></p>
+<p>Si <span class="math inline">\(X\)</span> sigue una distribución Normal, también seguirá esa distribución la variable <span class="math inline">\(\frac{X}{n}\)</span>. Llamando <span class="math inline">\(\hat{p}\)</span> a la proporción en la muestra, tenemos: <span class="math display">\[\hat{p} \sim N \left ( p; \sqrt{\frac{p(1-p)}{n}} \right ) \]</span></p>
+<p>Siguiendo el razonamiento que ya habíamos realizado para deducir la expresión del intervalo de confianza para la media, el intervalo de confianza <span class="math inline">\(1-\alpha\)</span> para el valor de <span class="math inline">\(p\)</span> será: <span class="math display">\[\hat{p} \pm z_{\alpha/2} \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}  \]</span></p>
+<p>Algunas consideraciones sobre este intervalo:</p>
+<ul>
+<li><p>En la expresión de la desviación típica sustituimos el valor de <span class="math inline">\(p\)</span> (valor real en la población) por su estimación <span class="math inline">\(\hat{p}\)</span>. La razón es que no hay más remedio, puesto que el valor de <span class="math inline">\(p\)</span> no lo conocemos.</p></li>
+<li><p>Consideramos que: <span class="math display">\[\frac{p\; - \;\hat{p}}{\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}}\]</span> sigue una distribución <span class="math inline">\(\text{N}(0; 1)\)</span> aunque los valores de <span class="math inline">\(\hat{p}\)</span> que usamos para estimar la desviación típica son estimados. Es una aproximación razonable si el tamaño de muestra es grande, y seguramente así será si se está usando la aproximación Normal. Si se trabaja con tamaños de muestra pequeños es mejor usar el método exacto.</p></li>
+<li><p>El tamaño de la población, <span class="math inline">\(N\)</span>, no aparece en la fórmula ya que se considera infinito. Esto no es una exageración. Lo habitual es que la población sea grande, y los resultados apenas cambian si la población es grande, muy grande o enorme. Más adelante lo comentamos con detalle.</p></li>
+</ul>
+<p>Con nuestros valores y para una confianza del 95 %, recordando que <span class="math inline">\(z_{0.025} = 1.96\)</span>, tenemos: <span class="math display">\[0.58 \pm 1.96 \sqrt{\frac{0.58 \cdot 0.42}{100}} = 0.58 \pm  0.098 = (0.483;\; 0,677)^{}\]</span> Este intervalo es prácticamente el mismo que el obtenido con el método exacto. La anchura del intervalo no es proporcional a su nivel de confianza. Es más probable que el verdadero valor se encuentre dentro del intervalo de confianza del 50 % que en las «extensiones» que añadimos para pasar de una confianza del 99 % al 99,99 %, aunque estas últimas sean mucho más anchas (<a href="#fig-anchuraIntervalos_2" class="quarto-xref">Figura&nbsp;<span>7.7</span></a>).</p>
+<div id="fig-anchuraIntervalos_2" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-anchuraIntervalos_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_07/f0707_anchuraIntervalos_2.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-anchuraIntervalos_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;7.7: Intervalos con distinto nivel de confianza para una proporción a partir de una muestra de 100 observaciones y 58 con la característica analizada.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>El intervalo de confianza no es homogéneo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un intervalo de confianza lo podemos imaginar como muchos pequeños intervalos puestos uno a continuación de otro. La probabilidad de incluir el valor estimado no es la misma para todos esos intervalos. Será más probable en los más cercanos al estimador puntual y menos en los pegados a los extremos.</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="cálculo-del-tamaño-de-muestra" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="cálculo-del-tamaño-de-muestra"><span class="header-section-number">7.5</span> Cálculo del tamaño de muestra</h2>
+<p>Cuando se calcula el tamaño que debe tener una muestra para poder estimar el valor de interés con el nivel de confianza y el margen de error deseados, lo habitual es considerar que el tamaño de la población es infinito. Salvo raras excepciones, el tamaño de la población será muy grande respecto al de la muestra y en este caso no hay diferencia entre considerar que la población es de un millón de individuos, de cien millones o infinita. También suele ocurrir que cuando nos referimos a la población no nos estamos refiriendo al &lt;<conjunto de="" individuos="" o="" elementos="" objeto="" estudio="">&gt; sino a modelos teóricos que caracterizan el comportamiento de los datos. Las expresiones de los intervalos de confianza que hemos deducido consideran que la población es infinita o –lo que sería equivalente a efectos prácticos– mucho mayor que el tamaño de muestra utilizado.</conjunto></p>
+<p>Vamos a calcular las expresiones del tamaño de muestra para el caso más habitual de considerar que la población es infinita. Para el caso de la estimación de una proporción planteamos también el caso de población finita para poder analizar la relación entre el tamaño de la muestra y el de la población, tema sobre el que existen algunos malentendidos.</p>
+<section id="para-estimar-la-media" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="para-estimar-la-media">Para estimar la media</h3>
+<p>Partiendo de la expresión del intervalo de confianza para la media de la población, vamos a determinar el tamaño de muestra necesario para estimar el peso medio de los paquetes de café (ejemplo del apartado 7.3) con una confianza del 95 % y un margen de error de 2 g. Considerando que el tamaño de muestra resultante será mayor de 30 unidades<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>, podemos usar la distribución Normal estandarizada igualando el margen de error al valor deseado. Tenemos:</p>
+<p><span class="math display">\[z_{0.025} \frac{\sigma}{\sqrt{n}} =2 \]</span> El valor de <span class="math inline">\(\sigma\)</span> se puede conocer a partir de datos históricos, o se puede establecer un valor razonable intentando pecar más bien por exceso. Otra opción es estimarlo a partir de los valores de una primera muestra piloto tomada con este objetivo. En nuestro caso, considerando que la muestra piloto son las 6 unidades del ejemplo (<span class="math inline">\(s = 8.542\)</span>), llamando <span class="math inline">\(E\)</span> al margen de error y despejando <span class="math inline">\(n\)</span> de la expresión anterior: <span class="math display">\[n = \left ( \frac{z_{\alpha/2}\sigma}{E} \right )^2 = \left ( \frac{1.96 \cdot 8.542}{2} \right )^2 = 70.1 \]</span></p>
+<p>El tamaño de muestra siempre se redondea por exceso para que el margen de error no supere el valor establecido, de manera que el resultado final es <span class="math inline">\(n=71\)</span>. A la vista de la desviación típica obtenida en las 71 observaciones se puede actualizar el margen de error o, si es necesario, realizar nuevas observaciones para llegar al margen de error previamente establecido.</p>
+<p>Observe que –como es lógico– el tamaño de muestra requerido aumenta si se desea un mayor nivel de confianza (aumenta el valor de <span class="math inline">\(z_{\alpha/2}\)</span>) o un menor margen de error (está en el denominador). También aumenta al aumentar la variabilidad de los datos, ya que mayor variabilidad significa también una mayor incertidumbre que solo se compensa con una mayor cantidad de datos.</p>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<p>% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</p>
+<p>Despejando el valor de <span class="math inline">\(n\)</span> en la expresión del margen de error de su intervalo de confianza: <span class="math display">\[ n = \frac{p(1-p) \cdot z_{\alpha/2}^2}{E^2} \]</span></p>
+<p>El valor de <span class="math inline">\(p\)</span> no lo conocemos cuando nos planteamos qué tamaño debe tener la muestra, puesto que ese es el valor que queremos estimar. Lo habitual es ponerse en el caso más desfavorable y considerar <span class="math inline">\(p=0.5\)</span> de manera que <span class="math inline">\(p(1-p) = 0.25\)</span> que es el valor máximo que puede tomar ese producto. Si finalmente el valor de <span class="math inline">\(p\)</span> es distinto de 0,5, el margen de error será menor que el previamente considerado, pero nunca mayor. Si estamos seguros que la proporción que buscamos es como máximo del 20%, podemos poner <span class="math inline">\(p=0.2\)</span>.</p>
+<p>En el ejemplo de la estimación de la proporción de estudiantes que tienen cuenta en una determinada red social, si queremos realizar esa estimación con un nivel de confianza del 95% y un margen de error del 5%, considerando <span class="math inline">\(p=0.5\)</span> se obtiene <span class="math inline">\(n=384.1 \rightarrow 385\)</span>.</p>
+<p>{ } %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</p>
+<p>La peculiaridad de las poblaciones finitas tiene que ver con que el muestreo se realiza sin reposición. Una vez elegido un elemento de la población ese ya no forma parte de los elegibles y, en consecuencia, las probabilidades de incorporar a la muestra elementos de un cierto tipo depende de cuantos hayan salido ya de ese tipo. Este problema se resuelve aplicando un factor de corrección a la desviación típica del estimador puntual, es lo que llamamos ``factor de corrección por población finita’’. Siendo <span class="math inline">\(N\)</span> el tamaño de la población y <span class="math inline">\(n\)</span> el de la muestra, tiene la expresión: <span class="math display">\[ f = \sqrt{\frac{N-n}{N-1}} \]</span></p>
+<p>Si lo población es infinita no importa cuantos elementos hayan salido de un tipo, su proporción se mantiene constante. Si es finita pero <span class="math inline">\(N \gg n\)</span> en la expresión anterior se ve que el valor de <span class="math inline">\(f\)</span> es prácticamente igual a 1.</p>
+<p>Incluyendo este factor de corrección, la expresión del intervalo de confianza para una proporción queda: <span class="math display">\[\hat{p} \pm z_{\alpha/2} \sqrt{\frac{N-n}{N-1}} \cdot \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}  \]</span></p>
+<p>y despejando el valor de <span class="math inline">\(n\)</span>: <span class="math display">\[n = \frac{z_{\alpha/2}^2 \, N \, p(1 - p)}{E^2 (N - 1) + z_{\alpha/2}^2 \, p(1 - p)}\]</span></p>
+<p>Esta es una fórmula cerrada que no tiene ningún misterio. El nivel de confianza está relacionado con el valor de <span class="math inline">\(z_{\alpha/2}\)</span>. Para un nivel de confianza del 95% (<span class="math inline">\(1-\alpha = 0.95\)</span> y, por tanto, <span class="math inline">\(\alpha/2 = 0.025\)</span>) tenemos que <span class="math inline">\(z_{0.025} = 1.96\)</span>. Observe también que si <span class="math inline">\(N\)</span> es muy grande en el denominador se puede ignorar el valor del segundo término frente al primero y considerando <span class="math inline">\(N \thickapprox N-1\)</span> nos queda la expresión que ya habíamos obtenido: <span class="math display">\[ n = \frac{p(1-p) \cdot z_{\alpha/2}^2}{E^2} \]</span> Con la ayuda de una hoja de cálculo se puede construir una tabla como la <span class="math inline">\(\ref{tamañosMuestra}\)</span> donde se indica el tamaño de muestra necesario para estimar una proporción en función del tamaño de la población y el margen de error que se está dispuesto a asumir. Los valores que figuran son para un nivel de confianza del 95%, pero la tabla se puede construir de manera que ese valor se pueda cambiar fácilmente.</p>
+
+
 </section>
 </section>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
@@ -757,6 +834,7 @@ Tabla 7.3: Determinación de la proporción en la población (p) que da una prob
 <li id="fn2"><p>Esta es una de las distribuciones que más aparecen en los análisis estadísticos. Volverá a tener protagonismo el el capítulo 9 (test de la <span class="math inline">\(t\)</span> de Student) y se describe con más detalle en el Apéndice 9.C}.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>En realidad, como el muestreo se hace sin reposición, la proporción <span class="math inline">\(p\)</span> no se mantiene exactamente constante, ya que va variando según el tipo de elementos que se extraen. Sin embargo, si el tamaño de la población es mucho mayor que el de la muestra, esta diferencia es irrelevante a efectos prácticos.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn4"><p>Puede dar un vistazo a “Binomial proportion confidence interval” en la Wikipedia.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Si, finalmente, el tamaño de muestra resulta ser menor de 30 se pueden recalcular los valores del margen de error o del nivel de confianza usando una <span class="math inline">\(t\)</span> de Student con un número de grados de libertad en relación con el tamaño de muestra obtenido. Este puede ser un proceso iterativo aunque no es necesario hilar muy fino porque las diferencias no suelen ser relevantes a efectos prácticos.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 

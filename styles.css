@@ -995,6 +995,63 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid #666;
 }
 
+/*** Tabla 7.1 ***/
+
+.tabla-0701 {
+  margin: auto;
+  width: 100%;
+  max-width: 650px;
+  font-size: 0.95em;
+  vertical-align: middle;
+}
+
+.tabla-0701 caption {
+  caption-side: top;
+  text-align: center;
+  font-size: 1em;
+  padding-bottom: 10px;
+  color: #666 !important;
+  line-height: 1.2;
+}
+
+.tabla-0701 th {
+    font-weight: 400;
+    text-align: center;    /* celdas centradas */
+    padding-top: 4px; 
+    padding-bottom: 4px;      /* altura de fila más pequeña */
+    line-height: 1.15;      /* compacta como en LaTeX */
+    font-size: 0.95em;
+    border: none;
+}
+
+.tabla-0701 td {
+  font-size: 0.97em;      /* equivalente a \footnotesize */
+  text-align: center;    /* celdas centradas */
+  padding: 3px 4px;      /* altura de fila más pequeña */
+  line-height: 1.15;      /* compacta como en LaTeX */
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+
+/*** Tabla 7.2 ***/
+
+.tabla-0702 {
+  margin: auto;
+  width: 100%;
+  max-width: 600px;
+  border-top: 0px solid #d3d3d3;
+  border-bottom: 0px solid #d3d3d3;
+  margin-bottom: 0;
+}
+
+.tabla-0702 td {
+  text-align: center;    /* celdas centradas */
+  padding: 2px 2px;      /* altura de fila más pequeña */
+  line-height: 1.1;      /* compacta como en LaTeX */
+  border-top: 0px solid #d3d3d3;
+  border-bottom: 0px solid #d3d3d3;
+}
+
 /* ======Tabla Wrapper====== */
 
 .tabla-wrapper00 {
@@ -1067,6 +1124,22 @@ h1, h2, h3, h4, h5, h6 {
 .tabla-wrapper_T0506 {
   margin-top: 2ex;
   margin-bottom: 4ex;
+}
+
+.tabla-wrapper_T0700 {
+  margin-top: 0ex;
+  margin-bottom: 0ex;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabla-wrapper_T0701 {
+  width: 90%;
+  margin-top: 2ex;
+  margin-bottom: 2ex;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ========================= */

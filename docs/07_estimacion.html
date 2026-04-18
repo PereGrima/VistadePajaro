@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./_04_tapaSignificativo.html" rel="next">
+<link href="./0_04_tapaSignificativo.html" rel="next">
 <link href="./06_muestreo.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -73,6 +73,35 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -86,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./_03_tapaMuestraPoblacion.html">DE LA MUESTRA A LA POBLACIÓN</a></li><li class="breadcrumb-item"><a href="./07_estimacion.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Estimación de características de la población</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0_03_tapaMuestraPoblacion.html">DE LA MUESTRA A LA POBLACIÓN</a></li><li class="breadcrumb-item"><a href="./07_estimacion.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Estimación de características de la población</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -136,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./_01_tapaDescriptiva.html" class="sidebar-item-text sidebar-link">
+            <a href="./0_01_tapaDescriptiva.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ESTADÍSTICA DESCRIPTIVA</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -159,7 +188,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./_02_tapaVariabilidad.html" class="sidebar-item-text sidebar-link">
+            <a href="./0_02_tapaVariabilidad.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DESCRIBIR LO ALEATORIO</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -182,7 +211,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./_03_tapaMuestraPoblacion.html" class="sidebar-item-text sidebar-link">
+            <a href="./0_03_tapaMuestraPoblacion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DE LA MUESTRA A LA POBLACIÓN</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -205,7 +234,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./_04_tapaSignificativo.html" class="sidebar-item-text sidebar-link">
+            <a href="./0_04_tapaSignificativo.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ESTADÍSTICAMENTE SIGNIFICATIVO</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -228,7 +257,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./_05_tapaCorrelacion.html" class="sidebar-item-text sidebar-link">
+            <a href="./0_05_tapaCorrelacion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">CORRELACIÓN Y REGRESIÓN</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -257,8 +286,8 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./_06_tapaEpilogo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">CORRELACIÓN Y REGRESIÓN</span></a>
+            <a href="./0_06_tapaEpilogo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EPÍLOGO</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -267,7 +296,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./13_Epilogo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">EPÍLOGO</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Datos frente a opiniones</span></span></a>
   </div>
 </li>
       </ul>
@@ -277,13 +306,30 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#estimador-puntual" id="toc-estimador-puntual" class="nav-link active" data-scroll-target="#estimador-puntual"><span class="header-section-number">7.1</span> Estimador puntual</a></li>
+  <li><a href="#intervalo-de-confianza" id="toc-intervalo-de-confianza" class="nav-link" data-scroll-target="#intervalo-de-confianza"><span class="header-section-number">7.2</span> Intervalo de confianza</a></li>
+  <li><a href="#estimación-de-la-media" id="toc-estimación-de-la-media" class="nav-link" data-scroll-target="#estimación-de-la-media"><span class="header-section-number">7.3</span> Estimación de la media</a>
+  <ul class="collapse">
+  <li><a href="#estimación-puntual" id="toc-estimación-puntual" class="nav-link" data-scroll-target="#estimación-puntual">Estimación puntual</a></li>
+  <li><a href="#intervalo-de-confianza-para-la-media" id="toc-intervalo-de-confianza-para-la-media" class="nav-link" data-scroll-target="#intervalo-de-confianza-para-la-media">Intervalo de confianza para la media</a></li>
+  </ul></li>
+  <li><a href="#estimación-de-una-proporción" id="toc-estimación-de-una-proporción" class="nav-link" data-scroll-target="#estimación-de-una-proporción"><span class="header-section-number">7.4</span> Estimación de una proporción</a>
+  <ul class="collapse">
+  <li><a href="#estimación-puntual-1" id="toc-estimación-puntual-1" class="nav-link" data-scroll-target="#estimación-puntual-1">Estimación puntual</a></li>
+  <li><a href="#intervalo-de-confianza-1" id="toc-intervalo-de-confianza-1" class="nav-link" data-scroll-target="#intervalo-de-confianza-1">Intervalo de confianza</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./_03_tapaMuestraPoblacion.html">DE LA MUESTRA A LA POBLACIÓN</a></li><li class="breadcrumb-item"><a href="./07_estimacion.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Estimación de características de la población</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0_03_tapaMuestraPoblacion.html">DE LA MUESTRA A LA POBLACIÓN</a></li><li class="breadcrumb-item"><a href="./07_estimacion.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Estimación de características de la población</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Estimación de características de la población</span></h1>
 </div>
@@ -302,9 +348,417 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Importancia, tipos, propiedades.</p>
+<p>Rara vez es posible conocer con exactitud las características de una población. Esto puede deberse a que resulta inviable observar todos sus elementos —como en el caso de los sondeos electorales— o a que la población es, en realidad, un modelo teórico. Por ejemplo, cuando se pone en marcha una máquina y se fabrican algunas unidades para evaluar su funcionamiento, tenemos una muestra con la que valoramos si serán adecuadas las características de todas las unidades que se podrían fabricar en esas condiciones. Todas esas unidades son la población, pero es una población teórica, no existe físicamente.</p>
+<p>En cualquier caso, sea la población real o teórica, lo que hacemos es &lt;<estimar>&gt; (hacernos una idea de) las características de interés de esa población a partir de los valores obtenidos en la muestra.</estimar></p>
+<section id="estimador-puntual" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="estimador-puntual"><span class="header-section-number">7.1</span> Estimador puntual</h2>
+<p>Un estimador puntual, o simplemente estimador, es un número que se calcula a partir de los valores de una muestra y que nos sirve para hacernos una idea de una determinada característica de la población. Si queremos estimar el valor de la media de la población, la media de una muestra representativa de esa población es un buen estimador. Pero no siempre es tan fácil, hemos visto que la varianza de una muestra –aplicando la fórmula &lt;<natural>&gt; de dividir por <span class="math inline">\(n\)</span> la suma de cuadrados–, es un estimador sesgado de la varianza de la población.</natural></p>
+<p>Las cualidades de un estimador se valoran por el cumplimiento de unas determinadas propiedades. Las más importantes son:</p>
+<ul>
+<li><p>Que sea insesgado, es decir, que no dé errores sistemáticos ni por exceso ni por defecto. Si tomamos muchas muestras y con cada una de ellas calculamos el valor del estimador, como los elementos en las muestras serán distintos (serán los que hayan caído por azar en cada muestra) los valores de ese estimador también serán distintos, pero si es insesgado se situarán en torno al verdadero valor que tiene en la población. Si existe un error sistemático, por exceso o por defecto, a ese error se le denomina (<a href="#fig-dianas" class="quarto-xref">Figura&nbsp;<span>7.1</span></a>).</p></li>
+<li><p>Que sea preciso. Significa que si calculamos muchos valores de ese estimador, cada uno a partir de una muestra distinta, esos valores presentarán poca variabilidad. Si además el estimador es insesgado esa poca variabilidad estará distribuida en torno al verdadero valor de la magnitud estimada.</p></li>
+</ul>
+<div id="fig-dianas" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dianas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_07/f0701_dianas.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dianas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;7.1: {Analogía de las propiedades de los estimadores con los impactos en una diana.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>¿Por qué nos creemos el resultado obtenido de una muestra sabiendo que si tomáramos otra sería distinto?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Porque sería distinto pero no “muy distinto”. Para informar sobre la variabilidad que cabe esperar se da el intervalo de confianza.</p>
+</div>
+</div>
+</section>
+<section id="intervalo-de-confianza" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="intervalo-de-confianza"><span class="header-section-number">7.2</span> Intervalo de confianza</h2>
+<p>El estimador puntual apuesta por un valor concreto y sabemos que el verdadero valor andará por ahí, pero no informa sobre si estará muy cerca o si también podría estar bastante lejos.</p>
+<p>Un intervalo de confianza ofrece una información más rica, nos dice que el valor que estamos estimando se encuentra –con una probabilidad conocida y que nosotros podemos elegir– dentro de ese intervalo. Típicamente, en un intervalo de confianza intervienen tres valores:</p>
+<ul>
+<li><p><span style="color: #0038CF;"><strong>Estimación! puntual</strong></span>: Siempre está dentro del intervalo. Cuando las desviaciones por encima y por debajo de ese valor son igualmente probables se encuentra justo en el centro del intervalo.</p></li>
+<li><p><span style="color: #0038CF;"><strong>Margen de error</strong></span>: Es el valor que se suma y se resta al estimador puntual para construir el intervalo. En algunos casos, puede ocurrir que el margen de error no sea el mismo por encima y por debajo del estimador puntual.</p></li>
+<li><p><span style="color: #0038CF;"><strong>Nivel de confianza</strong></span>: Es la probabilidad<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> de que el intervalo incluya el verdadero valor del parámetro estimado.</p></li>
+</ul>
+<p>Que el nivel de confianza sea del 95 % significa que el intervalo se ha construido con un procedimiento que “acierta” (incluye el verdadero valor del parámetro estimado) el 95 % de las veces.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>¿Qué es un intervalo de confianza?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Es un intervalo construido a partir de los valores de una muestra. En la práctica solo tenemos una muestra y un intervalo, pero si pudiéramos construir muchos intervalos, cada uno a partir de una muestra distinta, un porcentaje de ellos igual al nivel de confianza incluiría el verdadero valor del parámetro estimado.</p>
+</div>
+</div>
+<p>Si generamos muestras aleatorias de una población Normal y, a partir de cada una de ellas, calculamos un intervalo de confianza del 95 % para la media de la población (<span class="math inline">\(\mu\)</span>) resultará que alrededor del 95 % de esos intervalos incluirá el verdadero valor de <span class="math inline">\(\mu\)</span>. Si el intervalo de confianza fuera del 50 %, solo la incluirían aproximadamente la mitad.</p>
+<p>Nosotros tendremos una sola muestra y nos será imposible saber si el intervalo de confianza construido a partir de sus valores incluye el valor estimado o si lo deja fuera. Si supiéramos que está dentro, podríamos decir que es un intervalo de confianza del 100 %, y si supiéramos que está fuera sería del 0 %. Pero no lo sabemos. Un intervalo de confianza del 95 % es como recibir información de una persona que dice la verdad el 95 % de las veces: sabemos que su fiabilidad global es alta, pero nunca podemos estar seguros de si una afirmación concreta es correcta (<a href="#fig-diceLaVerdad" class="quarto-xref">Figura&nbsp;<span>7.2</span></a>).</p>
+<div id="fig-diceLaVerdad" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-diceLaVerdad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_07/f0702_diceLaVerdad.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diceLaVerdad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;7.2: Concepto de intervalo de confianza.
+</figcaption>
+</figure>
+</div>
+<p>Hemos dicho que el nivel de confianza lo elegimos nosotros, entonces ¿por qué nos conformamos con el 95 % si podemos establecer el 99 % o incluso el 99,99 %? La respuesta es sencilla: cuanto mayor es el nivel de confianza –cuanto más seguros queremos estar de que el intervalo contiene el valor del parámetro estimado– más ancho será el intervalo. Esto es lógico, dada una cantidad de información (tamaño de la muestra) la mayor seguridad solo se consigue aumentando la anchura del intervalo, el problema es que si queremos mucha seguridad el intervalo sale tan ancho que la información que aporta es irrelevante.</p>
+<p>Supongamos que para estimar la proporción de celíacos en una comunidad se toma una muestra de 100 individuos y que entre ellos se encuentra un celíaco. El estimador puntual es igual al valor en la muestra, en nuestro caso el 1 %. Los intervalos de confianza del 50, 95 y 99,99 % son los que se indican en la <a href="#fig-anchuraIntervalos" class="quarto-xref">Figura&nbsp;<span>7.3</span></a>. El intervalo de confianza del 99,99 % es tan ancho que no aporta información relevante. No hacía falta realizar ningún estudio para saber que el porcentaje está entre 0,00 % (exactamente 0,00005 %) y el 11,8 %.</p>
+<div id="fig-anchuraIntervalos" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-anchuraIntervalos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_07/f0703_anchuraIntervalos.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-anchuraIntervalos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;7.3: Intervalos con distinto nivel de confianza para la estimación de una proporción a partir de una muestra de 100 observaciones y un solo positivo.
+</figcaption>
+</figure>
+</div>
+<p>Los intervalos de confianza del 95 % son una buena solución de compromiso entre el nivel de confianza y la anchura del intervalo. Si se desea aumentar el nivel de confianza manteniendo la anchura del intervalo no hay más remedio que aumentar el tamaño de la muestra.</p>
+</section>
+<section id="estimación-de-la-media" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="estimación-de-la-media"><span class="header-section-number">7.3</span> Estimación de la media</h2>
+<p>Pesamos 6 paquetes de café a la salida de la línea de envasado. Esos paquetes se pueden considerar representativos de la producción general y sus pesos, en gramos, son: 995, 987, 1008, 995, 991 y 1007. ¿Qué podemos decir sobre el valor medio con que se están llenando?</p>
+<section id="estimación-puntual" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="estimación-puntual">Estimación puntual</h3>
+<p>Si tenemos que dar un valor para el peso medio con que están saliendo los paquetes de café, nuestra mejor apuesta es el peso medio de la muestra obtenida: <span class="math inline">\(\bar{x} = 997.17 \text{g}\)</span>. Así de fácil.</p>
+<p>Para justificarlo podemos plantear que si <span class="math inline">\(X \sim N(\mu; \sigma)\)</span> y <span class="math inline">\(X_1, X_2, \cdots, X_n\)</span> es una muestra aleatoria de esa población, cada valor de la muestra está tomado de esa misma población y, por tanto, tendrá una esperanza matemática <span class="math inline">\(\text{E}(X_i) = \mu\)</span>. Designando la media de la muestra como <span class="math inline">\(\bar{X}\)</span> y usando las propiedades de la esperanza matemática, tenemos:</p>
+<p><span class="math display">\[\begin{equation*}
+    \begin{split}
+        \text{E}(\bar{X}) &amp;=\text{E} \left( \frac{X_1+X_2+ \cdots + X_n}{n}\right) =\\[5pt]
+        &amp; = \frac{1}{n} \left[\text{E}(X_1)+\text{E}(X_2)+ \cdots +  \text{E}(X_n) \right] =\\[5pt]
+        &amp; = \frac{1}{n} \cdot n \cdot \mu= \mu
+    \end{split}
+\end{equation*}\]</span></p>
+<p>También podemos comprobar que esto es así usando una población “de prueba” como hicimos en el Apéndice 2.D. Supongamos que la población está formada por solo 5 elementos, cada uno de ellos con el valor que se indica:</p>
+<div class="tabla-wrapper_T0700">
+
+<table class="tabla-02Ape2D_1 caption-top table">
+<tbody>
+<tr class="odd">
+<td>(A)</td>
+<td>(B)</td>
+<td>(C)</td>
+<td>(D)</td>
+<td>(E)</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>6</td>
+<td>9</td>
+<td>12</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<p>El valor medio de esos 5 elementos –la media de la población– es: <span class="math display">\[\mu = \frac{3 + 6 + 9 + 12 + 15}{5} = 9\]</span> Existen 10 maneras de seleccionar una muestra de 3 elementos de esta población (combinaciones de 5 elementos tomados de 3 en 3). Por tanto, si tomamos una muestra con toda seguridad será una de las que se incluyen en la tabla <span class="math inline">\(\ref{tablaMedias}\)</span>, puesto que están todas.</p>
+<div id="tbl-Dividir_n-1" ;="" class="tabla-wrapper_T0701 anchored">
+
+<table class="tabla-0701 caption-top table">
+<caption>Tabla 7.1: Medias de las 10 muestras de 3 observaciones que se pueden obtener de una población con 5 elementos.</caption>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Muestra nº</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Unidades de la muestra</td>
+<td>A<br>
+B<br>
+C</td>
+<td>A<br>
+B<br>
+D</td>
+<td>A<br>
+B<br>
+E</td>
+<td>A<br>
+C<br>
+D</td>
+<td>A<br>
+C<br>
+E</td>
+<td>A<br>
+D<br>
+E</td>
+<td>B<br>
+C<br>
+D</td>
+<td>B<br>
+C<br>
+E</td>
+<td>B<br>
+D<br>
+E</td>
+<td>C<br>
+D<br>
+E</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Valores en la muestra</td>
+<td>3<br>
+6<br>
+9</td>
+<td>3<br>
+6<br>
+12</td>
+<td>3<br>
+6<br>
+15</td>
+<td>3<br>
+9<br>
+12</td>
+<td>3<br>
+9<br>
+15</td>
+<td>3<br>
+12<br>
+15</td>
+<td>6<br>
+9<br>
+12</td>
+<td>6<br>
+9<br>
+15</td>
+<td>6<br>
+12<br>
+15</td>
+<td>9<br>
+12<br>
+15</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Media muestral</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+</tr>
+</tbody>
+</table>
+
+</div>Podemos comprobar que la media de la media muestral <span class="math inline">\(\bar{\bar{x}}\)</span> (parece una redundancia pero es así como hay que decirlo) coincide con la media de la población: <span class="math display">\[\bar{\bar{x}} = \frac{6+7+8+8+9+10+9+10+11+12}{10} = 9\]</span> Si al tomar una muestra de 3 elementos resulta ser la nº 1 tendremos una media <span class="math inline">\(\bar{x}=6\)</span> y si es la nº 10 tendremos <span class="math inline">\(\bar{x}=12\)</span>, valores alejados de la media de la población, mientras que si nuestra muestra es la nº 5 o la nº 7 el valor estimado coincidirá con el real. Cuando usamos la media de una muestra como estimador de la media de la población no podemos saber si hemos tenido suerte y el valor obtenido queda cerca del valor real o si queda lejos, pero podemos tener la seguridad de que si lo calculamos varias veces –cada vez con una muestra distinta– los valores obtenidos estarán en torno a la media de la población.<p></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejemplo de estimador sesgado para la media de la población
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si descartamos los tres valores más bajos y calculamos la media del resto de la muestra, tendremos un estimador sesgado de la media de la población.</p>
+</div>
+</div>
+</section>
+<section id="intervalo-de-confianza-para-la-media" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="intervalo-de-confianza-para-la-media">Intervalo de confianza para la media</h3>
+<p>Al igual que los estimadores puntuales, los intervalos de confianza se construyen a partir de la información obtenida de una muestra. Nosotros –a efectos didácticos– vamos a empezar deduciendo su expresión en torno a una sola observación y a continuación la adaptaremos para construirlos en torno a la media de una muestra.</p>
+<section id="en-torno-a-una-sola-observación" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="en-torno-a-una-sola-observación">En torno a una sola observación</h4>
+<p>En la <a href="#fig-ICmedia" class="quarto-xref">Figura&nbsp;<span>7.4</span></a> tenemos representada la distribución cuya media <span class="math inline">\(\mu\)</span> se desea estimar. Se han sombreado las colas de forma que la probabilidad de que una observación tomada al azar caiga en esa zona sea igual a <span class="math inline">\(\alpha\)</span> (<span class="math inline">\(\alpha\)</span>/2 en cada lado). Por tanto, la probabilidad de que caiga en la zona interior es <span class="math inline">\(1-\alpha\)</span>.</p>
+<div id="fig-ICmedia" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ICmedia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_07/f0704_ICmedia.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ICmedia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;7.4: Intervalos construidos sumando y restando <span class="math inline">\(z_{\alpha/2}\sigma\)</span> a un valor obtenido al azar.
+</figcaption>
+</figure>
+</div>
+<p>Veamos cuánto vale la distancia desde la media <span class="math inline">\(\mu\)</span> al punto <span class="math inline">\(x_{\alpha/2}\)</span> en el que empieza la zona sombreada. Resulta que si $ X (; ) <span class="math inline">\(, la nueva variable aleatoria:\)</span><span class="math inline">\(Z = \frac{X-\mu}{\sigma}\)</span>$ sigue una distribución <span class="math inline">\(\text{N}(0; 1)\)</span> y tiene unas características que nos resultan muy útiles, en particular (ver Apéndice 5.A): <span class="math display">\[ \text{P}(X &gt; x_{\alpha/2}) = \text{P} \left ( Z &gt; \frac{x_{\alpha/2} - \mu}{\sigma} \right) \]</span> Por tanto, podemos escribir: <span class="math display">\[ z_{\alpha/2} = \frac{x_{\alpha/2} - \mu}{\sigma} \]</span></p>
+<p>y despejando <span class="math inline">\(x_{\alpha/2}\)</span>: <span class="math display">\[ x_{\alpha/2} = \mu + z_{\alpha/2} \cdot \sigma \]</span> Como el valor de <span class="math inline">\(\alpha/2\)</span> es conocido (lo hemos elegido nosotros) podemos identificar el valor de <span class="math inline">\(Z\)</span> que deja esa área de cola. Por ejemplo, si <span class="math inline">\(\alpha=0.05\)</span>, <span class="math inline">\(\alpha/2 = 0.025\)</span> y <span class="math inline">\(z_{0.025}=1.96\)</span>. Ya es inmediato deducir que la distancia entre <span class="math inline">\(x_{\alpha/2}\)</span> y <span class="math inline">\(\mu\)</span> es igual a <span class="math inline">\(z_{\alpha/2}\sigma\)</span>. Sumando y restando esa distancia a un valor (<span class="math inline">\(x\)</span>) obtenido al azar, tenemos el intervalo: <span class="math display">\[x \pm z_{\alpha/2}\sigma \]</span> Observe que si el valor de <span class="math inline">\(x\)</span> está en la zona de probabilidad <span class="math inline">\(1 - \alpha\)</span>, tal como ocurre con <span class="math inline">\(x_1\)</span> y <span class="math inline">\(x_2\)</span>, el intervalo obtenido incluye el valor de <span class="math inline">\(\mu\)</span>. Sin embargo, si <span class="math inline">\(x\)</span> cae en la zona de las colas, como ocurre con <span class="math inline">\(x_3\)</span>, el intervalo no llega a alcanzar el valor de <span class="math inline">\(\mu\)</span>. Por tanto, los intervalos calculados con este procedimiento aciertan si el valor obtenido al azar cae entre las dos colas de la distribución, y esto ocurre con una probabilidad <span class="math inline">\(1 - \alpha\)</span>. Por esta razón se denominan intervalos de confianza <span class="math inline">\(1 - \alpha\)</span>. Este nivel de confianza se da normalmente en porcentaje y si <span class="math inline">\(\alpha = 0.05\)</span> hablamos de intervalo de confianza del 95 %.</p>
+</section>
+<section id="en-torno-a-la-media-de-una-muestra" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="en-torno-a-la-media-de-una-muestra">En torno a la media de una muestra</h4>
+<p>La estimación es más precisa –el intervalo de confianza es más estrecho– si en vez de construirlo en torno a una observación individual lo construimos en torno a la media de una muestra. Veamos algunas características de la media muestral que nos serán útiles para construir el intervalo de confianza.</p>
+<ol type="1">
+<li><p>La media muestral es una variable aleatoria.</p>
+<p>Parece que tenemos metido en la cabeza que la media es un número concreto y, efectivamente, así es si nos referimos a una muestra concreta. Por ejemplo, la media de 2, 4, 6 y 8 es igual a 5, un número concreto, de la misma forma que la estatura de Juan, una persona concreta, es de 172 cm. Pero la estatura de una persona genérica es una variable aleatoria de un distribución que podría ser <span class="math inline">\(\text{N}(170\, \text{cm}; 7 \, \text{cm})\)</span>. De la misma forma, la media de una muestra aleatoria genérica –no nos referimos a unos valores concretos– también es una variable aleatoria.</p></li>
+<li><p>En general, podemos considerar que la media muestral tiene distribución Normal.</p>
+<p>Si las observaciones provienen de una distribución Normal, la media es una combinación lineal de Normales y, por tanto, también es Normal. Si la población no es exactamente Normal, pero el tamaño de muestra no es muy pequeño, una consecuencia del teorema central del límite es que –a efectos prácticos– se puede considerar que la media muestral también sigue una distribución Normal.</p></li>
+<li><p>Si los valores de la muestra provienen de una distribución $ X N(; ) $ la media de muestras de tamaño <span class="math inline">\(n\)</span> sigue una distribución $ N(; ) $.</p>
+<p>Al tratar las propiedades del estimador puntual, ya vimos que si $ X N(; ) $ y <span class="math inline">\(\bar{X} = \frac{1}{n} (X_1 + X_2 + \cdots + X_n)\)</span> tenemos que <span class="math inline">\(E(\bar{X}) = \mu\)</span>.</p>
+<p>Ahora podemos añadir que:</p>
+<p><span class="math display">\[\begin{equation*} \label{eq2}
+        \begin{split}
+            V(\bar{X}) &amp;=V \left( \frac{X_1+X_2+ \cdots + X_n}{n}\right) =\\[5pt]
+            &amp; = \frac{1}{n^2} \left[V(X_1)+V(X_2)+ \cdots +  V(X_n) \right] =\\[5pt]
+          &amp; = \frac{1}{n^2} \cdot n  \sigma^2 = \frac{\sigma^2}{n}
+        \end{split}
+  \end{equation*}\]</span> Por tanto, la desviación típica de la distribución de la media muestral es igual a <span class="math inline">\(\sigma\sqrt{n}\)</span>.</p></li>
+</ol>
+<p>En la <a href="#fig-mediaICmedia" class="quarto-xref">Figura&nbsp;<span>7.5</span></a> hemos representado la distribución de la población (campana gris) y la correspondiente a la media muestral, que tiene menos variabilidad y por tanto es más estrecha y también más alta ya que si están en la misma escala el área debe ser la misma (igual a 1). La media de una muestra es un valor de la distribución de la media muestral, es decir, de la campana estrecha. Su desviación típica es <span class="math inline">\(\sigma/\sqrt{n}\)</span>, por tanto: <span class="math display">\[z_{\alpha/2} = \frac{x_{\alpha/2} - \mu} {\frac{\sigma}{\sqrt{n}}} \]</span> Y ya es inmediato deducir que en este caso la distancia entre <span class="math inline">\(x_{\alpha/2}\)</span> y <span class="math inline">\(\mu\)</span> será: <span class="math display">\[z_{\alpha/2}\frac{\sigma}{\sqrt{n}}\]</span></p>
+<div id="fig-mediaICmedia" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mediaICmedia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_07/f0705_mediaICmedia.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mediaICmedia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;7.5: Intervalos construidos en torno a la media de una muestra sumando y restando <span class="math inline">\(z_{\alpha/2}\frac{\sigma}{\sqrt{n}}\)</span>.
+</figcaption>
+</figure>
+</div>
+<p>Siguiendo el mismo razonamiento que para construir el intervalo en torno a una observación individual, en torno a la media de una muestra obtenemos: <span class="math display">\[\bar{x} \pm z_{\alpha/2} \frac{\sigma}{\sqrt{n}} \]</span> Observe que cuanto mayor es el tamaño de la muestra (mayor valor de <span class="math inline">\(n\)</span>) menor es la desviación típica de la distribución de la media muestral y, por tanto, menor es la anchura del intervalo de confianza.</p>
+</section>
+<section id="y-si-no-conocemos-el-valor-de" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="y-si-no-conocemos-el-valor-de">¿Y si no conocemos el valor de $ $?</h4>
+<p>No conocer el valor de <span class="math inline">\(\sigma\)</span> es lo más habitual, y también lo más lógico, ya que sería extraño conocer el valor de la desviación típica de la población y no conocer el valor de la media. En la expresión del intervalo de confianza lo que hacemos es sustituir el valor de <span class="math inline">\(\sigma\)</span> por su estimador <span class="math inline">\(s\)</span> (desviación típica de la muestra) y esto tiene consecuencias prácticas si la muestra es pequeña.</p>
+<p>Conociendo el valor de <span class="math inline">\(\sigma\)</span> teníamos: <span class="math display">\[\frac{X - \mu} {\sigma} = Z \sim \text{N(0; 1)}\]</span> Al colocar <span class="math inline">\(s\)</span> en el denominador estamos cambiando una constante (el valor de <span class="math inline">\(\sigma\)</span>) por una variable aleatoria. Esto provoca que la variable representada por esta nueva expresión tenga mayor variabilidad y ya no siga una distribución N(0; 1) sino otra similar con algo más de variabilidad. A esta nueva distribución se le denomina <span class="math inline">\(t\)</span> de Student<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
+<p><span class="math display">\[ \frac{X - \mu} {s} \sim t-\text{Student}\]</span> La distribución <span class="math inline">\(t\)</span> de Student siempre está relacionada con una estimación del valor de <span class="math inline">\(\sigma\)</span> y su forma depende del tamaño de la muestra utilizada para realizar esa estimación. Si la muestra es grande, pongamos <span class="math inline">\(n&gt;30\)</span>, el valor de <span class="math inline">\(s\)</span> tendrá poca variabilidad –cambiará poco si tomamos otra muestra– y estará próximo a <span class="math inline">\(\sigma\)</span>, de manera que la distribución de <span class="math inline">\(t\)</span> no será muy distinta de la de <span class="math inline">\(Z\)</span>. Sin embargo, si la muestra es pequeña el valor de <span class="math inline">\(s\)</span> tendrá mayor variabilidad y las distribuciones de <span class="math inline">\(t\)</span> y de <span class="math inline">\(Z\)</span> tendrán mayor diferencia.</p>
+<p>Por tanto, la distribución <span class="math inline">\(t\)</span> de Student no es única, sino que depende del tamaño de la muestra con que se calcula la <span class="math inline">\(s\)</span> con la que está asociada. Para identificar a cual nos estamos refiriendo le añadimos un valor que llamamos &lt;<grados de="" libertad="">&gt; y al que asignamos la letra griega <span class="math inline">\(\nu\)</span> (nu) que colocamos como subíndice de <span class="math inline">\(t\)</span>. Los grados de libertad tienen una relación inmediata con el tamaño de muestra: <span class="math inline">\(\nu = n-1\)</span>.</grados></p>
+<p>Ya hemos llegado al final. Cambiamos el valor de <span class="math inline">\(\sigma\)</span> por el de <span class="math inline">\(s\)</span> y el de <span class="math inline">\(z\)</span> por el de <span class="math inline">\(t\)</span> con sus grados de libertad y nos queda: <span class="math display">\[ \bar{x} \pm t_{\nu;\alpha/2} \frac{s}{\sqrt{n}} \]</span></p>
+</section>
+<section id="intervalo-de-confianza-para-el-peso-medio-de-los-paquetes-de-café" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="intervalo-de-confianza-para-el-peso-medio-de-los-paquetes-de-café">Intervalo de confianza para el peso medio de los paquetes de café</h4>
+<p>Recordemos que los valores de nuestra muestra son (en gramos): 995, 987, 1008, 995, 991 y 1007. Necesitamos conocer:</p>
+<div class="columns">
+<div class="column" style="width:12%;">
+<p><span class="math inline">\(\bar{x}\)</span>:</p>
+</div><div class="column" style="width:88%;">
+<p>Ya lo hemos calculado. Es igual a 997,17 g.</p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:12%;">
+<p><span class="math inline">\(t_{5; \, 0.025}\)</span>:</p>
+</div><div class="column" style="width:88%;">
+<p>Es el valor de una <span class="math inline">\(t\)</span> de Student con 5 grados de libertad (<span class="math inline">\(=n-1\)</span>) que deja un área de cola de 0,025. Lo podemos obtener usando una hoja de cálculo o las típicas tablas que se incluyen (o incluían) en los libros de estadística. En nuestro caso, <span class="math inline">\(t_{5; \, 0.025} = 2.571\)</span></p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:12%;">
+<p><span class="math inline">\(s\)</span>:</p>
+</div><div class="column" style="width:88%;">
+<p>Desviación típica de los valores de la muestra. <span class="math inline">\(s=8.542\)</span>.</p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:12%;">
+<p><span class="math inline">\(n\)</span>:</p>
+</div><div class="column" style="width:88%;">
+<p>Tamaño de la muestra. <span class="math inline">\(n=6\)</span></p>
+</div>
+</div>
+<p>Aplicando esta fórmula obtenemos que el intervalo de confianza del 95 % para la media de la población es: <span class="math inline">\(997.17 \pm 8.97\)</span>.</p>
+<p>Los cálculos son muy fáciles de realizar. Lo importante es entender bien qué significa la información que da el intervalo y –como siempre– asegurarse de que la muestra utilizada es representativa de la población de interés.</p>
+</section>
+</section>
+</section>
+<section id="estimación-de-una-proporción" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="estimación-de-una-proporción"><span class="header-section-number">7.4</span> Estimación de una proporción</h2>
+<p>Deseamos estimar el porcentaje de estudiantes de una universidad que tiene cuenta en una determinada red social, les llamaremos <em>cumplidores</em>. Como no podemos preguntar a todos, tomamos una muestra de <span class="math inline">\(n=100\)</span> y resulta que 58 tienen cuenta. ¿Qué podemos decir sobre la proporción en la población?</p>
+<section id="estimación-puntual-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="estimación-puntual-1">Estimación puntual</h3>
+<p>En nuestra muestra el número de cumplidores es <span class="math inline">\(X=58\)</span> pero sabemos que si hubiéramos tomado otra, tan buena como la primera, el resultado podría haber sido otro. En realidad, el valor de <span class="math inline">\(X\)</span> es una variable aleatoria que se ajusta al modelo de la distribución binomial<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> cuyos parámetros son el tamaño de la muestra <span class="math inline">\(n=100\)</span> y la proporción en la población <span class="math inline">\(p\)</span>, de valor desconocido.</p>
+<p>Hemos visto que la esperanza matemática de una variable aleatoria <span class="math inline">\(X\)</span> con distribución binomial y parámetros <span class="math inline">\(n\)</span> y <span class="math inline">\(p\)</span> es: <span class="math display">\[\text{E}(X) = np \]</span> La proporción en la muestra <span class="math inline">\(\frac{X}{n}\)</span> también es una variable aleatoria, y recordando las propiedades de la esperanza matemática podemos escribir: <span class="math display">\[\text{E} \left(\frac{X}{n}\right) = \frac{1}{n}\text{E}(X) = \frac{1}{n} np = p\]</span> Por tanto, la esperanza matemática de la proporción en la muestra es igual a la proporción en la población. Dicho en otras palabras, la proporción en la muestra es un estimador insesgado de la proporción en la población.</p>
+<p>Por otro lado, también podemos entender la proporción como una media. Podemos asignar el valor 1 a los que tienen cuenta en esa red social y 0 a los que no la tienen. El promedio de esos valores es la proporción a que nos estamos refiriendo. Si la proporción es una caso particular de valor medio, tiene también las propiedades que ya hemos comentado sobre la media de la muestra como estimador de la media de la población.</p>
+<p>Claro que si decimos que la proporción en la población está en torno al 58 % no está claro si está entre el 56 y el 60 o entre el 50 y el 66. Para informar sobre la precisión de la estimación recurrimos a los intervalos de confianza.</p>
+</section>
+<section id="intervalo-de-confianza-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="intervalo-de-confianza-1">Intervalo de confianza</h3>
+<p>Existen varios métodos para calcular intervalos de confianza para una proporción<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>. El más habitual se basa en la aproximación de la distribución binomial a la Normal pero vamos a empezar viendo otro denominado “exacto” que se puede usar siempre y que nos parece interesante a efectos didácticos.</p>
+<section id="método-exacto" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="método-exacto">Método exacto</h4>
+<p>Empezamos identificando el valor de la proporción <span class="math inline">\(p_1\)</span> de cumplidores en la población que da una probabilidad de 0,025 de tener 58 o más cumplidores en una muestra de <span class="math inline">\(n\,\)</span>=100 individuos. Observe que si <span class="math inline">\(p\)</span> es grande –pongamos 90 %– será muy probable tener 58 o más cumplidores, mientras que si <span class="math inline">\(p\)</span> es bajo –pongamos del 10 %– esa probabilidad será prácticamente nula.</p>
+<p>En la tabla <span class="math inline">\(\ref{extInfIC}\)</span> hemos realizado un barrido de valores de <span class="math inline">\(p\)</span> calculando para cada uno de ellos la probabilidad buscada, el uso de una hoja de cálculo facilita mucho esta tarea. En la tabla de la izquierda vemos que esa proporción está entre 0,4 y 0,5. Realizando barridos cada vez más finos llegamos a que el valor de <span class="math inline">\(p_1\)</span> con tres decimales es igual a 0,477.</p>
+<p>De manera análoga podemos calcular el valor de <span class="math inline">\(p_2\)</span> que da una probabilidad de 0,025 de tener 58 o menos cumplidores. La tabla <span class="math inline">\(\ref{extSupIC}\)</span> muestra el barrido realizado para llegar a que el valor de <span class="math inline">\(p_2\)</span> es igual a 0,678.</p>
+<div id="fig-intervaloExacto" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-intervaloExacto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_07/f0706_intervaloExacto.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-intervaloExacto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;7.6: Intervalo de confianza del 95% para la proporción en la población si en un muestra de n=100 individuos se encuentran X=58 cumplidores.
+</figcaption>
+</figure>
+</div>
+<p>Por tanto, dadas las evidencias que tenemos (<span class="math inline">\(n\)</span>=100; <span class="math inline">\(X\)</span>=58) podemos afirmar que es poco probable que la proporción en la población sea menor del 44,7% y también es poco probable que supere el 67,8%. Concretamente, ese ``poco probable’’ significa una probabilidad del 2,5%. Luego la probabilidad de que se encuentre entre el 47,7 y el 67,8% es del 95%. Ese es el intervalo de confianza del 95%.</p>
+<div style="width: 100%;">
+<table style="width: 100%;">
+<caption style="caption-side: bottom; text-align: center; line-height: 1.2;">
+Tabla 7.2: Determinación de la proporción en la población (p) que da una probabilidad de 0,025 de tener un número de cumplidores <strong>igual o mayor</strong> que los obtenidos en la muestra.
+</caption>
+</table>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figuras_07/f_Tabla0702.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+<div style="width: 100%;">
+<table style="width: 100%;">
+<caption style="caption-side: bottom; text-align: center; line-height: 1.2;">
+Tabla 7.3: Determinación de la proporción en la población (p) que da una probabilidad de 0,025 de tener un número de cumplidores <strong>menor o igual</strong> que los obtenidos en la muestra.
+</caption>
+</table>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figuras_07/f_Tabla0703.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
 
 
+</section>
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Es controvertido usar la palabra “probabilidad” en este contexto, pero a nosotros nos parece que ayuda a entender lo que representa y no es ningún disparate conceptual}<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Esta es una de las distribuciones que más aparecen en los análisis estadísticos. Volverá a tener protagonismo el el capítulo 9 (test de la <span class="math inline">\(t\)</span> de Student) y se describe con más detalle en el Apéndice 9.C}.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>En realidad, como el muestreo se hace sin reposición, la proporción <span class="math inline">\(p\)</span> no se mantiene exactamente constante, ya que va variando según el tipo de elementos que se extraen. Sin embargo, si el tamaño de la población es mucho mayor que el de la muestra, esta diferencia es irrelevante a efectos prácticos.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Puede dar un vistazo a “Binomial proportion confidence interval” en la Wikipedia.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -714,7 +1168,7 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./_04_tapaSignificativo.html" class="pagination-link" aria-label="ESTADÍSTICAMENTE SIGNIFICATIVO">
+      <a href="./0_04_tapaSignificativo.html" class="pagination-link" aria-label="ESTADÍSTICAMENTE SIGNIFICATIVO">
         <span class="nav-page-text">ESTADÍSTICAMENTE SIGNIFICATIVO</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>

@@ -130,10 +130,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">
-      &lt;span style="font-size: 1.5em;"&gt;Estadística&lt;/span&gt;&lt;br&gt;
-&lt;span style="font-size: 1em;"&gt;Entender - Aplicar - Enseñar&lt;/span&gt;
-      </a> 
+      <a href="./"><span style="font-size: 1.5em;">Estadística</span><br> <span style="font-size: 1em;">Entender - Aplicar - Enseñar</span></a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -318,6 +315,12 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#representación-gráfica-de-los-datos" id="toc-representación-gráfica-de-los-datos" class="nav-link" data-scroll-target="#representación-gráfica-de-los-datos"><span class="header-section-number">8.1.1</span> Representación gráfica de los datos</a></li>
   <li><a href="#medida-de-discrepancia-entre-resultados-teóricos-y-observados" id="toc-medida-de-discrepancia-entre-resultados-teóricos-y-observados" class="nav-link" data-scroll-target="#medida-de-discrepancia-entre-resultados-teóricos-y-observados">Medida de discrepancia entre resultados teóricos y observados</a></li>
+  <li><a href="#qué-valor-cabe-esperar-del-estadístico-de-prueba" id="toc-qué-valor-cabe-esperar-del-estadístico-de-prueba" class="nav-link" data-scroll-target="#qué-valor-cabe-esperar-del-estadístico-de-prueba">¿Qué valor cabe esperar del estadístico de prueba?</a></li>
+  <li><a href="#cómo-hemos-razonado" id="toc-cómo-hemos-razonado" class="nav-link" data-scroll-target="#cómo-hemos-razonado">¿Cómo hemos razonado?</a></li>
+  </ul></li>
+  <li><a href="#paquetes-de-café-salen-con-el-peso-correcto" id="toc-paquetes-de-café-salen-con-el-peso-correcto" class="nav-link" data-scroll-target="#paquetes-de-café-salen-con-el-peso-correcto"><span class="header-section-number">8.2</span> Paquetes de café: ¿Salen con el peso correcto?</a>
+  <ul class="collapse">
+  <li><a href="#a-partir-del-peso-de-un-solo-paquete" id="toc-a-partir-del-peso-de-un-solo-paquete" class="nav-link" data-scroll-target="#a-partir-del-peso-de-un-solo-paquete">A partir del peso de un solo paquete</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -378,7 +381,7 @@ Figura&nbsp;8.1: Resultados obtenidos por R. Wolf al lanzar 20.000 veces dos dad
 <p>Suponemos que el proceso de lanzamiento de los dados es correcto y que la anotación de los resultados se ha realizado sin errores. Seguramente esto es fácil si se realizan unos pocos lanzamientos, pero si se realizan <span class="math inline">\(20\;\!000\)</span> ya no lo es tanto. En cualquier caso, si los resultados no son los esperados, vamos a atribuir esa desviación a los dados y no al proceso de lanzamiento.</p>
 <section id="representación-gráfica-de-los-datos" class="level3" data-number="8.1.1">
 <h3 data-number="8.1.1" class="anchored" data-anchor-id="representación-gráfica-de-los-datos"><span class="header-section-number">8.1.1</span> Representación gráfica de los datos</h3>
-<p>Aunque en este caso tenemos pocos datos, siempre es una buena idea representarlos gráficamente (figura <span class="math inline">\(\ref{grafDadosWolf}\)</span>).</p>
+<p>Aunque en este caso tenemos pocos datos, siempre es una buena idea representarlos gráficamente (<a href="#fig-grafDadosWolf" class="quarto-xref">Figura&nbsp;<span>8.2</span></a>).</p>
 <div id="fig-grafDadosWolf" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-grafDadosWolf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -407,7 +410,7 @@ Figura&nbsp;8.2: Resultados obtenidos en el experimento de Wolf. Dado B: blanco,
 </section>
 <section id="medida-de-discrepancia-entre-resultados-teóricos-y-observados" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="medida-de-discrepancia-entre-resultados-teóricos-y-observados">Medida de discrepancia entre resultados teóricos y observados</h3>
-<p>La tabla <span class="math inline">\(\ref{tablaDadosWolf}\)</span> resume los valores obtenidos con cada dado y su diferencia con el valor teórico (<span class="math inline">\(=3\;\!333\)</span>) en valor absoluto.</p>
+<p>La <a href="#tbl-dadosWolf">Tabla 8.1</a> resume los valores obtenidos con cada dado y su diferencia con el valor teórico (<span class="math inline">\(=3\;\!333\)</span>) en valor absoluto.</p>
 <div id="tbl-dadosWolf" ;="" class="tabla-wrapper_T0801 anchored">
 
 <table class="tabla-0801 caption-top table">
@@ -424,13 +427,13 @@ Figura&nbsp;8.2: Resultados obtenidos en el experimento de Wolf. Dado B: blanco,
 </colgroup>
 <tbody>
 <tr class="odd">
-<td></td>
-<td></td>
+<td class="sin-borde"></td>
+<td class="sin-borde"></td>
 <td colspan="6">Resultados</td>
 </tr>
 <tr class="even">
-<td></td>
-<td></td>
+<td class="sin-borde"></td>
+<td class="sin-borde"></td>
 <td>1</td>
 <td>2</td>
 <td>3</td>
@@ -441,66 +444,423 @@ Figura&nbsp;8.2: Resultados obtenidos en el experimento de Wolf. Dado B: blanco,
 <tr class="odd">
 <td rowspan="3">Dado<br>
 Blanco</td>
-<td>Valor obtenido</td>
-<td>3.246</td>
-<td>3.449</td>
-<td>2.897</td>
-<td>2.841</td>
-<td>3.635</td>
-<td>3.932</td>
+<td class="sin-inf">Valor obtenido</td>
+<td class="sin-inf">3.246</td>
+<td class="sin-inf">3.449</td>
+<td class="sin-inf">2.897</td>
+<td class="sin-inf">2.841</td>
+<td class="sin-inf">3.635</td>
+<td class="sin-inf">3.932</td>
 </tr>
 <tr class="even">
-<td>Discrepancia</td>
-<td rowspan="2">87</td>
-<td rowspan="2">116</td>
-<td rowspan="2">436</td>
-<td rowspan="2">492</td>
-<td rowspan="2">302</td>
-<td rowspan="2">599</td>
+<td class="sin-borde">Discrepancia</td>
+<td rowspan="2" class="sin-sup">87</td>
+<td rowspan="2" class="sin-sup">116</td>
+<td rowspan="2" class="sin-sup">436</td>
+<td rowspan="2" class="sin-sup">492</td>
+<td rowspan="2" class="sin-sup">302</td>
+<td rowspan="2" class="sin-sup">599</td>
 </tr>
 <tr class="odd">
-<td>|Obtenido - Teórico|</td>
+<td class="sin-borde">|Obtenido - Teórico|</td>
 </tr>
 <tr class="even">
 <td rowspan="3">Dado<br>
 Rojo</td>
-<td>Valor obtenido</td>
-<td>3.407</td>
-<td>3.631</td>
-<td>3.176</td>
-<td>2.916</td>
-<td>3.448</td>
-<td>3.422</td>
+<td class="sin-inf">Valor obtenido</td>
+<td class="sin-inf">3.407</td>
+<td class="sin-inf">3.631</td>
+<td class="sin-inf">3.176</td>
+<td class="sin-inf">2.916</td>
+<td class="sin-inf">3.448</td>
+<td class="sin-inf">3.422</td>
 </tr>
 <tr class="odd">
-<td>Discrepancia</td>
-<td rowspan="2">74</td>
-<td rowspan="2">298</td>
-<td rowspan="2">157</td>
-<td rowspan="2">417</td>
-<td rowspan="2">115</td>
-<td rowspan="2">89</td>
+<td class="sin-borde">Discrepancia</td>
+<td rowspan="2" class="sin-sup">74</td>
+<td rowspan="2" class="sin-sup">298</td>
+<td rowspan="2" class="sin-sup">157</td>
+<td rowspan="2" class="sin-sup">417</td>
+<td rowspan="2" class="sin-sup">115</td>
+<td rowspan="2" class="sin-sup">89</td>
 </tr>
 <tr class="even">
-<td>|Obtenido - Teórico|</td>
+<td class="sin-sup">|Obtenido - Teórico|</td>
+</tr>
+</tbody>
+</table>
+
+</div>Ahora se trata de resumir en un solo número la discrepancia entre los valores esperados y los observados. Algunas opciones son:<p></p>
+<ul>
+<li><p>Suma de las discrepancias en valor absoluto. En el caso del dado rojo tendremos: <span class="math inline">\(74+298+157+417+115+89 = 1\;\!150\)</span>. Es necesario realizar la suma de los valores absolutos porque si mantenemos los signos siempre dará igual a cero.</p></li>
+<li><p>Suma de los cuadrados de las discrepancias. Elevar al cuadrado el valor de la discrepancia es otra forma de evitar que los valores positivos y negativos se anulen entre sí..</p></li>
+<li><p>La discrepancia máxima. No hay que hacer cálculos. Para el dado rojo es 417 y para el blanco 599.</p></li>
+</ul>
+<p>Cualquiera nos valdría, y también podemos pensar en otras que requieren más cálculos. Vamos a optar por la más sencilla: la discrepancia máxima. A esta medida le llamamos <strong>estadístico de prueba</strong>.</p>
+</section>
+<section id="qué-valor-cabe-esperar-del-estadístico-de-prueba" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="qué-valor-cabe-esperar-del-estadístico-de-prueba">¿Qué valor cabe esperar del estadístico de prueba?</h3>
+<p>La discrepancia máxima es una variable aleatoria. Si lanzamos <span class="math inline">\(20\;\!000\)</span> veces un dado perfectamente equilibrado, obtendremos un valor de esa discrepancia, pero si repetimos el experimento realizando otros <span class="math inline">\(20\;\!000\)</span> lanzamientos, el valor será otro.</p>
+<p>No vamos a repetir el experimento poniéndonos a lanzar dados, podemos simular los resultados que se obtendrían utilizando una hoja de cálculo como la que se muestra en la <a href="#fig-excelDados" class="quarto-xref">Figura&nbsp;<span>8.3</span></a>. En la primera columna colocamos los resultados obtenidos al lanzar <span class="math inline">\(20\;\!000\)</span> veces un dado <span style="font-family: monospace;">=aleatorio.entre(1;6)</span>. En la segunda tenemos la frecuencia de cada uno de los valores que pueden salir <span style="font-family: monospace;">=CONTAR.SI(A$2:A$20001;1)</span>. En la tercera columna calculamos la diferencia –en valor absoluto– entre la frecuencia observada y la esperada [para 1: <span style="font-family: monospace;">=ABS(3333-B2)</span>. Finalmente, en la cuarta columna, determinamos el valor máximo de la discrepancia <span style="font-family: monospace;">=MAX(C2:C7)</span>.</p>
+<div id="fig-excelDados" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-excelDados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_08/f0803_excelDados.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-excelDados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;8.3: Simulación con una hoja de cálculo de la discrepancia máxima entre la frecuencia observada y la esperada de los resultados de lanzar <span class="math inline">\(20\;\!000\)</span> veces un dado.
+</figcaption>
+</figure>
+</div>
+<p>Para repetir la simulación y obtener otro valor de la discrepancia máxima, basta con pulsar <span style="font-family: monospace;">F9</span> si se usa Excel o <span style="font-family: monospace;">Ctr+R</span> en Google Sheets. Podemos ir anotando los valores que van saliendo<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. La <a href="#tbl-excelDados">Tabla 8.2</a> contiene los resultados obtenidos en tres simulaciones destacando en negrita el valor de la discrepancia máxima en cada caso.</p>
+<div id="tbl-Encima" class="anchored">
+
+<table class="tabla-0802_Titulo caption-top table">
+<caption>Tabla 8.2: Tres simulaciones de los resultados obtenidos al lanzar 20000 veces un dado. (Res.: Resultados, Frec.: Frecuencia, Discrep.: Discrepancia).</caption>
+<tbody>
+<tr class="odd" style="height:0;">
+<td style="padding: 0"></td>
 </tr>
 </tbody>
 </table>
 
 </div>
-<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyLXRpdGxl"><span style="font-size: 1.5em;">Estadística</span><br> <span style="font-size: 1em;">Entender - Aplicar - Enseñar</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXItdGl0bGU="><span style="font-size: 1.5em;">Estadística</span><br> <span style="font-size: 1em;">Entender - Aplicar - Enseñar</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uZXh0"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Algunos test clásicos</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1wcmV2">ESTADÍSTICAMENTE SIGNIFICATIVO</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9pbmRleC5odG1sUFJFU0VOVEFDScOTTg==">PRESENTACIÓN</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMQ==">Prólogo</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi8wMV9JbnRyb2R1Y2Npb24uaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+MTwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5JbnRyb2R1Y2Npw7NuPC9zcGFuPg=="><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMg==">ESTADÍSTICA DESCRIPTIVA</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi8wMl9zaW50ZXNpc051bWVyaWNhLmh0bWw8c3Bhbi1jbGFzcz0nY2hhcHRlci1udW1iZXInPjI8L3NwYW4+LS08c3Bhbi1jbGFzcz0nY2hhcHRlci10aXRsZSc+U8OtbnRlc2lzLW51bcOpcmljYS1kZS1kYXRvczwvc3Bhbj4="><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Síntesis numérica de datos</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi8wM19HcmFmaWNvcy5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz4zPC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPlJlcHJlc2VudGFjaW9uZXMtZ3LDoWZpY2FzPC9zcGFuPg=="><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Representaciones gráficas</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMw==">DESCRIBIR LO ALEATORIO</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi8wNF92YXJpYWJsZXNBbGVhdG9yaWFzLmh0bWw8c3Bhbi1jbGFzcz0nY2hhcHRlci1udW1iZXInPjQ8L3NwYW4+LS08c3Bhbi1jbGFzcz0nY2hhcHRlci10aXRsZSc+VmFyaWFibGVzLWFsZWF0b3JpYXM8L3NwYW4+"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Variables aleatorias</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi8wNV9kaXN0cmlidWNpb25lc1Byb2JhYmlsaWRhZC5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz41PC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPkRpc3RyaWJ1Y2lvbmVzLWRlLXByb2JhYmlsaWRhZDwvc3Bhbj4="><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribuciones de probabilidad</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tNA==">DE LA MUESTRA A LA POBLACIÓN</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi8wNl9tdWVzdHJlby5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz42PC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPk11ZXN0cmVvLi1FbmN1ZXN0YXM8L3NwYW4+"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Muestreo. Encuestas</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi8wN19lc3RpbWFjaW9uLmh0bWw8c3Bhbi1jbGFzcz0nY2hhcHRlci1udW1iZXInPjc8L3NwYW4+LS08c3Bhbi1jbGFzcz0nY2hhcHRlci10aXRsZSc+RXN0aW1hY2nDs24tZGUtY2FyYWN0ZXLDrXN0aWNhcy1kZS1sYS1wb2JsYWNpw7NuPC9zcGFuPg=="><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Estimación de características de la población</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tNQ==">ESTADÍSTICAMENTE SIGNIFICATIVO</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi8wOF9jb250cmFzdGVIaXBvdGVzaXMuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+ODwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5Db250cmFzdGUtZGUtaGlww7N0ZXNpczwvc3Bhbj4="><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Contraste de hipótesis</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi8wOV9hbGd1bm9zVGVzdC5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz45PC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPkFsZ3Vub3MtdGVzdC1jbMOhc2ljb3M8L3NwYW4+"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Algunos test clásicos</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tNg==">CORRELACIÓN Y REGRESIÓN</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi8xMF9yZWxhY2lvbkxpbmVhbC5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz4xMDwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5NZWRpZGFzLWRlLXJlbGFjacOzbi1saW5lYWw8L3NwYW4+"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Medidas de relación lineal</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi8xMV9yZWdyZVNpbXBsZS5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz4xMTwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5SZWdyZXNpw7NuLXNpbXBsZTwvc3Bhbj4="><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Regresión simple</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi8xMl9yZWdyZU11bHRpcGxlLmh0bWw8c3Bhbi1jbGFzcz0nY2hhcHRlci1udW1iZXInPjEyPC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPlJlZ3Jlc2nDs24tTcO6bHRpcGxlPC9zcGFuPg=="><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Regresión Múltiple</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tNw==">EPÍLOGO</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi8xM19FcGlsb2dvLmh0bWw8c3Bhbi1jbGFzcz0nY2hhcHRlci1udW1iZXInPjEzPC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPkRhdG9zLWZyZW50ZS1hLW9waW5pb25lczwvc3Bhbj4="><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Datos frente a opiniones</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWJyZWFkY3J1bWJzLUVTVEFEw41TVElDQU1FTlRFLVNJR05JRklDQVRJVk8=">ESTADÍSTICAMENTE SIGNIFICATIVO</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWJyZWFkY3J1bWJzLTxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+ODwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5Db250cmFzdGUtZGUtaGlww7N0ZXNpczwvc3Bhbj4="><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Contraste de hipótesis</span></span></p>
-</section></section></main></div>
+<div class="columns">
+<div class="column" style="width:33%;">
+<div class="tabla-wrapper_T0802">
+
+<table class="tabla-0802 caption-top table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td colspan="3">Simulación 1</td>
+</tr>
+<tr class="even">
+<td>Res.</td>
+<td>Frec.</td>
+<td>Discrep.</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>3362</td>
+<td>29</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>3318</td>
+<td>15</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>3326</td>
+<td>7</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>3368</td>
+<td><strong>35</strong></td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>3302</td>
+<td>31</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>3324</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div><div class="column" style="width:33%;">
+<div class="tabla-wrapper_T0802">
+
+<table class="tabla-0802 caption-top table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td colspan="3">Simulación 2</td>
+</tr>
+<tr class="even">
+<td>Res.</td>
+<td>Frec.</td>
+<td>Discrep.</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>3335</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>3388</td>
+<td>55</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>3230</td>
+<td><strong>103</strong></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>3316</td>
+<td>17</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>3394</td>
+<td>61</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>3337</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div><div class="column" style="width:33%;">
+<div class="tabla-wrapper_T0802">
+
+<table class="tabla-0802 caption-top table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td colspan="3">Simulación 3</td>
+</tr>
+<tr class="even">
+<td>Res.</td>
+<td>Frec.</td>
+<td>Discrep.</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>3340</td>
+<td>7</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>3329</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>3393</td>
+<td><strong>60</strong></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>3374</td>
+<td>41</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>3273</td>
+<td><strong>60</strong></td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>3291</td>
+<td>42</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>Pero lo más efectivo es realizar un pequeño programa que repita este proceso muchas veces guardando cada vez el valor de la discrepancia máxima. La figura <span class="math inline">\(\ref{simulaDadosWolf}\)</span> muestra la distribución de los <span class="math inline">\(100\;\!000\)</span> valores obtenidos al repetir la simulación ese número de veces. Valores como 65, 120 o 97 son perfectamente normales. Si la discrepancia máxima obtenida en el experimento realizado por Wolf fuera de ese orden de magnitud no habría nada que decir sobre la calidad del dado. Si hubiera salido del orden de 200 diríamos que es muy poco probable que la discrepancia tenga un valor tan grande, no sería un valor imposible pero sí tan poco probable que lo más razonable sería considerar que el dado no está equilibrado.</p>
+<p>“La rareza” de un resultado lo medimos por la probabilidad de tener un valor como ese o mayor . La tabla <span class="math inline">\(\ref{percentiles}\)</span> muestra la proporción de veces (que asimilamos a la probabilidad) que la discrepancia máxima da un valor igual o mayor a los indicados.</p>
+<div id="tbl-Proporcion" class="tabla-wrapper_T0803 anchored">
+<div class="tabla-caption">
+  Tabla 8.3: Proporción de veces que son superados los valores que se indican.
+</div>
 
 
+<table class="tabla-0803 caption-top table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 19%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Valor</td>
+<td>Proporción de<br>
+veces que es<br>
+superado</td>
+</tr>
+<tr class="even">
+<td>138</td>
+<td>0,04879</td>
+</tr>
+<tr class="odd">
+<td>164</td>
+<td>0,01013</td>
+</tr>
+<tr class="even">
+<td>165</td>
+<td>0,00961</td>
+</tr>
+<tr class="odd">
+<td>198</td>
+<td>0,00089</td>
+</tr>
+</tbody>
+</table>
 
+</div>
+<p>Podríamos haber fijado un valor frontera –ligado a la probabilidad de ser superado– y considerar que los dados están desequilibrados si nuestro resultado supera ese valor. De cualquier forma, en nuestro caso la discrepancia está tan claramente alejada de los valores ``normales’’ que –suponiendo que el proceso de lanzamiento era correcto– podemos asegurar que los dados no estaban equilibrados. Sin ninguna duda. (Figura <span class="math inline">\(\ref{simulaDadosWolf}\)</span>)</p>
+<div id="fig-simulaDadosWolf" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-simulaDadosWolf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_08/f0804_simulaDadosWolf.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-simulaDadosWolf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;8.4: Nuestros valores de la discrepancia máxima y distribución a la que deberían pertenecer si los dados estuvieran equilibrados.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="cómo-hemos-razonado" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="cómo-hemos-razonado">¿Cómo hemos razonado?</h3>
+<p>Podemos resumir el proceso seguido en los siguientes pasos:</p>
+<ul>
+<li><p>De entrada hemos supuesto que los dados estaban equilibrados ya que entendemos que eso es lo normal. La carga de la prueba la tienen los que afirman algo singular, especial, excepcional. En este caso que los dados no estaban equilibrados.</p>
+<p>En la jerga estadística, a la hipótesis que se supone cierta a no ser que las evidencias –los datos– estén en contradicción con ella, se denomina <strong>hipótesis nula</strong>, <span class="math inline">\(\text{H}_0\)</span>. A lo que ocurre si se rechaza la hipótesis nula se denomina <strong>hipótesis alternativa</strong>, <span class="math inline">\(\text{H}_1\)</span>.</p></li>
+<li><p>A partir de los datos hemos calculado un valor relevante respecto al tema en discusión, en nuestro caso una medida de la discrepancia entre la frecuencia observada y la frecuencia esperada (le podríamos llamar &lt;<teóricamente esperada="">&gt;). A este valor que, de alguna manera, refleja la discrepancia de los datos con la hipótesis nula le llamamos <strong>estadístico de prueba</strong>.</teóricamente></p></li>
+<li><p>Hemos construido la distribución a la que debe pertenecer el estadístico de prueba si la hipótesis nula es cierta. A esta distribución le llamamos <strong>distribución de referencia</strong>.</p></li>
+<li><p>Nos preguntamos si es razonable considerar que el estadístico de prueba pertenece a la distribución de referencia. Un forma de hacerlo es calcular la probabilidad de que en la distribución de referencia se dé un valor como el del estadístico de prueba o mayor. A esa probabilidad se le denomina <strong><span class="math inline">\(p\)</span>-valor</strong>. Si el <span class="math inline">\(p\)</span>-valor es muy pequeño consideramos que los datos no son coherentes con la hipótesis nula y nos quedamos con la alternativa.</p></li>
+</ul>
+<p>Vamos a seguir con otros ejemplos porque hay más aspectos que observar en esta forma de razonamiento.</p>
+</section>
+</section>
+<section id="paquetes-de-café-salen-con-el-peso-correcto" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="paquetes-de-café-salen-con-el-peso-correcto"><span class="header-section-number">8.2</span> Paquetes de café: ¿Salen con el peso correcto?</h2>
+<p>Una máquina automática llena paquetes de café y, cada cierto tiempo se pesa un paquete para verificar que se están llenando con el peso previsto. Si la desviación respecto al objetivo sobrepasa un cierto valor se para la máquina y se reajusta. La pregunta que nos hacemos es: ¿cuál debe ser el valor de la desviación a partir del cual se debe parar y reajustar la máquina?</p>
+<p>“Ajustar” la máquina cuando en realidad ya está ajustada, no solo hace perder el tiempo sino que también aumenta la variabilidad final. Si el objetivo es llenar los paquetes con 1000 g, tomamos uno y pesa 1015, este puede ser un valor perfectamente compatible con que la máquina está bien ajustada, siendo la diferencia de 15 g debida a la variabilidad intrínseca del proceso de llenado. Sin embargo, si ignoramos esa variabilidad y entendemos esa desviación como una señal de que los paquetes se están llenando con 15 g de más, intentaremos &lt;<corregirla>&gt; centrándolo en 15 g menos y el resultado será que lo centraremos en 985 g. A continuación seguramente ocurrirá que tomaremos otro paquete y pesará 980 g con lo que subiremos 20 g el peso medio centrándolo en 1005 g. Así, lo que se irá haciendo es ir moviendo la &lt;<campana>&gt; de la distribución de los pesos y acabaremos teniendo mayor variabilidad que si no hubiéramos tocado nada (figura <span class="math inline">\(\ref{sobreAjuste}\)</span>).</campana></corregirla></p>
+<div id="fig-sobreAjuste" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sobreAjuste-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_08/f0805_sobreAjuste.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sobreAjuste-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;8.5: Aumento de variabiilidad por sobreajuste. Cambiar la media de la distribución para corregir falsos desajustes aumenta la variabilidad global.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Si no hubiera variabilidad sería muy fácil
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si a la salida de la máquina todos los paquetes pesaran exactamente lo mismo sería muy fácil saber si se ha producido un desajuste. Pero la realidad no es así, siempre hay variabilidad. Por eso hay que echar mano de la estadística para tomar una decisión.</p>
+</div>
+</div>
+<p>Necesitamos aplicar un criterio que tenga en cuenta la variabilidad natural del peso de los paquetes. No será un criterio infalible; podrá ocurrir que el proceso se desajuste y, en una primera observación, no seamos capaces de detectarlo o que, por el contrario, consideremos que se ha desajustado cuando en realidad no lo está. No obstante, con la estadística podremos calcular los riesgos de que estos errores ocurran y veremos también cómo podemos reducirlos.</p>
+<section id="a-partir-del-peso-de-un-solo-paquete" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="a-partir-del-peso-de-un-solo-paquete">A partir del peso de un solo paquete</h3>
+<p>Para saber si el peso de un paquete está dentro de lo esperado es necesario conocer cómo se distribuyen los pesos cuando todo funciona correctamente.</p>
+<p>Vamos a suponer que tenemos muchos datos históricos. Podemos construir un histograma con esos datos y sobre la misma escala situar el valor obtenido. Pueden darse situaciones como las que se muestran en la figura <span class="math inline">\(\ref{pesosCafe}\)</span>.</p>
+<div id="fig-pesosCafe_1" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pesosCafe_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_08/f0806_pesosCafe_1.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pesosCafe_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;8.6: Nuestros valores comparados con el histograma de pesos obtenidos cuando todo va bien.
+</figcaption>
+</figure>
+</div>
+<p>Las conclusiones en cada caso serán:</p>
+<ul>
+<li><p>Situación 1: Es muy poco probable que el peso de un paquete sea tan bajo si se están llenando en torno al valor objetivo. Entre los <span class="math inline">\(5\;\!000\)</span> valores con que se ha construido el histograma, no hay ninguno igual o inferior al que hemos obtenido. Lo más razonable es parar y revisar la máquina.</p></li>
+<li><p>Situación 2: Es poco probable que el peso de un paquete sea tan bajo. Entre los <span class="math inline">\(5\;\!000\)</span> valores históricos solo hay 35 con un peso igual o inferior. Lo más razonable también es parar y revisar la máquina.</p></li>
+<li><p>Situación 3: Un peso como el obtenido es perfectamente normal cuando los paquetes se están llenando de forma correcta. No hay ninguna razón para parar la máquina.</p></li>
+</ul>
+<p>Si en la variabilidad del peso influyen muchas pequeñas causas y son igualmente probables las desviaciones por exceso que por defecto, esa variabilidad seguirá el patrón de la distribución Normal. En nuestro caso también lo podemos confirmar por la forma que tiene el histograma.</p>
+<p>A partir de los datos históricos se pueden estimar la media y la desviación típica, que resultan ser: <span class="math inline">\(\mu = 1000\)</span> y <span class="math inline">\(\sigma = 5\)</span>. Como tenemos muchos datos, casi no habrá diferencia entre los valores estimados y los reales.</p>
+<p>Utilizando esa distribución Normal como distribución de referencia y dado el peso de un paquete, <span class="math inline">\(X\)</span>, podemos calcular la probabilidad de tener un valor como ese o más alejado del objetivo. En las situaciones que hemos comentado tenemos:</p>
+<ul>
+<li><p>Situación 1: <span class="math inline">\(P(X &lt; 976) = 8 \cdot 10^{-7}\)</span>: Probabilidad muy pequeña. Es necesario ajustar la máquina.</p></li>
+<li><p>Situación 2: <span class="math inline">\(P(X &lt; 988) = 0.0082\)</span>. Es muy poco probable tener ese valor si la máquina está bien ajustada. Lo más razonable es considerar que no lo está.</p></li>
+<li><p>Situación 3: <span class="math inline">\(P(X &lt; 995) = 0.16\)</span>: No hay ninguna razón para considerar que no está bien ajustada.</p></li>
+</ul>
+<div id="fig-pesosCafe_2" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pesosCafe_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_08/f0807_pesosCafe_2.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pesosCafe_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;8.7: Probabilidad de obtener valores menores que los indicados
+</figcaption>
+</figure>
+</div>
+<p>Vamos a repasar el razonamiento realizado en este caso, que será el mismo que en el ejemplo anterior, insistiendo en los conceptos que ya hemos visto e introduciendo alguno nuevo.</p>
+<ul>
+<li><p>De entrada suponemos que la máquina se mantiene ajustada (hipótesis nula). Eso es lo normal. Solo consideraremos que se ha desajustado (hipótesis alternativa) si los datos disponibles (&lt;<el dato="">&gt; en este caso) están en contradicción con ese supuesto.</el></p></li>
+<li><p>Tomamos un valor (estadístico de prueba) que servirá para valorar el desajuste. En general hay que calcularlo a partir de los datos disponibles, pero en este caso es el mismo dato, tal cual. Sabemos como se distribuye ese valor cuando la hipótesis nula es cierta.</p></li>
+<li><p>Calculamos la probabilidad (<span class="math inline">\(p\)</span>-valor) de que si todo marcha bien se dé una distancia como la observada –o mayor– respecto al valor objetivo. Si esa probabilidad es pequeña se rechaza la hipótesis nula y nos quedamos con la alternativa.</p></li>
+</ul>
+<p>Para automatizar la toma de decisiones, podemos fijar un valor frontera para el <span class="math inline">\(p\)</span>-valor. Por ejemplo, si <span class="math inline">\(p\)</span>-valor <span class="math inline">\(\leq\)</span> 0,05 se rechaza la hipótesis nula. Esta probabilidad que fijamos como frontera entre lo “raro” y lo “normal” se llama <strong>nivel de significación</strong> y al valor de la variable que corresponde a esa probabilidad le llamamos <strong>valor crítico</strong>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>¿Por qué el 5 % es el valor habitual para el nivel de significación?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Porque cuando se construyeron las primeras tablas estadísticas , con medios de cálculo rudimentarios, se eligieron valores críticos para probabilidades que eran números redondos en nuestro sistema decimal: 0,5 %, 1 %, 5 %, 10 %. Si tuviéramos 4 dedos en cada mano, seguramente la frontera se hubiera puesto en el 4 %</p>
+</div>
+</div>
+<p>Observe que, si la hipótesis nula es cierta, existe una probabilidad igual al nivel de significación de que sea &lt;<injustamente>&gt; rechazada (figura <span class="math inline">\(\ref{errorTipoII}\)</span>, parte superior). Por esta razón en algunos contextos se le llama probabilidad de falsa alarma o de falso positivo; o, de una manera más general pero también más críptica: probabilidad de error tipo I. Lo bueno de todo esto es que nosotros decidimos qué probabilidad de error de este tipo estamos dispuestos a asumir.</injustamente></p>
+<p>También puede ocurrir que el proceso se haya desajustado pero el valor obtenido no llegue a la zona de rechazo (falso negativo o error tipo II). No encontrar evidencias de incumplimiento de la hipótesis nula no significa que se haya demostrado que es cierta.</p>
+<div id="fig-errorTipoII" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-errorTipoII-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_08/f0808_errorTipoII.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-errorTipoII-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;8.8: El estadístico de prueba puede caer en la zona de rechazo siendo cierta <span class="math inline">\(\text{H}_0\)</span> (error tipo I, parte superior) o puede no llegar a esa zona siendo falsa (error tipo II, parte inferior).
+</figcaption>
+</figure>
+</div>
+<p>Es habitual usar la analogía de un juicio para explicar el tipo de razonamiento que realizamos en el contraste de hipótesis. En un juicio, la hipótesis nula es que el acusado es inocente. Solo se le declara culpable si las pruebas o evidencias disponibles contradicen de manera clara la hipótesis de inocencia. Se le considera inocente a menos que se demuestre lo contrario, pero nunca se demuestra que es inocente. Del mismo modo, en estadística nunca demostramos que la hipótesis nula es verdadera; únicamente evaluamos si la evidencia es lo suficientemente fuerte como para rechazarla.</p>
+
+
+</section>
+</section>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn1"><p>Nosotros descubrimos estos datos en el libro de M. G. Bulner: Principles of Statistics, Ed. Dover, 1979. La publicación original que se cita (Czuber, 1903) puede consultarse <a href="https://archive.org/details/wahrscheinlichk01czubgoog">aquí</a>, pág. 118).<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Tal como se ha hecho en el Apéndice 7.B para simular el proceso de estimación del número de taxis que hay en una ciudad.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
- <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -913,7 +1273,7 @@ Rojo</td>
       </a>
   </div>
 </nav>
- <!-- /content -->
+</div> <!-- /content -->
 
 
 

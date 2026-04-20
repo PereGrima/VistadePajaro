@@ -940,7 +940,7 @@ En la tabla \ref{testPermuta} tenemos cinco posibles asignaciones de etiquetas (
 ```{=html}
 <div id="tbl-Proporcion" class="tabla-wrapper_T0807">
 <div class="tabla-caption">
-  Tabla 8.7: Cálculo de 5 valores de una distribución de referencia para la diferencia de medias..
+  Tabla 8.7: Cálculo de 5 valores de una distribución de referencia para la diferencia de medias.
 </div>
 
 <table class="tabla-0807">
@@ -1043,10 +1043,189 @@ Será la distribución del número de nacidos en la primera mitad del año de un
 
 Se trata de analizar si nuestro valor (308) es normal en la distribución de referencia. Vemos (figura \ref{distRefFutbol}) que queda prácticamente fuera de la distribución y podemos calcular que la probabilidad de tener un valor como ese o mayor es del orden de 6 entre 1 millón. Por tanto, el estadístico de prueba no parece formar parte de la distribución a que debería pertenecer si la hipótesis nula fuese cierta. Lo más razonable es rechazar la hipótesis nula y considerar que el azar no explica ese desequilibrio en el número de nacimientos en la primera y segunda mitad del año.
 
+![Distribución de los nacidos en la primera mitas del año en una muestra de $n=516$ y $p = 0.5$. Probabilidad de que tener un valor igual o superior a 308.](Figuras_08/f0817_aspirina.png){#fig-aspirina .fig-normal6 fig-align="center" width="100%"}
+
+El cálculo de esta probabilidad se puede realizar fácilmente dado que se trata de una variable aleatoria con distribución binomial:
+$$\text{P}(X \geq 308) = 1 - \text{B}(x=307; n=516; p = 0.5) = 6.18 \cdot 10^{-6}$$
+
+::: callout-note
+## El "por qué" no forma parte de nuestro análisis
+
+Lo único que podemos decir es que es muy poco probable que el valor obtenido sea debido al azar y que, por tanto, debe haber una causa que lo provoca. Hay causas que parecen muy razonables, pero nuestro análisis no las confirma, únicamente ratifica la existencia de un fenómeno que requiere explicación.
+:::
+
+### Ojo con los detalles {.unnumbered}
+
+Siempre conviene reflexionar sobre el origen de los datos, sobre su calidad y sobre el cumplimiento de las hipótesis realizadas.
+
+#### Solo tenemos los datos de una temporada {.unnumbered}
+
+Casi siempre tenemos menos datos de los que nos gustaría tener, pero hay que decidir con la información disponible. Si solo aceptamos sacar conclusiones cuando contamos con todos los datos que queremos, casi nunca podremos concluir nada. Por otra parte, los análisis que hacemos ya tienen en cuenta la cantidad de datos disponibles y si tenemos muy pocos será difícil poder rechazar la hipótesis nula aunque la diferencia sea importante.
+
+Por otro lado, reunir datos de dos temporadas puede significar duplicar el esfuerzo, pero solo aporta un 15–20 % más de información, ya que la mayoría de jugadores se repite en temporadas consecutivas. En fin, no es ninguna sorpresa que nos gustaría disponer de más datos, pero la realidad es que debemos decidir con los que tenemos.
+
+#### Proporción de nacimientos en la población en general
+
+Hemos supuesto que en la población general el 50 % de los nacimientos se produce en la primera mitad del año. Aunque ese valor puede ser una aproximación razonable, es sencillo obtener una estimación más precisa. En la página web del Instituto Nacional de Estadística (INE) pueden consultarse los nacimientos en España mes a mes desde enero de 2016. En el periodo 2016–2023 el 51,4 % de los nacimientos tuvo lugar en la primera mitad del año. Al sustituir este valor en la fórmula anterior obtenemos:
+$$P(X \geq 308) = 1 - B(x=307; n=516; p = 0.514) = 9.32 \cdot 10^{-5}$$
+Esta es también una probabilidad muy pequeña y refleja mejor la probabilidad que nos interesa.
+
+#### País de origen con organización desconocida de las categorías infantiles {.unnumbered}
+
+Muchos jugadores de la liga española han crecido en otros países y han venido a jugar a España cuando ya eran jugadores profesionales. No sabemos cómo se organizan las categorías infantiles en esos países, siendo también frecuente que la asignación a una categoría se realice por curso académico en vez de por año natural. 
+
+Si solo consideramos los jugadores cuya primera nacionalidad es la española tenemos un total de 292 de los cuales 170 (el 58,2\%) nacieron en la primera mitad del año. Con estos nuevos datos, la probabilidad de que se dé ese desequilibrio entre los nacidos entre el primer y el segundo semestre del año es:
+$$P(X \geq 170) = 1 - B(x=169; n=292; p = 0.514) = 0,011$$
+Si la teoría es correcta y en las categorías infantiles los mayores son los que tienden a triunfar, la presencia de jugadores formados en sistemas donde los mayores corresponden a nacidos en la segunda mitad del año distorsiona nuestros datos y dificulta observar con claridad el efecto buscado. Sin embargo, en la temporada analizada, al excluir a esos futbolistas del estudio, la proporción de nacidos en la primera mitad del año disminuye en lugar de aumentar, como cabría esperar.
+
+Esta disminución de la proporción de nacidos en la primera mitad del año, junto con la menor cantidad de datos disponible, hace que el $p$-valor aumente hasta el 0,01. Este valor también sugiere un rechazo de la hipótesis nula pero no de una forma tan clara como en los casos anteriores.
+
+Si tuviéramos más datos --y en este caso es relativamente fácil conseguirlos-- veríamos cómo se consolidan los resultados.
+
+## ¿Vale la pena tomar aspirina para prevenir el infarto?
+
+En la década de 1980 se llevó a cabo en Estados Unidos un estudio de gran envergadura para evaluar si una dosis baja de aspirina (325 mg en días alternos) podía reducir el riesgo de infarto de miocardio. Se invitó a participar a 261.248 médicos varones de entre 40 y 84 años; 59.285 aceptaron, pero muchos fueron excluidos por antecedentes médicos, por estar tomando aspirina de forma habitual o por haber presentado reacciones adversas a este medicamento. Finalmente, 22.071 participantes fueron asignados aleatoriamente a uno de dos grupos: uno recibió un placebo y el otro la dosis establecida de aspirina. El estudio se diseñó como un ensayo doble ciego, de modo que ni los participantes ni los investigadores encargados del seguimiento sabían a qué grupo pertenecía cada individuo. Tras un seguimiento de aproximadamente cinco años, los resultados obtenidos fueron los siguientes[^8-9]:
+
+[^8-9]: Estos son los resultados del estudio preliminar: <<Preliminary Report: Findings from the Aspirin Component of the Ongoing Physicians' Health Study>> publicado en *The New England Journal of Medicine* el 28 de enero de 1988. En el estudio definitivo, publicado en la misma revista el 20 de julio de 1989, la diferencia es todavía más clara.
+
+```{=html}
+<div class="tabla-wrapper_T0800c">
+<table class="tabla-0800c">
+
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+
+<tbody>
+<tr>
+  <td></td>
+  <td>Grupo</td>
+  <td>Grupo</td>
+</tr>
+
+<tr>
+  <td></td>
+  <td>Aspirina</td>
+  <td>Placebo</td>
+</tr>
+
+<tr>
+  <td>Tamaño de la muestra</td>
+  <td>11.037</td>
+  <td>11.034</td>
+</tr>
+
+<tr>
+  <td>Infarto de miocardio</td>
+  <td>104</td>
+  <td>189</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+```
+
+Efectivamente, aparecen menos infartos en el grupo que toma aspirina, pero es necesario analizar si esa diferencia se puede explicar por la variabilidad aleatoria en los resultados (no esperábamos que hubiera exactamente el mismo número de infartos en los dos grupos aunque la aspirina fuera ineficaz) o si es demasiado grande para que sea explicada solo por azar.
+
+Seguimos, una vez más, nuestro proceso de razonamiento basado en el contraste de hipótesis.
+
+#### 1. Hipótesis nula frente a alternativa {.unnumbered}
+
+La hipótesis nula debe ser que la aspirina no tiene ningún efecto en el riesgo de padecer un infarto, mientras que la alternativa será que sí reduce ese riesgo. Como siempre, la carga de la prueba la tiene el que afirma lo nuevo, lo no conocido, en este caso que la aspirina es eficaz para reducir el riesgo de infarto.
+
+#### 2. Estadístico de prueba {.unnumbered}
+
+Una medida de la diferencia de los resultados obtenidos en ambos grupos es, simplemente, la diferencia en el número de infartos que se producen en cada grupo: $189 - 104 = 85$.
+
+#### 3. Distribución de referencia {.unnumbered}
+
+Suponer que la toma de aspirina no influye sobre los resultados equivale a considerar que tenemos un solo grupo de 22.071 personas de las cuales 293 han sufrido un infarto. Bajo esta hipótesis, la probabilidad de infarto en nuestra población sería de $p=$ 293/22.071.
+
+A partir de ahí, podemos generar un número aleatorio, $a_{11}$ de una distribución binomial con parámetros $n=$ 11.037 y $p=$ 293/22.071 y otro número, $a_{12}$ con la misma distribución pero con $n=$ 11.034, aunque esa diferencia se podría ignorar. La diferencia $a_1 = a_{12} - a_{11}$ pertenece a la distribución de la diferencia en el número de infartos de ambos grupos cuando la aspirina no afecta (hipótesis nula).
+
+Repitiendo este proceso un millón de veces --algo prácticamente instantáneo con un pequeño programa en R o Python-- se obtiene la distribución de referencia con la que comparar nuestro estadístico de prueba (figura \ref{distRefAspirina}).
+
+#### 4. Cálculo del $p$-valor {.unnumbered}
+
+La figura \ref{distRefAspirina} muestra la situación del estadístico de prueba en su distribución de referencia. La conclusión está clara: no es un valor normal en la distribución a la que debería pertenecer si la aspirina no afectara. Es muy raro que una diferencia tan grande como la observada en el número de infartos en ambos grupos sea solo debida al azar.
+
+¿Qué significa "muy raro"? El $p$-valor nos ayuda a cuantificarlo. En nuestra simulación de un millón casos el valor máximo obtenido entre ambos grupos ha sido 83, es decir, ningún valor en la distribución de referencia iguala o sobrepasa el valor del estadístico de prueba. En otra simulación el resultado podría ser ligeramente distinto, pero las conclusiones serían las mismas. Hemos repetido 10 veces la simulación con 10 millones de casos cada una (también da un resultado prácticamente inmediato) y en cada simulación han aparecido entre 2 y 5  valores iguales o mayores a 85. Podemos decir, por tanto, que la probabilidad de que la diferencia obtenida se haya dado por azar es menor de 1 entre un millón.
+
+![Distribución de referencia y estadístico de prueba en el estudio sobre aspirina y riesgo de infarto.](Figuras_08/f0817_destRef_aspirina.png){#fig-destRef_aspirina .fig-normal6 fig-align="center" width="100%"}
+
+La diferencia observada era tan evidente que el comité encargado de supervisar el ensayo recomendó interrumpirlo antes de concluir el periodo inicialmente previsto. Se consideró poco ético mantener en secreto una evidencia tan contundente a favor del grupo tratado con aspirina y por ello se informó a los participantes tanto de los resultados obtenidos hasta ese momento como del grupo al que habían sido asignados. La información también se hizo pública y tuvo un gran eco mediático, llegando a ocupar la portada del *New York Times* el 27 de enero de 1988.
+
+### ¿Vale la pena tomar aspirina? No estaba todo dicho {.unnumbered}
+
+Los estudios científicos no proporcionan verdades absolutas. A partir de la observación de la realidad —con frecuencia mediante una organizada recogida de datos— se formulan teorías que, al ser contrastadas, pueden mostrar limitaciones para explicar lo que está ocurriendo o para predecir lo que ocurrirá. Cuando esto sucede, las teorías deben revisarse y ajustarse a la luz de las nuevas evidencias.
+
+En el estudio que comentamos se observó un mayor número de hemorragias internas graves entre el grupo que tomaba aspirina, aunque la diferencia con el grupo de control no era estadísticamente significativa. Investigaciones posteriores han confirmado que la aspirina sí aumenta el riesgo de este tipo de hemorragias y que, en personas sanas sin antecedentes de infarto, ese riesgo supera los beneficios relacionados con la reducción de infartos. En cambio, en quienes ya han sufrido un infarto u otros problemas cardiovasculares, el efecto preventivo de la aspirina resulta beneficioso y compensa el aumento del riesgo de sangrado.
+
+En definitiva, la decisión de recomendar este tratamiento se basa en una evaluación individualizada de los riesgos y beneficios, considerando el perfil y las características de cada persona.
+
+## APÉNDICE 8.A: Fisher y la catadora de te {.unnumbered}
+
+Ronald A. Fisher (1890–1962) fue un pionero en la aplicación del contraste de hipótesis como método de razonamiento en el análisis de datos para la toma de decisiones. Se cuenta una anécdota ocurrida cuando Fisher tomaba el té a media tarde junto con otros profesores de la Universidad de Cambridge y algunos invitados. Una señora comentó que apreciaba un sabor distinto según se sirviera primero el té o la leche. De inmediato surgió una discusión con argumentos procedentes de la química y la física: la composición final del producto debía ser la misma independientemente del orden en que se vertieran el té y la leche; las partículas disueltas acabarían distribuyéndose igual; el gradiente de temperaturas no podía influir… 
+
+Fisher propuso salir de dudas aplicando un procedimiento <<revolucionario>>: hacer la prueba. Claro que no se podía hacer con una sola taza de cada tipo, porque la probabilidad de acertar al azar sería de ½ y si acertaba no sabrían si había sido por casualidad o si realmente sabía distinguir las dos situaciones. Había que pensar cómo hacer la prueba.
+
+### Razonamiento ante la catadora de té {.unnumbered}
+
+De entrada se supone que no sabe distinguir un caso de otro, eso es lo que nos parece normal, y sólo creeremos en su habilidad si los datos recogidos en un experimento bien diseñado y controlado están en contra de esa hipótesis inicial. Estar en contra significa que sus resultados sean muy poco probables en el caso de que sea cierta, y lo que significa poco probable lo decidimos nosotros mismos: que ocurra menos del 5 % de las veces, menos del 1 %, o cualquier otro valor.
+
+Si sólo estamos dispuestos a creerla cuando el resultado del experimento pueda ocurrir por azar (sin que sea mérito de la señora) menos del 5 % de las veces, no servirá un experimento dándole a probar tres tazas de cada tipo, ya que hay 20 formas de elegir tres objetos entre seis y solo una es la forma correcta de hacerlo, luego la probabilidad de acertar por azar es exactamente de 1 entre 20, o sea del 5 %. No es difícil deducirlo: La primera taza se puede elegir entre 6, la segunda entre 5 y la tercera entre 4, por lo que tenemos 6×5×4=120 maneras de elegir 3 tazas, pero en este cómputo hemos tenido en cuenta el orden en que se han elegido, es decir, suponiendo que las tazas las hemos etiquetado con las letras de la A a la F, hemos contado como casos distintos el sacar ADF que FDA. Para descontar los casos repetidos tenemos que dividir por el número de ordenaciones que se pueden dar con tres tazas (3×2×1=6) por tanto, el número de maneras de elegir 3 tazas de un grupo de 6 es igual a 120/6=20. Si tenemos 4 y 4 de cada tipo el número de maneras de seleccionar 4 será:   (8×7×6×5)/(4×3×2×1)=70 y como solo hay un conjunto de cuatro en que se ha puesto primero el té y después la leche,  la probabilidad de acertar por azar es de 1 entre 70, es decir, del 1,4 %. Si de las 4 tazas que elige se equivoca en una, ya no será razonable considerar que sabe distinguir, ya que la probabilidad de que esto ocurra por azar es casi del 23 %.
+
+Pero no se nos tienen que ir todas las energías tras los razonamientos matemáticos. También hay que estar muy atentos a todos los detalles en la realización del experimento y en no dar pistas a la catadora. Fisher lo describe claramente insistiendo en que las tazas se le deben presentar en orden aleatorio:
+
+<blockquote>
+Nuestro experimento consistirá en preparar ocho tés con leche, cuatro de un modo y otros cuatro del otro, y llevar las tazas (en un orden escogido al azar) a la catadora para que indique su opinión. Se le habrá explicado antes en qué va a consistir la prueba: se le darán a probar ocho tazas, cuatro de cada tipo, en un orden elegido al azar (por dados, ruleta, cartas etc., o simplemente por números publicados en alguna forma); su tarea consiste en separar las tazas en dos grupos de cuatro clasificándolos, si puede, según se haya puesto primero el té o la leche.
+</blockquote>
+
+\noindent Fisher no cuenta en su libro cuál fue el resultado del experimento, pero entre los presentes se encontraba el profesor Hugh Smith, que contó esta historia a David Salsburg, autor de un libro excelente sobre la explosión de la estadística en el siglo XX, muy ameno y que empieza contando esta historia que, además, da título al libro. 
 
 
+## APÉNDICE 8.B: Controversias en torno al contraste de hipótesis {.unnumbered}
 
+El contraste de hipótesis también tiene puntos débiles de los que conviene ser consciente. Veamos algunas pegas que se le pueden poner:
 
+#### Si todos buscamos la diferencia, alguien la encontrará {.unnumbered}
 
+Si en un estudio para analizar la eficacia de un medicamento se trabaja con un nivel de significación del 5 %, la probabilidad de concluir erróneamente que es eficaz cuando en realidad no lo es será justamente ese 5 % fijado de antemano. El problema aparece cuando muchos investigadores sospechan de su posible eficacia y realizan estudios similares con esa misma probabilidad de error. No será raro que alguno de los estudios muestre una diferencia “significativa” por puro azar. De hecho, basta con realizar 10 estudios para que la probabilidad de que al menos uno arroje una diferencia significativa sea del 40 % ($1 - 0{,}95^{10}$), una cifra nada despreciable
 
+Si los que han obtenido resultados negativos no informan de su trabajo (no han encontrado nada nuevo) y los que sí han visto que el medicamento es eficaz (por casualidad, pero ellos no lo saben) publican su investigación en una revista científica, se dará validez a unos resultados que en realidad se han obtenido por azar.
 
+#### Si se ponen muchos recursos para encontrar una diferencia, se encontrará {.unnumbered}
+
+Cuando se comparan dos tratamientos es prácticamente seguro que sus resultados no serán idénticos. Si los estudios se realizan con muestras lo bastante grandes, se pueden detectar diferencias que resulten estadísticamente significativas —es decir, que no se expliquen por el azar— pero que, aun así, sean irrelevantes desde el punto de vista práctico.
+
+#### Todos los que ganan la lotería han hecho trampa {.unnumbered}
+
+A su vecino le ha tocado el primer premio de un sorteo realizado con fines benéficos y, como alguien sospecha que quizá ha hecho trampa, usted decide analizar la situación mediante un contraste de hipótesis[^8-10]. Plantea como hipótesis nula que el premio se ha otorgado de forma justa y como alternativa que ha habido trampa. Dado que en el sorteo había 10.000 boletos, la probabilidad de que gane el primer premio —suponiendo que no haya hecho trampa— es de 1/10.000. Este sería el $p$-valor de la prueba, tan pequeño que invita a pensar lo peor.
+
+[^8-10]: También es verdad que ese contraste habría que plantearlo antes de que se realice el sorteo. El contraste de hipótesis pierde su sentido si se construye a medida del dato ya conocido.
+
+Sin embargo, si su vecino es una persona honrada y usted no cree que tuviera intención alguna de hacer trampa, esa conclusión no resulta muy razonable. En el ámbito de la llamada Estadística Bayesiana se incorpora esa información previa sobre su honestidad. Si consideramos que la probabilidad *a priori* —antes de conocerse el ganador— de que haya hecho trampa es de uno entre un millón, podemos construir el esquema de la Figura \ref{Bayes}, donde el valor que aparece junto a cada rama indica su probabilidad de ocurrencia.
+
+![Árbol de probabilidades para el ejemplo del sorteo de lotería.](Figuras_08/f0818_Bayes.png){#fig-Bayes .fig-normal6 fig-align="center" width="100%"}
+
+Ahora, aplicando el teorema de Bayes, podemos volver a calcular la probabilidad de que haya hecho trampa sabiendo que ha ganado. La fórmula es la siguiente (G: Gana, T: hace trampa; N: No hace trampa):
+
+	\begin{equation*}
+		\begin{split}
+			P(\text{T} |\text{G}) &= \frac{P(\text{G}| \text{T}) \cdot P(\text{T})}{P(\text{G}| \text{T}) \cdot P(\text{T})+P(\text{G}| \text{N}) \cdot P(\text{N})} \\[10pt]
+			&=\frac{1 \cdot \frac{1}{\text{1\;\!000\;\!000}}} {1 \cdot \frac{1}{\text{1\;\!000\;\!000}} + \frac{\text{1}}{\text{10\;\!000}} \cdot \frac{\text{999\;\!999}} {\text{1\;\!000\;\!000}}} = \text{0,009901}
+		\end{split}
+	\end{equation*}	
+
+Con las suposiciones que hemos realizado llegamos a la conclusión de que la probabilidad de que nuestro vecino sea un tramposo es del orden del 1 %. Si hubiéramos supuesto que la probabilidad *a priori* era de uno entre 10 millones, el resultado *a posteriori* sería de uno entre mil.
+
+A algunos investigadores les parece "poco científico" dar un valor puramente especulativo a una variable que influirá en el resultado obtenido. Pero es evidente que no es lo mismo que el comprador del boleto sea una persona de conducta ejemplar o que haya sido condenado varias veces por estafa y además haya organizado él mismo el sorteo. Enfrentarse a un problema ignorando una información tan evidente y a la vez tan relevante, no parece que sea la mejor forma de aprovechar los recursos disponibles. Los que se adentren en este terrero tendrán ocasión de elegir en cada caso la alternativa que les parezca más razonable.
+
+::: {style="text-align: center; font-size: 1.1em;"}
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ [◇]{style="margin: 0 0.4em;"} \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+:::
+
+<br>

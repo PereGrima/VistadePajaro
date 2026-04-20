@@ -1,101 +1,216 @@
 # Algunos test clásicos
 
-Planteamiento de la pregunta de manera clara y concreta
+Cuando se desarrollaron los primeros test estadísticos no existía la posibilidad de construir distribuciones de referencia realizando simulaciones en un  ordenador. Estas distribuciones debían responder a modelos matemáticos bien definidos y, a partir de los datos, había que construir estadísticos de prueba cuya distribución coincidiera con esos modelos. Esas distribuciones son la $t$-Student, la Chi-cuadrado o la $F$ de Snedecor, que se han convertido en clásicos de los cursos de estadística.
 
-Diseño de la recogida de los datos
+Cuando se aplican estos test, se supone que los datos pertenecen a una cierta distribución --en general, la distribución Normal-- y basándose en las propiedades de las variables aleatorias se deduce el estadístico cuya distribución --si la hipótesis nula es cierta-- es una de las mencionadas. El hecho de trabajar siempre con las mismas distribuciones de referencia permite tabularlas y emplear esas tablas con independencia del contexto del test o de la magnitud concreta de los resultados obtenidos.
 
-Análisis de los resultados (distribución binomial) Análisis de los resultados (distribución binomial) Análisis de los resultados (distribución binomial) Análisis de los resultados (distribución binomial)
+## Test de la $t$ de Student
 
-::: columns
-::: {.column width="50%"}
+Bajo el nombre genérico de *test de la t de Student* se encuentran los test que tienen esta distribución como distribución de referencia. Casos clásicos son el contraste sobre el valor de la media de una población o el test para la comparación de dos medias.
+
+### Contraste sobre el valor de la media de la población {.unnumbered}
+
+Volvemos a la línea de envasado de paquetes de café que vimos en el capítulo anterior. Deben contener un peso de 1 kg pero a veces la máquina de llenado se desajusta y los llena con un peso medio distinto al objetivo. Tomamos una muestra de 10 paquetes y sus pesos, en gramos, son:
+<center>916, &ensp; 940, &ensp; 975,  &ensp; 969,  &ensp; 996,  &ensp; 1020,  &ensp; 1036,  &ensp; 1009,  &ensp; 990,  &ensp; 999 </center>
+
+Como siempre, lo primero que hacemos es representar estos datos gráficamente; en rojo se ha marcado la media de la muestra.
+
+![Diagrama de puntos de los pesos de 10 paquetes de café (en g).](Figuras_09/f0901_dotplotPesoCafe.png){#fig-dotplotPesoCafe .fig-normal6 fig-align="center" width="100%"}
+
+La media está por debajo del valor objetivo y las desviaciones hacia los valores bajos son mayores que hacia los altos (en realidad, si la media de la muestra está por debajo del objetivo, las desviaciones hacia los valores bajos seguro que son mayores que hacia los altos). Lo que no está claro es si esa diferencia es o no es estadísticamente significativa.
+
+Vamos a suponer que los pesos de los paquetes presentan una variabilidad que sigue el patrón de la distribución Normal. Es razonable que sea así ya que en situaciones como esta, cuando la variable tiene la misma libertad para ir hacia los valores altos como hacia los bajos, sigue ese patrón de variabilidad. Es más, en rigor lo que vamos a suponer es que la distribución de las medias muestrales es una distribución Normal, y sabemos que --a efectos prácticos-- esto es cierto aunque los valores de la población no sigan estrictamente esa distribución. En definitiva, no debemos preocuparnos por este supuesto, estamos bien cubiertos.
+
+La desviación típica de la población puede considerarse conocida si se tienen muchos datos históricos y se puede estimar con precisión, o si disponemos solo de los valores de la muestra deberemos conformarnos con su estimación.
+
+Supongamos que tenemos muchos pesos de esos paquetes de manera que podemos considerar $\sigma = 30$\,g. Cuando todo marcha correctamente el peso de un paquete será un valor de la distribución: $X \sim $ N(1000\,g; 30\,g) y la distribución de la media de 10 paquetes será:
+$$\bar{x}_{10} \sim \text{N} \left( 1000; \frac{30}{\sqrt{10}} \right) $$
+Ya solo falta ver si la media de nuestra muestra es un valor normal en esta distribución. El gráfico de la figura \ref{contrasteNormal} --construido a escala-- muestra que es un caso dudoso.
+
+![Valor de la media de nuestra muestra situado en la distribución de la media muestral (azul).](Figuras_09/f0902_contrasteNormal.png){#fig-contrasteNormal .fig-normal6 fig-align="center" width="100%"}
+
+Siguiendo los pasos habituales vamos a contrastar la hipótesis nula de que el proceso se mantiene centrado frente a la alternativa de que se ha descentrado:
+
+#### 1. Hipótesis nula ($\text{H}_0$) frente a hipótesis alternativa ($\text{H}_1$) {.unnumbered}
+
+Planteamos como hipótesis nula lo que es habitual: que el proceso se mantiene centrado. Solo consideraremos que se ha descentrado --está llenando los paquetes con un valor distinto del objetivo-- si los datos están en contradicción con esa hipótesis. Por tanto:
+
+\begin{equation*}
+	\begin{split}
+		\text{H}_0\!\!\!\:: \mu= 1000\, \text{g} \\[0pt]
+		\text{H}_1\!\!\!\:: \mu \neq 1000\, \text{g} 
+	\end{split}
+\end{equation*}
+
+#### 2. Estadístico de prueba {.unnumbered}
+
+Transformamos el valor de la media en un valor de la distribución Normal estandarizada. De esta forma, la distribución de referencia siempre será la misma. Recordemos que si $X \sim \text{N}(\mu; \sigma)$, entonces $\frac{x-\mu}{\sigma} \sim \text{N}(0; 1)$. En nuestro caso tenemos:
+$$\bar{X}_{10} \sim \text{N} \left( \mu; \frac{\sigma}{\sqrt{n}} \right) $$
+Por tanto:
+$$z = \frac{\bar{x}_{10} - \mu} {\frac{\sigma}{\sqrt{n}}} \sim \text{N}(0; 1)$$
+
+Sustituyendo por los valores correspondientes obtenemos nuestro estadístico de prueba:
+$$z = \frac{985 - 1000} {\frac{30}{\sqrt{10}}} = -1.58$$
+#### 3. Distribución de referencia. {.unnumbered}
+
+Si la hipótesis nula es cierta ($\mu = 1000$ g), el estadístico de prueba pertenecerá a una distribución N(0; 1) que será --por tanto-- nuestra distribución de referencia. 
+
+#### 4. Cálculo del $p$-valor. {.unnumbered}
+
+Se trata de determinar la probabilidad de que en la distribución de referencia se den valores como el del estadístico de prueba o más alejados. La probabilidad hacia un lado es igual a 0.057. Hacia los dos lados será $2 \cdot 0.057 = 0.114$.
+
+![Cálculo del p-valor cuando $\sigma$ es conocida y se utiliza la N(0;1) como distribución de referencia.](Figuras_09/f0903_pValorNormal.png){#fig-pValorNormal .fig-normal6 fig-align="center" width="100%"}
+
+Si se ha elegido un nivel de significación del 5 % no hay razones para rechazar la hipótesis nula.
+
+#### Pero... ¿y si no conocemos la desviación típica de la población? {.unnumbered}
+
+Lo que hacemos es estimarla a partir de los datos de la muestra --no hay otra forma de hacerlo-- y en la expresión del estadístico de prueba:
+$$z = \frac{\bar{x} - \mu} {\frac{\sigma}{\sqrt{n}}}$$
+sustituimos el valor de  $\sigma$ por su estimación $s$. 
+
+Tal como vimos al deducir la expresión del intervalo de confianza para la media (apartado 7.3), este cambio tiene consecuencias: cuando usamos $\sigma$, en el denominador tenemos una constante, mientras que si usamos $s$ tenemos una variable aleatoria y esto provoca que el cociente tenga mayor variabilidad y, por tanto, una distribución de probabilidad distinta. A ese cociente le llamamos $t$:
+$$t = \frac{\bar{x} - \mu} {\frac{s}{\sqrt{n}}} $$
+y su distribución es la $t$ de Student, que será la que usaremos como distribución de referencia.
+
+Recordemos que una dificultad añadida es que la $t$ de Student no es una distribución única, como sí lo es la N(0; 1). Cuando se trabaja con muestras pequeñas, el valor de $s$ presenta mayor variabilidad que cuando se usan muestras grandes, y esa variabilidad se transmite al estadístico $t$, modificando la forma de su distribución. Para precisar a cuál nos estamos refiriendo, hablamos de una distribución $t$ de Student con un determinado número de grados de libertad.
+
+Los grados de libertad ($\nu$) son aquellos con los que se ha calculado el valor de $s$ y es igual a $n-1$, siendo $n$ el tamaño de la muestra. A partir de un cierto número de grados de libertad (pongamos $n \geq 30$) la forma de la distribución apenas cambia y prácticamente ya no hay diferencia entre la $t$ de Student y la N(0; 1).
+
+Volviendo a nuestros datos tenemos que $s=36.34$, por tanto:
+$$t = \frac{985 - 1000} {\frac{36{,}34}{\sqrt{10}}} = -1{,}305$$
+Colocando este valor en su distribución de referencia, una $t$ de Student con 9 grados de libertad, tenemos un $p$-valor igual a 0,224 (0,112+0,112). Observe que en la diferencia respecto al valor obtenido anteriormente influye más la diferencia entre el valor real de $\sigma$ y su valor estimado que en el cambio de la distribución de referencia.
+
+![Cálculo del p-valor usando como distribución de referencia una $t$-Student con 9 grados de libertad. A trazos una N(0; 1).](Figuras_09/f0904_pValort.png){#fig-pValort .fig-normal6 fig-align="center" width="100%"}
+
+Volvamos a los datos obtenidos en el experimento realizado para analizar si un nuevo fertilizante produce más cosecha que el utilizado habitualmente. Los datos eran:
+
+
 ```{=html}
-<div class="tabla-wrapper_T0802">
-<table class="tabla-0805">
+<div class="tabla-wrapper_T0800">
+<table class="tabla-0800">
 
 <colgroup>
-<col style="width: 8%;">
-<col style="width: 11%;">
-<col style="width: 11%;">
+<col style="width: 15%;">
+<col style="width: 8.5%;">
+<col style="width: 8.5%;">
+<col style="width: 8.5%;">
+<col style="width: 8.5%;">
+<col style="width: 8.5%;">
+<col style="width: 8.5%;">
+<col style="width: 8.5%;">
+<col style="width: 8.5%;">
+<col style="width: 8.5%;">
+<col style="width: 8.5%;">
+</colgroup>
+
+<tr>
+  <td>Control:</td>
+  <td>5,16</td>
+  <td>6,17</td>
+  <td>4,17</td>
+  <td>3,97</td>
+  <td>5,49</td>
+  <td>4,08</td>
+  <td>4,39</td>
+  <td>6,50</td>
+  <td>4,78</td>
+  <td>6,33</td>
+</tr>
+
+<tr>
+  <td>Tratado:</td>
+  <td>7,18</td>
+  <td>4,80</td>
+  <td>7,58</td>
+  <td>6,57</td>
+  <td>5,46</td>
+  <td>5,75</td>
+  <td>6,99</td>
+  <td>4,19</td>
+  <td>6,20</td>
+  <td>6,78</td>
+</tr>
+
+ </table>
+</div>
+```
+
+Y su representación gráfica tenía el siguiente aspecto:
+
+![Representación gráfica del peso de los tomates obtenidos en cada planta según pertenezcan al grupo sin abono (Control) o con abono (Tratado).](Figuras_08/f0811_dotplot.png){#fig-dotplot .fig-normal6 fig-align="center" width="100%"}
+
+Realizamos las siguientes suposiciones sobre el comportamiento de estos datos:
+
+1.    **El patrón de variabilidad que caracteriza cada tratamiento es la distribución Normal.**
+		
+      Respecto a la producción de cada planta es razonable considerar que cuanto más nos alejemos de su valor medio, más escasas serán las observaciones. En realidad, lo que necesitamos que sea Normal es la distribución de la diferencia de medias, y sabemos que las medias --y también su diferencia-- siguen una distribución Normal aunque los datos originales no lo sean. Podemos estar tranquilos asumiendo la certeza de esta suposición.
+	
+2.   **Las varianzas poblacionales son iguales.**
+		
+      Consideramos que el nuevo abono puede dar una mayor cosecha --es lo que queremos analizar--, pero suponemos que la variabilidad que presenten los resultados seguirá siendo la misma. Si esas variabilidades no son exactamente iguales pero tampoco muy distintas (nos estamos refiriendo a las varianzas poblacionales, no a las muestrales que es prácticamente seguro que serán distintas) las conclusiones apenas cambian. Si son claramente distintas existe una variante del proceso que tiene en cuenta este aspecto. La mayoría de programas de software estadístico no hacen uso de esta hipótesis\endnote{Existen varias formas de abordar este tema y no todos los paquetes de software lo hacen de la misma, pero a efectos prácticos las diferencias son irrelevantes}, pero usándola es mucho más fácil justificar la expresión del estadístico de prueba que vamos a usar. 
+	
+3.    **Los datos son representativos de sus respectivas poblaciones y el único factor que afecta de forma distinta a ambos grupos es el tipo de abono.**
+		
+      Este es el supuesto verdaderamente crítico. Los datos siempre deben ser representativos si las conclusiones van a ser sobre sus respectivas poblaciones. En una comparación de tratamientos todos los factores deben influir igual en los dos grupos excepto el factor cuyo efecto se desea estudiar.
+
+Suponiendo que se cumplen estos tres supuestos, la diferencia de medias de los dos grupos (A: actual, B: nuevo) es una variable aleatoria con la siguiente distribución de probabilidad:
+$$\bar{y}_B - \bar{y}_A \sim \text{N} \left( \mu_B - \mu_A,\; \sqrt{\frac{2 \sigma^2}{n}}\right) $$
+
+Siendo $\bar{y}_A$ e $\bar{y}_B$ las medias de cada muestra, $\mu_A$ y $\mu_B$ las medias poblacionales, $\sigma^2$ la varianza, que consideramos igual para las dos poblaciones, y $n$ el tamaño de las muestras, en nuestro caso el mismo para ambas. (ver tabla \ref{tablaDistDifMedias})
+
+
+```{=html}
+<div class="tabla-wrapper_T0801">
+<table class="tabla-0801">
+
+<colgroup>
+<col style="width: 29%;">
+<col style="width: 29%;">
+<col style="width: 42%;">
 </colgroup>
 
 <tbody>
 <tr>
-  <td colspan="3">10 lanzamientos</td>
+  <td>Abono actual (A)</td>
+  <td>Nuevo abono (B)</td>
+  <td>Comentario</td>  
 </tr>
 
-<tr>
-  <td>Num. <br> caras</td>
-  <td>Prob. <br> individual</td>
-  <td>Prob. <br> acumulada</td>
+<tr>  
+  <td> $$y_A \sim \text{N}(\mu_A,\, \sigma)$$ </td>
+  <td> $$y_B \sim \text{N}(\mu_B,\, \sigma)$$ </td>
+  <td>Los resultados de cada tratamiento pertenecen a distribuciones Normales con la misma desviación típica. La duda que nos plantearemos es si &mu;<sub>A</sub> = &mu;<sub>B</sub></td>
 </tr>
 
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+<tr>  
+  <td> $$\bar{y}_A \sim \text{N}(\mu_A,\, \frac{\sigma}{\sqrt{n_A}})$$ </td>
+  <td> $$\bar{y}_B \sim \text{N}(\mu_B,\, \frac{\sigma}{\sqrt{n_B}})$$ </td>
+  <td>Distribución de las medias muestrales. No hace falta suponer que los tamaños de las muestras n<sub>A</sub> y n<sub>B</sub> sean iguales.</td>
+</tr>
 
+<tr>  
+  <td colspan="2"> Diferencia de medias </td>
+  <td></td> 
+</tr>
+
+<tr>  
+  <td colspan="2"> $$\bar{y}_B - \bar{y}_A \sim \text{N} \left( \mu_B - \mu_A, \sqrt{\frac{\sigma^2}{n_A}+\frac{\sigma^2}{n_B}}\right)$$ </td>
+  <td>Recordemos que: <br> E(X-Y) = E(X) - E(Y) <br> V(X-Y) = V(X)+V(Y) -2Cov(X,Y) <br> y si X e Y son independientes: <br> V(X-Y) = V(X)+V(Y)</td> 
+</tr>
+
+<tr>  
+  <td colspan="2"> $$\bar{y}_B - \bar{y}_A \sim \text{N} \left( \mu_B - \mu_A, \sqrt{\frac{2 \sigma^2}{n}}\right) $$ </td>
+  <td>Expresión más compacta de la desviación típica si los tamaños de las dos muestras, n<sub>A</sub> y n<sub>B</sub>, son iguales.</td> 
+</tr>
 
 
 </tbody>
 </table>
 </div>
 ```
-:::
 
-::: {.column width="50%"}
-```{=html}
-<div class="tabla-wrapper_T0802">
-<table class="tabla-0805">
 
-<colgroup>
-<col style="width: 8%;">
-<col style="width: 11%;">
-<col style="width: 11%;">
-</colgroup>
 
-<tbody>
-<tr>
-  <td colspan="3">10 lanzamientos</td>
-</tr>
 
-<tr>
-  <td>Num. <br> caras</td>
-  <td>Prob. <br> individual</td>
-  <td>Prob. <br> acumulada</td>
-</tr>
 
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
-<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
-
-</tbody>
-</table>
-</div>
-```
-:::
-:::

@@ -3,3 +3,74 @@
 Anécdota de la catadora de te.
 
 Creo que un capítulo en torno a las flores y la Aspirina y otro en torno a la duración de pilas caras y baratas.
+
+### Otro estadístico de prueba con su distribución de referencia {.unnumbered}
+
+
+
+```{=html}
+<div id="tbl-cincoValores" class="tabla-wrapper_T0807">
+<div class="tabla-caption">
+  Tabla 8.7: Cálculo de 5 valores de una distribución de referencia para la diferencia de medias.
+</div>
+
+<table class="tabla-0807">
+
+<colgroup>
+<col style="width: 7%;">
+<col style="width: 7%;">
+<col style="width: 7%;">
+<col style="width: 7%;">
+<col style="width: 7%;">
+<col style="width: 7%;">
+</colgroup>
+
+<tbody>
+<tr>
+  <td rowspan="3">Peso</td>
+  <td colspan="5">Tratamiento (etiqueta)</td>
+</tr>
+
+<tr>
+  <td colspan="5">Cinco posibles permutaciones</td>
+</tr>
+
+<tr>
+  <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td>
+</tr>
+
+<tr> <td>3,97</td> <td>T</td> <td>C</td> <td>T</td> <td>T</td>  <td>T</td> </tr>
+<tr> <td>4,08</td> <td>C</td> <td>T</td> <td>C</td> <td>C</td>  <td>T</td> </tr>
+<tr> <td>4,17</td> <td>C</td> <td>C</td> <td>T</td> <td>T</td>  <td>C</td> </tr>
+<tr> <td>4,19</td> <td>C</td> <td>C</td> <td>T</td> <td>C</td>  <td>T</td> </tr>
+<tr> <td>4,39</td> <td>T</td> <td>C</td> <td>T</td> <td>C</td>  <td>C</td> </tr>
+
+<tr> <td>4,78</td> <td>T</td> <td>C</td> <td>C</td> <td>T</td>  <td>T</td> </tr>
+<tr> <td>4,80</td> <td>C</td> <td>C</td> <td>T</td> <td>T</td>  <td>T</td> </tr>
+<tr> <td>5,16</td> <td>T</td> <td>T</td> <td>C</td> <td>T</td>  <td>C</td> </tr>
+<tr> <td>5,46</td> <td>C</td> <td>T</td> <td>C</td> <td>T</td>  <td>C</td> </tr>
+<tr> <td>5,49</td> <td>T</td> <td>T</td> <td>C</td> <td>T</td>  <td>T</td> </tr>
+
+<tr> <td>5,75</td> <td>C</td> <td>T</td> <td>T</td> <td>C</td>  <td>C</td> </tr>
+<tr> <td>6,17</td> <td>C</td> <td>T</td> <td>T</td> <td>C</td>  <td>C</td> </tr>
+<tr> <td>6,20</td> <td>T</td> <td>T</td> <td>C</td> <td>C</td>  <td>C</td> </tr>
+<tr> <td>6,33</td> <td>T</td> <td>C</td> <td>T</td> <td>C</td>  <td>C</td> </tr>
+<tr> <td>6,50</td> <td>T</td> <td>C</td> <td>C</td> <td>C</td>  <td>T</td> </tr>
+
+<tr> <td>6,57</td> <td>C</td> <td>T</td> <td>T</td> <td>T</td>  <td>T</td> </tr>
+<tr> <td>6,78</td> <td>T</td> <td>T</td> <td>C</td> <td>T</td>  <td>T</td> </tr>
+<tr> <td>6,99</td> <td>C</td> <td>T</td> <td>C</td> <td>C</td>  <td>T</td> </tr>
+<tr> <td>7,18</td> <td>T</td> <td>C</td> <td>T</td> <td>T</td>  <td>C</td> </tr>
+<tr> <td>7,58</td> <td>Ccc</td> <td>C</td> <td>C</td> <td>C</td>  <td>C</td> </tr>
+
+<tr> <td>$$\bar{y}_C$$</td> <td>5,576</td> <td>5,389</td> <td>5,902</td> <td>5,818</td>  <td>5,839</td> </tr>
+<tr> <td>$$\bar{y}_T$$</td> <td>5,678</td> <td>5,865</td> <td>5,352</td> <td>5,436</td>  <td>5,415</td> </tr>
+<tr> <td>$$\bar{y}_T - \bar{y}_C$$</td> <td>0,102</td> <td>0,476</td> <td>-0,550</td> <td>-0,382</td>  <td>-0,424</td> </tr>
+
+</tbody>
+</table>
+</div>
+```
+
+
+Considerar que el abono no afecta es lo mismo que suponer que la única diferencia entre ambos grupos es la etiqueta que se les pone. Bajo esta hipótesis, la diferencia de medias observada en nuestro caso será simplemente una de las muchas que se pueden obtener asignando a 10 resultados tomados al azar la etiqueta que los identifica como pertenecientes al grupo de control, y a los otros 10 la etiqueta del grupo tratado.

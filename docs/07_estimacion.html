@@ -450,13 +450,13 @@ Figura&nbsp;7.3: Intervalos con distinto nivel de confianza para la estimación 
 <h3 class="unnumbered anchored" data-anchor-id="estimación-puntual">Estimación puntual</h3>
 <p>Si tenemos que dar un valor para el peso medio con que están saliendo los paquetes de café, nuestra mejor apuesta es el peso medio de la muestra obtenida: <span class="math inline">\(\bar{x} = 997.17 \text{g}\)</span>. Así de fácil.</p>
 <p>Para justificarlo podemos plantear que si <span class="math inline">\(X \sim N(\mu; \sigma)\)</span> y <span class="math inline">\(X_1, X_2, \cdots, X_n\)</span> es una muestra aleatoria de esa población, cada valor de la muestra está tomado de esa misma población y, por tanto, tendrá una esperanza matemática <span class="math inline">\(\text{E}(X_i) = \mu\)</span>. Designando la media de la muestra como <span class="math inline">\(\bar{X}\)</span> y usando las propiedades de la esperanza matemática, tenemos:</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
     \begin{split}
         \text{E}(\bar{X}) &amp;=\text{E} \left( \frac{X_1+X_2+ \cdots + X_n}{n}\right) =\\[5pt]
         &amp; = \frac{1}{n} \left[\text{E}(X_1)+\text{E}(X_2)+ \cdots +  \text{E}(X_n) \right] =\\[5pt]
         &amp; = \frac{1}{n} \cdot n \cdot \mu= \mu
     \end{split}
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>También podemos comprobar que esto es así usando una población “de prueba” como hicimos en el Apéndice 2.D. Supongamos que la población está formada por solo 5 elementos, cada uno de ellos con el valor que se indica:</p>
 <div class="tabla-wrapper_T0700">
 
@@ -637,6 +637,7 @@ Figura&nbsp;7.4: Intervalos construidos sumando y restando <span class="math inl
 <li><p>En general, podemos considerar que la media muestral tiene distribución Normal.</p>
 <p>Si las observaciones provienen de una distribución Normal, la media es una combinación lineal de Normales y, por tanto, también es Normal. Si la población no es exactamente Normal, pero el tamaño de muestra no es muy pequeño, una consecuencia del teorema central del límite<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> es que –a efectos prácticos– se puede considerar que la media muestral también sigue una distribución Normal.</p></li>
 </ol>
+<!-- -->
 <ol start="3" type="1">
 <li><p>Si los valores de la muestra provienen de una distribución $ X N(; ) $ la media de muestras de tamaño <span class="math inline">\(n\)</span> sigue una distribución $ N(; ) $.</p>
 <p>Al tratar las propiedades del estimador puntual, ya vimos que si $ X N(; ) $ y <span class="math inline">\(\bar{X} = \frac{1}{n} (X_1 + X_2 + \cdots + X_n)\)</span> tenemos que <span class="math inline">\(E(\bar{X}) = \mu\)</span>.</p>
@@ -774,19 +775,19 @@ Figura&nbsp;7.6: Intervalo de confianza del 95% para la proporción en la poblac
 <h4 class="unnumbered anchored" data-anchor-id="usando-la-distribución-normal-como-aproximación-a-la-binomial">Usando la distribución Normal como aproximación a la binomial</h4>
 <p>Al final de capítulo 5 (“La distribución Normal como aproximación a la binomial”) vimos que una variable aleatoria con distribución binomial y <span class="math inline">\(p=0,5\)</span> presenta una distribución simétrica en torno a su valor medio, y a medida que aumenta el valor de <span class="math inline">\(n\)</span> su forma se parece cada vez más a la de una distribución Normal. Si <span class="math inline">\(p \neq 0.5\)</span> la distribución también puede considerarse simétrica si el valor de <span class="math inline">\(n\)</span> es &lt;<grande>&gt;. Lo que significa &lt;<grande>&gt; depende de lo alejado que esté <span class="math inline">\(p\)</span> de 0,5. Una regla empírica es considerar que la distribución Normal es una buena aproximación a la binomial cuando se cumple que <span class="math inline">\(np&gt;5\)</span> y <span class="math inline">\(n(1-p)&gt;5\)</span>.</grande></grande></p>
 <p>Recordadas las condiciones en que se puede realizar la aproximación, volvamos a nuestros datos. Se ha realizado una encuesta entre los estudiantes de una universidad y en una muestra de <span class="math inline">\(n=100\)</span> estudiantes hay 58 con cuenta en una determinada red social. Queremos dar un intervalo de confianza para la proporción de estudiantes de esa universidad que tienen cuenta. El número de cumplidores, <span class="math inline">\(X\)</span>, que aparecen en la muestra es una variable aleatoria con distribución binomial, por tanto:</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
     \begin{split}
         \text{E}(X) &amp;=np\\
         \text{V}(X) &amp; = np(1-p)
     \end{split}
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>En nuestro caso se cumplen sobradamente las condiciones para poder aproximar la distribución de <span class="math inline">\(X\)</span> a través de una Normal, por tanto, podemos considerar que: <span class="math display">\[X \sim \text{N} \left (np; \sqrt{np(1-p)} \right )\]</span> Si en vez del número de cumplidores consideramos su proporción <span class="math inline">\(\frac{X}{n}\)</span>, recordando las reglas para operar con variables aleatorias, tenemos:</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
     \begin{split}
         \text{E} \left ( \frac{X}{n} \right ) &amp;= \frac{1}{n} E(X) = p\\[5pt]
         \text{V} \left ( \frac{X}{n} \right) &amp; =\frac{1}{n^2} V(X) = \frac{p(1-p)}{n}\\
     \end{split}
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>Si <span class="math inline">\(X\)</span> sigue una distribución Normal, también seguirá esa distribución la variable <span class="math inline">\(\frac{X}{n}\)</span>. Llamando <span class="math inline">\(\hat{p}\)</span> a la proporción en la muestra, tenemos: <span class="math display">\[\hat{p} \sim N \left ( p; \sqrt{\frac{p(1-p)}{n}} \right ) \]</span></p>
 <p>Siguiendo el razonamiento que ya habíamos realizado para deducir la expresión del intervalo de confianza para la media, el intervalo de confianza <span class="math inline">\(1-\alpha\)</span> para el valor de <span class="math inline">\(p\)</span> será: <span class="math display">\[\hat{p} \pm z_{\alpha/2} \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}  \]</span></p>
 <p>Algunas consideraciones sobre este intervalo:</p>
@@ -1341,6 +1342,10 @@ Figura&nbsp;7.16: Estimación del tamaño de una población numerada. Resultados
 </figcaption>
 </figure>
 </div>
+<div style="text-align: center; font-size: 1.1em;">
+<p>________________________ <span style="margin: 0 0.4em;">◇</span> ________________________</p>
+</div>
+<p><br></p>
 
 
 </section>

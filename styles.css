@@ -1476,7 +1476,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .tabla-0800b td mjx-container[display="true"] {
   display: inline-block !important;
-  margin: 0.3em 0 !important;
+  margin: 0.2em 0 !important;
 }
 
 .tabla-0800b td:first-child {
@@ -1532,11 +1532,9 @@ h1, h2, h3, h4, h5, h6 {
  padding-bottom: 5px;    
 }    
     
-    
-    
 .tabla-0807 td mjx-container[display="true"] {
   display: inline-block !important;
-  margin: 0.3em 0 !important;
+  margin: 0.2em 0 !important;
 }
 
 /*** Tabla sin número 8c***/
@@ -1578,6 +1576,36 @@ h1, h2, h3, h4, h5, h6 {
 .tabla-0800c tbody tr:nth-child(4) td {
  border-bottom: 1px solid #666;
 } 
+
+/*** Tabla 9.1 ***/
+
+.tabla-0901 {
+  margin: auto;
+  width: 60%;
+  max-width: 650px;
+  font-size: 0.9em;
+  vertical-align: middle;
+  border-collapse: collapse;
+  border: none;
+}
+
+.tabla-0901 td {
+  font-size: 0.97em;      /* equivalente a \footnotesize */
+  text-align: center;    /* celdas centradas */
+  padding: 0;      /* altura de fila más pequeña */
+  line-height: 1;      /* compacta como en LaTeX */
+  border: none;
+}
+
+.tabla-0901 td mjx-container[display="true"] {
+  display: inline-block !important;
+  margin: 0.2em 0 !important;
+}
+
+.tabla-0901 td:first-child {
+  text-align: right;
+}
+
 /* ======Tabla Wrapper====== */
 
 .tabla-wrapper00 {
@@ -1762,8 +1790,8 @@ h1, h2, h3, h4, h5, h6 {
 .tabla-wrapper_T0800b {
   width: 100%;
   margin-top: 0ex;
-  margin-bottom: 4ex;
-    margin-left: auto;
+  margin-bottom: 0ex;
+  margin-left: auto;
   margin-right: auto;
 }
 

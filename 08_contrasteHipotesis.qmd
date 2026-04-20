@@ -562,9 +562,9 @@ El valor de una media y el de una observación individual no se distinguen en na
 
 Es mejor decidir en base al valor de una media, no tanto para disminuir la probabilidad de error Tipo I (rechazar la hipótesis nula cuando en realidad es cierta) que siempre podemos fijar en el valor que nos interesa, sino para --una vez fijada esa probabilidad-- disminuir la probabilidad de error Tipo II, es decir, de no rechazar la hipótesis nula cuando es falsa. 
 
-En la [@fig-errorTipoII] tenemos la distribución de los valores individuales y la correspondiente a las medias de 4 observaciones. En ambas distribuciones podemos fijar el valor que tiene una probabilidad de 0,05 de ser sobrepasado (hacia los valores bajos en nuestro caso).
+En la [@fig-errorTipoIImedias] tenemos la distribución de los valores individuales y la correspondiente a las medias de 4 observaciones. En ambas distribuciones podemos fijar el valor que tiene una probabilidad de 0,05 de ser sobrepasado (hacia los valores bajos en nuestro caso).
 
-![Probabilidades de error tipo I y tipo II controlando observaciones individuales o medias de 4 unidades.](Figuras_08/f0808_errorTipoII.png){#fig-errorTipoII .fig-normal6 fig-align="center" width="100%"}
+![Probabilidades de error tipo I y tipo II controlando observaciones individuales o medias de 4 unidades.](Figuras_08/f0810_errorTipoIImedias.png){#fig-errorTipoIImedias .fig-normal6 fig-align="center" width="100%"}
 
 Los valores críticos se han calculado haciendo:
 
@@ -779,13 +779,13 @@ Antes de ponernos a realizar análisis más sofisticados siempre conviene repres
 	
 En una situación como la que estamos analizando basta con realizar diagramas de puntos como los de la [@fig-dotplot]. La línea roja representa el valor medio de cada grupo.
 
-![Representación gráfica del peso de los tomates obtenidos en cada planta según pertenezcan al grupo sin abono (Control) o con abono (Tratado).](Figuras_08/f0811_dotplot.png){#fig-dotplot .fig-normal6 fig<tr> <td>align="center" width="100%"}
+![Representación gráfica del peso de los tomates obtenidos en cada planta según pertenezcan al grupo sin abono (Control) o con abono (Tratado).](Figuras_08/f0811_dotplot.png){#fig-dotplot .fig-normal6 fig-align="center" width="100%"}
 
 El gráfico da la sensación de que las plantas con abono (representadas por el grupo tratado) tienen --en promedio-- más producción que las no abonadas (representadas por el grupo de control[^8-4]). La situación estaría mucho más clara si nos encontráramos en una de las situaciones que se muestran en la [@fig-dotplot2]. Si los datos del grupo tratado son los que corresponden a la situación A no podremos afirmar que el abono aumenta la cosecha, aunque la media de la producción es ligeramente superior que en el grupo tratado (5,2 frente a 5,1 kg). Por el contrario, si los resultados fueran los representados en la situación B, podríamos afirmar sin temor a equivocarnos que la producción es mayor con abono. 
 
 [^8-4]: Los datos que tenemos son solo los representantes de los grupos de interés, que son las producciones "en general" de las plantas con y sin abono.
 
-![No sería necesario seguir analizando los datos si los resultados fueran los de la situación A o B.](Figuras_08/f0812_dotplot2.png){#fig-dotplot2 .fig-normal6 fig<tr> <td>align="center" width="100%"}
+![No sería necesario seguir analizando los datos si los resultados fueran los de la situación A o B.](Figuras_08/f0812_dotplot2.png){#fig-dotplot2 .fig-normal6 fig-align="center" width="100%"}
 
 Volviendo a nuestros resultados, estamos "bastante seguros" de que el abono mejora la cosecha, pero no parece imposible que la diferencia observada se haya dado por casualidad. Si los dos valores del grupo tratado que están por encima de 7 kg estuvieran en torno a 5 kg, la impresión --solo cambiando dos números-- sería muy distinta.
 
@@ -931,14 +931,13 @@ Usando como estadístico de prueba la diferencia entre las medias de los dos gru
 </table>
 </div>
 ```
-
 Considerar que el abono no afecta es lo mismo que suponer que la única diferencia entre ambos grupos es la etiqueta que se les pone. Bajo esta hipótesis, la diferencia de medias observada en nuestro caso será simplemente una de las muchas que se pueden obtener asignando a 10 resultados tomados al azar la etiqueta que los identifica como pertenecientes al grupo de control, y a los otros 10 la etiqueta del grupo tratado.
 
-En la tabla \ref{testPermuta} tenemos cinco posibles asignaciones de etiquetas (C: Control, T: Tratado) con el valor de la diferencia de medias obtenido en cada caso. 
+En la tabla [Tabla 8.7](#tbl-cincoValores) tenemos cinco posibles asignaciones de etiquetas (C: Control, T: Tratado) con el valor de la diferencia de medias obtenido en cada caso. 
 
 
 ```{=html}
-<div id="tbl-Proporcion" class="tabla-wrapper_T0807">
+<div id="tbl-cincoValores" class="tabla-wrapper_T0807">
 <div class="tabla-caption">
   Tabla 8.7: Cálculo de 5 valores de una distribución de referencia para la diferencia de medias.
 </div>
@@ -1003,7 +1002,7 @@ En la tabla \ref{testPermuta} tenemos cinco posibles asignaciones de etiquetas (
 
 La distribución de referencia estará formada por el conjunto de todas las diferencias que se pueden obtener de esta forma, que como en el caso anterior es igual a $\frac{20!}{10! \cdot 10!}$ (permutaciones de 20 elementos con 10 y 10 repetidos). También en este caso los valores de la distribución de referencia hay que obtenerlos mediante un pequeño programa que calcule la diferencia de medias para cada una de las ordenaciones posibles de forma exhaustiva, o bien calcularla para una gran cantidad de ordenaciones tomadas al azar. 
 
-La figura \ref{distRefPermu} se ha construido con valores obtenidos  generando un millón de ordenaciones al azar. Han aparecido $194\;\!123$ valores[^8-6] mayores o iguales al estadístico de prueba (1,046). El $p$-valor resultante es en este caso del 1,9 %. 
+La [@fig-distRefPermu] se ha construido con valores obtenidos  generando un millón de ordenaciones al azar. Han aparecido $194\;\!123$ valores[^8-6] mayores o iguales al estadístico de prueba (1,046). El $p$-valor resultante es en este caso del 1,9 %. 
 
 [^8-6]: En otra simulación este número no sería idéntico pero sí muy similar.
 
@@ -1033,7 +1032,7 @@ En este caso la hipótesis nula es que la probabilidad de que un futbolista prof
 
 #### 2. Estadístico de prueba {.unnumbered}
 
-\noindent No hay muchas opciones donde elegir. Usaremos el número de futbolistas que en los datos disponibles han nacido en la primera mitad del año. Otra opción, que en el fondo es la misma, sería la proporción de los que han nacido en ese periodo.
+No hay muchas opciones donde elegir. Usaremos el número de futbolistas que en los datos disponibles han nacido en la primera mitad del año. Otra opción, que en el fondo es la misma, sería la proporción de los que han nacido en ese periodo.
 
 #### 3. Distribución de referencia {.unnumbered}
 
@@ -1041,9 +1040,9 @@ Será la distribución del número de nacidos en la primera mitad del año de un
 
 #### 4. Cálculo del $p$-valor {.unnumbered}
 
-Se trata de analizar si nuestro valor (308) es normal en la distribución de referencia. Vemos (figura \ref{distRefFutbol}) que queda prácticamente fuera de la distribución y podemos calcular que la probabilidad de tener un valor como ese o mayor es del orden de 6 entre 1 millón. Por tanto, el estadístico de prueba no parece formar parte de la distribución a que debería pertenecer si la hipótesis nula fuese cierta. Lo más razonable es rechazar la hipótesis nula y considerar que el azar no explica ese desequilibrio en el número de nacimientos en la primera y segunda mitad del año.
+Se trata de analizar si nuestro valor (308) es normal en la distribución de referencia. Vemos ([@fig-distRefFutbol]) que queda prácticamente fuera de la distribución y podemos calcular que la probabilidad de tener un valor como ese o mayor es del orden de 6 entre 1 millón. Por tanto, el estadístico de prueba no parece formar parte de la distribución a que debería pertenecer si la hipótesis nula fuese cierta. Lo más razonable es rechazar la hipótesis nula y considerar que el azar no explica ese desequilibrio en el número de nacimientos en la primera y segunda mitad del año.
 
-![Distribución de los nacidos en la primera mitas del año en una muestra de $n=516$ y $p = 0.5$. Probabilidad de que tener un valor igual o superior a 308.](Figuras_08/f0817_aspirina.png){#fig-aspirina .fig-normal6 fig-align="center" width="100%"}
+![Distribución de los nacidos en la primera mitad del año en una muestra de $n=516$ y $p = 0.5$. Probabilidad de que tener un valor igual o superior a 308.](Figuras_08/f0816_distRefFutbol.png){#fig-distRefFutbol .fig-normal6 fig-align="center" width="100%"}
 
 El cálculo de esta probabilidad se puede realizar fácilmente dado que se trata de una variable aleatoria con distribución binomial:
 $$\text{P}(X \geq 308) = 1 - \text{B}(x=307; n=516; p = 0.5) = 6.18 \cdot 10^{-6}$$
@@ -1086,7 +1085,7 @@ Si tuviéramos más datos --y en este caso es relativamente fácil conseguirlos-
 
 En la década de 1980 se llevó a cabo en Estados Unidos un estudio de gran envergadura para evaluar si una dosis baja de aspirina (325 mg en días alternos) podía reducir el riesgo de infarto de miocardio. Se invitó a participar a 261.248 médicos varones de entre 40 y 84 años; 59.285 aceptaron, pero muchos fueron excluidos por antecedentes médicos, por estar tomando aspirina de forma habitual o por haber presentado reacciones adversas a este medicamento. Finalmente, 22.071 participantes fueron asignados aleatoriamente a uno de dos grupos: uno recibió un placebo y el otro la dosis establecida de aspirina. El estudio se diseñó como un ensayo doble ciego, de modo que ni los participantes ni los investigadores encargados del seguimiento sabían a qué grupo pertenecía cada individuo. Tras un seguimiento de aproximadamente cinco años, los resultados obtenidos fueron los siguientes[^8-9]:
 
-[^8-9]: Estos son los resultados del estudio preliminar: <<Preliminary Report: Findings from the Aspirin Component of the Ongoing Physicians' Health Study>> publicado en *The New England Journal of Medicine* el 28 de enero de 1988. En el estudio definitivo, publicado en la misma revista el 20 de julio de 1989, la diferencia es todavía más clara.
+[^8-9]: Estos son los resultados del estudio preliminar: "Preliminary Report: Findings from the Aspirin Component of the Ongoing Physicians' Health Study" publicado en *The New England Journal of Medicine* el 28 de enero de 1988. En el estudio definitivo, publicado en la misma revista el 20 de julio de 1989, la diferencia es todavía más clara.
 
 ```{=html}
 <div class="tabla-wrapper_T0800c">
@@ -1146,11 +1145,11 @@ Suponer que la toma de aspirina no influye sobre los resultados equivale a consi
 
 A partir de ahí, podemos generar un número aleatorio, $a_{11}$ de una distribución binomial con parámetros $n=$ 11.037 y $p=$ 293/22.071 y otro número, $a_{12}$ con la misma distribución pero con $n=$ 11.034, aunque esa diferencia se podría ignorar. La diferencia $a_1 = a_{12} - a_{11}$ pertenece a la distribución de la diferencia en el número de infartos de ambos grupos cuando la aspirina no afecta (hipótesis nula).
 
-Repitiendo este proceso un millón de veces --algo prácticamente instantáneo con un pequeño programa en R o Python-- se obtiene la distribución de referencia con la que comparar nuestro estadístico de prueba (figura \ref{distRefAspirina}).
+Repitiendo este proceso un millón de veces --algo prácticamente instantáneo con un pequeño programa en R o Python-- se obtiene la distribución de referencia con la que comparar nuestro estadístico de prueba ([@fig-destRef_aspirina]}).
 
 #### 4. Cálculo del $p$-valor {.unnumbered}
 
-La figura \ref{distRefAspirina} muestra la situación del estadístico de prueba en su distribución de referencia. La conclusión está clara: no es un valor normal en la distribución a la que debería pertenecer si la aspirina no afectara. Es muy raro que una diferencia tan grande como la observada en el número de infartos en ambos grupos sea solo debida al azar.
+La [@fig-destRef_aspirina] muestra la situación del estadístico de prueba en su distribución de referencia. La conclusión está clara: no es un valor normal en la distribución a la que debería pertenecer si la aspirina no afectara. Es muy raro que una diferencia tan grande como la observada en el número de infartos en ambos grupos sea solo debida al azar.
 
 ¿Qué significa "muy raro"? El $p$-valor nos ayuda a cuantificarlo. En nuestra simulación de un millón casos el valor máximo obtenido entre ambos grupos ha sido 83, es decir, ningún valor en la distribución de referencia iguala o sobrepasa el valor del estadístico de prueba. En otra simulación el resultado podría ser ligeramente distinto, pero las conclusiones serían las mismas. Hemos repetido 10 veces la simulación con 10 millones de casos cada una (también da un resultado prácticamente inmediato) y en cada simulación han aparecido entre 2 y 5  valores iguales o mayores a 85. Podemos decir, por tanto, que la probabilidad de que la diferencia obtenida se haya dado por azar es menor de 1 entre un millón.
 
@@ -1170,7 +1169,7 @@ En definitiva, la decisión de recomendar este tratamiento se basa en una evalua
 
 Ronald A. Fisher (1890–1962) fue un pionero en la aplicación del contraste de hipótesis como método de razonamiento en el análisis de datos para la toma de decisiones. Se cuenta una anécdota ocurrida cuando Fisher tomaba el té a media tarde junto con otros profesores de la Universidad de Cambridge y algunos invitados. Una señora comentó que apreciaba un sabor distinto según se sirviera primero el té o la leche. De inmediato surgió una discusión con argumentos procedentes de la química y la física: la composición final del producto debía ser la misma independientemente del orden en que se vertieran el té y la leche; las partículas disueltas acabarían distribuyéndose igual; el gradiente de temperaturas no podía influir… 
 
-Fisher propuso salir de dudas aplicando un procedimiento <<revolucionario>>: hacer la prueba. Claro que no se podía hacer con una sola taza de cada tipo, porque la probabilidad de acertar al azar sería de ½ y si acertaba no sabrían si había sido por casualidad o si realmente sabía distinguir las dos situaciones. Había que pensar cómo hacer la prueba.
+Fisher propuso salir de dudas aplicando un procedimiento "revolucionario": hacer la prueba. Claro que no se podía hacer con una sola taza de cada tipo, porque la probabilidad de acertar al azar sería de ½ y si acertaba no sabrían si había sido por casualidad o si realmente sabía distinguir las dos situaciones. Había que pensar cómo hacer la prueba.
 
 ### Razonamiento ante la catadora de té {.unnumbered}
 
@@ -1184,7 +1183,7 @@ Pero no se nos tienen que ir todas las energías tras los razonamientos matemát
 Nuestro experimento consistirá en preparar ocho tés con leche, cuatro de un modo y otros cuatro del otro, y llevar las tazas (en un orden escogido al azar) a la catadora para que indique su opinión. Se le habrá explicado antes en qué va a consistir la prueba: se le darán a probar ocho tazas, cuatro de cada tipo, en un orden elegido al azar (por dados, ruleta, cartas etc., o simplemente por números publicados en alguna forma); su tarea consiste en separar las tazas en dos grupos de cuatro clasificándolos, si puede, según se haya puesto primero el té o la leche.
 </blockquote>
 
-\noindent Fisher no cuenta en su libro cuál fue el resultado del experimento, pero entre los presentes se encontraba el profesor Hugh Smith, que contó esta historia a David Salsburg, autor de un libro excelente sobre la explosión de la estadística en el siglo XX, muy ameno y que empieza contando esta historia que, además, da título al libro. 
+Fisher no cuenta en su libro cuál fue el resultado del experimento, pero entre los presentes se encontraba el profesor Hugh Smith, que contó esta historia a David Salsburg, autor de un libro excelente sobre la explosión de la estadística en el siglo XX, muy ameno y que empieza contando esta historia que, además, da título al libro. 
 
 
 ## APÉNDICE 8.B: Controversias en torno al contraste de hipótesis {.unnumbered}
@@ -1207,18 +1206,18 @@ A su vecino le ha tocado el primer premio de un sorteo realizado con fines bené
 
 [^8-10]: También es verdad que ese contraste habría que plantearlo antes de que se realice el sorteo. El contraste de hipótesis pierde su sentido si se construye a medida del dato ya conocido.
 
-Sin embargo, si su vecino es una persona honrada y usted no cree que tuviera intención alguna de hacer trampa, esa conclusión no resulta muy razonable. En el ámbito de la llamada Estadística Bayesiana se incorpora esa información previa sobre su honestidad. Si consideramos que la probabilidad *a priori* —antes de conocerse el ganador— de que haya hecho trampa es de uno entre un millón, podemos construir el esquema de la Figura \ref{Bayes}, donde el valor que aparece junto a cada rama indica su probabilidad de ocurrencia.
+Sin embargo, si su vecino es una persona honrada y usted no cree que tuviera intención alguna de hacer trampa, esa conclusión no resulta muy razonable. En el ámbito de la llamada Estadística Bayesiana se incorpora esa información previa sobre su honestidad. Si consideramos que la probabilidad *a priori* —antes de conocerse el ganador— de que haya hecho trampa es de uno entre un millón, podemos construir el esquema de la [@fig-Bayes], donde el valor que aparece junto a cada rama indica su probabilidad de ocurrencia.
 
-![Árbol de probabilidades para el ejemplo del sorteo de lotería.](Figuras_08/f0818_Bayes.png){#fig-Bayes .fig-normal6 fig-align="center" width="100%"}
+![Árbol de probabilidades para el ejemplo del sorteo de lotería.](Figuras_08/f0818_Bayes.png){#fig-Bayes .fig-normal6 fig-align="center" width="90%"}
 
 Ahora, aplicando el teorema de Bayes, podemos volver a calcular la probabilidad de que haya hecho trampa sabiendo que ha ganado. La fórmula es la siguiente (G: Gana, T: hace trampa; N: No hace trampa):
 
-	\begin{equation*}
+\begin{equation*}
 		\begin{split}
 			P(\text{T} |\text{G}) &= \frac{P(\text{G}| \text{T}) \cdot P(\text{T})}{P(\text{G}| \text{T}) \cdot P(\text{T})+P(\text{G}| \text{N}) \cdot P(\text{N})} \\[10pt]
 			&=\frac{1 \cdot \frac{1}{\text{1\;\!000\;\!000}}} {1 \cdot \frac{1}{\text{1\;\!000\;\!000}} + \frac{\text{1}}{\text{10\;\!000}} \cdot \frac{\text{999\;\!999}} {\text{1\;\!000\;\!000}}} = \text{0,009901}
 		\end{split}
-	\end{equation*}	
+\end{equation*}	
 
 Con las suposiciones que hemos realizado llegamos a la conclusión de que la probabilidad de que nuestro vecino sea un tramposo es del orden del 1 %. Si hubiéramos supuesto que la probabilidad *a priori* era de uno entre 10 millones, el resultado *a posteriori* sería de uno entre mil.
 

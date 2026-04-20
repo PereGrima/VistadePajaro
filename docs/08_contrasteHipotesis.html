@@ -856,7 +856,7 @@ Figura&nbsp;8.7: Probabilidad de obtener valores menores que los indicados
 <p>Porque cuando se construyeron las primeras tablas estadísticas, con medios de cálculo rudimentarios, se eligieron valores críticos para probabilidades que eran números redondos en nuestro sistema decimal: 0,5 %, 1 %, 5 %, 10 %. Si tuviéramos 4 dedos en cada mano, seguramente la frontera se hubiera puesto en el 4 %</p>
 </div>
 </div>
-<p>Observe que, si la hipótesis nula es cierta, existe una probabilidad igual al nivel de significación de que sea “injustamente” rechazada (<a href="#fig-errorTipoII" class="quarto-xref">Figura&nbsp;<span>8.10</span></a>, parte superior). Por esta razón en algunos contextos se le llama probabilidad de falsa alarma o de falso positivo; o, de una manera más general pero también más críptica: probabilidad de error tipo I. Lo bueno de todo esto es que nosotros decidimos qué probabilidad de error de este tipo estamos dispuestos a asumir.</p>
+<p>Observe que, si la hipótesis nula es cierta, existe una probabilidad igual al nivel de significación de que sea “injustamente” rechazada (<a href="#fig-errorTipoII" class="quarto-xref">Figura&nbsp;<span>8.8</span></a>, parte superior). Por esta razón en algunos contextos se le llama probabilidad de falsa alarma o de falso positivo; o, de una manera más general pero también más críptica: probabilidad de error tipo I. Lo bueno de todo esto es que nosotros decidimos qué probabilidad de error de este tipo estamos dispuestos a asumir.</p>
 <p>También puede ocurrir que el proceso se haya desajustado pero el valor obtenido no llegue a la zona de rechazo (falso negativo o error tipo II). No encontrar evidencias de incumplimiento de la hipótesis nula no significa que se haya demostrado que es cierta.</p>
 <div id="fig-errorTipoII" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
@@ -936,13 +936,13 @@ Figura&nbsp;8.9: Distribución de las observaciones individuales (azul) y de las
 </div>
 </div>
 <p>Es mejor decidir en base al valor de una media, no tanto para disminuir la probabilidad de error Tipo I (rechazar la hipótesis nula cuando en realidad es cierta) que siempre podemos fijar en el valor que nos interesa, sino para –una vez fijada esa probabilidad– disminuir la probabilidad de error Tipo II, es decir, de no rechazar la hipótesis nula cuando es falsa.</p>
-<p>En la <a href="#fig-errorTipoII" class="quarto-xref">Figura&nbsp;<span>8.10</span></a> tenemos la distribución de los valores individuales y la correspondiente a las medias de 4 observaciones. En ambas distribuciones podemos fijar el valor que tiene una probabilidad de 0,05 de ser sobrepasado (hacia los valores bajos en nuestro caso).</p>
-<div id="fig-errorTipoII" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<p>En la <a href="#fig-errorTipoIImedias" class="quarto-xref">Figura&nbsp;<span>8.10</span></a> tenemos la distribución de los valores individuales y la correspondiente a las medias de 4 observaciones. En ambas distribuciones podemos fijar el valor que tiene una probabilidad de 0,05 de ser sobrepasado (hacia los valores bajos en nuestro caso).</p>
+<div id="fig-errorTipoIImedias" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-errorTipoII-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_08/f0808_errorTipoII.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<div aria-describedby="fig-errorTipoIImedias-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_08/f0810_errorTipoIImedias.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-errorTipoII-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-errorTipoIImedias-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;8.10: Probabilidades de error tipo I y tipo II controlando observaciones individuales o medias de 4 unidades.
 </figcaption>
 </figure>
@@ -1268,16 +1268,28 @@ acumulada</td>
 <li><p>Detectar posibles valores anómalos que quizá conviene descartar, o errores de escritura o de transcripción. Si esos valores nos pasan desapercibidos las conclusiones pueden ser muy distintas y el ridículo mayúsculo.</p></li>
 <li><p>Tener unas primeras conclusiones, que pueden ser definitivas si son muy claras. En caso de duda un test estadístico cuantifica el nivel de duda y ayudar a tomar una decisión.</p></li>
 </ol>
-<p>En una situación como la que estamos analizando basta con realizar diagramas de puntos como los de la <a href="03_Graficos.html#fig-dotplot" class="quarto-xref">Figura&nbsp;<span>3.2</span></a>. La línea roja representa el valor medio de cada grupo.</p>
-<img src="Figuras_08/f0811_dotplot.png" class="img-fluid" alt="Representación gráfica del peso de los tomates obtenidos en cada planta según pertenezcan al grupo sin abono (Control) o con abono (Tratado).">{#fig-dotplot .fig-normal6 fig
-
-
-<p>align=“center” width=“100%”}</p>
-<p>El gráfico da la sensación de que las plantas con abono (representadas por el grupo tratado) tienen –en promedio– más producción que las no abonadas (representadas por el grupo de control<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>). La situación estaría mucho más clara si nos encontráramos en una de las situaciones que se muestran en la <span class="quarto-unresolved-ref">?fig-dotplot2</span>. Si los datos del grupo tratado son los que corresponden a la situación A no podremos afirmar que el abono aumenta la cosecha, aunque la media de la producción es ligeramente superior que en el grupo tratado (5,2 frente a 5,1 kg). Por el contrario, si los resultados fueran los representados en la situación B, podríamos afirmar sin temor a equivocarnos que la producción es mayor con abono.</p>
-<img src="Figuras_08/f0812_dotplot2.png" class="img-fluid" alt="No sería necesario seguir analizando los datos si los resultados fueran los de la situación A o B.">{#fig-dotplot2 .fig-normal6 fig
-
-
-<p>align=“center” width=“100%”}</p>
+<p>En una situación como la que estamos analizando basta con realizar diagramas de puntos como los de la <a href="09_algunosTest.html#fig-dotplot" class="quarto-xref">Figura&nbsp;<span>9.5</span></a>. La línea roja representa el valor medio de cada grupo.</p>
+<div id="fig-dotplot" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dotplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_08/f0811_dotplot.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dotplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;8.11: Representación gráfica del peso de los tomates obtenidos en cada planta según pertenezcan al grupo sin abono (Control) o con abono (Tratado).
+</figcaption>
+</figure>
+</div>
+<p>El gráfico da la sensación de que las plantas con abono (representadas por el grupo tratado) tienen –en promedio– más producción que las no abonadas (representadas por el grupo de control<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>). La situación estaría mucho más clara si nos encontráramos en una de las situaciones que se muestran en la <a href="#fig-dotplot2" class="quarto-xref">Figura&nbsp;<span>8.12</span></a>. Si los datos del grupo tratado son los que corresponden a la situación A no podremos afirmar que el abono aumenta la cosecha, aunque la media de la producción es ligeramente superior que en el grupo tratado (5,2 frente a 5,1 kg). Por el contrario, si los resultados fueran los representados en la situación B, podríamos afirmar sin temor a equivocarnos que la producción es mayor con abono.</p>
+<div id="fig-dotplot2" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dotplot2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_08/f0812_dotplot2.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dotplot2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;8.12: No sería necesario seguir analizando los datos si los resultados fueran los de la situación A o B.
+</figcaption>
+</figure>
+</div>
 <p>Volviendo a nuestros resultados, estamos “bastante seguros” de que el abono mejora la cosecha, pero no parece imposible que la diferencia observada se haya dado por casualidad. Si los dos valores del grupo tratado que están por encima de 7 kg estuvieran en torno a 5 kg, la impresión –solo cambiando dos números– sería muy distinta.</p>
 <p>En una situación como esta, un test estadístico es útil para ayudarnos a tomar la decisión más adecuada.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -1482,14 +1494,14 @@ Grupo tratado</td>
 <section id="distribución-de-referencia" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="distribución-de-referencia">Distribución de referencia</h4>
 <p>Se trata de ver qué distribución sigue el valor de <span class="math inline">\(\Delta\)</span> cuando no hay diferencia entre tratamientos. Si se tienen 10 observaciones en cada grupo el número de ordenaciones posibles (permutaciones) de todo el conjunto es igual a <span class="math inline">\(20!\)</span>. Sin embargo, dada una ordenación global, las reordenaciones dentro de un mismo tratamiento no cambian el valor del estadístico de prueba por lo que el número de ordenaciones total habrá que dividirlo por el número de ordenaciones dentro de cada grupo.</p>
-<p>En nuestro ejemplo, la distribución de referencia estará compuesta por <span class="math inline">\(\frac{20!}{10! \cdot 10!} = 184\;\!756\)</span> valores que se pueden obtener mediante un programa que plantee todos los casos y determine el valor de <span class="math inline">\(\Delta\)</span> para cada uno de ellos. Si el programa se realiza con el paquete de software estadístico R o con Python existen librerías que realizan las permutaciones y facilitan mucho la tarea<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>. El aspecto de la distribución de referencia calculada de esta forma es el que se muestra en la <a href="#fig-distRefReal" class="quarto-xref">Figura&nbsp;<span>8.11</span></a>.</p>
+<p>En nuestro ejemplo, la distribución de referencia estará compuesta por <span class="math inline">\(\frac{20!}{10! \cdot 10!} = 184\;\!756\)</span> valores que se pueden obtener mediante un programa que plantee todos los casos y determine el valor de <span class="math inline">\(\Delta\)</span> para cada uno de ellos. Si el programa se realiza con el paquete de software estadístico R o con Python existen librerías que realizan las permutaciones y facilitan mucho la tarea<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>. El aspecto de la distribución de referencia calculada de esta forma es el que se muestra en la <a href="#fig-distRefReal" class="quarto-xref">Figura&nbsp;<span>8.13</span></a>.</p>
 <div id="fig-distRefReal" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-distRefReal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="Figuras_08/f0813_distRefReal.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-distRefReal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;8.11: Distribución de la diferencia de la suma de números de orden cuando se tienen dos tratamientos con 10 observaciones cada uno.
+Figura&nbsp;8.13: Distribución de la diferencia de la suma de números de orden cuando se tienen dos tratamientos con 10 observaciones cada uno.
 </figcaption>
 </figure>
 </div>
@@ -1498,14 +1510,14 @@ Figura&nbsp;8.11: Distribución de la diferencia de la suma de números de orden
 <h4 class="unnumbered anchored" data-anchor-id="cálculo-del-p-valor">Cálculo del <span class="math inline">\(p\)</span>-valor</h4>
 <p>Es posible que, sin haber diferencia entre los dos tratamientos, una vez ordenados los resultados resulte que los del grupo de control ocupen las posiciones del 1 al 10 y los del tratado del 11 al 20, obteniendo <span class="math inline">\(\Delta = 100\)</span>. Este es un valor posible pero la probabilidad de que esto ocurra por azar es <span class="math inline">\(1/184\;\!756\)</span>, tan baja que lo más razonable es suponer que existe diferencia en el nivel de respuesta de ambos tratamientos. La probabilidad de tener, por ejemplo, <span class="math inline">\(\Delta \geq 80\)</span> es igual a <span class="math inline">\(139/184\;\!756 = 0,075\%\)</span>, también un valor muy bajo.</p>
 <p>Con los datos de nuestro ejemplo tenemos <span class="math inline">\(\Delta = 58\)</span> y <span class="math inline">\(P(\Delta \geq 58) = 2\;\!661 /184\;\!756 = 1.44\%\)</span></p>
-<p>La distribución de referencia también se puede construir calculando los valores de <span class="math inline">\(\Delta\)</span> que corresponden a asignaciones al azar de 10 valores a cada grupo. La distribución que aparece en la <a href="#fig-distRefAlea" class="quarto-xref">Figura&nbsp;<span>8.12</span></a> –prácticamente igual a la que habíamos obtenido anteriormente– se ha realizado de esta forma calculando el valor de <span class="math inline">\(\Delta\)</span> un millón de veces. Valores iguales a nuestro estadístico de prueba <span class="math inline">\(\Delta = 58\)</span> o mayores se han obtenido <span class="math inline">\(14\;\!356\)</span> veces por lo que el <span class="math inline">\(p\)</span>-valor es igual a <span class="math inline">\(14\;\!356 / 1\;\!000\;\!000 = 1.44\%\)</span>, igual que con la distribución en que se han calculado todos sus valores de forma exhaustiva.</p>
+<p>La distribución de referencia también se puede construir calculando los valores de <span class="math inline">\(\Delta\)</span> que corresponden a asignaciones al azar de 10 valores a cada grupo. La distribución que aparece en la <a href="#fig-distRefAlea" class="quarto-xref">Figura&nbsp;<span>8.14</span></a> –prácticamente igual a la que habíamos obtenido anteriormente– se ha realizado de esta forma calculando el valor de <span class="math inline">\(\Delta\)</span> un millón de veces. Valores iguales a nuestro estadístico de prueba <span class="math inline">\(\Delta = 58\)</span> o mayores se han obtenido <span class="math inline">\(14\;\!356\)</span> veces por lo que el <span class="math inline">\(p\)</span>-valor es igual a <span class="math inline">\(14\;\!356 / 1\;\!000\;\!000 = 1.44\%\)</span>, igual que con la distribución en que se han calculado todos sus valores de forma exhaustiva.</p>
 <div id="fig-distRefAlea" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-distRefAlea-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="Figuras_08/f0814_distRefAlea.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-distRefAlea-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;8.12: Cálculo del <span class="math inline">\(p\)</span>-valor colocando el estadístico de prueba en la distribución de referencia.
+Figura&nbsp;8.14: Cálculo del <span class="math inline">\(p\)</span>-valor colocando el estadístico de prueba en la distribución de referencia.
 </figcaption>
 </figure>
 </div>
@@ -1552,8 +1564,8 @@ Figura&nbsp;8.12: Cálculo del <span class="math inline">\(p\)</span>-valor colo
 
 </div>
 <p>Considerar que el abono no afecta es lo mismo que suponer que la única diferencia entre ambos grupos es la etiqueta que se les pone. Bajo esta hipótesis, la diferencia de medias observada en nuestro caso será simplemente una de las muchas que se pueden obtener asignando a 10 resultados tomados al azar la etiqueta que los identifica como pertenecientes al grupo de control, y a los otros 10 la etiqueta del grupo tratado.</p>
-<p>En la tabla <span class="math inline">\(\ref{testPermuta}\)</span> tenemos cinco posibles asignaciones de etiquetas (C: Control, T: Tratado) con el valor de la diferencia de medias obtenido en cada caso.</p>
-<div id="tbl-Proporcion" class="tabla-wrapper_T0807 anchored">
+<p>En la tabla <a href="#tbl-cincoValores">Tabla 8.7</a> tenemos cinco posibles asignaciones de etiquetas (C: Control, T: Tratado) con el valor de la diferencia de medias obtenido en cada caso.</p>
+<div id="tbl-cincoValores" class="tabla-wrapper_T0807 anchored">
 <div class="tabla-caption">
   Tabla 8.7: Cálculo de 5 valores de una distribución de referencia para la diferencia de medias.
 </div>
@@ -1772,14 +1784,14 @@ Figura&nbsp;8.12: Cálculo del <span class="math inline">\(p\)</span>-valor colo
 
 </div>
 <p>La distribución de referencia estará formada por el conjunto de todas las diferencias que se pueden obtener de esta forma, que como en el caso anterior es igual a <span class="math inline">\(\frac{20!}{10! \cdot 10!}\)</span> (permutaciones de 20 elementos con 10 y 10 repetidos). También en este caso los valores de la distribución de referencia hay que obtenerlos mediante un pequeño programa que calcule la diferencia de medias para cada una de las ordenaciones posibles de forma exhaustiva, o bien calcularla para una gran cantidad de ordenaciones tomadas al azar.</p>
-<p>La figura <span class="math inline">\(\ref{distRefPermu}\)</span> se ha construido con valores obtenidos generando un millón de ordenaciones al azar. Han aparecido <span class="math inline">\(194\;\!123\)</span> valores<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> mayores o iguales al estadístico de prueba (1,046). El <span class="math inline">\(p\)</span>-valor resultante es en este caso del 1,9 %.</p>
+<p>La <a href="#fig-distRefPermu" class="quarto-xref">Figura&nbsp;<span>8.15</span></a> se ha construido con valores obtenidos generando un millón de ordenaciones al azar. Han aparecido <span class="math inline">\(194\;\!123\)</span> valores<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> mayores o iguales al estadístico de prueba (1,046). El <span class="math inline">\(p\)</span>-valor resultante es en este caso del 1,9 %.</p>
 <div id="fig-distRefPermu" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-distRefPermu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="Figuras_08/f0815_distRefPermu.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-distRefPermu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;8.13: Otro test de comparación de medias. Distribución de referencia y determinación del <span class="math inline">\(p\)</span>-valor.
+Figura&nbsp;8.15: Otro test de comparación de medias. Distribución de referencia y determinación del <span class="math inline">\(p\)</span>-valor.
 </figcaption>
 </figure>
 </div>
@@ -1807,14 +1819,14 @@ Figura&nbsp;8.13: Otro test de comparación de medias. Distribución de referenc
 </section>
 <section id="cálculo-del-p-valor-1" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="cálculo-del-p-valor-1">4. Cálculo del <span class="math inline">\(p\)</span>-valor</h4>
-<p>Se trata de analizar si nuestro valor (308) es normal en la distribución de referencia. Vemos (figura <span class="math inline">\(\ref{distRefFutbol}\)</span>) que queda prácticamente fuera de la distribución y podemos calcular que la probabilidad de tener un valor como ese o mayor es del orden de 6 entre 1 millón. Por tanto, el estadístico de prueba no parece formar parte de la distribución a que debería pertenecer si la hipótesis nula fuese cierta. Lo más razonable es rechazar la hipótesis nula y considerar que el azar no explica ese desequilibrio en el número de nacimientos en la primera y segunda mitad del año.</p>
-<div id="fig-aspirina" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<p>Se trata de analizar si nuestro valor (308) es normal en la distribución de referencia. Vemos (<a href="#fig-distRefFutbol" class="quarto-xref">Figura&nbsp;<span>8.16</span></a>) que queda prácticamente fuera de la distribución y podemos calcular que la probabilidad de tener un valor como ese o mayor es del orden de 6 entre 1 millón. Por tanto, el estadístico de prueba no parece formar parte de la distribución a que debería pertenecer si la hipótesis nula fuese cierta. Lo más razonable es rechazar la hipótesis nula y considerar que el azar no explica ese desequilibrio en el número de nacimientos en la primera y segunda mitad del año.</p>
+<div id="fig-distRefFutbol" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-aspirina-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_08/f0817_aspirina.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<div aria-describedby="fig-distRefFutbol-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_08/f0816_distRefFutbol.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-aspirina-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;8.14: Distribución de los nacidos en la primera mitas del año en una muestra de <span class="math inline">\(n=516\)</span> y <span class="math inline">\(p = 0.5\)</span>. Probabilidad de que tener un valor igual o superior a 308.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-distRefFutbol-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;8.16: Distribución de los nacidos en la primera mitad del año en una muestra de <span class="math inline">\(n=516\)</span> y <span class="math inline">\(p = 0.5\)</span>. Probabilidad de que tener un valor igual o superior a 308.
 </figcaption>
 </figure>
 </div>
@@ -1904,11 +1916,11 @@ Figura&nbsp;8.14: Distribución de los nacidos en la primera mitas del año en u
 <h4 class="unnumbered anchored" data-anchor-id="distribución-de-referencia-2">3. Distribución de referencia</h4>
 <p>Suponer que la toma de aspirina no influye sobre los resultados equivale a considerar que tenemos un solo grupo de 22.071 personas de las cuales 293 han sufrido un infarto. Bajo esta hipótesis, la probabilidad de infarto en nuestra población sería de <span class="math inline">\(p=\)</span> 293/22.071.</p>
 <p>A partir de ahí, podemos generar un número aleatorio, <span class="math inline">\(a_{11}\)</span> de una distribución binomial con parámetros <span class="math inline">\(n=\)</span> 11.037 y <span class="math inline">\(p=\)</span> 293/22.071 y otro número, <span class="math inline">\(a_{12}\)</span> con la misma distribución pero con <span class="math inline">\(n=\)</span> 11.034, aunque esa diferencia se podría ignorar. La diferencia <span class="math inline">\(a_1 = a_{12} - a_{11}\)</span> pertenece a la distribución de la diferencia en el número de infartos de ambos grupos cuando la aspirina no afecta (hipótesis nula).</p>
-<p>Repitiendo este proceso un millón de veces –algo prácticamente instantáneo con un pequeño programa en R o Python– se obtiene la distribución de referencia con la que comparar nuestro estadístico de prueba (figura <span class="math inline">\(\ref{distRefAspirina}\)</span>).</p>
+<p>Repitiendo este proceso un millón de veces –algo prácticamente instantáneo con un pequeño programa en R o Python– se obtiene la distribución de referencia con la que comparar nuestro estadístico de prueba (<a href="#fig-destRef_aspirina" class="quarto-xref">Figura&nbsp;<span>8.17</span></a>}).</p>
 </section>
 <section id="cálculo-del-p-valor-2" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="cálculo-del-p-valor-2">4. Cálculo del <span class="math inline">\(p\)</span>-valor</h4>
-<p>La figura <span class="math inline">\(\ref{distRefAspirina}\)</span> muestra la situación del estadístico de prueba en su distribución de referencia. La conclusión está clara: no es un valor normal en la distribución a la que debería pertenecer si la aspirina no afectara. Es muy raro que una diferencia tan grande como la observada en el número de infartos en ambos grupos sea solo debida al azar.</p>
+<p>La <a href="#fig-destRef_aspirina" class="quarto-xref">Figura&nbsp;<span>8.17</span></a> muestra la situación del estadístico de prueba en su distribución de referencia. La conclusión está clara: no es un valor normal en la distribución a la que debería pertenecer si la aspirina no afectara. Es muy raro que una diferencia tan grande como la observada en el número de infartos en ambos grupos sea solo debida al azar.</p>
 <p>¿Qué significa “muy raro”? El <span class="math inline">\(p\)</span>-valor nos ayuda a cuantificarlo. En nuestra simulación de un millón casos el valor máximo obtenido entre ambos grupos ha sido 83, es decir, ningún valor en la distribución de referencia iguala o sobrepasa el valor del estadístico de prueba. En otra simulación el resultado podría ser ligeramente distinto, pero las conclusiones serían las mismas. Hemos repetido 10 veces la simulación con 10 millones de casos cada una (también da un resultado prácticamente inmediato) y en cada simulación han aparecido entre 2 y 5 valores iguales o mayores a 85. Podemos decir, por tanto, que la probabilidad de que la diferencia obtenida se haya dado por azar es menor de 1 entre un millón.</p>
 <div id="fig-destRef_aspirina" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
@@ -1916,7 +1928,7 @@ Figura&nbsp;8.14: Distribución de los nacidos en la primera mitas del año en u
 <img src="Figuras_08/f0817_destRef_aspirina.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-destRef_aspirina-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;8.15: Distribución de referencia y estadístico de prueba en el estudio sobre aspirina y riesgo de infarto.
+Figura&nbsp;8.17: Distribución de referencia y estadístico de prueba en el estudio sobre aspirina y riesgo de infarto.
 </figcaption>
 </figure>
 </div>
@@ -1932,7 +1944,7 @@ Figura&nbsp;8.15: Distribución de referencia y estadístico de prueba en el est
 <section id="apéndice-8.a-fisher-y-la-catadora-de-te" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="apéndice-8.a-fisher-y-la-catadora-de-te">APÉNDICE 8.A: Fisher y la catadora de te</h2>
 <p>Ronald A. Fisher (1890–1962) fue un pionero en la aplicación del contraste de hipótesis como método de razonamiento en el análisis de datos para la toma de decisiones. Se cuenta una anécdota ocurrida cuando Fisher tomaba el té a media tarde junto con otros profesores de la Universidad de Cambridge y algunos invitados. Una señora comentó que apreciaba un sabor distinto según se sirviera primero el té o la leche. De inmediato surgió una discusión con argumentos procedentes de la química y la física: la composición final del producto debía ser la misma independientemente del orden en que se vertieran el té y la leche; las partículas disueltas acabarían distribuyéndose igual; el gradiente de temperaturas no podía influir…</p>
-<p>Fisher propuso salir de dudas aplicando un procedimiento &lt;<revolucionario>&gt;: hacer la prueba. Claro que no se podía hacer con una sola taza de cada tipo, porque la probabilidad de acertar al azar sería de ½ y si acertaba no sabrían si había sido por casualidad o si realmente sabía distinguir las dos situaciones. Había que pensar cómo hacer la prueba.</revolucionario></p>
+<p>Fisher propuso salir de dudas aplicando un procedimiento “revolucionario”: hacer la prueba. Claro que no se podía hacer con una sola taza de cada tipo, porque la probabilidad de acertar al azar sería de ½ y si acertaba no sabrían si había sido por casualidad o si realmente sabía distinguir las dos situaciones. Había que pensar cómo hacer la prueba.</p>
 <section id="razonamiento-ante-la-catadora-de-té" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="razonamiento-ante-la-catadora-de-té">Razonamiento ante la catadora de té</h3>
 <p>De entrada se supone que no sabe distinguir un caso de otro, eso es lo que nos parece normal, y sólo creeremos en su habilidad si los datos recogidos en un experimento bien diseñado y controlado están en contra de esa hipótesis inicial. Estar en contra significa que sus resultados sean muy poco probables en el caso de que sea cierta, y lo que significa poco probable lo decidimos nosotros mismos: que ocurra menos del 5 % de las veces, menos del 1 %, o cualquier otro valor.</p>
@@ -1959,24 +1971,24 @@ Nuestro experimento consistirá en preparar ocho tés con leche, cuatro de un mo
 <section id="todos-los-que-ganan-la-lotería-han-hecho-trampa" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="todos-los-que-ganan-la-lotería-han-hecho-trampa">Todos los que ganan la lotería han hecho trampa</h4>
 <p>A su vecino le ha tocado el primer premio de un sorteo realizado con fines benéficos y, como alguien sospecha que quizá ha hecho trampa, usted decide analizar la situación mediante un contraste de hipótesis<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a>. Plantea como hipótesis nula que el premio se ha otorgado de forma justa y como alternativa que ha habido trampa. Dado que en el sorteo había 10.000 boletos, la probabilidad de que gane el primer premio —suponiendo que no haya hecho trampa— es de 1/10.000. Este sería el <span class="math inline">\(p\)</span>-valor de la prueba, tan pequeño que invita a pensar lo peor.</p>
-<p>Sin embargo, si su vecino es una persona honrada y usted no cree que tuviera intención alguna de hacer trampa, esa conclusión no resulta muy razonable. En el ámbito de la llamada Estadística Bayesiana se incorpora esa información previa sobre su honestidad. Si consideramos que la probabilidad <em>a priori</em> —antes de conocerse el ganador— de que haya hecho trampa es de uno entre un millón, podemos construir el esquema de la Figura <span class="math inline">\(\ref{Bayes}\)</span>, donde el valor que aparece junto a cada rama indica su probabilidad de ocurrencia.</p>
+<p>Sin embargo, si su vecino es una persona honrada y usted no cree que tuviera intención alguna de hacer trampa, esa conclusión no resulta muy razonable. En el ámbito de la llamada Estadística Bayesiana se incorpora esa información previa sobre su honestidad. Si consideramos que la probabilidad <em>a priori</em> —antes de conocerse el ganador— de que haya hecho trampa es de uno entre un millón, podemos construir el esquema de la <a href="#fig-Bayes" class="quarto-xref">Figura&nbsp;<span>8.18</span></a>, donde el valor que aparece junto a cada rama indica su probabilidad de ocurrencia.</p>
 <div id="fig-Bayes" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Bayes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_08/f0818_Bayes.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_08/f0818_Bayes.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Bayes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;8.16: Árbol de probabilidades para el ejemplo del sorteo de lotería.
+Figura&nbsp;8.18: Árbol de probabilidades para el ejemplo del sorteo de lotería.
 </figcaption>
 </figure>
 </div>
 <p>Ahora, aplicando el teorema de Bayes, podemos volver a calcular la probabilidad de que haya hecho trampa sabiendo que ha ganado. La fórmula es la siguiente (G: Gana, T: hace trampa; N: No hace trampa):</p>
-<pre><code>\begin{equation*}
-    \begin{split}
-        P(\text{T} |\text{G}) &amp;= \frac{P(\text{G}| \text{T}) \cdot P(\text{T})}{P(\text{G}| \text{T}) \cdot P(\text{T})+P(\text{G}| \text{N}) \cdot P(\text{N})} \\[10pt]
-        &amp;=\frac{1 \cdot \frac{1}{\text{1\;\!000\;\!000}}} {1 \cdot \frac{1}{\text{1\;\!000\;\!000}} + \frac{\text{1}}{\text{10\;\!000}} \cdot \frac{\text{999\;\!999}} {\text{1\;\!000\;\!000}}} = \text{0,009901}
-    \end{split}
-\end{equation*} </code></pre>
+<p><span class="math display">\[\begin{equation*}
+        \begin{split}
+            P(\text{T} |\text{G}) &amp;= \frac{P(\text{G}| \text{T}) \cdot P(\text{T})}{P(\text{G}| \text{T}) \cdot P(\text{T})+P(\text{G}| \text{N}) \cdot P(\text{N})} \\[10pt]
+            &amp;=\frac{1 \cdot \frac{1}{\text{1\;\!000\;\!000}}} {1 \cdot \frac{1}{\text{1\;\!000\;\!000}} + \frac{\text{1}}{\text{10\;\!000}} \cdot \frac{\text{999\;\!999}} {\text{1\;\!000\;\!000}}} = \text{0,009901}
+        \end{split}
+\end{equation*}\]</span></p>
 <p>Con las suposiciones que hemos realizado llegamos a la conclusión de que la probabilidad de que nuestro vecino sea un tramposo es del orden del 1 %. Si hubiéramos supuesto que la probabilidad <em>a priori</em> era de uno entre 10 millones, el resultado <em>a posteriori</em> sería de uno entre mil.</p>
 <p>A algunos investigadores les parece “poco científico” dar un valor puramente especulativo a una variable que influirá en el resultado obtenido. Pero es evidente que no es lo mismo que el comprador del boleto sea una persona de conducta ejemplar o que haya sido condenado varias veces por estafa y además haya organizado él mismo el sorteo. Enfrentarse a un problema ignorando una información tan evidente y a la vez tan relevante, no parece que sea la mejor forma de aprovechar los recursos disponibles. Los que se adentren en este terrero tendrán ocasión de elegir en cada caso la alternativa que les parezca más razonable.</p>
 <div style="text-align: center; font-size: 1.1em;">
@@ -1998,7 +2010,7 @@ Figura&nbsp;8.16: Árbol de probabilidades para el ejemplo del sorteo de loterí
 <li id="fn6"><p>En otra simulación este número no sería idéntico pero sí muy similar.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn7"><p>Una detallada explicación de este fenómeno centrada en Canadá y en el hockey sobre hielo se encuentra en el libro de Malcolm Gladwell: “Outliers. The Story of Success”, capítulo 1: “The Matthew Effect” (2008). Existe traducción al español con el título: “Fuera de serie: Por qué unas personas tienen éxito y otras no”.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn8"><p>Datos obtenidos en <a href="https://www.transfermarkt.es">https://www.transfermarkt.es</a>.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn9"><p>Estos son los resultados del estudio preliminar: &lt;&lt;Preliminary Report: Findings from the Aspirin Component of the Ongoing Physicians’ Health Study&gt;&gt; publicado en <em>The New England Journal of Medicine</em> el 28 de enero de 1988. En el estudio definitivo, publicado en la misma revista el 20 de julio de 1989, la diferencia es todavía más clara.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>Estos son los resultados del estudio preliminar: “Preliminary Report: Findings from the Aspirin Component of the Ongoing Physicians’ Health Study” publicado en <em>The New England Journal of Medicine</em> el 28 de enero de 1988. En el estudio definitivo, publicado en la misma revista el 20 de julio de 1989, la diferencia es todavía más clara.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn10"><p>También es verdad que ese contraste habría que plantearlo antes de que se realice el sorteo. El contraste de hipótesis pierde su sentido si se construye a medida del dato ya conocido.<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>

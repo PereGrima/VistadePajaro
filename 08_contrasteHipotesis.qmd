@@ -12,7 +12,7 @@ Rudolf Wolf (1816-1893) fue un astrónomo suizo conocido por sus investigaciones
 
 [^8-1]: Nosotros descubrimos estos datos en el libro de M. G. Bulner: Principles of Statistics, Ed. Dover, 1979. La publicación original que se cita (Czuber, 1903) puede consultarse [aquí](https://archive.org/details/wahrscheinlichk01czubgoog), pág. 118).
 
-![Resultados obtenidos por R. Wolf al lanzar 20.000 veces dos dados (Reproducido de:  M. G. Bulner: Principles of Statistics, Ed. Dover, 1979).](Figuras_08/f0801_tablaDadosWolf.png){#fig-tablaDadosWolf .fig-normal3 fig-align="center" width="90%"}
+![Resultados obtenidos por R. Wolf al lanzar 20.000 veces dos dados (Reproducido de:  M. G. Bulner: Principles of Statistics, Ed. Dover, 1979).](Figuras_08/f0801_tablaDadosWolf.png){#fig-tablaDadosWolf .fig-normal0 fig-align="center" width="90%"}
 
 Vamos a fijarnos en los resultados obtenidos con cada dado de forma independiente. No esperamos que todos los resultados aparezcan el mismo número de veces; sabemos que si, por ejemplo, lanzamos 60 veces un dado, no necesariamente va a salir 10 veces cada uno de los resultados posibles, sino que existirá una cierta variabilidad en torno a ese 10, que es el valor teórico esperado. De la misma forma, en nuestro caso, el número de veces que saldrá cada valor estará en torno a $3\;\!333.33$ ($=20\;\!000/6$). Sin embargo, al observar los totales que aparecen en la tabla, podría dar la impresión de que la variabilidad es demasiado grande. 
 
@@ -30,7 +30,7 @@ Suponemos que el proceso de lanzamiento de los dados es correcto y que la anotac
 
 Aunque en este caso tenemos pocos datos, siempre es una buena idea representarlos gráficamente ([@fig-grafDadosWolf]).
 
-![Resultados obtenidos en el experimento de Wolf. Dado B: blanco, R: rojo.).](Figuras_08/f0802_grafDadosWolf.png){#fig-grafDadosWolf .fig-normal3 fig-align="center" width="90%"}
+![Resultados obtenidos en el experimento de Wolf. Dado B: blanco, R: rojo.).](Figuras_08/f0802_grafDadosWolf.png){#fig-grafDadosWolf .fig-normal0 fig-align="center" width="90%"}
 
 Vemos que los valores 3 y 4 --especialmente el 4-- aparecen claramente menos de lo previsto en ambos dados. También destaca el valor 6 del dado blanco, que aparece bastante más. El quid de la cuestión está en dilucidar si esas diferencias son fruto del azar y, por tanto, perfectamente normales o si es muy poco probable que se den por casualidad, en cuyo caso sería más razonable considerar que los dados no están equilibrados.
 
@@ -363,9 +363,9 @@ Para repetir la simulación y obtener otro valor de la discrepancia máxima, bas
 :::
 :::
 
-Pero lo más efectivo es realizar un pequeño programa que repita este proceso muchas veces guardando cada vez el valor de la discrepancia máxima. La figura \ref{simulaDadosWolf} muestra la distribución de los $100\;\!000$ valores obtenidos al repetir la simulación ese número de veces. Valores como 65, 120 o 97 son perfectamente normales. Si la discrepancia máxima obtenida en el experimento realizado por Wolf fuera de ese orden de magnitud no habría nada que decir sobre la calidad del dado. Si hubiera salido del orden de 200 diríamos que es muy poco probable que la discrepancia tenga un valor tan grande, no sería un valor imposible pero sí tan poco probable que lo más razonable sería considerar que el dado no está equilibrado.
+Pero lo más efectivo es realizar un pequeño programa que repita este proceso muchas veces guardando cada vez el valor de la discrepancia máxima. La [@fig-tablaDadosWolf] muestra la distribución de los $100\;\!000$ valores obtenidos al repetir la simulación ese número de veces. Valores como 65, 120 o 97 son perfectamente normales. Si la discrepancia máxima obtenida en el experimento realizado por Wolf fuera de ese orden de magnitud no habría nada que decir sobre la calidad del dado. Si hubiera salido del orden de 200 diríamos que es muy poco probable que la discrepancia tenga un valor tan grande, no sería un valor imposible pero sí tan poco probable que lo más razonable sería considerar que el dado no está equilibrado.
 
-"La rareza" de un resultado lo medimos por la probabilidad de tener un valor como ese o mayor . La tabla \ref{percentiles} muestra la proporción de veces (que asimilamos a la probabilidad) que la discrepancia máxima da un valor igual o mayor a los indicados.
+"La rareza" de un resultado lo medimos por la probabilidad de tener un valor como ese o mayor . La [Tabla 8.3](#tbl-Proporcion) muestra la proporción de veces (que asimilamos a la probabilidad) que la discrepancia máxima da un valor igual o mayor a los indicados.
 
 ```{=html}
 <div id="tbl-Proporcion" class="tabla-wrapper_T0803">
@@ -411,9 +411,9 @@ Pero lo más efectivo es realizar un pequeño programa que repita este proceso m
 </div>
 ```
 
-Podríamos haber fijado un valor frontera --ligado a la probabilidad de ser superado-- y considerar que los dados están desequilibrados si nuestro resultado supera ese valor. De cualquier forma, en nuestro caso la discrepancia está tan claramente alejada de los valores ``normales'' que --suponiendo que el proceso de lanzamiento era correcto-- podemos asegurar que los dados no estaban equilibrados. Sin ninguna duda. (Figura \ref{simulaDadosWolf})
+Podríamos haber fijado un valor frontera --ligado a la probabilidad de ser superado-- y considerar que los dados están desequilibrados si nuestro resultado supera ese valor. De cualquier forma, en nuestro caso la discrepancia está tan claramente alejada de los valores ``normales'' que --suponiendo que el proceso de lanzamiento era correcto-- podemos asegurar que los dados no estaban equilibrados. Sin ninguna duda. ([@fig-simulaDadosWolf])
 
-![Nuestros valores de la discrepancia máxima y distribución a la que deberían pertenecer si los dados estuvieran equilibrados.](Figuras_08/f0804_simulaDadosWolf.png){#fig-simulaDadosWolf .fig-normal3 fig-align="center" width="100%"}
+![Nuestros valores de la discrepancia máxima y distribución a la que deberían pertenecer si los dados estuvieran equilibrados.](Figuras_08/f0804_simulaDadosWolf.png){#fig-simulaDadosWolf .fig-normal5 fig-align="center" width="100%"}
 
 ### ¿Cómo hemos razonado? {.unnumbered}
 
@@ -423,7 +423,7 @@ Podemos resumir el proceso seguido en los siguientes pasos:
 	
     En la jerga estadística, a la hipótesis que se supone cierta a no ser que las evidencias --los datos-- estén en contradicción con ella, se denomina **hipótesis nula**, $\text{H}_0$. A lo que ocurre si se rechaza la hipótesis nula se denomina **hipótesis alternativa**, $\text{H}_1$.
 
--   A partir de los datos hemos calculado un valor relevante respecto al tema en discusión, en nuestro caso una medida de la discrepancia entre la frecuencia observada y la frecuencia esperada (le podríamos llamar <<teóricamente esperada>>). A este valor que, de alguna manera, refleja la discrepancia de los datos con la hipótesis nula le llamamos **estadístico de prueba**.
+-   A partir de los datos hemos calculado un valor relevante respecto al tema en discusión, en nuestro caso una medida de la discrepancia entre la frecuencia observada y la frecuencia esperada (le podríamos llamar "teóricamente esperada"). A este valor que, de alguna manera, refleja la discrepancia de los datos con la hipótesis nula le llamamos **estadístico de prueba**.
 	
 -   Hemos construido la distribución a la que debe pertenecer el estadístico de prueba si la hipótesis nula es cierta. A esta distribución le llamamos **distribución de referencia**.
 	
@@ -435,7 +435,7 @@ Vamos a seguir con otros ejemplos porque hay más aspectos que observar en esta 
 
 Una máquina automática llena paquetes de café y, cada cierto tiempo se pesa un paquete para verificar que se están llenando con el peso previsto. Si la desviación respecto al objetivo sobrepasa un cierto valor se para la máquina y se reajusta. La pregunta que nos hacemos es: ¿cuál debe ser el valor de la desviación a partir del cual  se debe parar y reajustar la máquina?
 
-"Ajustar" la máquina cuando en realidad ya está ajustada, no solo hace perder el tiempo sino que también aumenta la variabilidad final. Si el objetivo es llenar los paquetes con 1000 g, tomamos uno y pesa 1015, este puede ser un valor perfectamente compatible con que la máquina está bien ajustada, siendo la diferencia de 15 g debida a la variabilidad intrínseca del proceso de llenado. Sin embargo, si ignoramos esa variabilidad y entendemos esa desviación como una señal de que los paquetes se están llenando con 15 g de más, intentaremos <<corregirla>> centrándolo en 15 g menos y el resultado será que lo centraremos en 985 g. A continuación seguramente ocurrirá que tomaremos otro paquete y pesará 980 g con lo que subiremos 20 g el peso medio centrándolo en 1005 g. Así, lo que se irá haciendo es ir moviendo la <<campana>> de la distribución de los pesos y acabaremos teniendo mayor variabilidad que si no hubiéramos tocado nada (figura \ref{sobreAjuste}).
+"Ajustar" la máquina cuando en realidad ya está ajustada, no solo hace perder el tiempo sino que también aumenta la variabilidad final. Si el objetivo es llenar los paquetes con 1000 g, tomamos uno y pesa 1015, este puede ser un valor perfectamente compatible con que la máquina está bien ajustada, siendo la diferencia de 15 g debida a la variabilidad intrínseca del proceso de llenado. Sin embargo, si ignoramos esa variabilidad y entendemos esa desviación como una señal de que los paquetes se están llenando con 15 g de más, intentaremos "corregirla" centrándolo en 15 g menos y el resultado será que lo centraremos en 985 g. A continuación seguramente ocurrirá que tomaremos otro paquete y pesará 980 g con lo que subiremos 20 g el peso medio centrándolo en 1005 g. Así, lo que se irá haciendo es ir moviendo la "campana" de la distribución de los pesos y acabaremos teniendo mayor variabilidad que si no hubiéramos tocado nada ([@fig-sobreAjuste]).
 
 ![Aumento de variabiilidad por sobreajuste. Cambiar la media de la distribución para corregir falsos desajustes aumenta la variabilidad global.](Figuras_08/f0805_sobreAjuste.png){#fig-sobreAjuste .fig-normal3 fig-align="center" width="100%"}
 
@@ -451,9 +451,9 @@ Necesitamos aplicar un criterio que tenga en cuenta la variabilidad natural del 
 
 Para saber si el peso de un paquete está dentro de lo esperado es necesario conocer cómo se distribuyen los pesos cuando todo funciona correctamente.
 
-Vamos a suponer que tenemos muchos datos históricos. Podemos construir un histograma con esos datos y sobre la misma escala situar el valor obtenido. Pueden darse situaciones como las que se muestran en la figura \ref{pesosCafe}. 
+Vamos a suponer que tenemos muchos datos históricos. Podemos construir un histograma con esos datos y sobre la misma escala situar el valor obtenido. Pueden darse situaciones como las que se muestran en la [@fig-pesosCafe_1]. 
 
-![Nuestros valores comparados con el histograma de pesos obtenidos cuando todo va bien.](Figuras_08/f0806_pesosCafe_1.png){#fig-pesosCafe_1 .fig-normal3 fig-align="center" width="100%"}
+![Nuestros valores comparados con el histograma de pesos obtenidos cuando todo va bien.](Figuras_08/f0806_pesosCafe_1.png){#fig-pesosCafe_1 .fig-normal5 fig-align="center" width="100%"}
 
 Las conclusiones en cada caso serán:
 
@@ -475,11 +475,11 @@ Utilizando esa distribución Normal como distribución de referencia y dado el p
 
 -   Situación 3: $P(X < 995) = 0.16$: No hay ninguna razón para considerar que no está bien ajustada.
 	
-![Probabilidad de obtener valores menores que los indicados](Figuras_08/f0807_pesosCafe_2.png){#fig-pesosCafe_2 .fig-normal3 fig-align="center" width="100%"}
+![Probabilidad de obtener valores menores que los indicados](Figuras_08/f0807_pesosCafe_2.png){#fig-pesosCafe_2 .fig-normal5 fig-align="center" width="100%"}
 
 Vamos a repasar el razonamiento realizado en este caso, que será el mismo que en el ejemplo anterior, insistiendo en los conceptos que ya hemos visto e introduciendo alguno nuevo.
 
--   De entrada suponemos que la máquina se mantiene ajustada (hipótesis nula). Eso es lo normal. Solo consideraremos que se ha desajustado (hipótesis alternativa) si los datos disponibles (<<el dato>> en este caso) están en contradicción con ese supuesto.
+-   De entrada suponemos que la máquina se mantiene ajustada (hipótesis nula). Eso es lo normal. Solo consideraremos que se ha desajustado (hipótesis alternativa) si los datos disponibles ("el dato" en este caso) están en contradicción con ese supuesto.
 	
 -   Tomamos un valor (estadístico de prueba) que servirá para valorar el desajuste. En general hay que calcularlo a partir de los datos disponibles, pero en este caso es el mismo dato, tal cual. Sabemos como se distribuye ese valor cuando la hipótesis nula es cierta.
 	
@@ -490,16 +490,563 @@ Para automatizar la toma de decisiones, podemos fijar un valor frontera para el 
 ::: callout-note
 ## ¿Por qué el 5 % es el valor habitual para el nivel de significación?
 
-Porque cuando se construyeron las primeras tablas estadísticas \index{Tablas! estadísticas}, con medios de cálculo rudimentarios, se eligieron valores críticos para probabilidades que eran números redondos en nuestro sistema decimal: 0,5 %, 1 %, 5 %, 10 %. Si tuviéramos 4 dedos en cada mano, seguramente la frontera se hubiera puesto en el 4 % 
+Porque cuando se construyeron las primeras tablas estadísticas, con medios de cálculo rudimentarios, se eligieron valores críticos para probabilidades que eran números redondos en nuestro sistema decimal: 0,5 %, 1 %, 5 %, 10 %. Si tuviéramos 4 dedos en cada mano, seguramente la frontera se hubiera puesto en el 4 % 
 :::
 
-Observe que, si la hipótesis nula es cierta, existe una probabilidad igual al nivel de significación de que sea <<injustamente>> rechazada (figura \ref{errorTipoII}, parte superior). Por esta razón en algunos contextos se le llama probabilidad de falsa alarma o de falso positivo; o, de una manera más general pero también más críptica: probabilidad de error tipo I. Lo bueno de todo esto es que nosotros decidimos qué probabilidad de error de este tipo estamos dispuestos a asumir.
+Observe que, si la hipótesis nula es cierta, existe una probabilidad igual al nivel de significación de que sea "injustamente" rechazada ([@fig-errorTipoII], parte superior). Por esta razón en algunos contextos se le llama probabilidad de falsa alarma o de falso positivo; o, de una manera más general pero también más críptica: probabilidad de error tipo I. Lo bueno de todo esto es que nosotros decidimos qué probabilidad de error de este tipo estamos dispuestos a asumir.
 
 También puede ocurrir  que el proceso se haya desajustado pero el valor obtenido no llegue a la zona de rechazo (falso negativo o error tipo II). No encontrar evidencias de incumplimiento de la hipótesis nula no significa que se haya demostrado que es cierta.
 
-![El estadístico de prueba puede caer en la zona de rechazo siendo cierta $\text{H}_0$ (error tipo I, parte superior) o puede no llegar a esa zona siendo falsa (error tipo II, parte inferior).](Figuras_08/f0808_errorTipoII.png){#fig-errorTipoII .fig-normal3 fig-align="center" width="100%"}
+![El estadístico de prueba puede caer en la zona de rechazo siendo cierta $\text{H}_0$ (error tipo I, parte superior) o puede no llegar a esa zona siendo falsa (error tipo II, parte inferior).](Figuras_08/f0808_errorTipoII.png){#fig-errorTipoII .fig-normal6 fig-align="center" width="100%"}
 
 Es habitual usar la analogía de un juicio para explicar el tipo de razonamiento que realizamos en el contraste de hipótesis. En un juicio, la hipótesis nula es que el acusado es inocente. Solo se le declara culpable si las pruebas o evidencias disponibles contradicen de manera clara la hipótesis de inocencia. Se le considera inocente a menos que se demuestre lo contrario, pero nunca se demuestra que es inocente. Del mismo modo, en estadística nunca demostramos que la hipótesis nula es verdadera; únicamente evaluamos si la evidencia es lo suficientemente fuerte como para rechazarla.
+
+```{=html}
+<div id="tbl-Analogia" class="tabla-wrapper_T0803">
+<table  margin: auto class="tabla-0804">
+
+<caption>Tabla 8.4: Analogía entre juicio y contraste de hipótesis.</caption>
+
+<colgroup>
+<col style="width: 14%;">
+<col style="width: 10%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+
+<tbody>
+<tr>
+  <td colspan="2"></td>
+   <td colspan="2">Tribunal declara al acusado...<br> [<em>lo que decidimos</em>]</td>
+</tr>
+
+<tr>
+  <td colspan="2"></td>
+   <td>No culpable</td>
+   <td>Culpable</td>
+</tr>
+
+<tr>
+  <td rowspan="2">El acusado es: <br> [<em>la realidad</em>]</td>
+  <td>Inocente</td>
+  <td style="background-color: #ccffcc;">Decisión correcta</td>
+  <td style="background-color: #ffcccc;">Error tipo I</td>
+</tr>
+
+<tr>
+  <td>Culpable</td>
+  <td style="background-color: #ffcccc;">Error tipo II</td>
+  <td style="background-color: #ccffcc;">Decisión correcta</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+```
+
+Si solo estamos interesados en las desviaciones hacia un lado, por ejemplo, solo nos preocupa dar menos peso del anunciado, esa probabilidad de error se concentra en un solo lado de la distribución (una sola *cola* en el argot habitual). Si nos preocupan las desviaciones tanto por exceso como por defecto debemos repartir el riesgo entre los dos extremos (las dos colas). En este caso también el $p$-valor se multiplica por dos para compararlo con el nivel de significación, ya que entendemos que la desviación que observamos hacia un lado también se podría haber dado hacia el otro.
+
+### A partir del valor medio de una muestra {.unnumbered}
+
+No hay que confundir una media con una observación individual. Las medias tienen menos variabilidad y concentran más información que las observaciones individuales, de manera que siempre es preferible decidir en base al valor de una media. 
+
+ En la [@fig-distMedia] hemos representado la distribución de los pesos de los paquetes de café con la distribución Normal que mejor se adapta al histograma de los datos históricos ($\mu = 1$ kg; $\sigma = 0.005$ kg) con un valor (punto azul) que tiene una probabilidad de 0,008 de ser superado. También hemos representado la distribución que siguen las medias de muestras de $n=4$ observaciones ($\mu=1$; $\sigma = 0.005/\sqrt{4}$) con un punto rojo "igual de raro" (con la misma probabilidad de ser superado) que la observación individual. El punto rojo aparece como un valor normal en la distribución de las observaciones individuales, pero no lo es en la distribución a la que verdaderamente pertenece. 
+ 
+![Distribución de las observaciones individuales (azul) y de las medias de 4 observaciones (rojo) con un valor perteneciente a cada distribución.](Figuras_08/f0809_distMedia.png){#fig-distMedia .fig-normal6 fig-align="center" width="100%"}
+
+::: callout-note
+## Media de una muestra frente a observación individual: No son lo mismo
+
+El valor de una media y el de una observación individual no se distinguen en nada. Son del mismo orden de magnitud y tienen el mismo aspecto y las mismas unidades, pero no son lo mismo. No tienen la misma variabilidad ni pertenecen a la misma distribución. Hay que tener cuidado de no confundirse. 
+:::
+
+Es mejor decidir en base al valor de una media, no tanto para disminuir la probabilidad de error Tipo I (rechazar la hipótesis nula cuando en realidad es cierta) que siempre podemos fijar en el valor que nos interesa, sino para --una vez fijada esa probabilidad-- disminuir la probabilidad de error Tipo II, es decir, de no rechazar la hipótesis nula cuando es falsa. 
+
+En la [@fig-errorTipoII] tenemos la distribución de los valores individuales y la correspondiente a las medias de 4 observaciones. En ambas distribuciones podemos fijar el valor que tiene una probabilidad de 0,05 de ser sobrepasado (hacia los valores bajos en nuestro caso).
+
+![Probabilidades de error tipo I y tipo II controlando observaciones individuales o medias de 4 unidades.](Figuras_08/f0808_errorTipoII.png){#fig-errorTipoII .fig-normal6 fig-align="center" width="100%"}
+
+Los valores críticos se han calculado haciendo:
+
+-   Observación individual: 
+
+    $z_{0.05} = \dfrac{x-\mu}{\sigma}  \rightarrow 1.645 = \dfrac{x-1}{0.005}  \rightarrow x = 0.9918$
+
+-   Media de 4 observaciones: 
+
+    $z_{0.05} = \dfrac{\bar{x}_4 - \mu}{\sigma/\sqrt{n}} \rightarrow  1.645 = \dfrac{\bar{x}_4-1}{0.005/\sqrt{4}} \rightarrow \bar{x}_4 = 0.9959$
+
+De manera que si un paquete pesa menos de 0,9918 g o la media de 4 no llega a 0,9959, con una probabilidad de error de 0,05 consideraremos que se están llenando los paquetes con menos peso del que es debido ($\mu$ < 1).
+
+Esa probabilidad de error (error tipo I) es la misma tanto si se controlan observaciones individuales como medias, pero si el proceso se descentra y pasa a llenar los paquetes con 0,990 kg la probabilidad de que no nos enteremos al tomar una unidad individual es:
+$$P(X > 0.9918 \; | \; \mu=0.99; \sigma = 0.005) = 0.36 $$
+Mientras que si controlamos medias de 4 observaciones, tenemos:
+$$P(X > 0.9959 \; | \; \mu=0.99; \sigma = 0.0025) = 0.009 $$
+
+### Nuevo enfoque en base a los valores de una muestra {.unnumbered}
+
+Una forma sencilla de hacernos una idea de como van las cosas es considerar que si los paquetes se están llenando en torno al valor objetivo, aproximadamente la mitad tendrán un peso por encima y la otra mitad  por debajo. Si el proceso está centrado en 1000 g, tomar 10 paquetes y que todos tengan un peso por debajo de 1000 es un suceso tan raro como lanzar 10 veces una moneda al aire y que las 10 veces salga cara. La [Tabla 8.5](#tbl-tablaSimulaMonedas) muestra las probabilidades asociadas al número de caras que se pueden obtener cuando se realizan 10 y 20 lanzamientos (aplicación directa de la distribución binomial).
+
+
+```{=html}
+<div id="tbl-tablaSimulaMonedas">
+<table class="tabla-0802_Titulo">
+<caption>Tabla 8.5: Probabilidades asociadas a la obtención de un determinado número de caras al realizar 10 y 20 lanzamientos de una moneda.).</caption>
+<tr style="height:0;"><td style="padding:0;"></td></tr>
+</table>
+</div>
+```
+
+::: columns
+::: {.column width="50%"}
+```{=html}
+<div class="tabla-wrapper_T0805a">
+<table class="tabla-0805">
+
+<colgroup>
+<col style="width: 8%;">
+<col style="width: 11%;">
+<col style="width: 11%;">
+</colgroup>
+
+<tbody>
+<tr>
+  <td colspan="3">10 lanzamientos</td>
+</tr>
+
+<tr>
+  <td>Num. <br> caras</td>
+  <td>Prob. <br> individual</td>
+  <td>Prob. <br> acumulada</td>
+</tr>
+
+<tr> <td>0 </td> <td> 0,001 </td> <td> 0,001</td> </tr>
+<tr> <td>1 </td> <td> 0,010 </td> <td> 0,011</td> </tr>
+<tr> <td>2 </td> <td> 0,044 </td> <td> 0,055</td> </tr> 
+<tr> <td>3 </td> <td> 0,117 </td> <td> 0,172</td> </tr> 
+<tr> <td>4 </td> <td> 0,205 </td> <td> 0,377</td> </tr> 
+<tr> <td>5 </td> <td> 0,246 </td> <td> 0,623</td> </tr> 
+<tr> <td>6 </td> <td> 0,205 </td> <td> 0,828</td> </tr> 
+<tr> <td>7 </td> <td> 0,117 </td> <td> 0,945</td> </tr> 
+<tr> <td>8 </td> <td> 0,044 </td> <td> 0,989</td> </tr> 
+<tr> <td>9 </td> <td> 0,010 </td> <td> 0,999</td> </tr> 
+<tr> <td>10 </td> <td> 0,001 </td> <td> 1,000</td> </tr>
+
+</tbody>
+</table>
+</div>
+```
+:::
+
+::: {.column width="50%"}
+```{=html}
+<div class="tabla-wrapper_T0805b">
+<table class="tabla-0805">
+
+<colgroup>
+<col style="width: 8%;">
+<col style="width: 11%;">
+<col style="width: 11%;">
+</colgroup>
+
+<tbody>
+<tr>
+  <td colspan="3">10 lanzamientos</td>
+</tr>
+
+<tr>
+  <td>Num. <br> caras</td>
+  <td>Prob. <br> individual</td>
+  <td>Prob. <br> acumulada</td>
+</tr>
+
+<tr> <td>0 </td> <td> 0,000 </td> <td> 0,000 </td> </tr>
+<tr> <td>1 </td> <td> 0,000 </td> <td> 0,000 </td> </tr>
+<tr> <td>2 </td> <td> 0,000 </td> <td> 0,000 </td> </tr>
+<tr> <td>3 </td> <td> 0,001 </td> <td> 0,001 </td> </tr>
+<tr> <td>4 </td> <td> 0,005 </td> <td> 0,006 </td> </tr>
+<tr> <td>5 </td> <td> 0,015 </td> <td> 0,021 </td> </tr>
+<tr> <td>6 </td> <td> 0,037 </td> <td> 0,058 </td> </tr>
+<tr> <td>7 </td> <td> 0,074 </td> <td> 0,132 </td> </tr>
+<tr> <td>8 </td> <td> 0,120 </td> <td> 0,252 </td> </tr>
+<tr> <td>9 </td> <td> 0,160 </td> <td> 0,412 </td> </tr>
+<tr> <td>10 </td> <td> 0,176 </td> <td> 0,588 </td> </tr>
+<tr> <td>11 </td> <td> 0,160 </td> <td> 0,748 </td> </tr>
+<tr> <td>12 </td> <td> 0,120 </td> <td> 0,868 </td> </tr>
+<tr> <td>13 </td> <td> 0,074 </td> <td> 0,942 </td> </tr>
+<tr> <td>14 </td> <td> 0,037 </td> <td> 0,979 </td> </tr>
+<tr> <td>15 </td> <td> 0,015 </td> <td> 0,994 </td> </tr>
+<tr> <td>16 </td> <td> 0,005 </td> <td> 0,999 </td> </tr>
+<tr> <td>17 </td> <td> 0,001 </td> <td> 1,000 </td> </tr>
+<tr> <td>18 </td> <td> 0,000 </td> <td> 1,000 </td> </tr>
+<tr> <td>19 </td> <td> 0,000 </td> <td> 1,000 </td> </tr>
+<tr> <td>20 </td> <td> 0,000 </td> <td> 1,000 </td> </tr>
+
+</tbody>
+</table>
+</div>
+```
+:::
+:::
+
+Si lo que nos preocupa es dar menos peso del anunciado, podemos tomar como estadístico de prueba el número de paquetes que tienen un peso por debajo del nominal en una muestra de $n$, y como distribución de referencia una binomial con parámetros $n$ (tamaño de muestra) y $p=0.5$. La hipótesis nula es que el proceso está centrado (es lo normal) y solo la rechazaremos si los datos la contradicen. En este caso no podemos elegir la probabilidad exacta que define la zona de rechazo porque el número de caras es una variable discreta y a cada uno de los valores que puede tomar le corresponde una probabilidad concreta, pero a la vista de los valores que aparecen en la [Tabla 8.5](#tbl-tablaSimulaMonedas) podemos decir que si en una muestra de 10 unidades solo 0 o 1 tienen un peso por encima del valor nominal (probabilidad de equivocarnos --error tipo I-- del orden del 1%), seguramente el proceso estará descentrado. Igual si en una muestra de 20 unidades solo tenemos 5 o menos por encima del valor nominal (probabilidad de equivocarnos del orden del 2%).
+
+## ¿Es eficaz un nuevo abono?
+
+Supongamos que nos dedicamos al cultivo de tomates y queremos analizar si el uso de un nuevo fertilizante aumenta la producción de las plantas.
+
+Lo primero --y lo más laborioso y delicado-- será planificar cómo se van a obtener los resultados de la cosecha y vigilar que todo el proceso se realice de la forma prevista hasta pesar los tomates. En principio, habrá que utilizar cuantas más plantas mejor[^8-3], pero siempre hay limitaciones (de espacio, de tiempo que podemos dedicar,...) y es mejor tener pocos datos recogidos con cuidado que tener muchos que no son fiables. Pongamos que podemos usar 20 plantas y las repartimos en dos grupos de 10. A las de un grupo no le pondremos abono, será el grupo de control, y al otro sí, será el grupo tratado. 
+
+[^8-3]: Veremos que se puede calcular el número de plantas necesario suponiendo una cierta variabilidad en los resultados y de acuerdo con unas probabilidades de error tipo I y tipo II previamente fijadas.
+
+Sin ser nosotros agricultores (habría que contar con un asesor que conozca bien todos los aspectos a considerar) habrá que estar seguros de que:
+
+-   Las 20 plántulas son "idénticas" (indistinguibles) con el mismo origen y las mismas características. La asignación de las plantas a cada grupo se debe realizar aleatoriamente, por ejemplo, escribiendo los números del 1 al 20 en 20 papeletas y asignando al azar una papeleta a cada planta. Las numeradas del 1 al 10 forman un grupo y el resto el otro.
+		
+-   El terreno en que se planten debe ser homogéneo, tanto en relación al tipo de tierra como al de la cantidad de agua y de sol (y otros factores que puedan influir) que recibe cada planta.
+	
+-   El fertilizante que se echa a las plantas del grupo tratado no debe llegar a las del grupo de control. Esto implica una cierta separación entre unas y otras que puede perjudicar la homogeneidad de las condiciones de cultivo.
+	
+-   No haya bichos ni plagas que afecten a algún grupo de plantas. Si así fuera quizá habría que eliminar la producción de alguna planta e incluso podría inutilizar todo el plan de recogida de datos.
+
+Ya han crecido las plantas y hemos recogido y pesado la producción de cada una. Los resultados, en kg, son:
+
+```{=html}
+<div class="tabla-wrapper_T0800">
+<table class="tabla-0800">
+
+<colgroup>
+<col style="width: 15%;">
+<col style="width: 8.5%;">
+<col style="width: 8.5%;">
+<col style="width: 8.5%;">
+<col style="width: 8.5%;">
+<col style="width: 8.5%;">
+<col style="width: 8.5%;">
+<col style="width: 8.5%;">
+<col style="width: 8.5%;">
+<col style="width: 8.5%;">
+<col style="width: 8.5%;">
+</colgroup>
+
+<tr>
+  <td>Control:</td>
+  <td>5,16</td>
+  <td>6,17</td>
+  <td>4,17</td>
+  <td>3,97</td>
+  <td>5,49</td>
+  <td>4,08</td>
+  <td>4,39</td>
+  <td>6,50</td>
+  <td>4,78</td>
+  <td>6,33</td>
+</tr>
+
+<tr>
+  <td>Tratado:</td>
+  <td>7,18</td>
+  <td>4,80</td>
+  <td>7,58</td>
+  <td>6,57</td>
+  <td>5,46</td>
+  <td>5,75</td>
+  <td>6,99</td>
+  <td>4,19</td>
+  <td>6,20</td>
+  <td>6,78</td>
+</tr>
+
+ </table>
+</div>
+```
+
+::: callout-note
+## ¿Por qué hace falta grupo de control?
+
+"Un estudio estadístico demuestra que un medicamento cura el resfriado en 4 días" ¿hay que recomendarlo? Si sin tomarlo se cura en 3 días no parece un gran avance. La bondad de un nuevo tratamiento --en el ámbito que sea-- siempre conviene analizarla comparándolo con el tratamiento habitual (grupo de control).
+:::
+
+A estas alturas ya hemos realizado casi todo el trabajo. ¿Ahora qué?
+
+### Análisis gráfico de los resultados obtenidos {.unnumbered}
+
+Antes de ponernos a realizar análisis más sofisticados siempre conviene representar los datos gráficamente, con dos objetivos:
+
+1. Detectar posibles valores anómalos que quizá conviene descartar, o errores de escritura o de transcripción. Si esos valores nos pasan desapercibidos las conclusiones pueden ser muy distintas y el ridículo mayúsculo.
+	
+2. Tener unas primeras conclusiones, que pueden ser definitivas si son muy claras. En caso de duda un test estadístico cuantifica el nivel de duda y ayudar a tomar una decisión.
+	
+En una situación como la que estamos analizando basta con realizar diagramas de puntos como los de la [@fig-dotplot]. La línea roja representa el valor medio de cada grupo.
+
+![Representación gráfica del peso de los tomates obtenidos en cada planta según pertenezcan al grupo sin abono (Control) o con abono (Tratado).](Figuras_08/f0811_dotplot.png){#fig-dotplot .fig-normal6 fig<tr> <td>align="center" width="100%"}
+
+El gráfico da la sensación de que las plantas con abono (representadas por el grupo tratado) tienen --en promedio-- más producción que las no abonadas (representadas por el grupo de control[^8-4]). La situación estaría mucho más clara si nos encontráramos en una de las situaciones que se muestran en la [@fig-dotplot2]. Si los datos del grupo tratado son los que corresponden a la situación A no podremos afirmar que el abono aumenta la cosecha, aunque la media de la producción es ligeramente superior que en el grupo tratado (5,2 frente a 5,1 kg). Por el contrario, si los resultados fueran los representados en la situación B, podríamos afirmar sin temor a equivocarnos que la producción es mayor con abono. 
+
+[^8-4]: Los datos que tenemos son solo los representantes de los grupos de interés, que son las producciones "en general" de las plantas con y sin abono.
+
+![No sería necesario seguir analizando los datos si los resultados fueran los de la situación A o B.](Figuras_08/f0812_dotplot2.png){#fig-dotplot2 .fig-normal6 fig<tr> <td>align="center" width="100%"}
+
+Volviendo a nuestros resultados, estamos "bastante seguros" de que el abono mejora la cosecha, pero no parece imposible que la diferencia observada se haya dado por casualidad. Si los dos valores del grupo tratado que están por encima de 7 kg estuvieran en torno a 5 kg, la impresión --solo cambiando dos números-- sería muy distinta.
+
+En una situación como esta, un test estadístico es útil para ayudarnos a tomar la decisión más adecuada.
+
+::: callout-note
+## ¿Qué aporta un test estadístico y qué no debemos esperar de él?
+
+Si a la vista de la representación gráfica de los resultados es un caso dudoso, lo seguirá siendo después de realizar un test. El test simplemente cuantifica la duda de forma objetiva y ayuda a tomar una decisión con probabilidad de error conocida.
+:::
+
+### ¿El azar explica la diferencia observada? {.unnumbered}
+
+Si no hubiera variabilidad aleatoria --si una planta, en igualdad de condiciones, siempre produjera la misma cantidad de tomates--, este problema sería trivial: bastaría con comparar una planta en las condiciones habituales y otra en esas mismas condiciones pero con abono. Si la planta abonada diera mayor cosecha, consideraríamos que el abono es eficaz y asunto resuelto. Pero sabemos que las cosas no son tan simples. Dos plantas que crecen en "igualdad de condiciones" (entre comillas, porque las condiciones nunca son idénticas) no dan exactamente la misma cosecha. Aunque el abono utilizado sea totalmente ineficaz, existe una probabilidad del 50\% de que, por simple azar, la planta con abono dé mayor cosecha.
+
+Realizar un test estadístico consiste en analizar si la diferencia observada entre el grupo de control y el grupo tratado puede atribuirse únicamente a la variabilidad aleatoria de los resultados, o si esa diferencia es demasiado grande para explicarse solo por el azar y debe existir algún factor que la provoque. Si el plan de recogida de datos se ha llevado a cabo correctamente, todos los factores que podrían influir en el resultado habrán afectado por igual a ambos grupos, salvo el que queremos evaluar. En ese caso, lo razonable es atribuir la diferencia a ese factor, que en nuestro caso es el uso de abono.
+
+Vamos a seguir el procedimiento habitual del contraste de hipótesis.
+
+#### Hipótesis nula frente a hipótesis alternativa {.unnumbered}
+
+La hipótesis nula será que el abono no es eficaz, es decir, que no aumenta la cosecha. La carga de la prueba la tiene el que afirma que sí afecta y esa será la alternativa. A efectos de tomar la decisión de utilizar el abono no importa si no aumenta la producción o si la disminuye. No hay peligro de que decidamos usar abono cuando su influencia es negativa. El riesgo lo concentramos en la posibilidad de considerar que el abono es eficaz cuando en realidad no lo es (error tipo I).
+
+#### Estadístico de prueba {.unnumbered}
+
+Existen varias opciones, vamos a usar una fácil de entender y que no tiene ningún misterio. Colocamos los pesos de las 20 plantas ordenados de menor a mayor y sumamos los números de orden de los que corresponden a cada tratamiento tal como se realiza en la [Tabla 7.1](#tbl-textDSNO). Si los valores del grupo tratado tienden a ser mayores que los del grupo de control, estos aparecerán al final de la lista y la suma de sus números de orden será mayor que la correspondiente al grupo de control. Por el contrario, si tanto el grupo de control como el tratado dan pesos similares sus valores aparecerán entremezclados en la lista ordenada y en ambos casos la suma de sus números de orden será similar.
+	
+Por tanto, la diferencia en la suma de los números de orden (vamos a llamarle $\Delta$) es una medida de la diferencia de pesos entre el grupo de control y el grupo tratado. Su valor máximo se da cuando todos los valores de un grupo aparecen primero y, a continuación, vienen los del otro grupo. En ese caso tenemos $\Delta_{max} = 20+19+18+ \cdots +11 - (10 +9+ \cdots +1) = 155-55 = 100$. En nuestro caso: $\Delta = 134-76 = 58$.
+
+```{=html}
+<div class="tabla-wrapper_T0806">
+<table class="tabla-0806">
+
+<caption>Tabla 8.6: Suma de los números de orden que corresponden a cada tratamiento.</caption>
+
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 15%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+
+<tbody>
+<tr>
+  <td>Número <br> de orden</td>
+  <td>Peso</td>
+  <td>Tratamiento</td>
+  <td>Número de orden <br> Grupo Control</td>
+  <td>Número de orden <br> Grupo tratado</td>
+</tr>
+
+<tr> <td>1</td> <td>3,97</td> <td>Control</td> <td>1</td> <td></td> </tr>
+<tr> <td>2</td> <td>4,08</td> <td>Control</td> <td>2</td> <td></td> </tr>
+<tr> <td>3</td> <td>4,17</td> <td>Control</td> <td>3</td> <td></td> </tr>
+<tr> <td>4</td> <td>4,19</td> <td>Tratado</td> <td></td> <td>4</td> </tr>
+<tr> <td>5</td> <td>4,39</td> <td>Control</td> <td>5</td> <td></td> </tr>
+
+<tr> <td>6</td> <td>4,78</td> <td>Control</td> <td>6</td> <td></td> </tr>
+<tr> <td>7</td> <td>4,80</td> <td>Tratado</td> <td></td> <td>7</td> </tr>
+<tr> <td>8</td> <td>5,16</td> <td>Control</td> <td>8</td> <td></td> </tr>
+<tr> <td>9</td> <td>5,46</td> <td>Tratado</td> <td></td> <td>9</td> </tr>
+<tr> <td>10</td> <td>5,49</td> <td>Control</td> <td>10</td> <td></td> </tr>
+
+<tr> <td>11</td> <td>5,75</td> <td>Tratado</td> <td></td> <td>11</td> </tr>
+<tr> <td>12</td> <td>6,17</td> <td>Control</td> <td>12</td> <td></td> </tr>
+<tr> <td>13</td> <td>6,20</td> <td>Tratado</td> <td></td> <td>13</td> </tr>
+<tr> <td>14</td> <td>6,33</td> <td>Control</td> <td>14</td> <td></td> </tr>
+<tr> <td>15</td> <td>6,50</td> <td>Control</td> <td>15</td> <td></td> </tr>
+
+<tr> <td>16</td> <td>6,57</td> <td>Tratado</td> <td></td> <td>16</td> </tr>
+<tr> <td>17</td> <td>6,78</td> <td>Tratado</td> <td></td> <td>17</td> </tr>
+<tr> <td>18</td> <td>6,99</td> <td>Tratado</td> <td></td> <td>18</td> </tr>
+<tr> <td>19</td> <td>7,18</td> <td>Tratado</td> <td></td> <td>19</td> </tr>
+<tr> <td>20</td> <td>7,58</td> <td>Tratado</td> <td></td> <td>20</td> </tr>
+
+<tr> 
+<td colspan="3">Suma de los números de orden:</td>
+<td>76</td> 
+<td>134</td>
+</tr>
+</tbody>
+</table>
+</div>
+```
+
+#### Distribución de referencia {.unnumbered}
+	
+Se trata de ver qué distribución sigue el valor de $\Delta$ cuando no hay diferencia entre tratamientos. Si se tienen 10 observaciones en cada grupo el número de ordenaciones posibles (permutaciones) de todo el conjunto es igual a $20!$. Sin embargo, dada una ordenación global, las reordenaciones dentro de un mismo tratamiento no cambian el valor del estadístico de prueba por lo que el número de ordenaciones total habrá que dividirlo por el número de ordenaciones dentro de cada grupo. 
+
+En nuestro ejemplo, la distribución de referencia estará compuesta por $\frac{20!}{10! \cdot 10!} = 184\;\!756$ valores que se pueden obtener mediante un programa que plantee todos los casos y determine el valor de $\Delta$ para cada uno de ellos. Si el programa se realiza con el paquete de software estadístico R o con Python existen librerías que realizan las permutaciones y facilitan mucho la tarea[^8-5]. El aspecto de la distribución de referencia calculada de esta forma es el que se muestra en la [@fig-distRefReal].
+
+[^8-5]: Nosotros hemos usado la librería [iterpc]{style="font-family: monospace;"} para R. Observe que basta calcular la suma $S$ correspondiente a los números de orden de un tratamiento ya que: $\Delta = 2S-210$
+
+![Distribución de la diferencia de la suma de números de orden cuando se tienen dos tratamientos con 10 observaciones cada uno.](Figuras_08/f0813_distRefReal.png){#fig-distRefReal .fig-normal6 fig-align="center" width="100%"}
+
+#### Cálculo del $p$-valor {.unnumbered}
+
+Es posible que, sin haber diferencia entre los dos tratamientos, una vez ordenados los resultados resulte que los del grupo de control ocupen las posiciones del 1 al 10 y los del tratado del 11 al 20, obteniendo $\Delta = 100$. Este es un valor posible pero la probabilidad de que esto ocurra por azar es $1/184\;\!756$, tan baja que lo más razonable es suponer que existe diferencia en el nivel de respuesta de ambos tratamientos. La probabilidad de tener, por ejemplo, $\Delta \geq 80$ es igual a $139/184\;\!756 = 0,075\%$, también un valor muy bajo.
+
+Con los datos de nuestro ejemplo tenemos $\Delta = 58$ y $P(\Delta \geq 58) = 2\;\!661 /184\;\!756 = 1.44\%$
+	
+La distribución de referencia también se puede construir calculando los valores de $\Delta$ que corresponden a asignaciones al azar de 10 valores a cada grupo. La distribución que aparece en la [@fig-distRefAlea] --prácticamente igual a la que habíamos obtenido anteriormente-- se ha realizado de esta forma calculando el valor de $\Delta$ un millón de veces. Valores iguales a nuestro estadístico de prueba $\Delta = 58$ o mayores se han obtenido $14\;\!356$ veces por lo que el $p$-valor es igual a $14\;\!356 / 1\;\!000\;\!000 = 1.44\%$, igual que con la distribución en que se han calculado todos sus valores de forma exhaustiva.
+
+![Cálculo del $p$-valor colocando el estadístico de prueba en la distribución de referencia.](Figuras_08/f0814_distRefAlea.png){#fig-distRefAlea .fig-normal6 fig-align="center" width="100%"}
+
+::: callout-note
+## ¿Qué decisión hay que tomar?
+
+El test estadístico **no dice** qué decisión hay que tomar, solo informa sobre la probabilidad de que una diferencia como la observada sea debida al azar. Cómo se valora esa probabilidad depende de qué riesgos se está dispuesto a asumir.
+:::
+
+### Otro estadístico de prueba con su distribución de referencia {.unnumbered}
+
+Usando como estadístico de prueba la diferencia entre las medias de los dos grupos. Tenemos:
+
+```{=html}
+<div class="tabla-wrapper_T0800b">
+<table class="tabla-0800b">
+
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+
+<tbody>
+<tr>
+  <td>Grupo de control:</td>
+  <td> $$\bar{y}_C = 5,104$$ </td>
+</tr>
+
+<tr>
+  <td>Grupo tratado:</td>
+  <td>$$\bar{y}_T = 6,150$$</td>
+</tr>
+
+<tr>
+  <td>Estadístico de prueba:</td>
+  <td>$$\bar{y}_T - \bar{y}_C = 6,150$$</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+```
+
+Considerar que el abono no afecta es lo mismo que suponer que la única diferencia entre ambos grupos es la etiqueta que se les pone. Bajo esta hipótesis, la diferencia de medias observada en nuestro caso será simplemente una de las muchas que se pueden obtener asignando a 10 resultados tomados al azar la etiqueta que los identifica como pertenecientes al grupo de control, y a los otros 10 la etiqueta del grupo tratado.
+
+En la tabla \ref{testPermuta} tenemos cinco posibles asignaciones de etiquetas (C: Control, T: Tratado) con el valor de la diferencia de medias obtenido en cada caso. 
+
+
+```{=html}
+<div id="tbl-Proporcion" class="tabla-wrapper_T0807">
+<div class="tabla-caption">
+  Tabla 8.7: Cálculo de 5 valores de una distribución de referencia para la diferencia de medias..
+</div>
+
+<table class="tabla-0807">
+
+<colgroup>
+<col style="width: 7%;">
+<col style="width: 7%;">
+<col style="width: 7%;">
+<col style="width: 7%;">
+<col style="width: 7%;">
+<col style="width: 7%;">
+</colgroup>
+
+<tbody>
+<tr>
+  <td rowspan="3">Peso</td>
+  <td colspan="5">Tratamiento (etiqueta)</td>
+</tr>
+
+<tr>
+  <td colspan="5">Cinco posibles permutaciones</td>
+</tr>
+
+<tr>
+  <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td>
+</tr>
+
+<tr> <td>3,97</td> <td>T</td> <td>C</td> <td>T</td> <td>T</td>  <td>T</td> </tr>
+<tr> <td>4,08</td> <td>C</td> <td>T</td> <td>C</td> <td>C</td>  <td>T</td> </tr>
+<tr> <td>4,17</td> <td>C</td> <td>C</td> <td>T</td> <td>T</td>  <td>C</td> </tr>
+<tr> <td>4,19</td> <td>C</td> <td>C</td> <td>T</td> <td>C</td>  <td>T</td> </tr>
+<tr> <td>4,39</td> <td>T</td> <td>C</td> <td>T</td> <td>C</td>  <td>C</td> </tr>
+
+<tr> <td>4,78</td> <td>T</td> <td>C</td> <td>C</td> <td>T</td>  <td>T</td> </tr>
+<tr> <td>4,80</td> <td>C</td> <td>C</td> <td>T</td> <td>T</td>  <td>T</td> </tr>
+<tr> <td>5,16</td> <td>T</td> <td>T</td> <td>C</td> <td>T</td>  <td>C</td> </tr>
+<tr> <td>5,46</td> <td>C</td> <td>T</td> <td>C</td> <td>T</td>  <td>C</td> </tr>
+<tr> <td>5,49</td> <td>T</td> <td>T</td> <td>C</td> <td>T</td>  <td>T</td> </tr>
+
+<tr> <td>5,75</td> <td>C</td> <td>T</td> <td>T</td> <td>C</td>  <td>C</td> </tr>
+<tr> <td>6,17</td> <td>C</td> <td>T</td> <td>T</td> <td>C</td>  <td>C</td> </tr>
+<tr> <td>6,20</td> <td>T</td> <td>T</td> <td>C</td> <td>C</td>  <td>C</td> </tr>
+<tr> <td>6,33</td> <td>T</td> <td>C</td> <td>T</td> <td>C</td>  <td>C</td> </tr>
+<tr> <td>6,50</td> <td>T</td> <td>C</td> <td>C</td> <td>C</td>  <td>T</td> </tr>
+
+<tr> <td>6,57</td> <td>C</td> <td>T</td> <td>T</td> <td>T</td>  <td>T</td> </tr>
+<tr> <td>6,78</td> <td>T</td> <td>T</td> <td>C</td> <td>T</td>  <td>T</td> </tr>
+<tr> <td>6,99</td> <td>C</td> <td>T</td> <td>C</td> <td>C</td>  <td>T</td> </tr>
+<tr> <td>7,18</td> <td>T</td> <td>C</td> <td>T</td> <td>T</td>  <td>C</td> </tr>
+<tr> <td>7,58</td> <td>C</td> <td>C</td> <td>C</td> <td>C</td>  <td>C</td> </tr>
+
+<tr> <td>$$\bar{y}_C$$</td> <td>5,576</td> <td>5,389</td> <td>5,902</td> <td>5,818</td>  <td>5,839</td> </tr>
+<tr> <td>$$\bar{y}_T$$</td> <td>5,678</td> <td>5,865</td> <td>5,352</td> <td>5,436</td>  <td>5,415</td> </tr>
+<tr> <td>$$\bar{y}_T - \bar{y}_C$$</td> <td>0,102</td> <td>0,476</td> <td>-0,550</td> <td>-0,382</td>  <td>-0,424</td> </tr>
+
+</tbody>
+</table>
+</div>
+```
+
+La distribución de referencia estará formada por el conjunto de todas las diferencias que se pueden obtener de esta forma, que como en el caso anterior es igual a $\frac{20!}{10! \cdot 10!}$ (permutaciones de 20 elementos con 10 y 10 repetidos). También en este caso los valores de la distribución de referencia hay que obtenerlos mediante un pequeño programa que calcule la diferencia de medias para cada una de las ordenaciones posibles de forma exhaustiva, o bien calcularla para una gran cantidad de ordenaciones tomadas al azar. 
+
+La figura \ref{distRefPermu} se ha construido con valores obtenidos  generando un millón de ordenaciones al azar. Han aparecido $194\;\!123$ valores[^8-6] mayores o iguales al estadístico de prueba (1,046). El $p$-valor resultante es en este caso del 1,9 %. 
+
+[^8-6]: En otra simulación este número no sería idéntico pero sí muy similar.
+
+![Otro test de comparación de medias. Distribución de referencia y determinación del $p$-valor.](Figuras_08/f0815_distRefPermu.png){#fig-distRefPermu .fig-normal6 fig-align="center" width="100%"}
+
+El $p$-valor que ahora hemos obtenido no es idéntico al anterior, no todos los test que es razonable realizar dan exactamente el mismo resultado, pero sí es similar y conduce a las mismas conclusiones.
+
+## ¿Es más probable llegar a futbolista profesional si se ha nacido en los primeros meses del año?
+
+Se dice que los nacidos en los primeros meses del año tienen más opciones de llegar a ser futbolistas profesionales que los nacidos más tarde[^8-7]. Se argumenta por el hecho de que las categorías infantiles se organizan por año de nacimiento, y a los 8 o 10 años casi un año de diferencia se nota mucho. Los nacidos a principios de año son los mayores del grupo, suelen ser más fuertes y tener más experiencia, lo que les permite destacar. Esto alimenta su confianza y sus ganas de convertirse en grandes jugadores, algo que no suele pasar con los más pequeños, que, en comparación, rinden menos. Además, los ojeadores tienden a fijarse más en los mayores —los que sobresalen— y les ofrecen jugar en equipos de mayor nivel, mientras que es más difícil que eso ocurra con los más pequeños.
+
+[^8-7]: Una detallada explicación de este fenómeno centrada en Canadá y en el hockey sobre hielo se encuentra en el libro de Malcolm Gladwell: "Outliers. The Story of Success", capítulo 1: "The Matthew Effect" (2008). Existe traducción al español con el título: "Fuera de serie: Por qué unas personas tienen éxito y otras no".
+
+En la temporada 2021-2022, de los 516 jugadores en las plantillas de la Primera División española, 308 (el 59,7\%) habían nacido en la primera mitad del año y el resto en la segunda[^8-8]. ¿Avalan estos datos la teoría de que nacer en la primera mitad del año aumenta las posibilidades de llegar a profesional?
+
+[^8-8]: Datos obtenidos en [https://www.transfermarkt.es](https://www.transfermarkt.es). 
+
+En principio, no es evidente si esa diferencia puede ser atribuida al azar, ya que no esperamos que exactamente la mitad de los jugadores haya nacido en la primera mitad del año; de la misma forma que no esperamos que, al lanzar 100 veces una moneda al aire, aparezcan exactamente 50 caras y 50 cruces.
+
+Si de los 516 tuviéramos que 260 (el 50,4 %) hubieran nacido en la primera mitad del año y 256 en la segunda, estaría claro que los datos no avalan la teoría planteada, mientras que si tuviéramos 482 (el 93,4 %) nacidos en los primeros meses y solo 26 en los últimos diríamos que claramente los nacidos en la primera mitad del año tienen más posibilidades de llegar a profesionales, ¿qué podemos decir con nuestros datos?
+
+Una vez más, vamos a seguir el proceso de razonamiento del contraste de hipótesis.
+
+#### 1. Hipótesis nula frente a alternativa {.unnumbered}
+
+En este caso la hipótesis nula es que la probabilidad de que un futbolista profesional haya nacido en la primera mitad del año es del 50 %. Esto es lo que --en principio-- sería normal. La carga de la prueba la tienen los que afirman que esa probabilidad es mayor.
+
+#### 2. Estadístico de prueba {.unnumbered}
+
+\noindent No hay muchas opciones donde elegir. Usaremos el número de futbolistas que en los datos disponibles han nacido en la primera mitad del año. Otra opción, que en el fondo es la misma, sería la proporción de los que han nacido en ese periodo.
+
+#### 3. Distribución de referencia {.unnumbered}
+
+Será la distribución del número de nacidos en la primera mitad del año de un total de 516 personas, suponiendo que la probabilidad de nacer en esa primera mitad es del 50 %. Esta es la que corresponde a una variable aleatoria con distribución binomial y parámetros: $n=516$ y $p=0.5$.
+
+#### 4. Cálculo del $p$-valor {.unnumbered}
+
+Se trata de analizar si nuestro valor (308) es normal en la distribución de referencia. Vemos (figura \ref{distRefFutbol}) que queda prácticamente fuera de la distribución y podemos calcular que la probabilidad de tener un valor como ese o mayor es del orden de 6 entre 1 millón. Por tanto, el estadístico de prueba no parece formar parte de la distribución a que debería pertenecer si la hipótesis nula fuese cierta. Lo más razonable es rechazar la hipótesis nula y considerar que el azar no explica ese desequilibrio en el número de nacimientos en la primera y segunda mitad del año.
+
+
+
+
+
 
 
 

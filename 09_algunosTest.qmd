@@ -4,4 +4,98 @@ Planteamiento de la pregunta de manera clara y concreta
 
 Diseño de la recogida de los datos
 
-Análisis de los resultados (distribución binomial)
+Análisis de los resultados (distribución binomial) Análisis de los resultados (distribución binomial) Análisis de los resultados (distribución binomial) Análisis de los resultados (distribución binomial)
+
+::: columns
+::: {.column width="50%"}
+```{=html}
+<div class="tabla-wrapper_T0802">
+<table class="tabla-0805">
+
+<colgroup>
+<col style="width: 8%;">
+<col style="width: 11%;">
+<col style="width: 11%;">
+</colgroup>
+
+<tbody>
+<tr>
+  <td colspan="3">10 lanzamientos</td>
+</tr>
+
+<tr>
+  <td>Num. <br> caras</td>
+  <td>Prob. <br> individual</td>
+  <td>Prob. <br> acumulada</td>
+</tr>
+
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+
+
+
+</tbody>
+</table>
+</div>
+```
+:::
+
+::: {.column width="50%"}
+```{=html}
+<div class="tabla-wrapper_T0802">
+<table class="tabla-0805">
+
+<colgroup>
+<col style="width: 8%;">
+<col style="width: 11%;">
+<col style="width: 11%;">
+</colgroup>
+
+<tbody>
+<tr>
+  <td colspan="3">10 lanzamientos</td>
+</tr>
+
+<tr>
+  <td>Num. <br> caras</td>
+  <td>Prob. <br> individual</td>
+  <td>Prob. <br> acumulada</td>
+</tr>
+
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+<tr> <td>0</td> <td>3362</td> <td>29</td> </tr>
+
+</tbody>
+</table>
+</div>
+```
+:::
+:::

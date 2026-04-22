@@ -2,19 +2,19 @@
 
 Cuando se observa algún tipo de relación entre dos variables, $x$ e $y$, puede interesar explicarla a través de una función del tipo $y =f(x)$, donde a $y$ le llamamos variable dependiente o respuesta y a $x$ variable explicativa o regresora. Esta función sirve para entender qué tipo de influencia tiene $x$ sobre $y$, y también para realizar estimaciones sobre el valor que tomará $y$ dado un valor de $x$.
 
-Si la relación es lineal, la ecuación que la describe es la de una recta, que escribimos de la forma: $y = b_0 + b_1x$. El coeficiente $b_1$ es la pendiente y a $b_0$ a veces se le denomina "constante" (aunque no lo es) o "intercepto" porque es el valor en que la recta <<intercepta>> al eje de ordenadas. Nosotros le llamaremos "ordenada en el origen", un nombre más largo pero que no necesita explicación.
+Si la relación es lineal, la ecuación que la describe es la de una recta, que escribimos de la forma: $y = b_0 + b_1x$. El coeficiente $b_1$ es la pendiente y a $b_0$ a veces se le denomina "constante" (aunque no lo es) o "intercepto" porque es el valor en que la recta "intercepta" al eje de ordenadas. Nosotros le llamaremos "ordenada en el origen", un nombre más largo pero que no necesita explicación.
 
 ## Modelo determinista frente a modelo estadístico
 
 La fórmula que aparece en los libros de física sobre el alcance de un tiro parabólico es un modelo determinista. Dando valores a las variables que intervienen (ángulo, velocidad inicial) se obtiene el valor exacto del alcance. Estos modelos pertenecen al ámbito de la teoría o son una simplificación de la realidad. En la práctica intervienen otras variables no controladas, o no somos capaces de fijar las variables que intervienen en el valor exacto que deben tener, por lo que el resultado siempre está afectado por una cierta incertidumbre.
 
-En los modelos estadísticos esa incertidumbre está explícita. Sabemos que el volumen de madera que se puede obtener de un árbol depende de su altura y del diámetro del tronco, pero dados los valores de estas variables no podemos determinar <<exactamente>> el volumen de madera que se va a obtener. A partir de los volúmenes y de las características de otros árboles similares podemos crear un modelo estadístico.
+En los modelos estadísticos esa incertidumbre está explícita. Sabemos que el volumen de madera que se puede obtener de un árbol depende de su altura y del diámetro del tronco, pero dados los valores de estas variables no podemos determinar "exactamente" el volumen de madera que se va a obtener. A partir de los volúmenes y de las características de otros árboles similares podemos crear un modelo estadístico.
 
 En un modelo estadístico entendemos que la ecuación obtenida indica --con mayor o menor precisión-- la zona en que se encuentra la respuesta para un determinado valor de la variable regresora. Si tenemos $n$ puntos, el modelo de regresión lineal simple lo escribimos de la forma:
 $$y_i = b_0 + b_1 x_i + e_i \quad \text{para} \quad i = 1, 2, \dots, n$$
 Donde el verdadero valor de la respuesta, $y_i$, es igual al punto sobre la recta más un valor $e_i$ que llamamos residuo y que no podemos prever. Al punto sobre la recta le llamamos "valor estimado" y para distinguirlo del valor real le colocamos una especie de gorro encima: $\hat{y}_i$. Por tanto, también podemos escribir:
 $$\hat{y}_i = b_0 + b_1 x_i \quad \text{para} \quad i = 1, 2, \cdots, n$$
-La figura \ref{resiRecta} (izquierda) contiene un diagrama bivariante con 6 puntos y su recta ajustada, mostrando el residuo correspondiente a cada punto. A la derecha tenemos la ecuación de la recta y la identificación de sus parámetros.
+La [@fig-resiRecta] (izquierda) contiene un diagrama bivariante con 6 puntos y su recta ajustada, mostrando el residuo correspondiente a cada punto. A la derecha tenemos la ecuación de la recta y la identificación de sus parámetros.
 
 ![Para cada punto se indica su residuo. A la derecha, ecuación de la recta.](Figuras_11/f1101_resiRecta.png){#fig-resiRecta .fig-normal6 fig-align="center" width="100%"}
 
@@ -22,18 +22,18 @@ Los residuos tienen un papel protagonista cuando se ajusta un modelo de regresi�
 
 ## Ajuste a una recta
 
-Si entre la respuesta y la variable regresora se observa una relación lineal, \index{Modelo! lineal} se determina la ecuación de la recta que mejor se adapta a los puntos disponibles. Lo que significa <<mejor>> es discutible. Veamos algunas formas de hacerlo.
+Si entre la respuesta y la variable regresora se observa una relación lineal, se determina la ecuación de la recta que mejor se adapta a los puntos disponibles. Lo que significa "mejor" es discutible. Veamos algunas formas de hacerlo.
 
 ### A ojo {.unnumbered}
 
 Se traza la recta directamente sobre el papel o se identifican dos puntos de paso y a partir de ellos se calculan los coeficientes del modelo.
 
-A pesar de sus evidentes limitaciones, si solo se trata de tener la recta no es un método tan malo como parece. Con un poco de práctica el ajuste no será muy distinto del <<perfecto>> y no se cometerán errores de bulto debido a la presencia de valores anómalos, cosa que sí puede ocurrir si se tratan los datos de forma automática sin mirarlos.
+A pesar de sus evidentes limitaciones, si solo se trata de tener la recta no es un método tan malo como parece. Con un poco de práctica el ajuste no será muy distinto del "perfecto" y no se cometerán errores de bulto debido a la presencia de valores anómalos, cosa que sí puede ocurrir si se tratan los datos de forma automática sin mirarlos.
 
-![Ajuste a ojo y el que minimiza la suma de los cuadrados de los residuos.](Figuras_11/f1102_regresionAOjo.png){#fig-regresionAOjo .fig-normal6 fig-align="center" width="100%"}
+![Ajuste a ojo y el que minimiza la suma de los cuadrados de los residuos.](Figuras_11/f1102_regresionAOjo.png){#fig-regresionAOjo .fig-normal6 fig-align="center" width="95%"}
 
 ```{=html}
-<div id="tbl-ProsCons"; class="tabla-wrapper34">
+<div id="tbl-ProsCons"; class="tabla-wrapper04">
 <table class="tabla-ProsCons">
 
 <caption>Tabla 11.1: Ajuste a ojo. Ventajas e inconvenientes.</caption>
@@ -89,10 +89,10 @@ A pesar de sus evidentes limitaciones, si solo se trata de tener la recta no es 
 
 Se identifica el primer y el tercer cuartil de los valores de $X$ $(X_{Q1}$ y $X_{Q3})$, e igual para los valores de $Y$ $(Y_{Q1}$ y $Y_{Q3})$. Se traza la recta por los puntos $(X_{Q1}$,\;$Y_{Q1})$ y $(X_{Q3}$,\;$Y_{Q3})$. Se obtiene una recta muy razonable sin necesidad de realizar cálculos ni de aplicar fórmulas de las que se desconoce su lógica.
 
-![Ajuste por el método de Ishikawa y el que minimiza la suma de los cuadrados de los residuos.](Figuras_11/f1103_regresionIshikawa.png){#fig-regresionIshikawa .fig-normal6 fig-align="center" width="100%"}
+![Ajuste por el método de Ishikawa y el que minimiza la suma de los cuadrados de los residuos.](Figuras_11/f1103_regresionIshikawa.png){#fig-regresionIshikawa .fig-normal6 fig-align="center" width="95%"}
 
 ```{=html}
-<div id="tbl-ProsCons"; class="tabla-wrapper34">
+<div id="tbl-ProsCons"; class="tabla-wrapper04">
 <table class="tabla-ProsCons">
 
 <caption>Tabla 11.2: Método de Ishikawa. Ventajas e inconvenientes.</caption>
@@ -114,7 +114,7 @@ Se identifica el primer y el tercer cuartil de los valores de $X$ $(X_{Q1}$ y $X
 
       <!-- ✅ SEGUNDA CELDA -->
       <td style="padding: 12px 15px 8px 0px; vertical-align: top;">
-        <ul style="margin: 0; padding-left: 6px; line-height: 1.2;">
+        <ul style="margin: 0; padding-left: 6px; line-height: 1.1;">
           <li>Fácil de entender.</li>
           <li>Robusto frente a la presencia de valores anómalos o con excesiva influencia.</li>
         </ul>
@@ -155,12 +155,13 @@ Se trata de obtener los valores de $b_0$ y $b_1$ que cumplen la expresión:
 $$\sum_{i=1}^n \left[ Y_i - (b_0 + b_1 X_i) \right]= 0$$ 
 que es equivalente a: $n\bar{Y} - nb_0 - b_1 n \bar{X} = 0$. Por tanto, con cualquier par de valores $b_0$ y $b_1$ que verifiquen la expresión $\bar{Y} = b_0 + b_1 \bar{X}$, es decir, con cualquier recta que pase por ($\bar{X}$, $\bar{Y}$) tendremos una suma de residuos igual a cero.
 
-Que haya infinitas rectas que cumplan esa condición es una mala señal, porque seguro que no todas son adecuadas. Para los valores representados en la figura \ref{residuosSuma} tenemos que $\bar{X}= 6$ y $\bar{Y}= 9$. Rectas que hacen que la suma de los residuos sea igual a cero son, por ejemplo, la que tiene coeficientes $b_0=9$ y $b_1=0$, es decir: $Y = 9$, o también $b_0 = 12$ y $b_1 = -0.5$, es decir: $Y = 12 -0.5X$ y ambas son claramente muy malos ajustes.
+Que haya infinitas rectas que cumplan esa condición es una mala señal, porque seguro que no todas son adecuadas. Para los valores representados en la [@fig-residuosSuma] tenemos que $\bar{X}= 6$ y $\bar{Y}= 9$. Rectas que hacen que la suma de los residuos sea igual a cero son, por ejemplo, la que tiene coeficientes $b_0=9$ y $b_1=0$, es decir: $Y = 9$, o también $b_0 = 12$ y $b_1 = -0.5$, es decir: $Y = 12 -0.5X$ y ambas son claramente muy malos ajustes.
+<br>
 
-![Dos ajustes -claramente muy malos- con suma de residuos igual a cero.](Figuras_11/f1104_residuosSuma.png){#fig-residuosSuma .fig-normal6 fig-align="center" width="100%"}
+![Dos ajustes -claramente muy malos- con suma de residuos igual a cero.](Figuras_11/f1104_residuosSuma.png){#fig-residuosSuma .fig-normal6 fig-align="center" width="95%"}
 
 ```{=html}
-<div id="tbl-ProsCons"; class="tabla-wrapper34">
+<div id="tbl-ProsCons"; class="tabla-wrapper04">
 <table class="tabla-ProsCons">
 
 <caption>Tabla 11.3: Suma de los residuos igual a cero. Ventajas e inconvenientes.</caption>
@@ -172,7 +173,7 @@ Que haya infinitas rectas que cumplan esa condición es una mala señal, porque 
   <tbody>
     <tr style="border-top: 1px solid #dee2e6; border-bottom: 1px solid #dee2e6;">
       <!-- ✅ PRIMERA CELDA -->
-      <td style="padding: 8px 0px 8px 0px; vertical-align: top; text-align: center;">
+      <td style="padding: 2px 0px 16px 0px; vertical-align: top; text-align: center;">
       <!-- top right bottom left -->
         <div style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
           <strong>PROS</strong>
@@ -181,7 +182,7 @@ Que haya infinitas rectas que cumplan esa condición es una mala señal, porque 
       </td>
 
       <!-- ✅ SEGUNDA CELDA -->
-      <td style="padding: 12px 15px 8px 0px; vertical-align: top;">
+      <td style="padding: 8px 15px 8px 0px; vertical-align: top;">
         <ul style="margin: 0; padding-left: 6px; line-height: 1.2;">
           <li>Ninguna.</li>
         </ul>
@@ -190,7 +191,7 @@ Que haya infinitas rectas que cumplan esa condición es una mala señal, porque 
 
     <tr style="border-top: 1px solid #dee2e6; border-bottom: 1px solid #dee2e6;">
       <!-- ✅ PRIMERA CELDA -->
-      <td style="padding: 8px 0px 8px 0px; vertical-align: top; text-align: center;">
+      <td style="padding: 4px 0px 8px 0px; vertical-align: top; text-align: center;">
         <div style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
           <strong>CONS</strong>
           <span class="fa-solid fa-thumbs-down fa-xl" style="color: #f03333; "></span>
@@ -216,9 +217,9 @@ $$S=\sum_{i=1}^n \left| Y_i - (b_0 + b_1 X_i) \right|$$
 
 Puede no tener solución única, pero los resultados posibles son mucho más razonables que en el caso anterior. Un problema específico de este caso es que no existen expresiones analíticas para los coeficientes debido a las dificultades en el manejo de la función "valor absoluto".
 
-La figura \ref{residuosValorAbsoluto} muestra dos diagramas con los mismos 4 puntos y las rectas que cumplen el criterio establecido, en todas ellas la suma del valor absoluto de los residuos es igual a 2. La línea  azul, que es la misma en los dos diagramas, es la que también minimiza la suma de los cuadrados de los residuos.
+La [@fig-residuosValorAbsoluto] muestra dos diagramas con los mismos 4 puntos y las rectas que cumplen el criterio establecido, en todas ellas la suma del valor absoluto de los residuos es igual a 2. La línea  azul, que es la misma en los dos diagramas, es la que también minimiza la suma de los cuadrados de los residuos.
 
-[!Posibles rectas que minimizan la suma de los residuos en valor absoluto.](Figuras_11/f1105_residuosValorAbsoluto.png){#fig-residuosValorAbsoluto .fig-normal6 fig-align="center" width="100%"}
+![Posibles rectas que minimizan la suma de los residuos en valor absoluto.](Figuras_11/f1105_residuosValorAbsoluto.png){#fig-residuosValorAbsoluto .fig-normal6 fig-align="center" width="100%"}
 
 ```{=html}
 <div id="tbl-ProsCons"; class="tabla-wrapper34">
@@ -233,7 +234,7 @@ La figura \ref{residuosValorAbsoluto} muestra dos diagramas con los mismos 4 pun
   <tbody>
     <tr style="border-top: 1px solid #dee2e6; border-bottom: 1px solid #dee2e6;">
       <!-- ✅ PRIMERA CELDA -->
-      <td style="padding: 8px 0px 8px 0px; vertical-align: top; text-align: center;">
+      <td style="padding: 2px 0px 16px 0px; vertical-align: top; text-align: center;">
       <!-- top right bottom left -->
         <div style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
           <strong>PROS</strong>
@@ -259,7 +260,7 @@ La figura \ref{residuosValorAbsoluto} muestra dos diagramas con los mismos 4 pun
       </td>
       
        <!-- ✅ SEGUNDA CELDA -->
-      <td style="padding: 12px 15px 8px 0px; vertical-align: top;">
+      <td style="padding: 12px 15px 4px 0px; vertical-align: top;">
         <ul style="margin: 0; padding-left: 18px; line-height: 1.2;">
           <li>No da un ajuste equilibrado entre todos los puntos.</li>
           <li>No existe expresión analítica para el cálculo de los coeficientes.</li>
@@ -281,7 +282,7 @@ Elevamos los residuos al cuadrado para evitar que al sumarlos se compensen los p
 
 En vez de decir que el criterio de ajuste ha sido "minimizar la suma de los cuadrados de los residuos", simplemente decimos que hemos ajustado por "mínimos cuadrados". Este es el método usado en la inmensa mayoría de los casos, produce un ajuste equilibrado de la nube de puntos y está en perfecta sintonía con otras técnicas y medidas que se construyen con criterios similares. Un inconveniente de este método es que el modelo obtenido es sensible a la presencia de valores anómalos, cosa que no ocurre si se minimiza la suma de valores absolutos.
 
-En la primera fila de la figura \ref{residuosMinimosCuadrados} tenemos una situación típica en la que el ajuste por mínimos cuadrados da un mejor resultado que minimizando la suma del valor absoluto. Sin embargo, en la segunda fila tenemos un caso de puntos perfectamente alineados excepto uno que muy probablemente sería un valor anómalo. Si minimizamos el valor absoluto de los residuos, el ajuste ignora el valor anómalo mientras que ajustando por mínimos cuadrados el valor anómalo tiene una notable influencia sobre la recta ajustada.
+En la primera fila de la [@fig-residuosMinimosCuadrados] tenemos una situación típica en la que el ajuste por mínimos cuadrados da un mejor resultado que minimizando la suma del valor absoluto. Sin embargo, en la segunda fila tenemos un caso de puntos perfectamente alineados excepto uno que muy probablemente sería un valor anómalo. Si minimizamos el valor absoluto de los residuos, el ajuste ignora el valor anómalo mientras que ajustando por mínimos cuadrados el valor anómalo tiene una notable influencia sobre la recta ajustada.
 
 ![Ajustes obtenidos minimizando la suma de valores absolutos y la suma de los cuadrados de los residuos.](Figuras_11/f1106_residuosMinimosCuadrados.png){#fig-residuosMinimosCuadrados .fig-normal6 fig-align="center" width="100%"}
 
@@ -289,7 +290,7 @@ En la primera fila de la figura \ref{residuosMinimosCuadrados} tenemos una situa
 <div id="tbl-ProsCons"; class="tabla-wrapper34">
 <table class="tabla-ProsCons">
 
-<caption>Tabla 11.5:Minimizar la suma de los cuadrados de los residuos. Ventajas e inconvenientes.</caption>
+<caption>Tabla 11.5: Minimizar la suma de los cuadrados de los residuos. Ventajas e inconvenientes.</caption>
 
   <colgroup>
     <col style="width: 10%;">
@@ -336,7 +337,7 @@ En la primera fila de la figura \ref{residuosMinimosCuadrados} tenemos una situa
 </div>
 ```
 
-## Mínimos cuadrados. Cálculo de los coeficientes]{Mínimos cuadrados. Cálculo de los coeficientes
+## Mínimos cuadrados. Cálculo de los coeficientes
 
 Existe una fórmula cerrada y con solución única para cada coeficiente, pero vamos a empezar identificando el valor de los coeficientes sin hacer uso de las fórmulas. Naturalmente, es mucho más rápido y más práctico usarlas o --mejor todavía-- usar un paquete de software estadístico o una hoja de cálculo, pero hacerlo sin fórmulas permite entender perfectamente qué es lo que se está haciendo, y también descubrir algún detalle interesante.
 
@@ -344,7 +345,7 @@ Existe una fórmula cerrada y con solución única para cada coeficiente, pero v
 
 Realizamos a ojo una primera estimación del valor de los coeficientes. A continuación, mediante un pequeño programa --o también usando una hoja de cálculo--, hacemos un barrido de los valores de $b_0$ y $b_1$ en torno a los estimados, identificando el par que minimiza la suma de los cuadrados de los residuos.
 
-Vayamos al diagrama de la figura \ref{coeficientesSinFormulas} (izquierda) que ya habíamos visto en las figuras \ref{aOjo} y \ref{regresionIshikawa}. La recta ajustada a ojo pasa por los puntos (-4,75; 0) y (5,75; 60) por lo que sus coeficientes son: $b_1$ = 5,71 y $b_0$ = 27,14. Sería mucha casualidad que esos fueran los valores exactos que estamos buscando, pero no andarán muy lejos. Vamos a crear una malla de valores de $b_0$ y $b_1$. Los valores de $b_1$ variarán de 2 a 8 con incrementos de 0,1 y para cada uno de esos, los de $b_0$ irán de 20 a 35 también en saltos de 0,1. A cada combinación de esos dos valores corresponde una recta, y a cada recta una suma de los cuadrados de los residuos. El par de valores que minimizan esa suma de cuadrados son: $b_0$ = 27,0 y $b_1$ = 4,9.
+Vayamos al diagrama de la [@fig-coeficientesSinFormulas] (izquierda) que ya habíamos visto en las figuras [@fig-regresionAOjo] y [@fig-regresionIshikawa]. La recta ajustada a ojo pasa por los puntos (-4,75; 0) y (5,75; 60) por lo que sus coeficientes son: $b_1$ = 5,71 y $b_0$ = 27,14. Sería mucha casualidad que esos fueran los valores exactos que estamos buscando, pero no andarán muy lejos. Vamos a crear una malla de valores de $b_0$ y $b_1$. Los valores de $b_1$ variarán de 2 a 8 con incrementos de 0,1 y para cada uno de esos, los de $b_0$ irán de 20 a 35 también en saltos de 0,1. A cada combinación de esos dos valores corresponde una recta, y a cada recta una suma de los cuadrados de los residuos. El par de valores que minimizan esa suma de cuadrados son: $b_0$ = 27,0 y $b_1$ = 4,9.
 
 ![Recta ajustada a ojo (izquierda) y suma de los cuadrados de los residuos para cada par de valores $b_0$ y $b_1$. En rojo, valores que la minimizan (derecha).](Figuras_11/f1107_coeficientesSinFormulas.png){#fig-coeficientesSinFormulas .fig-normal6 fig-align="center" width="100%"}
 
@@ -367,8 +368,7 @@ Igualando a cero estas expresiones:
 
 $$\sum_{i=1}^n y_i - nb_0 - b_1 \sum_{i=1}^n x_i = 0$$ {#eq-11.1}
 	
-$$\sum_{i=1}^n x_i y_i - b_0 \sum_{i=1}^n x_i - b_1 \sum_{i=1}^n  x_i^2  = 0$$ {#eq-11.3}
-\end{equation}
+$$\sum_{i=1}^n x_i y_i - b_0 \sum_{i=1}^n x_i - b_1 \sum_{i=1}^n  x_i^2  = 0$$ {#eq-11.2}
 
 Dividiendo por $n$ todos los términos de la ecuación -@eq-11.1 tenemos:
 
@@ -391,11 +391,11 @@ También la expresión de $b_1$ se suele dar de la forma (ver Apéndice 10.A):
 
 $$b_1 = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sum (x_i - \bar{x})^2}$$ {#eq-11.5}
 
-A partir de la ecuación \eqref{eq-expresion_b1_3} y recordando las expresiones de la covarianza y del coeficiente de correlación, llegamos a una expresión que también se ve con frecuencia en los libros de texto, seguramente porque una calculadora sencilla da directamente los tres valores que intervienen:
+A partir de la ecuación -@eq-11.5 y recordando las expresiones de la covarianza y del coeficiente de correlación, llegamos a una expresión que también se ve con frecuencia en los libros de texto, seguramente porque una calculadora sencilla da directamente los tres valores que intervienen:
 
 $$b_1 = \frac{Cov(XY)}{s_X^2} = \frac{r_{XY} s_X s_Y}{s_X^2} = r_{XY} \frac{s_Y}{s_X}$$ {#eq-11.6}
 
-Calculando los coeficientes que corresponden a los datos de la figura \ref{coeficientesSinFormulas} se obtiene:
+Calculando los coeficientes que corresponden a los datos de la [@fig-coeficientesSinFormulas] se obtiene:
 $$b_0 = 26,9615 \qquad  \qquad b_1 = 4,8616$$ {#eq-11.7}
 
 Ahora sí, con todos los decimales que queramos, aunque dar más decimales de los que tienen los datos es añadir números que no aportan ninguna información, dan una falsa sensación de precisión y complican la lectura del resultado.
@@ -406,9 +406,9 @@ Ahora sí, con todos los decimales que queramos, aunque dar más decimales de lo
 Sean, por ejemplo, los puntos: (4; 3), (6; 8), (8; 12), (10; 10), (12; 12). La recta ajustada es: $y = 1+x$. Si en vez de ajustar $y = f(x)$ se ajusta $x=f(y)$ ¿se obtendrá la ecuación resultante de despejar $x$ en $y=f(x)$, es decir: $x = -1 + y$? Si ajustamos $x=f(y)$ la ecuación será: $x=1,57+0,714y$. No es lo mismo minimizar la suma de los cuadrados de los residuos medidos en dirección vertical que en dirección horizontal (esto último no son los residuos). 
 :::
 
-## Calidad del ajuste
+## Calidad del ajuste {#sec-calidadAjuste}
 
-El gráfico de la izquierda de la figura \ref{ArbolMano} muestra la relación entre la longitud de la circunferencia ($X$) de los troncos de un determinado tipo de árbol y el volumen de madera ($Y$) que se puede obtener de ellos[^11-1]. Se observa que a más circunferencia mayor volumen de madera, tal como era de esperar, y la ecuación de la recta ajustada es útil para estimar cuánta madera se obtendrá de un tronco de determinado diámetro. Sin embargo, el gráfico de la derecha se ha realizado con los datos de un estudio\textsuperscript{\ref{nota1}} donde se analiza la relación entre la edad al morir y la longitud de cierta línea de la mano, a partir de una muestra de 50 personas fallecidas. A la vista del diagrama queda claro que no hay ninguna relación entre ambas variables. En este caso el modelo ajustado no sirve para nada. Pero los dos modelos tienen el mismo aspecto y solo a la vista del valor de sus coeficientes es imposible saber cuál de los dos es útil.
+El gráfico de la izquierda de la [@fig-ArbolMano] muestra la relación entre la longitud de la circunferencia ($X$) de los troncos de un determinado tipo de árbol y el volumen de madera ($Y$) que se puede obtener de ellos[^11-1]. Se observa que a más circunferencia mayor volumen de madera, tal como era de esperar, y la ecuación de la recta ajustada es útil para estimar cuánta madera se obtendrá de un tronco de determinado diámetro. Sin embargo, el gráfico de la derecha se ha realizado con los datos de un estudio[^11-1] donde se analiza la relación entre la edad al morir y la longitud de cierta línea de la mano, a partir de una muestra de 50 personas fallecidas. A la vista del diagrama queda claro que no hay ninguna relación entre ambas variables. En este caso el modelo ajustado no sirve para nada. Pero los dos modelos tienen el mismo aspecto y solo a la vista del valor de sus coeficientes es imposible saber cuál de los dos es útil.
 
 [^11-1]: Son los datos que ya vimos en el capítulo anterior, apartado 10.1.
 
@@ -423,11 +423,11 @@ A continuación calculamos la suma de los cuadrados de los residuos correspondie
 El valor de $R^2$ es igual a la proporción de $Q_Y$ explicada por $X$, es decir, la proporción en que disminuye $Q_Y$ gracias a la introducción de $X$ como variable explicativa, es decir:
 $$ R^2 = \frac{Q_Y - Q_R}{Q_Y} $$
 
-Veamos este cálculo en un ejemplo con datos sencillos. En la figura \ref{R2} tenemos 5 puntos que podrían representar la relación entre el peso y la estatura de 5 individuos. Si, ignorando la información aportada por la estatura, siempre damos una estimación del peso igual a su valor medio, será como ajustar a una recta horizontal y tendremos una suma de los cuadrados de los residuos $Q_Y = 56$. Sin embargo, si utilizamos la información que aporta la estatura y realizamos el ajuste minimizando la suma de los cuadrados de los residuos tenemos $Q_R = 16$.
+Veamos este cálculo en un ejemplo con datos sencillos. En la [@fig-R2] tenemos 5 puntos que podrían representar la relación entre el peso y la estatura de 5 individuos. Si, ignorando la información aportada por la estatura, siempre damos una estimación del peso igual a su valor medio, será como ajustar a una recta horizontal y tendremos una suma de los cuadrados de los residuos $Q_Y = 56$. Sin embargo, si utilizamos la información que aporta la estatura y realizamos el ajuste minimizando la suma de los cuadrados de los residuos tenemos $Q_R = 16$.
 
 Hemos reducido la suma de los cuadrados de los residuos de 56 a 16, por tanto:
 $$R^2 = \frac{Q_Y - Q_R}{Q_Y} = \frac{56 - 16}{56} = 0.7143$$
-Normalmente nos referimos a este valor como un porcentaje. En este caso sería el 71,43 %. En los ejemplos de la figura \ref{ArbolMano} estos valores son del 93,5 % (volumen de madera) y 1,5 % (edad al morir).
+Normalmente nos referimos a este valor como un porcentaje. En este caso sería el 71,43 %. En los ejemplos de la [@fig-ArbolMano] estos valores son del 93,5 % (volumen de madera) y 1,5 % (edad al morir).
 
 ::: callout-note
 ## $R^2$ es el cuadrado del coeficiente de correlación $r$
@@ -445,11 +445,11 @@ Antes de dar por bueno un ajuste conviene examinar el comportamiento de los resi
 
 Los residuos se deben comportar de manera aleatoria, sin que se pueda apreciar en ellos ningún tipo de patrón o de comportamiento predecible. Si muestran algún tipo de regularidad, significa que aún contienen información, y esa información debe incorporarse al modelo en lugar de desecharse.
 
-Una forma habitual de analizar el comportamiento de los residuos es representarlos gráficamente en un diagrama bivariante frente a los valores previstos. En la figura \ref{analisisResiduos} se muestra la relación entre dos variables, $X$ e $Y$, que a primera vista puede parecer lineal y, de hecho, si se ajusta a una recta se obtiene un coeficiente de determinación muy alto ($R^2=99.35\%)$. Sin embargo, en el gráfico de residuos frente a valores previstos vemos que los residuos tienen un comportamiento que no es aleatorio: para valores previstos que están en los extremos de su rango de variación, los residuos son positivos, mientras que en los valores centrales son negativos. Realmente, esto ya se ve mirando con detalle los puntos con la recta ajustada. Los puntos muestran una cierta curvatura que no capta el modelo lineal. Esa discrepancia entre el comportamiento de los puntos y la recta ajustada se ve de una forma mucho más clara en el gráfico de residuos en función de los valores sobre la recta.
+Una forma habitual de analizar el comportamiento de los residuos es representarlos gráficamente en un diagrama bivariante frente a los valores previstos. En la [@fig-analisisResiduos] se muestra la relación entre dos variables, $X$ e $Y$, que a primera vista puede parecer lineal y, de hecho, si se ajusta a una recta se obtiene un coeficiente de determinación muy alto ($R^2=99.35\%)$. Sin embargo, en el gráfico de residuos frente a valores previstos vemos que los residuos tienen un comportamiento que no es aleatorio: para valores previstos que están en los extremos de su rango de variación, los residuos son positivos, mientras que en los valores centrales son negativos. Realmente, esto ya se ve mirando con detalle los puntos con la recta ajustada. Los puntos muestran una cierta curvatura que no capta el modelo lineal. Esa discrepancia entre el comportamiento de los puntos y la recta ajustada se ve de una forma mucho más clara en el gráfico de residuos en función de los valores sobre la recta.
 
 ![El gráfico de residuos frente a valores previstos pone de manifiesto de forma clara que la relación entre $X$ e $Y$ no es lineal.](Figuras_11/f1110_analisisResiduos.png){#fig-analisisResiduos .fig-normal6 fig-align="center" width="100%"}
 
- Lo que esperamos es que los puntos se distribuyan aleatoriamente en torno a la recta, no que en una zona estén por encima y en otra por debajo. En la figura \ref{residuosModCuadra} los puntos se han ajustado a un modelo cuadrático. En este caso, la línea ajustada pasa por en medio de los puntos y el gráfico de residuos frente a valores previstos no muestra ningún patrón previsible.
+Lo que esperamos es que los puntos se distribuyan aleatoriamente en torno a la recta, no que en una zona estén por encima y en otra por debajo. En la [@fig-residuosModCuadra] los puntos se han ajustado a un modelo cuadrático. En este caso, la línea ajustada pasa por en medio de los puntos y el gráfico de residuos frente a valores previstos no muestra ningún patrón previsible.
 
 Con este modelo cuadrático el ajuste mejora ligeramente —ahora $R^2=99.79\%$—, pero lo más importante es que hemos identificado el tipo de relación existente entre las variables analizadas.
 
@@ -461,7 +461,7 @@ Si a la vista del diagrama bivariante se observa que la relación entre $X$ e $Y
 
 [^11-3]: Interesados en este tipo de transformaciones para linealizar la dependencia pueden consultar el libro de Daniel Peña (2002): "Regresión y diseño de experimentos", Alianza Editorial, pág. 314 o el de Montgomery, D. C. y Peck, E. A. (1992): "Introduction to Linear Regression Analysis" Ed. Wiley, pág. 90. 
 
-La figura \ref{molinoViento} (izquierda) muestra los datos de producción de electricidad de un aerogenerador según sea la velocidad del viento[^11-4]. Se observa una relación no lineal ya que cuando la velocidad del viento es baja, pequeños incrementos en la velocidad tienen un impacto importante en la producción de electricidad, mientras que para velocidades altas la producción tiende a estabilizarse. Ajustando a una parábola se obtiene $y = -1,156 + 0,7229x -0,03812x^2$ con un coeficiente de determinación $R^2 = 96,8\%$, lo cual no está nada mal.
+La [@fig-molinoViento] (izquierda) muestra los datos de producción de electricidad de un aerogenerador según sea la velocidad del viento[^11-4]. Se observa una relación no lineal ya que cuando la velocidad del viento es baja, pequeños incrementos en la velocidad tienen un impacto importante en la producción de electricidad, mientras que para velocidades altas la producción tiende a estabilizarse. Ajustando a una parábola se obtiene $y = -1,156 + 0,7229x -0,03812x^2$ con un coeficiente de determinación $R^2 = 96,8\%$, lo cual no está nada mal.
 
 [^11-4]: Datos en: Montgomery D. C y Runger, G. C. (2011): "Applied Statistics and Probability for Engineers". Ed. Wiley, 5a ed., pág. 439.
 
@@ -469,15 +469,15 @@ Otra opción es estudiar la producción de electricidad en función de la invers
 
 ![La relación se linealiza con el cambio de variable: $x' = 1/x$](Figuras_11/f1112_molinoViento.png){#fig-molinoViento .fig-normal6 fig-align="center" width="100%"}
 
-Pero tampoco se debe abusar de las transformaciones. Volviendo a los datos de la figura \ref{R2} donde a partir de los pesos de 5 personas (efectivamente son muy pocas, es solo un ejemplo) queremos modelar la relación entre peso y estatura, el modelo lineal es el más razonable (figura \ref{ajustePolinomio}). Si ajustamos los datos a un modelo cuadrático se tiene un máximo de peso en torno a una estatura de 175 cm lo cual no concuerda con lo que ya sabemos sobre esta relación. El polinomio de tercer grado presenta una forma que tampoco es razonable y el de cuarto grado es un modelo con 5 parámetros (los 4 coeficientes y la ordenada en el origen) y como tenemos 5 puntos, ajusta perfectamente, pero ni es un modelo razonable ni sirve para estimar el peso de un individuo a partir de su altura (sí lo explica para los 5 individuos usados para construir el modelo, pero para esos ya lo sabíamos). 
+Pero tampoco se debe abusar de las transformaciones. Volviendo a los datos de la [@fig-residuosSuma] donde a partir de los pesos de 5 personas (efectivamente son muy pocas, es solo un ejemplo) queremos modelar la relación entre peso y estatura, el modelo lineal es el más razonable ([@fig-ajustePolinomio]). Si ajustamos los datos a un modelo cuadrático se tiene un máximo de peso en torno a una estatura de 175 cm lo cual no concuerda con lo que ya sabemos sobre esta relación. El polinomio de tercer grado presenta una forma que tampoco es razonable y el de cuarto grado es un modelo con 5 parámetros (los 4 coeficientes y la ordenada en el origen) y como tenemos 5 puntos, ajusta perfectamente, pero ni es un modelo razonable ni sirve para estimar el peso de un individuo a partir de su altura (sí lo explica para los 5 individuos usados para construir el modelo, pero para esos ya lo sabíamos). 
 
 Recuerde que dos puntos se ajustan perfectamente a un modelo con dos parámetros (una recta), tres puntos a un modelo con tres parámetros... etc. Estos son modelos que explican muy bien lo que ya se sabe, pero son inútiles para hacer predicciones, que es lo que --en general-- se pretende.
 
-![Ir aumentando el grado del polinomio produce modelos con ajustes <<forzados>> que no sirven para hacer previsiones.](Figuras_11/f1113_ajustePolinomio.png){#fig-ajustePolinomio .fig-normal6 fig-align="center" width="100%"}
+![Ir aumentando el grado del polinomio produce modelos con ajustes "forzados" que no sirven para hacer previsiones.](Figuras_11/f1113_ajustePolinomio.png){#fig-ajustePolinomio .fig-normal6 fig-align="center" width="100%"}
 
 ## Transformación logarítmica
 
-En algunos casos, los valores de $X$, los de $Y$, o ambos, siguen una distribución asimétrica, con valores que aparecen agrupados cerca del origen y muy dispersos hacia los valores altos. Un ejemplo típico de esta situación se da al analizar la relación entre el peso del cerebro y el peso del cuerpo en 62 especies de mamíferos[^11-5]. La mayoría de esos mamíferos pesan poco --la mediana es 3,34 kg-- pero algunos, como los elefantes, pesan varias toneladas y algo similar ocurre con el peso de los cerebros. Al realizar el diagrama bivariante del peso del cerebro ($Y$) frente al peso de cuerpo ($X$) prácticamente todos los puntos aparecen amontonados en la zona próxima al origen (figura \ref{brainBodyOriginal}). En estas condiciones ajustar un modelo de regresión no tiene sentido, porque la mayoría de datos actúan como un solo punto y los que están alejados tienen una gran influencia sobre la recta ajustada.
+En algunos casos, los valores de $X$, los de $Y$, o ambos, siguen una distribución asimétrica, con valores que aparecen agrupados cerca del origen y muy dispersos hacia los valores altos. Un ejemplo típico de esta situación se da al analizar la relación entre el peso del cerebro y el peso del cuerpo en 62 especies de mamíferos[^11-5]. La mayoría de esos mamíferos pesan poco --la mediana es 3,34 kg-- pero algunos, como los elefantes, pesan varias toneladas y algo similar ocurre con el peso de los cerebros. Al realizar el diagrama bivariante del peso del cerebro ($Y$) frente al peso de cuerpo ($X$) prácticamente todos los puntos aparecen amontonados en la zona próxima al origen ([@fig-brainBodyOriginal]). En estas condiciones ajustar un modelo de regresión no tiene sentido, porque la mayoría de datos actúan como un solo punto y los que están alejados tienen una gran influencia sobre la recta ajustada.
 
 [^11-5]: Fuente: Página personal del prof. Weisberg en [<https://cla.umn.edu/statistics>]{style="font-family: monospace;"} \> Other Resources \> data files \> brains.csv. Otros datos y más información [aquí](https://resources.wolframcloud.com/ExampleRepository/resources/Animal-Brain-vs-Body-Mass).
 
@@ -489,7 +489,7 @@ Uno puede caer en la tentación de considerar a los elefantes como valores anóm
 
 2.    Al eliminar esos valores y reescalar el gráfico aparecen otros valores anómalos: la persona humana (que da más reparo eliminar), la jirafa, el caballo, la vaca… y al final nos vamos quedando sin puntos.
 
-En casos como este, la transformación logarítmica <<estira>> los datos permitiendo un ajuste en el que todos los puntos tienen una influencia similar. Realizando esta transformación en nuestros datos se obtiene --casi parece un milagro-- una nube de puntos tal como esperamos tener cuando ajustamos a una recta. El modelo obtenido es:
+En casos como este, la transformación logarítmica "estira" los datos permitiendo un ajuste en el que todos los puntos tienen una influencia similar. Realizando esta transformación en nuestros datos se obtiene --casi parece un milagro-- una nube de puntos tal como esperamos tener cuando ajustamos a una recta. El modelo obtenido es:
 $$\log(Y) = 0,9271 + 0,7517 \log(X) \quad \text{con} \quad R^2 = 91,95\%$$ 
 Volviendo a las variables originales nos queda (el peso del cuerpo está en kg y el del cerebro en g):
 $$Y = 8,45 \cdot X^{3/4}$$ 
@@ -508,21 +508,21 @@ Sea $y = \ln (x)$ y $z = \log_{10}(x)$. Tendremos que $e^y = x$ y también que $
 
 ## Las cosas se complican: Lo que tenemos es una muestra
 
-La interpretación de los resultados se complica cuando caemos en la cuenta de que los datos disponibles son solo una muestra de la población de interés. Supongamos que deseamos estudiar la relación entre el peso y la estatura de los jóvenes de cierta edad (haríamos bien en separar hombres y mujeres, pero aquí vamos a ignorar ese aspecto, que trataremos en el siguiente capítulo) y que disponemos de una muestra de 20 jóvenes. Con los datos de esa muestra ajustamos una recta como se ha realizado en la figura \ref{unaRecta} pero, en realidad, esa no es la recta que andamos buscando. Si hubiéramos tomado otra muestra, la recta sería otra --distinta-- pero tan válida como la primera. Entonces, ¿cómo se interpreta la recta obtenida?
+La interpretación de los resultados se complica cuando caemos en la cuenta de que los datos disponibles son solo una muestra de la población de interés. Supongamos que deseamos estudiar la relación entre el peso y la estatura de los jóvenes de cierta edad (haríamos bien en separar hombres y mujeres, pero aquí vamos a ignorar ese aspecto, que trataremos en el siguiente capítulo) y que disponemos de una muestra de 20 jóvenes. Con los datos de esa muestra ajustamos una recta como se ha realizado en la figura [@fig-unaRegresionVA] pero, en realidad, esa no es la recta que andamos buscando. Si hubiéramos tomado otra muestra, la recta sería otra --distinta-- pero tan válida como la primera. Entonces, ¿cómo se interpreta la recta obtenida?
 
 ![Recta ajustada a partir de los datos de una muestra.](Figuras_11/f1116_unaRegresionVA.png){#fig-unaRegresionVA .fig-normal6 fig-align="center" width="100%"}
 
-Como en otros casos, una forma de ver lo que ocurre es simulando. En los diagramas de la figura \ref{regresionVariablesAleatorias} las estaturas ($X$) se han generado aleatoriamente de una distribución N(170; 8) y a cada estatura se le ha asignado un peso ($Y$) mediante la expresión $Y = X -100 +e$, donde $e$ es un valor también generado aleatoriamente de una distribución N(0;\,5). Tanto los valores de la estatura (en cm) como los obtenidos para los pesos (en kg) son valores razonables para una población joven. Hemos repetido la simulación 6 veces y, como es natural, cada vez hemos obtenido unos datos distintos y, por tanto, también una recta ajustada distinta.
+Como en otros casos, una forma de ver lo que ocurre es simulando. En los diagramas de la [@fig-regresionVariablesAleatorias] las estaturas ($X$) se han generado aleatoriamente de una distribución N(170; 8) y a cada estatura se le ha asignado un peso ($Y$) mediante la expresión $Y = X -100 +e$, donde $e$ es un valor también generado aleatoriamente de una distribución N(0;\,5). Tanto los valores de la estatura (en cm) como los obtenidos para los pesos (en kg) son valores razonables para una población joven. Hemos repetido la simulación 6 veces y, como es natural, cada vez hemos obtenido unos datos distintos y, por tanto, también una recta ajustada distinta.
 
 ![Rectas ajustadas a partir de muestras de n=20 datos de una misma población. La línea negra representa el modelo teórico.](Figuras_11/f1117_regresionVariablesAleatorias.png){#fig-regresionVariablesAleatorias .fig-normal6 fig-align="center" width="100%"}
 
-En la figura \ref{regreVAsuperpuestas} (izquierda) se han superpuesto los 6 diagramas anteriores pudiéndose observar el haz de rectas que se obtiene. A la derecha tenemos la misma situación superponiendo 50 simulaciones (cada una con 20 datos) añadiendo, de color verde, la recta que representa el modelo teórico, es decir, la población.
+En la [@fig-regreVAsuperpuestas] (izquierda) se han superpuesto los 6 diagramas anteriores pudiéndose observar el haz de rectas que se obtiene. A la derecha tenemos la misma situación superponiendo 50 simulaciones (cada una con 20 datos) añadiendo, de color verde, la recta que representa el modelo teórico, es decir, la población.
 
 ![Superposición de 6 (izquierda) y 50 (derecha) simulaciones de conjuntos de 20 datos del modelo representado con una línea verde.](Figuras_11/f1118_regreVAsuperpuestas.png){#fig-regreVAsuperpuestas .fig-normal6 fig-align="center" width="100%"}
 
-## Distribución de los coeficientes]{Distribución de los coeficientes
+## Distribución de los coeficientes
 
-La buena noticia distribución} es que si los datos cumplen ciertas condiciones --que en general se cumplirán-- los valores de los coeficientes pertenecen a distribuciones Normales con parámetros conocidos[^11-6]. Siguiendo con el ejemplo anterior hemos repetido 10.000 veces la simulación obteniendo otras tantas rectas ajustadas. La figura \ref{distribucionCoeficientes} muestra los histogramas de los 10.000 valores obtenidos para $b_0$ y $b_1$. 
+La buena noticia distribución} es que si los datos cumplen ciertas condiciones --que en general se cumplirán-- los valores de los coeficientes pertenecen a distribuciones Normales con parámetros conocidos[^11-6]. Siguiendo con el ejemplo anterior hemos repetido 10.000 veces la simulación obteniendo otras tantas rectas ajustadas. La [@fig-distribucionCoeficientes] muestra los histogramas de los 10.000 valores obtenidos para $b_0$ y $b_1$. 
 
 [^11-6]: En realidad, lo conocido es la expresión del parámetro. Su valor se estima a partir de los datos de la muestra.
 
@@ -534,7 +534,7 @@ Observe que las medias de las distribuciones coinciden con el verdadero valor de
 	
 -   **Desviación típica de la respuesta ($\sigma$)}**: A mayor variabilidad de la respuesta mayor incertidumbre y mayor variabilidad en la distribución de los coeficientes.
 	
--   **El rango de variación de $x$**: Si los valores de de la variable regresora están muy próximos a su media habrá mayor variabilidad en la distribución de los coeficientes. Quizá este aspecto no es tan intuitivo como los anteriores, pero se entiende muy bien a la vista de un gráfico como el de la figura \ref{regreRangoX}. En la izquierda tenemos el mismo gráfico que en la figura \ref{regreVAsuperpuestas} con valores de $X$ generados de una distribución N(170; 8) mientras que en el de la derecha se ha construido de la misma forma pero los valores de $X$ se han generado de una N(170; 3). Al tener menos variabilidad los valores de $X$ tenemos mayor variabilidad en los valores de los coeficientes.
+-   **El rango de variación de $x$**: Si los valores de de la variable regresora están muy próximos a su media habrá mayor variabilidad en la distribución de los coeficientes. Quizá este aspecto no es tan intuitivo como los anteriores, pero se entiende muy bien a la vista de un gráfico como el de la [@fig-regreRangoX]. En la izquierda tenemos el mismo gráfico que en la [@fig-regreVAsuperpuestas] con valores de $X$ generados de una distribución N(170; 8) mientras que en el de la derecha se ha construido de la misma forma pero los valores de $X$ se han generado de una N(170; 3). Al tener menos variabilidad en los valores de $X$ tenemos mayor variabilidad en los coeficientes.
 
 ![La variabilidad de las rectas ajustadas depende del rango de X.](Figuras_11/f1120_regreRangoX.png){#fig-regreRangoX .fig-normal6 fig-align="center" width="100%"}
 
@@ -554,30 +554,30 @@ Para que los coeficientes tengan las distribuciones que se suponen, los datos ut
 	
 -   **Independencia de los residuos**: La desviación respecto al valor previsto (valor sobre la recta) en un punto no da ninguna pista sobre la desviación en el punto siguiente. Esto no ocurre con las variables que evolucionan en el tiempo, como la temperatura o la cotización de acciones en la bolsa, en que el valor de un día está influenciado por el valor del día anterior.
 	
-Cuando se ajustan modelos de regresión simple, la observación del diagrama bivariante de $Y$ frente a $X$ ya permite valorar si es razonable suponer que se cumplen los supuestos requeridos. Si nada hace suponer lo contrario, supondremos que se cumplen. En realidad nunca se cumplirán <<exactamente>> pero si el comportamiento de los datos no se aleja mucho de los supuestos realizados, los intervalos de confianza y las pruebas de significación en que estamos interesados seguirán siendo válidos a efectos prácticos.
+Cuando se ajustan modelos de regresión simple, la observación del diagrama bivariante de $Y$ frente a $X$ ya permite valorar si es razonable suponer que se cumplen los supuestos requeridos. Si nada hace suponer lo contrario, supondremos que se cumplen. En realidad nunca se cumplirán "exactamente" pero si el comportamiento de los datos no se aleja mucho de los supuestos realizados, los intervalos de confianza y las pruebas de significación en que estamos interesados seguirán siendo válidos a efectos prácticos.
 
 ## Significación de los coeficientes]{Significación de los coeficientes
 
 ### Visión intuitiva {.unnumbered}
 
-Usaremos  los datos que ya vimos (apartado \ref{calidadAjuste}) sobre el volumen de madera que se obtiene de un árbol en función del diámetro de su tronco y sobre la edad al morir en función de la longitud de una línea de la mano. La figura \ref{regreComportaY} contiene las rectas ajustadas y algunos valores característicos de cada situación. Aunque a la vista de los gráficos ya se ve claro que en el caso del volumen de madera la pendiente es significativa y en el de la línea de la mano no lo es, vamos a comprobar por simulación que estamos en lo cierto.
+Usaremos  los datos que ya vimos (apartado #sec-calidadAjuste) sobre el volumen de madera que se obtiene de un árbol en función del diámetro de su tronco y sobre la edad al morir en función de la longitud de una línea de la mano. La [@fig-ArbolManoModelos] contiene las rectas ajustadas y algunos valores característicos de cada situación. Aunque a la vista de los gráficos ya se ve claro que en el caso del volumen de madera la pendiente es significativa y en el de la línea de la mano no lo es, vamos a comprobar por simulación que estamos en lo cierto.
 
 ![Modelos ajustados y valores característicos de cada conjunto de datos.](Figuras_11/f1121_ArbolManoModelos.png){#fig-ArbolManoModelos .fig-normal6 fig-align="center" width="100%"}
 
-Si no hay ninguna relación entre la variable regresora ($X$) y la respuesta ($Y$), la pendiente de la recta estará en torno a cero (será igual a cero en la población, que en estos casos son modelos teóricos). Para ver lo que significa <<en torno a cero>> podemos simular nubes de puntos manteniendo las características de $X$ e $Y$ y suponiendo que no existe ninguna relación entre ellas.
+Si no hay ninguna relación entre la variable regresora ($X$) y la respuesta ($Y$), la pendiente de la recta estará en torno a cero (será igual a cero en la población, que en estos casos son modelos teóricos). Para ver lo que significa "en torno a cero" podemos simular nubes de puntos manteniendo las características de $X$ e $Y$ y suponiendo que no existe ninguna relación entre ellas.
 
 En el caso del volumen de madera empezamos generando 31 números aleatorios (una cantidad igual a nuestro tamaño de muestra) que asignamos al diámetro de los troncos. Para que estos datos se puedan considerar del mismo tipo de los que tenemos en la muestra es razonable generarlos de una distribución Normal con la media $(\bar{x} = 13.25)$ y la desviación típica $(s_X = 3.2)$ de los valores que aparecen en la muestra, es decir: $X \sim N(13.25; 3.2)$. A continuación, a cada valor de $X$ le hacemos corresponder un valor de $Y$ igual a la media de los valores disponibles $(\bar{y} = 30.2)$ añadiendo un número aleatorio de una distribución Normal con media cero (ni sube ni baja de forma sistemática el valor de la respuesta) y una desviación típica igual a la que presentan los residuos del modelo ajustado $(s_R = 4.25)$. Por tanto, tendremos: $Y = 30.2 + N(0; 4.25)$. 
 
 Para el modelo de la edad al morir hacemos exactamente lo mismo con los valores que corresponden: $n=50$; $\bar{x}=9.2$; $s_X = 1.27$; $s_R=14.15$; $\bar{y}=66.7$. 
 
-Para cada conjunto de puntos simulados se ha calculado la recta ajustada. En los dos casos la simulación se ha repetido 50 veces y en los diagramas de la figura \ref{pruebasSignaficacion} se han ido acumulando tanto los puntos como las rectas ajustadas. También se ha añadido, de color verde, la línea correspondiente a los datos de la muestra. Está muy claro que en el caso del volumen de madera, la recta ajustada con los datos de la muestra no se puede confundir con los generados aleatoriamente suponiendo que no hay relación entre ambas variables. Sin embargo, en el caso de la edad al morir, la recta que corresponde a los datos disponibles se confunde con las que hemos simulado, por tanto, el valor de la pendiente queda explicado por la variabilidad intrínseca de los datos, diremos que esa diferencia no es estadísticamente significativa.
+Para cada conjunto de puntos simulados se ha calculado la recta ajustada. En los dos casos la simulación se ha repetido 50 veces y en los diagramas de la [@fig-pruebasSignaficacion] se han ido acumulando tanto los puntos como las rectas ajustadas. También se ha añadido, de color verde, la línea correspondiente a los datos de la muestra. Está muy claro que en el caso del volumen de madera, la recta ajustada con los datos de la muestra no se puede confundir con los generados aleatoriamente suponiendo que no hay relación entre ambas variables. Sin embargo, en el caso de la edad al morir, la recta que corresponde a los datos disponibles se confunde con las que hemos simulado, por tanto, el valor de la pendiente queda explicado por la variabilidad intrínseca de los datos, diremos que esa diferencia no es estadísticamente significativa.
 
 ![Rectas ajustadas considerando que no hay relación entre las variables y recta obtenida con los datos de la muestra (color verde).](Figuras_11/f1122_pruebasSignaficacion.png){#fig-pruebasSignaficacion .fig-normal6 fig-align="center" width="100%"}
 
 ::: callout-note
 ## Pruebas de significación y contraste de hipótesis
 
-Una prueba de significación es un caso particular de contraste de hipótesis donde se contrasta que el valor del parámetro es igual a cero. Significación equivale a <<significativamente distinto de cero>>, es decir, que la variabilidad aleatoria no justifica la diferencia respecto a cero. 
+Una prueba de significación es un caso particular de contraste de hipótesis donde se contrasta que el valor del parámetro es igual a cero. Significación equivale a "significativamente distinto de cero", es decir, que la variabilidad aleatoria no justifica la diferencia respecto a cero. 
 :::
 
 ### Pruebas de significación formales
@@ -601,7 +601,7 @@ Como regla general, si $|T| > 2$, es decir, el valor obtenido está a más de do
 
 Si se decide eliminar $b_0$ del modelo es necesario recalcular el valor de $b_1$ con una fórmula específica para esta situación puesto que ya no estamos aplicando el criterio de los mínimos cuadrados. En el apéndice 10.B se comentan algunas peculiaridades de este caso particular.
 
-#### Sobre el valor de la pendiente de la recta, $\beta_1$	
+#### Sobre el valor de la pendiente de la recta, $\beta_1$ {.unnumbered}
 
 Este contraste siempre tiene interés. Se trata de verificar que la pendiente de la recta es significativamente distinta de cero. Si no lo es, una recta horizontal es compatible con los datos por lo que no se puede afirmar que haya relación entre la variable regresora y la respuesta.
 
@@ -616,7 +616,7 @@ Que el coeficiente de correlación entre dos variables sea significativo implica
 
 #### Resultados presentados por los paquetes de software estadístico {.unnumbered}	
 
-En general, además de presentar los coeficientes del modelo también presentan los $p$-valores asociados a los contrastes que hemos comentado. La figura \ref{salidaSoftwareRegresion} muestra parte de la salida que proporciona Minitab en los dos casos que estamos considerando. Tal como hemos visto, el **T-value** que aparece en el listado es simplemente el cociente entre el coeficiente (**Coef**) y su desviación típica (**SE Coef**) y el p-valor (**P-Value**) es el área de cola --multiplicada por 2, ya que es una prueba bilateral-- que deja ese T-Value en una distribución t-Student con $n-2$ grados de libertad, siendo $n$ el número de puntos usados en cada caso.
+En general, además de presentar los coeficientes del modelo también presentan los $p$-valores asociados a los contrastes que hemos comentado. La [@fig-salidaSoftwareRegresion] muestra parte de la salida que proporciona Minitab en los dos casos que estamos considerando. Tal como hemos visto, el **T-value** que aparece en el listado es simplemente el cociente entre el coeficiente (**Coef**) y su desviación típica (**SE Coef**) y el p-valor (**P-Value**) es el área de cola --multiplicada por 2, ya que es una prueba bilateral-- que deja ese T-Value en una distribución t-Student con $n-2$ grados de libertad, siendo $n$ el número de puntos usados en cada caso.
 
 ![Salida del paquete de software estadístico Minitab al ajustar modelos de regresión en los dos ejemplos que hemos visto.](Figuras_11/f1123_salidaSoftwareRegresion.png){#fig-salidaSoftwareRegresion .fig-normal6 fig-align="center" width="100%"}
 
@@ -630,17 +630,17 @@ También puede interesar contrastar otros valores para la pendiente de la recta.
 
 La figura \ref{pendiente1} (izquierda) muestra el diagrama bivariante de los valores medidos frente a los reales con su recta ajustada. El aparato estará bien calibrado si --en promedio-- el valor de la concentración medida es igual a la concentración real. Es decir, si los datos se ajustan al modelo: $y = x$.
 
-![La recta ajustada no se confunde con las de pendiente igual a 1.](Figuras_11/f1124_pendiente1.png){#fig-errorTipoII .fig-normal6 fig-align="center" width="100%"}
+![La recta ajustada no se confunde con las de pendiente igual a 1.](Figuras_11/f1124_pendiente1.png){#fig-pendiente1 .fig-normal6 fig-align="center" width="100%"}
 
-Usando Minitab tenemos los coeficientes del modelo y la prueba de significación para sus valores (figura \ref{salidaConcentracion}, izquierda).
+Usando Minitab tenemos los coeficientes del modelo y la prueba de significación para sus valores ([@fig-salidaConcentracion], izquierda).
 
 ![Ajuste habitual (mínimos cuadrados) y forzando a que la recta pase por el origen.](Figuras_11/f1125_salidaConcentracion.png){#fig-salidaConcentracion .fig-normal6 fig-align="center" width="100%"}
 
-Vemos que la ordenada en el origen (Minitab le llama <<Constant>> pero ya dijimos que esta no nos parece una denominación adecuada) no es significativamente distinta de cero por lo que hemos recalculado el modelo sin ese término. En el nuevo modelo el valor de $b_1$ (coeficiente de la concentración real) es claramente significativo (significativamente distinto de cero) pero no es eso lo que nos preocupa. Lo que queremos saber es si es significativamente distinto de 1. Minitab no lo hace automáticamente pero es muy fácil hacerlo a mano:
+Vemos que la ordenada en el origen (Minitab le llama "Constant" pero ya dijimos que esta no nos parece una denominación adecuada) no es significativamente distinta de cero por lo que hemos recalculado el modelo sin ese término. En el nuevo modelo el valor de $b_1$ (coeficiente de la concentración real) es claramente significativo (significativamente distinto de cero) pero no es eso lo que nos preocupa. Lo que queremos saber es si es significativamente distinto de 1. Minitab no lo hace automáticamente pero es muy fácil hacerlo a mano:
 $$T =  \frac{b_1-1}{s_{b_1}} = \frac{0.95351-1}{0.00598} = -7.77$$ 
 Si efectivamente $\beta_1 = 1$ el valor de $T$ pertenece a una distribución $t$-Student, pero si lo fuera su valor estaría comprendido aproximadamente entre -2 y 2, y el valor que hemos obtenido está muy lejos de este intervalo. Por tanto, la hipótesis nula de que $\beta_1=1$ queda descartada. El aparato no está bien calibrado.
 
-En la figura \ref{pendiente1} (derecha) se han representado las rectas ajustadas (color azul) de valores de la concentración medida ($y$) en función de la concentración real ($x$) generados con el modelo $y = x + e$ siendo $e$ valores de una distribución Normal con media cero y una desviación típica igual a la que presentan los residuos del modelo obtenido. La recta ajustada con los datos reales aparece de color verde (es la misma que tenemos en el diagrama de la izquierda), se ve que no se confunde con las generadas aleatoriamente suponiendo que el aparato está bien calibrado, a partir de una concentración de 50 tiende a dar valores menores que los reales.
+En la [@fig-pendiente1] (derecha) se han representado las rectas ajustadas (color azul) de valores de la concentración medida ($y$) en función de la concentración real ($x$) generados con el modelo $y = x + e$ siendo $e$ valores de una distribución Normal con media cero y una desviación típica igual a la que presentan los residuos del modelo obtenido. La recta ajustada con los datos reales aparece de color verde (es la misma que tenemos en el diagrama de la izquierda), se ve que no se confunde con las generadas aleatoriamente suponiendo que el aparato está bien calibrado, a partir de una concentración de 50 tiende a dar valores menores que los reales.
 
 ## Intervalos de confianza para la respuesta
 
@@ -650,7 +650,7 @@ Con la información disponible, la mejor predicción que podemos hacer del volum
 
 Pero ya sabemos que es mejor dar un intervalo de confianza que una predicción puntual. De acuerdo con los supuestos realizados sobre el comportamiento de los datos, para cada valor de $X$, los valores de $Y$ siguen una distribución Normal centrada en la estimación puntual y con una desviación típica cuyo estimador es la desviación típica de los residuos. Sabemos que en una distribución Normal el 95 % de las observaciones están en el intervalo $\mu \pm 1.96\sigma$. Si, como es habitual, ajustamos el modelo con un número de puntos no muy pequeño (en nuestro caso $n=31$) podemos identificar $\sigma$ con su estimador $s_R$ y redondeando el 1,96 a 2 podemos establecer con un cálculo rápido que el intervalo de confianza del 95 % para la predicción es: $\hat{y} \pm 2s_R$. Con nuestros números: $64,4 \pm 2 \cdot 4,25 = (54,9;  73,9)$
 
-Pero, naturalmente, lo más rápido y lo más cómodo es pedirle la predicción al paquete de software que ha realizado el ajuste. También se le puede pedir que represente las bandas de confianza para el modelo ajustado, tal como están representadas en la figura \ref{bandasConfianza}.
+Pero, naturalmente, lo más rápido y lo más cómodo es pedirle la predicción al paquete de software que ha realizado el ajuste. También se le puede pedir que represente las bandas de confianza para el modelo ajustado, tal como están representadas en la [@fig-bandasConfianza].
 
 ![Recta ajustada y bandas de confianza del 95 %](Figuras_11/f1126_bandasConfianza.png){#fig-bandasConfianza .fig-normal6 fig-align="center" width="100%"}
 
@@ -669,7 +669,7 @@ Una estimación razonable para el consumo a 75 km/h es de 5,5 litros/100 km pero
 
 #### Ignorar la autocorrelación de las observaciones {.unnumbered}
 
-Cuando las observaciones se presentan en orden cronológico y \index{Autocorrelación} el valor de una depende del de la anterior, como la evolución de la temperatura mínima diaria, los modelos de regresión no sirven para hacer previsiones. En el gráfico de la figura \ref{extrapolarSerieTiempo} (derecha) una previsión a ojo mejora la que proporciona el modelo ajustado (la línea a trazos corresponde a un modelo cuadrático). Para estos casos tenemos otras herramientas que llamamos de análisis de series de tiempo, que tienen en cuenta la posible estacionalidad o periodicidad de los datos, además de su tendencia.
+Cuando las observaciones se presentan en orden cronológico y el valor de una depende del de la anterior, como la evolución de la temperatura mínima diaria, los modelos de regresión no sirven para hacer previsiones. En el gráfico de la [@fig-extrapolarSerieTiempo] (derecha) una previsión a ojo mejora la que proporciona el modelo ajustado (la línea a trazos corresponde a un modelo cuadrático). Para estos casos tenemos otras herramientas que llamamos de análisis de series de tiempo, que tienen en cuenta la posible estacionalidad o periodicidad de los datos, además de su tendencia.
 
 ![No se debe extrapolar fuera del rango de variación de los datos ni usar modelos de regresión para hacer previsiones de datos obtenidos en orden cronológico.](Figuras_11/f1127_extrapolarSerieTiempo.png){#fig-extrapolarSerieTiempo .fig-normal6 fig-align="center" width="100%"}
 
@@ -681,7 +681,7 @@ La estadística tiene muchos campos de aplicación pero no sirve para hacer pred
 
 ## APÉNDICE 11.A: Otra fórmula para $b_1$ {.unnumbered}
 
-Algunos libros de deducción de las fórmulas} texto dan una fórmula distinta de la que hemos deducido nosotros pero es muy fácil pasar de una a otra. Partimos de la expresión que hemos deducido:
+Algunos libros texto dan una fórmula distinta de la que hemos deducido nosotros pero es muy fácil pasar de una a otra. Partimos de la expresión que hemos deducido:
 
 $$b_1 = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sum (x_i - \bar{x})^2}$$
 Podemos poner el numerador de la forma:
@@ -731,7 +731,7 @@ $$ b_1 = \frac{\sum x_iy_i}{\sum x_i^2}$$
 
 ## APÉNDICE 11.C: Datos que no cumplen las condiciones requeridas {.unnumbered}
 
-Se puede representar un triángulo en unos ejes de coordenadas generando 6 números aleatorios y agrupándolos en 3 parejas cada una de las cuales define un vértice. Hemos repetido esta operación 500 veces generando los números aleatorios de una distribución U(0; 150). De los 500 triángulos resultantes, hemos calculado su área y su perímetro. En la figura \ref{triangulos} (izquierda) tenemos el diagrama bivariante de los resultados obtenidos.
+Se puede representar un triángulo en unos ejes de coordenadas generando 6 números aleatorios y agrupándolos en 3 parejas cada una de las cuales define un vértice. Hemos repetido esta operación 500 veces generando los números aleatorios de una distribución U(0; 150). De los 500 triángulos resultantes, hemos calculado su área y su perímetro. En la [@fig-triangulos] (izquierda) tenemos el diagrama bivariante de los resultados obtenidos.
 
 ![Datos que no cumplen las condiciones exigidas para realizar estimaciones de la forma habitual.](Figuras_11/f1128_triangulos.png){#fig-triangulos .fig-normal6 fig-align="center" width="100%"}
 
@@ -741,6 +741,6 @@ En nuestro caso esa varianza claramente no es constante. Para valores bajos del 
 
 A la vista de la representación de los datos ya es evidente que la varianza no es constante, pero también el análisis de los residuos pone de manifiesto que algo falla: el gráfico de residuos frente a valores previstos (a la derecha) tiene forma de embudo, síntoma de una patología que llamamos *heterocedasticidad* y que significa que la variabilidad de $Y$ aumenta al aumentar el valor de $X$.
 
-Una solución puede ser transformar los datos. El precio a pagar es que el modelo puede parecer caprichoso y poco interpretable. Con estos datos, si realizamos la transformación $Y = \sqrt[3]{\text{Área}}$, no los deja en perfecto estado pero los arregla bastante (figura \ref{triangulosTranfo}).
+Una solución puede ser transformar los datos. El precio a pagar es que el modelo puede parecer caprichoso y poco interpretable. Con estos datos, si realizamos la transformación $Y = \sqrt[3]{\text{Área}}$, no los deja en perfecto estado pero los arregla bastante ([@fig-triangulosTransfo]).
 
 ![Transformando los valores de alguna de las variables --o de ambas-- se puede mejorar su comportamiento.](Figuras_11/f1129_triangulosTransfo.png){#fig-triangulosTransfo .fig-normal6 fig-align="center" width="100%"}

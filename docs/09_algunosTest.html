@@ -315,6 +315,27 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#contraste-sobre-el-valor-de-la-media-de-la-población" id="toc-contraste-sobre-el-valor-de-la-media-de-la-población" class="nav-link" data-scroll-target="#contraste-sobre-el-valor-de-la-media-de-la-población">Contraste sobre el valor de la media de la población</a></li>
   </ul></li>
+  <li><a href="#test-de-comparación-de-proporciones" id="toc-test-de-comparación-de-proporciones" class="nav-link" data-scroll-target="#test-de-comparación-de-proporciones"><span class="header-section-number">9.2</span> Test de comparación de proporciones</a></li>
+  <li><a href="#pruebas-de-ajuste.-test-de-chi-cuadrado" id="toc-pruebas-de-ajuste.-test-de-chi-cuadrado" class="nav-link" data-scroll-target="#pruebas-de-ajuste.-test-de-chi-cuadrado"><span class="header-section-number">9.3</span> Pruebas de ajuste. Test de Chi-cuadrado</a>
+  <ul class="collapse">
+  <li><a href="#preámbulo-las-distribuciones-multinomial-y-chi-cuadrado" id="toc-preámbulo-las-distribuciones-multinomial-y-chi-cuadrado" class="nav-link" data-scroll-target="#preámbulo-las-distribuciones-multinomial-y-chi-cuadrado">Preámbulo: Las distribuciones multinomial y chi-cuadrado</a></li>
+  <li><a href="#otro-análisis-de-los-resultados-obtenidos-con-los-dados-de-wolf" id="toc-otro-análisis-de-los-resultados-obtenidos-con-los-dados-de-wolf" class="nav-link" data-scroll-target="#otro-análisis-de-los-resultados-obtenidos-con-los-dados-de-wolf">Otro análisis de los resultados obtenidos con los dados de Wolf</a></li>
+  <li><a href="#otros-resultados-no-tan-exagerados" id="toc-otros-resultados-no-tan-exagerados" class="nav-link" data-scroll-target="#otros-resultados-no-tan-exagerados">Otros resultados, no tan exagerados</a></li>
+  </ul></li>
+  <li><a href="#un-caso-especial-los-test-de-normalidad" id="toc-un-caso-especial-los-test-de-normalidad" class="nav-link" data-scroll-target="#un-caso-especial-los-test-de-normalidad"><span class="header-section-number">9.4</span> Un caso especial: los test de Normalidad</a>
+  <ul class="collapse">
+  <li><a href="#un-ejemplo-de-test-de-normalidad-kolmogorov-smirnov" id="toc-un-ejemplo-de-test-de-normalidad-kolmogorov-smirnov" class="nav-link" data-scroll-target="#un-ejemplo-de-test-de-normalidad-kolmogorov-smirnov">Un ejemplo de test de Normalidad: Kolmogorov-Smirnov</a></li>
+  <li><a href="#pasar-el-test-garantiza-la-normalidad" id="toc-pasar-el-test-garantiza-la-normalidad" class="nav-link" data-scroll-target="#pasar-el-test-garantiza-la-normalidad">Pasar el test ¿garantiza la Normalidad?</a></li>
+  </ul></li>
+  <li><a href="#apéndice-9.a-reflexiones-en-torno-al-p-valor" id="toc-apéndice-9.a-reflexiones-en-torno-al-p-valor" class="nav-link" data-scroll-target="#apéndice-9.a-reflexiones-en-torno-al-p-valor">APÉNDICE 9.A: Reflexiones en torno al p-valor</a></li>
+  <li><a href="#apéndice-9.b-intervalos-de-confianza-como-alternativa-al--valor" id="toc-apéndice-9.b-intervalos-de-confianza-como-alternativa-al--valor" class="nav-link" data-scroll-target="#apéndice-9.b-intervalos-de-confianza-como-alternativa-al--valor">APÉNDICE 9.B: Intervalos de confianza como alternativa al -valor</a></li>
+  <li><a href="#apéndice-9.c-más-sobre-las-distribuciones--student-y-chi-cuadrado" id="toc-apéndice-9.c-más-sobre-las-distribuciones--student-y-chi-cuadrado" class="nav-link" data-scroll-target="#apéndice-9.c-más-sobre-las-distribuciones--student-y-chi-cuadrado">APÉNDICE 9.C: Más sobre las distribuciones -Student y Chi-cuadrado</a></li>
+  <li><a href="#apéndice-9.d-test-de-aquí-su-nombre" id="toc-apéndice-9.d-test-de-aquí-su-nombre" class="nav-link" data-scroll-target="#apéndice-9.d-test-de-aquí-su-nombre">Apéndice 9.D: Test de <em>[aquí su nombre]</em></a>
+  <ul class="collapse">
+  <li><a href="#diseño-del-test" id="toc-diseño-del-test" class="nav-link" data-scroll-target="#diseño-del-test">Diseño del test</a></li>
+  <li><a href="#ejemplo" id="toc-ejemplo" class="nav-link" data-scroll-target="#ejemplo">Ejemplo</a></li>
+  <li><a href="#comparando-con-el-mejor" id="toc-comparando-con-el-mejor" class="nav-link" data-scroll-target="#comparando-con-el-mejor">Comparando con el mejor</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -347,7 +368,7 @@ window.Quarto = {
 <p>Bajo el nombre genérico de <em>test de la t de Student</em> se encuentran los test que tienen esta distribución como distribución de referencia. Casos clásicos son el contraste sobre el valor de la media de una población o el test para la comparación de dos medias.</p>
 <section id="contraste-sobre-el-valor-de-la-media-de-la-población" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="contraste-sobre-el-valor-de-la-media-de-la-población">Contraste sobre el valor de la media de la población</h3>
-Volvemos a la línea de envasado de paquetes de café que vimos en el capítulo anterior. Deben contener un peso de 1 kg pero a veces la máquina de llenado se desajusta y los llena con un peso medio distinto al objetivo. Tomamos una muestra de 10 paquetes y sus pesos, en gramos, son:
+<p>Volvemos a la línea de envasado de paquetes de café que vimos en el capítulo anterior. Deben contener un peso de 1 kg pero a veces la máquina de llenado se desajusta y los llena con un peso medio distinto al objetivo. Tomamos una muestra de 10 paquetes y sus pesos, en gramos, son:</p>
 <center>
 916,   940,   975,   969,   996,   1020,   1036,   1009,   990,   999
 </center>
@@ -369,7 +390,7 @@ Figura&nbsp;9.1: Diagrama de puntos de los pesos de 10 paquetes de café (en g).
 <div id="fig-contrasteNormal" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-contrasteNormal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_09/f0902_contrasteNormal.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_09/f0902_contrasteNormal.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-contrasteNormal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;9.2: Valor de la media de nuestra muestra situado en la distribución de la media muestral (azul).
@@ -494,14 +515,15 @@ Figura&nbsp;9.5: Representación gráfica del peso de los tomates obtenidos en c
 <p>Este es el supuesto verdaderamente crítico. Los datos siempre deben ser representativos si las conclusiones van a ser sobre sus respectivas poblaciones. En una comparación de tratamientos todos los factores deben influir igual en los dos grupos excepto el factor cuyo efecto se desea estudiar.</p></li>
 </ol>
 <p>Suponiendo que se cumplen estos tres supuestos, la diferencia de medias de los dos grupos (A: actual, B: nuevo) es una variable aleatoria con la siguiente distribución de probabilidad: <span class="math display">\[\bar{y}_B - \bar{y}_A \sim \text{N} \left( \mu_B - \mu_A,\; \sqrt{\frac{2 \sigma^2}{n}}\right) \]</span></p>
-<p>Siendo <span class="math inline">\(\bar{y}_A\)</span> e <span class="math inline">\(\bar{y}_B\)</span> las medias de cada muestra, <span class="math inline">\(\mu_A\)</span> y <span class="math inline">\(\mu_B\)</span> las medias poblacionales, <span class="math inline">\(\sigma^2\)</span> la varianza, que consideramos igual para las dos poblaciones, y <span class="math inline">\(n\)</span> el tamaño de las muestras, en nuestro caso el mismo para ambas. (ver tabla <span class="math inline">\(\ref{tablaDistDifMedias}\)</span>)</p>
-<div class="tabla-wrapper_T0801">
+<p>Siendo <span class="math inline">\(\bar{y}_A\)</span> e <span class="math inline">\(\bar{y}_B\)</span> las medias de cada muestra, <span class="math inline">\(\mu_A\)</span> y <span class="math inline">\(\mu_B\)</span> las medias poblacionales, <span class="math inline">\(\sigma^2\)</span> la varianza, que consideramos igual para las dos poblaciones, y <span class="math inline">\(n\)</span> el tamaño de las muestras, en nuestro caso el mismo para ambas. (ver <a href="#tbl-distDifMedias">Tabla 8.1</a>})</p>
+<div id="tbl-distDifMedias" class="tabla-wrapper_T0901 anchored">
 
-<table class="tabla-0801 caption-top table">
+<table class="tabla-0901 caption-top table">
+<caption>Tabla 9.1: Distribución de la diferencia de medias muestrales.</caption>
 <colgroup>
 <col style="width: 28%">
 <col style="width: 28%">
-<col style="width: 42%">
+<col style="width: 44%">
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -539,10 +561,625 @@ V(X-Y) = V(X)+V(Y)</td>
 </table>
 
 </div>
+<p><br> Recordemos que si una variable aleatoria <span class="math inline">\(X\)</span> sigue una distribución <span class="math inline">\(\text{N}(\mu, \sigma)\)</span>, entonces <span class="math inline">\(z = \frac{x-\mu}{\sigma}\)</span> sigue una <span class="math inline">\(\text{N}(0; 1)\)</span>. Aplicado a nuestra variable <span class="math inline">\(\bar{y}_B - \bar{y}_A\)</span>, tenemos: <span class="math display">\[\frac{\bar{y}_B - \bar{y}_A - (\mu_B -\mu_A) }  {\sqrt{\frac{2 \sigma^2}{n}}} \sim \text{N}(0; 1) \]</span> Si la hipótesis nula es cierta tenemos que <span class="math inline">\(\mu_A = \mu_B\)</span>, de manera que en el numerador solo nos queda <span class="math inline">\(\bar{y}_B - \bar{y}_A\)</span>. Ya tenemos estadístico de prueba y distribución de referencia suponiendo conocida la varianza de la población.</p>
+<p><span class="math display">\[\begin{gather*}
+    \frac{\bar{y}_B - \bar{y}_A}{\sqrt{\frac{2 \sigma^2}{n}}} \quad  \sim \quad \; \text{N}(0; 1) \\[3pt]
+    \small{\text{\qquad  \;\; Estadístico   \qquad      Distribución de }}  \\[-4pt]
+    \small{\text{\quad \;\; de prueba    \qquad  \quad   referencia}}
+\end{gather*}\]</span></p>
+<p>Si no conocemos el valor de <span class="math inline">\(\sigma^2\)</span> –que es lo habitual– lo podemos estimar a partir de los valores de las muestras. La varianza de una cualquiera de ellas es un buen estimador de <span class="math inline">\(\sigma^2\)</span>, pero la varianza de la otra también lo es, entonces, ¿con cuál nos quedamos? La solución es sencilla: con la media de las dos. Claro que como nos fiamos más de las estimaciones obtenidas de muestras grandes que de las de muestras pequeñas, la regla general es realizar una media ponderada. Lo inmediato sería ponderar por el tamaño (número de observaciones) de cada muestra, pero como lo que realmente aporta información son los grados de libertad, ponderamos según esos valores, que es el tamaño de la muestra menos una unidad. Ese estimador conjunto será, por tanto: <span class="math display">\[s^2 = \frac{(n_A-1)s_A^2 + (n_B-1)s_B^2}{n_A + n_B -2} \]</span> Si las dos muestras tienen el mismo tamaño no hace falta ponderación, y si la hacemos nos acaba quedando la media aritmética.</p>
+<p>Con nuestros valores: <span class="math display">\[n_A = n_B = 10; \qquad s_A^2 = 0.951; \qquad  s_B^2 = 1{,}187 \]</span> tenemos: <span class="math display">\[ s^2 = \frac{9 \cdot 0.951 + 9 \cdot 1{,}187}{18} = \frac{0{,}951 + 1{,}187}{2} = 1.069\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>La varianza del conjunto de los datos de las dos muestras ¿es un buen estimador de la varianza poblacional?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Lo sería si las medias poblacionales fueran iguales (serían dos muestras de una misma población si las dos son Normales, con la misma varianza y la misma media) pero no estamos seguros de que las medias sean iguales –es justo lo que estamos analizando– por lo que no podemos usar ese método.</p>
+</div>
+</div>
+<p>El estadístico de prueba y la distribución de referencia son ahora: <span class="math display">\[\frac{\bar{y}_B - \bar{y}_A}{\sqrt{\frac{2s^2}{n}}} \quad \;\sim \quad \; t-\text{Student con } \nu = 2n -2 \text{ g.l.}\]</span> Todos los valores que intervienen en el cálculo del estadístico de prueba –le llamamos <span class="math inline">\(t\)</span>– se obtienen a partir de los datos de las muestras: <span class="math display">\[t = \frac{\bar{y}_B - \bar{y}_A}{\sqrt{\frac{2s^2}{n}}} = \frac{6.150 - 5.104}{\sqrt{\frac{2\cdot 1.069}{10}}} = 2.26 \]</span> y los grados de libertad de la <span class="math inline">\(t\)</span>-Student son la suma de los que aporta cada muestra, en nuestro caso <span class="math inline">\(9+9=18\)</span>. Ahora toca valorar si el estadístico de prueba es un valor “normal” en la distribución de referencia.</p>
+<div id="fig-pValorDifMed" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pValorDifMed-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_09/f0906_pValorDifMed.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pValorDifMed-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;9.6: Cálculo del p-valor. A trazos una N(0; 1).
+</figcaption>
+</figure>
+</div>
+<p>En nuestro caso, la probabilidad de tener un valor como el que hemos obtenido, o mayor que ese, es del orden del 2 %. Si el criterio de decisión fuera rechazar la hipótesis nula si esa probabilidad está por debajo del 5 % habría que considerar que el nuevo abono da una mayor cosecha.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>¿Cómo saber si las varianzas se pueden considerar iguales?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si tenemos dos muestras, A y B, de sendas poblaciones Normales con la misma varianza <span class="math inline">\(\sigma^2\)</span>, el cociente de las varianzas muestrales <span class="math inline">\(s_A^2/s_B^2\)</span> sigue una distribución conocida llamada <span class="math inline">\(F\)</span> de Snedecor (o también <span class="math inline">\(F\)</span> de Fisher). Ya tenemos estadístico de prueba y distribución de referencia.</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="test-de-comparación-de-proporciones" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="test-de-comparación-de-proporciones"><span class="header-section-number">9.2</span> Test de comparación de proporciones</h2>
+<p>Volvamos al estudio visto en el apartado 8.5 sobre si tomar cierta dosis de aspirina de manera regular reduce el riesgo de padecer infarto de miocardio. En el estudio participaron <span class="math inline">\(22.071\)</span> individuos que fueron asignados aleatoriamente a uno de los dos grupos: el grupo de control que tomó un placebo, y el que tomó aspirina. Los resultados obtenidos fueron los que se indican en la tabla <span class="math inline">\(\ref{tablaResultadosAspirina}\)</span> donde escribimos <span class="math inline">\(\hat{p}_1\)</span> y <span class="math inline">\(\hat{p}_2\)</span> para las proporciones en las muestras, con &lt;<sombrero>&gt; para distinguirlas de <span class="math inline">\(p_1\)</span> y <span class="math inline">\(p_2\)</span> que serán las proporciones en las poblaciones y son sobre las que nos planteamos saber si son diferentes.</sombrero></p>
+<p>****TABLA 9.2****</p>
+<p>Vamos a plantear un test que tiene como estadístico de prueba un valor que se puede calcular fácilmente a partir de los resultados del estudio y que siempre tiene la distribución Normal estandarizada como distribución de referencia.</p>
+<p>En primer lugar a la variable aleatoria &lt;<número de="" infartos="" en="" cada="" grupo="">&gt;, que en realidad sigue una distribución binomial con parámetros <span class="math inline">\(n\)</span>, <span class="math inline">\(p\)</span>, la vamos a aproximar a través de una distribución Normal. La regla general para poder realizar esta aproximación es que se cumpla que <span class="math inline">\(np &gt; 5\)</span> y <span class="math inline">\(n(1-p) &gt; 5\)</span>, que en nuestro caso se cumple sobradamente tanto para el grupo tratado como para el de control.</número></p>
+<p>Considerando que las proporciones en cada grupo son las probabilidades ligadas a las ocurrencias, podemos representar la distribución binomial junto con la Normal con la que la vamos a identificar y podemos ver que la aproximación es razonable (<a href="#fig-aproxNormal" class="quarto-xref">Figura&nbsp;<span>9.7</span></a>).</p>
+<div id="fig-aproxNormal" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-aproxNormal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_09/f0907_aproxNormal.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-aproxNormal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;9.7: Distribución binomial con parámetros n = 11037 y p = 0,00942, y distribución Normal con su misma media y desviación típica usada como aproximación.
+</figcaption>
+</figure>
+</div>
+<p>Seguimos el proceso habitual:</p>
+<section id="hipótesis-nula-frente-a-hipótesis-alternativa" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="hipótesis-nula-frente-a-hipótesis-alternativa">Hipótesis nula frente a hipótesis alternativa</h4>
+<p><span class="math display">\[\begin{equation*}
+    \begin{split}
+        \text{H}_0 &amp;: p_1 = p_2  {\small\text{     (La probabilidad de infarto es la misma en los dos grupos)}} \\[-1pt]
+        \text{H}_1 &amp;: p_1 &gt; p_2  {\small\text{     (...es menor en el grupo que toma aspirina)}} \\
+    \end{split}
+\end{equation*}\]</span></p>
+</section>
+<section id="estadístico-de-prueba---distribución-de-referencia" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="estadístico-de-prueba---distribución-de-referencia">Estadístico de prueba - Distribución de referencia</h4>
+<p>Recordemos que si <span class="math inline">\(X\)</span> es una variable aleatoria con distribución binomial y parámetros <span class="math inline">\(n\)</span>, <span class="math inline">\(p\)</span>, tenemos que: <span class="math inline">\(\text{E}(X) = np\)</span> y <span class="math inline">\(V(X)=np(1-p)\)</span>. Además, si se cumplen las condiciones para poder aproximar la distribución de <span class="math inline">\(X\)</span> a través de una Normal: <span class="math display">\[X \sim \text{N} \left(np; \sqrt{np(1-p)}\right)\]</span></p>
+<p>Lo aproximado es la forma de la distribución, los valores de la esperanza matemática y de la desviación típica son esos exactamente.</p>
+<p>Aplicando las propiedades que hemos visto para las variables aleatorias, podemos deducir rápidamente que la esperanza matemática y la varianza de la proporción <span class="math inline">\(\hat{p} = X/n\)</span> son: <span class="math display">\[\begin{equation*}
+    \begin{split}
+        \text{E}(\hat{p}) &amp;= \text{E} \left (\frac{X}{n} \right) = \frac{1}{n} \text{E}(X) = \frac{1}{n} np = p \\[4pt]
+        \text{V}(\hat{p}) &amp;= \text{V} \left (\frac{X}{n} \right) = \frac{1}{n^2} \text{V}(X) =  \frac{1}{n^2} np(1-p) =  \frac{p(1-p)}{n} \\
+    \end{split}
+\end{equation*}\]</span></p>
+<p>Por otra parte, si hemos considerado que la distribución de <span class="math inline">\(X\)</span> se puede aproximar con una distribución Normal, también se puede aproximar la de <span class="math inline">\(\hat{p}\)</span>, ya que es una variable con distribución Normal dividida por una constante, es como un cambio de escala en el eje de abscisas pero manteniendo la forma de la distribución: <span class="math display">\[\hat{p} \sim \text{N}  \left( p; \sqrt{\frac{p(1-p)}{n}}\right) \]</span> Y si tenemos dos muestras, recordando que si <span class="math inline">\(p_1\)</span> y <span class="math inline">\(p_2\)</span> son variables aleatorias con distribuciones Normales, la distribución de <span class="math inline">\(p_1 - p_2\)</span> (caso particular de combinación lineal) también será Normal, que <span class="math inline">\(E(p_1-p_2) = E(p_1) - E(p_2)\)</span> y que si son independientes –que lo son, porque conocer el valor de <span class="math inline">\(p_1\)</span> no aporta ninguna pista sobre el valor de <span class="math inline">\(p_2\)</span> y viceversa– tenemos que <span class="math inline">\(V(p_1-p_2) = V(p_1) + V(p_2)\)</span>, tendremos que la distribución de su diferencia será: <span class="math display">\[\hat{p}_1 - \hat{p}_2 \sim \text{N} \left ( p_1-p_2; \sqrt{\frac{p_1(1-p_1)}{n_1}+ \frac{p_2(1-p_2)}{n_2}}\right ) \]</span> En el caso de que la hipótesis nula sea cierta y <span class="math inline">\(p_1 = p_2 = p\)</span> tendremos: <span class="math display">\[\hat{p}_1 - \hat{p}_2 \sim \text{N} \left (0; \;\; \sqrt{\frac{p(1-p)}{n_1}+ \frac{p(1-p)}{n_2}}\right ) \]</span> El problema es que no conocemos el valor de <span class="math inline">\(p\)</span>. Siendo <span class="math inline">\(x_1\)</span> y <span class="math inline">\(x_2\)</span> el número de ocurrencias en cada muestra, una forma razonable de estimarlo es haciendo: <span class="math display">\[\hat{p} = \frac{x_1+x_2}{n_1+n_2} \]</span> Ya tenemos estadístico de prueba y distribución de referencia. Podemos elegir una de las siguientes opciones:</p>
+<p><span class="math display">\[\text{Estadístico de prueba} \quad \qquad \qquad   \text{Distribución de referencia} \quad \]</span> <span class="math display">\[\begin{equation*}
+    \begin{split}
+         \hat{p}_1 - \hat{p}_2 \quad \qquad &amp;\sim \;\; \text{N} \left (0; \;\; \sqrt{\frac{\hat{p}(1-\hat{p})}{n_1}+ \frac{\hat{p}(1-\hat{p})}{n_2}}\right ) \\[5pt]
+         \frac{\hat{p}_1 - \hat{p}_2}{\sqrt{\frac{\hat{p}(1-\hat{p})}{n_1}+ \frac{\hat{p}(1-\hat{p})}{n_2}}} \quad  &amp;\sim \qquad \qquad \;\;\text{N}(0;\,1)
+    \end{split}
+\end{equation*}\]</span></p>
+<p>La ventaja de este último es que la distribución de referencia siempre es la misma y es también la que aparece tabulada en los libros.</p>
+</section>
+<section id="cálculo-del-p-valor" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="cálculo-del-p-valor">Cálculo del <span class="math inline">\(p\)</span>-valor</h4>
+<p>Vamos a usar la <span class="math inline">\(\text{N}(0;\,1)\)</span> como distribución de referencia. Tenemos: <span class="math display">\[\hat{p} = \frac{x_1+x_2}{n_1+n_2} = \frac{189 + 104}{11\;\!034 + 11\;\!037} = 0.01328 \]</span> El valor del estadístico de prueba es:</p>
+<p><span class="math display">\[\begin{equation*}
+    \begin{split}
+        z &amp;= \frac{\hat{p}_1 - \hat{p}_2}{\sqrt{\frac{\hat{p}(1-\hat{p})}{n_1}+ \frac{\hat{p}(1-\hat{p})}{n_2}}} = \\[5pt]
+        &amp;= \frac{0.01713 - 0.00942}{\sqrt{\frac{0.01328(1-0.01328)}{11\;\!034}+ \frac{0.01328(1-0.01328)}{11\;\!037}}} = \\[5pt]
+        &amp;= 5.0014
+    \end{split}
+\end{equation*}\]</span></p>
+<p>Si <span class="math inline">\(p_1 = p_2\)</span> el estadístico de prueba pertenecerá a la distribución de referencia. Veamos si es razonable considerar que esto es así.</p>
+<div id="fig-pValorPropor" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pValorPropor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_09/f0908_pValorPropor.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pValorPropor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;9.8: Distribución de referencia, estadístico de prueba y p-valor en el estudio sobre la influencia de aspirina en los infartos de miocardio.
+</figcaption>
+</figure>
+</div>
+<p>No, no lo es, ya que <span class="math inline">\(P(z&gt;5.0014) &lt; 10^{-6}\)</span>. Si <span class="math inline">\(p_1\)</span> fuera igual a <span class="math inline">\(p_2\)</span> una diferencia como la observada se daría al azar menos de una vez en cada millón de estudios como el que se realizó.</p>
+</section>
+</section>
+<section id="pruebas-de-ajuste.-test-de-chi-cuadrado" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="pruebas-de-ajuste.-test-de-chi-cuadrado"><span class="header-section-number">9.3</span> Pruebas de ajuste. Test de Chi-cuadrado</h2>
+<section id="preámbulo-las-distribuciones-multinomial-y-chi-cuadrado" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="preámbulo-las-distribuciones-multinomial-y-chi-cuadrado">Preámbulo: Las distribuciones multinomial y chi-cuadrado</h3>
+<p>La distribución multinomial es una generalización de la binomial. Mientras que en la binomial cada experimento tiene solo dos resultados posibles (lanzar una moneda: cara y cruz), la distribución multinomial puede tener <span class="math inline">\(k\)</span> resultados: <span class="math inline">\(X_1, X_2, \dots , X_k\)</span>, cada uno con una cierta probabilidad de ocurrir: <span class="math inline">\(p_1, p_2, \dots , p_k\)</span>. Naturalmente, <span class="math inline">\(p_1 + p_2 + \dots + p_k = 1\)</span>.</p>
+<p>Si ejecutamos el experimento <span class="math inline">\(n\)</span> veces, cada uno de los resultados posibles tendrá una frecuencia observada <span class="math inline">\(O_i\)</span>, con <span class="math inline">\(i = 1, 2, \dots, k\)</span> y una frecuencia esperada <span class="math inline">\(E_i = n p_i\)</span>. Un ejemplo típico son los resultados obtenidos al lanzar <span class="math inline">\(n\)</span> veces un dado: tenemos <span class="math inline">\(k=6\)</span> resultados posibles, en este caso todos con la misma probabilidad de ocurrir.</p>
+<p>Recuperando los resultados del experimento de los dados de Wolf, para el dado rojo tenemos:</p>
+<hr>
+<p>**** TABLA SIN NÚMERO **** **************************</p>
+<p>En general, si el tamaño de la muestra es grande y se tiene un mínimo de 5 observaciones para cada uno de los valores posibles, el estadístico:</p>
+<p><span class="math display">\[Q = \sum_{i=1}^{k} \frac{(O_i-E_i)^2}{E_i}\]</span> Sigue una distribución conocida y tabulada llamada distribución chi-cuadrado, también escrito <span class="math inline">\(\chi^2\)</span>.</p>
+<p>A diferencia de la Normal o la <span class="math inline">\(t\)</span>-Student, la distribución <span class="math inline">\(\chi^2\)</span> es asimétrica (cola larga hacia la derecha) y al igual que la <span class="math inline">\(t\)</span>-Student no es una distribución única sino que hay que indicar cuáles son sus grados de libertad. En el caso de <span class="math inline">\(Q\)</span>, sigue una distribución chi-cuadrado con <span class="math inline">\(k-1\)</span> grados de libertad<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+</section>
+<section id="otro-análisis-de-los-resultados-obtenidos-con-los-dados-de-wolf" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="otro-análisis-de-los-resultados-obtenidos-con-los-dados-de-wolf">Otro análisis de los resultados obtenidos con los dados de Wolf</h3>
+<p>En nuestro primer análisis usamos la diferencia máxima en valor absoluto como medida de la discrepancia entre los valores esperados y los observados. Con la notación que estamos usando sería: <span class="math display">\[W = \text{Max} \left( | O_i - E_i | \right) \quad \text{para} \;\; i = 1,2,\dots,  k \]</span> Otra medida de discrepancia podría ser: <span class="math display">\[T = \sum_{i=1}^{k} |O_i - E_i | \]</span> o también: <span class="math display">\[V =  \sum_{i=1}^{k} (O_i - E_i)^2 \]</span></p>
+<p>Cualquiera de estas nos podría servir como estadístico de prueba para contrastar la hipótesis nula de que el dado está equilibrado frente a la alternativa de que no lo está. La distribución de referencia adaptada a cada una de ellas podríamos construirla fácilmente por simulación.</p>
+<p>Decimos “fácilmente” ahora, pero cuando se empezó a plantear esta forma de razonamiento no existía la posibilidad de la simulación y había que echar mano de argumentos matemáticos para identificar un estadístico de prueba con una distribución de referencia que se pudiera describir matemáticamente. En el caso que nos ocupa la solución está clara. El estadístico de prueba es <span class="math inline">\(Q\)</span> y la distribución de referencia una chi-cuadrado con <span class="math inline">\(k-1\)</span> grados de libertad.</p>
+<p>Observe que <span class="math inline">\(Q\)</span> es la suma de una medida de discrepancia para cada uno de los resultados posibles. Parece innecesariamente complicado. pero tiene la gran ventaja de que la distribución de referencia es conocida y está tabulada. Tenemos:</p>
+<p><span class="math display">\[\begin{equation*}
+    \begin{split}
+        Q &amp;= \frac{(3407-3333.33)^2}{3333.33} + \frac{(3631-3333.33)^2}{3333.33} + \dots + \frac{(3422-3333.33)^2}{3333.33} = \\[5pt]
+        &amp;= 94.189
+    \end{split}
+\end{equation*}\]</span></p>
+<p>Llevando este valor a la distribución de referencia, una <span class="math inline">\(\chi^2\)</span> con 5 grados de libertad, vemos que claramente no pertenece a esa distribución (<a href="#fig-pValorChi2" class="quarto-xref">Figura&nbsp;<span>9.9</span></a>).</p>
+<div id="fig-pValorChi2" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pValorChi2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_09/f0909_pValorChi2.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pValorChi2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;9.9: Estadístico de prueba <span class="math inline">\(Q = 94,189\)</span> y distribución <span class="math inline">\(\chi^2\)</span> con <span class="math inline">\(\nu = 5\)</span> grados de libertad.
+</figcaption>
+</figure>
+</div>
+<p><span style="color: #0038CF;"><strong>¿Seguro que la distribución de referencia es una <span class="math inline">\(\chi^2\)</span> con 5 grados de libertad?</strong></span></p>
+<p>No hemos demostrado –ni justificado– que para el estadístico de prueba que hemos definido la distribución de referencia es una <span class="math inline">\(\chi^2\)</span> con 5 grados de libertad, pero podemos comprobar que, al menos en este caso concreto, así es.</p>
+<p>Hemos repetido 100.000 veces el cálculo del estadístico de prueba <span class="math inline">\(Q\)</span>, cada uno de ellos a partir de los resultados obtenidos por simulación al lanzar <span class="math inline">\(20\;\!000\)</span> veces un dado equilibrado (<span class="math inline">\(\text{H}_0\)</span> cierta: <span class="math inline">\(p_1 = \dots = p_6 = 1/6\)</span>). La <a href="#fig-histoChi2" class="quarto-xref">Figura&nbsp;<span>9.10</span></a> muestra el histograma de los <span class="math inline">\(100\;\!000\)</span> valores obtenidos y se ha superpuesto la función densidad de probabilidad (ajustando la escala del eje de ordenadas) de una distribución <span class="math inline">\(\chi^2\)</span> con 5 grados de libertad. La coincidencia es evidente. El lector desconfiado (sana desconfianza) y con algunos conocimientos de programación, puede comprobarlo en cualquier otra situación.</p>
+<div id="fig-histoChi2" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-histoChi2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_09/f0910_histoChi2.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-histoChi2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;9.10: Lanzamiento de un dado. Histograma de 100;!000 valores de <span class="math inline">\(Q = \sum_{i=1}^{k} \frac{(O_i-E_i)^2}{E_i}\)</span> obtenidos por simulación y distribución <span class="math inline">\(\chi^2\)</span> con <span class="math inline">\(\nu=5\)</span> superpuesta.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="otros-resultados-no-tan-exagerados" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="otros-resultados-no-tan-exagerados">Otros resultados, no tan exagerados</h3>
+<p>Supongamos que con otros dos dados, uno verde y otro azul, los resultados al realizar 20;!000 lanzamientos son los que se indican en la tabla <span class="math inline">\(\ref{tablaNuevosDados}\)</span>.</p>
+<hr>
+<p>**** TABLA 9.3 **** **************************</p>
+<p>Solo a la vista de esos números resulta difícil opinar sobre si las diferencias respecto a los valores teóricos esperados (20.000/6 = 3.333,33) son normales o son mayores de lo que cabría esperar. La representación gráfica de los datos (<a href="#fig-nuevosDados" class="quarto-xref">Figura&nbsp;<span>9.11</span></a>) tampoco ayuda mucho en este caso.</p>
+<div id="fig-nuevosDados" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-nuevosDados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_09/f0911_nuevosDados.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nuevosDados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;9.11: Representación de los resultados obtenidos con los dados verde y azul.
+</figcaption>
+</figure>
+</div>
+<p>Un test estadístico aportará información relevante para valorar esta situación. Elegimos el estadístico de prueba que tiene como distribución de referencia una <span class="math inline">\(\chi^2\)</span> con 5 grados de libertad, los valores obtenidos son 7,65 para el dado verde y 15,91 para el azul. Los cálculos se encuentran en la tabla <span class="math inline">\(\ref{estPruebaNuevosDados}\)</span> y en la figura <span class="math inline">\(\ref{pValorChi2NuevosDados}\)</span> se han colocado esos valores en la distribución de referencia.</p>
+<hr>
+<p>**** TABLA 9.4 **** **************************</p>
+<div id="fig-pValorChi2NuevosDados" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pValorChi2NuevosDados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_09/f0912_pValorChi2NuevosDados.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pValorChi2NuevosDados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;9.12: Valores de los estadísticos de prueba y su posición en la distribución de referencia.
+</figcaption>
+</figure>
+</div>
+<p>En un dado equilibrado, la probabilidad de tener una discrepancia como la observada en el dado verde, o mayor que esa, es del orden del 18 %, no hay pruebas para acusarlo. Sin embargo la probabilidad de tener una discrepancia como la observada en el dado azul es solo del orden del 7 por mil. Si existían sospechas previas, o había razones para pensar que podría estar trucado, este resultado avala esa teoría.</p>
+<section id="elección-del-estadístico-de-prueba" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="elección-del-estadístico-de-prueba">Elección del estadístico de prueba</h4>
+<p>Aunque, en general, los <span class="math inline">\(p\)</span>-valores obtenidos son similares para cualquier estadístico de prueba razonable, en algunos casos pueden ser muy distintos. Por ejemplo, si lanzamos un dado 6000 veces y las frecuencias obtenidas son 950 para un resultado, 1050 para otro y 1000 para el resto, los <span class="math inline">\(p\)</span>-valores obtenidos usando el estadístico de prueba que tiene como distribución de referencia la <span class="math inline">\(\chi^2\)</span> con 5 grados de libertad es muy parecido al obtenido usando la diferencia máxima en valor absoluto (ambos en torno a 0,4). Sin embargo, si las frecuencias son 950 para tres resultados y 1050 para los otros tres, el primero recoge esa diferencia y el <span class="math inline">\(p\)</span>-valor disminuye mucho colocándose en torno a 0,01 mientras que el segundo no cambia y el <span class="math inline">\(p\)</span>-valor se queda como estaba.</p>
+<p>El primer estadístico de prueba sería como la varianza para medir la variabilidad mientras que el segundo sería el equivalente al rango, con sus ventajas (facilidad) y sus inconvenientes (no recoge bien toda la información que contienen los datos).</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Distribución Chi-cuadrado: Para un barrido y para un fregado.
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La distribución de <span class="math inline">\(\chi^2\)</span> no solo se usa como distribución de referencia en test como el que acabamos de ver. También sirve para explicar la variabilidad que presentan las varianzas muestrales <span class="math inline">\(s^2\)</span> de muestras de tamaño <span class="math inline">\(n\)</span> de una población Normal con varianza <span class="math inline">\(\sigma^2\)</span>. Concretamente: <span class="math display">\[s^2 \sim \frac{\sigma^2}{n-1} \chi_{n-1}^2 \]</span> El subíndice <span class="math inline">\(n-1\)</span> indica los grados de libertad de la distribución.</p>
+<pre><code>    No podemos tener una distribución para cada variable aleatoria de interés. Tener distribuciones que sirven en distintos contextos nos ayuda a simplificar el conjunto de herramientas a utilizar.</code></pre>
+</div>
+</div>
+</section>
+<section id="no-todo-son-dados" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="no-todo-son-dados">No todo son dados</h4>
+<p>En un contexto industrial, supongamos que cuando todo funciona de la forma habitual el 85 % de las unidades producidas son correctas, el 10 % tienen algún defecto que se puede corregir y el 5 % restante son defectuosas sin arreglo. En la última semana se han fabricado 5.000 unidades, consideremos las situaciones, A y B, que se indican en la tabla <span class="math inline">\(\ref{ejemploIndustrial}\)</span>.</p>
+<hr>
+<p>**** TABLA 9.5 **** **************************</p>
+<p>Nos preguntamos si alguna de estas situaciones muestra un cambio significativo (no lo explica el azar) en la proporción de unidades de cada tipo. La representación gráfica de los resultados no despeja la duda planteada.</p>
+<div id="fig-industrialChi2" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-industrialChi2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_09/f0913_industrialChi2.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-industrialChi2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;9.13: Representación gráfica de los resultados en las situaciones consideradas.
+</figcaption>
+</figure>
+</div>
+<p>Realizando el test de Chi-cuadrado los estadísticos de prueba son 8,82 para la situación A y 3,99 para la B (tabla <span class="math inline">\(\ref{testChiEjeIndustrial}\)</span>).</p>
+<hr>
+<p>**** TABLA 9.6 **** **************************</p>
+<p>Situando esos valores en su distribución de referencia, en este caso una <span class="math inline">\(\chi^2\)</span> con 2 grados de libertad, observamos que para la situación A el <span class="math inline">\(p\)</span>-valor es 0,136 mientras que para la B es igual a 0,012.</p>
+<p>Por tanto, suponiendo que el proceso se mantiene estable y que el porcentaje de defectos de cada tipo no ha cambiado, una discrepancia respecto a los valores teóricamente esperados se da del orden del 14 % de las veces en la situación A mientras que solo un 1 % en la B. Si colocamos la frontera de lo razonablemente sospechoso en el 5 % deberíamos seguir sin preocuparnos si estamos en la situación A mientras que convendría revisar el proceso en busca de algún problema si nos encontramos en la situación B.</p>
+</section>
+</section>
+</section>
+<section id="un-caso-especial-los-test-de-normalidad" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="un-caso-especial-los-test-de-normalidad"><span class="header-section-number">9.4</span> Un caso especial: los test de Normalidad</h2>
+<p>La Normalidad de los datos suele estar sobrevalorada, aunque sigue siendo una de las principales preocupaciones de quienes se inician en el análisis estadístico. Muchos tests que, en teoría, exigen que los datos sean normales, en realidad solo requieren la normalidad de las medias muestrales, un supuesto que, en la práctica, casi siempre se cumple.</p>
+<p>Para comparar las medias de dos poblaciones A y B mediante el test de la <span class="math inline">\(t\)</span> de Student formalmente se requiere que: <span class="math display">\[y_A \sim \text{N}(\mu_A; \;\sigma) \qquad y_B \sim \text{N}(\mu_B; \;\sigma) \]</span> Vamos a ver qué pasa cuando <span class="math inline">\(\mu_A = 3.0\)</span>, <span class="math inline">\(\mu_B = 3.6\)</span>, <span class="math inline">\(\sigma = \sqrt{3}\)</span> y se contrasta <span class="math inline">\(\text{H}_0: \mu_A = \mu_B\)</span> frente a <span class="math inline">\(\text{H}_1: \mu_A \neq \mu_B\)</span> con muestras de tamaño <span class="math inline">\(n_A = n_B = 10\)</span>. Generamos 10 números aleatorios de una distribución (3,0; ;<span class="math inline">\(\sqrt{3})\)</span> y otros 10 de una (3,6; ;<span class="math inline">\(\sqrt{3})\)</span>, realizamos el test de la <span class="math inline">\(t\)</span>-Student y obtenemos un <span class="math inline">\(p\)</span>-valor. Si ejecutamos esta operación un millón de veces tendremos un millón de <span class="math inline">\(p\)</span>-valores. A continuación repetimos exactamente el mismo procedimiento pero generando los datos de las distribuciones que se indican en la tabla <span class="math inline">\(\ref{parametrosDistribuciones}\)</span>.</p>
+<hr>
+<p>**** TABLA 9.7 **** **************************</p>
+<p>Los resultados obtenidos se encuentran en la <a href="#fig-pValorNoNormal" class="quarto-xref">Figura&nbsp;<span>9.14</span></a>. Se han representado los histogramas de los <span class="math inline">\(p\)</span>-valores según sea la distribución origen de los datos. Podemos observar que son muy parecidos. Cuando los datos provienen de una distribución Normal el 11,1% de las veces se rechaza la hipótesis nula, valor similar a cuando los datos provienen de las otras distribuciones, incluso de la exponencial, que es muy distinta de la Normal. Por tanto, al menos en este caso, la Normalidad no es tan importante.</p>
+<div id="fig-pValorNoNormal" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pValorNoNormal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_09/f0914_pValorNoNormal.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pValorNoNormal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;9.14: Distribución de p-valores obtenidos al comparar dos medias con el test de la t-Student según sea la distribución origen de los datos.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Para analizar, para aprender… ¡Simular!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Simular no solo sirve para analizar datos construyendo –por ejemplo– distribuciones de referencia. También sirve para aprender, para comprobar, para descubrir, para ver que pasa si…</p>
+</div>
+</div>
+<section id="un-ejemplo-de-test-de-normalidad-kolmogorov-smirnov" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="un-ejemplo-de-test-de-normalidad-kolmogorov-smirnov">Un ejemplo de test de Normalidad: Kolmogorov-Smirnov</h3>
+<p>Existen muchos test de Normalidad (la abundancia es otra de sus peculiaridades). Vamos a comentar el de Kolmogorov-Smirnov, seguramente el que más suena a los que han realizado algún curso de estadística. También es el más sencillo de explicar, aunque no está entre los mejores.</p>
+<p>En primer lugar debemos definir lo que es la <strong>función de distribución, <em>F(X)</em></strong>. Cuando se representa la función densidad de probabilidad <span class="math inline">\(f(x)\)</span> –la que tiene forma de campana en la distribución Normal– las ordenadas son “densidades de probabilidad” mientras que las probabilidades corresponden a áreas bajo la curva. Cuando hablamos de función de distribución el eje de ordenadas ya indica probabilidades. No pueden ser probabilidades de valores concretos, puesto que estas siempre son iguales a cero, sino probabilidades acumuladas hasta el valor para el que se define <span class="math inline">\(F(X)\)</span>. En una distribución Normal la forma de su función de distribución es una especie de S inclinada alargando los extremos.</p>
+<div id="fig-funcionDistribucion" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-funcionDistribucion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_09/f0915_funcionDistribucion.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-funcionDistribucion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;9.15: Función densidad de probabilidad y función de distribución de una N(0;1).
+</figcaption>
+</figure>
+</div>
+<p>Por otra parte, dada una muestra podemos definir su función de distribución empírica, <span class="math inline">\(F_n(x)\)</span>, sustituyendo probabilidades por proporciones. Hemos generado 5 números aleatorios de una distribución N(0; 1) que, una vez ordenados de menor a mayor, son los que se indican a continuación, junto con sus proporciones acumuladas.</p>
+<hr>
+<p>**** TABLA sín número **** **************************</p>
+<p>Como el menor, o por debajo de ese, hay 1 entre 5 (proporción: 0,2), como el que viene a continuación o menor que ese hay 2 entre 5 (0,4) y así sucesivamente. Finalmente, menor que el mayor (<span class="math inline">\(x_{max}\)</span>) lo son todos, por tanto <span class="math inline">\(F_n(x_{max}) = 1\)</span>.</p>
+<p>El estadístico de prueba es la distancia máxima, <span class="math inline">\(D_{max}\)</span> entre la función de distribución teórica –la que figura en la hipótesis nula– y la empírica correspondiente a los datos disponibles. Si con los datos de nuestro ejemplo contrastamos la hipótesis nula de que pertenecen a una N(0; 1) tendremos los valores de <span class="math inline">\(F(X)\)</span> que se indican en la tabla <span class="math inline">\(\ref{ejemploKS}\)</span>, donde también vemos que la distancia máxima entre ambas funciones de distribución corresponde al valor <span class="math inline">\(x = -0.34\)</span> y es igual a 0,233.</p>
+<hr>
+<p>**** TABLA 9.8 **** **************************</p>
+<p>La <a href="#fig-pruebaKSNormal5" class="quarto-xref">Figura&nbsp;<span>9.16</span></a> muestra la obtención del estadístico de prueba con los datos del ejemplo para contrastar la hipótesis nula de que provienen de una N(0;1).</p>
+<div id="fig-pruebaKSNormal5" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pruebaKSNormal5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_09/f0916_pruebaKSNormal5.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pruebaKSNormal5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;9.16: Estadístico de prueba del test de Kolmogorov-Smirnov.
+</figcaption>
+</figure>
+</div>
+<p>La distribución de referencia puede calcularse por simulación y es la misma con independencia de cuál sea la distribución continua considerada en la hipótesis nula<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. Lo que sí cambia –obviamente– es la función de distribución teórica y, por tanto, la distancia máxima. Aunque este test sirve para contrastar la pertenencia de un conjunto de datos a cualquier distribución continua, como test de Normalidad es muy poco exigente y es muy fácil que los datos lo pasen aunque provengan de distribuciones muy alejadas de la Normal. Otro problema es que hemos supuesto conocidos los parámetros que definen la población, lo cual es poco razonable si dudamos del tipo de población al que pertenecen.</p>
+<p>Existe una variante de este test, solo para contrastar la Normalidad (test de Lilliefords), que utiliza los valores estimados de los parámetros a partir de los valores de la muestra. Entre los test de Normalidad que mejor discriminan las distribuciones alejadas de la Normal se encuentran el de Shapiro-Wilk y el de Anderson-Darling<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>El pecado original de los test de Normalidad
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>En un contraste de hipótesis la carga de la prueba la tiene el que afirma aquello que interesa que ocurra. Si se prueba una nueva vacuna la hipótesis nula es que no inmuniza y solo si los resultados están en contradicción con esa hipótesis se considera que sí es efectiva. Cuando se realiza un test de Normalidad e interesa que los datos sean Normales se traiciona ese espíritu al considerar que lo son a no ser que se demuestre lo contrario.</p>
+</div>
+</div>
+</section>
+<section id="pasar-el-test-garantiza-la-normalidad" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="pasar-el-test-garantiza-la-normalidad">Pasar el test ¿garantiza la Normalidad?</h3>
+<p>No, en absoluto, y menos si el tamaño de muestra es pequeño. De nuevo hemos usado la simulación para ponerlo de manifiesto. Hemos generado 10;!000 muestras de tamaño <span class="math inline">\(n=10\)</span> de una distribución uniforme y a cada una de ellas le hemos aplicado el test de Shapiro-Wilk, uno de los que mejor discrimina cuando los datos no son Normales. En más del 90 % de los casos el <span class="math inline">\(p\)</span>-valor resultado del test es superior a 0,05, es decir, que con el nivel de significación habitual del 5 % no se rechazaría la hipótesis de Normalidad. El poder de discriminación es mayor a medida que aumenta el tamaño de la muestra, pero con <span class="math inline">\(n=20\)</span> esa proporción sigue siendo alta, en torno al 80 %.</p>
+<p>Si generamos los números de una distribución exponencial –muy distinta de la Normal– con <span class="math inline">\(n=10\)</span> más de la mitad de las veces no se rechaza la hipótesis de Normalidad y si <span class="math inline">\(n=20\)</span> esa proporción está en torno al 16 %. Si la distribución origen de los datos es la de Laplace las proporciones de no rechazo están en torno al 85 % si <span class="math inline">\(n=10\)</span> y del 74 % si <span class="math inline">\(n=20\)</span>.</p>
+<p>La <a href="#fig-normalErrorTipoII_SW" class="quarto-xref">Figura&nbsp;<span>9.17</span></a> muestra los histogramas de los <span class="math inline">\(p\)</span>-valores obtenidos en cada caso<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>. La proporción de veces que se rechaza la hipótesis nula puede variar ligeramente si se repite la simulación.</p>
+<div id="fig-normalErrorTipoII_SW" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-normalErrorTipoII_SW-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_09/f0917_normalErrorTipoII_SW.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-normalErrorTipoII_SW-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;9.17: Histogramas de los <span class="math inline">\(p\)</span>-valores obtenidos al realizar el test de Normalidad de Shapiro-Wilk a 10.000 muestras de los tamaños y distribuciones que se indican. Se muestra la proporción de veces que se rechaza la Normalidad con el nivel de significación habitual del 5 %.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>¿Cómo se justifica la Normalidad de los datos?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Razonando en base a su origen y características. Pasar el test de Normalidad solo pone de manifiesto que los datos no contradicen ese supuesto, pero no demuestran ni justifican que sea cierto.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="apéndice-9.a-reflexiones-en-torno-al-p-valor" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="apéndice-9.a-reflexiones-en-torno-al-p-valor">APÉNDICE 9.A: Reflexiones en torno al p-valor</h2>
+<p>Con frecuencia el <span class="math inline">\(p\)</span>-valor es visto como una especie de “número mágico” que sintetiza el resultado de un test estadístico y que puede marcar la diferencia entre el éxito o el fracaso de una investigación. En muchas ocasiones, la recogida de datos para llegar a plantear el contraste de hipótesis es larga y laboriosa por lo que obtener un <span class="math inline">\(p\)</span>-valor u otro puede significar que los esfuerzos realizados tengan o no recompensa.</p>
+<p>Quizá por esta razón, a veces se magnifica su significado y conviene tener claros los aspectos que a continuación comentamos.</p>
+<p>####El <span class="math inline">\(p\)</span>-valor también es una variable aleatoria {.unnumbered}</p>
+<p>Consideremos un test de comparación de las medias de dos tratamientos. Las medias de las muestras son variables aleatorias, ya que dependen de los valores que tengamos en las muestras. Si repetimos un estudio realizado con todo el rigor y la meticulosidad exigidas, los valores obtenidos serán otros y, por tanto, también lo serán sus medias y el <span class="math inline">\(p\)</span>-valor resultado del test de comparación.</p>
+<p>Es verdad que no esperamos que el nuevo <span class="math inline">\(p\)</span>-valor sea muy distinto del primero (dependerá del número de datos y de su variabilidad) pero sí que sea distinto. Por tanto, no podemos tomarnos el <span class="math inline">\(p\)</span>-valor obtenido como un valor de referencia exacto e indiscutible que nos conduce a una determinada decisión. En realidad el <span class="math inline">\(p\)</span>-valor es una variable aleatoria, y decidimos a la vista de un solo valor de esa variable.</p>
+<p>Si realizamos el test usando dos muestras de la misma población (no hay diferencia en las medias), el <span class="math inline">\(p\)</span>-valor obtenido es un valor de una distribución uniforme definida entre 0 y 1. Cualquier valor dentro de ese intervalo tiene la misma probabilidad de ser obtenido. En particular, si el nivel de significación lo situamos en 0,05, existe una probabilidad del 5 % de rechazar la hipótesis nula de igualdad de medias. Si la diferencia de medias realmente existe, la distribución del <span class="math inline">\(p\)</span>-valor se va volviendo asimétrica aumentando la probabilidad de los valores bajos y disminuyendo la de los altos, y esa asimetría es cada vez más acentuada cuanto mayor es la diferencia.</p>
+<p>Una vez más la simulación nos ayudará a ver lo que ocurre. Cada uno de los gráficos de la <a href="#fig-reflexionesPvalor_SW" class="quarto-xref">Figura&nbsp;<span>9.18</span></a> representa el histograma de los <span class="math inline">\(p\)</span>-valores obtenidos al realizar 100.000 veces el test de comparación de medias de la <span class="math inline">\(t\)</span> de Student a muestras de tamaño <span class="math inline">\(n = 10\)</span> obtenidas aleatoriamente de una distribución Normal con desviación típica <span class="math inline">\(\sigma = 3\)</span> y la diferencia de medias que se indica en cada gráfico (el valor concreto de las medias es irrelevante). Vemos que la distribución de <span class="math inline">\(p\)</span>-valor es uniforme si la diferencia de medias es igual a cero, y como la probabilidad de que ese <span class="math inline">\(p\)</span>-valor sea inferior a 0.05 va aumentando a medida que aumenta la diferencia de las medias poblaciones. Dependiendo de cuál sea esa diferencia, el <span class="math inline">\(p\)</span>-valor que se obtendrá será un valor de la distribución correspondiente. Eso es el <span class="math inline">\(p\)</span>-valor, un valor de una distribución de probabilidad.</p>
+<div id="fig-reflexionesPvalor_SW" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-reflexionesPvalor_SW-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_09/f0918_reflexionesPvalor.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-reflexionesPvalor_SW-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;9.18: Test de comparación de medias de la <span class="math inline">\(t\)</span>-Student. Distribución del <span class="math inline">\(p\)</span>-valor según sea la diferencia de medias.
+</figcaption>
+</figure>
+</div>
+<section id="la-frontera-del-005-es-arbitraria" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="la-frontera-del-005-es-arbitraria">La frontera del 0,05 es arbitraria</h4>
+<p>Cuando se construyeron las primeras tablas estadísticas, con métodos de cálculo todavía rudimentarios, para las distribuciones más habituales se determinaron los valores que correspondían a probabilidades que eran números redondos, en general: 0,001, 0,0025, 0,01, 0,025, 0,05, 0,10, 0,25. De todos estos, el que se consideró que marca la diferencia entre lo normal y lo raro es 0,05, pero también se podría usar 0,03 o 0,06. Seguramente usamos 0,05 porque tenemos 5 dedos en cada mano y ese es un número redondo en nuestro sistema decimal. Si tuviéramos seis dedos es muy posible que el valor frontera fuera 0,06.</p>
+</section>
+<section id="el-p-valor-aporta-información-relevante" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="el-p-valor-aporta-información-relevante">El <span class="math inline">\(p\)</span>-valor aporta información relevante</h4>
+<p>Es cierto que, si una representación gráfica de los resultados no despeja nuestras dudas, difícilmente lo hará un test estadístico. Sin embargo, mientras que una gráfica puede generar impresiones distintas según quién la observe, el test –a través del <span class="math inline">\(p\)</span>-valor– proporciona una medida objetiva del grado de duda o de incertidumbre.</p>
+<p>Usando el <span class="math inline">\(p\)</span>-valor se puede establecer una regla de decisión sin necesidad de deliberaciones basadas en criterios subjetivos: basta con fijar de antemano qué nivel de error se está dispuesto a aceptar y compararlo con el <span class="math inline">\(p\)</span>-valor.</p>
+</section>
+</section>
+<section id="apéndice-9.b-intervalos-de-confianza-como-alternativa-al--valor" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="apéndice-9.b-intervalos-de-confianza-como-alternativa-al--valor">APÉNDICE 9.B: Intervalos de confianza como alternativa al -valor</h2>
+<p>Otra manera de plantearse lo razonable que es un valor para un parámetro poblacional evitando la sensación de &lt;<blanco o="" negro="">&gt; que se tiene comparando el <span class="math inline">\(p\)</span>-valor con el nivel de significación es dar un intervalo de confianza del parámetro de interés. Si a partir de la siguiente muestra:</blanco></p>
+<div class="tabla-wrapper_T0900a">
+
+<table class="tabla-0900a caption-top table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>11,5</td>
+<td>8,0</td>
+<td>11,7</td>
+<td>9,9</td>
+<td>11,2</td>
+<td>10,4</td>
+<td>11,0</td>
+<td>11,7</td>
+<td>9,6</td>
+<td>9,6</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<p>contrastamos <span class="math inline">\(\text{H}_0\)</span>: <span class="math inline">\(\mu = 10\)</span> frente a <span class="math inline">\(\text{H}_1\)</span>: <span class="math inline">\(\mu \neq 10\)</span> mediante el test de la <span class="math inline">\(t\)</span> de Student, obtenemos un <span class="math inline">\(p\)</span>-valor de 0,254. Por tanto, con el nivel de significación habitual del 5 %, no rechazaremos <span class="math inline">\(\text{H}_0\)</span>. También podemos calcular un intervalo de confianza del 95 % para <span class="math inline">\(\mu\)</span> y obtenemos (9,605; 11,315). Vemos que 10 está dentro del intervalo, luego está dentro del rango de valores razonables con una confianza del 95 % y la conclusión es que no hay evidencia para rechazar que el valor de <span class="math inline">\(\mu\)</span> sea igual a 10.</p>
+<p>Existe una relación directa entre el <span class="math inline">\(p\)</span>-valor obtenido al realizar el test de la <span class="math inline">\(t\)</span> de Student y el hecho de que el valor contrastado esté dentro o fuera del intervalo de confianza. Si <span class="math inline">\(p\)</span>-valor,&gt;<span class="math inline">\(\,\alpha\)</span> seguro que el valor contrastado estará dentro del intervalo de confianza <span class="math inline">\(1-\alpha\)</span>, y si es menor que <span class="math inline">\(\alpha\)</span> seguro que estará fuera. Si el <span class="math inline">\(p\)</span>-valor es igual a <span class="math inline">\(\alpha\)</span> el valor contrastado estará justo en un extremo del intervalo <span class="math inline">\(1-\alpha\)</span>, tal como ocurre con los siguientes valores:</p>
+<div class="tabla-wrapper_T0900a">
+
+<table class="tabla-0900a caption-top table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>8,0</td>
+<td>10,3</td>
+<td>10,0</td>
+<td>10,8</td>
+<td>9,3</td>
+<td>8,2</td>
+<td>9,1</td>
+<td>9,7</td>
+<td>9,5</td>
+<td>8,7</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<p>Naturalmente, lo anterior también vale cuando se contrasta una diferencia de medias o de proporciones. Supongamos que tenemos dos muestras:</p>
+<div class="tabla-wrapper_T0900b">
+
+<table class="tabla-0900b caption-top table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>A:</td>
+<td>11,5</td>
+<td>8,0</td>
+<td>11,7</td>
+<td>9,9</td>
+<td>11,2</td>
+<td>10,4</td>
+<td>11,0</td>
+<td>11,7</td>
+<td>9,6</td>
+<td>9,6</td>
+</tr>
+<tr class="even">
+<td>B:</td>
+<td>8,0</td>
+<td>10,3</td>
+<td>10,0</td>
+<td>10,8</td>
+<td>9,3</td>
+<td>8,2</td>
+<td>9,1</td>
+<td>9,7</td>
+<td>9,5</td>
+<td>8,7</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<p>Contrastamos <span class="math inline">\(\mu_A = \mu_B\)</span> frente a <span class="math inline">\(\mu_A \neq \mu_B\)</span>, el <span class="math inline">\(p\)</span>-valor es 0,033 y el intervalo de confianza del 95 % para <span class="math inline">\(\mu_A - \mu_B\)</span> es (0,099; 2,101); el cero queda fuera de este intervalo, luego no es un valor razonable para la diferencia de medias con ese nivel de confianza. Los intervalos que estamos calculando son simétricos respecto a la estimación puntual y son equivalentes al contraste de hipótesis cuando la alternativa es del tipo “distinto de”.</p>
+</section>
+<section id="apéndice-9.c-más-sobre-las-distribuciones--student-y-chi-cuadrado" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="apéndice-9.c-más-sobre-las-distribuciones--student-y-chi-cuadrado">APÉNDICE 9.C: Más sobre las distribuciones -Student y Chi-cuadrado</h2>
+<p>Ambas aparecen con frecuencia en los análisis estadísticos. Intervienen en la construcción de intervalos de confianza —la <span class="math inline">\(t\)</span>-Student en el caso de las medias y la chi-cuadrado en el de las varianzas— y se utilizan como distribuciones de referencia en test estadísticos muy habituales.</p>
+<section id="distribución-t-student" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="distribución-t-student">Distribución <span class="math inline">\(t\)</span>-Student</h4>
+<p>Sabemos que si <span class="math inline">\(X \sim \text{N}(\mu; \sigma)\)</span> entonces <span class="math inline">\(z = (x - \mu)/ \sigma\)</span> es un valor de una distribución N(0; 1) con independencia de los valores de <span class="math inline">\(\mu\)</span> y de <span class="math inline">\(\sigma\)</span>. El problema es que no podemos calcular el valor de <span class="math inline">\(z\)</span> si, tal como ocurre en la práctica, no se conocen los valores de <span class="math inline">\(\mu\)</span> ni de <span class="math inline">\(\sigma\)</span>. El valor de <span class="math inline">\(\mu\)</span> no da problemas, ya que desaparece de las expresiones del intervalo de confianza o se considera conocido cuando se realiza un contraste de hipótesis, siendo el valor especificado en la hipótesis nula. Sin embargo, no conocer <span class="math inline">\(\sigma\)</span> sí cambia las cosas porque si usamos su estimador <span class="math inline">\(s\)</span> –lo más razonable si no se conoce el valor real–, tenemos <span class="math inline">\((x - \mu)/ s\)</span>, que no es igual que <span class="math inline">\((x - \mu)/ \sigma\)</span> porque no es lo mismo tener en el denominador una variable aleatoria que tener una constante. Tiene más variabilidad la expresión que contiene la variable aleatoria.</p>
+<p>Si se trabaja con una muestra grande este problema tiene poca relevancia porque el valor de <span class="math inline">\(s\)</span> tendrá poca variabilidad y será muy parecido al de <span class="math inline">\(\sigma\)</span>, de manera que las dos expresiones tendrán distribuciones muy parecidas. Sin embargo, si la muestra es pequeña la diferencia puede ser importante y la mayor variabilidad al dividir por <span class="math inline">\(s\)</span> se traduce en una distribución más ancha, donde los valores que dejan las probabilidades establecidas quedan más lejos. Si se trata de un contraste de hipótesis se tenderá a rechazar la hipótesis nula con una probabilidad de error mayor de la que se ha establecido.</p>
+<p>El primero en proponer el uso de una nueva distribución de referencia cuando se utiliza el valor de <span class="math inline">\(s\)</span> para estandarizar la distribución Normal fue William S. Gosset (1876-1937), un científico con formación en matemáticas y química que trabajaba en la cervecería Guinness de Dublín. Parece que en el marco de sus investigaciones sobre la producción de cerveza se enfrentó a los desafíos de obtener conclusiones válidas a partir del análisis de muestras pequeñas. Una anécdota muy comentada es que la empresa no permitía que los trabajadores publicaran resultados de sus investigaciones por lo que Gosset firmó el artículo con su propuesta de nueva distribución con el seudónimo de <em>Student</em>. Por esta razón le llamamos <span class="math inline">\(t\)</span> de Student y no <span class="math inline">\(t\)</span> de Gosset como seguramente se llamaría si el artículo lo hubiera firmado con su nombre.</p>
+<p>La <span class="math inline">\(t\)</span> de Student no es una sola distribución, como sí lo es la N(0; 1) sino una familia de distribuciones donde cada una de ellas está caracterizada por los llamados &lt;<grados de="" libertad="">&gt; que notamos <span class="math inline">\(\nu\)</span>. Esos grados de libertad están relacionados con el tamaño de la muestra <span class="math inline">\(n\)</span>: <span class="math inline">\(\nu = n-1\)</span>. A medida que <span class="math inline">\(n\)</span> aumenta, la distribución de <span class="math inline">\(t\)</span> va teniendo más grados de libertad y se va pareciendo a la N(0; 1).</grados></p>
+<p>La figura <span class="math inline">\(\ref{tStudent}\)</span> muestra en la parte izquierda una <span class="math inline">\(t\)</span>-Student con 4 grados de libertad (el valor de <span class="math inline">\(s\)</span> se estima con una muestra de 5 observaciones) junto con una N(0; 1). No parecen muy distintas pero si nos fijamos en las colas –que es la zona que más interesa– sí lo son. En una N(0; 1) el intervalo donde la probabilidad de ocurrencia es del 95% es <span class="math inline">\(0 \pm 1.96\)</span>, mientras que en la <span class="math inline">\(t_4\)</span> es <span class="math inline">\(0 \pm 2.78\)</span>, claramente más ancho en este caso. Cuando la <span class="math inline">\(t\)</span>-Student tiene 10 grados de libertad (gráfico de la derecha) la diferencia es menor. A partir de 30 grados de libertad, a efectos prácticos, se pueden considerar iguales.</p>
+<div id="fig-tStudent" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tStudent-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_09/f0919_tStudent.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tStudent-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;9.19: Distribuciones t-Student comparadas con la distribución N(0; 1).
+</figcaption>
+</figure>
+</div>
+<p>Observe que si se trabaja con una muestra de tamaño <span class="math inline">\(n=5\)</span> y al contrastar el valor de la media de la población se obtiene un estadístico de prueba <span class="math inline">\(t = 2.5\)</span>, si usamos como distribución de referencia una N(0; 1) rechazaremos la hipótesis nula, mientras que con la distribución adecuada (<span class="math inline">\(t_{\nu=4}\)</span>) no se rechaza.</p>
+</section>
+<section id="distribución-chi2" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="distribución-chi2">Distribución <span class="math inline">\(\chi^2\)</span></h4>
+<p>Al igual que la <span class="math inline">\(t\)</span>-Student se trata de una familia de distribuciones, de manera que para identificar a cuál nos estamos refiriendo hay que concretar sus grados de libertad. Se define como una suma de normales estandarizas al cuadrado, siendo sus grados de libertad igual al número de sumandos. Si <span class="math inline">\(X \sim \text{N}(\mu; \sigma)\)</span>:</p>
+<p><span class="math display">\[\sum_{i=1}^{\nu} \left ( \frac{x_i - \mu}{\sigma} \right )^2 \sim \chi_{\nu}^2 \]</span> Tanto su media como su varianza están relacionadas con sus grados de libertad, concretamente <span class="math inline">\(E(\chi_{\nu}^2)= \nu\)</span> y <span class="math inline">\(V(\chi_{\nu}^2)= 2\nu\)</span>. A diferencia de la <span class="math inline">\(t\)</span>-Student, esta es una distribución asimétrica, pero a medida que aumentan los grados de libertad se va haciendo simétrica y pareciéndose cada vez más a una distribución Normal<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> (figura <span class="math inline">\(\ref{Chi2}\)</span>).</p>
+<div id="fig-Chi2" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Chi2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_09/f0920_Chi2.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Chi2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;9.20: Distribuciones <span class="math inline">\(\chi^2\)</span> con los grados de libertad (<span class="math inline">\(\nu\)</span>) que se indican.
+</figcaption>
+</figure>
+</div>
+<p>Curiosamente esta distribución aparece en contextos muy distintos; por ejemplo, es la que explica la variabilidad de las varianzas muestrales. Del mismo modo que sucede con las medias, cada muestra extraída posee su propia varianza, por lo que la varianza muestral también presenta cierta variabilidad. Sin embargo, a diferencia de la media muestral, cuya variabilidad se describe mediante la distribución Normal, en este caso se explica mediante la distribución <span class="math inline">\(\chi^2\)</span>. Concretamente tenemos:</p>
+<p><span class="math display">\[s^2 \, \frac{n-1}{\sigma^2} \sim \chi_{n-1}^2\]</span> Cuando el tamaño de muestra es pequeño, es de esperar que la distribución de la varianza muestral sea asimétrica. En ese caso pueden obtenerse muestras con muy poca o con mucha variabilidad, pero las desviaciones no tienen la misma libertad hacia valores pequeños que hacia valores grandes. Hacia los valores grandes no existe límite, por lo que pueden darse varianzas elevadas; en cambio, los valores bajos están restringidos por el cero, que actúa como una frontera que no se puede sobrepasar. Esta libertad de desplazamiento en un sentido y limitación en el otro genera la asimetría de la distribución. A medida que el tamaño de la muestra aumenta, la variabilidad se reduce, los valores excepcionalmente grandes tienden a desaparecer y la cola hacia los valores pequeños se aleja del origen.</p>
+<p>Respecto al uso de la distribución <span class="math inline">\(\chi^2\)</span> en los test de bondad de ajuste, como en el caso de los dados de Wolf, si la hipótesis nula es cierta, podemos considerar que las frecuencias de aparición para cada uno de los resultados posibles son variables aleatorias con distribución binomial<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>. Por otro lado, la distribución binomial se puede aproximar –si se cumplen ciertas condiciones– a una distribución de Poisson, que, como vimos, está caracterizada por un solo parámetro <span class="math inline">\(\lambda\)</span> que es a la vez su media y su varianza. Además, a partir de un cierto valor de <span class="math inline">\(\lambda\)</span> la distribución de Poisson se puede aproximar a la Normal, de manera que si <span class="math inline">\(X \sim \text{Pois}(\lambda)\)</span> y se cumplen las condiciones para la aproximación, podemos considerar que: <span class="math inline">\(X \sim \text{N}(\lambda; \sqrt{\lambda})\)</span>.</p>
+<p>Si asimilamos la frecuencia observada (<span class="math inline">\(x\)</span>) de cada uno de los posibles resultados al lanzar el dado con una distribución de Poisson, tendremos que su media (<span class="math inline">\(np\)</span>) será igual a su varianza, por tanto: <span class="math display">\[\frac{x - np}{\sqrt{np}} \sim \text{N}(0; 1) \]</span> Por tanto, <span class="math display">\[\frac{(x - np)^2}{np} \sim \chi_1^2 \]</span> La frecuencia observada es <span class="math inline">\(x\)</span> y <span class="math inline">\(np\)</span> es la esperada. La suma de esta expresión para cada valor posible de la respuesta seguirá una distribución <span class="math inline">\(\chi^2\)</span> con un número de grados de libertad igual a <span class="math inline">\(n-1\)</span>. El restar 1 tiene que ver –una vez más– con que los valores no son independientes.</p>
+</section>
+</section>
+<section id="apéndice-9.d-test-de-aquí-su-nombre" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="apéndice-9.d-test-de-aquí-su-nombre">Apéndice 9.D: Test de <em>[aquí su nombre]</em></h2>
+<p>Aunque existen muchos test de Normalidad, no es difícil crear uno nuevo en plan “casero”. Seguramente no estará entre los mejores, pero será un buen ejercicio para entender el funcionamiento de los contrastes de hipótesis.</p>
+<section id="diseño-del-test" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="diseño-del-test">Diseño del test</h3>
+<p>La idea será dividir los datos en intervalos y definir un estadístico de prueba que mida la diferencia entre las frecuencias esperadas y las observadas. La distribución de referencia la crearemos por simulación. Seguimos los siguientes pasos:</p>
+<section id="definir-los-intervalos" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="definir-los-intervalos">1. Definir los intervalos</h4>
+<p>Podemos decidir que el número de intervalos, <span class="math inline">\(k\)</span>, sea igual a un tercio del número total de observaciones, <span class="math inline">\(n\)</span>, redondeado por exceso. Siendo ‘int’ la parte entera, tendremos: <span class="math display">\[k = \text{int} \left ( \frac{n}{3} + 0.5 \right )\]</span> También hay que definir el punto en el que empieza el primer intervalo. Si a la anchura de los intervalos le llamamos <span class="math inline">\(a\)</span> y al valor mínimo de la muestra min(<span class="math inline">\(x\)</span>), podemos empezar el primer intervalo en <span class="math inline">\(\text{min}(x) - a/2\)</span> y su anchura debe ser <span class="math inline">\(a = R/(k-1)\)</span>, siendo <span class="math inline">\(R\)</span> el rango de los valores de la muestra.</p>
+<p>De esta forma nos aseguramos de que todas las observaciones caen dentro de algún intervalo, aunque cuando se calcula la frecuencia teórica sí podemos tener algún valor fuera. Para evitar que esto ocurra podemos añadir un cierto número de intervalos, <span class="math inline">\(t\)</span>, a cada lado de los que ya hemos definido. Podemos establecer <span class="math inline">\(t=3\)</span> y sustituir el extremo inferior del primer intervalo por un número muy pequeño (por ejemplo: -9999) y el extremo superior del último por un número muy grande (9999) para que la suma de las probabilidades en los intervalos sea igual a 1. La frecuencia observada en los intervalos añadidos será evidentemente igual a cero, no hace falta contar.</p>
+<p>Por supuesto, se puede aplicar cualquier otro criterio para determinar tanto el número de intervalos como su anchura y el origen del primero ¿y si la anchura varía según su distancia al centro de los datos?</p>
+</section>
+<section id="definir-el-estadístico-de-prueba" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="definir-el-estadístico-de-prueba">2. Definir el estadístico de prueba</h4>
+<p>Sea <span class="math inline">\(f_o\)</span> la frecuencia observada y <span class="math inline">\(f_t\)</span> la frecuencia teórica suponiendo que los datos provienen de una distribución Normal con la media y la desviación típica de la muestra. El estadístico de prueba puede ser: <span class="math display">\[m = \sum_{i=1}^{k} ({f_o}_i - {f_t}_i)^2 \]</span> Claro que en vez del cuadrado de la diferencia podríamos usar su valor absoluto, la diferencia máxima o algún otro valor que refleje la discrepancia entre <span class="math inline">\(f_o\)</span> y <span class="math inline">\(f_t\)</span>. También se podría ponderar la diferencia correspondiente a cada intervalo según esté en el centro o hacia los extremos.</p>
+</section>
+<section id="construcción-de-la-distribución-de-referencia" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="construcción-de-la-distribución-de-referencia">3. Construcción de la distribución de referencia</h4>
+<p>Generamos muestras aleatorias de tamaño <span class="math inline">\(n\)</span> de una distribución Normal con la media y la desviación típica que se suponen. Para cada una de ellas calculamos el estadístico de prueba con los criterios establecidos. Con 10.000 valores en la distribución de referencia ya podemos obtener <span class="math inline">\(p\)</span>-valores suficientemente aproximados.</p>
+</section>
+</section>
+<section id="ejemplo" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ejemplo">Ejemplo</h3>
+<p>Para obtener la muestra cuyo origen Normal vamos a contrastar generamos 20 números aleatorios de una distribución chi-cuadrado con 3 grados de libertad, una distribución asimétrica con cola larga hacia la derecha, bastante alejada de la Normal (figura <span class="math inline">\(\ref{ejemploTestMio}\)</span>).</p>
+<div id="fig-ejemploMiTesto" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ejemploMiTesto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_09/f0921_ejemploMiTesto.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ejemploMiTesto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;9.21: Valores generados aleatoriamente de una distribución <span class="math inline">\(\chi^2\)</span> con 3 grados de libertad y su representación bajo esa distribución.
+</figcaption>
+</figure>
+</div>
+<p>En primer lugar identificamos los intervalos con el criterio establecido. Para cada uno de esos intervalos contamos la frecuencia observada (<span class="math inline">\(f_o\)</span>) y la probabilidad de tener una observación en el caso de que los datos provengan de una distribución Normal con la media y la desviación típica de la muestra, en nuestro caso 3,079 y 2,814 respectivamente. Una vez tenemos los valores de <span class="math inline">\(f_o\)</span> y <span class="math inline">\(f_t\)</span> para cada intervalo, podemos calcular el cuadrado de su diferencia. La suma de esos cuadrados es el estadístico de prueba (tabla <span class="math inline">\(\ref{ejemploMio}\)</span>).</p>
+<hr>
+<p>**** TABLA 9.9 **** **************************</p>
+<p>Ya solo falta obtener los valores de la distribución de referencia y calcular el <span class="math inline">\(p\)</span>-valor. Para hacerlo generamos 10.000 muestras con el mismo tamaño, media y desviación típica que la sometida a prueba, pero en este caso provenientes de una distribución Normal. Para cada una de ellas se calcula el estadístico de prueba con el procedimiento descrito (naturalmente, deberemos crear un pequeño programa que lo haga de forma automática). Los 10.000 valores obtenidos constituyen una aproximación razonable a la distribución de referencia.</p>
+<p>Para determinar el <span class="math inline">\(p\)</span>-valor solo hay que contar cuántos valores en la distribución de referencia son iguales o mayores que nuestro estadístico de prueba. Tenemos 1010, por tanto, el <span class="math inline">\(p\)</span>-valor será: 1010/10000 = 0,101. Con el nivel de significación habitual (0,05) no podemos rechazar la hipótesis nula.</p>
+<div id="fig-ejemploMio" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ejemploMio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_09/f0922_distRef_ejemploMio.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ejemploMio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;9.22: Distribución de referencia y <span class="math inline">\(p\)</span>-valor obtenidos aplicando nuestro test.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="comparando-con-el-mejor" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="comparando-con-el-mejor">Comparando con el mejor</h3>
+<p>Hemos aplicado este nuevo test a muestras de tamaños <span class="math inline">\(n\)</span> = 20, 35, 50 y 100 de la misma distribución usada en el ejemplo anterior, una <span class="math inline">\(\chi^2\)</span> con <span class="math inline">\(\nu = 3\)</span> grados de libertad.</p>
+<p>Para cada valor de <span class="math inline">\(n\)</span> hemos repetido el test 100 veces con otras tantas muestras. Para cada una de ellas hemos calculado el <span class="math inline">\(p\)</span>-valor realizando nuestro test (le llamamos “improvisado”) y también el de Shapiro-Wilk. La figura <span class="math inline">\(\ref{comparaSW_Mio}\)</span> muestra diagramas bivariantes del <span class="math inline">\(p\)</span>-valor obtenido con nuestro test frente al obtenido con el de S-W (cada punto corresponde a una muestra test). También se indica el número de veces que se rechaza la hipótesis de normalidad (% &lt; 0,05), es decir, que acertamos, puesto que la muestra no proviene de una distribución Normal.</p>
+<div id="fig-comparaSW_Mio" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-comparaSW_Mio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_09/f0923_comparaSW_Mio.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-comparaSW_Mio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;9.23: <span class="math inline">\(p\)</span>-valor obtenido al realizar nuestro test frente al obtenido al realizar el de S-W a muestras de una población <span class="math inline">\(\chi^2\)</span> con <span class="math inline">\(\nu=3\)</span> y los tamaños que se indican.
+</figcaption>
+</figure>
+</div>
+<p>El test de Shapiro-Wilk nos gana por goleada, aunque con <span class="math inline">\(n=20\)</span> tampoco hace un gran papel ya que falla 33 veces de las 100 que se han probado. Si en vez de elegir compararnos con el mejor lo hubiéramos hecho con el de Kolmogorov-Smirnov las diferencias no serían tan grandes. En cualquier caso, nuestro test tiene margen de mejora, el lector interesado lo puede explorar.</p>
 
 
 </section>
 </section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>De forma similar al cálculo de la varianza, aunque tenemos <span class="math inline">\(k\)</span> sumandos, solo aportan información <span class="math inline">\(k-1\)</span>. El <span class="math inline">\(k\)</span>-ésimo se puede deducir si te tiene el resto ya que <span class="math inline">\(\sum_{i=1}^k x_i = k\,\bar{x}\)</span>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Puede verse una explicación detallada en el libro de Daniel Peña: “Fundamentos de Estadística”. Alianza Editoria, 2001.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Si está interesado en la comparación de test de Normalidad le puede resultar útil el siguiente artículo de JA Sáncez-Espigares et al: “Graphical comparison of normality tests for unimodal distribution data”. Journal of Statistical Computation and Simulation, Vol. 89, 2019 - Issue 1.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Para la simulación hemos usado los parámetros de las poblaciones identificadas como A en la tabla <span class="math inline">\(\ref{parametrosDistribuciones}\)</span>, pero el valor de los parámetros no cambia los resultados obtenidos.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Aunque necesita bastantes más grados de libertad que la <span class="math inline">\(t\)</span>-Student para poder ser tratada como una Normal. Este era un tema importante cuando los medios de cálculo eran escasos, ahora no tiene ninguna relevancia.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>En realidad lo son de una distribución <em>multinomial</em>, que es una generalización de la binomial cuando se tienen más de dos resultados posibles. Si fueran un conjunto de binomiales, los resultados serían independientes, pero evidentemente no lo son.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->

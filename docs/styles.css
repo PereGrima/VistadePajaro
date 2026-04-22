@@ -28,6 +28,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.97rem !important;
 }
 
+.espaciado {
+  margin-bottom: 20px;
+}
+
 /* ========================= */
 /*         TABLAS            */
 /* ========================= */
@@ -1537,7 +1541,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0.2em 0 !important;
 }
 
-/*** Tabla sin número 8c***/
+/*** Tabla sin número 8c ***/
 
 .tabla-0800c {
   margin: auto;
@@ -1581,20 +1585,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .tabla-0901 {
   margin: auto;
-  width: 60%;
+  width: 100%;
   max-width: 650px;
-  font-size: 0.9em;
   vertical-align: middle;
   border-collapse: collapse;
   border: none;
 }
 
 .tabla-0901 td {
-  font-size: 0.97em;      /* equivalente a \footnotesize */
   text-align: center;    /* celdas centradas */
-  padding: 0;      /* altura de fila más pequeña */
-  line-height: 1;      /* compacta como en LaTeX */
+  line-height: 1.2;      /* compacta como en LaTeX */
+    font-size: 0.95em;
   border: none;
+margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .tabla-0901 td mjx-container[display="true"] {
@@ -1602,8 +1606,65 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0.2em 0 !important;
 }
 
-.tabla-0901 td:first-child {
-  text-align: right;
+.tabla-0901 tbody tr:nth-child(1) td {
+ font-size: 1em;
+ border-top: 1px solid #666;
+ border-bottom: 1px solid #666;
+    line-height: 1; 
+    padding-top: 5px;
+    padding-bottom: 5px;
+} 
+
+.tabla-0901 tbody tr:nth-child(3) td {
+     padding-bottom: 25px;
+}
+
+.tabla-0901 tbody tr:nth-child(4) td:nth-child(1) {
+  font-size: 1em;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+    line-height: 1; 
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.tabla-0901 tbody tr:nth-child(6) {
+  border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+
+/*** Tabla 9 sin número A ***/
+
+.tabla-0900a {
+  margin: auto;
+  width: 80%;
+  max-width: 600px;
+  border-collapse: collapse;
+  border: none;
+}
+
+.tabla-0900a td {
+  text-align: center;    /* celdas centradas */
+  padding: 0px 3px;      /* altura de fila más pequeña */
+  line-height: 1.1;      /* compacta como en LaTeX */
+    border: none;
+}
+
+/*** Tabla 9 sin número B ***/
+
+.tabla-0900b {
+  margin: auto;
+  width: 90%;
+  max-width: 600px;
+  border-collapse: collapse;
+  border: none;
+}
+
+.tabla-0900b td {
+  text-align: center;    /* celdas centradas */
+  padding: 0px 3px;      /* altura de fila más pequeña */
+  line-height: 1.1;      /* compacta como en LaTeX */
+    border: none;
 }
 
 /* ======Tabla Wrapper====== */
@@ -1819,6 +1880,21 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: auto;
   margin-right: auto;
 }
+
+.tabla-wrapper_T0900a {
+    width: 100%;
+  margin-bottom: 0ex;
+  margin-top: 0ex;
+    margin-left: auto;
+  margin-right: auto;
+}
+
+.tabla-wrapper_T0900b {
+    width: 100%;
+  margin-bottom: 0ex;
+  margin-top: 0ex;
+}
+
 
 /* ========================= */
 /*         FIGURAS           */

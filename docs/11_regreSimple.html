@@ -593,9 +593,9 @@ Figura&nbsp;11.5: Posibles rectas que minimizan la suma de los residuos en valor
 <section id="minimizando-la-suma-de-los-cuadrados-de-los-residuos" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="minimizando-la-suma-de-los-cuadrados-de-los-residuos">Minimizando la suma de los cuadrados de los residuos</h3>
 <p>Elevamos los residuos al cuadrado para evitar que al sumarlos se compensen los positivos y negativos. Ahora se trata de minimizar:</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
     S=\sum_{i=1}^n \left[ Y_i - (b_0 + b_1 X_i) \right]^2
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>En vez de decir que el criterio de ajuste ha sido “minimizar la suma de los cuadrados de los residuos”, simplemente decimos que hemos ajustado por “mínimos cuadrados”. Este es el método usado en la inmensa mayoría de los casos, produce un ajuste equilibrado de la nube de puntos y está en perfecta sintonía con otras técnicas y medidas que se construyen con criterios similares. Un inconveniente de este método es que el modelo obtenido es sensible a la presencia de valores anómalos, cosa que no ocurre si se minimiza la suma de valores absolutos.</p>
 <p>En la primera fila de la <a href="#fig-residuosMinimosCuadrados" class="quarto-xref">Figura&nbsp;<span>11.6</span></a> tenemos una situación típica en la que el ajuste por mínimos cuadrados da un mejor resultado que minimizando la suma del valor absoluto. Sin embargo, en la segunda fila tenemos un caso de puntos perfectamente alineados excepto uno que muy probablemente sería un valor anómalo. Si minimizamos el valor absoluto de los residuos, el ajuste ignora el valor anómalo mientras que ajustando por mínimos cuadrados el valor anómalo tiene una notable influencia sobre la recta ajustada.</p>
 <div id="fig-residuosMinimosCuadrados" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
@@ -902,9 +902,9 @@ Figura&nbsp;11.19: Distribución de los coeficientes.
 </div>
 <p>Observe que las medias de las distribuciones coinciden con el verdadero valor del parámetro estimado. Las desviaciones típicas dependen de:</p>
 <ul>
-<li><p><strong>Número de datos (<span class="math inline">\(n\)</span>)</strong>: Cuantos más datos, mayor información y menos incertidumbre; por tanto, menos desviación típica en la distribución de los coeficientes.</p></li>
-<li><p><strong>Desviación típica de la respuesta (<span class="math inline">\(\sigma\)</span>)}</strong>: A mayor variabilidad de la respuesta mayor incertidumbre y mayor variabilidad en la distribución de los coeficientes.</p></li>
-<li><p><strong>El rango de variación de <span class="math inline">\(x\)</span></strong>: Si los valores de de la variable regresora están muy próximos a su media habrá mayor variabilidad en la distribución de los coeficientes. Quizá este aspecto no es tan intuitivo como los anteriores, pero se entiende muy bien a la vista de un gráfico como el de la <a href="#fig-regreRangoX" class="quarto-xref">Figura&nbsp;<span>11.20</span></a>. En la izquierda tenemos el mismo gráfico que en la <a href="#fig-regreVAsuperpuestas" class="quarto-xref">Figura&nbsp;<span>11.18</span></a> con valores de <span class="math inline">\(X\)</span> generados de una distribución N(170; 8) mientras que en el de la derecha se ha construido de la misma forma pero los valores de <span class="math inline">\(X\)</span> se han generado de una N(170; 3). Al tener menos variabilidad en los valores de <span class="math inline">\(X\)</span> tenemos mayor variabilidad en los coeficientes.</p></li>
+<li><p><strong>Número de datos (</strong><span class="math inline">\(n\)</span>): Cuantos más datos, mayor información y menos incertidumbre; por tanto, menos desviación típica en la distribución de los coeficientes.</p></li>
+<li><p><strong>Desviación típica de la respuesta (</strong><span class="math inline">\(\sigma\)</span>)}: A mayor variabilidad de la respuesta mayor incertidumbre y mayor variabilidad en la distribución de los coeficientes.</p></li>
+<li><p><strong>El rango de variación de</strong> <span class="math inline">\(x\)</span>: Si los valores de de la variable regresora están muy próximos a su media habrá mayor variabilidad en la distribución de los coeficientes. Quizá este aspecto no es tan intuitivo como los anteriores, pero se entiende muy bien a la vista de un gráfico como el de la <a href="#fig-regreRangoX" class="quarto-xref">Figura&nbsp;<span>11.20</span></a>. En la izquierda tenemos el mismo gráfico que en la <a href="#fig-regreVAsuperpuestas" class="quarto-xref">Figura&nbsp;<span>11.18</span></a> con valores de <span class="math inline">\(X\)</span> generados de una distribución N(170; 8) mientras que en el de la derecha se ha construido de la misma forma pero los valores de <span class="math inline">\(X\)</span> se han generado de una N(170; 3). Al tener menos variabilidad en los valores de <span class="math inline">\(X\)</span> tenemos mayor variabilidad en los coeficientes.</p></li>
 </ul>
 <div id="fig-regreRangoX" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
@@ -921,9 +921,9 @@ Figura&nbsp;11.20: La variabilidad de las rectas ajustadas depende del rango de 
 <h3 class="unnumbered anchored" data-anchor-id="condiciones-que-deben-reunir-los-datos">Condiciones que deben reunir los datos</h3>
 <p>Para que los coeficientes tengan las distribuciones que se suponen, los datos utilizados para ajustar el modelo deben cumplir las siguientes condiciones:</p>
 <ul>
-<li><p><strong>Distribución de <span class="math inline">\(Y\)</span></strong>: Dado un valor de <span class="math inline">\(X\)</span>, los valores de <span class="math inline">\(Y\)</span> deben seguir una distribución Normal. Si <span class="math inline">\(X\)</span> es la estatura e <span class="math inline">\(Y\)</span> es el peso, no hace falta suponer que el peso –globalmente– sigue una distribución Normal, pero sí que los pesos para las personas de una determinada estatura siguen esa distribución.</p></li>
-<li><p><strong>Variabilidad de <span class="math inline">\(Y\)</span></strong>: La variabilidad de <span class="math inline">\(Y\)</span> no depende del valor de <span class="math inline">\(X\)</span>. En nuestro ejemplo sería suponer que la variabilidad en el peso de las personas que miden 1,60 es la misma que en las personas que miden 1,80 m. Es posible que esto no sea exactamente así porque es habitual que cuando aumenta el nivel de la respuesta aumente también su variabilidad. Si esto ocurre lo veremos en el diagrama bivariante: la nube de puntos se irá ensanchando a medida que aumenta el valor de <span class="math inline">\(X\)</span>. En este caso quizá convenga transformar los datos, aunque ya estaríamos ante una situación más complicada que las que pretendemos tratar aquí.</p></li>
-<li><p><strong>Valores de <span class="math inline">\(X\)</span></strong>: No hay ninguna exigencia especial sobre estos valores. Solo es necesario que la variable sea cuantitativa. Es decir, el día de la semana, codificado como: lunes = 1, martes = 2, … no puede ser una variable regresora porque el modelo entendería que el domingo es igual a 7 veces el lunes. Aun así, también hay formas de incluir este tipo de variables. Lo veremos en el próximo capítulo en el caso de que solo puedan tomar dos valores posibles.</p></li>
+<li><p><strong>Distribución de</strong> <span class="math inline">\(Y\)</span>: Dado un valor de <span class="math inline">\(X\)</span>, los valores de <span class="math inline">\(Y\)</span> deben seguir una distribución Normal. Si <span class="math inline">\(X\)</span> es la estatura e <span class="math inline">\(Y\)</span> es el peso, no hace falta suponer que el peso –globalmente– sigue una distribución Normal, pero sí que los pesos para las personas de una determinada estatura siguen esa distribución.</p></li>
+<li><p><strong>Variabilidad de</strong> <span class="math inline">\(Y\)</span>: La variabilidad de <span class="math inline">\(Y\)</span> no depende del valor de <span class="math inline">\(X\)</span>. En nuestro ejemplo sería suponer que la variabilidad en el peso de las personas que miden 1,60 es la misma que en las personas que miden 1,80 m. Es posible que esto no sea exactamente así porque es habitual que cuando aumenta el nivel de la respuesta aumente también su variabilidad. Si esto ocurre lo veremos en el diagrama bivariante: la nube de puntos se irá ensanchando a medida que aumenta el valor de <span class="math inline">\(X\)</span>. En este caso quizá convenga transformar los datos, aunque ya estaríamos ante una situación más complicada que las que pretendemos tratar aquí.</p></li>
+<li><p><strong>Valores de</strong> <span class="math inline">\(X\)</span>: No hay ninguna exigencia especial sobre estos valores. Solo es necesario que la variable sea cuantitativa. Es decir, el día de la semana, codificado como: lunes = 1, martes = 2, … no puede ser una variable regresora porque el modelo entendería que el domingo es igual a 7 veces el lunes. Aun así, también hay formas de incluir este tipo de variables. Lo veremos en el próximo capítulo en el caso de que solo puedan tomar dos valores posibles.</p></li>
 <li><p><strong>Independencia de los residuos</strong>: La desviación respecto al valor previsto (valor sobre la recta) en un punto no da ninguna pista sobre la desviación en el punto siguiente. Esto no ocurre con las variables que evolucionan en el tiempo, como la temperatura o la cotización de acciones en la bolsa, en que el valor de un día está influenciado por el valor del día anterior.</p></li>
 </ul>
 <p>Cuando se ajustan modelos de regresión simple, la observación del diagrama bivariante de <span class="math inline">\(Y\)</span> frente a <span class="math inline">\(X\)</span> ya permite valorar si es razonable suponer que se cumplen los supuestos requeridos. Si nada hace suponer lo contrario, supondremos que se cumplen. En realidad nunca se cumplirán “exactamente” pero si el comportamiento de los datos no se aleja mucho de los supuestos realizados, los intervalos de confianza y las pruebas de significación en que estamos interesados seguirán siendo válidos a efectos prácticos.</p>
@@ -1068,7 +1068,7 @@ Figura&nbsp;11.26: Recta ajustada y bandas de confianza del 95 %
 <p>Un buen ajuste dentro del rango en que se tienen datos no garantiza predicciones fiables fuera de él. Supongamos que para un vehículo se informa del siguiente consumo en función de la velocidad a que circula:</p>
 <hr>
 <ul>
-<li>TABLA SIN MÚMEROS PAG. 302 <em> </em>*******************************</li>
+<li>TABLA SIN MÚMEROS PAG. 302 *******************************</li>
 </ul>
 <p>Una estimación razonable para el consumo a 75 km/h es de 5,5 litros/100 km pero no podemos decir que a 25 km/h el consumo es prácticamente nulo y que a 20 km/h es negativo, aunque esos son los valores que se deducen del modelo ajustado.</p>
 </section>
@@ -1165,6 +1165,10 @@ Figura&nbsp;11.29: Transformando los valores de alguna de las variables –o de 
 </figcaption>
 </figure>
 </div>
+<div style="text-align: center; font-size: 1.1em;">
+<p>________________________ <span style="margin: 0 0.4em;">◇</span> ________________________</p>
+</div>
+<p><br></p>
 
 
 </section>

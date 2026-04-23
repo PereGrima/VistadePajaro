@@ -590,7 +590,7 @@ Figura&nbsp;10.7: Muertes por enfermedad cardiaca ($$100.000 habitantes) frente 
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Que dos variables <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> estén correlacionadas no implica que cambiar el valor de <span class="math inline">\(X\)</span> provocará un cambio en <span class="math inline">\(Y\)</span>. Si exploramos muchos pares de variables, seguro que algunas aparecerán con una relación estrecha, aunque en realidad no tengan nada que ver. La web <a href="https://www.tylervigen.com/spurious-correlations"><span style="font-family: monospace;">https://www.tylervigen.com/spurious-correlations</span></a> contiene muchos ejemplos de este tipo.</p>
+<p>Que dos variables <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> estén correlacionadas no implica que cambiar el valor de <span class="math inline">\(X\)</span> provocará un cambio en <span class="math inline">\(Y\)</span>. Si exploramos muchos pares de variables, seguro que algunas aparecerán con una relación estrecha, aunque en realidad no tengan nada que ver. La web <span style="font-family: monospace;"><a href="https://www.tylervigen.com/spurious-correlations" class="uri">https://www.tylervigen.com/spurious-correlations</a></span> contiene muchos ejemplos de este tipo.</p>
 </div>
 </div>
 </section>
@@ -645,20 +645,24 @@ Figura&nbsp;10.8: Distribución del coeficiente de correlación según el tamañ
 <section id="apéndice-10.a-coeficiente-de-correlación-cuando-la-relación-lineal-es-perfecta" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="apéndice-10.a-coeficiente-de-correlación-cuando-la-relación-lineal-es-perfecta">APÉNDICE 10.A: Coeficiente de correlación cuando la relación lineal es perfecta</h2>
 <p>Si todos los puntos están alineados tenemos que: <span class="math inline">\(y_i =a+bx_i\)</span> y también: <span class="math inline">\(\sum y_i = \sum (a+bx_i)\)</span>, de donde <span class="math inline">\(n\bar{y} = na + bn \bar{x}\)</span>, es decir: <span class="math inline">\(\bar {y} =a+b \bar{x}\)</span>. Así pues, podemos escribir el numerador de la expresión de <span class="math inline">\(r\)</span> de la forma:</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
     \begin{split}
         \sum_{i=1}^n \left ( x_i - \bar{x} \right ) \left ( y_i - \bar{y} \right ) &amp;= \sum_{i=1}^n \left ( x_i - \bar{x} \right ) \left ( a+bx_i - (a+b\bar{x}) \right ) \\
         &amp;= \sum_{i=1}^n \left ( x_i - \bar{x} \right )   b \left ( x_i - \bar{x} \right ) = b \sum_{i=1}^n \left ( x_i - \bar{x} \right )^2
     \end{split}
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>Con un razonamiento similar, en el denominador podemos escribir el término en que aparecen los valores <span class="math inline">\(y_i\)</span> de la forma:</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
     \begin{split}
         \sqrt{\sum_{i=1}^n \left ( y_i - \bar{y} \right )^2 } &amp;= \; \sqrt{\sum_{i=1}^n \left ( a+bx_i - ( a+b \bar{x} ) \right )^2 } = \\
         &amp;=\; \sqrt{ \sum_{i=1}^n \left (b x_i - b \bar{x}  \right )^2 } \; = \;|b| \, \sqrt{ \sum_{i=1}^n \left ( x_i -  \bar{x}  \right )^2 } \\
     \end{split}
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>Recuperando la expresión completa del coeficiente de correlación <span class="math inline">\(r\)</span>: <span class="math display">\[r = \frac{b \displaystyle\sum (x_i - \bar{x})^2}{\displaystyle \sqrt{\sum (x_i - \bar{x})^2} \cdot |b| \sqrt{\displaystyle \sum (x_i - \bar{x})^2}} = \frac{b \displaystyle \sum (x_i - \bar{x})^2}{|b| \displaystyle \sum (x_i - \bar{x})^2} = \frac{b}{|b|}\]</span> Por tanto, si los puntos se alinean según una recta, el coeficiente de correlación solo puede ser 1, si la pendiente de la recta es positiva, y -1 si es negativa</p>
+<div style="text-align: center; font-size: 1.1em;">
+<p>________________________ <span style="margin: 0 0.4em;">◇</span> ________________________</p>
+</div>
+<p><br></p>
 
 
 </section>
@@ -666,7 +670,7 @@ Figura&nbsp;10.8: Distribución del coeficiente de correlación según el tamañ
 <hr>
 <ol>
 <li id="fn1"><p>Más detalles en: Weisberg, S. (2004): ``Applied Linear Regression’’. Ed. Wiley, 4a ed., pág. 2.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Fuente: Página personal del prof. Weisberg en <a href="https://cla.umn.edu/statistics"><span style="font-family: monospace;">https://cla.umn.edu/statistics</span></a> &gt; Other Resources &gt; data files &gt; Hooker.csv<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Fuente: Página personal del prof. Weisberg en <span style="font-family: monospace;"><a href="https://cla.umn.edu/statistics" class="uri">https://cla.umn.edu/statistics</a></span> &gt; Other Resources &gt; data files &gt; Hooker.csv<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>Fuente: Wolfram Research, <a href="https://doi.org/10.24097/wolfram.76288.data">“Sample Data: Black Cherry Trees”</a> en Wolfram Data Repository (2016).<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn4"><p>Fuente: Draper, N. D. y Smith, H (1998): ``Applied Regression Analysis’’ Ed. Wiley, 3a edic. pág. 105, citando un trabajo publicado por L. E. Mather y M. E. Wilson.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn5"><p>La teoría del efecto benefactor del vino ya fue abandonada. El cardiólogo Valentín Fuster dice en uno de sus libros (V. Fuster (2008): “La Ciencia de la Salud”, Ed. Planeta - Booket, pág. 184): “A medida que hemos ido investigando cómo afectan las bebidas alcohólicas a la salud cardiovascular, hemos descubierto que los beneficios más importantes no se deben a componentes selectos del vino tinto como los taninos o el resveratrol sino al propio alcohol”. O sea, que no era el vino. Parece que a estos efectos da lo mismo vino tinto que vino blanco, o que un poquito de whisky.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>

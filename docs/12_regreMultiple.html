@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./_06_tapaEpilogo.html" rel="next">
+<link href="./0_06_tapaEpilogo.html" rel="next">
 <link href="./11_regreSimple.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -73,6 +73,35 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -86,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./_05_tapaCorrelacion.html">CORRELACIÓN Y REGRESIÓN</a></li><li class="breadcrumb-item"><a href="./12_regreMultiple.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Regresión Múltiple</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0_05_tapaCorrelacion.html">CORRELACIÓN Y REGRESIÓN</a></li><li class="breadcrumb-item"><a href="./12_regreMultiple.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Regresión Múltiple</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -136,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./_01_tapaDescriptiva.html" class="sidebar-item-text sidebar-link">
+            <a href="./0_01_tapaDescriptiva.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ESTADÍSTICA DESCRIPTIVA</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -159,7 +188,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./_02_tapaVariabilidad.html" class="sidebar-item-text sidebar-link">
+            <a href="./0_02_tapaVariabilidad.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DESCRIBIR LO ALEATORIO</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -182,7 +211,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./_03_tapaMuestraPoblacion.html" class="sidebar-item-text sidebar-link">
+            <a href="./0_03_tapaMuestraPoblacion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DE LA MUESTRA A LA POBLACIÓN</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -205,7 +234,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./_04_tapaSignificativo.html" class="sidebar-item-text sidebar-link">
+            <a href="./0_04_tapaSignificativo.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ESTADÍSTICAMENTE SIGNIFICATIVO</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -228,7 +257,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./_05_tapaCorrelacion.html" class="sidebar-item-text sidebar-link">
+            <a href="./0_05_tapaCorrelacion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">CORRELACIÓN Y REGRESIÓN</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -257,8 +286,8 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./_06_tapaEpilogo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">CORRELACIÓN Y REGRESIÓN</span></a>
+            <a href="./0_06_tapaEpilogo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EPÍLOGO</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Alternar sección">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -267,7 +296,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./13_Epilogo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">EPÍLOGO</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Datos frente a opiniones</span></span></a>
   </div>
 </li>
       </ul>
@@ -282,19 +311,39 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#las-cosas-no-son-como-parecen" id="toc-las-cosas-no-son-como-parecen" class="nav-link active" data-scroll-target="#las-cosas-no-son-como-parecen"><span class="header-section-number">12.1</span> Las cosas no son como parecen</a></li>
-  <li><a href="#fuerza-bruta.-aquí-va-en-serio." id="toc-fuerza-bruta.-aquí-va-en-serio." class="nav-link" data-scroll-target="#fuerza-bruta.-aquí-va-en-serio."><span class="header-section-number">12.2</span> Fuerza bruta. Aquí va en serio.</a></li>
-  <li><a href="#un-caso-sencillo-una-variable-cuantitativa-y-otra-cualitativa" id="toc-un-caso-sencillo-una-variable-cuantitativa-y-otra-cualitativa" class="nav-link" data-scroll-target="#un-caso-sencillo-una-variable-cuantitativa-y-otra-cualitativa"><span class="header-section-number">12.3</span> Un caso sencillo: Una variable cuantitativa y otra cualitativa</a></li>
-  <li><a href="#ojo-con-las-explicaciones-milagrosas" id="toc-ojo-con-las-explicaciones-milagrosas" class="nav-link" data-scroll-target="#ojo-con-las-explicaciones-milagrosas"><span class="header-section-number">12.4</span> Ojo con las explicaciones milagrosas</a></li>
-  <li><a href="#modelos-explicativos-y-modelos-predictivos" id="toc-modelos-explicativos-y-modelos-predictivos" class="nav-link" data-scroll-target="#modelos-explicativos-y-modelos-predictivos"><span class="header-section-number">12.5</span> Modelos explicativos y modelos predictivos</a></li>
-  <li><a href="#a-tener-en-cuenta" id="toc-a-tener-en-cuenta" class="nav-link" data-scroll-target="#a-tener-en-cuenta"><span class="header-section-number">12.6</span> A tener en cuenta</a></li>
+  <li><a href="#qué-es-la-regresión-múltiple" id="toc-qué-es-la-regresión-múltiple" class="nav-link active" data-scroll-target="#qué-es-la-regresión-múltiple"><span class="header-section-number">12.1</span> ¿Qué es la regresión múltiple?</a></li>
+  <li><a href="#variables-candidatas-y-variables-elegidas" id="toc-variables-candidatas-y-variables-elegidas" class="nav-link" data-scroll-target="#variables-candidatas-y-variables-elegidas"><span class="header-section-number">12.2</span> Variables candidatas y variables elegidas</a>
+  <ul class="collapse">
+  <li><a href="#selección-de-variables-analogía-del-examen-con-asesores" id="toc-selección-de-variables-analogía-del-examen-con-asesores" class="nav-link" data-scroll-target="#selección-de-variables-analogía-del-examen-con-asesores">Selección de variables: Analogía del examen con asesores</a></li>
+  <li><a href="#estrategias-para-la-selección-de-variables" id="toc-estrategias-para-la-selección-de-variables" class="nav-link" data-scroll-target="#estrategias-para-la-selección-de-variables">Estrategias para la selección de variables</a></li>
+  </ul></li>
+  <li><a href="#uso-de-variables-cualitativas" id="toc-uso-de-variables-cualitativas" class="nav-link" data-scroll-target="#uso-de-variables-cualitativas"><span class="header-section-number">12.3</span> Uso de variables cualitativas</a></li>
+  <li><a href="#medidas-de-calidad-del-ajuste-en-regresión-múltiple" id="toc-medidas-de-calidad-del-ajuste-en-regresión-múltiple" class="nav-link" data-scroll-target="#medidas-de-calidad-del-ajuste-en-regresión-múltiple"><span class="header-section-number">12.4</span> Medidas de calidad del ajuste en regresión múltiple</a>
+  <ul class="collapse">
+  <li><a href="#coeficiente-de-determinación-ajustado-mathbfr_aj2" id="toc-coeficiente-de-determinación-ajustado-mathbfr_aj2" class="nav-link" data-scroll-target="#coeficiente-de-determinación-ajustado-mathbfr_aj2">Coeficiente de determinación ajustado <span class="math inline">\(\mathbf{R_{Aj}^2}\)</span></a></li>
+  <li><a href="#validación-cruzada" id="toc-validación-cruzada" class="nav-link" data-scroll-target="#validación-cruzada">Validación cruzada</a></li>
+  </ul></li>
+  <li><a href="#qué-es-un-buen-modelo" id="toc-qué-es-un-buen-modelo" class="nav-link" data-scroll-target="#qué-es-un-buen-modelo"><span class="header-section-number">12.5</span> ¿Qué es un buen modelo?</a>
+  <ul class="collapse">
+  <li><a href="#modelos-predictivos-y-modelos-explicativos" id="toc-modelos-predictivos-y-modelos-explicativos" class="nav-link" data-scroll-target="#modelos-predictivos-y-modelos-explicativos">Modelos predictivos y modelos explicativos</a></li>
+  </ul></li>
+  <li><a href="#peligros-y-malos-usos-de-la-regresión-múltiple" id="toc-peligros-y-malos-usos-de-la-regresión-múltiple" class="nav-link" data-scroll-target="#peligros-y-malos-usos-de-la-regresión-múltiple"><span class="header-section-number">12.6</span> Peligros y malos usos de la regresión múltiple</a>
+  <ul class="collapse">
+  <li><a href="#explicaciones-milagrosas" id="toc-explicaciones-milagrosas" class="nav-link" data-scroll-target="#explicaciones-milagrosas">Explicaciones milagrosas</a></li>
+  <li><a href="#valores-anómalos" id="toc-valores-anómalos" class="nav-link" data-scroll-target="#valores-anómalos">Valores anómalos</a></li>
+  </ul></li>
+  <li><a href="#apéndice-12.a-álgebra-en-estado-puro" id="toc-apéndice-12.a-álgebra-en-estado-puro" class="nav-link" data-scroll-target="#apéndice-12.a-álgebra-en-estado-puro">APÉNDICE 12.A: Álgebra en estado puro</a>
+  <ul class="collapse">
+  <li><a href="#regresión-simple" id="toc-regresión-simple" class="nav-link" data-scroll-target="#regresión-simple">Regresión simple</a></li>
+  <li><a href="#regresión-múltiple" id="toc-regresión-múltiple" class="nav-link" data-scroll-target="#regresión-múltiple">Regresión múltiple</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./_05_tapaCorrelacion.html">CORRELACIÓN Y REGRESIÓN</a></li><li class="breadcrumb-item"><a href="./12_regreMultiple.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Regresión Múltiple</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./0_05_tapaCorrelacion.html">CORRELACIÓN Y REGRESIÓN</a></li><li class="breadcrumb-item"><a href="./12_regreMultiple.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Regresión Múltiple</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Regresión Múltiple</span></h1>
 </div>
@@ -313,35 +362,544 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Texto</p>
-<section id="las-cosas-no-son-como-parecen" class="level2" data-number="12.1">
-<h2 data-number="12.1" class="anchored" data-anchor-id="las-cosas-no-son-como-parecen"><span class="header-section-number">12.1</span> Las cosas no son como parecen</h2>
-<p>Ejemplo con 3 variables. Ejemplo examen.</p>
+<p>Los modelos de regresión múltiple pueden ser muy útiles para explicar el comportamiento de una variable, pero también pueden ser un arma peligrosa en manos inexpertas. Vamos a ver cuáles son sus posibilidades, algunas ideas sobre cómo construirlos, y también cuáles son sus peligros.</p>
+<section id="qué-es-la-regresión-múltiple" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="qué-es-la-regresión-múltiple"><span class="header-section-number">12.1</span> ¿Qué es la regresión múltiple?</h2>
+<p>La respuesta es sencilla, es como la regresión simple pero con más de una variable regresora.</p>
+<p>De esta forma se amplían las posibilidades de explicar el comportamiento de la respuesta o de realizar previsiones sobre cuál será su valor en unas determinadas condiciones. Incluso las variables que, de manera aislada, no servirían para un modelo de regresión simple pueden resultar muy útiles cuando se combinan con otras en una regresión múltiple.</p>
+<p>En la <a href="#fig-ventajasRM" class="quarto-xref">Figura&nbsp;<span>12.1</span></a> tenemos una variable <span class="math inline">\(y\)</span> que muestra una cierta relación con <span class="math inline">\(x_1\)</span> (<span class="math inline">\(R^2 = 0.65\)</span>) pero prácticamente ninguna con <span class="math inline">\(x_2\)</span> (<span class="math inline">\(R^2 = 0.12\)</span>), sin embargo, usando las dos en un modelo de regresión múltiple la explicación del comportamiento de <span class="math inline">\(y\)</span> es muy buena, obteniéndose un valor de <span class="math inline">\(R^2 = 0.98\)</span>.</p>
+<p>Observe que de la misma forma que un modelo de regresión simple se ajusta a una línea, con dos variables se ajusta a un plano, y podríamos seguir hasta espacios con tantas dimensiones como variables regresoras. En la <a href="#fig-ventajasRM" class="quarto-xref">Figura&nbsp;<span>12.1</span></a> los puntos están muy pegados a la superficie ajustada, ayuda a verlo la línea vertical que sale de cada punto y que indica su distancia a la superficie, es decir, su residuo.</p>
+<div id="fig-ventajasRM" class="fig-normal0 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ventajasRM-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_12/f1201_ventajasRM.png" class="fig-normal0 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ventajasRM-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;12.1: Las variables <span class="math inline">\(x_1\)</span> y <span class="math inline">\(x_2\)</span> conjuntamente explican mucho mejor la respuesta que considerándolas por separado.
+</figcaption>
+</figure>
+</div>
 </section>
-<section id="fuerza-bruta.-aquí-va-en-serio." class="level2" data-number="12.2">
-<h2 data-number="12.2" class="anchored" data-anchor-id="fuerza-bruta.-aquí-va-en-serio."><span class="header-section-number">12.2</span> Fuerza bruta. Aquí va en serio.</h2>
-<p>Best subsets</p>
+<section id="variables-candidatas-y-variables-elegidas" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="variables-candidatas-y-variables-elegidas"><span class="header-section-number">12.2</span> Variables candidatas y variables elegidas</h2>
+<p>En general, partimos de un conjunto de variables candidatas a formar parte del modelo. Se trata de variables que sospechamos que pueden estar relacionadas con la respuesta, así como de posibles transformaciones de esas variables originales.</p>
+<p>Identificar cuales conviene incluir no es trivial. La tabla <span class="math inline">\(\ref{datosYX1X2X3}\)</span> contiene los valores de una variable respuesta <span class="math inline">\(y\)</span>, y tres posibles variables regresoras: <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span>, <span class="math inline">\(x_3\)</span>. También hemos representado los diagramas bivariantes de la respuesta frente a cada una de esas posibles variables regresoras (<a href="#fig-YX1X2X3" class="quarto-xref">Figura&nbsp;<span>12.2</span></a>).</p>
+<div id="fig-YX1X2X3" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-YX1X2X3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_12/f1202_YX1X2X3.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-YX1X2X3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;12.2: Respuesta frente a tres posibles variables regresoras. Se incluyen los valores del coeficiente de correlación.
+</figcaption>
+</figure>
+</div>
+<p>Si para realizar previsiones sobre el valor de <span class="math inline">\(y\)</span> solo pudiéramos elegir una de esas tres posibles variables regresoras, la elegida sería, sin ninguna duda, <span class="math inline">\(x_2\)</span>, por ser la que presenta mayor correlación con la respuesta. Pero ¿y si pudiera elegir dos? Si está pensando que serían <span class="math inline">\(x_2\)</span> y <span class="math inline">\(x_1\)</span> —las dos más correlacionadas con la respuesta—, se equivoca. Las dos variables que mejor explican el comportamiento de <span class="math inline">\(y\)</span> son <span class="math inline">\(x_1\)</span> y <span class="math inline">\(x_3\)</span>. Exactamente tenemos que: <span class="math inline">\(y = x_1 + x_3\)</span>. Puede comprobarlo echando un vistazo a los valores de la tabla.</p>
+<section id="selección-de-variables-analogía-del-examen-con-asesores" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="selección-de-variables-analogía-del-examen-con-asesores">Selección de variables: Analogía del examen con asesores</h3>
+<p>Supongamos que tiene que realizar un examen en el que entran 100 temas y usted no sabe ninguno. Pero no todo está perdido; puede llevar asesores elegidos entre sus compañeros de clase y, puestos a suponer, supondremos que usted conoce los temas que sabe cada uno de sus compañeros. Si solo pudiera llevar a uno, llevaría al que más temas sepa, sobre eso no hay ninguna duda. Pero, ¿y si pudiera llevar a dos? La mejor solución no necesariamente sería elegir a los dos que más saben porque si el primero sabe 80 y el segundo 75, pero que están incluidos en los que sabe el primero, el segundo no le sirve para nada. Sería mejor elegir uno que solo sepa 10 temas pero que sean distintos de los que sabe el primero. Incluso podría ocurrir que en la pareja ideal no esté el que sabe 80 temas, si hay otros dos que saben –por ejemplo– 60 y 40 de manera que entre los dos los saben todos.</p>
+<p>La mejor solución es elegir el mínimo número de asesores que cubren el máximo número de temas, y en ese conjunto puede no estar el que más sabe pero podría estar el que sabe menos si los pocos temas que domina sirven para completar los que no saben los demás.</p>
+<p>Desde luego no sería una buena idea llevarlos a todos, porque los que no aportan nada solo enredarían y dificultarían la comunicación con los que sí tienen algo que decir.</p>
+<p>Cuando debemos construir un modelo de regresión múltiple nos enfrentamos a un problema similar al de la selección de asesores. Raramente interesará incorporar todas las variables candidatas, lo que interesa es identificar el subconjunto que logra explicar mejor el comportamiento de la respuesta.</p>
 </section>
-<section id="un-caso-sencillo-una-variable-cuantitativa-y-otra-cualitativa" class="level2" data-number="12.3">
-<h2 data-number="12.3" class="anchored" data-anchor-id="un-caso-sencillo-una-variable-cuantitativa-y-otra-cualitativa"><span class="header-section-number">12.3</span> Un caso sencillo: Una variable cuantitativa y otra cualitativa</h2>
-<p>peso, altura, sexo, y datos UFFI (creo)</p>
+<section id="estrategias-para-la-selección-de-variables" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="estrategias-para-la-selección-de-variables">Estrategias para la selección de variables</h3>
+<p>Crear un modelo de regresión múltiple exige el uso de un ordenador y casi siempre también de un paquete de software estadístico. En general, el problema no es calcular los coeficientes de las variables, sino decidir cuáles son las que conviene incluir. Vamos a comentar algunas estrategias de selección.</p>
+<section id="ir-eliminando-variables" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="ir-eliminando-variables">Ir eliminando variables</h4>
+<p>Consiste en comenzar con un modelo que incluya todas las variables candidatas y, entre aquellas cuyo coeficiente no es significativo, eliminar la que tenga el mayor <span class="math inline">\(p\)</span>-valor (la que podríamos denominar “menos significativa”). Tras esta eliminación, los coeficientes y los <span class="math inline">\(p\)</span>-valores de las variables restantes cambian, por lo que se repite el proceso, eliminando en cada paso la variable con el <span class="math inline">\(p\)</span>-valor más alto, hasta que el modelo ajustado solo contiene variables cuyos coeficientes son estadísticamente significativos.</p>
+<p>Se trata de un método muy fácil de aplicar. Su principal inconveniente es que las variables eliminadas quedan descartadas y no se vuelven a considerar, a pesar de que, a medida que el modelo se va simplificando, algunas de ellas podrían resultar significativas si se reincorporan.</p>
 </section>
-<section id="ojo-con-las-explicaciones-milagrosas" class="level2" data-number="12.4">
-<h2 data-number="12.4" class="anchored" data-anchor-id="ojo-con-las-explicaciones-milagrosas"><span class="header-section-number">12.4</span> Ojo con las explicaciones milagrosas</h2>
-<p>Tantos parámetros como datos</p>
+<section id="pueden-entrar-y-también-salir" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="pueden-entrar-y-también-salir">Pueden entrar y también salir</h4>
+<p>Una variante del método anterior es no olvidar ninguna variable aunque previamente haya sido descartada. A esta estrategia se le llama “regresión paso a paso” (<em>stepwise</em> en inglés).</p>
+<p>Se puede empezar con todas las variables dentro del modelo o con todas fuera. Si empezamos con todas fuera, la primera en entrar será la más correlacionada con la respuesta, a continuación entra la más correlacionada con los residuos del modelo anterior, y así van entrando las que mejor explican lo que falta por explicar. Al entrar una nueva variable cambian los <span class="math inline">\(p\)</span>-valores de las que ya habían entrado y si alguna ha pasado a ser no significativa se elimina del modelo antes de que entre la siguiente. Si son varias las que quedan no significativas se quita la de mayor <span class="math inline">\(p\)</span>-valor y se repite el proceso. Cuando ninguna de las variables que quedan fuera tendría un coeficiente significativo si entrara, se para el proceso.</p>
+<p>Los paquetes de software estadístico suelen incorporar esta estrategia para ser ejecutada de forma automática. Los <span class="math inline">\(p\)</span>-valores frontera para entrar y salir no necesariamente deben ser iguales aunque ambos se suelen fijar en 0,05. Tiene la ventaja de ser rápida y exigir pocos recursos computacionales incluso aunque se tengan muchas variables candidatas. Su inconveniente es que el modelo final puede no ser el que más convenga.</p>
+<p>En el ejemplo de los asesores para el examen, primero elegiríamos al que más temas sepa, a continuación, el que más sepa de los que faltan, y así mientras haya alguien que conozca algún tema no conocido por los asesores seleccionados. Antes de elegir un nuevo asesor veríamos si con lo que aporta el último resulta innecesario alguno de los que ya había entrado, y en ese caso se descartan esos que ya no aportan nada antes de incorporar uno nuevo.</p>
 </section>
-<section id="modelos-explicativos-y-modelos-predictivos" class="level2" data-number="12.5">
-<h2 data-number="12.5" class="anchored" data-anchor-id="modelos-explicativos-y-modelos-predictivos"><span class="header-section-number">12.5</span> Modelos explicativos y modelos predictivos</h2>
-<p>texto</p>
+<section id="mediante-fuerza-bruta" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="mediante-fuerza-bruta">Mediante fuerza bruta</h4>
+<p>Se trata de calcular todos los posibles modelos que se pueden obtener con las variables candidatas, ordenarlos con algún criterio razonable y presentar los mejores para elegir el que más convenga. Con <span class="math inline">\(k\)</span> variables candidatas se pueden construir <span class="math inline">\(2^k\)</span> modelos<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<p>La ventaja es que presenta un panorama muy exhaustivo de los modelos disponibles y el inconveniente es que si el número de variables candidatas es grande el tiempo de computación puede ser muy largo. Los paquetes de software no pueden tratar más de 31 variables debido a cómo se codifican internamente, pero incluso con bastantes menos deja de ser computacionalmente razonable. En general, no hay problema con hasta 15 variables candidatas, entre 15 y 20 ya puede ser largo y requerir muchos recursos del ordenador. Más de 20 ya puede ser inviable.</p>
+<p>En el ejemplo de los asesores, si tuviera 30 compañeros habría más de mil millones de posibles comités asesores. Analizarlos todos exhaustivamente está fuera de las posibilidades de los ordenadores de uso habitual.</p>
 </section>
-<section id="a-tener-en-cuenta" class="level2" data-number="12.6">
-<h2 data-number="12.6" class="anchored" data-anchor-id="a-tener-en-cuenta"><span class="header-section-number">12.6</span> A tener en cuenta</h2>
-<p>Análisis exploratoio más complicado Lo mismo con el análisis de los residuos</p>
-<p>Otras medidas de calidad del ajuste.</p>
-<p>La regresión no sirve para todo.</p>
-<p>El valor de un coeficiente, si no va acompañado del valor de su desviación típica, no sirve prácticamente para nada.</p>
+</section>
+</section>
+<section id="uso-de-variables-cualitativas" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="uso-de-variables-cualitativas"><span class="header-section-number">12.3</span> Uso de variables cualitativas</h2>
+<p>El modelo puede incluir variables cualitativas pero no tratadas como si fueran cuantitativas. Si queremos usar el día de la semana como variable explicativa y tenemos los días codificados como lunes = 1, martes = 2, …, es evidente que esta variable no se puede considerar así, ya que el modelo entendería que el domingo es 7 veces el lunes, cosa evidentemente falsa. Sin embargo, sí hay forma de utilizar variables cualitativas.</p>
+<p>Supongamos que tenemos los datos correspondientes al peso, la estatura y el sexo de 20 individuos. Se trata de encontrar una ecuación para explicar el peso en función de la estatura y el sexo. Lo primero será echar un vistazo a los datos a través de un gráfico. En este caso basta con un diagrama bivariante usando distinto símbolo según el sexo (<a href="#fig-varCualitativa" class="quarto-xref">Figura&nbsp;<span>12.3</span></a>, primer cuadrante). Está claro que tanto la estatura como el sexo influyen en el peso.</p>
+<div id="fig-varCualitativa" class="fig-normal0 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-varCualitativa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_12/f1203_varCualitativa.png" class="fig-normal0 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-varCualitativa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;12.3: Modelos para ajustar datos con una variable cualitativa.
+</figcaption>
+</figure>
+</div>
+<p>Si ignoramos la variable “Sexo” podemos ajustar un modelo del peso solo en función de la estatura, el mismo para hombres que para mujeres (<a href="#fig-varCualitativa" class="quarto-xref">Figura&nbsp;<span>12.3</span></a>, segundo cuadrante), pero es una lástima ignorar la influencia de una variable que sabemos que también afecta.</p>
+<p>Cuando tenemos una variable cualitativa que solo tiene dos categorías se puede introducir en el modelo codificándola con valores numéricos. Para facilitar la interpretación de los resultados lo mejor es codificar un valor como 0 y el otro como 1. En este caso convenimos: Mujer = 0 y Hombre = 1. Ajustando el modelo de regresión se obtiene:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figuras_12/f12035_modeloCualitativa_1.png" class="fig-normal0 img-fluid quarto-figure quarto-figure-center figure-img" style="width:120.0%"></p>
+</figure>
+</div>
+<p>Del resultado anterior se deduce que sí hay diferencias debido al sexo, ya que el coeficiente de esta variable es significativo. Sustituyéndola por sus valores 0 y 1, se obtienen los modelos específicos para mujeres y hombres:</p>
+<ul>
+<li><p>Mujeres (sexo = 0): <span class="math inline">\(\text{Peso = -169,7 + 137,6·Altura}\)</span></p></li>
+<li><p>Hombres (sexo = 1): <span class="math inline">\(\text{Peso = -157,3 + 137,6·Altura}\)</span></p></li>
+</ul>
+<p>Así de sencillo. El problema es que ajustando el modelo de esta forma la pendiente de la recta es la misma tanto para mujeres como para hombres (<a href="#fig-varCualitativa" class="quarto-xref">Figura&nbsp;<span>12.3</span></a>, tercer cuadrante). Esto es debido a que al cambiar el valor de la variable codificada solo cambia el valor de la ordenada en el origen <span class="math inline">\(b_0\)</span>.</p>
+<p>Si queremos que las pendientes de las rectas puedan ser distintas deberemos incluir el producto de la variable cualitativa por las otras variables regresoras (en este caso solo la altura). De esta forma se obtiene:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figuras_12/f12036_modeloCualitativa_2.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:120.0%"></p>
+</figure>
+</div>
+<p>La significación del término Altura*Sexo pone de manifiesto la diferencia en las pendientes de las rectas. Los modelos que se obtienen son:</p>
+<ul>
+<li><p>Mujeres (sexo = 0): <span class="math inline">\(\text{Peso = -102,3 + 97,9·Altura}\)</span></p></li>
+<li><p>Hombres (sexo = 1): <span class="math inline">\(\text{Peso = -208,7 + 167,3·Altura}\)</span></p></li>
+</ul>
+<p>En la <a href="#fig-varCualitativa" class="quarto-xref">Figura&nbsp;<span>12.3</span></a>, cuarto cuadrante, tenemos su representación gráfica. Seguro que ahora nos quedamos más tranquilos con los ajustes obtenidos.</p>
+<p>¿Y si la variable cualitativa tiene más de dos valores distintos? La regla general es que una variable cualitativa con $ k $ valores debe sustituirse por $ k-1 $ variables binarias que toman valores 0 y 1. En el caso de la variable “día de la semana”, como <span class="math inline">\(k=7\)</span> habrá que sustituirla por 6 variables binarias tal como se indica en la tabla <span class="math inline">\(\ref{VariablesCodificadas}\)</span>.</p>
+<p>Si el número de observaciones de que se dispone no da para estimar con solvencia tantos coeficientes, una opción podría ser usar los días clasificados solo como laborables y festivos. Si esta división tiene interés en el marco de la situación que se está analizando, el análisis será más sencillo y la presentación de los resultados se podrá realizar de una forma más clara y compacta, lo cual también es importante.</p>
+</section>
+<section id="medidas-de-calidad-del-ajuste-en-regresión-múltiple" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="medidas-de-calidad-del-ajuste-en-regresión-múltiple"><span class="header-section-number">12.4</span> Medidas de calidad del ajuste en regresión múltiple</h2>
+<section id="coeficiente-de-determinación-ajustado-mathbfr_aj2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="coeficiente-de-determinación-ajustado-mathbfr_aj2">Coeficiente de determinación ajustado <span class="math inline">\(\mathbf{R_{Aj}^2}\)</span></h3>
+<p>El coeficiente de determinación <span class="math inline">\(R^2\)</span> es una buena medida en el ámbito de la regresión simple, pero tiene un problema importante cuando se aplica a la regresión múltiple: su valor siempre aumenta al añadir nuevas variables, aunque estas no expliquen nada.</p>
+<p>Si a partir de una muestra de 50 individuos queremos ajustar un modelo para explicar el peso, podemos empezar usando la altura como variable regresora y obtendremos un determinado valor de <span class="math inline">\(R^2\)</span>. Si añadimos una variable que no tiene nada que ver, como el dinero que cada uno lleva en el bolsillo, ¿cómo cambiará <span class="math inline">\(R^2\)</span>? Pues sí, aumentará. Y si añadimos el número de la casa donde viven volverá a aumentar, de manera que si buscamos un ajuste con el máximo valor de <span class="math inline">\(R^2\)</span> acabaremos con un modelo grande y enredado lleno de variables que no explican absolutamente nada. Esto ocurre porque el coeficiente de correlación entre los residuos del ajuste realizado (lo que falta por explicar del comportamiento de <span class="math inline">\(Y\)</span>) y la nueva variable nunca es exactamente igual a cero. Parece que explica algo, pero es pura casualidad.</p>
+<p>Para evitar este problema se ha corregido la definición de <span class="math inline">\(R^2\)</span>, dando origen al llamado <strong>coeficiente de determinación ajustado</strong>. Simplemente se dividen las sumas de cuadrados por sus grados de libertad. Habíamos definido:</p>
+<p><span class="math display">\[R^2 = \frac{Q_Y - Q_R}{Q_Y} = 1 - \frac{Q_R}{Q_Y}\]</span> Los grados de libertad son <span class="math inline">\(n-p\)</span> para <span class="math inline">\(Q_R\)</span> y <span class="math inline">\(n-1\)</span> para <span class="math inline">\(Q_Y\)</span>, siendo <span class="math inline">\(n\)</span> el número de observaciones y <span class="math inline">\(p\)</span> el de parámetros del modelo. El coeficiente de determinación ajustado es: <span class="math display">\[R_{\text{Aj}}^2= 1 - \frac{\frac{Q_R}{n-p}}{\frac{Q_Y}{n-1}} =  1 - \frac{s_R^2}{s_Y^2}\]</span> Observe que el valor de <span class="math inline">\(p\)</span> penaliza la incorporación de nuevas variables. Cuando la relación <span class="math inline">\(n/p\)</span> se hace grande, es decir que el número de datos supera mucho al número de parámetros, los dos coeficientes se acercan en sus valores. Si con <span class="math inline">\(n=10\)</span> observaciones se ajusta un modelo con 8 variables regresoras (<span class="math inline">\(p=9\)</span>) y resulta un coeficiente de determinación <span class="math inline">\(R^2= 90\%\)</span>, podría pensarse que estamos ante un buen modelo. Sin embargo, utilizando la fórmula anterior es fácil deducir que <span class="math inline">\(R_{Aj}^2 =\)</span> 0,1, es decir, nos indica que en esas condiciones el valor creíble del coeficiente de determinación es el 10 %, el ajuste es bastante pobre. Si lo único que cambia es que tenemos <span class="math inline">\(n=90\)</span> observaciones resulta <span class="math inline">\(R_{Aj}^2 =0.89\)</span>. Pasamos del 90 al 89 %, es decir que ha tenido muy poco cambio.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Maximizar <span class="math inline">\(R_{Aj}^2\)</span> es equivalente a minimizar la varianza de los residuos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Basta observar la fórmula de <span class="math inline">\(R_{Aj}^2\)</span>. El valor de <span class="math inline">\(s_Y^2\)</span> solo depende de los valores de <span class="math inline">\(Y\)</span>, no de las variables que se incluyan en el modelo. Por tanto, a mayor valor de <span class="math inline">\(s_R^2\)</span> menor será el de <span class="math inline">\(R_{Aj}^2\)</span>.</p>
+</div>
+</div>
+</section>
+<section id="validación-cruzada" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="validación-cruzada">Validación cruzada</h3>
+<p>Valorar la bondad de un modelo a partir de su capacidad para predecir las mismas observaciones que han sido utilizadas para su construcción puede conducir a resultados excesivamente optimistas. Esto se debe a que el modelo se ajusta especialmente bien a los datos con los que ha sido construido, ya que incorpora la información que han aportado esos mismos datos.</p>
+<p>Si se tienen suficientes observaciones, se puede destinar una parte (pongamos el 75 %) a construir el modelo y valorar su capacidad de predicción del 25 % restante. Siempre es más “limpio” prever valores que no han sido utilizados para construir el modelo.</p>
+<p>Más allá de los modelos de regresión, este procedimiento se utiliza también en los algoritmos de aprendizaje supervisado (<em>machine learning</em>) o redes neuronales para confirmar que funcionan correctamente con nuevos datos.</p>
+</section>
+</section>
+<section id="qué-es-un-buen-modelo" class="level2" data-number="12.5">
+<h2 data-number="12.5" class="anchored" data-anchor-id="qué-es-un-buen-modelo"><span class="header-section-number">12.5</span> ¿Qué es un buen modelo?</h2>
+<p>A veces se habla de la selección del “mejor modelo” pero no necesariamente existe un modelo que sea mejor que todos los demás; puede haber distintas buenas opciones, cada una con sus ventajas y sus inconvenientes. Si solo nos fijamos en medidas cuantitativas, como el valor de <span class="math inline">\(R_{Aj}^2\)</span>, sí se pueden ordenar con ese criterio, pero existen otros aspectos, como los que a continuación se comentan, que también conviene tener en cuenta.</p>
+<section id="respecto-a-las-variables-regresoras" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="respecto-a-las-variables-regresoras">Respecto a las variables regresoras</h4>
+<ul>
+<li><p><strong>Que sean fáciles de medir</strong>. Un modelo capaz de realizar buenas predicciones pero que utilice variables cuya medición es lenta, difícil o poco precisa será, en la práctica, menos útil que otro que no ajuste tan bien pero resulte más sencillo de aplicar. Medir el contenido de humedad de un producto puede ser lento si es necesario secarlo y medir la diferencia de pesos. Si se dispone de otra variable alternativa, como el simple peso inicial, es probable que se prefiera esta segunda opción, aunque el ajuste del modelo sea algo peor.</p></li>
+<li><p><strong>Que sean fáciles de manejar</strong>. Si estamos interesados en ir regulando el valor de la respuesta, será preferible un modelo que incluya variables a las que se pueda acceder fácilmente y cuyo valor pueda modificarse con rapidez. En un horno industrial, por ejemplo, es mucho más fácil cambiar el caudal de gas que alimenta los quemadores que modificar la temperatura del horno, ya que esta última suele presentar una elevada inercia.</p></li>
+<li><p><strong>Que sean independientes</strong>. Si dos variables regresoras están muy correlacionadas su aportación a la explicación de la respuesta será muy similar y seguramente se podrá prescindir de una de ellas. Por otra parte, una alta correlación entre dos variables regresoras provoca un aumento de la varianza de los coeficientes, haciendo menos sensible el análisis de su significación estadística.</p></li>
+</ul>
+</section>
+<section id="respecto-al-modelo" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="respecto-al-modelo">Respecto al modelo</h4>
+<ul>
+<li><p><strong>Que sea sencillo</strong>. Aumentar ligeramente el valor de <span class="math inline">\(R_{Aj}^2\)</span> a base de incluir nuevas variables en el modelo no suele ser una buena idea. En general se prefieren modelos compactos, sencillos y fáciles de utilizar.</p></li>
+<li><p><strong>Que sea interpretable</strong>. Interesa que el modelo responda a lo que se espera. Si sabemos que aumentar el valor de una variable aumentará la respuesta, el coeficiente de esa variable debe ser positivo. Mejorar el ajuste a base de introducir nuevas variables o transformaciones artificiosas no suele ser una buena idea.</p></li>
+</ul>
+</section>
+<section id="respecto-a-los-residuos" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="respecto-a-los-residuos">Respecto a los residuos</h4>
+<ul>
+<li><strong>Comportamiento adecuado</strong>. Un mal comportamiento de los residuos (falta evidente de Normalidad, varianza que aumenta con el valor de la respuesta) compromete la validez de las estimaciones y de las pruebas de significación que se realizan. Un patrón no aleatorio en el gráfico de residuos frente a valores previstos o frente a otras variables de interés, también puede sugerir la necesidad de transformar alguna variable.</li>
+</ul>
+</section>
+<section id="modelos-predictivos-y-modelos-explicativos" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="modelos-predictivos-y-modelos-explicativos">Modelos predictivos y modelos explicativos</h3>
+<p>Lo que se pide a un modelo depende del objetivo con que se ha construido. Según sea ese objetivo nos referimos a ellos como modelos explicativos o modelos predictivos.</p>
+<section id="modelos-explicativos" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="modelos-explicativos">Modelos explicativos</h4>
+<p>Tratan de identificar cuáles son las variables que afectan a la respuesta y cómo lo hace cada una de ellas. El objetivo principal es entender porque la respuesta se comporta tal como lo hace para saber cómo actuar para que tome el valor que interesa. Se prioriza que sea compacto e interpretable.</p>
+</section>
+<section id="modelos-predictivos" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="modelos-predictivos">Modelos predictivos</h4>
+<p>Lo que más interesa es ser capaces de prever cual será la respuesta en función de los valores de cada una de las variables consideradas. No importa tanto si el modelo es fácil o difícil de interpretar ni si tiene muchas o pocas variables. Lo vemos como una caja negra donde entran los valores de unas variables y sale el valor de la respuesta. Si el valor que se predice se aproxima al real dentro de los márgenes establecidos, el modelo cumple su función.</p>
+<p>Naturalmente, aunque se pretenda construir un modelo explicativo no se puede ignorar su capacidad de predicción (si no es capaz de predecir no sirve como modelo de ningún tipo) y si es predictivo también interesa poder entender por qué la respuesta se comporta tal como hace para, si hay problemas, poderlos corregir actuando sobre las causas que los provocan.</p>
+<p>En el ámbito de los modelos predictivos, además de los métodos estadísticos clásicos (regresión, series de tiempo<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>), la previsión puede abordarse mediante otras técnicas como las redes neuronales, que suelen ofrecer mayor capacidad predictiva a costa de menor interpretabilidad.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>No olvidemos lo que ya sabemos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Para prever el volumen de madera que se puede extraer de un árbol en función del diámetro y la longitud de su tronco, lo mejor no es un modelo de regresión múltiple con esas variables, sino una regresión simple con una nueva variable igual al producto de la longitud por el cuadrado de la circunferencia.</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="peligros-y-malos-usos-de-la-regresión-múltiple" class="level2" data-number="12.6">
+<h2 data-number="12.6" class="anchored" data-anchor-id="peligros-y-malos-usos-de-la-regresión-múltiple"><span class="header-section-number">12.6</span> Peligros y malos usos de la regresión múltiple</h2>
+<p>Conviene tener claras algunas ideas para no cometer errores de mucho bulto. Veamos un par de aspectos a los que hay que prestar atención.</p>
+<section id="explicaciones-milagrosas" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="explicaciones-milagrosas">Explicaciones milagrosas</h3>
+<p>Usted puede construir un modelo que explique la cotización en bolsa de cinco grandes empresas en función de algunos valores del día anterior. Tome esas cinco cotizaciones de hoy al cierre de la jornada (serán las <span class="math inline">\(y\)</span>), seleccione ahora los siguientes datos del día de ayer: las temperaturas máximas en cinco capitales europeas (<span class="math inline">\(x_1\)</span>), el tipo de cambio frente al dólar de las 5 monedas que usted elija (<span class="math inline">\(x_2\)</span>), los precios de cinco materias primas en el mercado de Londres (<span class="math inline">\(x_3\)</span>) y la temperatura media en cinco ciudades colombianas (<span class="math inline">\(x_4\)</span>). Ajuste el modelo que explica <span class="math inline">\(y\)</span> en función de <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span>, <span class="math inline">\(x_3\)</span> y <span class="math inline">\(x_4\)</span>. ¡Ajuste perfecto! Lástima que para hoy llega tarde, y para mañana es inútil.</p>
+<p>Ya hemos visto que por dos puntos pasa una recta (modelo con dos parámetros: <span class="math inline">\(b_0\)</span> y <span class="math inline">\(b_1\)</span> ), por tres puntos pasa un plano (tres parámetros), y así sucesivamente. No es ninguna sorpresa que si se tienen cinco observaciones, estas ajusten perfectamente a un modelo con cinco parámetros. No importa cuáles sean los valores de esas observaciones el ajuste será perfecto por la misma razón por la que por dos puntos pasa una recta sin importar cuales son las coordenadas de esos dos puntos.</p>
+<p>Lo podemos ver gráficamente si en vez de cuatro variables distintas consideramos una y tres transformaciones de la misma, que es como tener cuatro variables regresoras. En la <a href="#fig-puntosIgualParametros" class="quarto-xref">Figura&nbsp;<span>12.4</span></a> (izquierda) tenemos cinco puntos y a la derecha esos mismos puntos con una curva que los ajusta perfectamente. No importa dónde estén esos puntos, siempre se pueden ajustar perfectamente a un polinomio de cuarto grado.</p>
+<div id="fig-puntosIgualParametros" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-puntosIgualParametros-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_12/f1204_puntosIgualParametros.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-puntosIgualParametros-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;12.4: Cinco puntos se ajustan perfectamente a un polinomio de cuarto grado. No importa cuales sean esos puntos.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Si el modelo se comporta demasiado bien, seguramente algo está mal
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si el modelo se comporta sorprendentemente bien seguramente algo está mal. Puede que tenga un número de variables cercano al número de puntos, o que haya puesto la respuesta –o una transformada de esta– como variable regresora.</p>
+</div>
+</div>
+<p>La recomendación es que haya un mínimo de 10 observaciones por cada parámetro del modelo.</p>
+</section>
+<section id="valores-anómalos" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="valores-anómalos">Valores anómalos</h3>
+<p>Si existen valores anómalos y estos pasan desapercibidos, el modelo obtenido puede estar distorsionado respecto al que realmente andamos buscando. Este problema también aparece en la regresión simple, lo peculiar de la múltiple es que tratamos con puntos multidimensionales, y no es fácil detectar todas las anomalías solo con análisis gráficos.</p>
+<p>Analizando las variables una a una se pueden identificar valores anómalos en cada una de ellas. Si tenemos un individuo que mide 2,30 m podemos decir que estamos ante un valor anómalo, pero si mide 1,85 diremos que es un individuo alto pero no un valor anómalo. Por otro lado, si una persona pesa 55 kg podemos pensar que está delgada, pero no que es un error. Sin embargo, si la persona que mide 1,85 pesa 55 kg –no analizándolas una a una, sino las dos a la vez– está claro que estamos ante un valor anómalo (<a href="#fig-anomalia2D" class="quarto-xref">Figura&nbsp;<span>12.5</span></a>).</p>
+<div id="fig-anomalia2D" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-anomalia2D-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_12/f1205_anomalia2D.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-anomalia2D-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;12.5: Valor anómalo que se detecta al realizar un diagrama bivariante, pero no analizando las variables una a una.
+</figcaption>
+</figure>
+</div>
+<p>En la regresión simple estos casos se ven fácilmente realizando diagramas bivariantes, pero en regresión múltiple una observación puede ser anómala debido a los valores que toman varias de sus variables asociadas y esto no es fácil de ver gráficamente. Los valores pueden ser anómalos por dos razones:</p>
+<ul>
+<li><p>Por no seguir el patrón general del resto de observaciones. Son fáciles de identificar gráficamente porque tienen residuos singularmente grandes.</p></li>
+<li><p>Por estar lejos de la nube de puntos general (será una nube de puntos con <span class="math inline">\(p+1\)</span> dimensiones, siendo <span class="math inline">\(p\)</span> el número de variables regresoras). Estos puntos pueden tener una influencia exagerada sobre el modelo y conviene estar atentos para detectar su presencia y actuar según se considere más adecuado.</p></li>
+</ul>
+<p>Los paquetes de software estadístico suelen dar una lista de valores inusuales –podrían ser anómalos, pero de entrada no está claro que lo sean– y siempre es conveniente darles un vistazo para asegurarnos de que todos ellos son considerados.</p>
+</section>
+</section>
+<section id="apéndice-12.a-álgebra-en-estado-puro" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="apéndice-12.a-álgebra-en-estado-puro">APÉNDICE 12.A: Álgebra en estado puro</h2>
+<p>El planteamiento matricial del cálculo de los coeficientes pone de manifiesto un interesante enfoque geométrico que se puede generalizar a cualquier número de variables regresoras.</p>
+<section id="regresión-simple" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="regresión-simple">Regresión simple</h3>
+<p>Un modelo de regresión simple se puede escribir de manera compacta usando vectores y matrices (ambos en negrita) de la forma: <span class="math display">\[\mathbf{Y} = \mathbf{X} \; \mathbf{b} + \mathbf{e} \]</span> Siendo <span class="math inline">\(\mathbf{Y}\)</span> el vector de respuestas, <span class="math inline">\(\mathbf{b}\)</span> el de coeficientes –que en el caso de la regresión simple tiene solo dos elementos–, <span class="math inline">\(\mathbf{e}\)</span> es el vector de residuos y <span class="math inline">\(\mathbf{X}\)</span> una matriz con dos columnas, en la primera contiene solo unos y la segunda los valores de la variable regresora. También podemos ignorar el vector de residuos y referirnos a los valores estimados: <span class="math inline">\(\mathbf{\hat{Y}} = \mathbf{X} \; \mathbf{b}\)</span>. Veamos un ejemplo con números muy sencillos:</p>
+<p>Matricialmente escribimos el modelo de la forma:</p>
+<p><span class="math display">\[\begin{equation*}
+    \begin{split}
+        \mathbf{Y} \;\;=\,\quad \mathbf{X} \;\, \cdot \;\; \mathbf{b} \;\;\; + \;\;\; \mathbf{e} \;\;\; \\[-2pt]
+        \left [
+        \begin{matrix}
+            3 \\
+            1 \\
+            5
+        \end{matrix}
+        \right ]  
+        =
+        \left [
+        \begin{matrix}
+            1 &amp; 5 \\
+            1 &amp; 0\\
+            1 &amp; 4
+        \end{matrix}
+        \right ]
+        \left [
+        \begin{matrix}
+            b_0 \\[5pt]
+            b_1
+        \end{matrix}
+        \right ]
+        +
+        \left [
+        \begin{matrix}
+            e_1 \\
+            e_2 \\
+            e_3
+        \end{matrix}
+        \right ]
+    \end{split}
+\end{equation*}\]</span></p>
+<p>Como solo tenemos tres observaciones, podemos representar en un espacio de tres dimensiones los vectores correspondientes a la respuesta <strong>Y</strong> y a las columnas de la matriz <strong>X</strong>, que llamamos <strong>U</strong> (vector de unos) y {<span class="math inline">\(\textbf{X}_{\textbf{1}}\)</span>} (valores de la variable regresora) tal como se representa en la parte superior de la <a href="#fig-vectores" class="quarto-xref">Figura&nbsp;<span>12.6</span></a>.</p>
+<div id="fig-vectores" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-vectores-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_12/f1206_vectores.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vectores-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;12.6: Visión geométrica del planteamiento matricial de un sencillo modelo de regresión simple e identificación del vector de valores previstos.
+</figcaption>
+</figure>
+</div>
+<p>Los vectores <strong>U</strong> y <span class="math inline">\(\textbf{X}_{\textbf{1}}\)</span> definen el plano que pasa por los puntos (0, 0, 0), (1, 1, 1) y (5, 0, 4). El vector correspondiente a los valores previstos <span class="math inline">\(\mathbf{\hat{Y}}\)</span> estará situado en ese mismo plano ya que es una combinación lineal de los vectores que aparecen en la matriz <strong>X</strong>: <span class="math display">\[\mathbf{\hat{Y}}  = b_0 \cdot \mathbf{U} + b_1 \cdot \mathbf{X_1}\]</span> Por otra parte, minimizar la suma de los cuadrados de los residuos equivale a minimizar el módulo del vector: $ = - $. La forma de conseguirlo es haciendo que sea perpendicular al plano definido por <span class="math inline">\(\mathbf{U}\)</span> y <span class="math inline">\(\mathbf{X_1}\)</span>. La ecuación de este plano se puede deducir teniendo en cuenta que pasa por los puntos (0, 0, 0), (1, 1, 1) y (5, 0, 4). Su expresión es: <span class="math display">\[4x + y -5z = 0\]</span> y el punto de corte en este plano de una recta perpendicular trazada desde el punto (3, 1, 5) es: (29/7, 9/7, 25/7).</p>
+<p>En la parte inferior de la <a href="#fig-vectores" class="quarto-xref">Figura&nbsp;<span>12.6</span></a> se ha añadido la representación del plano <span class="math inline">\(\Omega\)</span> definido por los vectores <span class="math inline">\(\mathbf{U}\)</span> y <span class="math inline">\(\mathbf{X_1}\)</span> (con un color más intenso en la zona entre ambos vectores) y también los vectores perpendiculares <span class="math inline">\(\mathbf{\hat{Y}}\)</span> –situado en el plano <span class="math inline">\(\Omega\)</span>–, y el vector de residuos <span class="math inline">\(\mathbf{e}\)</span>.</p>
+<p>El vector <span class="math inline">\(\mathbf{e}\)</span> es perpendicular a todos los vectores situados en el plano <span class="math inline">\(\Omega\)</span>, en particular a <span class="math inline">\(\mathbf{U}\)</span> y <span class="math inline">\(\mathbf{X_1}\)</span>. Cuando dos vectores son perpendiculares su producto escalar es igual a cero, por tanto:</p>
+<p><span class="math display">\[\begin{equation*}
+    \begin{split}
+        \mathbf{U \! \cdot \! e} &amp;= 0 \\
+        \mathbf{X_1 \! \cdot \!  e} &amp;= 0
+    \end{split}
+\end{equation*}\]</span></p>
+<p>Lo cual es equivalente a plantear el producto matriz-vector con la matriz traspuesta <span class="math inline">\(\mathbf{X'}\)</span>: <span class="math display">\[\mathbf{X'e=0}\]</span></p>
+<p>Por otra parte, <span class="math inline">\(\mathbf{e = Y - \hat{Y}}\)</span> y como <span class="math inline">\(\mathbf{\hat{Y}=Xb}\)</span>, tenemos: <span class="math display">\[\mathbf{ X'(Y - Xb) = 0}\]</span></p>
+<p>Por tanto: <span class="math display">\[\mathbf{X'Y = X'Xb }\]</span></p>
+<p>Para despejar <span class="math inline">\(\mathbf{b}\)</span> multiplicamos los dos miembros de esta expresión por la matriz <span class="math inline">\(\mathbf{(X'X)^{-1}}\)</span>. Multiplicamos por la izquierda, ya que el producto de matrices no tiene la propiedad conmutativa. Nos queda: <span class="math display">\[\mathbf{b} = \left ( \mathbf{X'X} \right )^{-1}  \mathbf{X'Y}\]</span> Con nuestros números:</p>
+<p><span class="math display">\[\begin{equation*}
+    \begin{split}
+        \mathbf{X'X} =
+        \left [
+        \begin{matrix}
+            1 &amp; 1 &amp; 1 \\
+            5 &amp; 0 &amp; 4
+        \end{matrix}
+        \right ]  
+        \cdot
+        \left [
+        \begin{matrix}
+            1 &amp; 5 \\
+            1 &amp; 0\\
+            1 &amp; 4
+        \end{matrix}
+        \right ]
+        =
+        \left [
+        \begin{matrix}
+            3 &amp; 9 \\
+            9 &amp; 41
+        \end{matrix}
+        \right ]    
+    \end{split}
+\end{equation*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+    \begin{split}
+        \mathbf{(X'X)^{-1}}=
+\left [
+\begin{matrix}
+    3 &amp; 9 \\
+    9 &amp; 41
+\end{matrix}
+\right ] ^{-1}  
+=   
+        \left [
+        \begin{matrix}
+        \frac{41}{42} &amp; -\frac{9}{42} \\[5pt]
+        -\frac{9}{42} &amp; \frac{3}{42} \\[5pt]
+        \end{matrix}
+        \right ]
+    \end{split}
+\end{equation*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+    \begin{split}
+        \mathbf{X'Y}=
+        \left [
+        \begin{matrix}
+            1 &amp; 1 &amp; 1\\
+            5 &amp; 0 &amp; 4
+        \end{matrix}
+        \right ]
+        \cdot   
+        \left [
+        \begin{matrix}
+            3 \\
+            1 \\
+            5
+        \end{matrix}
+        \right ]
+        =
+        \left [
+        \begin{matrix}
+            9 \\
+            35
+        \end{matrix}
+        \right ]
+    \end{split}
+\end{equation*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+    \begin{split}
+        \mathbf{b} =    \mathbf{(X'X)^{-1}} \mathbf{X'Y}=
+            \left [
+        \begin{matrix}
+            \frac{41}{42} &amp; -\frac{9}{42} \\[5pt]
+            -\frac{9}{42} &amp; \frac{3}{42} \\[5pt]
+        \end{matrix}
+        \right ]
+        \cdot   
+        \left [
+        \begin{matrix}
+            9 \\
+            35
+        \end{matrix}
+        \right ]
+        =
+        \left [
+        \begin{matrix}
+            \frac{54}{42}\\[5pt]
+            \frac{24}{42} \\[5pt]
+        \end{matrix}
+        \right ]
+        =
+        \left [
+        \begin{matrix}
+            \frac{9}{7}\\[5pt]
+            \frac{4}{7} \\[5pt]
+        \end{matrix}
+        \right ]
+    \end{split}
+\end{equation*}\]</span></p>
+<p>Que son los valores de los coeficientes que resultan de aplicar las fórmulas que ya habíamos visto. La ventaja de este planteamiento matricial es que no solo se puede generalizar a situaciones con cualquier número de observaciones –tendremos más filas en los vectores– sino también a cualquier número de variables regresoras, caso en que tendremos más columnas en la matriz <span class="math inline">\(\mathbf{X}\)</span>.</p>
+</section>
+<section id="regresión-múltiple" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="regresión-múltiple">Regresión múltiple</h3>
+<p>La situación es la misma, pero el vector de residuos debe ser ortogonal a todos los vectores definidos por las columnas de la matriz <span class="math inline">\(\textbf{X}\)</span>. Con solo dos variables regresoras esos vectores (<span class="math inline">\(\mathbf{U}\)</span>, <span class="math inline">\(\mathbf{X_1}\)</span> y <span class="math inline">\(\mathbf{X_2}\)</span>) ya no definen un plano sino un espacio de tres dimensiones y la perpendicularidad a ese espacio no se puede representar gráficamente. Lo que sí podemos hacer es aplicar la expresión que ya hemos visto, el álgebra sí permite moverse en esos espacios con <span class="math inline">\(p+1\)</span> dimensiones (<span class="math inline">\(p\)</span> es el número de variables regresoras) ya que conocemos bien sus propiedades y las reglas que imperan.</p>
+<p>Veamos un ejemplo con números muy sencillos. Tenemos cinco observaciones y dos variables aleatorias:</p>
+<p>Siguiendo el procedimiento que hemos visto:</p>
+<p><span class="math display">\[\begin{equation*}
+    \begin{split}
+        \mathbf{X'X} =
+        \left [
+        \begin{matrix}
+            1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 \\
+            0 &amp; 1 &amp; 0 &amp; 1 &amp; 2 \\
+            0 &amp; 0 &amp; 1 &amp; 1 &amp; 1
+        \end{matrix}
+        \right ]  
+        \cdot
+        \left [
+        \begin{matrix}
+            1 &amp; 0 &amp; 0 \\
+            1 &amp; 1 &amp; 0 \\
+            1 &amp; 0 &amp; 1 \\
+            1 &amp; 1 &amp; 1 \\
+            1 &amp; 2 &amp; 1
+        \end{matrix}
+        \right ]
+        =
+        \left [
+        \begin{matrix}
+            5 &amp; 4 &amp; 3 \\
+            4 &amp; 6 &amp; 3 \\
+            3 &amp; 3 &amp; 3
+        \end{matrix}
+        \right ]    
+    \end{split}
+\end{equation*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+    \begin{split}
+        \mathbf{(X'X)^{-1}}=
+        \left [
+        \begin{matrix}
+            5 &amp; 4 &amp; 3 \\
+            4 &amp; 6 &amp; 3 \\
+            3 &amp; 3 &amp; 3
+        \end{matrix}
+        \right ]^{-1}   
+        =   
+        \frac{1}{15} \left [
+        \begin{matrix}
+            9 &amp; -3 &amp; -6 \\
+            -3 &amp; 6 &amp; -3 \\
+            -6 &amp; -3 &amp; 14
+        \end{matrix}
+        \right ]
+    \end{split}
+\end{equation*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+    \begin{split}
+        \mathbf{X'Y}=
+        \left [
+        \begin{matrix}
+            1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 \\
+            0 &amp; 1 &amp; 0 &amp; 1 &amp; 2 \\
+            0 &amp; 0 &amp; 1 &amp; 1 &amp; 1
+        \end{matrix}
+        \right ]
+        \cdot   
+        \left [
+        \begin{matrix}
+            1 \\
+            3 \\
+            4 \\
+            6 \\
+            8
+        \end{matrix}
+        \right ]
+        =
+        \left [
+        \begin{matrix}
+            22 \\
+            25 \\
+            18
+        \end{matrix}
+        \right ]
+    \end{split}
+\end{equation*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+    \begin{split}
+        \mathbf{b} =    \mathbf{(X'X)^{-1}} \mathbf{X'Y}=
+            \left [
+        \begin{matrix}
+            \frac{3}{5} &amp; \frac{1}{5} &amp; -\frac{2}{5} \\[5pt]
+            -\frac{1}{5} &amp; \frac{2}{5} &amp; -\frac{1}{5} \\[5pt]
+            -\frac{2}{5} &amp; -\frac{1}{5} &amp; \frac{14}{15}
+        \end{matrix}
+        \right ]
+        \cdot   
+            \left [
+        \begin{matrix}
+            22 \\
+            25 \\
+            18
+        \end{matrix}
+        \right ]
+        =
+    \left [
+    \begin{matrix}
+        1 \\
+        2 \\
+        3
+    \end{matrix}
+    \right ]
+    \end{split}
+\end{equation*}\]</span></p>
+<p>Estos cálculos se pueden automatizar en una hoja de cálculo, pero conocer los valores de los coeficientes informa de poco si no se conoce su desviación típica. También interesan medidas de calidad del ajuste, el análisis de los residuos, medidas de relación entre variables regresoras… en fin, la forma más rápida, cómoda y segura es usar un paquete de software estadístico.</p>
+<div style="text-align: center; font-size: 1.1em;">
+<p>________________________ <span style="margin: 0 0.4em;">◇</span> ________________________</p>
+</div>
+<p><br></p>
 
 
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>La primera variable puede estar o no estar en el modelo. para cada una de estas dos opciones existen otras dos para la segunda (ya tenemos <span class="math inline">\(2^2\)</span>). Con <span class="math inline">\(k\)</span> variables tendremos <span class="math inline">\(2^k\)</span>. Este número también incluye un modelo sin variables regresoras (<span class="math inline">\(\hat{y} = \bar{y}\)</span>), si este no se quiere contar el número será <span class="math inline">\(2^k -1\)</span>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>No tratamos las series de tiempo –o series temporales– que tienen como objetivo realizar previsiones cuando los valores están autocorrelacionados. En este caso intervienen conceptos como estacionalidad, periodicidad o tendencia. Estas técnicas no se incluyen en cursos introductorios.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
@@ -752,8 +1310,8 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./_06_tapaEpilogo.html" class="pagination-link" aria-label="CORRELACIÓN Y REGRESIÓN">
-        <span class="nav-page-text">CORRELACIÓN Y REGRESIÓN</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./0_06_tapaEpilogo.html" class="pagination-link" aria-label="EPÍLOGO">
+        <span class="nav-page-text">EPÍLOGO</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -401,12 +401,12 @@ Figura&nbsp;9.2: Valor de la media de nuestra muestra situado en la distribució
 <section id="hipótesis-nula-texth_0-frente-a-hipótesis-alternativa-texth_1" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="hipótesis-nula-texth_0-frente-a-hipótesis-alternativa-texth_1">1. Hipótesis nula (<span class="math inline">\(\text{H}_0\)</span>) frente a hipótesis alternativa (<span class="math inline">\(\text{H}_1\)</span>)</h4>
 <p>Planteamos como hipótesis nula lo que es habitual: que el proceso se mantiene centrado. Solo consideraremos que se ha descentrado –está llenando los paquetes con un valor distinto del objetivo– si los datos están en contradicción con esa hipótesis. Por tanto:</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
     \begin{split}
         \text{H}_0\!\!\!\:: \mu= 1000\, \text{g} \\[0pt]
         \text{H}_1\!\!\!\:: \mu \neq 1000\, \text{g}
     \end{split}
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 </section>
 <section id="estadístico-de-prueba" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="estadístico-de-prueba">2. Estadístico de prueba</h4>
@@ -562,11 +562,11 @@ V(X-Y) = V(X)+V(Y)</td>
 
 </div>
 <p><br> Recordemos que si una variable aleatoria <span class="math inline">\(X\)</span> sigue una distribución <span class="math inline">\(\text{N}(\mu, \sigma)\)</span>, entonces <span class="math inline">\(z = \frac{x-\mu}{\sigma}\)</span> sigue una <span class="math inline">\(\text{N}(0; 1)\)</span>. Aplicado a nuestra variable <span class="math inline">\(\bar{y}_B - \bar{y}_A\)</span>, tenemos: <span class="math display">\[\frac{\bar{y}_B - \bar{y}_A - (\mu_B -\mu_A) }  {\sqrt{\frac{2 \sigma^2}{n}}} \sim \text{N}(0; 1) \]</span> Si la hipótesis nula es cierta tenemos que <span class="math inline">\(\mu_A = \mu_B\)</span>, de manera que en el numerador solo nos queda <span class="math inline">\(\bar{y}_B - \bar{y}_A\)</span>. Ya tenemos estadístico de prueba y distribución de referencia suponiendo conocida la varianza de la población.</p>
-<p><span class="math display">\[\begin{gather*}
+<span class="math display">\[\begin{gather*}
     \frac{\bar{y}_B - \bar{y}_A}{\sqrt{\frac{2 \sigma^2}{n}}} \quad  \sim \quad \; \text{N}(0; 1) \\[3pt]
     \small{\text{\qquad  \;\; Estadístico   \qquad      Distribución de }}  \\[-4pt]
     \small{\text{\quad \;\; de prueba    \qquad  \quad   referencia}}
-\end{gather*}\]</span></p>
+\end{gather*}\]</span>
 <p>Si no conocemos el valor de <span class="math inline">\(\sigma^2\)</span> –que es lo habitual– lo podemos estimar a partir de los valores de las muestras. La varianza de una cualquiera de ellas es un buen estimador de <span class="math inline">\(\sigma^2\)</span>, pero la varianza de la otra también lo es, entonces, ¿con cuál nos quedamos? La solución es sencilla: con la media de las dos. Claro que como nos fiamos más de las estimaciones obtenidas de muestras grandes que de las de muestras pequeñas, la regla general es realizar una media ponderada. Lo inmediato sería ponderar por el tamaño (número de observaciones) de cada muestra, pero como lo que realmente aporta información son los grados de libertad, ponderamos según esos valores, que es el tamaño de la muestra menos una unidad. Ese estimador conjunto será, por tanto: <span class="math display">\[s^2 = \frac{(n_A-1)s_A^2 + (n_B-1)s_B^2}{n_A + n_B -2} \]</span> Si las dos muestras tienen el mismo tamaño no hace falta ponderación, y si la hacemos nos acaba quedando la media aritmética.</p>
 <p>Con nuestros valores: <span class="math display">\[n_A = n_B = 10; \qquad s_A^2 = 0.951; \qquad  s_B^2 = 1{,}187 \]</span> tenemos: <span class="math display">\[ s^2 = \frac{9 \cdot 0.951 + 9 \cdot 1{,}187}{18} = \frac{0{,}951 + 1{,}187}{2} = 1.069\]</span></p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -630,12 +630,12 @@ Figura&nbsp;9.7: Distribución binomial con parámetros n = 11037 y p = 0,00942,
 <p>Seguimos el proceso habitual:</p>
 <section id="hipótesis-nula-frente-a-hipótesis-alternativa" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="hipótesis-nula-frente-a-hipótesis-alternativa">Hipótesis nula frente a hipótesis alternativa</h4>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
     \begin{split}
         \text{H}_0 &amp;: p_1 = p_2  {\small\text{     (La probabilidad de infarto es la misma en los dos grupos)}} \\[-1pt]
         \text{H}_1 &amp;: p_1 &gt; p_2  {\small\text{     (...es menor en el grupo que toma aspirina)}} \\
     \end{split}
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 </section>
 <section id="estadístico-de-prueba---distribución-de-referencia" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="estadístico-de-prueba---distribución-de-referencia">Estadístico de prueba - Distribución de referencia</h4>
@@ -659,13 +659,13 @@ Figura&nbsp;9.7: Distribución binomial con parámetros n = 11037 y p = 0,00942,
 <section id="cálculo-del-p-valor" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="cálculo-del-p-valor">Cálculo del <span class="math inline">\(p\)</span>-valor</h4>
 <p>Vamos a usar la <span class="math inline">\(\text{N}(0;\,1)\)</span> como distribución de referencia. Tenemos: <span class="math display">\[\hat{p} = \frac{x_1+x_2}{n_1+n_2} = \frac{189 + 104}{11\;\!034 + 11\;\!037} = 0.01328 \]</span> El valor del estadístico de prueba es:</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
     \begin{split}
         z &amp;= \frac{\hat{p}_1 - \hat{p}_2}{\sqrt{\frac{\hat{p}(1-\hat{p})}{n_1}+ \frac{\hat{p}(1-\hat{p})}{n_2}}} = \\[5pt]
         &amp;= \frac{0.01713 - 0.00942}{\sqrt{\frac{0.01328(1-0.01328)}{11\;\!034}+ \frac{0.01328(1-0.01328)}{11\;\!037}}} = \\[5pt]
         &amp;= 5.0014
     \end{split}
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>Si <span class="math inline">\(p_1 = p_2\)</span> el estadístico de prueba pertenecerá a la distribución de referencia. Veamos si es razonable considerar que esto es así.</p>
 <div id="fig-pValorPropor" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
@@ -699,12 +699,12 @@ Figura&nbsp;9.8: Distribución de referencia, estadístico de prueba y p-valor e
 <p>Cualquiera de estas nos podría servir como estadístico de prueba para contrastar la hipótesis nula de que el dado está equilibrado frente a la alternativa de que no lo está. La distribución de referencia adaptada a cada una de ellas podríamos construirla fácilmente por simulación.</p>
 <p>Decimos “fácilmente” ahora, pero cuando se empezó a plantear esta forma de razonamiento no existía la posibilidad de la simulación y había que echar mano de argumentos matemáticos para identificar un estadístico de prueba con una distribución de referencia que se pudiera describir matemáticamente. En el caso que nos ocupa la solución está clara. El estadístico de prueba es <span class="math inline">\(Q\)</span> y la distribución de referencia una chi-cuadrado con <span class="math inline">\(k-1\)</span> grados de libertad.</p>
 <p>Observe que <span class="math inline">\(Q\)</span> es la suma de una medida de discrepancia para cada uno de los resultados posibles. Parece innecesariamente complicado. pero tiene la gran ventaja de que la distribución de referencia es conocida y está tabulada. Tenemos:</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
     \begin{split}
         Q &amp;= \frac{(3407-3333.33)^2}{3333.33} + \frac{(3631-3333.33)^2}{3333.33} + \dots + \frac{(3422-3333.33)^2}{3333.33} = \\[5pt]
         &amp;= 94.189
     \end{split}
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>Llevando este valor a la distribución de referencia, una <span class="math inline">\(\chi^2\)</span> con 5 grados de libertad, vemos que claramente no pertenece a esa distribución (<a href="#fig-pValorChi2" class="quarto-xref">Figura&nbsp;<span>9.9</span></a>).</p>
 <div id="fig-pValorChi2" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
@@ -716,7 +716,7 @@ Figura&nbsp;9.9: Estadístico de prueba <span class="math inline">\(Q = 94,189\)
 </figcaption>
 </figure>
 </div>
-<p><span style="color: #0038CF;"><strong>¿Seguro que la distribución de referencia es una <span class="math inline">\(\chi^2\)</span> con 5 grados de libertad?</strong></span></p>
+<p><span style="color: #0038CF;"><strong>¿Seguro que la distribución de referencia es una</strong> <span class="math inline">\(\chi^2\)</span> con 5 grados de libertad?</span></p>
 <p>No hemos demostrado –ni justificado– que para el estadístico de prueba que hemos definido la distribución de referencia es una <span class="math inline">\(\chi^2\)</span> con 5 grados de libertad, pero podemos comprobar que, al menos en este caso concreto, así es.</p>
 <p>Hemos repetido 100.000 veces el cálculo del estadístico de prueba <span class="math inline">\(Q\)</span>, cada uno de ellos a partir de los resultados obtenidos por simulación al lanzar <span class="math inline">\(20\;\!000\)</span> veces un dado equilibrado (<span class="math inline">\(\text{H}_0\)</span> cierta: <span class="math inline">\(p_1 = \dots = p_6 = 1/6\)</span>). La <a href="#fig-histoChi2" class="quarto-xref">Figura&nbsp;<span>9.10</span></a> muestra el histograma de los <span class="math inline">\(100\;\!000\)</span> valores obtenidos y se ha superpuesto la función densidad de probabilidad (ajustando la escala del eje de ordenadas) de una distribución <span class="math inline">\(\chi^2\)</span> con 5 grados de libertad. La coincidencia es evidente. El lector desconfiado (sana desconfianza) y con algunos conocimientos de programación, puede comprobarlo en cualquier otra situación.</p>
 <div id="fig-histoChi2" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
@@ -1166,6 +1166,10 @@ Figura&nbsp;9.23: <span class="math inline">\(p\)</span>-valor obtenido al reali
 </figure>
 </div>
 <p>El test de Shapiro-Wilk nos gana por goleada, aunque con <span class="math inline">\(n=20\)</span> tampoco hace un gran papel ya que falla 33 veces de las 100 que se han probado. Si en vez de elegir compararnos con el mejor lo hubiéramos hecho con el de Kolmogorov-Smirnov las diferencias no serían tan grandes. En cualquier caso, nuestro test tiene margen de mejora, el lector interesado lo puede explorar.</p>
+<div style="text-align: center; font-size: 1.1em;">
+<p>________________________ <span style="margin: 0 0.4em;">◇</span> ________________________</p>
+</div>
+<p><br></p>
 
 
 </section>

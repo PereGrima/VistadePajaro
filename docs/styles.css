@@ -1582,6 +1582,24 @@ h1, h2, h3, h4, h5, h6 {
  border-bottom: 1px solid #666;
 } 
 
+/*** Tabla 9 sin número ***/
+
+.tabla-0900aa {
+  margin: auto;
+  width: 87%;
+  max-width: 600px;
+  border-collapse: collapse;
+  border: none;
+}
+
+.tabla-0900aa td {
+  text-align: center;    /* celdas centradas */
+  padding: 0px 3px;      /* altura de fila más pequeña */
+  line-height: 1.1;      /* compacta como en LaTeX */
+    border: none;
+}
+
+
 /*** Tabla 9.1 ***/
 
 .tabla-0901 {
@@ -1664,7 +1682,7 @@ margin-top: 25px;
 .tabla-0900b td {
   text-align: center;    /* celdas centradas */
   padding: 0px 3px;      /* altura de fila más pequeña */
-  line-height: 1.1;      /* compacta como en LaTeX */
+  line-height: 1.2;      /* compacta como en LaTeX */
     border: none;
 }
 
@@ -1718,8 +1736,9 @@ margin-top: 25px;
 /*** Tabla 9 sin número C ***/
 
 .tabla-0900c {
+  table-layout: fixed;
   margin: auto;
-  width: 900%;
+  width: 100%;
   max-width: 650px;
   vertical-align: middle;
   border-collapse: collapse;
@@ -1748,8 +1767,9 @@ margin-top: 25px;
 /*** Tabla 9.3 ***/
 
 .tabla-0903 {
+  table-layout: fixed;
   margin: auto;
-  width: 80%;
+  width: 90%;
   max-width: 650px;
   font-size: 0.95em;
   vertical-align: middle;
@@ -2005,7 +2025,7 @@ margin-top: 25px;
 
 .tabla-0907 td {
   text-align: center;    /* celdas centradas */
-  line-height: 0.3;      /* compacta como en LaTeX */
+  line-height: 0.2;      /* compacta como en LaTeX */
   font-size: 0.97em;
   border: none;
   margin-top: 0px;
@@ -2018,28 +2038,25 @@ margin-top: 25px;
 }
 
 .tabla-0907 tbody tr:nth-child(1) td {
+    line-height: 1;  
     border-top: 1px solid #666;
     border-bottom: 1px solid #666;
-    line-height: 1; 
     padding-top: 4px;
     padding-bottom: 4px;
 } 
 
 .tabla-0907 tbody tr:nth-child(4) td { 
  border-top: 1px solid #666;
-    line-height: 1; 
     padding-top: 4px;
 } 
 
 .tabla-0907 tbody tr:nth-child(6) td { 
  border-top: 1px solid #666;
-    line-height: 1; 
     padding-top: 4px;
 } 
 
 .tabla-0907 tbody tr:nth-child(7) td { 
  border-bottom: 1px solid #666;
-    line-height: 1; 
     padding-top: 4px;
 } 
 
@@ -2351,6 +2368,14 @@ margin-top: 25px;
   margin-right: auto;
 }
 
+.tabla-wrapper_T0900aa {
+    width: 100%;
+    margin-top: 0ex;
+    margin-bottom: 2ex;
+    margin-left: auto;
+  margin-right: auto;
+}
+
 .tabla-wrapper_T0900a {
     width: 100%;
   margin-bottom: 0ex;
@@ -2367,7 +2392,7 @@ margin-top: 25px;
 
 .tabla-wrapper_T0901 {
   margin-top: 0ex;
-  margin-bottom: 0ex;
+  margin-bottom: 2ex;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -2375,7 +2400,7 @@ margin-top: 25px;
 
 .tabla-wrapper_T0902 {
   margin-top: 0ex;
-  margin-bottom: 3ex;
+  margin-bottom: 4ex;
   width: 100%;
   margin-left: auto;
   margin-right: auto;

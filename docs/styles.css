@@ -1668,6 +1668,470 @@ margin-top: 25px;
     border: none;
 }
 
+/*** Tabla 9.2 ***/
+
+.tabla-0902 {
+  margin: auto;
+  width: 100%;
+  max-width: 650px;
+  vertical-align: middle;
+  border-collapse: collapse;
+  border: none;
+}
+
+.tabla-0902 td {
+  text-align: center;    /* celdas centradas */
+  line-height: 1.2;      /* compacta como en LaTeX */
+    font-size: 0.95em;
+  border: none;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.tabla-0902 td mjx-container[display="true"] {
+  display: inline-block !important;
+  margin: 0.1em 0 !important;
+}
+
+.tabla-0902 tbody tr:nth-child(1) td {
+ font-size: 0.97em;
+ border-top: 1px solid #666;
+ border-bottom: 1px solid #666;
+    padding-top: 3px;
+    padding-bottom: 2px;
+} 
+
+.tabla-0902 tbody tr:nth-child(2) td {
+  padding-top: 3px;
+} 
+
+.tabla-0902 tbody tr:nth-child(4) td {
+     border-bottom: 1px solid #666;
+     padding-top: 0px;
+     padding-bottom: 5x;
+}
+
+.tabla-0902 td:first-child {
+  text-align: right;
+}
+
+/*** Tabla 9 sin número C ***/
+
+.tabla-0900c {
+  margin: auto;
+  width: 900%;
+  max-width: 650px;
+  vertical-align: middle;
+  border-collapse: collapse;
+  border: none;
+}
+
+.tabla-0900c td {
+  text-align: center;    /* celdas centradas */
+  line-height: 1.2;      /* compacta como en LaTeX */
+    font-size: 0.95em;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-collapse: collapse;
+  border: none;
+}
+
+.tabla-0900c td mjx-container[display="true"] {
+  display: inline-block !important;
+  margin: 0.1em 0 !important;
+}
+
+.tabla-0900c td:first-child {
+  text-align: right;
+}
+
+/*** Tabla 9.3 ***/
+
+.tabla-0903 {
+  margin: auto;
+  width: 80%;
+  max-width: 650px;
+  font-size: 0.95em;
+  vertical-align: middle;
+  border-collapse: collapse;
+  border: none;
+}
+
+.tabla-0903 caption {
+  caption-side: top;
+  text-align: center;
+  font-size: 1em;
+  padding-bottom: 10px;
+  color: #666 !important;
+  line-height: 1.2;
+}
+
+.tabla-0903 td {
+  font-size: 0.97em;      /* equivalente a \footnotesize */
+  text-align: center;    /* celdas centradas */
+  padding: 3px 3px;      /* altura de fila más pequeña */
+  line-height: 1.1;      /* compacta como en LaTeX */
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+
+.tabla-0903 .sin-borde {
+  border: none !important;
+}
+
+.tabla-0903 .sin-sup {
+  border-top: none !important;
+}
+
+.tabla-0903 .sin-inf {
+  border-bottom: none !important;
+}
+
+/*** Tabla 9.4 ***/
+
+.tabla-0904 {
+  table-layout: fixed;
+  margin: auto;
+  width: 100%;
+  max-width: 650px;
+  vertical-align: middle;
+  border-collapse: collapse;
+  border: none;
+}
+
+.tabla-0904 td {
+  text-align: center;    /* celdas centradas */
+  line-height: 0.3;      /* compacta como en LaTeX */
+  font-size: 0.90em;
+  border: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.tabla-0904 td mjx-container[display="true"] {
+  display: inline-block !important;
+  margin: 0 !important;
+}
+
+.tabla-0904 tbody tr:nth-child(2) td,
+    .tabla-0904 tbody tr:nth-child(5) td,
+    .tabla-0904 tbody tr:nth-child(8) td {
+ border-bottom: 1px solid #666;
+    line-height: 1; 
+    padding-top: 3px;
+    padding-bottom: 3px;
+} 
+
+.tabla-0904 tbody tr:nth-child(1) td {
+    font-size: 1em;
+    border-top: 1px solid #666;
+    line-height: 1; 
+    padding-top: 3px;
+    padding-bottom: 3px;
+} 
+
+.tabla-0904 .sin-sup {
+  border-top: none !important;
+}
+
+.tabla-0904 tbody tr:nth-child(3) td:nth-child(2) {
+  text-align: right;
+  /*padding-left: 6px;  opcional */
+}
+.tabla-0904 tbody tr:nth-child(4) td:nth-child(1) {
+  text-align: right;
+  /*padding-left: 6px;  opcional */
+}
+.tabla-0904 tbody tr:nth-child(5) td:nth-child(1) {
+  text-align: right;
+  /*padding-left: 6px;  opcional */
+}
+
+.tabla-0904 tbody tr:nth-child(3) td:nth-child(1) {
+  border-bottom: 1px solid #666;
+    line-height: 1; 
+    padding-top: 3px;
+    padding-bottom: 3px;
+    }
+
+.tabla-0904 tbody tr:nth-child(6) td:nth-child(1) {
+  border-bottom: 1px solid #666;
+ line-height: 1; 
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+/*** Tabla 9.5 ***/
+
+.tabla-0905 {
+  margin: auto;
+  width: 100%;
+  max-width: 650px;
+  font-size: 0.95em;
+  vertical-align: middle;
+  border-collapse: collapse;
+  border: none;
+}
+
+.tabla-0905 caption {
+  caption-side: top;
+  text-align: center;
+  font-size: 1em;
+  padding-bottom: 10px;
+  color: #666 !important;
+  line-height: 1.2;
+}
+
+.tabla-0905 td {
+  font-size: 0.97em;      /* equivalente a \footnotesize */
+  text-align: center;    /* celdas centradas */
+  padding: 3px 3px;      /* altura de fila más pequeña */
+  line-height: 1.1;      /* compacta como en LaTeX */
+  border: none;
+}
+
+.tabla-0905 tbody tr:nth-child(1) td,
+.tabla-0905 tbody tr:nth-child(4) td,
+.tabla-0905 tbody tr:nth-child(5) td {
+    border-bottom: 1px solid #666 !important;
+    line-height: 1; 
+    padding-top: 3px;
+    padding-bottom: 3px;
+} 
+
+.tabla-0905 tbody tr:nth-child(1) td:nth-child(2),
+.tabla-0905 tbody tr:nth-child(1) td:nth-child(3),
+.tabla-0905 tbody tr:nth-child(1) td:nth-child(4) {
+   border-top: 1px solid #666 !important;
+    line-height: 1; 
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+/* EXCEPCIÓN: primera columna */
+.tabla-0905 td:first-child {
+  text-align: right;
+  padding-left: 8px;
+}
+
+/*** Tabla 9.6 ***/
+
+.tabla-0906 {
+  table-layout: fixed;
+  margin: auto;
+  width: 100%;
+  max-width: 650px;
+  vertical-align: middle;
+  border-collapse: collapse;
+  border: none;
+}
+
+.tabla-0906 td {
+  text-align: center;    /* celdas centradas */
+  line-height: 0.3;      /* compacta como en LaTeX */
+  font-size: 0.90em;
+  border: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.tabla-0906 td mjx-container[display="true"] {
+  display: inline-block !important;
+  margin: 0 !important;
+}
+
+.tabla-0906 tbody tr:nth-child(2) td,
+    .tabla-0906 tbody tr:nth-child(4) td,
+    .tabla-0906 tbody tr:nth-child(6) td {
+ border-bottom: 1px solid #666;
+    line-height: 1; 
+    padding-top: 3px;
+    padding-bottom: 3px;
+} 
+
+.tabla-0906 tbody tr:nth-child(1) td {
+    font-size: 0.95em;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+    line-height: 1; 
+    padding-top: 4px;
+    padding-bottom: 4px;
+} 
+
+.tabla-0906 tbody tr:nth-child(2) td { 
+    padding-top: 4px;
+    padding-bottom: 4px;
+} 
+
+.tabla-0906 tbody tr:nth-child(3) td:nth-child(1),
+.tabla-0906 tbody tr:nth-child(5) td:nth-child(1) {
+   border-bottom: 1px solid #666 !important;
+    line-height: 1; 
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.tabla-0906 .sin-sup {
+  border-top: none !important;
+}
+
+.tabla-0906 tbody tr:nth-child(2) td:nth-child(2) {
+  text-align: right;
+}
+.tabla-0906 tbody tr:nth-child(3) td:nth-child(2) {
+  text-align: right;
+}
+.tabla-0906 tbody tr:nth-child(4) td:nth-child(1) {
+  text-align: right;
+}
+.tabla-0906 tbody tr:nth-child(5) td:nth-child(2) {
+  text-align: right;
+}
+.tabla-0906 tbody tr:nth-child(6) td:nth-child(1) {
+  text-align: right;
+}
+
+/*** Tabla 9.7 ***/
+
+.tabla-0907 {
+  table-layout: fixed;
+  margin: auto;
+  width: 100%;
+  max-width: 650px;
+  vertical-align: middle;
+  border-collapse: collapse;
+  border: none;
+}
+
+.tabla-0907 td {
+  text-align: center;    /* celdas centradas */
+  line-height: 0.3;      /* compacta como en LaTeX */
+  font-size: 0.97em;
+  border: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.tabla-0907 td mjx-container[display="true"] {
+  display: inline-block !important;
+  margin: 0 !important;
+}
+
+.tabla-0907 tbody tr:nth-child(1) td {
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+    line-height: 1; 
+    padding-top: 4px;
+    padding-bottom: 4px;
+} 
+
+.tabla-0907 tbody tr:nth-child(4) td { 
+ border-top: 1px solid #666;
+    line-height: 1; 
+    padding-top: 4px;
+} 
+
+.tabla-0907 tbody tr:nth-child(6) td { 
+ border-top: 1px solid #666;
+    line-height: 1; 
+    padding-top: 4px;
+} 
+
+.tabla-0907 tbody tr:nth-child(7) td { 
+ border-bottom: 1px solid #666;
+    line-height: 1; 
+    padding-top: 4px;
+} 
+
+.tabla-0907 tbody tr:nth-child(8) td:nth-child(1) {
+  text-align: left;
+    font-size: 0.9em;
+}
+
+.tabla-0907 tbody tr:nth-child(9) td:nth-child(1) {
+  text-align: left;
+    font-size: 0.9em;
+}
+
+.tabla-0907 tbody tr:nth-child(10) td:nth-child(1) {
+  text-align: left;
+    font-size: 0.9em;
+}
+
+.tabla-0907 tbody tr:nth-child(8) td:nth-child(1) {
+  border-top: 1px solid #666;
+}
+
+/*** Tabla 9 sin número D ***/
+
+.tabla-0900d {
+  margin: auto;
+  width: 100%;
+  max-width: 600px;
+    font-size: 0.97em;
+  border-collapse: collapse;
+  border: none;
+}
+
+.tabla-0900d td {
+  text-align: center;    /* celdas centradas */
+  padding: 0px 3px;      /* altura de fila más pequeña */
+  line-height: 1.2;      /* compacta como en LaTeX */
+    border: none;
+}
+
+.tabla-0900d td:first-child {
+  text-align: right;
+}
+
+/*** Tabla 9.9 ***/
+
+.tabla-0909 {
+  table-layout: fixed;
+  margin: auto;
+  width: 90%;
+  max-width: 650px;
+  vertical-align: middle;
+  border-collapse: collapse;
+  border: none;
+}
+
+.tabla-0909 td {
+  text-align: center;    /* celdas centradas */
+  line-height: 0.3;      /* compacta como en LaTeX */
+  font-size: 0.90em;
+  border: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.tabla-0909 td mjx-container[display="true"] {
+  display: inline-block !important;
+  margin: 0 !important;
+}
+
+.tabla-0909 tbody tr:nth-child(15) td {
+    border-top: 1px solid #666;
+ border-bottom: 1px solid #666;
+    line-height: 1; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+} 
+
+.tabla-0909 tbody tr:nth-child(1) td {
+    font-size: 0.95em;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+    line-height: 1; 
+    padding-top: 4px;
+    padding-bottom: 4px;
+} 
+
+.tabla-0909 tbody tr:nth-child(2) td { 
+    padding-top: 9px;
+    padding-bottom: 4px;
+} 
+
 /* ======Tabla Wrapper====== */
 
 .tabla-wrapper00 {
@@ -1897,10 +2361,79 @@ margin-top: 25px;
 
 .tabla-wrapper_T0900b {
     width: 100%;
-  margin-bottom: 0ex;
+  margin-bottom: 2ex;
   margin-top: 0ex;
 }
 
+.tabla-wrapper_T0901 {
+  margin-top: 0ex;
+  margin-bottom: 0ex;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabla-wrapper_T0902 {
+  margin-top: 0ex;
+  margin-bottom: 3ex;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabla-wrapper_T0900c {
+  margin-top: 0ex;
+  margin-bottom: 3ex;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabla-wrapper_T0903 {
+  margin-top: 0ex;
+  margin-bottom: 3ex;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabla-wrapper_T0905 {
+  margin-top: 0ex;
+  margin-bottom: 3ex;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabla-wrapper_T0906 {
+  margin-top: 0ex;
+  margin-bottom: 3ex;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabla-wrapper_T0907 {
+  margin-top: 0ex;
+  margin-bottom: 4ex;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabla-wrapper_T0900d {
+    width: 100%;
+  margin-bottom: 3ex;
+  margin-top: 0ex;
+}
+
+.tabla-wrapper_T0909 {
+  margin-top: 2ex;
+  margin-bottom: 5ex;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* ========================= */
 /*         FIGURAS           */

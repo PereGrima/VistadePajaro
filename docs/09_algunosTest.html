@@ -612,8 +612,43 @@ Figura&nbsp;9.6: Cálculo del p-valor. A trazos una N(0; 1).
 </section>
 <section id="test-de-comparación-de-proporciones" class="level2" data-number="9.2">
 <h2 data-number="9.2" class="anchored" data-anchor-id="test-de-comparación-de-proporciones"><span class="header-section-number">9.2</span> Test de comparación de proporciones</h2>
-<p>Volvamos al estudio visto en el apartado 8.5 sobre si tomar cierta dosis de aspirina de manera regular reduce el riesgo de padecer infarto de miocardio. En el estudio participaron <span class="math inline">\(22.071\)</span> individuos que fueron asignados aleatoriamente a uno de los dos grupos: el grupo de control que tomó un placebo, y el que tomó aspirina. Los resultados obtenidos fueron los que se indican en la tabla <span class="math inline">\(\ref{tablaResultadosAspirina}\)</span> donde escribimos <span class="math inline">\(\hat{p}_1\)</span> y <span class="math inline">\(\hat{p}_2\)</span> para las proporciones en las muestras, con &lt;<sombrero>&gt; para distinguirlas de <span class="math inline">\(p_1\)</span> y <span class="math inline">\(p_2\)</span> que serán las proporciones en las poblaciones y son sobre las que nos planteamos saber si son diferentes.</sombrero></p>
-<p>****TABLA 9.2****</p>
+<p>Volvamos al estudio visto en el apartado 8.5 sobre si tomar cierta dosis de aspirina de manera regular reduce el riesgo de padecer infarto de miocardio. En el estudio participaron 22.071 individuos que fueron asignados aleatoriamente a uno de los dos grupos: el grupo de control que tomó un placebo, y el que tomó aspirina. Los resultados obtenidos fueron los que se indican en la tabla <span class="math inline">\(\ref{tablaResultadosAspirina}\)</span> donde escribimos <span class="math inline">\(\hat{p}_1\)</span> y <span class="math inline">\(\hat{p}_2\)</span> para las proporciones en las muestras, con &lt;<sombrero>&gt; para distinguirlas de <span class="math inline">\(p_1\)</span> y <span class="math inline">\(p_2\)</span> que serán las proporciones en las poblaciones y son sobre las que nos planteamos saber si son diferentes.</sombrero></p>
+<div id="tbl-distDifMedias" class="tabla-wrapper_T0902 anchored">
+
+<table class="tabla-0902 caption-top table">
+<caption>Tabla 9.2: Resultados del estudio sobre aspirina e infarto de miocardio.</caption>
+<colgroup>
+<col style="width: 40%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>Grupo Placebo<br>
+(control)</td>
+<td>Grupo Aspirina<br>
+(tratado)</td>
+</tr>
+<tr class="even">
+<td>Tamaño de la muestra</td>
+<td>$$n_1$$ = 11.034</td>
+<td>$$n_2$$ = 11.037</td>
+</tr>
+<tr class="odd">
+<td>Ocurrencias (infartos de miocardio)</td>
+<td>$$x_1$$ = 189</td>
+<td>$$x_2$$ = 104</td>
+</tr>
+<tr class="even">
+<td>Proporciones en las muestras</td>
+<td>$$\hat{p}_1$$ = 0,01713</td>
+<td>$$\hat{p}_2$$ = 0,00942</td>
+</tr>
+</tbody>
+</table>
+
+</div>
 <p>Vamos a plantear un test que tiene como estadístico de prueba un valor que se puede calcular fácilmente a partir de los resultados del estudio y que siempre tiene la distribución Normal estandarizada como distribución de referencia.</p>
 <p>En primer lugar a la variable aleatoria &lt;<número de="" infartos="" en="" cada="" grupo="">&gt;, que en realidad sigue una distribución binomial con parámetros <span class="math inline">\(n\)</span>, <span class="math inline">\(p\)</span>, la vamos a aproximar a través de una distribución Normal. La regla general para poder realizar esta aproximación es que se cumpla que <span class="math inline">\(np &gt; 5\)</span> y <span class="math inline">\(n(1-p) &gt; 5\)</span>, que en nuestro caso se cumple sobradamente tanto para el grupo tratado como para el de control.</número></p>
 <p>Considerando que las proporciones en cada grupo son las probabilidades ligadas a las ocurrencias, podemos representar la distribución binomial junto con la Normal con la que la vamos a identificar y podemos ver que la aproximación es razonable (<a href="#fig-aproxNormal" class="quarto-xref">Figura&nbsp;<span>9.7</span></a>).</p>
@@ -687,8 +722,59 @@ Figura&nbsp;9.8: Distribución de referencia, estadístico de prueba y p-valor e
 <p>La distribución multinomial es una generalización de la binomial. Mientras que en la binomial cada experimento tiene solo dos resultados posibles (lanzar una moneda: cara y cruz), la distribución multinomial puede tener <span class="math inline">\(k\)</span> resultados: <span class="math inline">\(X_1, X_2, \dots , X_k\)</span>, cada uno con una cierta probabilidad de ocurrir: <span class="math inline">\(p_1, p_2, \dots , p_k\)</span>. Naturalmente, <span class="math inline">\(p_1 + p_2 + \dots + p_k = 1\)</span>.</p>
 <p>Si ejecutamos el experimento <span class="math inline">\(n\)</span> veces, cada uno de los resultados posibles tendrá una frecuencia observada <span class="math inline">\(O_i\)</span>, con <span class="math inline">\(i = 1, 2, \dots, k\)</span> y una frecuencia esperada <span class="math inline">\(E_i = n p_i\)</span>. Un ejemplo típico son los resultados obtenidos al lanzar <span class="math inline">\(n\)</span> veces un dado: tenemos <span class="math inline">\(k=6\)</span> resultados posibles, en este caso todos con la misma probabilidad de ocurrir.</p>
 <p>Recuperando los resultados del experimento de los dados de Wolf, para el dado rojo tenemos:</p>
-<hr>
-<p>**** TABLA SIN NÚMERO **** **************************</p>
+<div id="tbl-distDifMedias" class="tabla-wrapper_T0900c anchored">
+
+<table class="tabla-0900c caption-top table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Índice $$(i)$$:</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>Resultado $$(X_i)$$:</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<td>Frecuencia observada $$(O_i)$$:</td>
+<td>3407</td>
+<td>3631</td>
+<td>3176</td>
+<td>2916</td>
+<td>3448</td>
+<td>3422</td>
+</tr>
+<tr class="even">
+<td>Frecuencia esperada $$(E_i)$$:</td>
+<td>3333,3</td>
+<td>3333,3</td>
+<td>3333,3</td>
+<td>3333,3</td>
+<td>3333,3</td>
+<td>3333,3</td>
+</tr>
+</tbody>
+</table>
+
+</div>
 <p>En general, si el tamaño de la muestra es grande y se tiene un mínimo de 5 observaciones para cada uno de los valores posibles, el estadístico:</p>
 <p><span class="math display">\[Q = \sum_{i=1}^{k} \frac{(O_i-E_i)^2}{E_i}\]</span> Sigue una distribución conocida y tabulada llamada distribución chi-cuadrado, también escrito <span class="math inline">\(\chi^2\)</span>.</p>
 <p>A diferencia de la Normal o la <span class="math inline">\(t\)</span>-Student, la distribución <span class="math inline">\(\chi^2\)</span> es asimétrica (cola larga hacia la derecha) y al igual que la <span class="math inline">\(t\)</span>-Student no es una distribución única sino que hay que indicar cuáles son sus grados de libertad. En el caso de <span class="math inline">\(Q\)</span>, sigue una distribución chi-cuadrado con <span class="math inline">\(k-1\)</span> grados de libertad<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
@@ -733,9 +819,55 @@ Figura&nbsp;9.10: Lanzamiento de un dado. Histograma de 100;!000 valores de <spa
 <section id="otros-resultados-no-tan-exagerados" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="otros-resultados-no-tan-exagerados">Otros resultados, no tan exagerados</h3>
 <p>Supongamos que con otros dos dados, uno verde y otro azul, los resultados al realizar 20;!000 lanzamientos son los que se indican en la tabla <span class="math inline">\(\ref{tablaNuevosDados}\)</span>.</p>
-<hr>
-<p>**** TABLA 9.3 **** **************************</p>
-<p>Solo a la vista de esos números resulta difícil opinar sobre si las diferencias respecto a los valores teóricos esperados (20.000/6 = 3.333,33) son normales o son mayores de lo que cabría esperar. La representación gráfica de los datos (<a href="#fig-nuevosDados" class="quarto-xref">Figura&nbsp;<span>9.11</span></a>) tampoco ayuda mucho en este caso.</p>
+<div id="tbl-dadosWolf" ;="" class="tabla-wrapper_T0903 anchored">
+
+<table class="tabla-0903 caption-top table">
+<caption>Tabla 9.3: Posibles resultados de lanzar 20.000 veces dos nuevos dados.</caption>
+<colgroup>
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="sin-borde"></td>
+<td colspan="6" class="sin-inf">Resultados</td>
+</tr>
+<tr class="even">
+<td class="sin-sup">Dado</td>
+<td class="sin-sup">1</td>
+<td class="sin-sup">2</td>
+<td class="sin-sup">3</td>
+<td class="sin-sup">4</td>
+<td class="sin-sup">5</td>
+<td class="sin-sup">6</td>
+</tr>
+<tr class="odd">
+<td class="sin-inf">Verde</td>
+<td class="sin-inf">3268</td>
+<td class="sin-inf">3364</td>
+<td class="sin-inf">3369</td>
+<td class="sin-inf">3409</td>
+<td class="sin-inf">3367</td>
+<td class="sin-inf">3223</td>
+</tr>
+<tr class="even">
+<td class="sin-sup">Azul</td>
+<td class="sin-sup">3495</td>
+<td class="sin-sup">3219</td>
+<td class="sin-sup">3305</td>
+<td class="sin-sup">3314</td>
+<td class="sin-sup">3413</td>
+<td class="sin-sup">3254</td>
+</tr>
+</tbody>
+</table>
+
+</div>Solo a la vista de esos números resulta difícil opinar sobre si las diferencias respecto a los valores teóricos esperados (20.000/6 = 3.333,33) son normales o son mayores de lo que cabría esperar. La representación gráfica de los datos (<a href="#fig-nuevosDados" class="quarto-xref">Figura&nbsp;<span>9.11</span></a>) tampoco ayuda mucho en este caso.<p></p>
 <div id="fig-nuevosDados" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-nuevosDados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -747,8 +879,105 @@ Figura&nbsp;9.11: Representación de los resultados obtenidos con los dados verd
 </figure>
 </div>
 <p>Un test estadístico aportará información relevante para valorar esta situación. Elegimos el estadístico de prueba que tiene como distribución de referencia una <span class="math inline">\(\chi^2\)</span> con 5 grados de libertad, los valores obtenidos son 7,65 para el dado verde y 15,91 para el azul. Los cálculos se encuentran en la tabla <span class="math inline">\(\ref{estPruebaNuevosDados}\)</span> y en la figura <span class="math inline">\(\ref{pValorChi2NuevosDados}\)</span> se han colocado esos valores en la distribución de referencia.</p>
-<hr>
-<p>**** TABLA 9.4 **** **************************</p>
+<div id="tbl-distDifMedias" class="tabla-wrapper_T0901 anchored">
+
+<table class="tabla-0904 caption-top table">
+<caption>Tabla 9.4: Cálculo del estadístico de prueba para los resultados de los nuevos dados.</caption>
+<colgroup>
+<col style="width: 7%">
+<col>
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="sin-sup"></td>
+<td class="sin-sup"></td>
+<td colspan="6">Resultados</td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>Total</td>
+</tr>
+<tr class="odd">
+<td rowspan="3">Verde</td>
+<td>Observadas ($$\small{O_V}$$)</td>
+<td>3268</td>
+<td>3364</td>
+<td>3369</td>
+<td>3409</td>
+<td>3367</td>
+<td>3223</td>
+<td>20000</td>
+</tr>
+<tr class="even">
+<td>Esperadas ($$\small{E}$$)</td>
+<td>3333,3</td>
+<td>3333,3</td>
+<td>3333,3</td>
+<td>3333,3</td>
+<td>3333,3</td>
+<td>3333,3</td>
+<td>20000</td>
+</tr>
+<tr class="odd">
+<td>Discrepancia ($$\scriptsize{\frac{(O_V-E)^2}{E}}$$)</td>
+<td>1,28</td>
+<td>0,28</td>
+<td>0,38</td>
+<td>1,72</td>
+<td>0,34</td>
+<td>3,65</td>
+<td>7,65</td>
+</tr>
+<tr class="even">
+<td rowspan="3">Azul</td>
+<td>Observadas ($$\small{O_A}$$)</td>
+<td>3495</td>
+<td>3219</td>
+<td>3305</td>
+<td>3314</td>
+<td>3413</td>
+<td>3254</td>
+<td>20000</td>
+</tr>
+<tr class="odd">
+<td>Esperadas ($$\small{E}$$)</td>
+<td>3333,3</td>
+<td>3333,3</td>
+<td>3333,3</td>
+<td>3333,3</td>
+<td>3333,3</td>
+<td>3333,3</td>
+<td>20000</td>
+</tr>
+<tr class="even">
+<td>Discrepancia ($$\scriptsize{\frac{(O_V-E)^2}{E}}$$)</td>
+<td>7,84</td>
+<td>3,92</td>
+<td>0,24</td>
+<td>0,11</td>
+<td>1,90</td>
+<td>1,89</td>
+<td>15,91</td>
+</tr>
+</tbody>
+</table>
+
+</div>
 <div id="fig-pValorChi2NuevosDados" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pValorChi2NuevosDados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -775,16 +1004,58 @@ Figura&nbsp;9.12: Valores de los estadísticos de prueba y su posición en la di
 </div>
 <div class="callout-body-container callout-body">
 <p>La distribución de <span class="math inline">\(\chi^2\)</span> no solo se usa como distribución de referencia en test como el que acabamos de ver. También sirve para explicar la variabilidad que presentan las varianzas muestrales <span class="math inline">\(s^2\)</span> de muestras de tamaño <span class="math inline">\(n\)</span> de una población Normal con varianza <span class="math inline">\(\sigma^2\)</span>. Concretamente: <span class="math display">\[s^2 \sim \frac{\sigma^2}{n-1} \chi_{n-1}^2 \]</span> El subíndice <span class="math inline">\(n-1\)</span> indica los grados de libertad de la distribución.</p>
-<pre><code>    No podemos tener una distribución para cada variable aleatoria de interés. Tener distribuciones que sirven en distintos contextos nos ayuda a simplificar el conjunto de herramientas a utilizar.</code></pre>
+<p>No podemos tener una distribución para cada variable aleatoria de interés. Tener distribuciones que sirven en distintos contextos nos ayuda a simplificar el conjunto de herramientas a utilizar.</p>
 </div>
 </div>
 </section>
 <section id="no-todo-son-dados" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="no-todo-son-dados">No todo son dados</h4>
-<p>En un contexto industrial, supongamos que cuando todo funciona de la forma habitual el 85 % de las unidades producidas son correctas, el 10 % tienen algún defecto que se puede corregir y el 5 % restante son defectuosas sin arreglo. En la última semana se han fabricado 5.000 unidades, consideremos las situaciones, A y B, que se indican en la tabla <span class="math inline">\(\ref{ejemploIndustrial}\)</span>.</p>
-<hr>
-<p>**** TABLA 9.5 **** **************************</p>
-<p>Nos preguntamos si alguna de estas situaciones muestra un cambio significativo (no lo explica el azar) en la proporción de unidades de cada tipo. La representación gráfica de los resultados no despeja la duda planteada.</p>
+<p>En un contexto industrial, supongamos que cuando todo funciona de la forma habitual el 85 % de las unidades producidas son correctas, el 10 % tienen algún defecto que se puede corregir y el 5 % restante son defectuosas sin arreglo. En la última semana se han fabricado 5.000 unidades, consideremos las situaciones, A y B, que se indican en la <a href="#tbl-ejemploIndustrial">Tabla 9.5</a>.</p>
+<div id="tbl-ejemploIndustrial" ;="" class="tabla-wrapper_T0905 anchored">
+
+<table class="tabla-0905 caption-top table">
+<caption>Tabla 9.5: Calidad de las piezas en dos situaciones A y B.</caption>
+<colgroup>
+<col style="width: 38%">
+<col style="width: 18%">
+<col style="width: 22%">
+<col style="width: 22%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="sin-sup"></td>
+<td>Histórico</td>
+<td>Situación A</td>
+<td>Situación B</td>
+</tr>
+<tr class="even">
+<td>Correctas:</td>
+<td>85%</td>
+<td>4175 (83,5%)</td>
+<td>4200 (84%)</td>
+</tr>
+<tr class="odd">
+<td>Defectuosas pero reparables:</td>
+<td>10%</td>
+<td>550 (11%)</td>
+<td>530 (10,6%)</td>
+</tr>
+<tr class="even">
+<td>Defectuosas no reparables:</td>
+<td>5%</td>
+<td>275 (5,5%)</td>
+<td>270 (5,4%)</td>
+</tr>
+<tr class="odd">
+<td>TOTAL:</td>
+<td></td>
+<td>5000</td>
+<td>5000</td>
+</tr>
+</tbody>
+</table>
+
+</div>Nos preguntamos si alguna de estas situaciones muestra un cambio significativo (no lo explica el azar) en la proporción de unidades de cada tipo. La representación gráfica de los resultados no despeja la duda planteada.<p></p>
 <div id="fig-industrialChi2" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-industrialChi2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -795,9 +1066,70 @@ Figura&nbsp;9.13: Representación gráfica de los resultados en las situaciones 
 </figcaption>
 </figure>
 </div>
-<p>Realizando el test de Chi-cuadrado los estadísticos de prueba son 8,82 para la situación A y 3,99 para la B (tabla <span class="math inline">\(\ref{testChiEjeIndustrial}\)</span>).</p>
-<hr>
-<p>**** TABLA 9.6 **** **************************</p>
+<p>Realizando el test de Chi-cuadrado los estadísticos de prueba son 8,82 para la situación A y 3,99 para la B (<a href="#tbl-testChiEjeIndustrial">Tabla 9.6</a>).</p>
+<div id="tbl-testChiEjeIndustrial" class="tabla-wrapper_T0906 anchored">
+
+<table class="tabla-0906 caption-top table">
+<caption>Tabla 9.6: Cálculo de los estadísticos de prueba para el test de Chi-cuadrado..</caption>
+<colgroup>
+<col style="width: 5%">
+<col style="width: 33%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 20%">
+<col style="width: 8%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="sin-sup"></td>
+<td class="sin-sup"></td>
+<td>Correctas</td>
+<td>Reparables</td>
+<td>No reparables</td>
+<td>Total</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Esperadas ($$\small{E}$$)</td>
+<td>4250 (85%)</td>
+<td>500 (10%)</td>
+<td>250 (5%)</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td rowspan="2">A</td>
+<td>Observadas ($$\small{O_A}$$)</td>
+<td>4175</td>
+<td>550</td>
+<td>275</td>
+<td>5000</td>
+</tr>
+<tr class="even">
+<td>Discrepancia ($$\scriptsize{\frac{(O_A-E)^2}{E}}$$)</td>
+<td>1,32</td>
+<td>5</td>
+<td>2,5</td>
+<td>8,82</td>
+</tr>
+<tr class="odd">
+<td rowspan="2">B</td>
+<td>Observadas ($$\small{O_B}$$)</td>
+<td>4200</td>
+<td>530</td>
+<td>270</td>
+<td>5000</td>
+</tr>
+<tr class="even">
+<td>Discrepancia ($$\scriptsize{\frac{(O_B-E)^2}{E}}$$)</td>
+<td>0,59</td>
+<td>1,8</td>
+<td>1,6</td>
+<td>3,99</td>
+</tr>
+</tbody>
+</table>
+
+</div>
 <p>Situando esos valores en su distribución de referencia, en este caso una <span class="math inline">\(\chi^2\)</span> con 2 grados de libertad, observamos que para la situación A el <span class="math inline">\(p\)</span>-valor es 0,136 mientras que para la B es igual a 0,012.</p>
 <p>Por tanto, suponiendo que el proceso se mantiene estable y que el porcentaje de defectos de cada tipo no ha cambiado, una discrepancia respecto a los valores teóricamente esperados se da del orden del 14 % de las veces en la situación A mientras que solo un 1 % en la B. Si colocamos la frontera de lo razonablemente sospechoso en el 5 % deberíamos seguir sin preocuparnos si estamos en la situación A mientras que convendría revisar el proceso en busca de algún problema si nos encontramos en la situación B.</p>
 </section>
@@ -806,9 +1138,78 @@ Figura&nbsp;9.13: Representación gráfica de los resultados en las situaciones 
 <section id="un-caso-especial-los-test-de-normalidad" class="level2" data-number="9.4">
 <h2 data-number="9.4" class="anchored" data-anchor-id="un-caso-especial-los-test-de-normalidad"><span class="header-section-number">9.4</span> Un caso especial: los test de Normalidad</h2>
 <p>La Normalidad de los datos suele estar sobrevalorada, aunque sigue siendo una de las principales preocupaciones de quienes se inician en el análisis estadístico. Muchos tests que, en teoría, exigen que los datos sean normales, en realidad solo requieren la normalidad de las medias muestrales, un supuesto que, en la práctica, casi siempre se cumple.</p>
-<p>Para comparar las medias de dos poblaciones A y B mediante el test de la <span class="math inline">\(t\)</span> de Student formalmente se requiere que: <span class="math display">\[y_A \sim \text{N}(\mu_A; \;\sigma) \qquad y_B \sim \text{N}(\mu_B; \;\sigma) \]</span> Vamos a ver qué pasa cuando <span class="math inline">\(\mu_A = 3.0\)</span>, <span class="math inline">\(\mu_B = 3.6\)</span>, <span class="math inline">\(\sigma = \sqrt{3}\)</span> y se contrasta <span class="math inline">\(\text{H}_0: \mu_A = \mu_B\)</span> frente a <span class="math inline">\(\text{H}_1: \mu_A \neq \mu_B\)</span> con muestras de tamaño <span class="math inline">\(n_A = n_B = 10\)</span>. Generamos 10 números aleatorios de una distribución (3,0; ;<span class="math inline">\(\sqrt{3})\)</span> y otros 10 de una (3,6; ;<span class="math inline">\(\sqrt{3})\)</span>, realizamos el test de la <span class="math inline">\(t\)</span>-Student y obtenemos un <span class="math inline">\(p\)</span>-valor. Si ejecutamos esta operación un millón de veces tendremos un millón de <span class="math inline">\(p\)</span>-valores. A continuación repetimos exactamente el mismo procedimiento pero generando los datos de las distribuciones que se indican en la tabla <span class="math inline">\(\ref{parametrosDistribuciones}\)</span>.</p>
-<hr>
-<p>**** TABLA 9.7 **** **************************</p>
+<p>Para comparar las medias de dos poblaciones A y B mediante el test de la <span class="math inline">\(t\)</span> de Student formalmente se requiere que: <span class="math display">\[y_A \sim \text{N}(\mu_A; \;\sigma) \qquad y_B \sim \text{N}(\mu_B; \;\sigma) \]</span> Vamos a ver qué pasa cuando <span class="math inline">\(\mu_A = 3.0\)</span>, <span class="math inline">\(\mu_B = 3.6\)</span>, <span class="math inline">\(\sigma = \sqrt{3}\)</span> y se contrasta <span class="math inline">\(\text{H}_0: \mu_A = \mu_B\)</span> frente a <span class="math inline">\(\text{H}_1: \mu_A \neq \mu_B\)</span> con muestras de tamaño <span class="math inline">\(n_A = n_B = 10\)</span>. Generamos 10 números aleatorios de una distribución (3,0; ;<span class="math inline">\(\sqrt{3})\)</span> y otros 10 de una (3,6; ;<span class="math inline">\(\sqrt{3})\)</span>, realizamos el test de la <span class="math inline">\(t\)</span>-Student y obtenemos un <span class="math inline">\(p\)</span>-valor. Si ejecutamos esta operación un millón de veces tendremos un millón de <span class="math inline">\(p\)</span>-valores. A continuación repetimos exactamente el mismo procedimiento pero generando los datos de las distribuciones que se indican en la <a href="#tbl-parametrosDistribuciones">Tabla 9.7</a>.</p>
+<div id="tbl-parametrosDistribuciones" class="tabla-wrapper_T0907 anchored">
+
+<table class="tabla-0907 caption-top table">
+<caption>Tabla 9.7: Origen de los datos con los que se ha realizado la simulación.</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 15%">
+<col style="width: 30%">
+<col style="width: 15%">
+<col style="width: 20%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Distribución</td>
+<td>Población</td>
+<td>Parámetros</td>
+<td>Media</td>
+<td>Desv. típica</td>
+</tr>
+<tr class="even">
+<td rowspan="2">Uniforme<sup>1</sup></td>
+<td>A</td>
+<td>$$\small{a=0;\;\; b=6}$$</td>
+<td>$$\small{3,0}$$</td>
+<td>$$\small{\sqrt{3}}$$</td>
+</tr>
+<tr class="odd">
+<td>B</td>
+<td>$$\small{a=0,6;\;\; b=6,6}$$</td>
+<td>$$\small{3,6}$$</td>
+<td>$$\small{\sqrt{3}}$$</td>
+</tr>
+<tr class="even">
+<td rowspan="2">Exponencial<sup>2</sup></td>
+<td>A</td>
+<td>$$\small{\theta=3-\sqrt{3};\;\; \lambda=\sqrt{3}}$$</td>
+<td>$$\small{3,0}$$</td>
+<td>$$\small{\sqrt{3}}$$</td>
+</tr>
+<tr class="odd">
+<td>B</td>
+<td>$$\small{\theta=3,6-\sqrt{3};\;\; \lambda=\sqrt{3}}$$</td>
+<td>$$\small{3,6}$$</td>
+<td>$$\small{\sqrt{3}}$$</td>
+</tr>
+<tr class="even">
+<td rowspan="2">Laplace<sup>3</sup></td>
+<td>A</td>
+<td>$$\small{\mu=3;\;\; b=\sqrt{1,5}}$$</td>
+<td>$$\small{3,0}$$</td>
+<td>$$\small{\sqrt{3}}$$</td>
+</tr>
+<tr class="odd">
+<td>B</td>
+<td>$$\small{\mu=3;\;\; b=\sqrt{1,5}}$$</td>
+<td>$$\small{3,6}$$</td>
+<td>$$\small{\sqrt{3}}$$</td>
+</tr>
+<tr class="even">
+<td colspan="5"><sup>1</sup> <em>a</em> y <em>b</em> son los valores entre los cuales está definida la distribución.</td>
+</tr>
+<tr class="odd">
+<td colspan="5"><sup>2</sup> θ es el umbral a partir del cual empieza la distribución y λ el valor medio.</td>
+</tr>
+<tr class="even">
+<td colspan="5"><sup>3</sup> μ es el valor medio y <em>b</em> está relacionado con la variabilidad</td>
+</tr>
+</tbody>
+</table>
+
+</div>
 <p>Los resultados obtenidos se encuentran en la <a href="#fig-pValorNoNormal" class="quarto-xref">Figura&nbsp;<span>9.14</span></a>. Se han representado los histogramas de los <span class="math inline">\(p\)</span>-valores según sea la distribución origen de los datos. Podemos observar que son muy parecidos. Cuando los datos provienen de una distribución Normal el 11,1% de las veces se rechaza la hipótesis nula, valor similar a cuando los datos provienen de las otras distribuciones, incluso de la exponencial, que es muy distinta de la Normal. Por tanto, al menos en este caso, la Normalidad no es tan importante.</p>
 <div id="fig-pValorNoNormal" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
@@ -848,12 +1249,89 @@ Figura&nbsp;9.15: Función densidad de probabilidad y función de distribución 
 </figure>
 </div>
 <p>Por otra parte, dada una muestra podemos definir su función de distribución empírica, <span class="math inline">\(F_n(x)\)</span>, sustituyendo probabilidades por proporciones. Hemos generado 5 números aleatorios de una distribución N(0; 1) que, una vez ordenados de menor a mayor, son los que se indican a continuación, junto con sus proporciones acumuladas.</p>
-<hr>
-<p>**** TABLA sín número **** **************************</p>
+<div class="tabla-wrapper_T0900d">
+
+<table class="tabla-0900d caption-top table">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Valor (<em>X</em>):</td>
+<td>-1,72</td>
+<td>-0,68</td>
+<td>-0,34</td>
+<td>0,54</td>
+<td>1,55</td>
+</tr>
+<tr class="even">
+<td>Proporción acumulada F<sub>n</sub>(<em>X</em>):</td>
+<td>0,2</td>
+<td>0,4</td>
+<td>0,6</td>
+<td>0,8</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+
+</div>
 <p>Como el menor, o por debajo de ese, hay 1 entre 5 (proporción: 0,2), como el que viene a continuación o menor que ese hay 2 entre 5 (0,4) y así sucesivamente. Finalmente, menor que el mayor (<span class="math inline">\(x_{max}\)</span>) lo son todos, por tanto <span class="math inline">\(F_n(x_{max}) = 1\)</span>.</p>
-<p>El estadístico de prueba es la distancia máxima, <span class="math inline">\(D_{max}\)</span> entre la función de distribución teórica –la que figura en la hipótesis nula– y la empírica correspondiente a los datos disponibles. Si con los datos de nuestro ejemplo contrastamos la hipótesis nula de que pertenecen a una N(0; 1) tendremos los valores de <span class="math inline">\(F(X)\)</span> que se indican en la tabla <span class="math inline">\(\ref{ejemploKS}\)</span>, donde también vemos que la distancia máxima entre ambas funciones de distribución corresponde al valor <span class="math inline">\(x = -0.34\)</span> y es igual a 0,233.</p>
-<hr>
-<p>**** TABLA 9.8 **** **************************</p>
+<p>El estadístico de prueba es la distancia máxima, <span class="math inline">\(D_{max}\)</span> entre la función de distribución teórica –la que figura en la hipótesis nula– y la empírica correspondiente a los datos disponibles. Si con los datos de nuestro ejemplo contrastamos la hipótesis nula de que pertenecen a una N(0; 1) tendremos los valores de <span class="math inline">\(F(X)\)</span> que se indican en la <a href="#tbl-ejemploKS">Tabla 9.8</a>, donde también vemos que la distancia máxima entre ambas funciones de distribución corresponde al valor <span class="math inline">\(x = -0.34\)</span> y es igual a 0,233.</p>
+<div id="tbl-ejemploKS" class="tabla-wrapper_T0900d anchored">
+
+<table class="tabla-0900d caption-top table">
+<caption>Tabla 9.8: Cálculo de los estadísticos de prueba para el test de Chi-cuadrado.</caption>
+<colgroup>
+<col style="width: 45%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Valor (X):</td>
+<td>-1,72</td>
+<td>-0,68</td>
+<td>-0,34</td>
+<td>0,54</td>
+<td>1,55</td>
+</tr>
+<tr class="even">
+<td>Proporción acumulada F<sub>n</sub>(<em>X</em>):</td>
+<td>0,2</td>
+<td>0,4</td>
+<td>0,6</td>
+<td>0,8</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>Proporción acum. en N(0; 1), F(<em>X</em>):</td>
+<td>0,043</td>
+<td>0,248</td>
+<td>0,367</td>
+<td>0,705</td>
+<td>0,939</td>
+</tr>
+<tr class="even">
+<td>Distancia (D):</td>
+<td>0,157</td>
+<td>0,152</td>
+<td>0,233</td>
+<td>0,095</td>
+<td>0,061</td>
+</tr>
+</tbody>
+</table>
+
+</div>
 <p>La <a href="#fig-pruebaKSNormal5" class="quarto-xref">Figura&nbsp;<span>9.16</span></a> muestra la obtención del estadístico de prueba con los datos del ejemplo para contrastar la hipótesis nula de que provienen de una N(0;1).</p>
 <div id="fig-pruebaKSNormal5" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
@@ -1135,9 +1613,125 @@ Figura&nbsp;9.21: Valores generados aleatoriamente de una distribución <span cl
 </figcaption>
 </figure>
 </div>
-<p>En primer lugar identificamos los intervalos con el criterio establecido. Para cada uno de esos intervalos contamos la frecuencia observada (<span class="math inline">\(f_o\)</span>) y la probabilidad de tener una observación en el caso de que los datos provengan de una distribución Normal con la media y la desviación típica de la muestra, en nuestro caso 3,079 y 2,814 respectivamente. Una vez tenemos los valores de <span class="math inline">\(f_o\)</span> y <span class="math inline">\(f_t\)</span> para cada intervalo, podemos calcular el cuadrado de su diferencia. La suma de esos cuadrados es el estadístico de prueba (tabla <span class="math inline">\(\ref{ejemploMio}\)</span>).</p>
-<hr>
-<p>**** TABLA 9.9 **** **************************</p>
+<p>En primer lugar identificamos los intervalos con el criterio establecido. Para cada uno de esos intervalos contamos la frecuencia observada (<span class="math inline">\(f_o\)</span>) y la probabilidad de tener una observación en el caso de que los datos provengan de una distribución Normal con la media y la desviación típica de la muestra, en nuestro caso 3,079 y 2,814 respectivamente. Una vez tenemos los valores de <span class="math inline">\(f_o\)</span> y <span class="math inline">\(f_t\)</span> para cada intervalo, podemos calcular el cuadrado de su diferencia. La suma de esos cuadrados es el estadístico de prueba (<a href="#tbl-ejemploTestMio">Tabla 9.9</a>).</p>
+<div id="tbl-ejemploTestMio" class="tabla-wrapper_T0909 anchored">
+
+<table class="tabla-0909 caption-top table">
+<caption>Tabla 9.9: Cálculo del estadístico de prueba para el test que hemos definido.</caption>
+<colgroup>
+<col style="width: 22%">
+<col style="width: 12%">
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 22%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Intervalos</td>
+<td>$$\small{f_o}$$</td>
+<td>Prob.</td>
+<td>$$\small{f_t}$$</td>
+<td>$$\small{(f_o - f_t)^2}$$</td>
+</tr>
+<tr class="even">
+<td>-999 &nbsp; — &nbsp; -4,2</td>
+<td>0</td>
+<td>0,00484</td>
+<td>0,09683</td>
+<td>0,00938</td>
+</tr>
+<tr class="odd">
+<td>-4,2 &nbsp; — &nbsp; -2,5</td>
+<td>0</td>
+<td>0,01886</td>
+<td>0,37711</td>
+<td>0,14221</td>
+</tr>
+<tr class="even">
+<td>-2,5 &nbsp; — &nbsp; -0,8</td>
+<td>0</td>
+<td>0,06031</td>
+<td>1,20628</td>
+<td>1,45511</td>
+</tr>
+<tr class="odd">
+<td>-0,8 &nbsp; — &nbsp; 0,9</td>
+<td>4</td>
+<td>0,13533</td>
+<td>2,70666</td>
+<td>1,67274</td>
+</tr>
+<tr class="even">
+<td>0,9 &nbsp; — &nbsp; 2,6</td>
+<td>8</td>
+<td>0,21307</td>
+<td>4,26138</td>
+<td>13,97731</td>
+</tr>
+<tr class="odd">
+<td>2,6 &nbsp; — &nbsp; 4,3</td>
+<td>3</td>
+<td>0,23542</td>
+<td>4,70844</td>
+<td>2,91876</td>
+</tr>
+<tr class="even">
+<td>4,3 &nbsp; — &nbsp; 6,0</td>
+<td>2</td>
+<td>0,18256</td>
+<td>3,65116</td>
+<td>2,72633</td>
+</tr>
+<tr class="odd">
+<td>6,0 &nbsp; — &nbsp; 7,7</td>
+<td>1</td>
+<td>0,09934</td>
+<td>1,98686</td>
+<td>0,97390</td>
+</tr>
+<tr class="even">
+<td>7,7 &nbsp; — &nbsp; 9,4</td>
+<td>1</td>
+<td>0,03793</td>
+<td>0,75855</td>
+<td>0,05830</td>
+</tr>
+<tr class="odd">
+<td>9,4 &nbsp; — &nbsp; 11,1</td>
+<td>1</td>
+<td>0,01016</td>
+<td>0,20311</td>
+<td>0,63504</td>
+</tr>
+<tr class="even">
+<td>11,1 &nbsp; — &nbsp; 12,8</td>
+<td>0</td>
+<td>0,00191</td>
+<td>0,03812</td>
+<td>0,00145</td>
+</tr>
+<tr class="odd">
+<td>12,8 &nbsp; — &nbsp; 14,5</td>
+<td>0</td>
+<td>0,00025</td>
+<td>0,00501</td>
+<td>0,00003</td>
+</tr>
+<tr class="even">
+<td>14,5 &nbsp; — &nbsp; 999</td>
+<td>0</td>
+<td>0,00002</td>
+<td>0,00049</td>
+<td>0,00000</td>
+</tr>
+<tr class="odd">
+<td colspan="4">Estadístico de pruena: $$\sum (f_o - f_t)^2 =$$</td>
+<td>24,57</td>
+</tr>
+</tbody>
+</table>
+
+</div>
 <p>Ya solo falta obtener los valores de la distribución de referencia y calcular el <span class="math inline">\(p\)</span>-valor. Para hacerlo generamos 10.000 muestras con el mismo tamaño, media y desviación típica que la sometida a prueba, pero en este caso provenientes de una distribución Normal. Para cada una de ellas se calcula el estadístico de prueba con el procedimiento descrito (naturalmente, deberemos crear un pequeño programa que lo haga de forma automática). Los 10.000 valores obtenidos constituyen una aproximación razonable a la distribución de referencia.</p>
 <p>Para determinar el <span class="math inline">\(p\)</span>-valor solo hay que contar cuántos valores en la distribución de referencia son iguales o mayores que nuestro estadístico de prueba. Tenemos 1010, por tanto, el <span class="math inline">\(p\)</span>-valor será: 1010/10000 = 0,101. Con el nivel de significación habitual (0,05) no podemos rechazar la hipótesis nula.</p>
 <div id="fig-ejemploMio" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">

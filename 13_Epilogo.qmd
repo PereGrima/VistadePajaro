@@ -48,11 +48,11 @@ También en esta línea, se puede analizar si son ciertos los dichos sobre el ti
 
 ### ¿Es más probable llegar a deportista profesional si se nace en los primeros meses del año? {.unnumbered}
 
-\noindent Como se comenta en el apartado 5.2, se dice que haber nacido en los primeros meses del año aumenta la probabilidad de llegar a ser deportista profesional. Si se elige un deporte como el fútbol, donde las fechas de nacimiento de los jugadores de equipos de las primeras categorías son fáciles de conseguir, se puede comparar la proporción de nacidos en el primer y el segundo semestre del año, como hemos hecho en el apartado antes citado, o la proporción de los nacidos en los tres primeros meses del año respecto a los nacidos en los tres últimos, o de los nacidos en enero frente a los nacidos en diciembre. Hay que considerar cuáles son las proporciones en la población en general, y también la existencia de futbolistas que se han formado en otros países donde el criterio de organizar las categorías infantiles --razón por la que se justifica esa posible diferencia-- es distinto al nuestro.
+Como se comenta en el apartado 5.2, se dice que haber nacido en los primeros meses del año aumenta la probabilidad de llegar a ser deportista profesional. Si se elige un deporte como el fútbol, donde las fechas de nacimiento de los jugadores de equipos de las primeras categorías son fáciles de conseguir, se puede comparar la proporción de nacidos en el primer y el segundo semestre del año, como hemos hecho en el apartado antes citado, o la proporción de los nacidos en los tres primeros meses del año respecto a los nacidos en los tres últimos, o de los nacidos en enero frente a los nacidos en diciembre. Hay que considerar cuáles son las proporciones en la población en general, y también la existencia de futbolistas que se han formado en otros países donde el criterio de organizar las categorías infantiles --razón por la que se justifica esa posible diferencia-- es distinto al nuestro.
 
 ### ¿Se ponen menos multas las semanas previas a las elecciones municipales? {.unnumbered}
 
-\noindent En algunas ciudades se comenta que en las semanas previas a las elecciones municipales se ponen menos multas, atribuyendo esa mayor tolerancia al interés por no irritar a ciudadanos que al ser multados (seguro que piensan que es de forma injusta o demasiado estricta) dejen de votar a los actuales gobernantes. Analizar la serie del número de multas por semana para comprobar si antes de las elecciones se produce un bajón permitirá responder a la pregunta planteada. Naturalmente, que baje el número de multas puede ser debido simplemente al azar, habrá que analizar si esa diferencia es estadísticamente significativa. Realizar el análisis en una ciudad donde se ponen muchas multas y tener los datos de varias elecciones facilita poder afirmar que la diferencia es estadísticamente significativa, en el caso de que realmente lo sea.
+En algunas ciudades se comenta que en las semanas previas a las elecciones municipales se ponen menos multas, atribuyendo esa mayor tolerancia al interés por no irritar a ciudadanos que al ser multados (seguro que piensan que es de forma injusta o demasiado estricta) dejen de votar a los actuales gobernantes. Analizar la serie del número de multas por semana para comprobar si antes de las elecciones se produce un bajón permitirá responder a la pregunta planteada. Naturalmente, que baje el número de multas puede ser debido simplemente al azar, habrá que analizar si esa diferencia es estadísticamente significativa. Realizar el análisis en una ciudad donde se ponen muchas multas y tener los datos de varias elecciones facilita poder afirmar que la diferencia es estadísticamente significativa, en el caso de que realmente lo sea.
 
 En una línea similar, cuando se pone un nuevo radar en la carretera para detectar --y multar-- a los coches que circulan con exceso de velocidad, algunas personas afirman que su fin es meramente recaudatorio, mientras que la administración afirma que lo hace para reducir el número de accidentes. Si se tienen datos de la fecha de colocación de un nuevo radar y del número de accidentes en su zona de influencia antes y después de su instalación, se puede analizar si la diferencia es estadísticamente significativa. Que no lo sea no significa necesariamente que tengan razón los que afirman que el objetivo es solo recaudatorio. Puede ocurrir que su influencia vaya más allá de la zona considerada o que, simplemente, el radar no haya logrado el objetivo que se pretendía.
 
@@ -162,7 +162,7 @@ En vez de aspirina se puede realizar la prueba con el producto del sobrecito que
 
 ### ¿Sirven las bolsas de plástico llenas de agua para espantar las moscas? {.unnumbered}
 
-\noindent Esta es también una curiosa práctica muy extendida, y hay controversia sobre su eficacia. Un buen resumen del "estado del arte" se publicó en elDiario.es[^13_epilogo-5]. La conclusión principal es que no se conocen estudios serios sobre este tema y que hay opiniones contrapuestas, aunque los expertos se muestran escépticos sobre su eficacia.
+Esta es también una curiosa práctica muy extendida, y hay controversia sobre su eficacia. Un buen resumen del "estado del arte" se publicó en elDiario.es[^13_epilogo-5]. La conclusión principal es que no se conocen estudios serios sobre este tema y que hay opiniones contrapuestas, aunque los expertos se muestran escépticos sobre su eficacia.
 
 [^13_epilogo-5]: Ver artículo [aquí](https://www.eldiario.es/consumoclaro/).
 
@@ -181,7 +181,7 @@ En definitiva, se trata de responder a la pregunta que nos hemos planteado, reco
 Esto es estadística y esto es método científico. <br>
 
 ::: {style="text-align: center; font-size: 1.1em;"}
-________________________ [◇]{style="margin: 0 0.4em;"} ________________________ 
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ [◇]{style="margin: 0 0.4em;"} \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 :::
 
 <br>

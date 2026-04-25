@@ -8,59 +8,63 @@ La respuesta es sencilla, es como la regresión simple pero con más de una vari
 
 De esta forma se amplían las posibilidades de explicar el comportamiento de la respuesta o de realizar previsiones sobre cuál será su valor en unas determinadas condiciones. Incluso las variables que, de manera aislada, no servirían para un modelo de regresión simple pueden resultar muy útiles cuando se combinan con otras en una regresión múltiple.
 
-En la [@fig-ventajasRM] tenemos una variable $y$ que muestra una cierta relación con $x_1$ ($R^2 = 0.65$) pero prácticamente ninguna con $x_2$ ($R^2 = 0.12$), sin embargo, usando las dos en un modelo de regresión múltiple la explicación del comportamiento de $y$ es muy buena, obteniéndose un valor de $R^2 = 0.98$. 
+En la [@fig-ventajasRM] tenemos una variable $y$ que muestra una cierta relación con $x_1$ ($R^2 = 0{,}65$) pero prácticamente ninguna con $x_2$ ($R^2 = 0{,}12$), sin embargo, usando las dos en un modelo de regresión múltiple la explicación del comportamiento de $y$ es muy buena, obteniéndose un valor de $R^2 = 0{,}98$.
 
 Observe que de la misma forma que un modelo de regresión simple se ajusta a una línea, con dos variables se ajusta a un plano, y podríamos seguir hasta espacios con tantas dimensiones como variables regresoras. En la [@fig-ventajasRM] los puntos están muy pegados a la superficie ajustada, ayuda a verlo la línea vertical que sale de cada punto y que indica su distancia a la superficie, es decir, su residuo.
 
-![Las variables $x_1$ y $x_2$ conjuntamente explican mucho mejor la respuesta que considerándolas por separado.](Figuras_12/f1201_ventajasRM.png){#fig-ventajasRM .fig-normal0 fig-align="center" width="100%"}
+![Las variables $x_1$ y $x_2$ conjuntamente explican mucho mejor la respuesta que considerándolas por separado.](Figuras_12/f1201_ventajasRM.png){#fig-ventajasRM .fig-normal0 fig-align="center" width="95%"}
 
 ## Variables candidatas y variables elegidas
 
 En general, partimos de un conjunto de variables candidatas a formar parte del modelo. Se trata de variables que sospechamos que pueden estar relacionadas con la respuesta, así como de posibles transformaciones de esas variables originales.
 
-Identificar cuales conviene incluir no es trivial. La tabla \ref{datosYX1X2X3} contiene los valores de una variable respuesta $y$, y tres posibles variables regresoras: $x_1$, $x_2$, $x_3$. También hemos representado los diagramas bivariantes de la respuesta frente a cada una de esas posibles variables regresoras ([@fig-YX1X2X3]). 
+Identificar cuales conviene incluir no es trivial. La [Tabla 12.1](#tbl-datosYX1X2X3) contiene los valores de una variable respuesta $y$, y tres posibles variables regresoras: $x_1$, $x_2$, $x_3$. También hemos representado los diagramas bivariantes de la respuesta frente a cada una de esas posibles variables regresoras ([@fig-YX1X2X3]).
 
-\begin{table}[h!]
-	{\footnotesize %\small%
-		\begin{center}
-			\caption{\small{\textit{Valores de una respuesta y tres posibles variables regresoras.}}}
-			\label{datosYX1X2X3}
-			\begin{tabular}{ccccc}
-				\hline
-				\multicolumn{1}{m{1.3cm}}{\centering 
-					Observación} & 
-				\multicolumn{1}{m{1 cm}}{\centering 
-					$y$} &
-				\multicolumn{1}{m{1cm}}{\centering 
-					$x_1$} &
-				\multicolumn{1}{m{1cm}}{\centering 
-					$x_2$} &
-				\multicolumn{1}{m{1 cm}}{\centering 
-					$x_3$} \\ \hline
-				1 & 22,17 & 20,07 & 22,56 & 2,10\\
-				2 & 26,08 & 13,14 & 26,55 & 12,94\\
-				3 & 23,28 & 21,05 & 24,51 & 2,23\\
-				4 & 12,56 & 22,48 & 12,84 & -9,92\\
-				5 & 18,12 & 14,07 & 20,79 & 4,05\\ \arrayrulecolor{gray75} \hline
-				6 & 26,49 & 29,49 & 22,28 & -3,00\\
-				7 & 12,51 & 7,17  & 12,38 & 5,33\\
-				8 & 19,19 & 12,87 & 17,58 & 6,32\\
-				9 & 12,05 & 13,77 & 10,81 & -1,72\\ 
-				10 &21,15 & 19,04 & 18,67 & 2,10\\  \arrayrulecolor{gray75} \hline
-				11 &27,64 & 28,34 & 25,16 & -0,70\\
-				12 &27,79 & 29,26 & 24,10 & -1,47\\
-				13 &22,90 & 27,02 & 21,98 & -4,12\\
-				14 &22,22 & 21,04 & 22,66 & 1,18\\ 
-				15 &22,87 & 24,58 & 24,48 & -1,71\\  \arrayrulecolor{gray75} \hline
-				16 &18,08 & 19,47 & 18,02 & -1,39\\
-				17 &18,46 & 22,24 & 19,95 & -3,77\\
-				18 &15,94 & 13,57 & 15,25 & 2,37\\
-				19 &18,56 & 12,66 & 23,54 & 5,91\\
-				20 &15,49 & 10,29 & 14,86 & 5,20\\ \hline
-			\end{tabular}
-	\end{center}}
-	\vspace{-0.1cm}
-\end{table}
+```{=html}
+<div id="tbl-datosYX1X2X3" class="tabla-wrapper_T1201">
+<div class="tabla-caption">
+  Tabla 12.1: Valores de una respuesta y tres posibles variables regresoras.
+</div>
+
+<table class="tabla-1201">
+
+<colgroup>
+<col style="width: 37%;">
+<col style="width: 22%;">
+<col style="width: 22%;">
+<col style="width: 22%;">
+<col style="width: 22%;">
+<col style="width: 22%;">
+</colgroup>
+
+<tbody>
+<tr> <td>Observación</td> <td><em>y</em></td> <td><em>x</em><sub>1</sub></td> <td><em>x</em><sub>2</sub></td> <td><em>x</em><sub>3</sub></td> </tr>
+
+<tr><td>1 </td> <td> 22,17 </td> <td> 20,07 </td> <td> 22,56 </td> <td> 2,10</td>  </tr>
+ <tr><td>2 </td> <td> 26,08 </td> <td> 13,14 </td> <td> 26,55 </td> <td> 12,94</td> </tr>
+ <tr><td>3 </td> <td> 23,28 </td> <td> 21,05 </td> <td> 24,51 </td> <td> 2,23</td>  </tr>
+ <tr><td>4 </td> <td> 12,56 </td> <td> 22,48 </td> <td> 12,84 </td> <td> -9,92</td> </tr>
+ <tr><td>5 </td> <td> 18,12 </td> <td> 14,07 </td> <td> 20,79 </td> <td> 4,05</td>  </tr>
+ <tr><td>6 </td> <td> 26,49 </td> <td> 29,49 </td> <td> 22,28 </td> <td> -3,00</td> </tr>
+ <tr><td>7 </td> <td> 12,51 </td> <td> 7,17  </td> <td> 12,38 </td> <td> 5,33</td>  </tr>
+ <tr><td>8 </td> <td> 19,19 </td> <td> 12,87 </td> <td> 17,58 </td> <td> 6,32</td>  </tr>
+ <tr><td>9 </td> <td> 12,05 </td> <td> 13,77 </td> <td> 10,81 </td> <td> -1,72</td> </tr>
+ <tr><td>10 </td> <td>21,15 </td> <td> 19,04 </td> <td> 18,67 </td> <td> 2,10</td>  </tr> 
+ <tr><td>11 </td> <td>27,64 </td> <td> 28,34 </td> <td> 25,16 </td> <td> -0,70</td> </tr>
+ <tr><td>12 </td> <td>27,79 </td> <td> 29,26 </td> <td> 24,10 </td> <td> -1,47</td> </tr>
+ <tr><td>13 </td> <td>22,90 </td> <td> 27,02 </td> <td> 21,98 </td> <td> -4,12</td> </tr>
+ <tr><td>14 </td> <td>22,22 </td> <td> 21,04 </td> <td> 22,66 </td> <td> 1,18</td>  </tr>
+ <tr><td>15 </td> <td>22,87 </td> <td> 24,58 </td> <td> 24,48 </td> <td> -1,71</td> </tr>
+ <tr><td>16 </td> <td>18,08 </td> <td> 19,47 </td> <td> 18,02 </td> <td> -1,39</td> </tr>
+ <tr><td>17 </td> <td>18,46 </td> <td> 22,24 </td> <td> 19,95 </td> <td> -3,77</td> </tr>
+ <tr><td>18 </td> <td>15,94 </td> <td> 13,57 </td> <td> 15,25 </td> <td> 2,37</td>  </tr>
+ <tr><td>19 </td> <td>18,56 </td> <td> 12,66 </td> <td> 23,54 </td> <td> 5,91</td>  </tr>
+ <tr><td>20 </td> <td>15,49 </td> <td> 10,29 </td> <td> 14,86 </td> <td> 5,20</td>  </tr>
+
+</tbody>
+</table>
+</div>
+```
 
 ![Respuesta frente a tres posibles variables regresoras. Se incluyen los valores del coeficiente de correlación.](Figuras_12/f1202_YX1X2X3.png){#fig-YX1X2X3 .fig-normal6 fig-align="center" width="95%"}
 
@@ -74,7 +78,7 @@ La mejor solución es elegir el mínimo número de asesores que cubren el máxim
 
 Desde luego no sería una buena idea llevarlos a todos, porque los que no aportan nada solo enredarían y dificultarían la comunicación con los que sí tienen algo que decir.
 
-Cuando debemos construir un modelo de regresión múltiple nos enfrentamos a un problema similar al de la selección de asesores. Raramente interesará incorporar todas las variables candidatas, lo que interesa es identificar el subconjunto que logra explicar mejor el comportamiento de la respuesta. 
+Cuando debemos construir un modelo de regresión múltiple nos enfrentamos a un problema similar al de la selección de asesores. Raramente interesará incorporar todas las variables candidatas, lo que interesa es identificar el subconjunto que logra explicar mejor el comportamiento de la respuesta.
 
 ### Estrategias para la selección de variables {.unnumbered}
 
@@ -88,19 +92,19 @@ Se trata de un método muy fácil de aplicar. Su principal inconveniente es que 
 
 #### Pueden entrar y también salir {.unnumbered}
 
-Una variante del método anterior es no olvidar ninguna variable aunque previamente haya sido descartada. A esta estrategia se le llama "regresión paso a paso" (*stepwise* en inglés). 
+Una variante del método anterior es no olvidar ninguna variable aunque previamente haya sido descartada. A esta estrategia se le llama "regresión paso a paso" (*stepwise* en inglés).
 
 Se puede empezar con todas las variables dentro del modelo o con todas fuera. Si empezamos con todas fuera, la primera en entrar será la más correlacionada con la respuesta, a continuación entra la más correlacionada con los residuos del modelo anterior, y así van entrando las que mejor explican lo que falta por explicar. Al entrar una nueva variable cambian los $p$-valores de las que ya habían entrado y si alguna ha pasado a ser no significativa se elimina del modelo antes de que entre la siguiente. Si son varias las que quedan no significativas se quita la de mayor $p$-valor y se repite el proceso. Cuando ninguna de las variables que quedan fuera tendría un coeficiente significativo si entrara, se para el proceso.
 
-Los paquetes de software estadístico suelen incorporar esta estrategia para ser ejecutada de forma automática. Los $p$-valores frontera para entrar y salir no necesariamente deben ser iguales aunque ambos se suelen fijar en 0,05. Tiene la ventaja de ser rápida y exigir pocos recursos computacionales incluso aunque se tengan muchas variables candidatas. Su inconveniente es que el modelo final puede no ser el que más convenga. 
+Los paquetes de software estadístico suelen incorporar esta estrategia para ser ejecutada de forma automática. Los $p$-valores frontera para entrar y salir no necesariamente deben ser iguales aunque ambos se suelen fijar en 0,05. Tiene la ventaja de ser rápida y exigir pocos recursos computacionales incluso aunque se tengan muchas variables candidatas. Su inconveniente es que el modelo final puede no ser el que más convenga.
 
 En el ejemplo de los asesores para el examen, primero elegiríamos al que más temas sepa, a continuación, el que más sepa de los que faltan, y así mientras haya alguien que conozca algún tema no conocido por los asesores seleccionados. Antes de elegir un nuevo asesor veríamos si con lo que aporta el último resulta innecesario alguno de los que ya había entrado, y en ese caso se descartan esos que ya no aportan nada antes de incorporar uno nuevo.
 
 #### Mediante fuerza bruta {.unnumbered}
 
-Se trata de calcular todos los posibles modelos que se pueden obtener con las variables candidatas, ordenarlos con algún criterio razonable y presentar los mejores para elegir el que más convenga. Con $k$ variables candidatas se pueden construir $2^k$ modelos[^12-1].
+Se trata de calcular todos los posibles modelos que se pueden obtener con las variables candidatas, ordenarlos con algún criterio razonable y presentar los mejores para elegir el que más convenga. Con $k$ variables candidatas se pueden construir $2^k$ modelos[^12_regremultiple-1].
 
-[^12-1]: La primera variable puede estar o no estar en el modelo. para cada una de estas dos opciones existen otras dos para la segunda (ya tenemos $2^2$). Con $k$ variables tendremos $2^k$. Este número también incluye un modelo sin variables regresoras ($\hat{y} = \bar{y}$), si este no se quiere contar el número será $2^k -1$.
+[^12_regremultiple-1]: La primera variable puede estar o no estar en el modelo. para cada una de estas dos opciones existen otras dos para la segunda (ya tenemos $2^2$). Con $k$ variables tendremos $2^k$. Este número también incluye un modelo sin variables regresoras ($\hat{y} = \bar{y}$), si este no se quiere contar el número será $2^k -1$.
 
 La ventaja es que presenta un panorama muy exhaustivo de los modelos disponibles y el inconveniente es que si el número de variables candidatas es grande el tiempo de computación puede ser muy largo. Los paquetes de software no pueden tratar más de 31 variables debido a cómo se codifican internamente, pero incluso con bastantes menos deja de ser computacionalmente razonable. En general, no hay problema con hasta 15 variables candidatas, entre 15 y 20 ya puede ser largo y requerir muchos recursos del ordenador. Más de 20 ya puede ser inviable.
 
@@ -108,7 +112,7 @@ En el ejemplo de los asesores, si tuviera 30 compañeros habría más de mil mil
 
 ## Uso de variables cualitativas
 
-El modelo puede incluir variables cualitativas pero no tratadas como si fueran cuantitativas. Si queremos usar el día de la semana como variable explicativa y tenemos los días codificados como lunes = 1, martes = 2, ..., es evidente que esta variable no se puede considerar así, ya que el modelo entendería que el domingo es 7 veces el lunes, cosa evidentemente falsa. Sin embargo, sí hay forma de utilizar variables cualitativas. 
+El modelo puede incluir variables cualitativas pero no tratadas como si fueran cuantitativas. Si queremos usar el día de la semana como variable explicativa y tenemos los días codificados como lunes = 1, martes = 2, ..., es evidente que esta variable no se puede considerar así, ya que el modelo entendería que el domingo es 7 veces el lunes, cosa evidentemente falsa. Sin embargo, sí hay forma de utilizar variables cualitativas.
 
 Supongamos que tenemos los datos correspondientes al peso, la estatura y el sexo de 20 individuos. Se trata de encontrar una ecuación para explicar el peso en función de la estatura y el sexo. Lo primero será echar un vistazo a los datos a través de un gráfico. En este caso basta con un diagrama bivariante usando distinto símbolo según el sexo ([@fig-varCualitativa], primer cuadrante). Está claro que tanto la estatura como el sexo influyen en el peso.
 
@@ -118,7 +122,7 @@ Si ignoramos la variable "Sexo" podemos ajustar un modelo del peso solo en funci
 
 Cuando tenemos una variable cualitativa que solo tiene dos categorías se puede introducir en el modelo codificándola con valores numéricos. Para facilitar la interpretación de los resultados lo mejor es codificar un valor como 0 y el otro como 1. En este caso convenimos: Mujer = 0 y Hombre = 1. Ajustando el modelo de regresión se obtiene:
 
-![](Figuras_12/f12035_modeloCualitativa_1.png){ .fig-normal0 fig-align="center" width="120%"}
+![](Figuras_12/f12035_modeloCualitativa_1.png){.fig-normal0 fig-align="center" width="80%"}
 
 Del resultado anterior se deduce que sí hay diferencias debido al sexo, ya que el coeficiente de esta variable es significativo. Sustituyéndola por sus valores 0 y 1, se obtienen los modelos específicos para mujeres y hombres:
 
@@ -126,78 +130,75 @@ Del resultado anterior se deduce que sí hay diferencias debido al sexo, ya que 
 
 -   Hombres (sexo = 1): $\text{Peso = -157,3 + 137,6·Altura}$
 
-Así de sencillo. El problema es que ajustando el modelo de esta forma la pendiente de la recta es la misma tanto para mujeres como para hombres ([@fig-varCualitativa], tercer cuadrante). Esto es debido a que al cambiar el valor de la variable codificada solo cambia el valor de la ordenada en el origen $b_0$. 
+Así de sencillo. El problema es que ajustando el modelo de esta forma la pendiente de la recta es la misma tanto para mujeres como para hombres ([@fig-varCualitativa], tercer cuadrante). Esto es debido a que al cambiar el valor de la variable codificada solo cambia el valor de la ordenada en el origen $b_0$.
 
 Si queremos que las pendientes de las rectas puedan ser distintas deberemos incluir el producto de la variable cualitativa por las otras variables regresoras (en este caso solo la altura). De esta forma se obtiene:
 
-![](Figuras_12/f12036_modeloCualitativa_2.png){ .fig-normal6 fig-align="center" width="120%"}
+![](Figuras_12/f12036_modeloCualitativa_2.png){.fig-normal0 fig-align="center" width="82%"}
 
-La significación del término Altura*Sexo pone de manifiesto la diferencia en las pendientes de las rectas. Los modelos que se obtienen son: 
+La significación del término Altura\*Sexo pone de manifiesto la diferencia en las pendientes de las rectas. Los modelos que se obtienen son:
 
 -   Mujeres (sexo = 0): $\text{Peso = -102,3 + 97,9·Altura}$
-
 -   Hombres (sexo = 1): $\text{Peso = -208,7 + 167,3·Altura}$
 
 En la [@fig-varCualitativa], cuarto cuadrante, tenemos su representación gráfica. Seguro que ahora nos quedamos más tranquilos con los ajustes obtenidos.
 
-¿Y si la variable cualitativa tiene más de dos valores distintos? La regla general es que una variable cualitativa con $ k $ valores debe sustituirse por $ k-1 $ variables binarias que toman valores 0 y 1. En el caso de la variable "día de la semana", como $k=7$ habrá que sustituirla por 6 variables binarias tal como se indica en la tabla \ref{VariablesCodificadas}. 
+¿Y si la variable cualitativa tiene más de dos valores distintos? La regla general es que una variable cualitativa con $k$ valores debe sustituirse por $k-1$ variables binarias que toman valores 0 y 1. En el caso de la variable "día de la semana", como $k=7$ habrá que sustituirla por 6 variables binarias tal como se indica en la [Tabla 12.2](#tbl-VariablesCodificadas).
 
-\vspace{5pt}
-\begin{table}[h!]
-	{\footnotesize
-		\begin{center}
-			\caption{\small{\textit{Codificación de variable cualitativa: ``Día de la semana''}}}
-			\label{VariablesCodificadas}
-			\begin{tabular}{ccccccc}
-				\hline
-				\multirow{2}{1.5cm}{\centering 
-					Valores originales} & 
-				\multicolumn{6}{m{5cm}}{\centering Variables auxiliares} \\
-				&
-				\multicolumn{1}{m{0.5cm}}{\centering 
-					$Z_1$} &
-				\multicolumn{1}{m{0.5cm}}{\centering 
-					$Z_2$} &
-				\multicolumn{1}{m{0.5cm}}{\centering 
-					$Z_3$} & 
-				\multicolumn{1}{m{0.5cm}}{\centering 
-					$Z_4$} & 
-				\multicolumn{1}{m{0.5cm}}{\centering 
-					$Z_5$} & 
-				\multicolumn{1}{m{0.5cm}}{\centering 
-					$Z_6$} \\ \hline
-				Lunes & 1 & 0 & 0 & 0 & 0 & 0  \\
-				Martes & 0 & 1 & 0 & 0 & 0 & 0   \\
-				Miércoles & 0 & 0 & 1 & 0 & 0 & 0   \\
-				Jueves & 0 & 0 & 0 & 1 & 0 & 0   \\
-				Viernes & 0 & 0 & 0 & 0 & 1 & 0   \\ 
-				Sábado & 0 & 0 & 0 & 0 & 0 & 1   \\
-				Domingo & 0 & 0 & 0 & 0 & 0 & 0   \\ \hline
-			\end{tabular}
-	\end{center}}
-\end{table}
+
+```{=html}
+<div id="tbl-VariablesCodificadas" class="tabla-wrapper_T1201">
+<div class="tabla-caption">
+  Tabla 12.2: Codificación de la variable cualitativa: "Día de la semana".
+</div>
+
+<table class="tabla-1202">
+
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 12,5%;">
+<col style="width: 12,5%;">
+<col style="width: 12,5%;">
+<col style="width: 12,5%;">
+<col style="width: 12,5%;">
+<col style="width: 12,5%;">
+</colgroup>
+
+<tbody>
+<tr> <td>Valores</td> <td colspan="6">Variables auxiliares</td> </tr>
+<tr> <td>originales</td> <td><em>Z</em><sub>1</sub></td> <td><em>Z</em><sub>2</sub></td> <td><em>Z</em><sub>3</sub></td> <td><em>Z</em><sub>4</sub></td> <td><em>Z</em><sub>5</sub></td> <td><em>Z</em><sub>6</sub></td> </tr>
+
+<tr> <td>Lunes</td>     <td>1</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td>  <td>0</td> </tr>
+<tr> <td>Martes</td>    <td>0</td> <td>1</td> <td>0</td> <td>0</td> <td>0</td>  <td>0</td> </tr>
+<tr> <td>Miércoles</td> <td>0</td> <td>0</td> <td>1</td> <td>0</td> <td>0</td>  <td>0</td> </tr>
+<tr> <td>Jueves</td>    <td>0</td> <td>0</td> <td>0</td> <td>1</td> <td>0</td>  <td>0</td> </tr>
+<tr> <td>Viernes</td>   <td>0</td> <td>0</td> <td>0</td> <td>0</td> <td>1</td>  <td>0</td> </tr>
+<tr> <td>Sábado</td>    <td>0</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td>  <td>1</td> </tr>
+<tr> <td>Domingo</td>   <td>0</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td>  <td>0</td> </tr>
+
+</tbody>
+</table>
+</div>
+```
 
 Si el número de observaciones de que se dispone no da para estimar con solvencia tantos coeficientes, una opción podría ser usar los días clasificados solo como laborables y festivos. Si esta división tiene interés en el marco de la situación que se está analizando, el análisis será más sencillo y la presentación de los resultados se podrá realizar de una forma más clara y compacta, lo cual también es importante.
 
-## Medidas de calidad del ajuste en regresión múltiple 
+## Medidas de calidad del ajuste en regresión múltiple
 
 ### Coeficiente de determinación ajustado $\mathbf{R_{Aj}^2}$ {.unnumbered}
 
-El coeficiente de determinación $R^2$ es una buena medida en el ámbito de la regresión simple, pero tiene un problema importante cuando se aplica a la regresión múltiple: su valor siempre aumenta al añadir nuevas variables, aunque estas no expliquen nada. 
+El coeficiente de determinación $R^2$ es una buena medida en el ámbito de la regresión simple, pero tiene un problema importante cuando se aplica a la regresión múltiple: su valor siempre aumenta al añadir nuevas variables, aunque estas no expliquen nada.
 
 Si a partir de una muestra de 50 individuos queremos ajustar un modelo para explicar el peso, podemos empezar usando la altura como variable regresora y obtendremos un determinado valor de $R^2$. Si añadimos una variable que no tiene nada que ver, como el dinero que cada uno lleva en el bolsillo, ¿cómo cambiará $R^2$? Pues sí, aumentará. Y si añadimos el número de la casa donde viven volverá a aumentar, de manera que si buscamos un ajuste con el máximo valor de $R^2$ acabaremos con un modelo grande y enredado lleno de variables que no explican absolutamente nada. Esto ocurre porque el coeficiente de correlación entre los residuos del ajuste realizado (lo que falta por explicar del comportamiento de $Y$) y la nueva variable nunca es exactamente igual a cero. Parece que explica algo, pero es pura casualidad.
 
 Para evitar este problema se ha corregido la definición de $R^2$, dando origen al llamado **coeficiente de determinación ajustado**. Simplemente se dividen las sumas de cuadrados por sus grados de libertad. Habíamos definido:
 
-$$R^2 = \frac{Q_Y - Q_R}{Q_Y} = 1 - \frac{Q_R}{Q_Y}$$
-Los grados de libertad son $n-p$ para $Q_R$  y $n-1$ para $Q_Y$, siendo $n$ el número de observaciones y $p$ el de parámetros del modelo. El coeficiente de determinación ajustado es:
-$$R_{\text{Aj}}^2= 1 - \frac{\frac{Q_R}{n-p}}{\frac{Q_Y}{n-1}} =  1 - \frac{s_R^2}{s_Y^2}$$
-Observe que el valor de $p$ penaliza la incorporación de nuevas variables. Cuando la relación $n/p$ se hace grande, es decir que el número de datos supera mucho al número de parámetros, los dos coeficientes se acercan en sus valores. Si  con  $n=10$ observaciones se ajusta un modelo con 8 variables regresoras ($p=9$) y resulta un coeficiente de determinación $R^2= 90\%$, podría pensarse que estamos ante un buen modelo. Sin embargo, utilizando la fórmula anterior es fácil deducir que  $R_{Aj}^2 =$ 0,1, es decir, nos indica que en esas condiciones el valor creíble del coeficiente de determinación es el 10 %, el ajuste es bastante pobre. Si lo único que cambia es que tenemos $n=90$ observaciones resulta $R_{Aj}^2 =0.89$. Pasamos del 90 al 89 %, es decir que ha tenido muy poco cambio. 
+$$R^2 = \frac{Q_Y - Q_R}{Q_Y} = 1 - \frac{Q_R}{Q_Y}$$ Los grados de libertad son $n-p$ para $Q_R$ y $n-1$ para $Q_Y$, siendo $n$ el número de observaciones y $p$ el de parámetros del modelo. El coeficiente de determinación ajustado es: $$R_{\text{Aj}}^2= 1 - \frac{\frac{Q_R}{n-p}}{\frac{Q_Y}{n-1}} =  1 - \frac{s_R^2}{s_Y^2}$$ Observe que el valor de $p$ penaliza la incorporación de nuevas variables. Cuando la relación $n/p$ se hace grande, es decir que el número de datos supera mucho al número de parámetros, los dos coeficientes se acercan en sus valores. Si con $n=10$ observaciones se ajusta un modelo con 8 variables regresoras ($p=9$) y resulta un coeficiente de determinación $R^2= 90\%$, podría pensarse que estamos ante un buen modelo. Sin embargo, utilizando la fórmula anterior es fácil deducir que $R_{Aj}^2 =$ 0,1, es decir, nos indica que en esas condiciones el valor creíble del coeficiente de determinación es el 10 %, el ajuste es bastante pobre. Si lo único que cambia es que tenemos $n=90$ observaciones resulta $R_{Aj}^2 =0.89$. Pasamos del 90 al 89 %, es decir que ha tenido muy poco cambio.
 
 ::: callout-note
 ## Maximizar $R_{Aj}^2$ es equivalente a minimizar la varianza de los residuos
 
-Basta observar la fórmula de $R_{Aj}^2$. El valor de $s_Y^2$ solo depende de los valores de $Y$, no de las variables que se incluyan en el modelo. Por tanto, a mayor valor de  $s_R^2$ menor será el de $R_{Aj}^2$. 
+Basta observar la fórmula de $R_{Aj}^2$. El valor de $s_Y^2$ solo depende de los valores de $Y$, no de las variables que se incluyan en el modelo. Por tanto, a mayor valor de $s_R^2$ menor será el de $R_{Aj}^2$.
 :::
 
 ### Validación cruzada {.unnumbered}
@@ -215,24 +216,24 @@ A veces se habla de la selección del "mejor modelo" pero no necesariamente exis
 #### Respecto a las variables regresoras {.unnumbered}
 
 -   **Que sean fáciles de medir**. Un modelo capaz de realizar buenas predicciones pero que utilice variables cuya medición es lenta, difícil o poco precisa será, en la práctica, menos útil que otro que no ajuste tan bien pero resulte más sencillo de aplicar. Medir el contenido de humedad de un producto puede ser lento si es necesario secarlo y medir la diferencia de pesos. Si se dispone de otra variable alternativa, como el simple peso inicial, es probable que se prefiera esta segunda opción, aunque el ajuste del modelo sea algo peor.
-	
+
 -   **Que sean fáciles de manejar**. Si estamos interesados en ir regulando el valor de la respuesta, será preferible un modelo que incluya variables a las que se pueda acceder fácilmente y cuyo valor pueda modificarse con rapidez. En un horno industrial, por ejemplo, es mucho más fácil cambiar el caudal de gas que alimenta los quemadores que modificar la temperatura del horno, ya que esta última suele presentar una elevada inercia.
-	
+
 -   **Que sean independientes**. Si dos variables regresoras están muy correlacionadas su aportación a la explicación de la respuesta será muy similar y seguramente se podrá prescindir de una de ellas. Por otra parte, una alta correlación entre dos variables regresoras provoca un aumento de la varianza de los coeficientes, haciendo menos sensible el análisis de su significación estadística.
 
 #### Respecto al modelo {.unnumbered}
 
 -   **Que sea sencillo**. Aumentar ligeramente el valor de $R_{Aj}^2$ a base de incluir nuevas variables en el modelo no suele ser una buena idea. En general se prefieren modelos compactos, sencillos y fáciles de utilizar.
-	
--   **Que sea interpretable**. Interesa que el modelo responda a lo que se espera. Si sabemos que aumentar el valor de una variable aumentará la respuesta, el coeficiente de esa variable debe ser positivo. Mejorar el ajuste a base de introducir nuevas variables o transformaciones artificiosas no suele ser una buena idea. 
+
+-   **Que sea interpretable**. Interesa que el modelo responda a lo que se espera. Si sabemos que aumentar el valor de una variable aumentará la respuesta, el coeficiente de esa variable debe ser positivo. Mejorar el ajuste a base de introducir nuevas variables o transformaciones artificiosas no suele ser una buena idea.
 
 #### Respecto a los residuos {.unnumbered}
 
--   **Comportamiento adecuado**. Un mal comportamiento de los residuos (falta evidente de Normalidad, varianza que aumenta con el valor de la respuesta) compromete la validez de las estimaciones y de las pruebas de significación que se realizan. Un patrón no aleatorio en el gráfico de residuos frente a valores previstos o frente a otras variables de interés, también puede sugerir la necesidad de transformar alguna variable. 
+-   **Comportamiento adecuado**. Un mal comportamiento de los residuos (falta evidente de Normalidad, varianza que aumenta con el valor de la respuesta) compromete la validez de las estimaciones y de las pruebas de significación que se realizan. Un patrón no aleatorio en el gráfico de residuos frente a valores previstos o frente a otras variables de interés, también puede sugerir la necesidad de transformar alguna variable.
 
 ### Modelos predictivos y modelos explicativos {.unnumbered}
 
-Lo que se pide a un modelo  depende del objetivo con que se ha construido. Según sea ese objetivo nos referimos a ellos como modelos explicativos o modelos predictivos.
+Lo que se pide a un modelo depende del objetivo con que se ha construido. Según sea ese objetivo nos referimos a ellos como modelos explicativos o modelos predictivos.
 
 #### Modelos explicativos {.unnumbered}
 
@@ -244,23 +245,23 @@ Lo que más interesa es ser capaces de prever cual será la respuesta en funció
 
 Naturalmente, aunque se pretenda construir un modelo explicativo no se puede ignorar su capacidad de predicción (si no es capaz de predecir no sirve como modelo de ningún tipo) y si es predictivo también interesa poder entender por qué la respuesta se comporta tal como hace para, si hay problemas, poderlos corregir actuando sobre las causas que los provocan.
 
-En el ámbito de los modelos predictivos, además de los métodos estadísticos clásicos (regresión, series de tiempo[^12-2]), la previsión puede abordarse mediante otras técnicas como las redes neuronales, que suelen ofrecer mayor capacidad predictiva a costa de menor interpretabilidad.
+En el ámbito de los modelos predictivos, además de los métodos estadísticos clásicos (regresión, series de tiempo[^12_regremultiple-2]), la previsión puede abordarse mediante otras técnicas como las redes neuronales, que suelen ofrecer mayor capacidad predictiva a costa de menor interpretabilidad.
 
-[^12-2]: No tratamos las series de tiempo --o series temporales-- que tienen como objetivo realizar previsiones cuando los valores están autocorrelacionados. En este caso intervienen conceptos como estacionalidad, periodicidad o tendencia. Estas técnicas no se incluyen en cursos introductorios.
+[^12_regremultiple-2]: No tratamos las series de tiempo --o series temporales-- que tienen como objetivo realizar previsiones cuando los valores están autocorrelacionados. En este caso intervienen conceptos como estacionalidad, periodicidad o tendencia. Estas técnicas no se incluyen en cursos introductorios.
 
 ::: callout-note
 ## No olvidemos lo que ya sabemos
 
-Para prever el volumen de madera que se puede extraer de un árbol en función del diámetro y la longitud de su tronco, lo mejor no es un modelo de regresión múltiple con esas variables, sino una regresión simple con una nueva variable igual al producto de la longitud por el cuadrado de la circunferencia. 
+Para prever el volumen de madera que se puede extraer de un árbol en función del diámetro y la longitud de su tronco, lo mejor no es un modelo de regresión múltiple con esas variables, sino una regresión simple con una nueva variable igual al producto de la longitud por el cuadrado de la circunferencia.
 :::
-	
+
 ## Peligros y malos usos de la regresión múltiple
 
 Conviene tener claras algunas ideas para no cometer errores de mucho bulto. Veamos un par de aspectos a los que hay que prestar atención.
 
 ### Explicaciones milagrosas {.unnumbered}
 
-Usted puede construir un modelo que explique la cotización en bolsa de cinco grandes empresas en función de algunos valores del día anterior. Tome esas cinco cotizaciones de hoy al cierre de la jornada (serán las $y$), seleccione ahora los siguientes datos del día de ayer: las temperaturas máximas en cinco capitales europeas ($x_1$), el tipo de cambio frente al dólar de las 5 monedas que usted elija ($x_2$), los precios de cinco materias primas en el mercado de Londres ($x_3$) y la temperatura media en cinco ciudades colombianas ($x_4$). Ajuste el modelo que explica $y$ en función de $x_1$, $x_2$, $x_3$ y $x_4$. ¡Ajuste perfecto!  Lástima que para hoy llega tarde, y para mañana es inútil.
+Usted puede construir un modelo que explique la cotización en bolsa de cinco grandes empresas en función de algunos valores del día anterior. Tome esas cinco cotizaciones de hoy al cierre de la jornada (serán las $y$), seleccione ahora los siguientes datos del día de ayer: las temperaturas máximas en cinco capitales europeas ($x_1$), el tipo de cambio frente al dólar de las 5 monedas que usted elija ($x_2$), los precios de cinco materias primas en el mercado de Londres ($x_3$) y la temperatura media en cinco ciudades colombianas ($x_4$). Ajuste el modelo que explica $y$ en función de $x_1$, $x_2$, $x_3$ y $x_4$. ¡Ajuste perfecto! Lástima que para hoy llega tarde, y para mañana es inútil.
 
 Ya hemos visto que por dos puntos pasa una recta (modelo con dos parámetros: $b_0$ y $b_1$ ), por tres puntos pasa un plano (tres parámetros), y así sucesivamente. No es ninguna sorpresa que si se tienen cinco observaciones, estas ajusten perfectamente a un modelo con cinco parámetros. No importa cuáles sean los valores de esas observaciones el ajuste será perfecto por la misma razón por la que por dos puntos pasa una recta sin importar cuales son las coordenadas de esos dos puntos.
 
@@ -271,7 +272,7 @@ Lo podemos ver gráficamente si en vez de cuatro variables distintas consideramo
 ::: callout-note
 ## Si el modelo se comporta demasiado bien, seguramente algo está mal
 
-Si el modelo se comporta sorprendentemente bien seguramente algo está mal. Puede que tenga un número de variables cercano al número de puntos, o que haya puesto la respuesta --o una transformada de esta-- como variable regresora. 
+Si el modelo se comporta sorprendentemente bien seguramente algo está mal. Puede que tenga un número de variables cercano al número de puntos, o que haya puesto la respuesta --o una transformada de esta-- como variable regresora.
 :::
 
 La recomendación es que haya un mínimo de 10 observaciones por cada parámetro del modelo.
@@ -286,8 +287,8 @@ Analizando las variables una a una se pueden identificar valores anómalos en ca
 
 En la regresión simple estos casos se ven fácilmente realizando diagramas bivariantes, pero en regresión múltiple una observación puede ser anómala debido a los valores que toman varias de sus variables asociadas y esto no es fácil de ver gráficamente. Los valores pueden ser anómalos por dos razones:
 
--   Por no seguir el patrón general del resto de observaciones. Son fáciles de identificar gráficamente porque tienen residuos singularmente grandes. 
-	
+-   Por no seguir el patrón general del resto de observaciones. Son fáciles de identificar gráficamente porque tienen residuos singularmente grandes.
+
 -   Por estar lejos de la nube de puntos general (será una nube de puntos con $p+1$ dimensiones, siendo $p$ el número de variables regresoras). Estos puntos pueden tener una influencia exagerada sobre el modelo y conviene estar atentos para detectar su presencia y actuar según se considere más adecuado.
 
 Los paquetes de software estadístico suelen dar una lista de valores inusuales --podrían ser anómalos, pero de entrada no está claro que lo sean-- y siempre es conveniente darles un vistazo para asegurarnos de que todos ellos son considerados.
@@ -298,365 +299,372 @@ El planteamiento matricial del cálculo de los coeficientes pone de manifiesto u
 
 ### Regresión simple {.unnumbered}
 
-Un modelo de regresión simple se puede escribir de manera compacta usando vectores y matrices (ambos en negrita) de la forma:
-$$\mathbf{Y} = \mathbf{X} \; \mathbf{b} + \mathbf{e} $$
-Siendo $\mathbf{Y}$ el vector de respuestas, $\mathbf{b}$ el de coeficientes --que en el caso de la regresión simple tiene solo dos elementos--, $\mathbf{e}$  es el vector de residuos y $\mathbf{X}$ una matriz con dos columnas, en la primera contiene solo unos y la segunda los valores de la variable regresora. También podemos ignorar el vector de residuos y referirnos a los valores estimados:  $\mathbf{\hat{Y}} = \mathbf{X} \; \mathbf{b}$. Veamos un ejemplo con números muy sencillos:
+Un modelo de regresión simple se puede escribir de manera compacta usando vectores y matrices (ambos en negrita) de la forma: $$\mathbf{Y} = \mathbf{X} \; \mathbf{b} + \mathbf{e} $$ Siendo $\mathbf{Y}$ el vector de respuestas, $\mathbf{b}$ el de coeficientes --que en el caso de la regresión simple tiene solo dos elementos--, $\mathbf{e}$ es el vector de residuos y $\mathbf{X}$ una matriz con dos columnas, en la primera contiene solo unos y la segunda los valores de la variable regresora. También podemos ignorar el vector de residuos y referirnos a los valores estimados: $\mathbf{\hat{Y}} = \mathbf{X} \; \mathbf{b}$. Veamos un ejemplo con números muy sencillos:
 
-\begin{table}[h!]
-		\begin{center}
-			%\caption{\small{\textit{Datos del ejemplo}}}
-			%\label{DatosEjemplo}
-			\begin{tabular}{rccc}
-				\multicolumn{1}{m{4cm}}{$Y$ (Respuesta):} & 
-				\multicolumn{1}{m{0.5cm}}{3} &
-				\multicolumn{1}{m{0.5cm}}{1} &
-				\multicolumn{1}{m{0.5cm}}{5} \\ 
-				\multicolumn{1}{m{4cm}}{$X$ (Variable regresora):} & 
-				\multicolumn{1}{m{0.5cm}}{5} &
-				\multicolumn{1}{m{0.5cm}}{0} &
-				\multicolumn{1}{m{0.5cm}}{4}  
-			\end{tabular}
-	\end{center}
-	\vspace{-0.5cm}
-\end{table}
+
+```{=html}
+<div class="tabla-wrapper_T1200">
+<table class="tabla-1200">
+
+<colgroup>
+<col style="width: 58%;">
+<col style="width: 14%;">
+<col style="width: 14%;">
+<col style="width: 14%;">
+</colgroup>
+
+<tbody>
+<tr>
+  <td><em>Y</em> (Respuesta):</td> <td>3</td> <td>1</td> <td>5</td>
+</tr>
+<tr>
+  <td><em>X</em> (Variable regresora):</td> <td>5</td> <td>0</td> <td>4</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+```
 
 Matricialmente escribimos el modelo de la forma:
 
+```{=tex}
 \setlength{\abovedisplayskip}{9pt}
 \setlength{\belowdisplayskip}{9pt}
+```
+```{=tex}
 \begin{equation*}
-	\begin{split}
-		\mathbf{Y} \;\;=\,\quad \mathbf{X} \;\, \cdot \;\; \mathbf{b} \;\;\; + \;\;\; \mathbf{e} \;\;\; \\[-2pt]
-		\left [ 
-		\begin{matrix}
-			3 \\
-			1 \\
-			5
-		\end{matrix}
-		\right ]  
-		= 
-		\left [ 
-		\begin{matrix}
-			1 & 5 \\
-			1 & 0\\
-			1 & 4
-		\end{matrix}
-		\right ] 
-		\left [ 
-		\begin{matrix}
-			b_0 \\[5pt]
-			b_1
-		\end{matrix}
-		\right ] 
-		+
-		\left [ 
-		\begin{matrix}
-			e_1 \\
-			e_2 \\
-			e_3
-		\end{matrix}
-		\right ] 
-	\end{split}
+    \begin{split}
+        \mathbf{Y} \;\;=\,\quad \mathbf{X} \;\, \cdot \;\; \mathbf{b} \;\;\; + \;\;\; \mathbf{e} \;\;\; \\[-2pt]
+        \left [ 
+        \begin{matrix}
+            3 \\
+            1 \\
+            5
+        \end{matrix}
+        \right ]  
+        = 
+        \left [ 
+        \begin{matrix}
+            1 & 5 \\
+            1 & 0\\
+            1 & 4
+        \end{matrix}
+        \right ] 
+        \left [ 
+        \begin{matrix}
+            b_0 \\[5pt]
+            b_1
+        \end{matrix}
+        \right ] 
+        +
+        \left [ 
+        \begin{matrix}
+            e_1 \\
+            e_2 \\
+            e_3
+        \end{matrix}
+        \right ] 
+    \end{split}
 \end{equation*}
-
+```
 Como solo tenemos tres observaciones, podemos representar en un espacio de tres dimensiones los vectores correspondientes a la respuesta **Y** y a las columnas de la matriz **X**, que llamamos **U** (vector de unos) y {$\textbf{X}_{\textbf{1}}$} (valores de la variable regresora) tal como se representa en la parte superior de la [@fig-vectores].
 
-![Visión geométrica del planteamiento matricial de un sencillo modelo de regresión simple e identificación del vector de valores previstos.](Figuras_12/f1206_vectores.png){#fig-vectores .fig-normal6 fig-align="center" width="100%"}
+![Visión geométrica del planteamiento matricial de un sencillo modelo de regresión simple e identificación del vector de valores previstos.](Figuras_12/f1206_vectores.png){#fig-vectores .fig-normal6 fig-align="center" width="85%"}
 
-Los vectores **U** y $\textbf{X}_{\textbf{1}}$ definen el plano que pasa por los puntos (0, 0, 0), (1, 1, 1) y (5, 0, 4). El vector correspondiente a los valores previstos $\mathbf{\hat{Y}}$ estará situado en ese mismo plano ya que es una combinación lineal de los vectores que aparecen en la matriz **X**:
-$$\mathbf{\hat{Y}}  = b_0 \cdot \mathbf{U} + b_1 \cdot \mathbf{X_1}$$
-Por otra parte, minimizar la suma de los cuadrados de los residuos equivale a minimizar el módulo del vector: $\mathbf{e} = \mathbf{Y} - \mathbf{\hat{Y}} $. La forma de conseguirlo es haciendo que  sea perpendicular al plano definido por $\mathbf{U}$ y $\mathbf{X_1}$. La ecuación de este plano se puede deducir teniendo en cuenta que pasa por los puntos  (0, 0, 0), (1, 1, 1) y (5, 0, 4). Su expresión es: 
-$$4x + y -5z = 0$$
-y el punto de corte en este plano de una recta perpendicular trazada desde el punto (3, 1, 5) es: (29/7, 9/7, 25/7).
+Los vectores **U** y $\textbf{X}_{\textbf{1}}$ definen el plano que pasa por los puntos (0, 0, 0), (1, 1, 1) y (5, 0, 4). El vector correspondiente a los valores previstos $\mathbf{\hat{Y}}$ estará situado en ese mismo plano ya que es una combinación lineal de los vectores que aparecen en la matriz **X**: $$\mathbf{\hat{Y}}  = b_0 \cdot \mathbf{U} + b_1 \cdot \mathbf{X_1}$$ Por otra parte, minimizar la suma de los cuadrados de los residuos equivale a minimizar el módulo del vector: \$\mathbf{e} = \mathbf{Y} - \mathbf{\hat{Y}} \$. La forma de conseguirlo es haciendo que sea perpendicular al plano definido por $\mathbf{U}$ y $\mathbf{X_1}$. La ecuación de este plano se puede deducir teniendo en cuenta que pasa por los puntos (0, 0, 0), (1, 1, 1) y (5, 0, 4). Su expresión es: $$4x + y -5z = 0$$ y el punto de corte en este plano de una recta perpendicular trazada desde el punto (3, 1, 5) es: (29/7, 9/7, 25/7).
 
-En la parte inferior de la [@fig-vectores] se ha añadido la representación del plano $\Omega$ definido por los vectores $\mathbf{U}$ y  $\mathbf{X_1}$ (con un color más intenso en la zona entre ambos vectores) y también los vectores perpendiculares $\mathbf{\hat{Y}}$ --situado en el plano $\Omega$--, y el vector de residuos $\mathbf{e}$.
+En la parte inferior de la [@fig-vectores] se ha añadido la representación del plano $\Omega$ definido por los vectores $\mathbf{U}$ y $\mathbf{X_1}$ (con un color más intenso en la zona entre ambos vectores) y también los vectores perpendiculares $\mathbf{\hat{Y}}$ --situado en el plano $\Omega$--, y el vector de residuos $\mathbf{e}$.
 
 El vector $\mathbf{e}$ es perpendicular a todos los vectores situados en el plano $\Omega$, en particular a $\mathbf{U}$ y $\mathbf{X_1}$. Cuando dos vectores son perpendiculares su producto escalar es igual a cero, por tanto:
 
+```{=tex}
 \begin{equation*}
-	\begin{split}
-		\mathbf{U \! \cdot \! e} &= 0 \\
-		\mathbf{X_1 \! \cdot \!  e} &= 0
-	\end{split}
+    \begin{split}
+        \mathbf{U \! \cdot \! e} &= 0 \\
+        \mathbf{X_1 \! \cdot \!  e} &= 0
+    \end{split}
 \end{equation*}
+```
+Lo cual es equivalente a plantear el producto matriz-vector con la matriz traspuesta $\mathbf{X'}$: $$\mathbf{X'e=0}$$
 
-Lo cual es equivalente a plantear el producto matriz-vector con la matriz traspuesta $\mathbf{X'}$: 
-$$\mathbf{X'e=0}$$
+Por otra parte, $\mathbf{e = Y - \hat{Y}}$ y como $\mathbf{\hat{Y}=Xb}$, tenemos: $$\mathbf{ X'(Y - Xb) = 0}$$
 
-Por otra parte, $\mathbf{e = Y - \hat{Y}}$ y como $\mathbf{\hat{Y}=Xb}$, tenemos:
-$$\mathbf{ X'(Y - Xb) = 0}$$
+Por tanto: $$\mathbf{X'Y = X'Xb }$$
 
-Por tanto:
-$$\mathbf{X'Y = X'Xb }$$
+Para despejar $\mathbf{b}$ multiplicamos los dos miembros de esta expresión por la matriz $\mathbf{(X'X)^{-1}}$. Multiplicamos por la izquierda, ya que el producto de matrices no tiene la propiedad conmutativa. Nos queda: $$\mathbf{b} = \left ( \mathbf{X'X} \right )^{-1}  \mathbf{X'Y}$$ Con nuestros números:
 
-Para despejar $\mathbf{b}$ multiplicamos los dos miembros de esta expresión por la matriz $\mathbf{(X'X)^{-1}}$. Multiplicamos por la izquierda, ya que el producto de matrices no tiene la propiedad conmutativa. Nos queda:
-$$\mathbf{b} = \left ( \mathbf{X'X} \right )^{-1}  \mathbf{X'Y}$$
-Con nuestros números:
-
+```{=tex}
 \begin{equation*}
-	\begin{split}
-		\mathbf{X'X} = 
-		\left [ 
-		\begin{matrix}
-			1 & 1 & 1 \\
-			5 & 0 & 4 
-		\end{matrix}
-		\right ]  
-		\cdot
-		\left [ 
-		\begin{matrix}
-			1 & 5 \\
-			1 & 0\\
-			1 & 4
-		\end{matrix}
-		\right ] 
-		=
-		\left [
-		\begin{matrix}
-			3 & 9 \\
-			9 & 41
-		\end{matrix}
-		\right ] 	
-	\end{split}
+    \begin{split}
+        \mathbf{X'X} = 
+        \left [ 
+        \begin{matrix}
+            1 & 1 & 1 \\
+            5 & 0 & 4 
+        \end{matrix}
+        \right ]  
+        \cdot
+        \left [ 
+        \begin{matrix}
+            1 & 5 \\
+            1 & 0\\
+            1 & 4
+        \end{matrix}
+        \right ] 
+        =
+        \left [
+        \begin{matrix}
+            3 & 9 \\
+            9 & 41
+        \end{matrix}
+        \right ]    
+    \end{split}
 \end{equation*}
-
+```
+```{=tex}
 \begin{equation*}
-	\begin{split}
-		\mathbf{(X'X)^{-1}}= 
+    \begin{split}
+        \mathbf{(X'X)^{-1}}= 
 \left [
 \begin{matrix}
-	3 & 9 \\
-	9 & 41
+    3 & 9 \\
+    9 & 41
 \end{matrix}
-\right ] ^{-1}	
-=	
-		\left [
-		\begin{matrix}
-		\frac{41}{42} & -\frac{9}{42} \\[5pt]
-		-\frac{9}{42} & \frac{3}{42} \\[5pt]
-		\end{matrix} 
-		\right ] 
-	\end{split}
+\right ] ^{-1}  
+=   
+        \left [
+        \begin{matrix}
+        \frac{41}{42} & -\frac{9}{42} \\[5pt]
+        -\frac{9}{42} & \frac{3}{42} \\[5pt]
+        \end{matrix} 
+        \right ] 
+    \end{split}
 \end{equation*}
-
+```
+```{=tex}
 \begin{equation*}
-	\begin{split}
-		\mathbf{X'Y}= 
-		\left [
-		\begin{matrix}
-			1 & 1 & 1\\
-			5 & 0 & 4
-		\end{matrix}
-		\right ]
-		\cdot	
-		\left [
-		\begin{matrix}
-			3 \\
-			1 \\
-			5
-		\end{matrix} 
-		\right ] 
-		=
-		\left [
-		\begin{matrix}
-			9 \\
-			35 
-		\end{matrix} 
-		\right ] 
-	\end{split}
+    \begin{split}
+        \mathbf{X'Y}= 
+        \left [
+        \begin{matrix}
+            1 & 1 & 1\\
+            5 & 0 & 4
+        \end{matrix}
+        \right ]
+        \cdot   
+        \left [
+        \begin{matrix}
+            3 \\
+            1 \\
+            5
+        \end{matrix} 
+        \right ] 
+        =
+        \left [
+        \begin{matrix}
+            9 \\
+            35 
+        \end{matrix} 
+        \right ] 
+    \end{split}
 \end{equation*}
-
+```
+```{=tex}
 \begin{equation*}
-	\begin{split}
-		\mathbf{b} = 	\mathbf{(X'X)^{-1}} \mathbf{X'Y}= 
-			\left [
-		\begin{matrix}
-			\frac{41}{42} & -\frac{9}{42} \\[5pt]
-			-\frac{9}{42} & \frac{3}{42} \\[5pt]
-		\end{matrix} 
-		\right ] 
-		\cdot	
-		\left [
-		\begin{matrix}
-			9 \\
-			35 
-		\end{matrix} 
-		\right ] 
-		=
-		\left [
-		\begin{matrix}
-			\frac{54}{42}\\[5pt]
-			\frac{24}{42} \\[5pt]
-		\end{matrix} 
-		\right ] 
-		=
-		\left [
-		\begin{matrix}
-			\frac{9}{7}\\[5pt]
-			\frac{4}{7} \\[5pt]
-		\end{matrix} 
-		\right ] 
-	\end{split}
+    \begin{split}
+        \mathbf{b} =    \mathbf{(X'X)^{-1}} \mathbf{X'Y}= 
+            \left [
+        \begin{matrix}
+            \frac{41}{42} & -\frac{9}{42} \\[5pt]
+            -\frac{9}{42} & \frac{3}{42} \\[5pt]
+        \end{matrix} 
+        \right ] 
+        \cdot   
+        \left [
+        \begin{matrix}
+            9 \\
+            35 
+        \end{matrix} 
+        \right ] 
+        =
+        \left [
+        \begin{matrix}
+            \frac{54}{42}\\[5pt]
+            \frac{24}{42} \\[5pt]
+        \end{matrix} 
+        \right ] 
+        =
+        \left [
+        \begin{matrix}
+            \frac{9}{7}\\[5pt]
+            \frac{4}{7} \\[5pt]
+        \end{matrix} 
+        \right ] 
+    \end{split}
 \end{equation*}
-
-Que son los valores de los coeficientes que resultan de aplicar las fórmulas que ya habíamos visto. La ventaja de este planteamiento matricial es que no solo se puede generalizar a situaciones con cualquier número de observaciones --tendremos más filas en los vectores-- sino también a cualquier número de variables regresoras, caso en que tendremos más columnas en la matriz	$\mathbf{X}$.
+```
+Que son los valores de los coeficientes que resultan de aplicar las fórmulas que ya habíamos visto. La ventaja de este planteamiento matricial es que no solo se puede generalizar a situaciones con cualquier número de observaciones --tendremos más filas en los vectores-- sino también a cualquier número de variables regresoras, caso en que tendremos más columnas en la matriz $\mathbf{X}$.
 
 ### Regresión múltiple {.unnumbered}
 
-La situación es la misma, pero el vector de residuos debe ser ortogonal a todos los vectores definidos por las columnas de la matriz $\textbf{X}$. Con solo dos variables regresoras esos vectores ($\mathbf{U}$, $\mathbf{X_1}$ y $\mathbf{X_2}$) ya no definen un plano sino un espacio de tres dimensiones y la perpendicularidad a ese espacio no se puede representar gráficamente. Lo que sí podemos hacer es aplicar la expresión que ya hemos visto, el álgebra sí permite moverse en esos espacios con $p+1$ dimensiones ($p$ es el número de variables regresoras) ya que conocemos bien sus propiedades y las reglas que imperan. 
+La situación es la misma, pero el vector de residuos debe ser ortogonal a todos los vectores definidos por las columnas de la matriz $\textbf{X}$. Con solo dos variables regresoras esos vectores ($\mathbf{U}$, $\mathbf{X_1}$ y $\mathbf{X_2}$) ya no definen un plano sino un espacio de tres dimensiones y la perpendicularidad a ese espacio no se puede representar gráficamente. Lo que sí podemos hacer es aplicar la expresión que ya hemos visto, el álgebra sí permite moverse en esos espacios con $p+1$ dimensiones ($p$ es el número de variables regresoras) ya que conocemos bien sus propiedades y las reglas que imperan.
 
 Veamos un ejemplo con números muy sencillos. Tenemos cinco observaciones y dos variables aleatorias:
 
-\begin{table}[h!]
-	\begin{center}
-		%\caption{\small{\textit{Datos del ejemplo}}}
-		%\label{DatosEjemplo}
-		\begin{tabular}{rccccc}
-			\multicolumn{1}{m{0.7cm}}{$Y$} & 
-			\multicolumn{1}{m{0.5cm}}{1} &
-			\multicolumn{1}{m{0.5cm}}{3} &
-			\multicolumn{1}{m{0.5cm}}{4} & 
-			\multicolumn{1}{m{0.5cm}}{6} &
-			\multicolumn{1}{m{0.5cm}}{8} \\ 
-			\multicolumn{1}{m{0.7cm}}{$X_1$} & 
-			\multicolumn{1}{m{0.5cm}}{0} &
-			\multicolumn{1}{m{0.5cm}}{1} &
-			\multicolumn{1}{m{0.5cm}}{0} & 
-			\multicolumn{1}{m{0.5cm}}{1} &
-			\multicolumn{1}{m{0.5cm}}{2} \\  
-			\multicolumn{1}{m{0.7cm}}{$X_2$} & 
-			\multicolumn{1}{m{0.5cm}}{0} &
-			\multicolumn{1}{m{0.5cm}}{0} &
-			\multicolumn{1}{m{0.5cm}}{1} & 
-			\multicolumn{1}{m{0.5cm}}{1} &
-			\multicolumn{1}{m{0.5cm}}{1}  
-		\end{tabular}
-	\end{center}
-	\vspace{-0.5cm}
-\end{table}
+```{=html}
+<div class="tabla-wrapper_T1200">
+<table class="tabla-1200">
+
+<colgroup>
+<col style="width: 17%;">
+<col style="width: 16,6%;">
+<col style="width: 16,6%;">
+<col style="width: 16,6%;">
+<col style="width: 16,6%;">
+<col style="width: 16,6%;">
+</colgroup>
+
+<tbody>
+<tr>
+  <td><em>Y</em>:</td> <td>1</td> <td>3</td> <td>4</td> <td>6</td> <td>8</td>
+</tr>
+<tr>
+  <td><em>X</em><sub>1</sub>:</td> <td>0</td> <td>1</td> <td>0</td> <td>1</td> <td>2</td>
+</tr>
+<tr>
+  <td><em>X</em><sub>2</sub>:</td> <td>0</td> <td>0</td> <td>1</td> <td>1</td> <td>1</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+```
 
 Siguiendo el procedimiento que hemos visto:
 
+```{=tex}
 \begin{equation*}
-	\begin{split}
-		\mathbf{X'X} = 
-		\left [ 
-		\begin{matrix}
-			1 & 1 & 1 & 1 & 1 \\
-			0 & 1 & 0 & 1 & 2 \\ 
-			0 & 0 & 1 & 1 & 1
-		\end{matrix}
-		\right ]  
-		\cdot
-		\left [ 
-		\begin{matrix}
-			1 & 0 & 0 \\
-			1 & 1 & 0 \\
-			1 & 0 & 1 \\
-			1 & 1 & 1 \\
-			1 & 2 & 1
-		\end{matrix}
-		\right ] 
-		=
-		\left [
-		\begin{matrix}
-			5 & 4 & 3 \\
-			4 & 6 & 3 \\
-			3 & 3 & 3
-		\end{matrix}
-		\right ] 	
-	\end{split}
+    \begin{split}
+        \mathbf{X'X} = 
+        \left [ 
+        \begin{matrix}
+            1 & 1 & 1 & 1 & 1 \\
+            0 & 1 & 0 & 1 & 2 \\ 
+            0 & 0 & 1 & 1 & 1
+        \end{matrix}
+        \right ]  
+        \cdot
+        \left [ 
+        \begin{matrix}
+            1 & 0 & 0 \\
+            1 & 1 & 0 \\
+            1 & 0 & 1 \\
+            1 & 1 & 1 \\
+            1 & 2 & 1
+        \end{matrix}
+        \right ] 
+        =
+        \left [
+        \begin{matrix}
+            5 & 4 & 3 \\
+            4 & 6 & 3 \\
+            3 & 3 & 3
+        \end{matrix}
+        \right ]    
+    \end{split}
 \end{equation*}
-
+```
+```{=tex}
 \begin{equation*}
-	\begin{split}
-		\mathbf{(X'X)^{-1}}= 
-		\left [
-		\begin{matrix}
-			5 & 4 & 3 \\
-			4 & 6 & 3 \\
-			3 & 3 & 3
-		\end{matrix}
-		\right ]^{-1}	
-		=	
-		\frac{1}{15} \left [
-		\begin{matrix}
-			9 & -3 & -6 \\
-			-3 & 6 & -3 \\
-			-6 & -3 & 14 
-		\end{matrix} 
-		\right ] 
-	\end{split}
+    \begin{split}
+        \mathbf{(X'X)^{-1}}= 
+        \left [
+        \begin{matrix}
+            5 & 4 & 3 \\
+            4 & 6 & 3 \\
+            3 & 3 & 3
+        \end{matrix}
+        \right ]^{-1}   
+        =   
+        \frac{1}{15} \left [
+        \begin{matrix}
+            9 & -3 & -6 \\
+            -3 & 6 & -3 \\
+            -6 & -3 & 14 
+        \end{matrix} 
+        \right ] 
+    \end{split}
 \end{equation*}
-
+```
+```{=tex}
 \begin{equation*}
-	\begin{split}
-		\mathbf{X'Y}= 
-		\left [
-		\begin{matrix}
-			1 & 1 & 1 & 1 & 1 \\
-			0 & 1 & 0 & 1 & 2 \\
-			0 & 0 & 1 & 1 & 1 
-		\end{matrix}
-		\right ]
-		\cdot	
-		\left [
-		\begin{matrix}
-			1 \\
-			3 \\
-			4 \\
-			6 \\
-			8
-		\end{matrix} 
-		\right ] 
-		=
-		\left [
-		\begin{matrix}
-			22 \\
-			25 \\
-			18
-		\end{matrix} 
-		\right ] 
-	\end{split}
+    \begin{split}
+        \mathbf{X'Y}= 
+        \left [
+        \begin{matrix}
+            1 & 1 & 1 & 1 & 1 \\
+            0 & 1 & 0 & 1 & 2 \\
+            0 & 0 & 1 & 1 & 1 
+        \end{matrix}
+        \right ]
+        \cdot   
+        \left [
+        \begin{matrix}
+            1 \\
+            3 \\
+            4 \\
+            6 \\
+            8
+        \end{matrix} 
+        \right ] 
+        =
+        \left [
+        \begin{matrix}
+            22 \\
+            25 \\
+            18
+        \end{matrix} 
+        \right ] 
+    \end{split}
 \end{equation*}
-
+```
+```{=tex}
 \begin{equation*}
-	\begin{split}
-		\mathbf{b} = 	\mathbf{(X'X)^{-1}} \mathbf{X'Y}= 
-			\left [
-		\begin{matrix}
-			\frac{3}{5} & \frac{1}{5} & -\frac{2}{5} \\[5pt]
-			-\frac{1}{5} & \frac{2}{5} & -\frac{1}{5} \\[5pt]
-			-\frac{2}{5} & -\frac{1}{5} & \frac{14}{15} 
-		\end{matrix}
-		\right ]
-		\cdot	
-			\left [
-		\begin{matrix}
-			22 \\
-			25 \\
-			18
-		\end{matrix} 
-		\right ] 
-		=
-	\left [
-	\begin{matrix}
-		1 \\
-		2 \\
-		3
-	\end{matrix} 
-	\right ] 
-	\end{split}
+    \begin{split}
+        \mathbf{b} =    \mathbf{(X'X)^{-1}} \mathbf{X'Y}= 
+            \left [
+        \begin{matrix}
+            \frac{3}{5} & \frac{1}{5} & -\frac{2}{5} \\[5pt]
+            -\frac{1}{5} & \frac{2}{5} & -\frac{1}{5} \\[5pt]
+            -\frac{2}{5} & -\frac{1}{5} & \frac{14}{15} 
+        \end{matrix}
+        \right ]
+        \cdot   
+            \left [
+        \begin{matrix}
+            22 \\
+            25 \\
+            18
+        \end{matrix} 
+        \right ] 
+        =
+    \left [
+    \begin{matrix}
+        1 \\
+        2 \\
+        3
+    \end{matrix} 
+    \right ] 
+    \end{split}
 \end{equation*}
-
+```
 \vspace{5pt}
 
 Estos cálculos se pueden automatizar en una hoja de cálculo, pero conocer los valores de los coeficientes informa de poco si no se conoce su desviación típica. También interesan medidas de calidad del ajuste, el análisis de los residuos, medidas de relación entre variables regresoras... en fin, la forma más rápida, cómoda y segura es usar un paquete de software estadístico.
-
 
 ::: {style="text-align: center; font-size: 1.1em;"}
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ [◇]{style="margin: 0 0.4em;"} \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 :::
 
 <br>
-

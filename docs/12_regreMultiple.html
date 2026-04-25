@@ -367,12 +367,12 @@ window.Quarto = {
 <h2 data-number="12.1" class="anchored" data-anchor-id="qué-es-la-regresión-múltiple"><span class="header-section-number">12.1</span> ¿Qué es la regresión múltiple?</h2>
 <p>La respuesta es sencilla, es como la regresión simple pero con más de una variable regresora.</p>
 <p>De esta forma se amplían las posibilidades de explicar el comportamiento de la respuesta o de realizar previsiones sobre cuál será su valor en unas determinadas condiciones. Incluso las variables que, de manera aislada, no servirían para un modelo de regresión simple pueden resultar muy útiles cuando se combinan con otras en una regresión múltiple.</p>
-<p>En la <a href="#fig-ventajasRM" class="quarto-xref">Figura&nbsp;<span>12.1</span></a> tenemos una variable <span class="math inline">\(y\)</span> que muestra una cierta relación con <span class="math inline">\(x_1\)</span> (<span class="math inline">\(R^2 = 0.65\)</span>) pero prácticamente ninguna con <span class="math inline">\(x_2\)</span> (<span class="math inline">\(R^2 = 0.12\)</span>), sin embargo, usando las dos en un modelo de regresión múltiple la explicación del comportamiento de <span class="math inline">\(y\)</span> es muy buena, obteniéndose un valor de <span class="math inline">\(R^2 = 0.98\)</span>.</p>
+<p>En la <a href="#fig-ventajasRM" class="quarto-xref">Figura&nbsp;<span>12.1</span></a> tenemos una variable <span class="math inline">\(y\)</span> que muestra una cierta relación con <span class="math inline">\(x_1\)</span> (<span class="math inline">\(R^2 = 0{,}65\)</span>) pero prácticamente ninguna con <span class="math inline">\(x_2\)</span> (<span class="math inline">\(R^2 = 0{,}12\)</span>), sin embargo, usando las dos en un modelo de regresión múltiple la explicación del comportamiento de <span class="math inline">\(y\)</span> es muy buena, obteniéndose un valor de <span class="math inline">\(R^2 = 0{,}98\)</span>.</p>
 <p>Observe que de la misma forma que un modelo de regresión simple se ajusta a una línea, con dos variables se ajusta a un plano, y podríamos seguir hasta espacios con tantas dimensiones como variables regresoras. En la <a href="#fig-ventajasRM" class="quarto-xref">Figura&nbsp;<span>12.1</span></a> los puntos están muy pegados a la superficie ajustada, ayuda a verlo la línea vertical que sale de cada punto y que indica su distancia a la superficie, es decir, su residuo.</p>
 <div id="fig-ventajasRM" class="fig-normal0 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ventajasRM-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_12/f1201_ventajasRM.png" class="fig-normal0 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_12/f1201_ventajasRM.png" class="fig-normal0 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ventajasRM-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;12.1: Las variables <span class="math inline">\(x_1\)</span> y <span class="math inline">\(x_2\)</span> conjuntamente explican mucho mejor la respuesta que considerándolas por separado.
@@ -383,7 +383,173 @@ Figura&nbsp;12.1: Las variables <span class="math inline">\(x_1\)</span> y <span
 <section id="variables-candidatas-y-variables-elegidas" class="level2" data-number="12.2">
 <h2 data-number="12.2" class="anchored" data-anchor-id="variables-candidatas-y-variables-elegidas"><span class="header-section-number">12.2</span> Variables candidatas y variables elegidas</h2>
 <p>En general, partimos de un conjunto de variables candidatas a formar parte del modelo. Se trata de variables que sospechamos que pueden estar relacionadas con la respuesta, así como de posibles transformaciones de esas variables originales.</p>
-<p>Identificar cuales conviene incluir no es trivial. La tabla <span class="math inline">\(\ref{datosYX1X2X3}\)</span> contiene los valores de una variable respuesta <span class="math inline">\(y\)</span>, y tres posibles variables regresoras: <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span>, <span class="math inline">\(x_3\)</span>. También hemos representado los diagramas bivariantes de la respuesta frente a cada una de esas posibles variables regresoras (<a href="#fig-YX1X2X3" class="quarto-xref">Figura&nbsp;<span>12.2</span></a>).</p>
+<p>Identificar cuales conviene incluir no es trivial. La <a href="#tbl-datosYX1X2X3">Tabla 12.1</a> contiene los valores de una variable respuesta <span class="math inline">\(y\)</span>, y tres posibles variables regresoras: <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span>, <span class="math inline">\(x_3\)</span>. También hemos representado los diagramas bivariantes de la respuesta frente a cada una de esas posibles variables regresoras (<a href="#fig-YX1X2X3" class="quarto-xref">Figura&nbsp;<span>12.2</span></a>).</p>
+<div id="tbl-datosYX1X2X3" class="tabla-wrapper_T1201 anchored">
+<div class="tabla-caption">
+  Tabla 12.1: Valores de una respuesta y tres posibles variables regresoras.
+</div>
+
+
+<table class="tabla-1201 caption-top table">
+<colgroup>
+<col style="width: 37%">
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 22%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Observación</td>
+<td><em>y</em></td>
+<td><em>x</em><sub>1</sub></td>
+<td><em>x</em><sub>2</sub></td>
+<td><em>x</em><sub>3</sub></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>22,17</td>
+<td>20,07</td>
+<td>22,56</td>
+<td>2,10</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>26,08</td>
+<td>13,14</td>
+<td>26,55</td>
+<td>12,94</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>23,28</td>
+<td>21,05</td>
+<td>24,51</td>
+<td>2,23</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>12,56</td>
+<td>22,48</td>
+<td>12,84</td>
+<td>-9,92</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>18,12</td>
+<td>14,07</td>
+<td>20,79</td>
+<td>4,05</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>26,49</td>
+<td>29,49</td>
+<td>22,28</td>
+<td>-3,00</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>12,51</td>
+<td>7,17</td>
+<td>12,38</td>
+<td>5,33</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>19,19</td>
+<td>12,87</td>
+<td>17,58</td>
+<td>6,32</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>12,05</td>
+<td>13,77</td>
+<td>10,81</td>
+<td>-1,72</td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td>21,15</td>
+<td>19,04</td>
+<td>18,67</td>
+<td>2,10</td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td>27,64</td>
+<td>28,34</td>
+<td>25,16</td>
+<td>-0,70</td>
+</tr>
+<tr class="odd">
+<td>12</td>
+<td>27,79</td>
+<td>29,26</td>
+<td>24,10</td>
+<td>-1,47</td>
+</tr>
+<tr class="even">
+<td>13</td>
+<td>22,90</td>
+<td>27,02</td>
+<td>21,98</td>
+<td>-4,12</td>
+</tr>
+<tr class="odd">
+<td>14</td>
+<td>22,22</td>
+<td>21,04</td>
+<td>22,66</td>
+<td>1,18</td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td>22,87</td>
+<td>24,58</td>
+<td>24,48</td>
+<td>-1,71</td>
+</tr>
+<tr class="odd">
+<td>16</td>
+<td>18,08</td>
+<td>19,47</td>
+<td>18,02</td>
+<td>-1,39</td>
+</tr>
+<tr class="even">
+<td>17</td>
+<td>18,46</td>
+<td>22,24</td>
+<td>19,95</td>
+<td>-3,77</td>
+</tr>
+<tr class="odd">
+<td>18</td>
+<td>15,94</td>
+<td>13,57</td>
+<td>15,25</td>
+<td>2,37</td>
+</tr>
+<tr class="even">
+<td>19</td>
+<td>18,56</td>
+<td>12,66</td>
+<td>23,54</td>
+<td>5,91</td>
+</tr>
+<tr class="odd">
+<td>20</td>
+<td>15,49</td>
+<td>10,29</td>
+<td>14,86</td>
+<td>5,20</td>
+</tr>
+</tbody>
+</table>
+
+</div>
 <div id="fig-YX1X2X3" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-YX1X2X3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -443,7 +609,7 @@ Figura&nbsp;12.3: Modelos para ajustar datos con una variable cualitativa.
 <p>Cuando tenemos una variable cualitativa que solo tiene dos categorías se puede introducir en el modelo codificándola con valores numéricos. Para facilitar la interpretación de los resultados lo mejor es codificar un valor como 0 y el otro como 1. En este caso convenimos: Mujer = 0 y Hombre = 1. Ajustando el modelo de regresión se obtiene:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="Figuras_12/f12035_modeloCualitativa_1.png" class="fig-normal0 img-fluid quarto-figure quarto-figure-center figure-img" style="width:120.0%"></p>
+<p><img src="Figuras_12/f12035_modeloCualitativa_1.png" class="fig-normal0 img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
 </figure>
 </div>
 <p>Del resultado anterior se deduce que sí hay diferencias debido al sexo, ya que el coeficiente de esta variable es significativo. Sustituyéndola por sus valores 0 y 1, se obtienen los modelos específicos para mujeres y hombres:</p>
@@ -455,16 +621,113 @@ Figura&nbsp;12.3: Modelos para ajustar datos con una variable cualitativa.
 <p>Si queremos que las pendientes de las rectas puedan ser distintas deberemos incluir el producto de la variable cualitativa por las otras variables regresoras (en este caso solo la altura). De esta forma se obtiene:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="Figuras_12/f12036_modeloCualitativa_2.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:120.0%"></p>
+<p><img src="Figuras_12/f12036_modeloCualitativa_2.png" class="fig-normal0 img-fluid quarto-figure quarto-figure-center figure-img" style="width:82.0%"></p>
 </figure>
 </div>
 <p>La significación del término Altura*Sexo pone de manifiesto la diferencia en las pendientes de las rectas. Los modelos que se obtienen son:</p>
 <ul>
-<li><p>Mujeres (sexo = 0): <span class="math inline">\(\text{Peso = -102,3 + 97,9·Altura}\)</span></p></li>
-<li><p>Hombres (sexo = 1): <span class="math inline">\(\text{Peso = -208,7 + 167,3·Altura}\)</span></p></li>
+<li>Mujeres (sexo = 0): <span class="math inline">\(\text{Peso = -102,3 + 97,9·Altura}\)</span></li>
+<li>Hombres (sexo = 1): <span class="math inline">\(\text{Peso = -208,7 + 167,3·Altura}\)</span></li>
 </ul>
 <p>En la <a href="#fig-varCualitativa" class="quarto-xref">Figura&nbsp;<span>12.3</span></a>, cuarto cuadrante, tenemos su representación gráfica. Seguro que ahora nos quedamos más tranquilos con los ajustes obtenidos.</p>
-<p>¿Y si la variable cualitativa tiene más de dos valores distintos? La regla general es que una variable cualitativa con $ k $ valores debe sustituirse por $ k-1 $ variables binarias que toman valores 0 y 1. En el caso de la variable “día de la semana”, como <span class="math inline">\(k=7\)</span> habrá que sustituirla por 6 variables binarias tal como se indica en la tabla <span class="math inline">\(\ref{VariablesCodificadas}\)</span>.</p>
+<p>¿Y si la variable cualitativa tiene más de dos valores distintos? La regla general es que una variable cualitativa con <span class="math inline">\(k\)</span> valores debe sustituirse por <span class="math inline">\(k-1\)</span> variables binarias que toman valores 0 y 1. En el caso de la variable “día de la semana”, como <span class="math inline">\(k=7\)</span> habrá que sustituirla por 6 variables binarias tal como se indica en la <a href="#tbl-VariablesCodificadas">Tabla 12.2</a>.</p>
+<div id="tbl-VariablesCodificadas" class="tabla-wrapper_T1201 anchored">
+<div class="tabla-caption">
+  Tabla 12.2: Codificación de la variable cualitativa: "Día de la semana".
+</div>
+
+
+<table class="tabla-1202 caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Valores</td>
+<td colspan="6">Variables auxiliares</td>
+</tr>
+<tr class="even">
+<td>originales</td>
+<td><em>Z</em><sub>1</sub></td>
+<td><em>Z</em><sub>2</sub></td>
+<td><em>Z</em><sub>3</sub></td>
+<td><em>Z</em><sub>4</sub></td>
+<td><em>Z</em><sub>5</sub></td>
+<td><em>Z</em><sub>6</sub></td>
+</tr>
+<tr class="odd">
+<td>Lunes</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>Martes</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>Miércoles</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>Jueves</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>Viernes</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>Sábado</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>Domingo</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+
+</div>
 <p>Si el número de observaciones de que se dispone no da para estimar con solvencia tantos coeficientes, una opción podría ser usar los días clasificados solo como laborables y festivos. Si esta división tiene interés en el marco de la situación que se está analizando, el análisis será más sencillo y la presentación de los resultados se podrá realizar de una forma más clara y compacta, lo cual también es importante.</p>
 </section>
 <section id="medidas-de-calidad-del-ajuste-en-regresión-múltiple" class="level2" data-number="12.4">
@@ -556,10 +819,10 @@ Figura&nbsp;12.3: Modelos para ajustar datos con una variable cualitativa.
 <p>Usted puede construir un modelo que explique la cotización en bolsa de cinco grandes empresas en función de algunos valores del día anterior. Tome esas cinco cotizaciones de hoy al cierre de la jornada (serán las <span class="math inline">\(y\)</span>), seleccione ahora los siguientes datos del día de ayer: las temperaturas máximas en cinco capitales europeas (<span class="math inline">\(x_1\)</span>), el tipo de cambio frente al dólar de las 5 monedas que usted elija (<span class="math inline">\(x_2\)</span>), los precios de cinco materias primas en el mercado de Londres (<span class="math inline">\(x_3\)</span>) y la temperatura media en cinco ciudades colombianas (<span class="math inline">\(x_4\)</span>). Ajuste el modelo que explica <span class="math inline">\(y\)</span> en función de <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2\)</span>, <span class="math inline">\(x_3\)</span> y <span class="math inline">\(x_4\)</span>. ¡Ajuste perfecto! Lástima que para hoy llega tarde, y para mañana es inútil.</p>
 <p>Ya hemos visto que por dos puntos pasa una recta (modelo con dos parámetros: <span class="math inline">\(b_0\)</span> y <span class="math inline">\(b_1\)</span> ), por tres puntos pasa un plano (tres parámetros), y así sucesivamente. No es ninguna sorpresa que si se tienen cinco observaciones, estas ajusten perfectamente a un modelo con cinco parámetros. No importa cuáles sean los valores de esas observaciones el ajuste será perfecto por la misma razón por la que por dos puntos pasa una recta sin importar cuales son las coordenadas de esos dos puntos.</p>
 <p>Lo podemos ver gráficamente si en vez de cuatro variables distintas consideramos una y tres transformaciones de la misma, que es como tener cuatro variables regresoras. En la <a href="#fig-puntosIgualParametros" class="quarto-xref">Figura&nbsp;<span>12.4</span></a> (izquierda) tenemos cinco puntos y a la derecha esos mismos puntos con una curva que los ajusta perfectamente. No importa dónde estén esos puntos, siempre se pueden ajustar perfectamente a un polinomio de cuarto grado.</p>
-<div id="fig-puntosIgualParametros" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-puntosIgualParametros" class="fig-normal0 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-puntosIgualParametros-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_12/f1204_puntosIgualParametros.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_12/f1204_puntosIgualParametros.png" class="fig-normal0 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-puntosIgualParametros-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;12.4: Cinco puntos se ajustan perfectamente a un polinomio de cuarto grado. No importa cuales sean esos puntos.
@@ -609,8 +872,34 @@ Figura&nbsp;12.5: Valor anómalo que se detecta al realizar un diagrama bivarian
 <section id="regresión-simple" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="regresión-simple">Regresión simple</h3>
 <p>Un modelo de regresión simple se puede escribir de manera compacta usando vectores y matrices (ambos en negrita) de la forma: <span class="math display">\[\mathbf{Y} = \mathbf{X} \; \mathbf{b} + \mathbf{e} \]</span> Siendo <span class="math inline">\(\mathbf{Y}\)</span> el vector de respuestas, <span class="math inline">\(\mathbf{b}\)</span> el de coeficientes –que en el caso de la regresión simple tiene solo dos elementos–, <span class="math inline">\(\mathbf{e}\)</span> es el vector de residuos y <span class="math inline">\(\mathbf{X}\)</span> una matriz con dos columnas, en la primera contiene solo unos y la segunda los valores de la variable regresora. También podemos ignorar el vector de residuos y referirnos a los valores estimados: <span class="math inline">\(\mathbf{\hat{Y}} = \mathbf{X} \; \mathbf{b}\)</span>. Veamos un ejemplo con números muy sencillos:</p>
+<div class="tabla-wrapper_T1200">
+
+<table class="tabla-1200 caption-top table">
+<colgroup>
+<col style="width: 57%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><em>Y</em> (Respuesta):</td>
+<td>3</td>
+<td>1</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td><em>X</em> (Variable regresora):</td>
+<td>5</td>
+<td>0</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+
+</div>
 <p>Matricialmente escribimos el modelo de la forma:</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
     \begin{split}
         \mathbf{Y} \;\;=\,\quad \mathbf{X} \;\, \cdot \;\; \mathbf{b} \;\;\; + \;\;\; \mathbf{e} \;\;\; \\[-2pt]
         \left [
@@ -643,12 +932,12 @@ Figura&nbsp;12.5: Valor anómalo que se detecta al realizar un diagrama bivarian
         \end{matrix}
         \right ]
     \end{split}
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>Como solo tenemos tres observaciones, podemos representar en un espacio de tres dimensiones los vectores correspondientes a la respuesta <strong>Y</strong> y a las columnas de la matriz <strong>X</strong>, que llamamos <strong>U</strong> (vector de unos) y {<span class="math inline">\(\textbf{X}_{\textbf{1}}\)</span>} (valores de la variable regresora) tal como se representa en la parte superior de la <a href="#fig-vectores" class="quarto-xref">Figura&nbsp;<span>12.6</span></a>.</p>
 <div id="fig-vectores" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-vectores-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_12/f1206_vectores.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_12/f1206_vectores.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vectores-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;12.6: Visión geométrica del planteamiento matricial de un sencillo modelo de regresión simple e identificación del vector de valores previstos.
@@ -658,17 +947,17 @@ Figura&nbsp;12.6: Visión geométrica del planteamiento matricial de un sencillo
 <p>Los vectores <strong>U</strong> y <span class="math inline">\(\textbf{X}_{\textbf{1}}\)</span> definen el plano que pasa por los puntos (0, 0, 0), (1, 1, 1) y (5, 0, 4). El vector correspondiente a los valores previstos <span class="math inline">\(\mathbf{\hat{Y}}\)</span> estará situado en ese mismo plano ya que es una combinación lineal de los vectores que aparecen en la matriz <strong>X</strong>: <span class="math display">\[\mathbf{\hat{Y}}  = b_0 \cdot \mathbf{U} + b_1 \cdot \mathbf{X_1}\]</span> Por otra parte, minimizar la suma de los cuadrados de los residuos equivale a minimizar el módulo del vector: $ = - $. La forma de conseguirlo es haciendo que sea perpendicular al plano definido por <span class="math inline">\(\mathbf{U}\)</span> y <span class="math inline">\(\mathbf{X_1}\)</span>. La ecuación de este plano se puede deducir teniendo en cuenta que pasa por los puntos (0, 0, 0), (1, 1, 1) y (5, 0, 4). Su expresión es: <span class="math display">\[4x + y -5z = 0\]</span> y el punto de corte en este plano de una recta perpendicular trazada desde el punto (3, 1, 5) es: (29/7, 9/7, 25/7).</p>
 <p>En la parte inferior de la <a href="#fig-vectores" class="quarto-xref">Figura&nbsp;<span>12.6</span></a> se ha añadido la representación del plano <span class="math inline">\(\Omega\)</span> definido por los vectores <span class="math inline">\(\mathbf{U}\)</span> y <span class="math inline">\(\mathbf{X_1}\)</span> (con un color más intenso en la zona entre ambos vectores) y también los vectores perpendiculares <span class="math inline">\(\mathbf{\hat{Y}}\)</span> –situado en el plano <span class="math inline">\(\Omega\)</span>–, y el vector de residuos <span class="math inline">\(\mathbf{e}\)</span>.</p>
 <p>El vector <span class="math inline">\(\mathbf{e}\)</span> es perpendicular a todos los vectores situados en el plano <span class="math inline">\(\Omega\)</span>, en particular a <span class="math inline">\(\mathbf{U}\)</span> y <span class="math inline">\(\mathbf{X_1}\)</span>. Cuando dos vectores son perpendiculares su producto escalar es igual a cero, por tanto:</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
     \begin{split}
         \mathbf{U \! \cdot \! e} &amp;= 0 \\
         \mathbf{X_1 \! \cdot \!  e} &amp;= 0
     \end{split}
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>Lo cual es equivalente a plantear el producto matriz-vector con la matriz traspuesta <span class="math inline">\(\mathbf{X'}\)</span>: <span class="math display">\[\mathbf{X'e=0}\]</span></p>
 <p>Por otra parte, <span class="math inline">\(\mathbf{e = Y - \hat{Y}}\)</span> y como <span class="math inline">\(\mathbf{\hat{Y}=Xb}\)</span>, tenemos: <span class="math display">\[\mathbf{ X'(Y - Xb) = 0}\]</span></p>
 <p>Por tanto: <span class="math display">\[\mathbf{X'Y = X'Xb }\]</span></p>
 <p>Para despejar <span class="math inline">\(\mathbf{b}\)</span> multiplicamos los dos miembros de esta expresión por la matriz <span class="math inline">\(\mathbf{(X'X)^{-1}}\)</span>. Multiplicamos por la izquierda, ya que el producto de matrices no tiene la propiedad conmutativa. Nos queda: <span class="math display">\[\mathbf{b} = \left ( \mathbf{X'X} \right )^{-1}  \mathbf{X'Y}\]</span> Con nuestros números:</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
     \begin{split}
         \mathbf{X'X} =
         \left [
@@ -693,8 +982,8 @@ Figura&nbsp;12.6: Visión geométrica del planteamiento matricial de un sencillo
         \end{matrix}
         \right ]    
     \end{split}
-\end{equation*}\]</span></p>
-<p><span class="math display">\[\begin{equation*}
+\end{equation*}\]</span>
+<span class="math display">\[\begin{equation*}
     \begin{split}
         \mathbf{(X'X)^{-1}}=
 \left [
@@ -711,8 +1000,8 @@ Figura&nbsp;12.6: Visión geométrica del planteamiento matricial de un sencillo
         \end{matrix}
         \right ]
     \end{split}
-\end{equation*}\]</span></p>
-<p><span class="math display">\[\begin{equation*}
+\end{equation*}\]</span>
+<span class="math display">\[\begin{equation*}
     \begin{split}
         \mathbf{X'Y}=
         \left [
@@ -737,8 +1026,8 @@ Figura&nbsp;12.6: Visión geométrica del planteamiento matricial de un sencillo
         \end{matrix}
         \right ]
     \end{split}
-\end{equation*}\]</span></p>
-<p><span class="math display">\[\begin{equation*}
+\end{equation*}\]</span>
+<span class="math display">\[\begin{equation*}
     \begin{split}
         \mathbf{b} =    \mathbf{(X'X)^{-1}} \mathbf{X'Y}=
             \left [
@@ -769,15 +1058,55 @@ Figura&nbsp;12.6: Visión geométrica del planteamiento matricial de un sencillo
         \end{matrix}
         \right ]
     \end{split}
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>Que son los valores de los coeficientes que resultan de aplicar las fórmulas que ya habíamos visto. La ventaja de este planteamiento matricial es que no solo se puede generalizar a situaciones con cualquier número de observaciones –tendremos más filas en los vectores– sino también a cualquier número de variables regresoras, caso en que tendremos más columnas en la matriz <span class="math inline">\(\mathbf{X}\)</span>.</p>
 </section>
 <section id="regresión-múltiple" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="regresión-múltiple">Regresión múltiple</h3>
 <p>La situación es la misma, pero el vector de residuos debe ser ortogonal a todos los vectores definidos por las columnas de la matriz <span class="math inline">\(\textbf{X}\)</span>. Con solo dos variables regresoras esos vectores (<span class="math inline">\(\mathbf{U}\)</span>, <span class="math inline">\(\mathbf{X_1}\)</span> y <span class="math inline">\(\mathbf{X_2}\)</span>) ya no definen un plano sino un espacio de tres dimensiones y la perpendicularidad a ese espacio no se puede representar gráficamente. Lo que sí podemos hacer es aplicar la expresión que ya hemos visto, el álgebra sí permite moverse en esos espacios con <span class="math inline">\(p+1\)</span> dimensiones (<span class="math inline">\(p\)</span> es el número de variables regresoras) ya que conocemos bien sus propiedades y las reglas que imperan.</p>
 <p>Veamos un ejemplo con números muy sencillos. Tenemos cinco observaciones y dos variables aleatorias:</p>
+<div class="tabla-wrapper_T1200">
+
+<table class="tabla-1200 caption-top table">
+<colgroup>
+<col style="width: 17%">
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><em>Y</em>:</td>
+<td>1</td>
+<td>3</td>
+<td>4</td>
+<td>6</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td><em>X</em><sub>1</sub>:</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td><em>X</em><sub>2</sub>:</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+
+</div>
 <p>Siguiendo el procedimiento que hemos visto:</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
     \begin{split}
         \mathbf{X'X} =
         \left [
@@ -806,8 +1135,8 @@ Figura&nbsp;12.6: Visión geométrica del planteamiento matricial de un sencillo
         \end{matrix}
         \right ]    
     \end{split}
-\end{equation*}\]</span></p>
-<p><span class="math display">\[\begin{equation*}
+\end{equation*}\]</span>
+<span class="math display">\[\begin{equation*}
     \begin{split}
         \mathbf{(X'X)^{-1}}=
         \left [
@@ -826,8 +1155,8 @@ Figura&nbsp;12.6: Visión geométrica del planteamiento matricial de un sencillo
         \end{matrix}
         \right ]
     \end{split}
-\end{equation*}\]</span></p>
-<p><span class="math display">\[\begin{equation*}
+\end{equation*}\]</span>
+<span class="math display">\[\begin{equation*}
     \begin{split}
         \mathbf{X'Y}=
         \left [
@@ -856,8 +1185,8 @@ Figura&nbsp;12.6: Visión geométrica del planteamiento matricial de un sencillo
         \end{matrix}
         \right ]
     \end{split}
-\end{equation*}\]</span></p>
-<p><span class="math display">\[\begin{equation*}
+\end{equation*}\]</span>
+<span class="math display">\[\begin{equation*}
     \begin{split}
         \mathbf{b} =    \mathbf{(X'X)^{-1}} \mathbf{X'Y}=
             \left [
@@ -884,7 +1213,7 @@ Figura&nbsp;12.6: Visión geométrica del planteamiento matricial de un sencillo
     \end{matrix}
     \right ]
     \end{split}
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>Estos cálculos se pueden automatizar en una hoja de cálculo, pero conocer los valores de los coeficientes informa de poco si no se conoce su desviación típica. También interesan medidas de calidad del ajuste, el análisis de los residuos, medidas de relación entre variables regresoras… en fin, la forma más rápida, cómoda y segura es usar un paquete de software estadístico.</p>
 <div style="text-align: center; font-size: 1.1em;">
 <p>________________________ <span style="margin: 0 0.4em;">◇</span> ________________________</p>

@@ -451,7 +451,7 @@ Figura&nbsp;9.2: Valor de la media de nuestra muestra situado en la distribució
 <div id="fig-pValorNormal" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pValorNormal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_09/f0903_pValorNormal.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:110.0%">
+<img src="Figuras_09/f0903_pValorNormal.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pValorNormal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;9.3: Cálculo del p-valor cuando <span class="math inline">\(\sigma\)</span> es conocida y se utiliza la N(0;1) como distribución de referencia.
@@ -470,7 +470,7 @@ Figura&nbsp;9.3: Cálculo del p-valor cuando <span class="math inline">\(\sigma\
 <div id="fig-pValort" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pValort-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_09/f0904_pValort.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:110.0%">
+<img src="Figuras_09/f0904_pValort.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:65.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pValort-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;9.4: Cálculo del p-valor usando como distribución de referencia una <span class="math inline">\(t\)</span>-Student con 9 grados de libertad. A trazos una N(0; 1).
@@ -543,6 +543,7 @@ Figura&nbsp;9.5: Representación gráfica del peso de los tomates obtenidos en c
 <li><p><strong>Las varianzas poblacionales son iguales.</strong></p>
 <p>Consideramos que el nuevo abono puede dar una mayor cosecha –es lo que queremos analizar–, pero suponemos que la variabilidad que presenten los resultados seguirá siendo la misma. Si esas variabilidades no son exactamente iguales pero tampoco muy distintas (nos estamos refiriendo a las varianzas poblacionales, no a las muestrales que es prácticamente seguro que serán distintas) las conclusiones apenas cambian. Si son claramente distintas existe una variante del proceso que tiene en cuenta este aspecto. La mayoría de programas de software estadístico no hacen uso de esta hipótesis<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, pero usándola es mucho más fácil justificar la expresión del estadístico de prueba que vamos a usar.</p></li>
 </ol>
+<!-- -->
 <ol start="3" type="1">
 <li><p><strong>Los datos son representativos de sus respectivas poblaciones y el único factor que afecta de forma distinta a ambos grupos es el tipo de abono.</strong></p>
 <p>Este es el supuesto verdaderamente crítico. Los datos siempre deben ser representativos si las conclusiones van a ser sobre sus respectivas poblaciones. En una comparación de tratamientos todos los factores deben influir igual en los dos grupos excepto el factor cuyo efecto se desea estudiar.</p></li>
@@ -601,7 +602,7 @@ V(X-Y) = V(X)+V(Y)</td>
     \small{\text{\quad \;\; de prueba    \qquad  \quad   referencia}}
 \end{gather*}\]</span>
 <p>Si no conocemos el valor de <span class="math inline">\(\sigma^2\)</span> –que es lo habitual– lo podemos estimar a partir de los valores de las muestras. La varianza de una cualquiera de ellas es un buen estimador de <span class="math inline">\(\sigma^2\)</span>, pero la varianza de la otra también lo es, entonces, ¿con cuál nos quedamos? La solución es sencilla: con la media de las dos. Claro que como nos fiamos más de las estimaciones obtenidas de muestras grandes que de las de muestras pequeñas, la regla general es realizar una media ponderada. Lo inmediato sería ponderar por el tamaño (número de observaciones) de cada muestra, pero como lo que realmente aporta información son los grados de libertad, ponderamos según esos valores, que es el tamaño de la muestra menos una unidad. Ese estimador conjunto será, por tanto: <span class="math display">\[s^2 = \frac{(n_A-1)s_A^2 + (n_B-1)s_B^2}{n_A + n_B -2} \]</span> Si las dos muestras tienen el mismo tamaño no hace falta ponderación, y si la hacemos nos acaba quedando la media aritmética.</p>
-Con nuestros valores: <span class="math display">\[n_A = n_B = 10; \qquad s_A^2 = 0.951; \qquad  s_B^2 = 1{,}187 \]</span> tenemos: <span class="math display">\[ s^2 = \frac{9 \cdot 0.951 + 9 \cdot 1{,}187}{18} = \frac{0{,}951 + 1{,}187}{2} = 1.069\]</span>
+<p>Con nuestros valores: <span class="math display">\[n_A = n_B = 10; \qquad s_A^2 = 0.951; \qquad  s_B^2 = 1{,}187 \]</span> tenemos: <span class="math display">\[ s^2 = \frac{9 \cdot 0.951 + 9 \cdot 1{,}187}{18} = \frac{0{,}951 + 1{,}187}{2} = 1.069\]</span></p>
 <div style="height: 5px;">
 
 </div>
@@ -625,7 +626,7 @@ Con nuestros valores: <span class="math display">\[n_A = n_B = 10; \qquad s_A^2 
 <div id="fig-pValorDifMed" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pValorDifMed-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_09/f0906_pValorDifMed.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:110.0%">
+<img src="Figuras_09/f0906_pValorDifMed.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pValorDifMed-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;9.6: Cálculo del p-valor. A trazos una N(0; 1).
@@ -700,7 +701,7 @@ Figura&nbsp;9.6: Cálculo del p-valor. A trazos una N(0; 1).
 <div id="fig-aproxNormal" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-aproxNormal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_09/f0907_aproxNormal.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:110.0%">
+<img src="Figuras_09/f0907_aproxNormal.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:68.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-aproxNormal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;9.7: Distribución binomial con parámetros n = 11037 y p = 0,00942, y distribución Normal con su misma media y desviación típica usada como aproximación.
@@ -846,7 +847,7 @@ Figura&nbsp;9.9: Estadístico de prueba <span class="math inline">\(Q = 94,189\)
 </figcaption>
 </figure>
 </div>
-<p><span style="color: #0038CF;"><strong>¿Seguro que la distribución de referencia es una <span class="math inline">\(\chi^2\)</span> con 5 grados de libertad?</strong></span></p>
+<p><span style="color: #0038CF;"><strong>¿Seguro que la distribución de referencia es una</strong> <span class="math inline">\(\chi^2\)</span> con 5 grados de libertad?</span></p>
 <p>No hemos demostrado –ni justificado– que para el estadístico de prueba que hemos definido la distribución de referencia es una <span class="math inline">\(\chi^2\)</span> con 5 grados de libertad, pero podemos comprobar que, al menos en este caso concreto, así es.</p>
 <p>Hemos repetido 100.000 veces el cálculo del estadístico de prueba <span class="math inline">\(Q\)</span>, cada uno de ellos a partir de los resultados obtenidos por simulación al lanzar <span class="math inline">\(20\;\!000\)</span> veces un dado equilibrado (<span class="math inline">\(\text{H}_0\)</span> cierta: <span class="math inline">\(p_1 = \dots = p_6 = 1/6\)</span>). La <a href="#fig-histoChi2" class="quarto-xref">Figura&nbsp;<span>9.10</span></a> muestra el histograma de los <span class="math inline">\(100\;\!000\)</span> valores obtenidos y se ha superpuesto la función densidad de probabilidad (ajustando la escala del eje de ordenadas) de una distribución <span class="math inline">\(\chi^2\)</span> con 5 grados de libertad. La coincidencia es evidente. El lector desconfiado (sana desconfianza) y con algunos conocimientos de programación, puede comprobarlo en cualquier otra situación.</p>
 <div id="fig-histoChi2" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
@@ -1028,7 +1029,7 @@ Figura&nbsp;9.11: Representación de los resultados obtenidos con los dados verd
 <div id="fig-pValorChi2NuevosDados" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pValorChi2NuevosDados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_09/f0912_pValorChi2NuevosDados.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:110.0%">
+<img src="Figuras_09/f0912_pValorChi2NuevosDados.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pValorChi2NuevosDados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;9.12: Valores de los estadísticos de prueba y su posición en la distribución de referencia.

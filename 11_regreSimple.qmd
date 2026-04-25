@@ -26,10 +26,10 @@ Se traza la recta directamente sobre el papel o se identifican dos puntos de pas
 
 A pesar de sus evidentes limitaciones, si solo se trata de tener la recta no es un método tan malo como parece. Con un poco de práctica el ajuste no será muy distinto del "perfecto" y no se cometerán errores de bulto debido a la presencia de valores anómalos, cosa que sí puede ocurrir si se tratan los datos de forma automática sin mirarlos.
 
-![Ajuste a ojo y el que minimiza la suma de los cuadrados de los residuos.](Figuras_11/f1102_regresionAOjo.png){#fig-regresionAOjo .fig-normal6 fig-align="center" width="95%"}
+![Ajuste a ojo y el que minimiza la suma de los cuadrados de los residuos.](Figuras_11/f1102_regresionAOjo.png){#fig-regresionAOjo .fig-normal6 fig-align="center" width="100%"}
 
 ```{=html}
-<div id="tbl-ProsCons"; class="tabla-wrapper04">
+<div id="tbl-ProsCons" class="tabla-wrapper04">
 <table class="tabla-ProsCons">
 
 <caption>Tabla 11.1: Ajuste a ojo. Ventajas e inconvenientes.</caption>
@@ -84,10 +84,10 @@ A pesar de sus evidentes limitaciones, si solo se trata de tener la recta no es 
 
 Se identifica el primer y el tercer cuartil de los valores de $X$ $(X_{Q1}$ y $X_{Q3})$, e igual para los valores de $Y$ $(Y_{Q1}$ y $Y_{Q3})$. Se traza la recta por los puntos $(X_{Q1}$,;$Y_{Q1})$ y $(X_{Q3}$,;$Y_{Q3})$. Se obtiene una recta muy razonable sin necesidad de realizar cálculos ni de aplicar fórmulas de las que se desconoce su lógica.
 
-![Ajuste por el método de Ishikawa y el que minimiza la suma de los cuadrados de los residuos.](Figuras_11/f1103_regresionIshikawa.png){#fig-regresionIshikawa .fig-normal6 fig-align="center" width="95%"}
+![Ajuste por el método de Ishikawa y el que minimiza la suma de los cuadrados de los residuos.](Figuras_11/f1103_regresionIshikawa.png){#fig-regresionIshikawa .fig-normal6 fig-align="center" width="100%"}
 
 ```{=html}
-<div id="tbl-ProsCons"; class="tabla-wrapper04">
+<div id="tbl-ProsCons" class="tabla-wrapper04">
 <table class="tabla-ProsCons">
 
 <caption>Tabla 11.2: Método de Ishikawa. Ventajas e inconvenientes.</caption>
@@ -149,10 +149,10 @@ Se trata de obtener los valores de $b_0$ y $b_1$ que cumplen la expresión: $$\s
 
 Que haya infinitas rectas que cumplan esa condición es una mala señal, porque seguro que no todas son adecuadas. Para los valores representados en la [@fig-residuosSuma] tenemos que $\bar{X}= 6$ y $\bar{Y}= 9$. Rectas que hacen que la suma de los residuos sea igual a cero son, por ejemplo, la que tiene coeficientes $b_0=9$ y $b_1=0$, es decir: $Y = 9$, o también $b_0 = 12$ y $b_1 = -0.5$, es decir: $Y = 12 -0.5X$ y ambas son claramente muy malos ajustes. <br>
 
-![Dos ajustes -claramente muy malos- con suma de residuos igual a cero.](Figuras_11/f1104_residuosSuma.png){#fig-residuosSuma .fig-normal6 fig-align="center" width="95%"}
+![Dos ajustes -claramente muy malos- con suma de residuos igual a cero.](Figuras_11/f1104_residuosSuma.png){#fig-residuosSuma .fig-normal6 fig-align="center" width="100%"}
 
 ```{=html}
-<div id="tbl-ProsCons"; class="tabla-wrapper04">
+<div id="tbl-ProsCons" class="tabla-wrapper04">
 <table class="tabla-ProsCons">
 
 <caption>Tabla 11.3: Suma de los residuos igual a cero. Ventajas e inconvenientes.</caption>
@@ -208,10 +208,10 @@ Puede no tener solución única, pero los resultados posibles son mucho más raz
 
 La [@fig-residuosValorAbsoluto] muestra dos diagramas con los mismos 4 puntos y las rectas que cumplen el criterio establecido, en todas ellas la suma del valor absoluto de los residuos es igual a 2. La línea azul, que es la misma en los dos diagramas, es la que también minimiza la suma de los cuadrados de los residuos.
 
-![Posibles rectas que minimizan la suma de los residuos en valor absoluto.](Figuras_11/f1105_residuosValorAbsoluto.png){#fig-residuosValorAbsoluto .fig-normal6 fig-align="center" width="100%"}
+![Posibles rectas que minimizan la suma de los residuos en valor absoluto.](Figuras_11/f1105_residuosValorAbsoluto.png){#fig-residuosValorAbsoluto .fig-normal6 fig-align="center" width="95%"}
 
 ```{=html}
-<div id="tbl-ProsCons"; class="tabla-wrapper34">
+<div id="tbl-ProsCons" class="tabla-wrapper34">
 <table class="tabla-ProsCons">
 
 <caption>Tabla 11.4: Minimizando la suma del valor absoluto de los residuos. Ventajas e inconvenientes.</caption>
@@ -273,10 +273,10 @@ En vez de decir que el criterio de ajuste ha sido "minimizar la suma de los cuad
 
 En la primera fila de la [@fig-residuosMinimosCuadrados] tenemos una situación típica en la que el ajuste por mínimos cuadrados da un mejor resultado que minimizando la suma del valor absoluto. Sin embargo, en la segunda fila tenemos un caso de puntos perfectamente alineados excepto uno que muy probablemente sería un valor anómalo. Si minimizamos el valor absoluto de los residuos, el ajuste ignora el valor anómalo mientras que ajustando por mínimos cuadrados el valor anómalo tiene una notable influencia sobre la recta ajustada.
 
-![Ajustes obtenidos minimizando la suma de valores absolutos y la suma de los cuadrados de los residuos.](Figuras_11/f1106_residuosMinimosCuadrados.png){#fig-residuosMinimosCuadrados .fig-normal6 fig-align="center" width="100%"}
+![Ajustes obtenidos minimizando la suma de valores absolutos y la suma de los cuadrados de los residuos.](Figuras_11/f1106_residuosMinimosCuadrados.png){#fig-residuosMinimosCuadrados .fig-normal6 fig-align="center" width="95%"}
 
 ```{=html}
-<div id="tbl-ProsCons"; class="tabla-wrapper34">
+<div id="tbl-ProsCons" class="tabla-wrapper34">
 <table class="tabla-ProsCons">
 
 <caption>Tabla 11.5: Minimizar la suma de los cuadrados de los residuos. Ventajas e inconvenientes.</caption>
@@ -339,7 +339,7 @@ Vayamos al diagrama de la [@fig-coeficientesSinFormulas] (izquierda) que ya hab�
 
 Sin embargo, lo habitual es que las curvas de nivel sean muy elípticas, de modo que la representación gráfica no siempre es tan evidente. En nuestro caso hemos obtenido una forma más regular haciendo que $\bar{x}=0$. De este modo, los coeficientes son independientes y las curvas de nivel aparecen como círculos concéntricos, lo que permite apreciar con mayor claridad la idea que queremos ilustrar.
 
-### Usando fórmulas
+### Usando fórmulas {.unnumbered}
 
 En el diagrama que representa la relación entre $X$ e $Y$ cada punto $i$ puede ser identificado por sus coordenadas $(x_i, y_i)$ con $1 \leq i \leq n$ siendo $n$ el número total de puntos.
 
@@ -356,6 +356,9 @@ $$\sum_{i=1}^n x_i y_i - b_0 \sum_{i=1}^n x_i - b_1 \sum_{i=1}^n  x_i^2  = 0$$ {
 Dividiendo por $n$ todos los términos de la ecuación -@eq-11.1 tenemos:
 
 $$b_0 = \bar{y} - b_1 \bar{x} $$
+
+::: {style="height: 1px;"}
+:::
 
 ::: callout-note
 ## La recta ajustada pasa por el punto $(\bar{x}, \bar{y})$
@@ -380,6 +383,9 @@ $$b_1 = \frac{Cov(XY)}{s_X^2} = \frac{r_{XY} s_X s_Y}{s_X^2} = r_{XY} \frac{s_Y}
 Calculando los coeficientes que corresponden a los datos de la [@fig-coeficientesSinFormulas] se obtiene: $$b_0 = 26,9615 \qquad  \qquad b_1 = 4,8616$$ {#eq-11.7}
 
 Ahora sí, con todos los decimales que queramos, aunque dar más decimales de los que tienen los datos es añadir números que no aportan ninguna información, dan una falsa sensación de precisión y complican la lectura del resultado.
+
+::: {style="height: 3px;"}
+:::
 
 ::: callout-note
 ## Nuestro modelo ajustado no es una ecuación
@@ -409,6 +415,9 @@ Veamos este cálculo en un ejemplo con datos sencillos. En la [@fig-R2] tenemos 
 
 Hemos reducido la suma de los cuadrados de los residuos de 56 a 16, por tanto: $$R^2 = \frac{Q_Y - Q_R}{Q_Y} = \frac{56 - 16}{56} = 0.7143$$ Normalmente nos referimos a este valor como un porcentaje. En este caso sería el 71,43 %. En los ejemplos de la [@fig-ArbolMano] estos valores son del 93,5 % (volumen de madera) y 1,5 % (edad al morir).
 
+::: {style="height: 1px;"}
+:::
+
 ::: callout-note
 ## $R^2$ es el cuadrado del coeficiente de correlación $r$
 
@@ -416,6 +425,9 @@ En un modelo de regresión simple, el valor de $R^2$ es igual al cuadrado del co
 :::
 
 [^11_regresimple-3]: Puede ver una demostración [aquí](https://statproofbook.github.io/P/slr-rsq).
+
+::: {style="height: 1px;"}
+:::
 
 ![Aprovechando la información aportada por la estatura disminuimos la suma de los cuadrados de los residuos.](Figuras_11/f1109_R2.png){#fig-R2 .fig-normal6 fig-align="center" width="100%"}
 
@@ -477,6 +489,9 @@ La transformación logarítmica de los datos es, sin duda, una buena opción en 
 
 En primer lugar hay que tener en cuenta que los residuos también están en escala logarítmica. Por ejemplo, para el elefante africano (el mayor, parece que la recta pasa por el punto) el valor real del peso del cerebro es de 5712 g y la previsión es de 6229 (+9 %) y para el elefante asiático el valor real es de 4603 g mientras que el valor previsto es de 3031 g (-34 %). El mamífero que presenta mayor residuo positivo es la persona humana (valor real: 1320, previsto: 185, -86 %) mientras que el de mayor residuo negativo corresponde al Yapok (en inglés: Water opossum). Seguramente más interesante que el modelo en sí es conocer qué animales se separan más -por encima y por debajo- del patrón general. Sobre este tema existen muchas publicaciones. Los interesados pueden empezar explorando la Wikipedia (*Brain–body mass ratio*) y las referencias que incluye.
 
+::: {style="height: 1px;"}
+:::
+
 ::: callout-note
 ## Transformación logarítmica: No importa la base
 
@@ -487,7 +502,7 @@ Sea $y = \ln (x)$ y $z = \log_{10}(x)$. Tendremos que $e^y = x$ y también que $
 
 La interpretación de los resultados se complica cuando caemos en la cuenta de que los datos disponibles son solo una muestra de la población de interés. Supongamos que deseamos estudiar la relación entre el peso y la estatura de los jóvenes de cierta edad (haríamos bien en separar hombres y mujeres, pero aquí vamos a ignorar ese aspecto, que trataremos en el siguiente capítulo) y que disponemos de una muestra de 20 jóvenes. Con los datos de esa muestra ajustamos una recta como se ha realizado en la figura [@fig-unaRegresionVA] pero, en realidad, esa no es la recta que andamos buscando. Si hubiéramos tomado otra muestra, la recta sería otra --distinta-- pero tan válida como la primera. Entonces, ¿cómo se interpreta la recta obtenida?
 
-![Recta ajustada a partir de los datos de una muestra.](Figuras_11/f1116_unaRegresionVA.png){#fig-unaRegresionVA .fig-normal6 fig-align="center" width="100%"}
+![Recta ajustada a partir de los datos de una muestra.](Figuras_11/f1116_unaRegresionVA.png){#fig-unaRegresionVA .fig-normal6 fig-align="center" width="50%"}
 
 Como en otros casos, una forma de ver lo que ocurre es simulando. En los diagramas de la [@fig-regresionVariablesAleatorias] las estaturas ($X$) se han generado aleatoriamente de una distribución N(170; 8) y a cada estatura se le ha asignado un peso ($Y$) mediante la expresión $Y = X -100 +e$, donde $e$ es un valor también generado aleatoriamente de una distribución N(0;,5). Tanto los valores de la estatura (en cm) como los obtenidos para los pesos (en kg) son valores razonables para una población joven. Hemos repetido la simulación 6 veces y, como es natural, cada vez hemos obtenido unos datos distintos y, por tanto, también una recta ajustada distinta.
 
@@ -531,7 +546,7 @@ Para que los coeficientes tengan las distribuciones que se suponen, los datos ut
 
 Cuando se ajustan modelos de regresión simple, la observación del diagrama bivariante de $Y$ frente a $X$ ya permite valorar si es razonable suponer que se cumplen los supuestos requeridos. Si nada hace suponer lo contrario, supondremos que se cumplen. En realidad nunca se cumplirán "exactamente" pero si el comportamiento de los datos no se aleja mucho de los supuestos realizados, los intervalos de confianza y las pruebas de significación en que estamos interesados seguirán siendo válidos a efectos prácticos.
 
-## Significación de los coeficientes\]{Significación de los coeficientes
+## Significación de los coeficientes
 
 ### Visión intuitiva {.unnumbered}
 
@@ -555,7 +570,7 @@ Para cada conjunto de puntos simulados se ha calculado la recta ajustada. En los
 Una prueba de significación es un caso particular de contraste de hipótesis donde se contrasta que el valor del parámetro es igual a cero. Significación equivale a "significativamente distinto de cero", es decir, que la variabilidad aleatoria no justifica la diferencia respecto a cero.
 :::
 
-### Pruebas de significación formales
+### Pruebas de significación formales {.unnumbered}
 
 Aunque pueden no ser necesarias en casos tan claros como los que acabamos de ver, conocer la distribución de los coeficientes nos permite realizar pruebas de significación de manera más directa, sin necesidad de realizar simulaciones.
 
@@ -565,7 +580,13 @@ Lo habitual es contrastar que el coeficiente, ya sea $\beta_0$ o $\beta_1$, es i
 
 Tiene interés cuando hay razones para suponer que la recta pasa por el origen de coordenadas. Permite verificar que los resultados obtenidos no están en contradicción con ese supuesto.
 
-Si los datos cumplen las condiciones que antes hemos comentado tendremos: $$b_0 \sim N \left(\beta_0; \; \sigma_{b_0} \right)$$ luego si $\beta_0 = 0$: $$\frac{b_0-0}{\sigma_{b_0}} \sim N (0; 1) $$ Pero como no conocemos $\sigma_{b_0}$ y usamos su estimación $s_{b_0}$, el estadístico de prueba es: $$ T = \frac{b_0}{s_{b_0}} $$ y su distribución de referencia es una $t$-Student con $n-2$ grados de libertad, siendo $n$ el número de datos disponibles. Los 2 grados de libertad que se pierden tienen que ver con las restricciones que presentan los residuos cuando el modelo se ha ajustado por el método de los mínimos cuadrados $\left ( \sum e_i = 0 \; \text{y} \; \sum e_ix_i = 0 \right )$.
+Si los datos cumplen las condiciones que antes hemos comentado tendremos: 
+$$b_0 \sim N \left(\beta_0; \; \sigma_{b_0} \right)$$
+luego si $\beta_0 = 0$: 
+$$\frac{b_0-0}{\sigma_{b_0}} \sim N (0; 1)$$ 
+Pero como no conocemos $\sigma_{b_0}$ y usamos su estimación $s_{b_0}$, el estadístico de prueba es: 
+$$ T = \frac{b_0}{s_{b_0}}$$ 
+y su distribución de referencia es una $t$-Student con $n-2$ grados de libertad, siendo $n$ el número de datos disponibles. Los 2 grados de libertad que se pierden tienen que ver con las restricciones que presentan los residuos cuando el modelo se ha ajustado por el método de los mínimos cuadrados $\left ( \sum e_i = 0 \; \text{y} \; \sum e_ix_i = 0 \right )$.
 
 Como regla general, si $|T| > 2$, es decir, el valor obtenido está a más de dos desviaciones típicas de cero, se rechaza la hipótesis nula. Por supuesto, también se puede calcular el $p$-valor exacto y tomar la decisión de acuerdo con el nivel de significación establecido.
 
@@ -589,15 +610,44 @@ En general, además de presentar los coeficientes del modelo también presentan 
 
 ![Salida del paquete de software estadístico Minitab al ajustar modelos de regresión en los dos ejemplos que hemos visto.](Figuras_11/f1123_salidaSoftwareRegresion.png){#fig-salidaSoftwareRegresion .fig-normal6 fig-align="center" width="100%"}
 
-También puede interesar contrastar otros valores para la pendiente de la recta. Para verificar que un aparato mide correctamente la concentración de monóxido de carbono (CO) en el aire, se mide la concentración de 11 muestras con valores conocidos. Los resultados obtenidos[^11_regresimple-8] son los que se indican en la tabla \ref{concentracionCO}.
+También puede interesar contrastar otros valores para la pendiente de la recta. Para verificar que un aparato mide correctamente la concentración de monóxido de carbono (CO) en el aire, se mide la concentración de 11 muestras con valores conocidos. Los resultados obtenidos[^11_regresimple-8] son los que se indican en la [Tabla 11.6](#tbl-concentracionCO).
 
 [^11_regresimple-8]: Fuente: Navidi W. (2010): \`\`Statistics for Engineers and Scientists''. Ed McGraw Hill, 3a ed., pág. 585.
 
-------------------------------------------------------------------------
+```{=html}
+<div id="tbl-concentracionCO" class="tabla-wrapper_T1106">
+<table class="tabla-1106">
 
-\*\*\*\* TABLA 11.6 \*\*\*\* \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+<caption>Tabla 11.6: Concentración de CO, Valores reales y valores medidos (ppm).</caption>
 
-La figura \ref{pendiente1} (izquierda) muestra el diagrama bivariante de los valores medidos frente a los reales con su recta ajustada. El aparato estará bien calibrado si --en promedio-- el valor de la concentración medida es igual a la concentración real. Es decir, si los datos se ajustan al modelo: $y = x$.
+<colgroup>
+<col style="width: 21%;">
+<col style="width: 7%;">
+<col style="width: 7%;">
+<col style="width: 7%;">
+<col style="width: 7%;">
+<col style="width: 7%;">
+<col style="width: 7%;">
+<col style="width: 7%;">
+<col style="width: 7%;">
+<col style="width: 7%;">
+<col style="width: 7%;">
+<col style="width: 7%;">
+</colgroup>
+
+<tbody>
+<tr>
+  <td>Valor real:</td> <td>0</td> <td>10</td> <td>20</td> <td>30</td> <td>40</td> <td>50</td> <td>60</td> <td>70</td> <td>80</td> <td>90</td> <td>100</td>
+</tr>
+<tr>
+  <td>Valor medido:</td> <td>1</td> <td>11</td> <td>21</td> <td>28</td> <td>37</td> <td>48</td> <td>56</td> <td>68</td> <td>75</td> <td>86</td> <td>96</td>
+
+</tr>
+</tbody>
+</table>
+</div>
+```
+La [@fig-pendiente1] (izquierda) muestra el diagrama bivariante de los valores medidos frente a los reales con su recta ajustada. El aparato estará bien calibrado si --en promedio-- el valor de la concentración medida es igual a la concentración real. Es decir, si los datos se ajustan al modelo: $y = x$.
 
 ![La recta ajustada no se confunde con las de pendiente igual a 1.](Figuras_11/f1124_pendiente1.png){#fig-pendiente1 .fig-normal6 fig-align="center" width="100%"}
 
@@ -619,17 +669,38 @@ Pero ya sabemos que es mejor dar un intervalo de confianza que una predicción p
 
 Pero, naturalmente, lo más rápido y lo más cómodo es pedirle la predicción al paquete de software que ha realizado el ajuste. También se le puede pedir que represente las bandas de confianza para el modelo ajustado, tal como están representadas en la [@fig-bandasConfianza].
 
-![Recta ajustada y bandas de confianza del 95 %](Figuras_11/f1126_bandasConfianza.png){#fig-bandasConfianza .fig-normal6 fig-align="center" width="100%"}
+![Recta ajustada y bandas de confianza del 95 %](Figuras_11/f1126_bandasConfianza.png){#fig-bandasConfianza .fig-normal6 fig-align="center" width="75%"}
 
-## Malos usos de la regresión simple\]{Malas prácticas con la regresión simple
+##   Malas prácticas con la regresión simple
 
 #### Extrapolar más allá de donde se tienen datos {.unnumbered}
 
 Un buen ajuste dentro del rango en que se tienen datos no garantiza predicciones fiables fuera de él. Supongamos que para un vehículo se informa del siguiente consumo en función de la velocidad a que circula:
 
-------------------------------------------------------------------------
+```{=html}
+<div class="tabla-wrapper_1100a">
+<table class="tabla-1100a">
 
--   TABLA SIN MÚMEROS PAG. 302 \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 8%;">
+<col style="width: 8%;">
+<col style="width: 8%;">
+<col style="width: 8%;">
+<col style="width: 8%;">
+</colgroup>
+
+<tbody>
+<tr>
+  <td>Velocidad (km/h):</td> <td>60</td> <td>70</td> <td>80</td> <td>90</td> <td>100</td>
+</tr>
+<tr>
+  <td>Consumo (litros/100 km):</td> <td>4,0</td> <td>4,8</td> <td>6,1</td> <td>7,0</td> <td>8,2</td>
+</tr>
+</tbody>
+</table>
+</div>
+```
 
 Una estimación razonable para el consumo a 75 km/h es de 5,5 litros/100 km pero no podemos decir que a 25 km/h el consumo es prácticamente nulo y que a 20 km/h es negativo, aunque esos son los valores que se deducen del modelo ajustado.
 

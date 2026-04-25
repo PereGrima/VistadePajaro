@@ -2149,6 +2149,50 @@ margin-top: 25px;
     padding-bottom: 4px;
 } 
 
+/*** Tabla 11.6 ***/
+
+.tabla-1106 {
+  margin: auto;
+  width: 90%;
+  max-width: 600px;
+  border-collapse: collapse;
+  border: none;
+}
+
+.tabla-1106 td {
+  text-align: center;    /* celdas centradas */
+  padding: 0px 3px;      /* altura de fila más pequeña */
+  line-height: 1.4;      /* compacta como en LaTeX */
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+
+.tabla-1106 td:first-child {
+  text-align: left;
+}
+
+/*** Tabla 11 s/n pag. 302 ***/
+
+.tabla-1100a {
+  margin: auto;
+  width: 80%;
+  max-width: 600px;
+  border-collapse: collapse;
+  border: none;
+}
+
+.tabla-1100a td {
+  text-align: center;    /* celdas centradas */
+  padding: 0px 3px;      /* altura de fila más pequeña */
+  line-height: 1.4;      /* compacta como en LaTeX */
+  border: none;
+}
+
+.tabla-1100a td:first-child {
+  text-align: left;
+}
+
+
 /* ======Tabla Wrapper====== */
 
 .tabla-wrapper00 {
@@ -2460,6 +2504,19 @@ margin-top: 25px;
   margin-right: auto;
 }
 
+.tabla-wrapper_T1106 {
+    width: 100%;
+  margin-bottom: 4ex;
+  margin-top: 0ex;
+}
+
+.tabla-wrapper_T1100a {
+    width: 100%;
+  margin-bottom: 2ex;
+  margin-top: 0ex;
+}
+
+
 /* ========================= */
 /*         FIGURAS           */
 /* ========================= */
@@ -2554,10 +2611,27 @@ margin-top: 25px;
   text-align: center;
   font-size: 0.97em;
   line-height: 1.15; 
+  padding-top: 13px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal7 {
+  margin-top: 0em;
+  margin-bottom: 0.1em;
+  text-align: center;
+}
+
+.fig-normal7 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
   padding-top: 10px;
   padding-bottom: 20px;
   color: #666 !important;
 }
+
 
 figure:has(img.fig-normal4) {
   display: flex;

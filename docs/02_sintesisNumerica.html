@@ -375,7 +375,7 @@ window.Quarto = {
 <h3 class="unnumbered anchored" data-anchor-id="media-aritmética">Media aritmética</h3>
 <p>Tanto el cálculo como el significado de la media aritmética son bien conocidos por los estudiantes. Además de que la idea es sencilla, su cálculo tiene interés para saber si se aprobará una asignatura a la vista de las notas que se han ido obteniendo.</p>
 <p>Cuando los datos se presentan tabulados no hay que olvidar que cada uno se repite tantas veces como indica su <strong>frecuencia absoluta</strong>. En la <a href="#tbl-tabla-hijos">Tabla 2.1</a>, la variable considerada es el número de hijos por familia (<span class="math inline">\(x\)</span>) y el número de familias para cada uno de esos valores es la frecuencia absoluta (<span class="math inline">\(n\)</span>).</p>
-<div id="tbl-tabla-hijos" class="tabla-wrapper35 anchored">
+<div id="tbl-tabla-hijos" class="tabla-wrapper04 anchored">
 
 <table class="tabla-0201 caption-top table">
 <caption>Tabla 2.1: Número de hijos por familia</caption>
@@ -414,10 +414,10 @@ window.Quarto = {
 
 </div>
 <p>El valor medio (<span class="math inline">\(\bar{x}\)</span>) del número de hijos por famila es igual a:</p>
-<p><span class="math display">\[ \bar{x} = \frac{\sum_{i} n_i \, x_i }{N} \:  = \:  1,\!48 \]</span></p>
+<p><span class="math display">\[\bar{x} = \frac{\sum_{i} n_i \, x_i }{N} \:  = \:  1,\!48\]</span></p>
 <p>Donde <span class="math inline">\(N\)</span> es el número total de datos (<span class="math inline">\(\sum_i n_i = 60\)</span>) y <span class="math inline">\(k\)</span> es el número de valores que puede tomar <span class="math inline">\(x\)</span>, en este caso <span class="math inline">\(k=6\)</span> (de 0 a 5).</p>
-<p>Para cada valor <span class="math inline">\(x_i\)</span> su es <span class="math inline">\(f_i = n_i/N\)</span>, por tanto, también podemos calcular la media usando la fórmula: <span class="math display">\[ \bar{x} = \sum_{i=1}^k f_i \, x_i   =  1,\!48 \]</span> Vale la pena fijarse en esta expresión porque es análoga a la que veremos más adelante para definir la esperanza matemática (solo hay que cambiar frecuencia relativa por probabilidad). La esperanza matemática es también un valor medio, pero no referido a unos datos concretos, sino a un planteamiento en el que se consideran las probabilidades asociadas a cada uno de los valores que puede tomar la variable.</p>
-<div id="tbl-ProsCons" ;="" class="tabla-wrapper34 anchored">
+<p>Para cada valor <span class="math inline">\(x_i\)</span> su es <span class="math inline">\(f_i = n_i/N\)</span>, por tanto, también podemos calcular la media usando la fórmula: <span class="math display">\[\bar{x} = \sum_{i=1}^k f_i \, x_i   =  1,\!48 \]</span> Vale la pena fijarse en esta expresión porque es análoga a la que veremos más adelante para definir la esperanza matemática (solo hay que cambiar frecuencia relativa por probabilidad). La esperanza matemática es también un valor medio, pero no referido a unos datos concretos, sino a un planteamiento en el que se consideran las probabilidades asociadas a cada uno de los valores que puede tomar la variable.</p>
+<div id="tbl-ProsCons" ;="" class="tabla-wrapper06 anchored">
 
 <table class="tabla-ProsCons caption-top table">
 <caption>Tabla 2.2: Media aritmética. Pros y contras</caption>
@@ -461,6 +461,9 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <p>¿Cómo se calcula la temperatura media de un día? ¿Se toma la temperatura cada minuto y se calcula el promedio? ¿o se toma cada hora? ¿o cada 6 horas? Si se hace el promedio de las temperaturas máxima y mínima no se le debería llamar temperatura media.</p>
 </div>
+</div>
+<div style="height: 2px;">
+
 </div>
 </section>
 <section id="mediana" class="level3 unnumbered">
@@ -581,7 +584,7 @@ Figura&nbsp;2.1: Distribución de los salarios en España en 2021. Fuente: INE<a
 <section id="rango" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="rango">Rango</h3>
 <p>Es la diferencia entre los valores máximo y mínimo. Si el rango de edades de los asistentes a un concierto es de 5 años, significa que todos tienen edades similares, pero si es de 50 años es que ese tipo de música interesa a personas de varias generaciones.</p>
-<div id="tbl-ProsCons" ;="" class="tabla-wrapper34 anchored">
+<div id="tbl-ProsCons" ;="" class="tabla-wrapper05 anchored">
 
 <table class="tabla-ProsCons caption-top table">
 <caption>Tabla 2.5: Rango. Pros y contras</caption>
@@ -701,6 +704,9 @@ Figura&nbsp;2.1: Distribución de los salarios en España en 2021. Fuente: INE<a
 <p>Cuando tenemos un conjunto de datos y nos interesa conocer la varianza de <strong>esos datos</strong> dividimos por el número de los que tenemos, pero aunque esta parece la situación más habitual, no es así. Lo habitual es que nuestro interés no sea tanto conocer la varianza de los datos disponibles como <strong>estimar la varianza de la población</strong> de la cual provienen.</p>
 <p>En este caso tampoco se conoce la media de la población de manera que debemos sustituir su valor por la media de la muestra (<span class="math inline">\(\bar{x}\)</span>). Esta sustitución tiene más influencia de la que parece, ya que la media de la muestra se adapta a los datos con los que se calcula y la variabilidad obtenida tiende a ser menor de la que presenta la población. Puede demostrarse que si en vez de dividir por el número de datos <span class="math inline">\(n\)</span> (al número de elementos de la muestra le llamamos <span class="math inline">\(n\)</span> minúscula) se divide por <span class="math inline">\(n-1\)</span> esa subestimación –se llama <em>sesgo</em>– ya no se da. Por tanto, la fórmula que usamos en la práctica es: <span class="math display">\[ s^2 = \frac{\sum_{i=1}^n ( x_i - \bar{x})^2}{n-1} \]</span></p>
 <p>Esta corrección es especialmente importante cuando se tienen muestras pequeñas, ya que puede haber una diferencia importante entre dividir por <span class="math inline">\(n\)</span> o hacerlo por <span class="math inline">\(n-1\)</span>.</p>
+<div style="height: 1px;">
+
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -713,6 +719,9 @@ Figura&nbsp;2.1: Distribución de los salarios en España en 2021. Fuente: INE<a
 <div class="callout-body-container callout-body">
 <p>En algunas calculadoras y en hojas de cálculo existen dos opciones para calcular la varianza: dividiendo por <span class="math inline">\(N\!\)</span> o por <span class="math inline">\(n\!\!-\!\!1\)</span> según se tenga una población o una muestra. Los paquetes de software estadístico suelen calcularla siempre dividiendo por <span class="math inline">\(n\!\!-\!\!1\)</span> porque casi siempre tenemos muestras. Si en algún caso interesa obtener la varianza dividiendo por <span class="math inline">\(N\)</span> el truco consiste en añadir la media como un dato más.</p>
 </div>
+</div>
+<div style="height: 1px;">
+
 </div>
 </section>
 </section>
@@ -815,11 +824,11 @@ Figura&nbsp;2.1: Distribución de los salarios en España en 2021. Fuente: INE<a
 <p>Sirven para establecer unas marcas que delimitan zonas en el conjunto ordenado de los datos. Así, dado un valor, al compararlo con esas marcas se sabe a qué zona pertenece, y si está entre los valores mayores o entre los menores.</p>
 <section id="cuartiles" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="cuartiles">Cuartiles</h3>
-<p>Sabemos que ordenados los datos de menor a mayor, la mediana es el que los separa en dos mitades. Pues bien, conceptualmente (otra cosa es cómo se determina el valor exacto), el primer cuartil (<span class="math inline">\(Q_1\)</span>) es la mediana de la primera mitad dejando, por tanto, el 25% de los valores por debajo y el 75% por encima. La mediana de la segunda mitad es el tercer cuartil (<span class="math inline">\(Q_3\)</span>), que deja el 75% por debajo y el 25% por encima (figura <a href="#fig-cuartiles" class="quarto-xref"><span>2.2</span></a>).</p>
+<p>Sabemos que ordenados los datos de menor a mayor, la mediana es el que los separa en dos mitades. Pues bien, conceptualmente (otra cosa es cómo se determina el valor exacto), el primer cuartil (<span class="math inline">\(Q_1\)</span>) es la mediana de la primera mitad dejando, por tanto, el 25% de los valores por debajo y el 75% por encima. La mediana de la segunda mitad es el tercer cuartil (<span class="math inline">\(Q_3\)</span>), que deja el 75% por debajo y el 25% por encima (<a href="#fig-cuartiles" class="quarto-xref">Figura&nbsp;<span>2.2</span></a>).</p>
 <div id="fig-cuartiles" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-cuartiles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras/f0202_Cuartiles2.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:67.0%">
+<img src="Figuras/f0202_Cuartiles2.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cuartiles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;2.2: Situación de la mediana y de los cuartiles en un conjunto de 30 datos.
@@ -828,10 +837,13 @@ Figura&nbsp;2.2: Situación de la mediana y de los cuartiles en un conjunto de 3
 </div>
 <p>Si usted conoce la mediana y los cuartiles de los salarios de su empresa, puede situar fácilmente el suyo. Si <span class="math inline">\(Q_1\)</span> es 1.300€, la mediana es 1.500€ y <span class="math inline">\(Q_3\)</span> es 1.800€, entonces, si usted cobra 1.200€ está entre el 25% que menos gana. Si su salario es de 1.600€ está entre la mitad de los que más ganan, pero como mínimo el 25% de los empleados gana más que usted. Si cobra 2.000€ está entre el 25% de los privilegiados que más ganan.</p>
 <p>Para determinar el valor exacto de los cuartiles lo habitual es identificar primero su posición mediante las expresiones: <span class="math display">\[P_{Q_1} = 0.25(n+1) \quad \text{y} \quad P_{Q_3} = 0.75(n+1)\]</span></p>
-<p>Para los datos de la figura <a href="#fig-cuartiles" class="quarto-xref"><span>2.2</span></a>, donde <span class="math inline">\(n=30\)</span>, tenemos que <span class="math inline">\(P_{Q_1} = 7.75\)</span> y <span class="math inline">\(P_{Q_3} = 23.25\)</span>.</p>
+<p>Para los datos de la <a href="#fig-cuartiles" class="quarto-xref">Figura&nbsp;<span>2.2</span></a>, donde <span class="math inline">\(n=30\)</span>, tenemos que <span class="math inline">\(P_{Q_1} = 7.75\)</span> y <span class="math inline">\(P_{Q_3} = 23.25\)</span>.</p>
 <p>Como la posición para el primer cuartil es 7,75, su valor se interpola entre los de las posiciones 7 y 8, de la forma: <span class="math display">\[Q_1 = x_7 + 0.75(x_8 - x_7) = 61 + 0,75(61-61) = 61\]</span></p>
 <p>De manera análoga, para <span class="math inline">\(Q_3\)</span>: <span class="math display">\[Q_3 = x_{23} + 0.25(x_{24} - x_{23}) = 86 + 0,25(90-86) = 87\]</span></p>
-<p>Observe que el valor obtenido para <span class="math inline">\(Q_3\)</span> no coincide con el que hemos deducido en la figura <a href="#fig-cuartiles" class="quarto-xref"><span>2.2</span></a>. Esto es así porque existen diversos criterios para calcular los cuartiles. En la práctica, esto no importa demasiado, ya que solo estamos interesados en conocer los cuartiles cuando el conjunto de datos es grande y, en ese caso, las diferencias entre los distintos métodos no son relevantes.</p>
+<p>Observe que el valor obtenido para <span class="math inline">\(Q_3\)</span> no coincide con el que hemos deducido en la <a href="#fig-cuartiles" class="quarto-xref">Figura&nbsp;<span>2.2</span></a>. Esto es así porque existen diversos criterios para calcular los cuartiles. En la práctica, esto no importa demasiado, ya que solo estamos interesados en conocer los cuartiles cuando el conjunto de datos es grande y, en ese caso, las diferencias entre los distintos métodos no son relevantes.</p>
+<div style="height: 1px;">
+
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -876,6 +888,9 @@ Figura&nbsp;2.2: Situación de la mediana y de los cuartiles en un conjunto de 3
 </table>
 
 </div>
+<div style="height: 0.5px;">
+
+</div>
 </section>
 <section id="percentiles" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="percentiles">Percentiles</h3>
@@ -912,6 +927,9 @@ Figura&nbsp;2.2: Situación de la mediana y de los cuartiles en un conjunto de 3
 </tr>
 </tbody>
 </table>
+
+</div>
+<div style="height: 1px;">
 
 </div>
 </section>
@@ -957,6 +975,9 @@ Figura&nbsp;2.2: Situación de la mediana y de los cuartiles en un conjunto de 3
 <div class="callout-body-container callout-body">
 <p>Cuando hablamos simplemente de “la media” siempre nos estamos refiriendo a la media aritmética.</p>
 </div>
+</div>
+<div style="height: 1px;">
+
 </div>
 </section>
 </section>
@@ -1004,7 +1025,7 @@ Figura&nbsp;2.3: Media y desviación típica de los valores sin redondear y redo
 <h4 class="unnumbered anchored" data-anchor-id="no-olvidar-los-valores-a-partir-de-los-cuales-se-calculan-los-porcentajes">No olvidar los valores a partir de los cuales se calculan los porcentajes</h4>
 <p>Si se realiza un estudio y resulta que 66,7% de los consumidores prefiere el producto X, puede ser que se haya consultado a 3 y lo prefieran 2, o que se haya entrevistado a 3.000 y lo hayan preferido 2.000. La información que da ese porcentaje no es la misma en un caso que en otro.</p>
 <p>El porcentaje global para un colectivo formado por varios grupos puede sugerir unas conclusiones que no se dan en ninguno de los grupos, es lo que se conoce como “<strong>paradoja de Simpson</strong>”: una empresa crea 250 nuevos puestos de trabajo en sus departamentos de compras, fabricación y ventas. En total se presentan 355 hombres y 325 mujeres, de los cuales son admitidos 190 hombres (el 53,5%) y solo 60 mujeres (el 18,5%). Se comprueba que el nivel de preparación de hombres y mujeres es similar entre los aspirantes a cada departamento. ¿Podemos asegurar que se ha discriminado a las mujeres? La respuesta es no. Los datos están en la <a href="#tbl-Simpson">Tabla 2.12</a>.</p>
-<div id="tbl-Simpson" ;="" class="tabla-wrapper42 anchored">
+<div id="tbl-Simpson" ;="" class="tabla-wrapper04 anchored">
 
 <table class="tabla-0212 caption-top table">
 <caption>Tabla 2.12: Paradoja de Simpson. Fijarse solo en los porcentajes totales da una información engañosa</caption>
@@ -1081,6 +1102,9 @@ Ventas</td>
 <section id="porcentaje-de-qué" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="porcentaje-de-qué">Porcentaje ¿de qué?</h4>
 <p>Ante un porcentaje, siempre conviene preguntarse qué significa y cómo se han obtenido los valores con los que se ha calculado. Ya sabemos que en el mundo de la publicidad esas preguntas no suelen tener respuesta: si una crema reduce las arrugas un 33% no está claro si elimina una de cada tres o si reduce un tercio la profundidad de todas ellas. El problema es que estas ambigüedades se presentan también en otros ámbitos, quizá también en los porcentajes que nosotros manejamos. Es necesario que esté claro a qué nos estamos refiriendo.</p>
+<div style="height: 0.5px;">
+
+</div>
 </section>
 </section>
 <section id="apéndice-2.d-por-qué-dividimos-por-n-1" class="level2 unnumbered">
@@ -1112,7 +1136,7 @@ Ventas</td>
 </div>
 <p>La media poblacional (<span class="math inline">\(\mu\)</span>), de estos datos es:</p>
 <p><span class="math display">\[\mu = \frac{2+6+8+10+10+12}{6}=8\]</span> Supongamos que queremos estimar (“hacernos una idea”) el valor (<span class="math inline">\(\mu\)</span>), usando una muestra aleatoria de <span class="math inline">\(n = 2\)</span> unidades. En este caso, en el que la población consta solo de 6 unidades, podemos hacer un listado de todas las muestras que pueden resultar al elegir dos unidades al azar. Estas muestras aparecen enumeradas en la siguiente tabla.</p>
-<div id="tbl-Dividir_n-1" ;="" class="tabla-wrapper42 anchored">
+<div id="tbl-Dividir_n-1" ;="" class="tabla-wrapper_T0200 anchored">
 
 <table class="tabla-02Ape2D_2_3 caption-top table">
 <colgroup>
@@ -1246,7 +1270,7 @@ F</td>
 <p><span class="math display">\[  \sigma_{N}^{2}= \frac{ \sum_{i=1}^{N}{(x_i-\mu)^2}}{N} \]</span> donde <span class="math inline">\(N\)</span> es el tamaño de la población. Queremos saber si el promedio de los valores de <span class="math inline">\(S_{n}^{2}\)</span>, para cada una de las posibles muestras, da el valor de <span class="math inline">\(\sigma_{N}^{2}\)</span> y para averiguarlo, en primer lugar vamos a calcular la varianza poblacional:</p>
 <p><span class="math display">\[  \sigma_{N}^{2}= \frac{(2-8)^2+(6-8)^2+(8-8)^2+...+(12-8)^2}{6} = 10.67 \]</span> Ahora calculamos la varianza para cada muestra de 2 unidades, con la fórmula:</p>
 <p><span class="math display">\[  S_{n}^{2}= \frac{ (x_1 - \bar{x})^2 + (x_2 - \bar{x})^2 }{2} \]</span> obteniéndose los resultados que aparecen en la siguiente tabla:</p>
-<div class="tabla-wrapper42">
+<div class="tabla-wrapper_T0200">
 
 <table class="tabla-02Ape2D_2_3 caption-top table">
 <colgroup>

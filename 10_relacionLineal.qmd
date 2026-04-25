@@ -48,7 +48,7 @@ Para la covarianza no tenemos un símbolo específico. Cuando nos referimos a mo
 
 La [@fig-covarianza] muestra la relación entre dos variables $X$ e $Y$. El diagrama se ha dividido en cuatro cuadrantes trazando una línea vertical que pasa por la media de los valores de $X$ y una horizontal por la media de los valores de $Y$. A estos valores medios los designamos $\bar{x}$ e $\bar{y}$ respectivamente. Los cuadrantes van del I al IV en el sentido de las agujas del reloj.
 
-![Deducción de la fórmula de la covarianza.](Figuras_10/f1003_covarianza.png){#fig-covarianza .fig-normal6 fig-align="center" width="100%"}
+![Deducción de la fórmula de la covarianza.](Figuras_10/f1003_covarianza.png){#fig-covarianza .fig-normal6 fig-align="center" width="90%"}
 
 En todos los puntos del primer cuadrante la distancia $x - \bar{x}$ es positiva, ya que todos se encuentran a la derecha de $\bar{x}$. También será positiva la distancia $y - \bar{y}$ ya que todos están por encima de $\bar{y}$. Por tanto, el producto de ambas distancias $(x - \bar{x}) (y - \bar{y})$ será positivo para todos los puntos que se hallan en el primer cuadrante.
 

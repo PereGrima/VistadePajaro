@@ -766,7 +766,7 @@ border-bottom: 1px solid #666 !important;
 .tabla-0502 caption {
   caption-side: top;
   text-align: center;
-  font-size: 1em;
+  font-size: 0.98em;
   padding-bottom: 15px;
   margin-top: 5px;
   line-height: 1;
@@ -796,6 +796,14 @@ border-bottom: 1px solid #666 !important;
   border-bottom: 1px solid #666;
 }
 
+.tabla-wrapper_T0502 {
+  width: 100%;
+  margin-top: 2ex;
+  margin-bottom: 2ex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*** Tabla en 5.3  ***/
 
 .tabla-0503 {
@@ -808,7 +816,7 @@ border-bottom: 1px solid #666 !important;
 .tabla-0503 caption {
   caption-side: top;
   text-align: center;
-  font-size: 1em;
+  font-size: 0.98em;
   padding-bottom: 15px;
   color: #666 !important;
 }
@@ -852,6 +860,15 @@ border-bottom: 1px solid #666 !important;
   border-bottom: 1px solid #666;
 }
 
+.tabla-wrapper_T0503 {
+  width: 100%;
+  margin-top: 3ex;
+  margin-bottom: 6ex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 /*** Tabla en 5.4  ***/
 
 .tabla-0504 {
@@ -866,10 +883,10 @@ border-bottom: 1px solid #666 !important;
 .tabla-0504 caption {
   caption-side: top;
   text-align: center;
-  font-size: 1em;
+  font-size: 0.98em;
   padding-bottom: 15px;
   margin-top: 5px;
-  line-height: 1;
+  line-height: 1.15;
   color: #666 !important;
 }
 
@@ -897,6 +914,14 @@ border-bottom: 1px solid #666 !important;
   border-bottom: 1px solid #666;  
 }
 
+.tabla-wrapper_T0504 {
+  width: 100%;
+  margin-top: 3ex;
+  margin-bottom: 5ex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*** Tabla en 5.5  ***/
 
 .tabla-0505 {
@@ -911,7 +936,7 @@ border-bottom: 1px solid #666 !important;
 .tabla-0505 caption {
   caption-side: top;
   text-align: center;
-  font-size: 1em;
+  font-size: 0.98em;
   padding-bottom: 15px;
   margin-top: 5px;
   line-height: 1.15;
@@ -938,6 +963,11 @@ border-bottom: 1px solid #666 !important;
   border-bottom: 1px solid #666;
 }
 
+.tabla-wrapper_T0505 {
+  margin-top: 2ex;
+  margin-bottom: 5ex;
+}
+
 /*** Tabla en 5.6  ***/
 
 .tabla-0506 {
@@ -962,8 +992,8 @@ border-bottom: 1px solid #666 !important;
 .tabla-0506 th {
     font-weight: 400;
     text-align: center;    /* celdas centradas */
-    padding-top: 5px; 
-    padding-bottom: 5px;      /* altura de fila más pequeña */
+    padding-top: 3px; 
+    padding-bottom: 3px;      /* altura de fila más pequeña */
     vertical-align: middle;
     line-height: 1.15;      /* compacta como en LaTeX */
     font-size: 1em;
@@ -998,7 +1028,7 @@ border-bottom: 1px solid #666 !important;
   caption-side: top;
   text-align: left;
   font-size: 1em;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   color: #666 !important;
 }
 
@@ -1049,6 +1079,14 @@ border-bottom: 1px solid #666 !important;
 .tabla-0507  tr:nth-child(3) td {
   padding-top: 0px;
   padding-bottom: 5px;
+}
+
+.tabla-wrapper_0507 {
+  width: 100%;
+  margin-top: 3ex;
+  margin-bottom: 4ex;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*** Tabla en 6.1  ***/
@@ -2490,11 +2528,6 @@ margin-top: 25px;
 
 .tabla-wrapper42b {
   margin-top: 3ex;
-}
-
-.tabla-wrapper_T0505 {
-  margin-top: 2ex;
-  margin-bottom: 4ex;
 }
 
 .tabla-wrapper_T0506 {

@@ -104,6 +104,7 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="figuras.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -387,7 +388,7 @@ window.Quarto = {
 <p>Una variable aleatoria es discreta cuando solo puede tomar valores aislados, de manera que, fijados dos valores consecutivos no puede haber ningún otro entre ellos. Ejemplos de variables aleatorias discretas son:</p>
 <ul>
 <li><p>El número de pasajeros que tienen billete pero no se presentan a la salida de su vuelo. Si se han vendido <span class="math inline">\(n\)</span> billetes, los valores que puede tomar son: <span class="math inline">\(0, 1, \cdots, n\)</span>, aunque a partir de un cierto número, la probabilidad de que se dé ese valor es prácticamente igual a cero.</p></li>
-<li><p>El número de personas que se declaran &lt;<de izquierdas="">&gt; en una muestra de 100. Puede tomar valores desde 0 hasta 100, aunque serán muy poco probables los valores muy pequeños o muy grandes dentro de ese rango.</de></p></li>
+<li><p>El número de personas que se declaran “de izquierdas” en una muestra de 100. Puede tomar valores desde 0 hasta 100, aunque serán muy poco probables los valores muy pequeños o muy grandes dentro de ese rango.</p></li>
 <li><p>El número de veces que una línea de producción se para por causas imprevistas durante una semana. Puede ir desde cero hasta un máximo que no está definido.</p></li>
 <li><p>El número de pasas que aparecen en una cucharada de muesli. También puede tomar valores desde cero hasta un máximo no definido.</p></li>
 <li><p>La suma de los valores que se obtienen al lanzar dos dados. Puede ir de 2 a 12 y serán más probables los valores centrales.</p></li>
@@ -449,7 +450,7 @@ window.Quarto = {
 <p>Una variable aleatoria discreta se puede definir mediante una tabla como la que acabamos de ver o –de una manera más compacta pero no siempre más clara– dando la función que relaciona cada uno de estos valores con sus respectivas probabilidades. Esta función se llama <strong>función de probabilidad</strong>. En nuestro caso podemos escribir: <span class="math display">\[ P(S = s) = \frac {6 \, - \lvert s - 7 \rvert} {36}  \;\;\; \text {para} \;\; s = 2, 3, 4, \dotsb, 12.\]</span></p>
 <p>Observe que si la variable puede tomar <span class="math inline">\(n\)</span> valores distintos seguro que: <span class="math display">\[\sum_{i=1}^{n} P(X=x_i)=1\]</span></p>
 <p>Si esta igualdad no se cumple es que la variable no está bien definida.</p>
-<div style="height: 3px;">
+<div style="height: 2px;">
 
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -472,7 +473,7 @@ window.Quarto = {
 <div id="fig-ejemplosFuncionProbabilidad" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ejemplosFuncionProbabilidad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras/f0401_ejemplosFuncionProbabilidad.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+<img src="Figuras_04/f0401_ejemplosFuncionProbabilidad.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ejemplosFuncionProbabilidad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;4.1: Representación de funciones de probabilidad de variables discretas.
@@ -503,7 +504,7 @@ Figura&nbsp;4.1: Representación de funciones de probabilidad de variables discr
 <div id="fig-densidadDeFrecuencia" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-densidadDeFrecuencia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras/f0402_densidadDeFrecuencia.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+<img src="Figuras_04/f0402_densidadDeFrecuencia.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-densidadDeFrecuencia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;4.2: Histograma con frecuencias absolutas (izquierda) y con densidad de frecuencia (derecha).
@@ -517,7 +518,7 @@ Figura&nbsp;4.2: Histograma con frecuencias absolutas (izquierda) y con densidad
 <div id="fig-areasProbabilidades" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-areasProbabilidades-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras/f0403_areasProbabilidades.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+<img src="Figuras_04/f0403_areasProbabilidades.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-areasProbabilidades-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;4.3: Histograma con frecuencias absolutas (izquierda) y con densidad de frecuencia (derecha).
@@ -591,9 +592,9 @@ Figura&nbsp;4.3: Histograma con frecuencias absolutas (izquierda) y con densidad
 
 </div>
 <p>¿Cuál es la esperanza matemática de beneficio si se compra uno de estos boletos? Los valores que puede tomar la variable aleatoria “beneficio” (es una variable aleatoria puesto que su valor depende del azar) son los que se indican en la <a href="#tbl-Juego">Tabla 4.2</a>.</p>
-<div id="tbl-Juego" ;="" class="tabla-wrapper42 anchored">
+<div id="tbl-Juego" ;="" class="tabla-wrapper_T0402 anchored">
 
-<table class="tabla-0212 caption-top table">
+<table class="tabla-0402 caption-top table">
 <caption>Tabla 4.2: Valores para el cálculo de la esperanza matemática del beneficio</caption>
 <colgroup>
 <col style="width: 20%">
@@ -640,7 +641,7 @@ Figura&nbsp;4.3: Histograma con frecuencias absolutas (izquierda) y con densidad
 <div id="fig-ejercicio" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ejercicio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras/f0404_ejercicio.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_04/f0404_ejercicio.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ejercicio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;4.4: Función densidad de probabilidad con forma triangular.
@@ -679,10 +680,10 @@ Figura&nbsp;4.4: Función densidad de probabilidad con forma triangular.
 </section>
 <section id="varianza" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="varianza">Varianza</h4>
-<p>También se calcula con una expresión similar a la que usamos para calcular la varianza de una muestra. Si se trata de una variable aleatoria discreta, solo cambiamos la media de la muestra por la esperanza matemática de la población y la frecuencia relativa por la probabilidad, es decir: <span class="math display">\[\text{V}(X) = \sum_{i=1}^k  [x_i - \text{E}(X)]^2 \, p(x_i)\]</span> Para el cálculo de la varianza del beneficio tenemos los valores de la tabla <span class="math inline">\(\ref{varBeneficio}\)</span>:</p>
-<div id="tbl-Juego" ;="" class="tabla-wrapper42 anchored">
+<p>También se calcula con una expresión similar a la que usamos para calcular la varianza de una muestra. Si se trata de una variable aleatoria discreta, solo cambiamos la media de la muestra por la esperanza matemática de la población y la frecuencia relativa por la probabilidad, es decir: <span class="math display">\[\text{V}(X) = \sum_{i=1}^k  [x_i - \text{E}(X)]^2 \, p(x_i)\]</span> Para el cálculo de la varianza del beneficio tenemos los valores de la <a href="#tbl-Juego">Tabla 4.3</a>:</p>
+<div id="tbl-Juego" class="tabla-wrapper_T0403 anchored">
 
-<table class="tabla-0402 caption-top table">
+<table class="tabla-0403 caption-top table">
 <caption>Tabla 4.3: Valores para el cálculo de la varianza del beneficio</caption>
 <colgroup>
 <col style="width: 20%">
@@ -717,7 +718,7 @@ Figura&nbsp;4.4: Función densidad de probabilidad con forma triangular.
 0,9986 €<sup>2</sup><br>
 0,0049 €<sup>2</sup></td>
 </tr>
-<tr class="total even">
+<tr class="even">
 <td style="text-align: center;">Suma...</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -727,7 +728,7 @@ Figura&nbsp;4.4: Función densidad de probabilidad con forma triangular.
 </table>
 
 </div>
-<p>El resultado, V(<i>X</i>)=20.9951 €<sup>2</sup>, es la varianza de los valores del beneficio que se obtendría con cada boleto si los compramos todos.</p>
+<p>El resultado, V(<i>X</i>)=20,9951 €<sup>2</sup>, es la varianza de los valores del beneficio que se obtendría con cada boleto si los compramos todos.</p>
 <p>De forma análoga, para las variables aleatorias continuas tenemos: <span class="math display">\[\text{V}(X) = \int_{-\infty}^{\infty} [x - \text{E}(X)]^2 \, f(x) \, \mathrm{d}x\]</span> En la distribución de la <a href="#fig-ejercicio" class="quarto-xref">Figura&nbsp;<span>4.4</span></a> tenemos:</p>
 <p><span class="math display">\[ \text{V}(X) = \int_{0}^{4} (x-3)^2 \frac{x}{10} \, \mathrm{d}x + \int_{4}^{5} (x-3)^2  (2 -0.4x) \, \mathrm{d}x = \frac{7}{6}\]</span> Ciertamente, este valor de la varianza no nos dice nada<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>, pero lo podemos comparar con el que se obtiene para la distribución de la <a href="#fig-areasProbabilidades" class="quarto-xref">Figura&nbsp;<span>4.3</span></a> que deberá ser menor, al ser también menor el rango en que se mueve. En este caso, como <span class="math inline">\(E(X)=1\)</span>, tenemos:</p>
 <p><span class="math display">\[\text{V}(X) = \int_{0}^{1} (x-1)^2 x \, \mathrm{d}x + \int_{1}^{2} (x-1)^2  (2 -x) \, \mathrm{d}x = \frac{1}{6}\]</span> Efectivamente es menor, exactamente siete veces menor.</p>
@@ -752,6 +753,9 @@ Figura&nbsp;4.4: Función densidad de probabilidad con forma triangular.
 <li><p><span class="math inline">\(\text{V}(X+Y) = \text{V}(X) + \text{V}(Y) + 2\,\text{Cov}(X,Y)\)</span></p></li>
 <li><p><span class="math inline">\(\text{V}(X-Y) = \text{V}(X) + \text{V}(Y) - 2\,\text{Cov}(X,Y)\)</span> <br></p></li>
 </ul>
+<div style="height: 1px;">
+
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -765,7 +769,9 @@ Figura&nbsp;4.4: Función densidad de probabilidad con forma triangular.
 <p>Puede comprobarlo generando números aleatorios en una columna de una hoja de cálculo; en la columna de al lado, genere otros tantos de la misma o de otra distribución. Puede comprobar que la varianza de la suma de esas dos columnas es muy parecida a la varianza de la diferencia. Será tanto más parecida cuanto más números haya generado. En la mayoría de las hojas de cálculo pulsando F9, se renuevan los números aleatorios.</p>
 </div>
 </div>
-<p><br></p>
+<div style="height: 1px;">
+
+</div>
 <section id="no-es-lo-mismo-sumar-k-veces-que-multiplicar-por-k" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="no-es-lo-mismo-sumar-k-veces-que-multiplicar-por-k">No es lo mismo sumar <span class="math inline">\(k\)</span> veces que multiplicar por <span class="math inline">\(k\)</span></h3>
 <p>El resultado es el mismo cuando las cantidades a que nos referimos son magnitudes constantes. Para saber cuántos huevos hay en 8 docenas, como el número de huevos en una docena es una constante, podemos sumar 12 huevos 8 veces o multiplicar 12 por 8 (¡evidente!). Pero, si lo que tenemos es una variable aleatoria, como el peso de un huevo, esto ya no es verdad.</p>
@@ -779,23 +785,23 @@ Figura&nbsp;4.4: Función densidad de probabilidad con forma triangular.
         \end{split}
 \end{equation*}\]</span>
 <p>Pensemos ahora en la variable “peso de un huevo multiplicado por 12”, es decir, la variable <span class="math inline">\(12X\)</span>. Ahora tendremos:</p>
-<p><span class="math inline">\(\qquad \qquad \qquad \qquad \qquad \qquad \text{E}(12X)=12 \cdot \text{E}(X)\)</span> <span class="math inline">\(\qquad \qquad \qquad \qquad \qquad \qquad \text{V}(12X)=12^2 \cdot \text{V}(X)=144 \cdot \text{V}(X)\)</span></p>
+<p><span class="math inline">\(\qquad \qquad \qquad \qquad \qquad  \text{E}(12X)=12 \cdot \text{E}(X)\)</span> <span class="math inline">\(\qquad \qquad \qquad \qquad \qquad  \text{V}(12X)=12^2 \cdot \text{V}(X)=144 \cdot \text{V}(X)\)</span></p>
 <p>Vamos a ver que estas fórmulas reflejan lo que ocurre en la realidad a través de una mirada intuitiva al problema. Cuando formamos una docena de huevos, aunque tomemos uno singularmente pequeño, no hay que temer que esta docena salga con un peso muy por debajo del valor medio, ya que seguramente también habrá otros con un peso por encima de lo normal, de manera que los grandes compensarán el peso de los pequeños y viceversa (<a href="#fig-huevos1" class="quarto-xref">Figura&nbsp;<span>4.5</span></a>).</p>
 <div id="fig-huevos1" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-huevos1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras/f0405_huevos1.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+<img src="Figuras_04/f0405_huevos1.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-huevos1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;4.5: Una docena de huevos (exagerando las diferencias).
 </figcaption>
 </figure>
 </div>
-<p>Sin embargo, en la variable &lt;&lt;peso de un huevo multiplicado por 12&gt;&gt;, si el huevo elegido resulta ser pequeño, es como tener una docena de huevos pequeños, y si es grande sería como una docena de huevos grandes, con lo que tendremos pesos totales con más dispersión que en el caso anterior, ya que en este caso no se compensan los grandes con los pequeños (<a href="#fig-huevos2" class="quarto-xref">Figura&nbsp;<span>4.6</span></a>).</p>
+<p>Sin embargo, en la variable “peso de un huevo multiplicado por 12”, si el huevo elegido resulta ser pequeño, es como tener una docena de huevos pequeños, y si es grande sería como una docena de huevos grandes, con lo que tendremos pesos totales con más dispersión que en el caso anterior, ya que en este caso no se compensan los grandes con los pequeños (<a href="#fig-huevos2" class="quarto-xref">Figura&nbsp;<span>4.6</span></a>).</p>
 <div id="fig-huevos2" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-huevos2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras/f0406_huevos2.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_04/f0406_huevos2.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-huevos2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;4.6: Un huevo multiplicado por 12. Si es pequeño es como tener una docena de huevos pequeños. Igual si es grande.
@@ -819,7 +825,7 @@ Figura&nbsp;4.6: Un huevo multiplicado por 12. Si es pequeño es como tener una 
 </ul>
 <p>Pero si la probabilidad no es la misma para todos los casos posibles entonces no se puede aplicar esta regla, por ejemplo:</p>
 <ul>
-<li><p>Lanzamos dos dados: ¿cuál es la probabilidad de que la suma sea igual a 5? Antes hemos visto que existen 11 resultados posibles y 5 es uno de ellos, pero no todos tienen la misma probabilidad de ocurrir. Hemos visto en la tabla <span class="math inline">\(\ref{sumaDosDados}\)</span> que esta probabilidad es 1/9, no 1/11.</p></li>
+<li><p>Lanzamos dos dados: ¿cuál es la probabilidad de que la suma sea igual a 5? Antes hemos visto que existen 11 resultados posibles y 5 es uno de ellos, pero no todos tienen la misma probabilidad de ocurrir. Hemos visto en la <a href="#tbl-sumaDados">Tabla 4.1</a> que esta probabilidad es 1/9, no 1/11.</p></li>
 <li><p>Una máquina produce un 40% de unidades defectuosas, si se toma una muestra de 10 unidades ¿cuál es la probabilidad de que se encuentren 3 defectos? Hay 11 casos posibles (encontrar 0, 1, 2,…, 10 unidades defectuosas) pero la probabilidad no es 1/11 sino 0,215, tal como veremos en el siguiente capítulo.</p></li>
 <li><p>Hemos comprobado que el número de coches que llegan cada día a una gasolinera entre las 9 y las 10 de la mañana está entre 25 y 75, ¿cuál es la probabilidad de que un día lleguen entre 50 y 60? No es razonable considerar que todos los valores son igualmente probables. También en el capítulo siguiente veremos que –bajo unas hipótesis muy razonables– esa probabilidad está en torno a 0,45.</p></li>
 </ul>
@@ -879,7 +885,7 @@ Figura&nbsp;4.6: Un huevo multiplicado por 12. Si es pequeño es como tener una 
 <div id="fig-circuito" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-circuito-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras/f0407_circuito.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+<img src="Figuras_04/f0407_circuito.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-circuito-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;4.7: El valor de <span class="math inline">\(R_n\)</span> no debe ser de 10 sino de 11<span class="math inline">\(\,\Omega\)</span>.
@@ -900,7 +906,7 @@ Figura&nbsp;4.7: El valor de <span class="math inline">\(R_n\)</span> no debe se
 <div id="fig-partida" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-partida-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras/f0408_partida.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+<img src="Figuras_04/f0408_partida.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-partida-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;4.8: Posibles resultados si se siguiera jugando.
@@ -995,7 +1001,7 @@ Tenemos cuatro tarjetas con los símbolos A, D, 3 y 7 en una cara, y sabemos que
 <div id="fig-probabilidadCoincidencia" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-probabilidadCoincidencia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras/f0409_probabilidadCoincidencia.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+<img src="Figuras_04/f0409_probabilidadCoincidencia.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-probabilidadCoincidencia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;4.9: Construcción de la curva que relaciona la probabilidad de coincidencia en la fecha del cumpleaños y el número de personas en un grupo.

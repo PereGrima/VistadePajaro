@@ -384,7 +384,7 @@ Calculando los coeficientes que corresponden a los datos de la [@fig-coeficiente
 
 Ahora sí, con todos los decimales que queramos, aunque dar más decimales de los que tienen los datos es añadir números que no aportan ninguna información, dan una falsa sensación de precisión y complican la lectura del resultado.
 
-::: {style="height: 3px;"}
+::: {style="height: 1px;"}
 :::
 
 ::: callout-note
@@ -580,13 +580,7 @@ Lo habitual es contrastar que el coeficiente, ya sea $\beta_0$ o $\beta_1$, es i
 
 Tiene interés cuando hay razones para suponer que la recta pasa por el origen de coordenadas. Permite verificar que los resultados obtenidos no están en contradicción con ese supuesto.
 
-Si los datos cumplen las condiciones que antes hemos comentado tendremos: 
-$$b_0 \sim N \left(\beta_0; \; \sigma_{b_0} \right)$$
-luego si $\beta_0 = 0$: 
-$$\frac{b_0-0}{\sigma_{b_0}} \sim N (0; 1)$$ 
-Pero como no conocemos $\sigma_{b_0}$ y usamos su estimación $s_{b_0}$, el estadístico de prueba es: 
-$$ T = \frac{b_0}{s_{b_0}}$$ 
-y su distribución de referencia es una $t$-Student con $n-2$ grados de libertad, siendo $n$ el número de datos disponibles. Los 2 grados de libertad que se pierden tienen que ver con las restricciones que presentan los residuos cuando el modelo se ha ajustado por el método de los mínimos cuadrados $\left ( \sum e_i = 0 \; \text{y} \; \sum e_ix_i = 0 \right )$.
+Si los datos cumplen las condiciones que antes hemos comentado tendremos: $$b_0 \sim N \left(\beta_0; \; \sigma_{b_0} \right)$$ luego si $\beta_0 = 0$: $$\frac{b_0-0}{\sigma_{b_0}} \sim N (0; 1)$$ Pero como no conocemos $\sigma_{b_0}$ y usamos su estimación $s_{b_0}$, el estadístico de prueba es: $$ T = \frac{b_0}{s_{b_0}}$$ y su distribución de referencia es una $t$-Student con $n-2$ grados de libertad, siendo $n$ el número de datos disponibles. Los 2 grados de libertad que se pierden tienen que ver con las restricciones que presentan los residuos cuando el modelo se ha ajustado por el método de los mínimos cuadrados $\left ( \sum e_i = 0 \; \text{y} \; \sum e_ix_i = 0 \right )$.
 
 Como regla general, si $|T| > 2$, es decir, el valor obtenido está a más de dos desviaciones típicas de cero, se rechaza la hipótesis nula. Por supuesto, también se puede calcular el $p$-valor exacto y tomar la decisión de acuerdo con el nivel de significación establecido.
 
@@ -671,7 +665,7 @@ Pero, naturalmente, lo más rápido y lo más cómodo es pedirle la predicción 
 
 ![Recta ajustada y bandas de confianza del 95 %](Figuras_11/f1126_bandasConfianza.png){#fig-bandasConfianza .fig-normal6 fig-align="center" width="75%"}
 
-##   Malas prácticas con la regresión simple
+## Malas prácticas con la regresión simple
 
 #### Extrapolar más allá de donde se tienen datos {.unnumbered}
 
@@ -701,7 +695,6 @@ Un buen ajuste dentro del rango en que se tienen datos no garantiza predicciones
 </table>
 </div>
 ```
-
 Una estimación razonable para el consumo a 75 km/h es de 5,5 litros/100 km pero no podemos decir que a 25 km/h el consumo es prácticamente nulo y que a 20 km/h es negativo, aunque esos son los valores que se deducen del modelo ajustado.
 
 #### Ignorar la autocorrelación de las observaciones {.unnumbered}

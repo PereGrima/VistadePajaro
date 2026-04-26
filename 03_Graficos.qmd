@@ -3,7 +3,7 @@
 Empezamos planteando un reto: la [Tabla 3.1](#tbl-Panaderia) contiene los pesos de una muestra de las barras de pan producidas en una panadería. El pan es elaborado en dos máquinas que son utilizadas por dos operarios, uno por la mañana y otro por la tarde. El peso debe ser de $220 \pm 10$ g. ¿Observa algún problema? Si lo hay, ¿qué se debería hacer para resolverlo?
 
 ```{=html}
-<div id="tbl-Panaderia" class="tabla-wrapper42">
+<div id="tbl-Panaderia" class="tabla-wrapper_T0301">
 <table class="tabla-0301">
 
 <caption>Tabla 3.1: Datos tomados en una panadería</caption>
@@ -115,7 +115,7 @@ Lo que nuestros gráficos indican es que la máquina 2 está desajustada: está 
 
 En resumen: habría que ajustar la máquina 2 para que -en promedio- dé el peso objetivo. Respecto a la máquina 1 y a los operarios, no aparece ninguna información relevante.
 
-![Histogramas de los datos recogidos en una panadería estratificados por máquina y por operario.](Figuras/f0301_histogramaPanaderia.png){#fig-histoPanaderia .fig-normal3 fig-align="center" width="90%"}
+![Histogramas de los datos recogidos en una panadería estratificados por máquina y por operario.](Figuras_03/f0301_histogramaPanaderia.png){#fig-histoPanaderia .fig-normal7 fig-align="center" width="90%"}
 
 ## Forma de la distribución, valor central y dispersión
 
@@ -125,10 +125,10 @@ Una alternativa a los histogramas son los boxplots, que permiten resumir en poco
 
 ### Histograma {.unnumbered}
 
-\noindent En la [Tabla 3.1](#tbl-Tabulacion) están tabulados los valores obtenidos en la máquina 1. El histograma es la representación gráfica de esa tabla y, por lo general, se construye a partir de las frecuencias absolutas. No obstante, cuando se comparan situaciones con distinto número de datos, puede resultar más adecuado emplear frecuencias relativas o porcentajes. El aspecto del histograma no cambia al pasar de un tipo de frecuencia a otro; únicamente se modifica la escala vertical.
+En la [Tabla 3.1](#tbl-Tabulacion) están tabulados los valores obtenidos en la máquina 1. El histograma es la representación gráfica de esa tabla y, por lo general, se construye a partir de las frecuencias absolutas. No obstante, cuando se comparan situaciones con distinto número de datos, puede resultar más adecuado emplear frecuencias relativas o porcentajes. El aspecto del histograma no cambia al pasar de un tipo de frecuencia a otro; únicamente se modifica la escala vertical.
 
 ```{=html}
-<div id="tbl-Tabulacion"; class="tabla-wrapper42">
+<div id="tbl-Tabulacion"; class="tabla-wrapper_T0302">
 <table class="tabla-0302">
 
 <caption>Tabla 3.2: Tabulación de los valores obtenidos en la máquina 1.</caption>
@@ -301,7 +301,7 @@ Observe los siguientes valores que podrían corresponder a los resultados obteni
 ```
 Seguramente solo mirando los números ya se dará cuenta de que en el grupo B los valores son más altos, pero la situación queda mucho más clara a la vista del diagrama de puntos ([@fig-dotplot]).
 
-![Diagramas de puntos para comparar los resultados de dos tratamientos.](Figuras/f0302_dotplot.png){#fig-dotplot .fig-normal3 fig-align="center" width="90%"}
+![Diagramas de puntos para comparar los resultados de dos tratamientos.](Figuras_03/f0302_dotplot.png){#fig-dotplot .fig-normal_0302 fig-align="center" width="90%"}
 
 ::: callout-note
 ## ¿Qué aportaría un test estadístico formal?
@@ -418,7 +418,7 @@ Empezamos calculando los siguientes valores:
 
 3.  Añadir los valores anómalos. Se coloca un símbolo, normalmente un asterisco, en el lugar correspondiente de la escala.<br>
 
-![Construcción de un boxplot. Las patas llegan hasta la última observación antes de entrar en la zona de anomalías.](Figuras/f0303_boxplotConstruccion.png){#fig-boxplotConstruccion .fig-normal3 fig-align="center" width="100%"}
+![Construcción de un boxplot. Las patas llegan hasta la última observación antes de entrar en la zona de anomalías.](Figuras_03/f0303_boxplotConstruccion.png){#fig-boxplotConstruccion .fig-normal3 fig-align="center" width="90%"}
 
 ::: callout-note
 ## Otros nombres para el boxplot
@@ -428,7 +428,7 @@ Boxplot se puede traducir por "diagrama de caja". Para que el nombre incluya la 
 
 Volvamos a los datos de la panadería. En la [@fig-boxplotPanaderia] comparamos los pesos de cada máquina y de cada operario usando boxplots. Igual que en los histogramas, puede verse que la máquina 1 produce en torno al valor objetivo y con una variabilidad que es compatible con las tolerancias establecidas, mientras que la máquina 2 está claramente desajustada. Entre los operarios, tal como habíamos visto, no se aprecia una diferencia relevante.
 
-![Datos de la panadería. Boxplots para comparar máquinas y operarios.](Figuras/f0304_boxplotPanaderia.png){#fig-boxplotPanaderia .fig-normal3 fig-align="center" width="90%"}
+![Datos de la panadería. Boxplots para comparar máquinas y operarios.](Figuras_03/f0304_boxplotPanaderia.png){#fig-boxplotPanaderia .fig-normal_0304 fig-align="center" width="90%"}
 
 La [@fig-boxplotEspeVida] muestra la esperanza de vida en 2019 para cada uno de los 196 países del mundo, agrupados según el continente al que pertenecen (datos: Gapminder)[^03_graficos-2]. En el gráfico de la izquierda, la esperanza de vida de cada país se representa con un punto en la columna correspondiente a su continente. Los puntos se desplazan ligeramente de forma aleatoria en el eje horizontal para evitar la superposición y facilitar la percepción de su densidad.
 
@@ -438,7 +438,7 @@ A la derecha se muestran los boxplots correspondientes. En un caso como este, am
 
 En los boxplots hemos añadido los nombres de los países que aparecen como anomalías en cada continente. En África y en América lo son por tener una esperanza de vida singularmente baja, y en Oceanía, por tenerla alta. Los paquetes de software suelen tener opciones para identificar con facilidad el origen de esos puntos, que muchas veces son los más interesantes.
 
-![Dos formas de representar la esperanza de vida en los 196 países del mundo según el continente al que pertenecen.](Figuras/f0305_boxplotEspeVida.png){#fig-boxplotEspeVida .fig-normal3 fig-align="center" width="90%"}
+![Dos formas de representar la esperanza de vida en los 196 países del mundo según el continente al que pertenecen.](Figuras_03/f0305_boxplotEspeVida.png){#fig-boxplotEspeVida .fig-normal_0305 fig-align="center" width="90%"}
 
 ::: callout-note
 ## ¿Son siempre "anómalos" los valores marcados como anomalías?
@@ -502,13 +502,13 @@ Cuando provienen de una distribución Normal (forma de campana simétrica y con 
 
 Cuando los datos se han tomado en orden cronológico, siempre es interesante ver cuál ha sido su evolución. La figura [@fig-evolucionPanaderia] muestra los pesos obtenidos en la panadería a lo largo del mes. Los de las cuatro unidades de cada máquina que se han pesado cada día aparecen alineados verticalmente sobre el número de día, y una línea va uniendo sus valores medios. Además de ver que la máquina 2 está descentrada observamos que en esta máquina se produce un bajón en los pesos desde mediados de la semana 3 hasta mediados de la semana 4. Este aspecto --que puede ayudar a identificar el origen del problema-- es imposible de detectar si solo se usan los gráficos que hemos visto hasta ahora.
 
-![Datos de la panadería. Evolución de los pesos en máquinas 1 y 2.](Figuras/f0306_evolucionPanaderia.png){#fig-evolucionPanaderia .fig-normal3 fig-align="center" width="95%"}
+![Datos de la panadería. Evolución de los pesos en máquinas 1 y 2.](Figuras_03/f0306_evolucionPanaderia.png){#fig-evolucionPanaderia .fig-normal_0304 fig-align="center" width="90%"}
 
 ### Gráfico de serie temporal {.unnumbered}
 
 Cuando el interés se centra en conocer la evolución de una variable, los gráficos de líneas, o de serie temporal, suelen ser los más adecuados. La [@fig-evoEspVida] muestra la evolución de la esperanza de vida en cinco países, uno de cada continente (datos: [Gapminder](https://www.gapminder.org/data)). Cada valor se representa con un punto y los puntos correspondientes a cada país se unen con una recta que en este caso da sensación de continuidad porque los puntos están muy cerca. Se observa una tendencia creciente en los cinco países con algunos bajones muy pronunciados que podemos identificar con conflictos bélicos.
 
-![Datos de la panadería. Evolución de los pesos en máquinas 1 y 2.](Figuras/f0307_evoEspVida.png){#fig-evoEspVida .fig-normal3 fig-align="center" width="100%"}
+![Datos de la panadería. Evolución de los pesos en máquinas 1 y 2.](Figuras_03/f0307_evoEspVida.png){#fig-evoEspVida .fig-normal_0304 fig-align="center" width="90%"}
 
 Como regla general, cuando se trata de representar cómo evoluciona una variable lo mejor es usar diagramas de líneas. No es buena idea usar columnas para representar el valor en cada unidad de tiempo.
 
@@ -575,10 +575,10 @@ Para tener una visión general de cómo ha evolucionado la esperanza de vida en 
 
 A partir de la segunda mitad del siglo XX desaparecen las anomalías por valores altos pero aparecen algunas anomalías por tener valores singularmente bajos, parece que debido a guerras o desastres naturales. También es interesante observar que los valores máximos presentan una suave tendencia creciente que no sabemos donde nos llevará.
 
-![Evolución de la esperanza de vida desde 1901 hasta 2019. Cada boxplot representa los valores de todos los países en el año correspondiente.](Figuras/f0308_evoBoxplotEspVida.png){#fig-evoBoxplotEspVida .fig-normal3 fig-align="center" width="100%"}
+![Evolución de la esperanza de vida desde 1901 hasta 2019. Cada boxplot representa los valores de todos los países en el año correspondiente.](Figuras_03/f0308_evoBoxplotEspVida.png){#fig-evoBoxplotEspVida .fig-normal_0308 fig-align="center" width="90%"}
 
 ```{=html}
-<div id="tbl-ProsCons"; class="tabla-wrapper34">
+<div id="tbl-ProsCons" class="tabla-wrapper34">
 <table class="tabla-ProsCons">
 
 <caption>Tabla 3.7: Boxplots estratificados por periodo de tiempo. Pros y contras</caption>
@@ -638,11 +638,12 @@ Cuando la magnitud representada se mide en dinero, hay que estar atentos a si lo
 
 Incluso si nos dicen que la tasa de inflación durante ese periodo ha sido del 15% anual, parece que las cosas han ido bien, a fin de cuentas, los salarios no han subido el 15% sino el 100%. Pero al hacer las cuentas el panorama cambia. El aumento de los precios se acumula anualmente y si en el año 1 eran igual a 100, el año 2 serán igual a 115 (=100·1,15), el año 3 tendremos 132,5 (=115·1,15), el año 7 ya habrán superado el valor de 200 y el año 10 estarán en 351,79. Es decir, lo que hace 10 años se compraba con un salario ahora se compra con tres y medio. Así pues, las cosas no van tan bien para los trabajadores de ese país.
 
-![Evolución de los salarios (izquierda) y de los salarios y el poder adquisitivo (derecha). Parece que los salarios crecen menos en el gráfico de la derecha, la diferencia está en la escala.](Figuras/f0309_salariosInflacion.png){#fig-salariosInflacion .fig-normal3 fig-align="center" width="100%"}
+![Evolución de los salarios (izquierda) y de los salarios y el poder adquisitivo (derecha). Parece que los salarios crecen menos en el gráfico de la derecha, la diferencia está en la escala.](Figuras_03/f0309_salariosInflacion.png){#fig-salariosInflacion .fig-normal_0309 fig-align="center" width="90%"}
 
 Que el coste de la vida aumente por encima de los salarios significa que el poder adquisitivo disminuye. Si en el año 1 el salario daba para comprar todo lo necesario, en el año 2 ya no llegará, porque aunque se cobre 110, lo que antes se compraba por 100 ahora costará 115 y ya no da para todo sino solo para el 95,7%. En el año 3 se cobra 115 y los precios ya van por 132,25 (solo podremos comprar el 87%), hasta el año 10, en que cobramos 200 pero lo necesario está ya en 351,8, con lo que apenas llegaremos al 57%. La situación queda resumida en la tabla y el gráfico de la [@fig-salariosPoderAdq].
 
 ```{=html}
+<div class="tabla-wrapper_T0310">
 <div style="display: flex; gap: 0rem; align-items: center;">
 
   <!-- TABLA -->
@@ -658,36 +659,36 @@ Que el coste de la vida aumente por encima de los salarios significa que el pode
 </colgroup>
   
   <thead>
-    <tr>
-      <th>Día</th>
-      <th>Precios</th>
-      <th>Salarios</th>
-      <th>Poder adquisitivo</th>
-    </tr>
+<tr>
+  <th>Día</th>
+  <th>Precios</th>
+  <th>Salarios</th>
+  <th>Poder adquisitivo</th>
+</tr>
   </thead>
   <tbody>
-    <tr><td>1</td><td>100,0</td><td>100</td><td>100</td></tr>
-    <tr><td>2</td><td>115,0</td><td>110</td><td>95,7</td></tr>
-    <tr><td>3</td><td>132,3</td><td>115</td><td>87,0</td></tr>
-    <tr><td>4</td><td>152,1</td><td>130</td><td>85,5</td></tr>
-    <tr><td>5</td><td>174,9</td><td>130</td><td>74,3</td></tr>
-    <tr><td>6</td><td>201,1</td><td>135</td><td>67,1</td></tr>
-    <tr><td>7</td><td>231,3</td><td>140</td><td>60,5</td></tr>
-    <tr><td>8</td><td>266,0</td><td>150</td><td>56,4</td></tr>
-    <tr><td>9</td><td>305,9</td><td>180</td><td>58,8</td></tr>
-    <tr><td>10</td><td>351,8</td><td>200</td><td>56,9</td></tr>
+<tr><td>1</td><td>100,0</td><td>100</td><td>100</td></tr>
+<tr><td>2</td><td>115,0</td><td>110</td><td>95,7</td></tr>
+<tr><td>3</td><td>132,3</td><td>115</td><td>87,0</td></tr>
+<tr><td>4</td><td>152,1</td><td>130</td><td>85,5</td></tr>
+<tr><td>5</td><td>174,9</td><td>130</td><td>74,3</td></tr>
+<tr><td>6</td><td>201,1</td><td>135</td><td>67,1</td></tr>
+<tr><td>7</td><td>231,3</td><td>140</td><td>60,5</td></tr>
+<tr><td>8</td><td>266,0</td><td>150</td><td>56,4</td></tr>
+<tr><td>9</td><td>305,9</td><td>180</td><td>58,8</td></tr>
+<tr><td>10</td><td>351,8</td><td>200</td><td>56,9</td></tr>
   </tbody>
 </table>
   </div>
 
   <!-- IMAGEN -->
   <div style="flex: 1; text-align: center;">
-    <img src="Figuras/f0310_poderAdquisitivo.png" style="max-width: 95%; height: auto;">
+    <img src="Figuras_03/f0310_poderAdquisitivo.png" style="max-width: 95%; height: auto;">
   </div>
-
+</div>
 </div>
 ```
-![Salarios y poder adquisitivo. Los salarios se duplican en 10 años, pero la inflación es del 15% anual.](Figuras/f0000_figuraFantasma2.png){#fig-salariosPoderAdq .fig-normal4 fig-align="center" width="100%"}
+![Salarios y poder adquisitivo. Los salarios se duplican en 10 años, pero la inflación es del 15% anual.](Figuras_03/f0000_figuraFantasma2.png){#fig-salariosPoderAdq .fig-normal_03fantasma fig-align="center" width="90%"}
 
 #### Valores que presentan estacionalidad {.unnumbered}
 
@@ -697,13 +698,13 @@ A fin de poder valorar mejor la evolución de la variable considerada, es prefer
 
 [^03_graficos-3]: <small>Datos: [Servicio Público de Empleo Estatal (España)](https://www.sepe.es/HomeSepe/que-es-el-sepe/estadisticas/empleo.html).</small>
 
-![Dos formas de representar la evolución del número de parados en España en 2022 y 2023.](Figuras/f0311_paro.png){#fig-paro .fig-normal3 fig-align="center" width="110%"}
+![Dos formas de representar la evolución del número de parados en España en 2022 y 2023.](Figuras_03/f0311_paro.png){#fig-paro .fig-normal_0311 fig-align="center" width="90%"}
 
 #### ¿Valores absolutos o porcentajes? {.unnumbered}
 
 En algunos casos lo relevante es el porcentaje de cambio y no su valor absoluto. Si se compara la rentabilidad de dos acciones, una que el año pasado valía 5 y este año vale 10, con otra que valía 50 y ahora vale 55, si representamos el cambio colocando los valores en el eje vertical parece que las dos acciones han subido lo mismo, pero el que compró la primera ha ganado el 100% (ha doblado su valor) mientras que el que compró la segunda solo ha ganado el 10%. Como esto es lo que realmente interesa, es mejor usar porcentajes en el eje vertical, como en la figura de la derecha.
 
-![Dos formas de representar la evolución del número de parados en España en 2022 y 2023.](Figuras/f0312_valorAcciones.png){#fig-valorAcciones .fig-normal3 fig-align="center" width="110%"}
+![Dos formas de representar la evolución del número de parados en España en 2022 y 2023.](Figuras_03/f0312_valorAcciones.png){#fig-valorAcciones .fig-normal3 fig-align="center" width="85%"}
 
 ## Relación entre variables
 
@@ -719,7 +720,7 @@ Utilizando puntos de distinto color se identifica a qué continente pertenece ca
 
 [^03_graficos-4]: <small>Puede consultar la Wikipedia, con mayor detalle en inglés.</small>
 
-![Relación entre esperanza de vida y renta per cápita en el año 2019 en países con más de 100.000 habitantes.](Figuras/f0313_espeVida_RentaPC.png){#fig-espeVida_RentaPC .fig-normal3 fig-align="center" width="100%"}
+![Relación entre esperanza de vida y renta per cápita en el año 2019 en países con más de 100.000 habitantes.](Figuras_03/f0313_espeVida_RentaPC.png){#fig-espeVida_RentaPC .fig-normal_0313 fig-align="center" width="90%"}
 
 Recuerde que cuando analizamos una variable, debe estar muy claro a qué nos estamos refiriendo. Los gráficos que incluye [Gapminder](https://www.gapminder.org/data) informan con todo detalle sobre el significado de las variables que se incluyen, en particular, de los criterios usados para calcular la renta per cápita[^03_graficos-5]
 
@@ -733,7 +734,7 @@ También se conoce como diagrama de correlación o diagrama de dispersión.
 
 En un diagrama bivariante podemos hacer que el tamaño de los puntos esté relacionado con el valor de una nueva variable, dando lugar al llamado *diagrama de burbujas*. En la [@fig-espeVida_RentaPC_mortInf] el tamaño de los puntos está relacionado con la tasa de mortalidad infantil. Se observa que los países con baja esperanza de vida y también baja renta son los que tienen una mayor mortalidad infantil, y que estos países se encuentran básicamente en el continente africano.
 
-![La superficie de los puntos es proporcional al ratio de mortalidad infantil del país que representan.](Figuras/f0314_espeVida_RentaPC_mortInf.png){#fig-espeVida_RentaPC_mortInf .fig-normal3 fig-align="center" width="100%"}
+![La superficie de los puntos es proporcional al ratio de mortalidad infantil del país que representan.](Figuras_03/f0314_espeVida_RentaPC_mortInf.png){#fig-espeVida_RentaPC_mortInf .fig-normal_0313 fig-align="center" width="90%"}
 
 ::: callout-note
 ## Cada variable tiene su eje
@@ -794,13 +795,13 @@ En el eje horizontal ($x$) colocamos la variable que viene dada y en el vertical
 ```
 ### Gráficos 3D para tres variables {.unnumbered}
 
-\noindent En general, existen mejores alternativas que usar tres dimensiones para mostrar la relación entre tres variables. La [@fig-Gini_rentaPC_EspVida] representa la esperanza de vida frente al índice de Gini (una medida de desigualdad en la distribución de la riqueza), y la renta per cápita. Aunque los paquetes de software estadístico permiten mover el cubo para buscar la perspectiva más adecuada, no suele ser fácil apreciar de un vistazo las relaciones que existen.
+En general, existen mejores alternativas que usar tres dimensiones para mostrar la relación entre tres variables. La [@fig-Gini_rentaPC_EspVida] representa la esperanza de vida frente al índice de Gini (una medida de desigualdad en la distribución de la riqueza), y la renta per cápita. Aunque los paquetes de software estadístico permiten mover el cubo para buscar la perspectiva más adecuada, no suele ser fácil apreciar de un vistazo las relaciones que existen.
 
-![Esperanza de vida frente al índice de Gini y la renta per cápita en un gráfico 3D.](Figuras/f0315_Gini_rentaPC_EspVida.png){#fig-Gini_rentaPC_EspVida .fig-normal3 fig-align="center" width="100%"}
+![Esperanza de vida frente al índice de Gini y la renta per cápita en un gráfico 3D.](Figuras_03/f0315_Gini_rentaPC_EspVida.png){#fig-Gini_rentaPC_EspVida .fig-normal_0313 fig-align="center" width="85%"}
 
 En la [@fig-Graf2D_Gini_rentaPC_EspVida] se pierde la información sobre el continente al que pertenece cada país, pero se observa con mayor claridad que los valores elevados del índice de Gini están asociados a rentas per cápita bajas —aunque seguramente habrá superricos— y a una menor esperanza de vida.
 
-![Índice de Gini frente a renta per cápita, usando un código de colores para representar la esperanza de vida.](Figuras/f0316_Graf2D_Gini_rentaPC_EspVida.png){#fig-Graf2D_Gini_rentaPC_EspVida .fig-normal3 fig-align="center" width="100%"}
+![Índice de Gini frente a renta per cápita, usando un código de colores para representar la esperanza de vida.](Figuras_03/f0316_Graf2D_Gini_rentaPC_EspVida.png){#fig-Graf2D_Gini_rentaPC_EspVida .fig-normal_0313 fig-align="center" width="90%"}
 
 No hay que dejarse deslumbrar por gráficos que son muy vistosos pero que no transmiten de forma clara la información que contienen los datos.
 
@@ -863,7 +864,7 @@ La forma habitual de representar tablas de frecuencias es usar diagramas de barr
 
 La [@fig-diagramaBarras] utiliza un diagrama de barras para mostrar el número de países que hay en cada continente. A la derecha, cada barra se ha estratificado según el cuartil al que pertenece cada país según su renta per cápita. Se observa que la mayoría de países situados en el primer cuartil (el 25% que tiene menor renta) están en África.
 
-![Número de países en cada continente. A la derecha estratificados según el cuartil al que pertenecen según su renta per cápita.](Figuras/f0317_diagramaBarras.png){#fig-diagramaBarras .fig-normal3 fig-align="center" width="90%"}
+![Número de países en cada continente. A la derecha estratificados según el cuartil al que pertenecen según su renta per cápita.](Figuras_03/f0317_diagramaBarras.png){#fig-diagramaBarras .fig-normal_0313 fig-align="center" width="90%"}
 
 ### Gráficos de pastel, y de dónut {.unnumbered}
 
@@ -871,7 +872,7 @@ Otra forma de representar el tamaño de cada una de las partes son los gráficos
 
 [^03_graficos-6]: <small>Otras denominaciones habituales son: diagrama circular, gráfico de sectores, diagrama de tarta o diagrama de quesitos.</small>
 
-![Población en cada continente. Diagramas de pastel y de dónut.](Figuras/f0318_donutPiePoblacion.png){#fig-donutPiePoblacion .fig-normal3 fig-align="center" width="100%"}
+![Población en cada continente. Diagramas de pastel y de dónut.](Figuras_03/f0318_donutPiePoblacion.png){#fig-donutPiePoblacion .fig-normal3 fig-align="center" width="90%"}
 
 ::: callout-note
 ## Diagrama de Florence Nightingale
@@ -939,7 +940,7 @@ Muchos paquetes de software estadístico permiten el uso de nuevas formas de rep
 
 Estos resultados no son ninguna novedad, pero verlos de forma explícita invita a reflexionar sobre la pertinencia de usar el país como unidad de análisis para comparar indicadores de bienestar y desarrollo. En China o en la India caben casi 30 Colombias u otras tantas Españas.
 
-![La población de cada país es proporcional a la superficie del rectángulo que lo representa. En el recuadro rojo hay 76 países --el 38,8%-- pero solo contienen el 1,5% de la población.](Figuras/f0319_rectPropor.png){#fig-rectPropor .fig-normal3 fig-align="center" width="95%"}
+![La población de cada país es proporcional a la superficie del rectángulo que lo representa. En el recuadro rojo hay 76 países --el 38,8%-- pero solo contienen el 1,5% de la población.](Figuras_03/f0319_rectPropor.png){#fig-rectPropor .fig-normal_0313 fig-align="center" width="90%"}
 
 ::: callout-note
 ## Ranking de medallas en los juegos olímpicos
@@ -951,7 +952,7 @@ No parece muy razonable que el ranking de medallas obtenidas en los Juegos Olím
 
 Cuando se trata de representar la distribución geográfica de un valor, lo más claro suele ser hacerlo sobre el mapa adecuado. La [@fig-mapaMundi_MortInf] muestra el intervalo en que se encuentra el índice de mortalidad infantil en cada país. Hay que tener en cuenta que en casos como este la impresión que se da puede variar dependiendo de la forma en que se elijan los intervalos.
 
-![Intervalo en que se encuentra el ratio de mortalidad infantil.](Figuras/f0320_mapaMundi_MortInf.png){#fig-mapaMundi_MortInf .fig-normal3 fig-align="center" width="100%"}
+![Intervalo en que se encuentra el ratio de mortalidad infantil.](Figuras_03/f0320_mapaMundi_MortInf.png){#fig-mapaMundi_MortInf .fig-normal3 fig-align="center" width="90%"}
 
 ## Gráficos que conviene evitar
 
@@ -959,19 +960,19 @@ Puede ser discutible cuál es la mejor forma de representar unos datos, pero sie
 
 ### Gráficos con tres dimensiones {.unnumbered}
 
-\noindent Si de lo que se trata es de transmitir la información de forma clara --otra cosa es querer impresionar con gráficos "artísticos"--, los gráficos con tres dimensiones son siempre una mala opción. Enredan el gráfico al incluir aspectos irrelevantes que dificultan la transmisión de la información de forma rápida y directa. En la [@fig-graficos3D] queda claro que se lee mejor y más rápido cuando se construyen sin esa tercera dimensión.
+Si de lo que se trata es de transmitir la información de forma clara --otra cosa es querer impresionar con gráficos "artísticos"--, los gráficos con tres dimensiones son siempre una mala opción. Enredan el gráfico al incluir aspectos irrelevantes que dificultan la transmisión de la información de forma rápida y directa. En la [@fig-graficos3D] queda claro que se lee mejor y más rápido cuando se construyen sin esa tercera dimensión.
 
-![Añadir una tercera dimensión es una mala opción cuando el objetivo es transmitir la información de la forma más clara posible.](Figuras/f0321_graficos3D.png){#fig-graficos3D .fig-normal3 fig-align="center" width="100%"}
+![Añadir una tercera dimensión es una mala opción cuando el objetivo es transmitir la información de la forma más clara posible.](Figuras_03/f0321_graficos3D.png){#fig-graficos3D .fig-normal_0313 fig-align="center" width="90%"}
 
 En los gráficos de pastel, especialmente cuando para destacar un sector se desgaja del resto, el problema no es que sean más difíciles de interpretar, sino que pueden dar a entender una situación que es falsa. En la figura [@fig-pastel3D] en el gráfico 3D parece que el sector Sanidad es el más importante, cuando basta mirar los números para darse cuenta de que no lo es.
 
-![El diagrama 3D da la falsa sensación de que la sanidad es el sector más importante.](Figuras/f0322_pastel3D.png){#fig-pastel3D .fig-normal3 fig-align="center" width="100%"}
+![El diagrama 3D da la falsa sensación de que la sanidad es el sector más importante.](Figuras_03/f0322_pastel3D.png){#fig-pastel3D .fig-normal3 fig-align="center" width="90%"}
 
 ### Comparar gráficos construidos con diferentes escalas {.unnumbered}
 
 Recordemos el caso de la panadería y supongamos que se dispone de una tercera máquina de la que también se han recogido datos, como en las otras dos. El histograma de estos datos está en la [@fig-distintasEscala], junto al que ya vimos de la máquina 1. ¿Qué puede decirse de la producción de la máquina 3?
 
-![¿Qué se puede decir de la máquina 3 respecto a la 1?](Figuras/f0323_distintasEscala.png){#fig-distintasEscala .fig-normal3 fig-align="center" width="95%"}
+![¿Qué se puede decir de la máquina 3 respecto a la 1?](Figuras_03/f0323_distintasEscala.png){#fig-distintasEscala .fig-normal_0313 fig-align="center" width="90%"}
 
 Si está pensando que produce con más variabilidad, ha caído en la trampa. Los dos histogramas se han construido con los mismos datos, el diferente aspecto es debido a que la escala del eje horizontal es distinta. Moraleja: cuando se construyen histogramas --o gráficos en general-- para comparar distintas situaciones, es imprescindible que las escalas sean iguales, tal como hemos hecho en la [@fig-histoPanaderia], de lo contrario vamos a confundir a nuestros lectores o incluso nos vamos a engañar nosotros mismos. Esta tarea no la hacen los paquetes de software, que adaptan la escala a la variabilidad de los datos. Es necesario acceder a las opciones y fijar los valores que nos conviene. Si la magnitud representada tiene unas tolerancias, incluirlas en el gráfico, junto con el valor objetivo en el centro de la escala, también ayuda a la interpretación.
 
@@ -981,7 +982,7 @@ A veces nos encontramos con un diagrama bivariante en el que la nube de puntos n
 
 La [@fig-rectaTendencia] (izquierda) muestra una situación de este tipo, con tres puntos alejados del resto e incluyendo la recta de regresión ajustada. Esta recta puede dar la sensación de que al aumentar el valor de $X$ también tiende a aumentar el de $Y$, pero esta tendencia viene determinada por los puntos singulares, que quizá son errores o corresponden a circunstancias excepcionales que no forman parte del marco que se está estudiando. Si observamos la zona donde se encuentra la mayoría de puntos (figura de la derecha) constatamos que no existe ninguna relación y, por tanto, la recta de tendencia da una información engañosa.
 
-![La recta ajustada sugiere una relación que seguramente no existe y que solo es debida a la influencia de unos puntos singulares.](Figuras/f0324_rectaTendencia.png){#fig-rectaTendencia .fig-normal3 fig-align="center" width="90%"}
+![La recta ajustada sugiere una relación que seguramente no existe y que solo es debida a la influencia de unos puntos singulares.](Figuras_03/f0324_rectaTendencia.png){#fig-rectaTendencia .fig-normal_0313 fig-align="center" width="90%"}
 
 ### Pictogramas que exageran las diferencias {.unnumbered}
 
@@ -989,11 +990,11 @@ Recurrir a imágenes para representar cantidades --los llamados "pictogramas"-- 
 
 Para poner de manifiesto que el precio de la vivienda se ha triplicado en los últimos años podemos representar ese incremento dibujando dos casas, la segunda con el triple de altura que la primera. El problema radica en que si se mantienen las proporciones, la segunda tendrá el triple de altura, pero nueve veces la superficie de la primera, y la sensación que se transmite es que la segunda casa (el segundo precio) es nueve veces mayor que la primera ([@fig-casaConRayas]).
 
-![La segunda casa es el triple de alta pero da la sensación de ser nueve veces mayor.](Figuras/f0325_casaConRayas.png){#fig-casaConRayas .fig-normal3 fig-align="center" width="75%"}
+![La segunda casa es el triple de alta pero da la sensación de ser nueve veces mayor.](Figuras_03/f0325_casaConRayas.png){#fig-casaConRayas .fig-normal_0313 fig-align="center" width="80%"}
 
 Si se utilizan círculos para representar cantidades, lo proporcional a la cantidad debe ser el área, no el diámetro. Si las cantidades a representar son proporcionales a 1, 3 y 5, los diámetros deben serlo a 1, $\sqrt{3}$ y $\sqrt{5}$.
 
-![Los círculos de la primera fila, con un diámetro proporcional al valor que representan, exageran las diferencias. En la segunda fila el área es proporcional al valor.](Figuras/f0326_circulo.png){#fig-circulo .fig-normal3 fig-align="center" width="100%"}
+![Los círculos de la primera fila, con un diámetro proporcional al valor que representan, exageran las diferencias. En la segunda fila el área es proporcional al valor.](Figuras_03/f0326_circulo.png){#fig-circulo .fig-normal_0313 fig-align="center" width="90%"}
 
 ## Dar gato por liebre usando gráficos
 
@@ -1005,7 +1006,7 @@ Naturalmente, una misma información se puede dar de muchas maneras, con gráfic
 
 Si las exportaciones de enero a junio se han ido reduciendo, de manera que en junio son solo la mitad que en enero, podemos representar los datos con el gráfico de la izquierda de la [@fig-exportaciones] o con el de la derecha, en el que se han usado los mismos datos, pero representando los valores acumulados. Si usted es el responsable de las ventas y presenta el primer gráfico va a dar muy mala impresión pero, sin decir mentiras, puede presentar el segundo y, con un poco de suerte, un buen discurso y pasando rápido sobre los detalles, quizá pase desapercibido.
 
-![Dos formas de representar la evolución de las exportaciones. Los datos son los mismos pero la impresión que dan los gráficos es muy diferente.](Figuras/f0327_exportaciones.png){#fig-exportaciones .fig-normal3 fig-align="center" width="90%"}
+![Dos formas de representar la evolución de las exportaciones. Los datos son los mismos pero la impresión que dan los gráficos es muy diferente.](Figuras_03/f0327_exportaciones.png){#fig-exportaciones .fig-normal3 fig-align="center" width="90%"}
 
 ### Gráficos con escalas inapropiadas {.unnumbered}
 
@@ -1013,7 +1014,7 @@ Si las exportaciones de enero a junio se han ido reduciendo, de manera que en ju
 
 Jugar con la escala vertical en los diagramas de barras es el recurso más habitual para exagerar la diferencia entre grupos. La [@fig-escalaBarra] (izquierda) está inspirada en el gráfico que apareció en un anuncio en el que la cadena de televisión TV4 presumía de tener más audiencia que sus competidoras. Efectivamente, los datos indican que ha tenido un mayor porcentaje de audiencia, pero las diferencias son muy pequeñas --aproximadamente un punto porcentual-- y probablemente quedan dentro del margen de error en este tipo de estimaciones. Sin embargo, la impresión que da a primera vista --que es como seguramente se miran los gráficos en los anuncios-- es que las diferencias son importantes, y todavía se podría exagerar más haciendo partir la escala de 17,5. En el gráfico de la derecha la escala parte de cero, que es lo correcto en este tipo de gráficos, y las diferencias apenas se notan, que es lo que ocurre en realidad.
 
-![Adaptando la escala al rango de variación de los datos se exageran las diferencias. En los diagramas de barras el eje vertical debe partir de cero.](Figuras/f0328_escalaBarra.png){#fig-escalaBarra .fig-normal3 fig-align="center" width="90%"}
+![Adaptando la escala al rango de variación de los datos se exageran las diferencias. En los diagramas de barras el eje vertical debe partir de cero.](Figuras_03/f0328_escalaBarra.png){#fig-escalaBarra .fig-normal_0313 fig-align="center" width="90%"}
 
 #### Gráficos de serie temporal {.unnumbered}
 
@@ -1021,9 +1022,9 @@ En los gráficos de serie temporal las reglas son otras. No conviene que la esca
 
 [^03_graficos-9]: <small>Dona M. Wong (2010): "The Wall Street Journal. Guide to Information Graphics".</small>
 
-![En el gráfico de la izquierda se exageran las diferencias, en el de la derecha apenas se notan.](Figuras/f0329_escalaLineas.png){#fig-escalaLineas .fig-normal3 fig-align="center" width="90%"}
+![En el gráfico de la izquierda se exageran las diferencias, en el de la derecha apenas se notan.](Figuras_03/f0329_escalaLineas.png){#fig-escalaLineas .fig-normal_0313 fig-align="center" width="90%"}
 
-![Escala vertical recomendada en gráficos que muestran una tendencia.](Figuras/f0330_escalaLineas2.png){#fig-escalaLineas2 .fig-normal3 fig-align="center" width="90%"}
+![Escala vertical recomendada en gráficos que muestran una tendencia.](Figuras_03/f0330_escalaLineas2.png){#fig-escalaLineas2 .fig-normal3 fig-align="center" width="90%"}
 
 ### Buenas y malas artes en la construcción de gráficos {.unnumbered}
 
@@ -1057,13 +1058,13 @@ Otra opción son los paquetes de software que utilizan el lenguaje y los algorit
 
 -   **R Commander:** Ha sido durante muchos años la interfaz utilizada para facilitar el uso de R en cursos introductorios. Se ha convertido en un estándar, pero creemos que ahora existen mejores alternativas.
 
-![Diagrama bivariante realizado con Jamovi.](Figuras/f0331_CapturaJamovi.png){#fig-CapturaJamovi .fig-normal3 fig-align="center" width="100%"}
+![Diagrama bivariante realizado con Jamovi.](Figuras_03/f0331_CapturaJamovi.png){#fig-CapturaJamovi .fig-normal3 fig-align="center" width="90%"}
 
 Las hojas de cálculo son otra opción que suele estar muy a mano. A veces desdeñadas en ámbitos científicos aunque con gran protagonismo en las áreas de economía y gestión. Suelen ser imbatibles para ordenar, seleccionar y filtrar datos, y como casi nunca los tenemos con la estructura adecuada para su análisis, son un buen recurso para facilitar este trabajo previo. Por otra parte, las tablas dinámicas permiten explorar y resumir fácilmente grandes volúmenes de datos, que también se pueden representar gráficamente.
 
 La [@fig-CapturaHCGoogle] muestra un gráfico de burbujas construido con Google Sheets. En cualquier caso, dedicar tiempo a familiarizarse con las hojas de cálculo seguro que es un tiempo bien invertido puesto que están presentes en muchos ámbitos de la vida profesional e incluso personal.
 
-![Gráfico de burbujas realizado con la hoja de cálculo de Google.](Figuras/f0332_CapturaHCGoogle.png){#fig-CapturaHCGoogle .fig-normal3 fig-align="center" width="100%"}
+![Gráfico de burbujas realizado con la hoja de cálculo de Google.](Figuras_03/f0332_CapturaHCGoogle.png){#fig-CapturaHCGoogle .fig-normal3 fig-align="center" width="90%"}
 
 Finalmente, tenemos los paquetes de software comerciales. Algunos, también muy completos e intuitivos, ofrecen condiciones ventajosas para su uso en ámbitos académicos.
 
@@ -1077,7 +1078,7 @@ Es un instrumento pensado para que los directivos y técnicos puedan seguir la m
 
 Los gráficos que utiliza pueden ser de cualquier tipo, incluyendo mapas. Los indicadores clave, también llamados KPI (de las siglas en inglés de *Key Performance Indicator*), se presentan de forma destacada. Tanto los gráficos como los indicadores pueden ser interactivos, mostrando valores globales que se pueden segmentar según interese (siempre que esté previsto, por supuesto).
 
-![Esquema de un cuadro de mando. (Imagen: Freepik.com).](Figuras/f0333_dashboard.png){#fig-dashboard .fig-normal3 fig-align="center" width="100%"}
+![Esquema de un cuadro de mando. (Imagen: Freepik.com).](Figuras_03/f0333_dashboard.png){#fig-dashboard .fig-normal3 fig-align="center" width="90%"}
 
 Se pueden construir cuadros de mando con una hoja de cálculo o también usando R con algunos complementos, pero seguramente la mejor opción es usar un paquete de software especializado para esta tarea como *Power BI*. Este paquete es gratuito si los datos de que se alimenta están en el mismo ordenador donde se ha instalado el programa. Esto es útil para aprender su manejo e incluso para usarlo en pequeñas organizaciones. Las grandes empresas tienen sus datos centralizados y para acceder a ellos hay que usar la versión de pago. Si se tiene interés existen tutoriales fáciles de seguir para empezar a usarlo en un tiempo relativamente breve.
 

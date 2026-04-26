@@ -104,6 +104,8 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="figuras.css">
+<link rel="stylesheet" href="figuras_07.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -765,7 +767,7 @@ Figura&nbsp;8.4: Nuestros valores de la discrepancia máxima y distribución a l
 <p>En la jerga estadística, a la hipótesis que se supone cierta a no ser que las evidencias –los datos– estén en contradicción con ella, se denomina <strong>hipótesis nula</strong>, <span class="math inline">\(\text{H}_0\)</span>. A lo que ocurre si se rechaza la hipótesis nula se denomina <strong>hipótesis alternativa</strong>, <span class="math inline">\(\text{H}_1\)</span>.</p></li>
 <li><p>A partir de los datos hemos calculado un valor relevante respecto al tema en discusión, en nuestro caso una medida de la discrepancia entre la frecuencia observada y la frecuencia esperada (le podríamos llamar “teóricamente esperada”). A este valor que, de alguna manera, refleja la discrepancia de los datos con la hipótesis nula le llamamos <strong>estadístico de prueba</strong>.</p></li>
 <li><p>Hemos construido la distribución a la que debe pertenecer el estadístico de prueba si la hipótesis nula es cierta. A esta distribución le llamamos <strong>distribución de referencia</strong>.</p></li>
-<li><p>Nos preguntamos si es razonable considerar que el estadístico de prueba pertenece a la distribución de referencia. Un forma de hacerlo es calcular la probabilidad de que en la distribución de referencia se dé un valor como el del estadístico de prueba o mayor. A esa probabilidad se le denomina <strong><span class="math inline">\(p\)</span>-valor</strong>. Si el <span class="math inline">\(p\)</span>-valor es muy pequeño consideramos que los datos no son coherentes con la hipótesis nula y nos quedamos con la alternativa.</p></li>
+<li><p>Nos preguntamos si es razonable considerar que el estadístico de prueba pertenece a la distribución de referencia. Un forma de hacerlo es calcular la probabilidad de que en la distribución de referencia se dé un valor como el del estadístico de prueba o mayor. A esa probabilidad se le denomina <span class="math inline">\(p\)</span>-valor. Si el <span class="math inline">\(p\)</span>-valor es muy pequeño consideramos que los datos no son coherentes con la hipótesis nula y nos quedamos con la alternativa.</p></li>
 </ul>
 <p>Vamos a seguir con otros ejemplos porque hay más aspectos que observar en esta forma de razonamiento.</p>
 </section>
@@ -1064,7 +1066,7 @@ acumulada</td>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td colspan="3">10 lanzamientos</td>
+<td colspan="3">20 lanzamientos</td>
 </tr>
 <tr class="even">
 <td>Num.<br>
@@ -1983,12 +1985,12 @@ Figura&nbsp;8.18: Árbol de probabilidades para el ejemplo del sorteo de loterí
 </figure>
 </div>
 <p>Ahora, aplicando el teorema de Bayes, podemos volver a calcular la probabilidad de que haya hecho trampa sabiendo que ha ganado. La fórmula es la siguiente (G: Gana, T: hace trampa; N: No hace trampa):</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
         \begin{split}
             P(\text{T} |\text{G}) &amp;= \frac{P(\text{G}| \text{T}) \cdot P(\text{T})}{P(\text{G}| \text{T}) \cdot P(\text{T})+P(\text{G}| \text{N}) \cdot P(\text{N})} \\[10pt]
             &amp;=\frac{1 \cdot \frac{1}{\text{1\;\!000\;\!000}}} {1 \cdot \frac{1}{\text{1\;\!000\;\!000}} + \frac{\text{1}}{\text{10\;\!000}} \cdot \frac{\text{999\;\!999}} {\text{1\;\!000\;\!000}}} = \text{0,009901}
         \end{split}
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>Con las suposiciones que hemos realizado llegamos a la conclusión de que la probabilidad de que nuestro vecino sea un tramposo es del orden del 1 %. Si hubiéramos supuesto que la probabilidad <em>a priori</em> era de uno entre 10 millones, el resultado <em>a posteriori</em> sería de uno entre mil.</p>
 <p>A algunos investigadores les parece “poco científico” dar un valor puramente especulativo a una variable que influirá en el resultado obtenido. Pero es evidente que no es lo mismo que el comprador del boleto sea una persona de conducta ejemplar o que haya sido condenado varias veces por estafa y además haya organizado él mismo el sorteo. Enfrentarse a un problema ignorando una información tan evidente y a la vez tan relevante, no parece que sea la mejor forma de aprovechar los recursos disponibles. Los que se adentren en este terrero tendrán ocasión de elegir en cada caso la alternativa que les parezca más razonable.</p>
 <div style="text-align: center; font-size: 1.1em;">
@@ -2009,7 +2011,7 @@ Figura&nbsp;8.18: Árbol de probabilidades para el ejemplo del sorteo de loterí
 <li id="fn5"><p>Nosotros hemos usado la librería <span style="font-family: monospace;">iterpc</span> para R. Observe que basta calcular la suma <span class="math inline">\(S\)</span> correspondiente a los números de orden de un tratamiento ya que: <span class="math inline">\(\Delta = 2S-210\)</span><a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn6"><p>En otra simulación este número no sería idéntico pero sí muy similar.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn7"><p>Una detallada explicación de este fenómeno centrada en Canadá y en el hockey sobre hielo se encuentra en el libro de Malcolm Gladwell: “Outliers. The Story of Success”, capítulo 1: “The Matthew Effect” (2008). Existe traducción al español con el título: “Fuera de serie: Por qué unas personas tienen éxito y otras no”.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn8"><p>Datos obtenidos en <a href="https://www.transfermarkt.es">https://www.transfermarkt.es</a>.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>Datos obtenidos en <a href="https://www.transfermarkt.es" class="uri">https://www.transfermarkt.es</a>.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn9"><p>Estos son los resultados del estudio preliminar: “Preliminary Report: Findings from the Aspirin Component of the Ongoing Physicians’ Health Study” publicado en <em>The New England Journal of Medicine</em> el 28 de enero de 1988. En el estudio definitivo, publicado en la misma revista el 20 de julio de 1989, la diferencia es todavía más clara.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn10"><p>También es verdad que ese contraste habría que plantearlo antes de que se realice el sorteo. El contraste de hipótesis pierde su sentido si se construye a medida del dato ya conocido.<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>

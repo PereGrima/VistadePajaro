@@ -559,6 +559,28 @@ fig-normal_0311 {
   color: #666 !important;
 }
 
+.fig-normal_0701 {
+  margin-top: 0.8em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+.fig-normal_0701 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
+  padding-top: 7px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_0701 img {
+  width: 400px;
+}
+
+
+
+
 .fig-normal0 {
   margin-top: 0;
   margin-bottom: 0.1em;

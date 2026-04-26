@@ -104,6 +104,8 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="figuras.css">
+<link rel="stylesheet" href="figuras_07.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -364,19 +366,19 @@ window.Quarto = {
 <p>En cualquier caso, sea la población real o teórica, lo que hacemos es “estimar” (hacernos una idea de) las características de interés de esa población a partir de los valores obtenidos en la muestra.</p>
 <section id="estimador-puntual" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="estimador-puntual"><span class="header-section-number">7.1</span> Estimador puntual</h2>
-<p>Un estimador puntual, o simplemente estimador, es un número que se calcula a partir de los valores de una muestra y que nos sirve para hacernos una idea de una determinada característica de la población. Si queremos estimar el valor de la media de la población, la media de una muestra representativa de esa población es un buen estimador. Pero no siempre es tan fácil, hemos visto que la varianza de una muestra –aplicando la fórmula &lt;<natural>&gt; de dividir por <span class="math inline">\(n\)</span> la suma de cuadrados–, es un estimador sesgado de la varianza de la población.</natural></p>
+<p>Un estimador puntual, o simplemente estimador, es un número que se calcula a partir de los valores de una muestra y que nos sirve para hacernos una idea de una determinada característica de la población. Si queremos estimar el valor de la media de la población, la media de una muestra representativa de esa población es un buen estimador. Pero no siempre es tan fácil, hemos visto que la varianza de una muestra –aplicando la fórmula “natural” de dividir por <span class="math inline">\(n\)</span> la suma de cuadrados–, es un estimador sesgado de la varianza de la población.</p>
 <p>Las cualidades de un estimador se valoran por el cumplimiento de unas determinadas propiedades. Las más importantes son:</p>
 <ul>
 <li><p>Que sea insesgado, es decir, que no dé errores sistemáticos ni por exceso ni por defecto. Si tomamos muchas muestras y con cada una de ellas calculamos el valor del estimador, como los elementos en las muestras serán distintos (serán los que hayan caído por azar en cada muestra) los valores de ese estimador también serán distintos, pero si es insesgado se situarán en torno al verdadero valor que tiene en la población. Si existe un error sistemático, por exceso o por defecto, a ese error se le denomina (<a href="#fig-dianas" class="quarto-xref">Figura&nbsp;<span>7.1</span></a>).</p></li>
 <li><p>Que sea preciso. Significa que si calculamos muchos valores de ese estimador, cada uno a partir de una muestra distinta, esos valores presentarán poca variabilidad. Si además el estimador es insesgado esa poca variabilidad estará distribuida en torno al verdadero valor de la magnitud estimada.</p></li>
 </ul>
-<div id="fig-dianas" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-dianas" class="fig-normal_0701 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-dianas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_07/f0701_dianas.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+<img src="Figuras_07/f0701_dianas.png" class="fig-normal_0701 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dianas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;7.1: {Analogía de las propiedades de los estimadores con los impactos en una diana.
+Figura&nbsp;7.1: Analogía de las propiedades de los estimadores con los impactos en una diana.
 </figcaption>
 </figure>
 </div>
@@ -419,10 +421,10 @@ Figura&nbsp;7.1: {Analogía de las propiedades de los estimadores con los impact
 </div>
 <p>Si generamos muestras aleatorias de una población Normal y, a partir de cada una de ellas, calculamos un intervalo de confianza del 95 % para la media de la población (<span class="math inline">\(\mu\)</span>) resultará que alrededor del 95 % de esos intervalos incluirá el verdadero valor de <span class="math inline">\(\mu\)</span>. Si el intervalo de confianza fuera del 50 %, solo la incluirían aproximadamente la mitad.</p>
 <p>Nosotros tendremos una sola muestra y nos será imposible saber si el intervalo de confianza construido a partir de sus valores incluye el valor estimado o si lo deja fuera. Si supiéramos que está dentro, podríamos decir que es un intervalo de confianza del 100 %, y si supiéramos que está fuera sería del 0 %. Pero no lo sabemos. Un intervalo de confianza del 95 % es como recibir información de una persona que dice la verdad el 95 % de las veces: sabemos que su fiabilidad global es alta, pero nunca podemos estar seguros de si una afirmación concreta es correcta (<a href="#fig-diceLaVerdad" class="quarto-xref">Figura&nbsp;<span>7.2</span></a>).</p>
-<div id="fig-diceLaVerdad" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-diceLaVerdad" class="fig-normal_0702 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-diceLaVerdad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_07/f0702_diceLaVerdad.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+<img src="Figuras_07/f0702_diceLaVerdad.png" class="fig-normal_0702 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diceLaVerdad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;7.2: Concepto de intervalo de confianza.
@@ -431,10 +433,10 @@ Figura&nbsp;7.2: Concepto de intervalo de confianza.
 </div>
 <p>Hemos dicho que el nivel de confianza lo elegimos nosotros, entonces ¿por qué nos conformamos con el 95 % si podemos establecer el 99 % o incluso el 99,99 %? La respuesta es sencilla: cuanto mayor es el nivel de confianza –cuanto más seguros queremos estar de que el intervalo contiene el valor del parámetro estimado– más ancho será el intervalo. Esto es lógico, dada una cantidad de información (tamaño de la muestra) la mayor seguridad solo se consigue aumentando la anchura del intervalo, el problema es que si queremos mucha seguridad el intervalo sale tan ancho que la información que aporta es irrelevante.</p>
 <p>Supongamos que para estimar la proporción de celíacos en una comunidad se toma una muestra de 100 individuos y que entre ellos se encuentra un celíaco. El estimador puntual es igual al valor en la muestra, en nuestro caso el 1 %. Los intervalos de confianza del 50, 95 y 99,99 % son los que se indican en la <a href="#fig-anchuraIntervalos" class="quarto-xref">Figura&nbsp;<span>7.3</span></a>. El intervalo de confianza del 99,99 % es tan ancho que no aporta información relevante. No hacía falta realizar ningún estudio para saber que el porcentaje está entre 0,00 % (exactamente 0,00005 %) y el 11,8 %.</p>
-<div id="fig-anchuraIntervalos" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-anchuraIntervalos" class="fig-normal_0703 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-anchuraIntervalos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_07/f0703_anchuraIntervalos.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+<img src="Figuras_07/f0703_anchuraIntervalos.png" class="fig-normal_0703 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-anchuraIntervalos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;7.3: Intervalos con distinto nivel de confianza para la estimación de una proporción a partir de una muestra de 100 observaciones y un solo positivo.
@@ -595,6 +597,9 @@ E</td>
 </table>
 
 </div>Podemos comprobar que la media de la media muestral <span class="math inline">\(\bar{\bar{x}}\)</span> (parece una redundancia pero es así como hay que decirlo) coincide con la media de la población: <span class="math display">\[\bar{\bar{x}} = \frac{6+7+8+8+9+10+9+10+11+12}{10} = 9\]</span> Si al tomar una muestra de 3 elementos resulta ser la nº 1 tendremos una media <span class="math inline">\(\bar{x}=6\)</span> y si es la nº 10 tendremos <span class="math inline">\(\bar{x}=12\)</span>, valores alejados de la media de la población, mientras que si nuestra muestra es la nº 5 o la nº 7 el valor estimado coincidirá con el real. Cuando usamos la media de una muestra como estimador de la media de la población no podemos saber si hemos tenido suerte y el valor obtenido queda cerca del valor real o si queda lejos, pero podemos tener la seguridad de que si lo calculamos varias veces –cada vez con una muestra distinta– los valores obtenidos estarán en torno a la media de la población.<p></p>
+<div style="height: 1px;">
+
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -608,6 +613,9 @@ E</td>
 <p>Si descartamos los tres valores más bajos y calculamos la media del resto de la muestra, tendremos un estimador sesgado de la media de la población.</p>
 </div>
 </div>
+<div style="height: 1px;">
+
+</div>
 </section>
 <section id="intervalo-de-confianza-para-la-media" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="intervalo-de-confianza-para-la-media">Intervalo de confianza para la media</h3>
@@ -615,17 +623,17 @@ E</td>
 <section id="en-torno-a-una-sola-observación" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="en-torno-a-una-sola-observación">En torno a una sola observación</h4>
 <p>En la <a href="#fig-ICmedia" class="quarto-xref">Figura&nbsp;<span>7.4</span></a> tenemos representada la distribución cuya media <span class="math inline">\(\mu\)</span> se desea estimar. Se han sombreado las colas de forma que la probabilidad de que una observación tomada al azar caiga en esa zona sea igual a <span class="math inline">\(\alpha\)</span> (<span class="math inline">\(\alpha\)</span>/2 en cada lado). Por tanto, la probabilidad de que caiga en la zona interior es <span class="math inline">\(1-\alpha\)</span>.</p>
-<div id="fig-ICmedia" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-ICmedia" class="fig-normal_0704 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ICmedia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_07/f0704_ICmedia.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+<img src="Figuras_07/f0704_ICmedia.png" class="fig-normal_0704 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ICmedia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;7.4: Intervalos construidos sumando y restando <span class="math inline">\(z_{\alpha/2}\sigma\)</span> a un valor obtenido al azar.
 </figcaption>
 </figure>
 </div>
-<p>Veamos cuánto vale la distancia desde la media <span class="math inline">\(\mu\)</span> al punto <span class="math inline">\(x_{\alpha/2}\)</span> en el que empieza la zona sombreada. Resulta que si $ X (; ) <span class="math inline">\(, la nueva variable aleatoria:\)</span><span class="math inline">\(Z = \frac{X-\mu}{\sigma}\)</span>$ sigue una distribución <span class="math inline">\(\text{N}(0; 1)\)</span> y tiene unas características que nos resultan muy útiles, en particular (ver Apéndice 5.A): <span class="math display">\[ \text{P}(X &gt; x_{\alpha/2}) = \text{P} \left ( Z &gt; \frac{x_{\alpha/2} - \mu}{\sigma} \right) \]</span> Por tanto, podemos escribir: <span class="math display">\[ z_{\alpha/2} = \frac{x_{\alpha/2} - \mu}{\sigma} \]</span></p>
+<p>Veamos cuánto vale la distancia desde la media <span class="math inline">\(\mu\)</span> al punto <span class="math inline">\(x_{\alpha/2}\)</span> en el que empieza la zona sombreada. Resulta que si <span class="math inline">\(X \sim \text{N}(\mu; \sigma)\)</span>, la nueva variable aleatoria: <span class="math display">\[Z = \frac{X-\mu}{\sigma}\]</span> sigue una distribución <span class="math inline">\(\text{N}(0; 1)\)</span> y tiene unas características que nos resultan muy útiles, en particular (ver Apéndice 5.A): <span class="math display">\[ \text{P}(X &gt; x_{\alpha/2}) = \text{P} \left ( Z &gt; \frac{x_{\alpha/2} - \mu}{\sigma} \right) \]</span> Por tanto, podemos escribir: <span class="math display">\[ z_{\alpha/2} = \frac{x_{\alpha/2} - \mu}{\sigma} \]</span></p>
 <p>y despejando <span class="math inline">\(x_{\alpha/2}\)</span>: <span class="math display">\[ x_{\alpha/2} = \mu + z_{\alpha/2} \cdot \sigma \]</span> Como el valor de <span class="math inline">\(\alpha/2\)</span> es conocido (lo hemos elegido nosotros) podemos identificar el valor de <span class="math inline">\(Z\)</span> que deja esa área de cola. Por ejemplo, si <span class="math inline">\(\alpha=0.05\)</span>, <span class="math inline">\(\alpha/2 = 0.025\)</span> y <span class="math inline">\(z_{0.025}=1.96\)</span>. Ya es inmediato deducir que la distancia entre <span class="math inline">\(x_{\alpha/2}\)</span> y <span class="math inline">\(\mu\)</span> es igual a <span class="math inline">\(z_{\alpha/2}\sigma\)</span>. Sumando y restando esa distancia a un valor (<span class="math inline">\(x\)</span>) obtenido al azar, tenemos el intervalo: <span class="math display">\[x \pm z_{\alpha/2}\sigma \]</span> Observe que si el valor de <span class="math inline">\(x\)</span> está en la zona de probabilidad <span class="math inline">\(1 - \alpha\)</span>, tal como ocurre con <span class="math inline">\(x_1\)</span> y <span class="math inline">\(x_2\)</span>, el intervalo obtenido incluye el valor de <span class="math inline">\(\mu\)</span>. Sin embargo, si <span class="math inline">\(x\)</span> cae en la zona de las colas, como ocurre con <span class="math inline">\(x_3\)</span>, el intervalo no llega a alcanzar el valor de <span class="math inline">\(\mu\)</span>. Por tanto, los intervalos calculados con este procedimiento aciertan si el valor obtenido al azar cae entre las dos colas de la distribución, y esto ocurre con una probabilidad <span class="math inline">\(1 - \alpha\)</span>. Por esta razón se denominan intervalos de confianza <span class="math inline">\(1 - \alpha\)</span>. Este nivel de confianza se da normalmente en porcentaje y si <span class="math inline">\(\alpha = 0.05\)</span> hablamos de intervalo de confianza del 95 %.</p>
 </section>
 <section id="en-torno-a-la-media-de-una-muestra" class="level4 unnumbered">
@@ -639,8 +647,8 @@ Figura&nbsp;7.4: Intervalos construidos sumando y restando <span class="math inl
 </ol>
 <!-- -->
 <ol start="3" type="1">
-<li><p>Si los valores de la muestra provienen de una distribución $ X N(; ) $ la media de muestras de tamaño <span class="math inline">\(n\)</span> sigue una distribución $ N(; ) $.</p>
-<p>Al tratar las propiedades del estimador puntual, ya vimos que si $ X N(; ) $ y <span class="math inline">\(\bar{X} = \frac{1}{n} (X_1 + X_2 + \cdots + X_n)\)</span> tenemos que <span class="math inline">\(E(\bar{X}) = \mu\)</span>.</p>
+<li><p>Si los valores de la muestra provienen de una distribución <span class="math inline">\(X \sim N(\mu; \sigma)\)</span> la media de muestras de tamaño <span class="math inline">\(n\)</span> sigue una distribución <span class="math inline">\(N(\mu; \frac{\sigma}{\sqrt{n}})\)</span>.</p>
+<p>Al tratar las propiedades del estimador puntual, ya vimos que si <span class="math inline">\(X \sim N(\mu; \sigma)\)</span> y <span class="math inline">\(\bar{X} = \frac{1}{n} (X_1 + X_2 + \cdots + X_n)\)</span> tenemos que <span class="math inline">\(E(\bar{X}) = \mu\)</span>.</p>
 <p>Ahora podemos añadir que:</p>
 <p><span class="math display">\[\begin{equation*} \label{eq2}
         \begin{split}
@@ -651,10 +659,10 @@ Figura&nbsp;7.4: Intervalos construidos sumando y restando <span class="math inl
   \end{equation*}\]</span> Por tanto, la desviación típica de la distribución de la media muestral es igual a <span class="math inline">\(\sigma\sqrt{n}\)</span>.</p></li>
 </ol>
 <p>En la <a href="#fig-mediaICmedia" class="quarto-xref">Figura&nbsp;<span>7.5</span></a> hemos representado la distribución de la población (campana gris) y la correspondiente a la media muestral, que tiene menos variabilidad y por tanto es más estrecha y también más alta ya que si están en la misma escala el área debe ser la misma (igual a 1). La media de una muestra es un valor de la distribución de la media muestral, es decir, de la campana estrecha. Su desviación típica es <span class="math inline">\(\sigma/\sqrt{n}\)</span>, por tanto: <span class="math display">\[z_{\alpha/2} = \frac{x_{\alpha/2} - \mu} {\frac{\sigma}{\sqrt{n}}} \]</span> Y ya es inmediato deducir que en este caso la distancia entre <span class="math inline">\(x_{\alpha/2}\)</span> y <span class="math inline">\(\mu\)</span> será: <span class="math display">\[z_{\alpha/2}\frac{\sigma}{\sqrt{n}}\]</span></p>
-<div id="fig-mediaICmedia" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-mediaICmedia" class="fig-normal_0705 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-mediaICmedia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_07/f0705_mediaICmedia.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+<img src="Figuras_07/f0705_mediaICmedia.png" class="fig-normal_0705 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mediaICmedia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;7.5: Intervalos construidos en torno a la media de una muestra sumando y restando <span class="math inline">\(z_{\alpha/2}\frac{\sigma}{\sqrt{n}}\)</span>.
@@ -663,12 +671,12 @@ Figura&nbsp;7.5: Intervalos construidos en torno a la media de una muestra suman
 </div>
 <p>Siguiendo el mismo razonamiento que para construir el intervalo en torno a una observación individual, en torno a la media de una muestra obtenemos: <span class="math display">\[\bar{x} \pm z_{\alpha/2} \frac{\sigma}{\sqrt{n}} \]</span> Observe que cuanto mayor es el tamaño de la muestra (mayor valor de <span class="math inline">\(n\)</span>) menor es la desviación típica de la distribución de la media muestral y, por tanto, menor es la anchura del intervalo de confianza.</p>
 </section>
-<section id="y-si-no-conocemos-el-valor-de" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="y-si-no-conocemos-el-valor-de">¿Y si no conocemos el valor de $ $?</h4>
+<section id="y-si-no-conocemos-el-valor-de-sigma" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="y-si-no-conocemos-el-valor-de-sigma">¿Y si no conocemos el valor de <span class="math inline">\(\sigma\)</span>?</h4>
 <p>No conocer el valor de <span class="math inline">\(\sigma\)</span> es lo más habitual, y también lo más lógico, ya que sería extraño conocer el valor de la desviación típica de la población y no conocer el valor de la media. En la expresión del intervalo de confianza lo que hacemos es sustituir el valor de <span class="math inline">\(\sigma\)</span> por su estimador <span class="math inline">\(s\)</span> (desviación típica de la muestra) y esto tiene consecuencias prácticas si la muestra es pequeña.</p>
 <p>Conociendo el valor de <span class="math inline">\(\sigma\)</span> teníamos: <span class="math display">\[\frac{X - \mu} {\sigma} = Z \sim \text{N(0; 1)}\]</span> Al colocar <span class="math inline">\(s\)</span> en el denominador estamos cambiando una constante (el valor de <span class="math inline">\(\sigma\)</span>) por una variable aleatoria. Esto provoca que la variable representada por esta nueva expresión tenga mayor variabilidad y ya no siga una distribución N(0; 1) sino otra similar con algo más de variabilidad. A esta nueva distribución se le denomina <span class="math inline">\(t\)</span> de Student<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p>
 <p><span class="math display">\[ \frac{X - \mu} {s} \sim t-\text{Student}\]</span> La distribución <span class="math inline">\(t\)</span> de Student siempre está relacionada con una estimación del valor de <span class="math inline">\(\sigma\)</span> y su forma depende del tamaño de la muestra utilizada para realizar esa estimación. Si la muestra es grande, pongamos <span class="math inline">\(n&gt;30\)</span>, el valor de <span class="math inline">\(s\)</span> tendrá poca variabilidad –cambiará poco si tomamos otra muestra– y estará próximo a <span class="math inline">\(\sigma\)</span>, de manera que la distribución de <span class="math inline">\(t\)</span> no será muy distinta de la de <span class="math inline">\(Z\)</span>. Sin embargo, si la muestra es pequeña el valor de <span class="math inline">\(s\)</span> tendrá mayor variabilidad y las distribuciones de <span class="math inline">\(t\)</span> y de <span class="math inline">\(Z\)</span> tendrán mayor diferencia.</p>
-<p>Por tanto, la distribución <span class="math inline">\(t\)</span> de Student no es única, sino que depende del tamaño de la muestra con que se calcula la <span class="math inline">\(s\)</span> con la que está asociada. Para identificar a cual nos estamos refiriendo le añadimos un valor que llamamos &lt;<grados de="" libertad="">&gt; y al que asignamos la letra griega <span class="math inline">\(\nu\)</span> (nu) que colocamos como subíndice de <span class="math inline">\(t\)</span>. Los grados de libertad tienen una relación inmediata con el tamaño de muestra: <span class="math inline">\(\nu = n-1\)</span>.</grados></p>
+<p>Por tanto, la distribución <span class="math inline">\(t\)</span> de Student no es única, sino que depende del tamaño de la muestra con que se calcula la <span class="math inline">\(s\)</span> con la que está asociada. Para identificar a cual nos estamos refiriendo le añadimos un valor que llamamos “grados de libertad” y al que asignamos la letra griega <span class="math inline">\(\nu\)</span> (nu) que colocamos como subíndice de <span class="math inline">\(t\)</span>. Los grados de libertad tienen una relación inmediata con el tamaño de muestra: <span class="math inline">\(\nu = n-1\)</span>.</p>
 <p>Ya hemos llegado al final. Cambiamos el valor de <span class="math inline">\(\sigma\)</span> por el de <span class="math inline">\(s\)</span> y el de <span class="math inline">\(z\)</span> por el de <span class="math inline">\(t\)</span> con sus grados de libertad y nos queda: <span class="math display">\[ \bar{x} \pm t_{\nu;\alpha/2} \frac{s}{\sqrt{n}} \]</span></p>
 </section>
 <section id="intervalo-de-confianza-para-el-peso-medio-de-los-paquetes-de-café" class="level4 unnumbered">
@@ -685,14 +693,14 @@ Figura&nbsp;7.5: Intervalos construidos en torno a la media de una muestra suman
 <div class="column" style="width:12%;">
 <p><span class="math inline">\(t_{5; \, 0.025}\)</span>:</p>
 </div><div class="column" style="width:88%;">
-<p>Es el valor de una <span class="math inline">\(t\)</span> de Student con 5 grados de libertad (<span class="math inline">\(=n-1\)</span>) que deja un área de cola de 0,025. Lo podemos obtener usando una hoja de cálculo o las típicas tablas que se incluyen (o incluían) en los libros de estadística. En nuestro caso, <span class="math inline">\(t_{5; \, 0.025} = 2.571\)</span></p>
+<p>Es el valor de una <span class="math inline">\(t\)</span> de Student con 5 grados de libertad (<span class="math inline">\(=n-1\)</span>) que deja un área de cola de 0,025. Lo podemos obtener usando una hoja de cálculo o las típicas tablas que se incluyen (o incluían) en los libros de estadística. En nuestro caso, <span class="math inline">\(t_{5; \, 0{,}025} = 2{,}571\)</span></p>
 </div>
 </div>
 <div class="columns">
 <div class="column" style="width:12%;">
 <p><span class="math inline">\(s\)</span>:</p>
 </div><div class="column" style="width:88%;">
-<p>Desviación típica de los valores de la muestra. <span class="math inline">\(s=8.542\)</span>.</p>
+<p>Desviación típica de los valores de la muestra. <span class="math inline">\(s=8{,}542\)</span>.</p>
 </div>
 </div>
 <div class="columns">
@@ -702,7 +710,7 @@ Figura&nbsp;7.5: Intervalos construidos en torno a la media de una muestra suman
 <p>Tamaño de la muestra. <span class="math inline">\(n=6\)</span></p>
 </div>
 </div>
-<p>Aplicando esta fórmula obtenemos que el intervalo de confianza del 95 % para la media de la población es: <span class="math inline">\(997.17 \pm 8.97\)</span>.</p>
+<p>Aplicando esta fórmula obtenemos que el intervalo de confianza del 95 % para la media de la población es: <span class="math inline">\(997{,}17 \pm 8{,}97\)</span>.</p>
 <p>Los cálculos son muy fáciles de realizar. Lo importante es entender bien qué significa la información que da el intervalo y –como siempre– asegurarse de que la muestra utilizada es representativa de la población de interés.</p>
 </section>
 </section>
@@ -723,12 +731,12 @@ Figura&nbsp;7.5: Intervalos construidos en torno a la media de una muestra suman
 <section id="método-exacto" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="método-exacto">Método exacto</h4>
 <p>Empezamos identificando el valor de la proporción <span class="math inline">\(p_1\)</span> de cumplidores en la población que da una probabilidad de 0,025 de tener 58 o más cumplidores en una muestra de <span class="math inline">\(n\,\)</span>=100 individuos. Observe que si <span class="math inline">\(p\)</span> es grande –pongamos 90 %– será muy probable tener 58 o más cumplidores, mientras que si <span class="math inline">\(p\)</span> es bajo –pongamos del 10 %– esa probabilidad será prácticamente nula.</p>
-<p>En la <a href="#tbl-Encima">Tabla 7.2</a> hemos realizado un barrido de valores de <span class="math inline">\(p\)</span> calculando para cada uno de ellos la probabilidad buscada, el uso de una hoja de cálculo facilita mucho esta tarea. En la tabla de la izquierda vemos que esa proporción está entre 0,4 y 0,5. Realizando barridos cada vez más finos llegamos a que el valor de <span class="math inline">\(p_1\)</span> con tres decimales es igual a 0,477.</p>
-<p>De manera análoga podemos calcular el valor de <span class="math inline">\(p_2\)</span> que da una probabilidad de 0,025 de tener 58 o menos cumplidores. La <a href="#tbl-Debajo">Tabla 7.3</a> muestra el barrido realizado para llegar a que el valor de <span class="math inline">\(p_2\)</span> es igual a 0,678.</p>
-<div id="fig-intervaloExacto" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<p>En la <a href="#tbl-0702">Tabla 7.2</a> hemos realizado un barrido de valores de <span class="math inline">\(p\)</span> calculando para cada uno de ellos la probabilidad buscada, el uso de una hoja de cálculo facilita mucho esta tarea. En la tabla de la izquierda vemos que esa proporción está entre 0,4 y 0,5. Realizando barridos cada vez más finos llegamos a que el valor de <span class="math inline">\(p_1\)</span> con tres decimales es igual a 0,477.</p>
+<p>De manera análoga podemos calcular el valor de <span class="math inline">\(p_2\)</span> que da una probabilidad de 0,025 de tener 58 o menos cumplidores. La <a href="#tbl-0703">Tabla 7.3</a> muestra el barrido realizado para llegar a que el valor de <span class="math inline">\(p_2\)</span> es igual a 0,678.</p>
+<div id="fig-intervaloExacto" class="fig-normal_0706 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-intervaloExacto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_07/f0706_intervaloExacto.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+<img src="Figuras_07/f0706_intervaloExacto.png" class="fig-normal_0706 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-intervaloExacto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;7.6: Intervalo de confianza del 95% para la proporción en la población si en un muestra de n=100 individuos se encuentran X=58 cumplidores.
@@ -736,44 +744,244 @@ Figura&nbsp;7.6: Intervalo de confianza del 95% para la proporción en la poblac
 </figure>
 </div>
 <p>Por tanto, dadas las evidencias que tenemos (<span class="math inline">\(n\)</span>=100; <span class="math inline">\(X\)</span>=58) podemos afirmar que es poco probable que la proporción en la población sea menor del 44,7% y también es poco probable que supere el 67,8%. Concretamente, ese ``poco probable’’ significa una probabilidad del 2,5%. Luego la probabilidad de que se encuentre entre el 47,7 y el 67,8% es del 95%. Ese es el intervalo de confianza del 95%.</p>
-<div id="tbl-Encima" class="anchored">
+<div id="tbl-0702" class="anchored">
 
-<table class="tabla-0702 caption-top table">
+<table class="tabla-0702_Titulo caption-top table">
 <caption>Tabla 7.2: Determinación de la proporción en la población (p) que da una probabilidad de 0,025 de tener un número de cumplidores <strong>igual o mayor</strong> que los obtenidos en la muestra.</caption>
 <tbody>
-<tr class="odd">
-<td></td>
+<tr class="odd" style="height:0;">
+<td style="padding: 0"></td>
 </tr>
 </tbody>
 </table>
 
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="Figuras_07/f_Tabla0702.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
-</div>
-<div id="tbl-Encima" class="anchored">
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="tabla-wrapper_T0702">
 
 <table class="tabla-0702 caption-top table">
-<caption>Tabla 7.2: Determinación de la proporción en la población (p) que da una probabilidad de 0,025 de tener un número de cumplidores <strong>igual o mayor</strong> que los obtenidos en la muestra.</caption>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 75%">
+</colgroup>
 <tbody>
 <tr class="odd">
-<td></td>
+<td><em>p</em></td>
+<td>P(X ≥ 58) =<br>
+1 - B(57; 100; <em>p</em>)</td>
+</tr>
+<tr class="even">
+<td>0,2</td>
+<td>0,0000</td>
+</tr>
+<tr class="odd">
+<td>0,3</td>
+<td>0,0000</td>
+</tr>
+<tr class="even">
+<td><strong>0,4</strong></td>
+<td><strong>0,0002</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>0,5</strong></td>
+<td><strong>0,0666</strong></td>
+</tr>
+<tr class="even">
+<td>0,2</td>
+<td>0,6967</td>
+</tr>
+<tr class="odd">
+<td>0,2</td>
+<td>0,9960</td>
 </tr>
 </tbody>
 </table>
 
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="Figuras_07/f_Tabla0703.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
+</div><div class="column" style="width:50%;">
+<div class="tabla-wrapper_T0702">
+
+<table class="tabla-0702 caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 75%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><em>p</em></td>
+<td>P(X ≥ 58) =<br>
+1 - B(57; 100; <em>p</em>)</td>
+</tr>
+<tr class="even">
+<td>0,470</td>
+<td>0,0177</td>
+</tr>
+<tr class="odd">
+<td>0,471</td>
+<td>0,0186</td>
+</tr>
+<tr class="even">
+<td>0,472</td>
+<td>0,0196</td>
+</tr>
+<tr class="odd">
+<td>0,473</td>
+<td>0,0205</td>
+</tr>
+<tr class="even">
+<td>0,474</td>
+<td>0,0216</td>
+</tr>
+<tr class="odd">
+<td>0,475</td>
+<td>0,0226</td>
+</tr>
+<tr class="even">
+<td>0,476</td>
+<td>0,0237</td>
+</tr>
+<tr class="odd">
+<td><strong>0,477</strong></td>
+<td><strong>0,0249</strong></td>
+</tr>
+<tr class="even">
+<td>0,478</td>
+<td>0,0261</td>
+</tr>
+<tr class="odd">
+<td>0,479</td>
+<td>0,0273</td>
+</tr>
+<tr class="even">
+<td>0,480</td>
+<td>0,0286</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="tbl-0703" class="anchored">
+
+<table class="tabla-0702_Titulo caption-top table">
+<caption>Tabla 7.3: Determinación de la proporción en la población (p) que da una probabilidad de 0,025 de tener un número de cumplidores <strong>menor o igual</strong> que los obtenidos en la muestra.</caption>
+<tbody>
+<tr class="odd" style="height:0;">
+<td style="padding: 0"></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="tabla-wrapper_T0703">
+
+<table class="tabla-0702 caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 75%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><em>p</em></td>
+<td>P(X ≤ 58) =<br>
+1 - B(58; 100; <em>p</em>)</td>
+</tr>
+<tr class="even">
+<td>0,1</td>
+<td>1,0000</td>
+</tr>
+<tr class="odd">
+<td>0,3</td>
+<td>1,0000</td>
+</tr>
+<tr class="even">
+<td><strong>0,5</strong></td>
+<td><strong>0,9557</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>0,7</strong></td>
+<td><strong>0,0072</strong></td>
+</tr>
+<tr class="even">
+<td>0,9</td>
+<td>1,0000</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div><div class="column" style="width:50%;">
+<div class="tabla-wrapper_T0703">
+
+<table class="tabla-0702 caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 75%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><em>p</em></td>
+<td>P(X ≤ 58) =<br>
+1 - B(58; 100; <em>p</em>)</td>
+</tr>
+<tr class="even">
+<td>0,670</td>
+<td>0,0371</td>
+</tr>
+<tr class="odd">
+<td>0,671</td>
+<td>0,0354</td>
+</tr>
+<tr class="even">
+<td>0,672</td>
+<td>0,0337</td>
+</tr>
+<tr class="odd">
+<td>0,673</td>
+<td>0,0321</td>
+</tr>
+<tr class="even">
+<td>0,674</td>
+<td>0,0306</td>
+</tr>
+<tr class="odd">
+<td>0,675</td>
+<td>0,0291</td>
+</tr>
+<tr class="even">
+<td>0,676</td>
+<td>0,0277</td>
+</tr>
+<tr class="odd">
+<td>0,677</td>
+<td>0,0263</td>
+</tr>
+<tr class="even">
+<td><strong>0,678</strong></td>
+<td>0,0250</td>
+</tr>
+<tr class="odd">
+<td>0,679</td>
+<td>0,0238</td>
+</tr>
+<tr class="even">
+<td>0,680</td>
+<td>0,0226</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
 </div>
 </section>
 <section id="usando-la-distribución-normal-como-aproximación-a-la-binomial" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="usando-la-distribución-normal-como-aproximación-a-la-binomial">Usando la distribución Normal como aproximación a la binomial</h4>
-<p>Al final de capítulo 5 (“La distribución Normal como aproximación a la binomial”) vimos que una variable aleatoria con distribución binomial y <span class="math inline">\(p=0,5\)</span> presenta una distribución simétrica en torno a su valor medio, y a medida que aumenta el valor de <span class="math inline">\(n\)</span> su forma se parece cada vez más a la de una distribución Normal. Si <span class="math inline">\(p \neq 0.5\)</span> la distribución también puede considerarse simétrica si el valor de <span class="math inline">\(n\)</span> es &lt;<grande>&gt;. Lo que significa &lt;<grande>&gt; depende de lo alejado que esté <span class="math inline">\(p\)</span> de 0,5. Una regla empírica es considerar que la distribución Normal es una buena aproximación a la binomial cuando se cumple que <span class="math inline">\(np&gt;5\)</span> y <span class="math inline">\(n(1-p)&gt;5\)</span>.</grande></grande></p>
+<p>Al final de capítulo 5 (“La distribución Normal como aproximación a la binomial”) vimos que una variable aleatoria con distribución binomial y <span class="math inline">\(p=0,5\)</span> presenta una distribución simétrica en torno a su valor medio, y a medida que aumenta el valor de <span class="math inline">\(n\)</span> su forma se parece cada vez más a la de una distribución Normal. Si <span class="math inline">\(p \neq 0.5\)</span> la distribución también puede considerarse simétrica si el valor de <span class="math inline">\(n\)</span> es “grande”. Lo que significa “grande” depende de lo alejado que esté <span class="math inline">\(p\)</span> de 0,5. Una regla empírica es considerar que la distribución Normal es una buena aproximación a la binomial cuando se cumple que <span class="math inline">\(np&gt;5\)</span> y <span class="math inline">\(n(1-p)&gt;5\)</span>.</p>
 <p>Recordadas las condiciones en que se puede realizar la aproximación, volvamos a nuestros datos. Se ha realizado una encuesta entre los estudiantes de una universidad y en una muestra de <span class="math inline">\(n=100\)</span> estudiantes hay 58 con cuenta en una determinada red social. Queremos dar un intervalo de confianza para la proporción de estudiantes de esa universidad que tienen cuenta. El número de cumplidores, <span class="math inline">\(X\)</span>, que aparecen en la muestra es una variable aleatoria con distribución binomial, por tanto:</p>
 <span class="math display">\[\begin{equation*}
     \begin{split}
@@ -796,11 +1004,11 @@ Figura&nbsp;7.6: Intervalo de confianza del 95% para la proporción en la poblac
 <li><p>Consideramos que: <span class="math display">\[\frac{p\; - \;\hat{p}}{\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}}\]</span> sigue una distribución <span class="math inline">\(\text{N}(0; 1)\)</span> aunque los valores de <span class="math inline">\(\hat{p}\)</span> que usamos para estimar la desviación típica son estimados. Es una aproximación razonable si el tamaño de muestra es grande, y seguramente así será si se está usando la aproximación Normal. Si se trabaja con tamaños de muestra pequeños es mejor usar el método exacto.</p></li>
 <li><p>El tamaño de la población, <span class="math inline">\(N\)</span>, no aparece en la fórmula ya que se considera infinito. Esto no es una exageración. Lo habitual es que la población sea grande, y los resultados apenas cambian si la población es grande, muy grande o enorme. Más adelante lo comentamos con detalle.</p></li>
 </ul>
-<p>Con nuestros valores y para una confianza del 95 %, recordando que <span class="math inline">\(z_{0.025} = 1.96\)</span>, tenemos: <span class="math display">\[0.58 \pm 1.96 \sqrt{\frac{0.58 \cdot 0.42}{100}} = 0.58 \pm  0.098 = (0.483;\; 0,677)^{}\]</span> Este intervalo es prácticamente el mismo que el obtenido con el método exacto. La anchura del intervalo no es proporcional a su nivel de confianza. Es más probable que el verdadero valor se encuentre dentro del intervalo de confianza del 50 % que en las «extensiones» que añadimos para pasar de una confianza del 99 % al 99,99 %, aunque estas últimas sean mucho más anchas (<a href="#fig-anchuraIntervalos_2" class="quarto-xref">Figura&nbsp;<span>7.7</span></a>).</p>
-<div id="fig-anchuraIntervalos_2" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<p>Con nuestros valores y para una confianza del 95 %, recordando que <span class="math inline">\(z_{0{,}025} = 1{,}96\)</span>, tenemos: <span class="math display">\[0{,}58 \pm 1{,}96 \sqrt{\frac{0.58 \cdot 0{,}42}{100}} = 0{,}58 \pm  0{,}098 = (0{,}483;\; 0{,}677)\]</span> Este intervalo es prácticamente el mismo que el obtenido con el método exacto. La anchura del intervalo no es proporcional a su nivel de confianza. Es más probable que el verdadero valor se encuentre dentro del intervalo de confianza del 50 % que en las «extensiones» que añadimos para pasar de una confianza del 99 % al 99,99 %, aunque estas últimas sean mucho más anchas (<a href="#fig-anchuraIntervalos_2" class="quarto-xref">Figura&nbsp;<span>7.7</span></a>).</p>
+<div id="fig-anchuraIntervalos_2" class="fig-normal_0707 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-anchuraIntervalos_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_07/f0707_anchuraIntervalos_2.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+<img src="Figuras_07/f0707_anchuraIntervalos_2.png" class="fig-normal_0707 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-anchuraIntervalos_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;7.7: Intervalos con distinto nivel de confianza para una proporción a partir de una muestra de 100 observaciones y 58 con la característica analizada.
@@ -830,19 +1038,19 @@ Figura&nbsp;7.7: Intervalos con distinto nivel de confianza para una proporción
 <section id="para-estimar-la-media" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="para-estimar-la-media">Para estimar la media</h3>
 <p>Partiendo de la expresión del intervalo de confianza para la media de la población, vamos a determinar el tamaño de muestra necesario para estimar el peso medio de los paquetes de café (ejemplo del apartado 7.3) con una confianza del 95 % y un margen de error de 2 g. Considerando que el tamaño de muestra resultante será mayor de 30 unidades<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>, podemos usar la distribución Normal estandarizada igualando el margen de error al valor deseado. Tenemos:</p>
-<p><span class="math display">\[z_{0.025} \frac{\sigma}{\sqrt{n}} =2 \]</span> El valor de <span class="math inline">\(\sigma\)</span> se puede conocer a partir de datos históricos, o se puede establecer un valor razonable intentando pecar más bien por exceso. Otra opción es estimarlo a partir de los valores de una primera muestra piloto tomada con este objetivo. En nuestro caso, considerando que la muestra piloto son las 6 unidades del ejemplo (<span class="math inline">\(s = 8.542\)</span>), llamando <span class="math inline">\(E\)</span> al margen de error y despejando <span class="math inline">\(n\)</span> de la expresión anterior: <span class="math display">\[n = \left ( \frac{z_{\alpha/2}\sigma}{E} \right )^2 = \left ( \frac{1.96 \cdot 8.542}{2} \right )^2 = 70.1 \]</span> El tamaño de muestra siempre se redondea por exceso para que el margen de error no supere el valor establecido, de manera que el resultado final es <span class="math inline">\(n=71\)</span>. A la vista de la desviación típica obtenida en las 71 observaciones se puede actualizar el margen de error o, si es necesario, realizar nuevas observaciones para llegar al margen de error previamente establecido.</p>
+<p><span class="math display">\[z_{0{,}025} \frac{\sigma}{\sqrt{n}} =2\]</span> El valor de <span class="math inline">\(\sigma\)</span> se puede conocer a partir de datos históricos, o se puede establecer un valor razonable intentando pecar más bien por exceso. Otra opción es estimarlo a partir de los valores de una primera muestra piloto tomada con este objetivo<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>. En nuestro caso, considerando que la muestra piloto son las 6 unidades del ejemplo (<span class="math inline">\(s = 8{,}542\)</span>), llamando <span class="math inline">\(E\)</span> al margen de error y despejando <span class="math inline">\(n\)</span> de la expresión anterior: <span class="math display">\[n = \left ( \frac{z_{\alpha/2}\sigma}{E} \right )^2 = \left ( \frac{1{,}96 \cdot 8{,}542}{2} \right )^2 = 70{,}1 \]</span> El tamaño de muestra siempre se redondea por exceso para que el margen de error no supere el valor establecido, de manera que el resultado final es <span class="math inline">\(n=71\)</span>. A la vista de la desviación típica obtenida en las 71 observaciones se puede actualizar el margen de error o, si es necesario, realizar nuevas observaciones para llegar al margen de error previamente establecido.</p>
 <p>Observe que –como es lógico– el tamaño de muestra requerido aumenta si se desea un mayor nivel de confianza (aumenta el valor de <span class="math inline">\(z_{\alpha/2}\)</span>) o un menor margen de error (está en el denominador). También aumenta al aumentar la variabilidad de los datos, ya que mayor variabilidad significa también una mayor incertidumbre que solo se compensa con una mayor cantidad de datos.</p>
 </section>
 <section id="para-estimar-una-proporción" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="para-estimar-una-proporción">Para estimar una proporción</h3>
-<p>Despejando el valor de <span class="math inline">\(n\)</span> en la expresión del margen de error de su intervalo de confianza: <span class="math display">\[n = \frac{p(1-p) \cdot z_{\alpha/2}^2}{E^2} \]</span> El valor de <span class="math inline">\(p\)</span> no lo conocemos cuando nos planteamos qué tamaño debe tener la muestra, puesto que ese es el valor que queremos estimar. Lo habitual es ponerse en el caso más desfavorable y considerar <span class="math inline">\(p=0.5\)</span> de manera que <span class="math inline">\(p(1-p) = 0.25\)</span> que es el valor máximo que puede tomar ese producto. Si finalmente el valor de <span class="math inline">\(p\)</span> es distinto de 0,5, el margen de error será menor que el previamente considerado, pero nunca mayor. Si estamos seguros que la proporción que buscamos es como máximo del 20 %, podemos poner <span class="math inline">\(p=0.2\)</span>.</p>
-<p>En el ejemplo de la estimación de la proporción de estudiantes que tienen cuenta en una determinada red social, si queremos realizar esa estimación con un nivel de confianza del 95 % y un margen de error del 5 %, considerando<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> <span class="math inline">\(p=0.5\)</span> se obtiene <span class="math inline">\(n=384.1 \rightarrow 385\)</span>.</p>
+<p>Despejando el valor de <span class="math inline">\(n\)</span> en la expresión del margen de error de su intervalo de confianza: <span class="math display">\[n = \frac{p(1-p) \cdot z_{\alpha/2}^2}{E^2} \]</span> El valor de <span class="math inline">\(p\)</span> no lo conocemos cuando nos planteamos qué tamaño debe tener la muestra, puesto que ese es el valor que queremos estimar. Lo habitual es ponerse en el caso más desfavorable y considerar <span class="math inline">\(p=0{,}5\)</span> de manera que <span class="math inline">\(p(1-p) = 0{,}25\)</span> que es el valor máximo que puede tomar ese producto. Si finalmente el valor de <span class="math inline">\(p\)</span> es distinto de 0,5, el margen de error será menor que el previamente considerado, pero nunca mayor. Si estamos seguros que la proporción que buscamos es como máximo del 20 %, podemos poner <span class="math inline">\(p=0{,}2\)</span>.</p>
+<p>En el ejemplo de la estimación de la proporción de estudiantes que tienen cuenta en una determinada red social, si queremos realizar esa estimación con un nivel de confianza del 95 % y un margen de error del 5 %, considerando<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> <span class="math inline">\(p=0{,}5\)</span> se obtiene <span class="math inline">\(n=384{,}1 \rightarrow 385\)</span>.</p>
 <section id="población-finita" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="población-finita">Población finita</h4>
-<p>La peculiaridad de las poblaciones finitas tiene que ver con que el muestreo se realiza sin reposición. Una vez elegido un elemento de la población ese ya no forma parte de los elegibles y, en consecuencia, las probabilidades de incorporar a la muestra elementos de un cierto tipo depende de cuantos hayan salido ya de ese tipo. Este problema se resuelve aplicando un factor de corrección a la desviación típica del estimador puntual, es lo que llamamos “factor de corrección por población finita”. Siendo <span class="math inline">\(N\)</span> el tamaño de la población y <span class="math inline">\(n\)</span> el de la muestra, tiene la expresión<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>:</p>
+<p>La peculiaridad de las poblaciones finitas tiene que ver con que el muestreo se realiza sin reposición. Una vez elegido un elemento de la población ese ya no forma parte de los elegibles y, en consecuencia, las probabilidades de incorporar a la muestra elementos de un cierto tipo depende de cuantos hayan salido ya de ese tipo. Este problema se resuelve aplicando un factor de corrección a la desviación típica del estimador puntual, es lo que llamamos “factor de corrección por población finita”. Siendo <span class="math inline">\(N\)</span> el tamaño de la población y <span class="math inline">\(n\)</span> el de la muestra, tiene la expresión<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>:</p>
 <p><span class="math display">\[f = \sqrt{\frac{N-n}{N-1}}\]</span> Si lo población es infinita no importa cuantos elementos hayan salido de un tipo, su proporción se mantiene constante. Si es finita pero <span class="math inline">\(N \gg n\)</span> en la expresión anterior se ve que el valor de <span class="math inline">\(f\)</span> es prácticamente igual a 1.</p>
 <p>Incluyendo este factor de corrección, la expresión del intervalo de confianza para una proporción queda: <span class="math display">\[\hat{p} \pm z_{\alpha/2} \sqrt{\frac{N-n}{N-1}} \cdot \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}  \]</span></p>
-<p>y despejando el valor de <span class="math inline">\(n\)</span>: <span class="math display">\[n = \frac{z_{\alpha/2}^2 \, N \, p(1 - p)}{E^2 (N - 1) + z_{\alpha/2}^2 \, p(1 - p)}\]</span> Esta es una fórmula cerrada que no tiene ningún misterio. El nivel de confianza está relacionado con el valor de <span class="math inline">\(z_{\alpha/2}\)</span>. Para un nivel de confianza del 95 % (<span class="math inline">\(1-\alpha = 0.95\)</span> y, por tanto, <span class="math inline">\(\alpha/2 = 0.025\)</span>) tenemos que <span class="math inline">\(z_{0.025} = 1.96\)</span>. Observe también que si <span class="math inline">\(N\)</span> es muy grande en el denominador se puede ignorar el valor del segundo término frente al primero y considerando <span class="math inline">\(N \thickapprox N-1\)</span> nos queda la expresión que ya habíamos obtenido: <span class="math display">\[n = \frac{p(1-p) \cdot z_{\alpha/2}^2}{E^2}\]</span> Con la ayuda de una hoja de cálculo se puede construir una tabla como la <a href="#tbl-tamañoMuestra">7.4</a> donde se indica el tamaño de muestra necesario para estimar una proporción en función del tamaño de la población y el margen de error que se está dispuesto a asumir. Los valores que figuran son para un nivel de confianza del 95 %, pero la tabla se puede construir de manera que ese valor se pueda cambiar fácilmente.</p>
+<p>y despejando el valor de <span class="math inline">\(n\)</span>: <span class="math display">\[n = \frac{z_{\alpha/2}^2 \, N \, p(1 - p)}{E^2 (N - 1) + z_{\alpha/2}^2 \, p(1 - p)}\]</span> Esta es una fórmula cerrada que no tiene ningún misterio. El nivel de confianza está relacionado con el valor de <span class="math inline">\(z_{\alpha/2}\)</span>. Para un nivel de confianza del 95 % (<span class="math inline">\(1-\alpha = 0{,}95\)</span> y, por tanto, <span class="math inline">\(\alpha/2 = 0{,}025\)</span>) tenemos que <span class="math inline">\(z_{0.025} = 1{,}96\)</span>. Observe también que si <span class="math inline">\(N\)</span> es muy grande en el denominador se puede ignorar el valor del segundo término frente al primero y considerando <span class="math inline">\(N \thickapprox N-1\)</span> nos queda la expresión que ya habíamos obtenido: <span class="math display">\[n = \frac{p(1-p) \cdot z_{\alpha/2}^2}{E^2}\]</span> Con la ayuda de una hoja de cálculo se puede construir una tabla como la <a href="#tbl-tamañoMuestra">7.4</a> donde se indica el tamaño de muestra necesario para estimar una proporción en función del tamaño de la población y el margen de error que se está dispuesto a asumir. Los valores que figuran son para un nivel de confianza del 95 %, pero la tabla se puede construir de manera que ese valor se pueda cambiar fácilmente.</p>
 <div id="tbl-tamañoMuestra" class="tabla-wrapper_T0704 anchored">
 
   <div class="tabla-caption">
@@ -1122,10 +1330,10 @@ Figura&nbsp;7.7: Intervalos con distinto nivel de confianza para una proporción
 </div>
 </div>
 <p>En la <a href="#tbl-tamañoMuestra">Tabla 7.4</a> fijándonos, por ejemplo, en la columna que corresponde a un margen de error del 3 % vemos que el tamaño de muestra aumenta con el tamaño de la población, pero a partir de cierto tamaño de la población aumenta muy lentamente. Para una población de 50.000 individuos hace falta una muestra de 1.045, pero si multiplicamos por 10 el tamaño de la población (pasamos de 50 a 500 mil) el tamaño de muestra apenas cambia (pasa de 1.045 a 1.065) y a partir de ahí se mantiene prácticamente constante.</p>
-<div id="fig-grafTamañoMuestra" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-grafTamañoMuestra" class="fig-normal_0708 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-grafTamañoMuestra-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_07/f0708_grafTamañoMuestra.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+<img src="Figuras_07/f0708_grafTamañoMuestra.png" class="fig-normal_0708 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-grafTamañoMuestra-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;7.8: Tamaño de muestra en función del tamaño de la población para los márgenes de error (E) que se indican, bajo el supuesto de <span class="math inline">\(p=q=0.5\)</span> y un nivel de confianza del 95 %.
@@ -1133,10 +1341,10 @@ Figura&nbsp;7.8: Tamaño de muestra en función del tamaño de la población par
 </figure>
 </div>
 <p>Una analogía muy eficaz para convencernos de que el tamaño de la muestra no debe crecer proporcionalmente con el de la población es el de la cuchara para catar la sopa. Cuando tenemos invitados y usamos una olla mucho mayor que la habitual, tamaño de la cuchara para probarla (el tamaño de la muestra) sigue siendo el mismo, y a nadie le extraña que esto sea así.</p>
-<div id="fig-cucharillaOlla" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-cucharillaOlla" class="fig-normal_0709 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-cucharillaOlla-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_07/f0709_cucharillaOlla.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+<img src="Figuras_07/f0709_cucharillaOlla.png" class="fig-normal_0709 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cucharillaOlla-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;7.9: La cuchara es la misma. No importa el tamaño de la olla, pero hay que remover bien para que la muestra sea representativa.
@@ -1169,14 +1377,14 @@ Figura&nbsp;7.9: La cuchara es la misma. No importa el tamaño de la olla, pero 
 <p>Hay casos en que el objetivo es conocer el tamaño de la población, como cuando se quiere estimar la abundancia de un cierto tipo de animal en un territorio, ya sea porque es una especie en peligro de extinción o una especie invasora o dañina. Una forma habitual de hacerlo es mediante la técnica denominada “captura y recaptura”.</p>
 <section id="cuántos-peces-hay-en-un-lago" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="cuántos-peces-hay-en-un-lago">¿Cuántos peces hay en un lago?</h3>
-<p>La idea es capturar un cierto número de peces sin dañarlos, marcarlos y volverlos a soltar. Pasado un cierto tiempo se realiza otra captura y se cuenta el número de los que aparecen marcados. Un método habitual de captura de peces es el llamado electropesca que consiste en aplicar una descarga eléctrica que los aturde temporalmente y los deja flotando de manera que se pueden capturar fácilmente. Tanto las capturas como las recapturas se pueden realizar en distintos puntos del lago y la forma de hacerlas dependerá del tipo de peces que lo habitan o, si interesa contar solo los de una especie, de los hábitos que tenga esa especie.</p>
+<p>La idea es capturar un cierto número de peces sin dañarlos, marcarlos y volverlos a soltar<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a>. Pasado un cierto tiempo se realiza otra captura y se cuenta el número de los que aparecen marcados. Un método habitual de captura de peces es el llamado electropesca que consiste en aplicar una descarga eléctrica que los aturde temporalmente y los deja flotando de manera que se pueden capturar fácilmente. Tanto las capturas como las recapturas se pueden realizar en distintos puntos del lago y la forma de hacerlas dependerá del tipo de peces que lo habitan o, si interesa contar solo los de una especie, de los hábitos que tenga esa especie.</p>
 <section id="estimación-puntual-2" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="estimación-puntual-2">Estimación puntual</h4>
-<p>Sea <span class="math inline">\(N\)</span> el número total de peces en el lago y <span class="math inline">\(M\)</span> el número de los capturados y marcados en la primera pesca; la proporción de peces marcados en el lago será igual a <span class="math inline">\(M/N\)</span>. En la repesca capturamos una muestra de <span class="math inline">\(n\)</span> peces y aparecen <span class="math inline">\(m\)</span> marcados. Entendiendo que esta segunda muestra es representativa de los peces que hay en el lago, la proporción de los que aparecen marcados <span class="math inline">\(m/n\)</span> será un estimador de la proporción de peces marcados en el lago. Es decir: <span class="math display">\[\frac{m}{n}~~ \text {es un estimador de:}~~ \frac{M}{N}\]</span> Así pues, si consideramos que: <span class="math display">\[\frac{m}{n} \approx \frac{M}{N}\]</span> despejar <span class="math inline">\(N\)</span> y tenemos: <span class="math display">\[\hat{N} = \frac{M \cdot n}{m}\]</span> Con los datos de la <a href="#fig-pescaRepesca" class="quarto-xref">Figura&nbsp;<span>7.10</span></a> nuestra estimación para el número total de peces es $ = (15)/3=75$. No se trata de un método exacto, en realidad en el dibujo hay 67 peces y, por tanto, cometeríamos un error del 12 %, pero permite tener un orden de magnitud que puede ser útil a efectos prácticos.</p>
-<div id="fig-pescaRepesca" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<p>Sea <span class="math inline">\(N\)</span> el número total de peces en el lago y <span class="math inline">\(M\)</span> el número de los capturados y marcados en la primera pesca; la proporción de peces marcados en el lago será igual a <span class="math inline">\(M/N\)</span>. En la repesca capturamos una muestra de <span class="math inline">\(n\)</span> peces y aparecen <span class="math inline">\(m\)</span> marcados. Entendiendo que esta segunda muestra es representativa de los peces que hay en el lago, la proporción de los que aparecen marcados <span class="math inline">\(m/n\)</span> será un estimador de la proporción de peces marcados en el lago. Es decir: <span class="math display">\[\frac{m}{n}~~ \text {es un estimador de:}~~ \frac{M}{N}\]</span> Así pues, si consideramos que: <span class="math display">\[\frac{m}{n} \approx \frac{M}{N}\]</span> Podemos despejar <span class="math inline">\(N\)</span> y tenemos: <span class="math display">\[\hat{N} = \frac{M \cdot n}{m}\]</span> Con los datos de la <a href="#fig-pescaRepesca" class="quarto-xref">Figura&nbsp;<span>7.10</span></a> nuestra estimación para el número total de peces es <span class="math inline">\(\hat{N} = (15\cdot15)/3=75\)</span>. No se trata de un método exacto, en realidad en el dibujo hay 67 peces y, por tanto, cometeríamos un error del 12 %, pero permite tener un orden de magnitud que puede ser útil a efectos prácticos.</p>
+<div id="fig-pescaRepesca" class="fig-normal_0710 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pescaRepesca-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_07/f0710_pescaRepesca.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+<img src="Figuras_07/f0710_pescaRepesca.png" class="fig-normal_0710 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pescaRepesca-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;7.10: Estimación del número de peces por el procedimiento de pesca y repesca.
@@ -1187,24 +1395,24 @@ Figura&nbsp;7.10: Estimación del número de peces por el procedimiento de pesca
 <section id="intervalo-de-confianza-2" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="intervalo-de-confianza-2">Intervalo de confianza</h4>
 <p>Supongamos que se realiza una primera captura de <span class="math inline">\(M=100\)</span> peces y una recaptura, <span class="math inline">\(n\)</span>, del mismo número en la que aparecen <span class="math inline">\(m=10\)</span> marcados. El estimador puntual del número de peces en el lago es:</p>
-<p><span class="math display">\[N = \frac{M \cdot n}{m} = \frac{100 \cdot 100}{10} = 1000\]</span> Para construir un intervalo de confianza podemos considerar que el número de peces que aparecen marcados es una variable aleatoria con distribución binomial y parámetros <span class="math inline">\(n=100\)</span> (número de peces que se inspeccionan en la repesca) y un valor de <span class="math inline">\(p\)</span> igual a la proporción de peces marcados en el lago (proporción en la población<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>).</p>
-<p>En primer lugar vamos a determinar el valor de <span class="math inline">\(p\)</span> que hace que la probabilidad de que aparezcan 10 o más peces marcados sea igual a 0,025, es decir, el valor <span class="math inline">\(p_1\)</span> que hace que se cumpla la igualdad: <span class="math display">\[0.025 = 1-\text{B}(9; 100; p_1) \]</span> donde $ (x; n; p)$ se refiere a $ (X x)$ siendo <span class="math inline">\(X\)</span> una variable aleatoria con distribución binomial y parámetros <span class="math inline">\(n\)</span> y <span class="math inline">\(p\)</span>.</p>
-<p>Una forma fácil de encontrar el valor de <span class="math inline">\(p_1\)</span> es tanteando con la ayuda de una hoja de cálculo. Se obtiene <span class="math inline">\(p_1 = 0.0490\)</span>.</p>
-<p>A continuación determinamos el valor de <span class="math inline">\(p\)</span> que hace que la probabilidad de que aparezcan 10 o menos peces marcados sea también igual a 0,025, es decir, el valor de <span class="math inline">\(p_2\)</span> que cumple la expresión: <span class="math display">\[0.025 = \text{B}(10; 100; p_2) \]</span> y tenemos que <span class="math inline">\(p_2 = 0.1762\)</span>. Si <span class="math inline">\(p\)</span> fuera menor de 0,049 la probabilidad de tener 10 o menos peces marcados sería menor de 0,025, y si fuera mayor de 0,1762 la probabilidad de tener 10 o más también sería menor de 0,025. Por tanto, podemos decir que existe una probabilidad del 95 % de que el valor de <span class="math inline">\(p\)</span> esté entre 0,0490 y 0,1762.</p>
-<p>Si la proporción de peces marcados es igual a 0,049, como hay <span class="math inline">\(M=100\)</span> marcados tenemos que <span class="math inline">\(0.049 = 100/N\)</span> y, por tanto <span class="math inline">\(N = 100/0.049 = 2\;\!041\)</span>. Si la proporción de marcados es 0,1762 resulta <span class="math inline">\(N = 568\)</span>. Por tanto, podemos decir que con una probabilidad de aproximadamente el 95 % en el lago habrá entre 568 y <span class="math inline">\(2\;\!041\)</span> peces<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a>.</p>
+<p><span class="math display">\[N = \frac{M \cdot n}{m} = \frac{100 \cdot 100}{10} = 1000\]</span> Para construir un intervalo de confianza podemos considerar que el número de peces que aparecen marcados es una variable aleatoria con distribución binomial y parámetros <span class="math inline">\(n=100\)</span> (número de peces que se inspeccionan en la repesca) y un valor de <span class="math inline">\(p\)</span> igual a la proporción de peces marcados en el lago (proporción en la población<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a>).</p>
+<p>En primer lugar vamos a determinar el valor de <span class="math inline">\(p\)</span> que hace que la probabilidad de que aparezcan 10 o más peces marcados sea igual a 0,025, es decir, el valor <span class="math inline">\(p_1\)</span> que hace que se cumpla la igualdad: <span class="math display">\[0.025 = 1-\text{B}(9; 100; p_1)\]</span> donde <span class="math inline">\(\text{B}(x; n; p)\)</span> se refiere a <span class="math inline">\(\text{P}(X \leq x)\)</span> siendo <span class="math inline">\(X\)</span> una variable aleatoria con distribución binomial y parámetros <span class="math inline">\(n\)</span> y <span class="math inline">\(p\)</span>.</p>
+<p>Una forma fácil de encontrar el valor de <span class="math inline">\(p_1\)</span> es tanteando con la ayuda de una hoja de cálculo. Se obtiene <span class="math inline">\(p_1 = 0{,}0490\)</span>.</p>
+<p>A continuación determinamos el valor de <span class="math inline">\(p\)</span> que hace que la probabilidad de que aparezcan 10 o menos peces marcados sea también igual a 0,025, es decir, el valor de <span class="math inline">\(p_2\)</span> que cumple la expresión: <span class="math display">\[0{,}025 = \text{B}(10; \; 100; \; p_2) \]</span> y tenemos que <span class="math inline">\(p_2 = 0{,}1762\)</span>. Si <span class="math inline">\(p\)</span> fuera menor de 0,049 la probabilidad de tener 10 o menos peces marcados sería menor de 0,025, y si fuera mayor de 0,1762 la probabilidad de tener 10 o más también sería menor de 0,025. Por tanto, podemos decir que existe una probabilidad del 95 % de que el valor de <span class="math inline">\(p\)</span> esté entre 0,0490 y 0,1762.</p>
+<p>Si la proporción de peces marcados es igual a 0,049, como hay <span class="math inline">\(M=100\)</span> marcados tenemos que <span class="math inline">\(0{,}049 = 100/N\)</span> y, por tanto <span class="math inline">\(N = 100/0{,}049 = 2\;\!041\)</span>. Si la proporción de marcados es 0,1762 resulta <span class="math inline">\(N = 568\)</span>. Por tanto, podemos decir que con una probabilidad de aproximadamente el 95 % en el lago habrá entre 568 y <span class="math inline">\(2\;\!041\)</span> peces<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a>.</p>
 </section>
 </section>
 <section id="cuántos-taxis-hay-en-una-ciudad" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="cuántos-taxis-hay-en-una-ciudad">¿Cuántos taxis hay en una ciudad?</h3>
 <p>Si los taxis llevan a la vista un número de licencia que pertenece a un conjunto de números consecutivos del 1 al total de licencias existentes, estamos ante una población numerada. En este caso, podemos estimar su tamaño, es decir, cuántos taxis hay en la ciudad, sin necesidad de aplicar el método de captura y recaptura</p>
-<p>Si <span class="math inline">\(\mu\)</span> es el valor medio de los elementos numerados siempre se cumple que el número total, <span class="math inline">\(N\)</span>, es igual a <span class="math inline">\(2\mu-1\)</span> . Por ejemplo, si los elementos numerados van del 1 al 10 su valor medio es <span class="math inline">\(\mu = 5.5\)</span> y <span class="math inline">\(N=2 \cdot 5.5-1 = 10\)</span>. Utilizando la media de la muestra <span class="math inline">\(\bar{x}\)</span> como estimador de <span class="math inline">\(\mu\)</span> podemos proponer <span class="math inline">\(2\bar{x}-1\)</span> como estimador del tamaño de la población Si los valores que se han recogido son: 8, 14, 22, 27 y 35, como <span class="math inline">\(\bar{x}=21,2\)</span>, nuestra estimación será: <span class="math inline">\(\hat{N}=2 \cdot 21.2-1 = 41\)</span> (redondeado).</p>
+<p>Si <span class="math inline">\(\mu\)</span> es el valor medio de los elementos numerados siempre se cumple que el número total, <span class="math inline">\(N\)</span>, es igual a <span class="math inline">\(2\mu-1\)</span> . Por ejemplo, si los elementos numerados van del 1 al 10 su valor medio es <span class="math inline">\(\mu = 5{,}5\)</span> y <span class="math inline">\(N=2 \cdot 5{,}5-1 = 10\)</span>. Utilizando la media de la muestra <span class="math inline">\(\bar{x}\)</span> como estimador de <span class="math inline">\(\mu\)</span> podemos proponer <span class="math inline">\(2\bar{x}-1\)</span> como estimador del tamaño de la población Si los valores que se han recogido son: 8, 14, 22, 27 y 35, como <span class="math inline">\(\bar{x}=21{,}2\)</span>, nuestra estimación será: <span class="math inline">\(\hat{N}=2 \cdot 21{,}2-1 = 41\)</span> (redondeado).</p>
 <p>Parece un buen método pero tiene un claro punto débil: si los valores de la muestra son 3, 4, 6 y 15, la media es 7 y por tanto nuestra estimación será igual a 13, un valor claramente incorrecto ya que como mínimo hay 15.</p>
 <p>En realidad, la única incógnita es saber cuántos elementos hay a continuación del que tiene el número más alto en la muestra. Una opción que no presenta este problema es considerar que, por simetría, el número de valores que irán a continuación del último será similar al de los que hay antes del primero. En nuestro ejemplo, con los valores: 8, 14, 22, 27 y 35, la estimación será <span class="math inline">\(35+7=42\)</span>. Esta estrategia nunca dará resultados evidentemente falsos, pero tiene el inconveniente de que no aprovecha toda la información disponible.</p>
 <p>Una buena idea es añadirle el promedio que se calcula con los que hay antes del primero, entre el primero y el segundo, entre el segundo y el tercero, etc. (<a href="#fig-estimacionTaxis" class="quarto-xref">Figura&nbsp;<span>7.11</span></a>). En nuestro ejemplo este promedio es igual a 6 y, por tanto, la estimación será <span class="math inline">\(35+6=41\)</span>, el mismo valor que con el primer método considerado pero este seguro que no da estimaciones claramente incorrectas.</p>
-<div id="fig-estimacionTaxis" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-estimacionTaxis" class="fig-normal_0711 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-estimacionTaxis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_07/f0711_estimacionTaxis.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+<img src="Figuras_07/f0711_estimacionTaxis.png" class="fig-normal_0711 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-estimacionTaxis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;7.11: Estimador de cuantos elementos hay con un número superior al máximo de los que aparecen en la muestra.
@@ -1212,10 +1420,10 @@ Figura&nbsp;7.11: Estimador de cuantos elementos hay con un número superior al 
 </figure>
 </div>
 <p>En general, si <span class="math inline">\(n\)</span> es el número de observaciones y <span class="math inline">\(x_i\)</span> representa el valor de la observación <span class="math inline">\(i\)</span>-ésima, este promedio será: <span class="math display">\[\frac{(x_1-1)+(x_2-x_1-1)+(x_3-x_2-1)+ \cdots +(x_n-x_{n-1}-1)}{n} = \frac{x_n}{n}-1\]</span> Observe que solo es necesario saber cuantos elementos se han mirado (<span class="math inline">\(n\)</span>) y cual es su valor máximo (<span class="math inline">\(x_n\)</span>). No es necesario recordar los valores que han ido saliendo. Aplicado a la estimación del número de taxis que hay en Barcelona, mirando el número de licencia de 20 de ellos obtuvimos una estimación de <span class="math inline">\(10\;\!989\)</span>. En realidad en esa época había <span class="math inline">\(10\;\!523\)</span> (<a href="#fig-taxisNumLicencia" class="quarto-xref">Figura&nbsp;<span>7.12</span></a>).</p>
-<div id="fig-taxisNumLicencia" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-taxisNumLicencia" class="fig-normal_0712 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-taxisNumLicencia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_07/f0712_taxisNumLicencia.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+<img src="Figuras_07/f0712_taxisNumLicencia.png" class="fig-normal_0712 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-taxisNumLicencia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;7.12: Estimación del número de taxis que hay en Barcelona a la vista del número de licencia de una muestra de 20 de ellos.
@@ -1237,28 +1445,28 @@ Figura&nbsp;7.12: Estimación del número de taxis que hay en Barcelona a la vis
 </div>
 <section id="intervalo-de-confianza-para-el-tamaño-de-una-población-numerada" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="intervalo-de-confianza-para-el-tamaño-de-una-población-numerada">Intervalo de confianza para el tamaño de una población numerada</h4>
-<p>Si de una población numerada de <span class="math inline">\(N\)</span> elementos tomamos uno al azar, la probabilidad de que su valor sea menor que <span class="math inline">\(k\)</span>, siendo <span class="math inline">\(k \leq N\)</span>, es igual a <span class="math inline">\(k/N\)</span>, ya que en la población hay <span class="math inline">\(k\)</span> casos favorables frente a <span class="math inline">\(N\)</span> posibles y equiprobables. Si tomamos una muestra –sin reposición– de <span class="math inline">\(n=2\)</span> observaciones, la probabilidad de que ambas sean menores que <span class="math inline">\(k\)</span> será igual a la probabilidad de que lo sea la primera (ya hemos visto que es <span class="math inline">\(k/N\)</span>) <strong>y</strong> también la segunda, pero ahora los casos favorables son solo <span class="math inline">\(k-1\)</span> y los posibles <span class="math inline">\(N-1\)</span>. Por tanto: <span class="math display">\[P\left(\max(x_1, x_2) \leq k \right) = \frac{k}{N} \cdot \frac{k-1}{N-1} \]</span> Generalizando a muestras de tamaño <span class="math inline">\(n\)</span>: <span class="math display">\[P\left(\max(x_1, x_2, \cdots, x_n) \leq k \right) = \prod_{i=0}^{n-1}\frac{k-i}{N-i} \]</span> Para aligerar la notación, al valor máximo de una muestra de <span class="math inline">\(n\)</span> elementos le vamos a llamar <span class="math inline">\(M_n\)</span>. Con la fórmula que acabamos de ver podemos calcular <span class="math inline">\(P \left(M_n \leq k \right)\)</span> dados los valores de <span class="math inline">\(N\)</span>, <span class="math inline">\(n\)</span> y <span class="math inline">\(k\)</span>. Por ejemplo, si <span class="math inline">\(N = 12\;\!000\)</span>, <span class="math inline">\(n=20\)</span> y <span class="math inline">\(k=11\:\!500\)</span>,se obtiene (una hoja de cálculo facilita el cálculo): <span class="math display">\[P \left(M_{20} \leq 11\:\!500 \right) = 0.4266\]</span> También es posible calcular esta probabilidad en función de <span class="math inline">\(N\)</span>. La <a href="#fig-taxisIC" class="quarto-xref">Figura&nbsp;<span>7.13</span></a> muestra esa relación en nuestro caso de <span class="math inline">\(n=20\)</span> y <span class="math inline">\(k=11\:\!500\)</span>. Hemos señalado dos valores de <span class="math inline">\(N\)</span> que tienen una probabilidad de ser sobrepasados, por arriba y por abajo, de 0,025. La probabilidad de que <span class="math inline">\(N\)</span> esté entre esos valores es del 95 %. Por tanto, podemos considerar que esos son los extremos de su intervalo de confianza del 95 %.</p>
-<div id="fig-taxisIC" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<p>Si de una población numerada de <span class="math inline">\(N\)</span> elementos tomamos uno al azar, la probabilidad de que su valor sea menor que <span class="math inline">\(k\)</span>, siendo <span class="math inline">\(k \leq N\)</span>, es igual a <span class="math inline">\(k/N\)</span>, ya que en la población hay <span class="math inline">\(k\)</span> casos favorables frente a <span class="math inline">\(N\)</span> posibles y equiprobables. Si tomamos una muestra –sin reposición– de <span class="math inline">\(n=2\)</span> observaciones, la probabilidad de que ambas sean menores que <span class="math inline">\(k\)</span> será igual a la probabilidad de que lo sea la primera (ya hemos visto que es <span class="math inline">\(k/N\)</span>) <strong>y</strong> también la segunda, pero ahora los casos favorables son solo <span class="math inline">\(k-1\)</span> y los posibles <span class="math inline">\(N-1\)</span>. Por tanto: <span class="math display">\[P\left(\max(x_1, x_2) \leq k \right) = \frac{k}{N} \cdot \frac{k-1}{N-1}\]</span> Generalizando a muestras de tamaño <span class="math inline">\(n\)</span>: <span class="math display">\[P\left(\max(x_1, x_2, \cdots, x_n) \leq k \right) = \prod_{i=0}^{n-1}\frac{k-i}{N-i}\]</span> Para aligerar la notación, al valor máximo de una muestra de <span class="math inline">\(n\)</span> elementos le vamos a llamar <span class="math inline">\(M_n\)</span>. Con la fórmula que acabamos de ver podemos calcular <span class="math inline">\(P \left(M_n \leq k \right)\)</span> dados los valores de <span class="math inline">\(N\)</span>, <span class="math inline">\(n\)</span> y <span class="math inline">\(k\)</span>. Por ejemplo, si <span class="math inline">\(N = 12\;\!000\)</span>, <span class="math inline">\(n=20\)</span> y <span class="math inline">\(k=11\:\!500\)</span>, se obtiene (una hoja de cálculo facilita el cálculo): <span class="math display">\[P \left(M_{20} \leq 11\:\!500 \right) = 0{,}4266\]</span> También es posible calcular esta probabilidad en función de <span class="math inline">\(N\)</span>. La <a href="#fig-taxisIC" class="quarto-xref">Figura&nbsp;<span>7.13</span></a> muestra esa relación en nuestro caso de <span class="math inline">\(n=20\)</span> y <span class="math inline">\(k=11\:\!500\)</span>. Hemos señalado dos valores de <span class="math inline">\(N\)</span> que tienen una probabilidad de ser sobrepasados, por arriba y por abajo, de 0,025. La probabilidad de que <span class="math inline">\(N\)</span> esté entre esos valores es del 95 %. Por tanto, podemos considerar que esos son los extremos de su intervalo de confianza del 95 %.</p>
+<div id="fig-taxisIC" class="fig-normal_0713 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-taxisIC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_07/f0713_taxisIC.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+<img src="Figuras_07/f0713_taxisIC.png" class="fig-normal_0713 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-taxisIC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;7.13: Población numerada. Probabilidad de que el valor máximo de una muestra de tamaño 20 sea menor de 11500 en función del tamaño de la población.
 </figcaption>
 </figure>
 </div>
-<p>Vemos que el extremo inferior del intervalo de confianza queda muy cerca del valor máximo de la muestra. En vez de repartir la probabilidad de equivocarnos entre los dos extremos, podemos concentrarla en el extremo superior, que con nuestros valores es igual a 13;!356. En este caso, diremos que el intervalo está entre 11:!500 (por ese lado seguro que no nos equivocamos) y 13;!356 (la probabilidad de que sea superior es del 5 %).</p>
+<p>Vemos que el extremo inferior del intervalo de confianza queda muy cerca del valor máximo de la muestra. En vez de repartir la probabilidad de equivocarnos entre los dos extremos, podemos concentrarla en el extremo superior, que con nuestros valores es igual a 13356. En este caso, diremos que el intervalo está entre 11:!500 (por ese lado seguro que no nos equivocamos) y 13356 (la probabilidad de que sea superior es del 5 %).</p>
 </section>
 </section>
 </section>
 <section id="apéndice-7.a-distribución-de-la-media-muestral-visión-intuitiva" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="apéndice-7.a-distribución-de-la-media-muestral-visión-intuitiva">APÉNDICE 7.A: Distribución de la media muestral: Visión intuitiva</h2>
-<p>Vamos a echar mano del socorrido ejemplo de la distribución de las estaturas, que supondremos <span class="math inline">\(\text{N} (170\,\text{cm}; \; 7 \text{cm})\)</span>. Si tomamos una muestra de 25 personas, sus estaturas pueden ser los valores representados para la muestra 1 en la <a href="#fig-distribucionMedia" class="quarto-xref">Figura&nbsp;<span>7.14</span></a>. Estos valores van de 158 a 183 y su valor medio –representado con un recuadro rojo– es igual a 169,8. Si vamos generando muestras aleatorias de esa población, cada una tendrá sus propios valores y, por tanto, también una media distinta. En la <a href="#fig-distribucionMedia" class="quarto-xref">Figura&nbsp;<span>7.14</span></a> se han representado los valores de 10 muestras aleatorias de esa misma población, marcando también sus valores medios. En la parte inferior se han representado solo esos valores medios y está claro que tienen variabilidad –la media muestral es una variable aleatoria– pero menos que las observaciones individuales.</p>
-<div id="fig-distribucionMedia" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<p>Vamos a echar mano del socorrido ejemplo de la distribución de las estaturas, que supondremos <span class="math inline">\(\text{N} (170\,\text{cm}; \; 7 \text{cm})\)</span>. Si tomamos una muestra de 25 personas, sus estaturas pueden ser los valores representados para la muestra 1 en la <a href="#fig-distribucionMedia" class="quarto-xref">Figura&nbsp;<span>7.14</span></a>. Estos valores van de 158 a 183 y su valor medio –representado con un recuadro rojo– es igual a 169,8. Si vamos generando muestras aleatorias de esa población, cada una tendrá sus propios valores y, por tanto, también una media distinta. En la misma <a href="#fig-distribucionMedia" class="quarto-xref">Figura&nbsp;<span>7.14</span></a> se han representado los valores de 10 muestras aleatorias de esa misma población, marcando también sus valores medios. En la parte inferior se han representado solo esos valores medios y está claro que tienen variabilidad –la media muestral es una variable aleatoria– pero menos que las observaciones individuales.</p>
+<div id="fig-distribucionMedia" class="fig-normal_0714 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-distribucionMedia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_07/f0714_distribucionMedia.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+<img src="Figuras_07/f0714_distribucionMedia.png" class="fig-normal_0714 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-distribucionMedia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;7.14: Valores de 10 muestras aleatorias de una población N(170; 7) con sus medias (recuadro rojo). En la parte inferior solo se representan las medias.
@@ -1274,10 +1482,10 @@ Figura&nbsp;7.14: Valores de 10 muestras aleatorias de una población N(170; 7) 
 <h4 class="unnumbered anchored" data-anchor-id="sin-acumular-resultados">Sin acumular resultados</h4>
 <p>En la primera columna colocamos valores del 1 al <span class="math inline">\(12\;\!000\)</span> (número total –que queremos estimar– de elementos en la población) y en la segunda <span class="math inline">\(12\;\!000\)</span> números aleatorios <span style="font-family: monospace;">=aleatorio()</span>. Si ordenamos los números aleatorios arrastrando los de la primera columna lo que hacemos es desordenar al azar los de esa primera columna, de manera que los 20 primeros se pueden considerar una muestra aleatoria del total. Solo hace falta identificar el máximo de esos 20 <span style="font-family: monospace;">=max(a1:a20)</span> y aplicar la fórmula que ya sabemos.</p>
 <p>En la <a href="#fig-hojaExcel_1" class="quarto-xref">Figura&nbsp;<span>7.15</span></a> se muestran las primeras filas. En la columna C se tiene una copia de los 20 primeros valores de la columna A para que se vea claro cuales son los valores de la muestra. Si se vuelven a desordenar los valores de la primera columna se tendrá otra muestra, otro valor máximo y otra estimación. Para ir teniendo nuevos valores basta con pulsar la tecla F4 ya que de esta forma se repite la última operación realizada, en este caso ordenación de los números aleatorios arrastrando los de la primera columna.</p>
-<div id="fig-hojaExcel_1" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-hojaExcel_1" class="fig-normal_0715 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-hojaExcel_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_07/f0715_hojaExcel_1.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+<img src="Figuras_07/f0715_hojaExcel_1.png" class="fig-normal_0715 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hojaExcel_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;7.15: Estimación del tamaño de una población numerada con Excel.
@@ -1332,10 +1540,10 @@ haya en la columna H).</td>
 <li><p>Pulsar F4 para repetir la simulación. Los valores obtenidos se irán acumulando en la columna I.</p></li>
 </ul>
 <p>Se puede completar la hoja tabulando los resultados obtenidos y construyendo un gráfico que muestre su distribución (<a href="#fig-excelSimulaTaxis" class="quarto-xref">Figura&nbsp;<span>7.16</span></a>).</p>
-<div id="fig-excelSimulaTaxis" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-excelSimulaTaxis" class="fig-normal_0716 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-excelSimulaTaxis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_07/f0716_excelSimulaTaxis.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+<img src="Figuras_07/f0716_excelSimulaTaxis.png" class="fig-normal_0716 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-excelSimulaTaxis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;7.16: Estimación del tamaño de una población numerada. Resultados de la simulación con Excel.
@@ -1353,16 +1561,18 @@ Figura&nbsp;7.16: Estimación del tamaño de una población numerada. Resultados
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn1"><p>Es controvertido usar la palabra “probabilidad” en este contexto, pero a nosotros nos parece que ayuda a entender lo que representa y no es ningún disparate conceptual}<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Es controvertido usar la palabra “probabilidad” en este contexto, pero a nosotros nos parece que ayuda a entender lo que representa y no es ningún disparate conceptual.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>Se menciona en el capítulo 5. Dice que la suma y, por tanto, también el valor medio, de un conjunto de <span class="math inline">\(n\)</span> variables aleatorias tiende a una distribución Normal a medida que aumenta el valor de <span class="math inline">\(n\)</span>. Incluso con datos de distribuciones discretas muy diferentes de la Normal, como el resultado de lanzar un dado, la distribución del valor medio se aproxima a la Normal con valores relativamente pequeños de <span class="math inline">\(n\)</span> (figura 5.1).<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>Esta es una de las distribuciones que más aparecen en los análisis estadísticos. Volverá a tener protagonismo el el capítulo 9 (test de la <span class="math inline">\(t\)</span> de Student) y se describe con más detalle en el Apéndice 9.C}.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Esta es una de las distribuciones que más aparecen en los análisis estadísticos. Volverá a tener protagonismo el el capítulo 9 (test de la <span class="math inline">\(t\)</span> de Student) y se describe con más detalle en el Apéndice 9.C.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn4"><p>En realidad, como el muestreo se hace sin reposición, la proporción <span class="math inline">\(p\)</span> no se mantiene exactamente constante, ya que va variando según el tipo de elementos que se extraen. Sin embargo, si el tamaño de la población es mucho mayor que el de la muestra, esta diferencia es irrelevante a efectos prácticos.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn5"><p>Puede dar un vistazo a “Binomial proportion confidence interval” en la Wikipedia.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn6"><p>Si, finalmente, el tamaño de muestra resulta ser menor de 30 se pueden recalcular los valores del margen de error o del nivel de confianza usando una <span class="math inline">\(t\)</span> de Student con un número de grados de libertad en relación con el tamaño de muestra obtenido. Este puede ser un proceso iterativo aunque no es necesario hilar muy fino porque las diferencias no suelen ser relevantes a efectos prácticos.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p>A <span class="math inline">\(1-p\)</span> se le denomina <span class="math inline">\(q\)</span>, y este supuesto se encuentra muchas veces planteado de la forma <span class="math inline">\(p=q=50 %\)</span><a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn8"><p>La deducción de este factor de corrección no es trivial. Los lectores interesados pueden consultar, por ejemplo: Steven K. Thompson: “Sampling”, Wiley, 2012, pp: 20-22, o el clásico: William G. Cochran: Sampling Techniques, Wiley, 1977, pp: 21-27.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn9"><p>Como el muestreo se realiza sin reposición, en rigor el valor de p no es constante para todos los peces, pero considerando que el número de peces en el lago es mucho mayor que el número de la repesca, consideramos que esa proporción apenas cambia.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn10"><p>Existen otros procedimientos para transformar el número de peces que aparecen marcados en número de peces total que dan una estimación más precisa y con menos sesgo. Para profundizar en este tema pueden consultarse textos especializados como el de Charles J. Krebs: ``Ecological Methodology’’. 1999, Ed. Addison Wesley.<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>Una opción conservadora puede ser calcular un intervalo de confianza para el valor de <span class="math inline">\(s\)</span> y quedarnos con el extremo superior. Otra opción es replantearse el valor de <span class="math inline">\(s\)</span> a la vista de los valores de la muestra obtenida.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>A <span class="math inline">\(1-p\)</span> se le denomina <span class="math inline">\(q\)</span>, y este supuesto se encuentra muchas veces planteado de la forma <span class="math inline">\(p=q=50 %\)</span>.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>La deducción de este factor de corrección no es trivial. Los lectores interesados pueden consultar, por ejemplo: Steven K. Thompson: “Sampling”, Wiley, 2012, pp: 20-22, o el clásico: William G. Cochran: Sampling Techniques, Wiley, 1977, pp: 21-27.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>El cómo capturarlos y marcarlos de manera que no les afecte a la movilidad ni se pierdan marcas son aspectos relevantes que se tratan con detalle en libros especializados como el editado por W.J. Sutherland: “Ecological Census Techniques”. 2nd Edition, 2006. Ed.: Cambridge University Press. o el de G.A.F. Seber: “The Estimation of Animal Abundance and Related Parameters” 2nd Edition, 2002, Ed. Blackburn Press.<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn11"><p>Como el muestreo se realiza sin reposición, en rigor el valor de p no es constante para todos los peces, pero considerando que el número de peces en el lago es mucho mayor que el número de la repesca, consideramos que esa proporción apenas cambia.<a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn12"><p>Existen otros procedimientos para transformar el número de peces que aparecen marcados en número de peces total que dan una estimación más precisa y con menos sesgo. Para profundizar en este tema pueden consultarse textos especializados como el de Charles J. Krebs: “Ecological Methodology”. 1999, Ed. Addison Wesley.<a href="#fnref12" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 

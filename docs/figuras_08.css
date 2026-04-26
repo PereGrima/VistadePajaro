@@ -1,0 +1,398 @@
+/*Figura 8.1*/
+/*=======================================*/
+
+.fig-normal_0801 {
+  margin-top: 0.4em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+.fig-normal_0801 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
+  padding-top: 7px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_0801 img {
+  width: 550px;
+}
+
+/*Figura 8.2*/
+/*=======================================*/
+
+.fig-normal_0802 {
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+  text-align: center;
+}
+.fig-normal_0802 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
+  padding-top: 7px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_0802 img {
+  width: 550px;
+}
+
+/*Figura 8.3*/
+/*=======================================*/
+
+.fig-normal_0803 {
+  margin-top: 0.8em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+.fig-normal_0803 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
+  padding-top: 7px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_0803 img {
+  width: 400px;
+}
+
+/*Figura 8.4*/
+/*=======================================*/
+
+.fig-normal_0804 {
+  margin-top: 0.8em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+.fig-normal_0804 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
+  padding-top: 7px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_0804 img {
+  width: 600px;
+}
+
+/*Figura 8.5*/
+/*=======================================*/
+
+.fig-normal_0805 {
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+.fig-normal_0805 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
+  padding-top: 7px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_0805 img {
+  width: 600px;
+}
+
+/*Figura 8.6*/
+/*=======================================*/
+
+.fig-normal_0806 {
+  margin-top: 0.8em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+.fig-normal_0806 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
+  padding-top: 7px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_0806 img {
+  width: 650px;
+}
+
+/*Figura 8.7*/
+/*=======================================*/
+
+.fig-normal_0807 {
+  margin-top: 0.8em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+.fig-normal_0807 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
+  padding-top: 7px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_0807 img {
+  width: 650px;
+}
+
+/*Figura 8.8*/
+/*=======================================*/
+
+.fig-normal_0808 {
+  margin-top: 0.8em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+.fig-normal_0808 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
+  padding-top: 7px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_0808 img {
+  width: 580px;
+}
+
+/*Figura 8.9*/
+/*=======================================*/
+
+.fig-normal_0809 {
+  margin-top: 0.8em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+.fig-normal_0809 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
+  padding-top: 7px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_0809 img {
+  width: 650px;
+}
+
+/*Figura 8.10*/
+/*=======================================*/
+
+.fig-normal_0810 {
+  margin-top: 0.8em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+.fig-normal_0810 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
+  padding-top: 12px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_0810 img {
+  width: 650px;
+}
+
+/*Figura 8.11*/
+/*=======================================*/
+
+.fig-normal_0811 {
+  margin-top: 0.4em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+.fig-normal_0811 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
+  padding-top: 7px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_0811 img {
+  width: 600px;
+}
+
+/*Figura 8.12*/
+/*=======================================*/
+
+.fig-normal_0812 {
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+.fig-normal_0812 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
+  padding-top: 7px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_0812 img {
+  width: 600px;
+}
+
+/*Figura 8.13*/
+/*=======================================*/
+
+.fig-normal_0813 {
+  margin-top: 0.8em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+.fig-normal_0813 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
+  padding-top: 7px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_0813 img {
+  width: 600px;
+}
+
+/*Figura 8.14*/
+/*=======================================*/
+
+.fig-normal_0814 {
+  margin-top: 0.8em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+.fig-normal_0814 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
+  padding-top: 7px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_0814 img {
+  width: 600px;
+}
+
+/*Figura 8.15*/
+/*=======================================*/
+
+.fig-normal_0815 {
+  margin-top: 0.8em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+.fig-normal_0815 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
+  padding-top: 12px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_0815 img {
+  width: 600px;
+}
+
+/*Figura 8.16*/
+/*=======================================*/
+
+.fig-normal_0816 {
+  margin-top: 0.8em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+.fig-normal_0816 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
+  padding-top: 12px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_0816 img {
+  width: 650px;
+}
+
+/*Figura 8.17*/
+/*=======================================*/
+
+.fig-normal_0817 {
+  margin-top: 0.8em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+.fig-normal_0817 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
+  padding-top: 12px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_0817 img {
+  width: 600px;
+}
+
+/*Figura 8.18*/
+/*=======================================*/
+
+.fig-normal_0818 {
+  margin-top: 0.8em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+.fig-normal_0818 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
+  padding-top: 12px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_0818 img {
+  width: 480px;
+}
+
+
+

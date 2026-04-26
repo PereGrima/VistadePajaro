@@ -32,14 +32,14 @@ La idea es seleccionar la muestra siguiendo una estrategia en la que el protagon
 
 ### Muestreo no probabilístico {.unnumbered}
 
-Es el que se utiliza cuando la selección al azar no es viable. \index{Muestreo! no probabilístico} En este caso, las estimaciones no se realizan basándose en las propiedades de las distribuciones de probabilidad que correspondan, sino en argumentos que justifican la representatividad de la muestra. Muestreos de este tipo son:
+Es el que se utiliza cuando la selección al azar no es viable. En este caso, las estimaciones no se realizan basándose en las propiedades de las distribuciones de probabilidad que correspondan, sino en argumentos que justifican la representatividad de la muestra. Muestreos de este tipo son:
 
 
 -   [**Muestreo por cuotas**]{style="color: #0038CF;"}:	Se trata de definir grupos con la mayor homogeneidad posible. La selección dentro de cada grupo no se realiza al azar, sino que cualquier individuo que cumpla los requisitos del grupo puede ser incluido en la muestra (al haber poca variabilidad interna cualquier individuo se considera un buen representante). Este procedimiento se adapta muy bien a las entrevistas telefónicas. La entrevista se realiza a la persona que responde si el grupo al que pertenece aún tiene vacantes, o se puede preguntar si en el hogar hay alguien con el perfil de un grupo que todavía esté sin completar. Cuando todos los grupos se han completado, se entiende que la muestra es un buen reflejo de la población. 
 	
 -   [**Muestreo razonado**]{style="color: #0038CF;"}:	 En ocasiones lo más conveniente puede ser tomar una muestra que responda a unas características específicas. Por ejemplo, si se viene comprobando que los resultados en un colegio electoral son un buen reflejo de lo que ocurre en todo el país, tomar a los votantes de ese colegio como muestra de todo el país puede ser una buena estrategia.
 	
-Un muestreo no probabilístico puede ser muy útil y aportar información valiosa, pero sus conclusiones no deben presentarse como si la muestra hubiera sido elegida de forma aleatoria, ni tras la típica cantinela de: "Bajo la hipótesis de muestreo aleatorio simple...". Es como si decimos: "Supongamos que una castaña es una esfera..." y, a partir de ahí llegamos a una serie de conclusiones sobre las características de las castañas[^6-1]
+Un muestreo no probabilístico puede ser muy útil y aportar información valiosa, pero sus conclusiones no deben presentarse como si la muestra hubiera sido elegida de forma aleatoria, ni tras la típica cantinela de: "Bajo la hipótesis de muestreo aleatorio simple...". Es como si decimos: "Supongamos que una castaña es una esfera..." y, a partir de ahí llegamos a una serie de conclusiones sobre las características de las castañas[^6-1].
 
 [^6-1]: En España es obligatorio publicar una llamada "ficha técnica" de los sondeos que se publican durante la campaña electoral. La ficha técnica incluye niveles de confianza y márgenes de error muchas veces calculados bajo la hipótesis de muestreo aleatorio simple, aunque es evidente que el muestreo realizado no ha sido de ese tipo.}. 
 
@@ -112,18 +112,18 @@ Cuando se pregunta si se ha realizado algún tipo de actividad reprobable o soci
 
 Se pide al entrevistado que realice una acción cuyo resultado depende del azar y solo él puede ver. Según cual sea ese resultado, debe responder "sí" (sea cual sea la verdad) o responder sinceramente a la pregunta formulada. Por ejemplo, si lanza una moneda, debe responder "sí" si sale cara, y ser sincero si sale cruz.
  
-Aunque es imposible saber si un "sí" se debe a que le ha salido cara o a que ha respondido a la pregunta de interés, es posible estimar la proporción de los que han realizado esa actividad. Si se realizan 1\:\!000 entrevistas y 600 personas responden sí, cabe esperar que unas 500 hayan dado esa respuesta porque les ha salido cara, mientras que de las otras 500 --las que han respondido a la pregunta de interés-- 100 han respondido de forma afirmativa. Luego, la estimación de la proporción será $p$ = 100/500 = 0,2.
+Aunque es imposible saber si un "sí" se debe a que le ha salido cara o a que ha respondido a la pregunta de interés, es posible estimar la proporción de los que han realizado esa actividad. Si se realizan 1000 entrevistas y 600 personas responden sí, cabe esperar que unas 500 hayan dado esa respuesta porque les ha salido cara, mientras que de las otras 500 --las que han respondido a la pregunta de interés-- 100 han respondido de forma afirmativa. Luego, la estimación de la proporción será $p$ = 100/500 = 0,2.
 
 También es verdad que esta forma de garantizar la confidencialidad no sale gratis. El precio que se paga es un aumento de la variabilidad en la estimación de la proporción de interés $p$, y este aumento depende de la probabilidad, $\alpha$, de que se responda a la pregunta de interés. Si esa probabilidad es baja, por ejemplo, que salga un seis al lanzar un dado, el entrevistado se sentirá seguro de que no es posible saber la verdad en su caso, pero se pierde precisión en la estimación. Si es alta, como sacar una carta de una baraja y responder a la pregunta planteada si no es un as, tendremos mayor precisión en la estimación, pero el encuestado se sentirá menos protegido (es muy probable que tenga que decir la verdad) y puede mentir.
 
 Hemos simulado el número de síes que se obtendrían para diferentes valores de $\alpha$ si la proporción de interés fuera $p=0.2$. Repitiendo $100\;\!000$ veces esta simulación, hemos identificado los percentiles del 2,5 % y del 97,5 % (dentro queda el 95 %) y, tal como hemos comentado anteriormente, pasamos del número total de síes a la estimación del número de los que responden afirmativamente a la pregunta de interés. La [Tabla 6.1](#tbl-Sies) resume los resultados obtenidos. Observe como el intervalo se va haciendo más estrecho al aumentar el valor de $\alpha$.
 
-
 ```{=html}
-<div id="tbl-Sies"; class="tabla-wrapper42">
+<div id="tbl-Sies"; class="tabla-wrapper_T0601">
+<div class="tabla-caption">
+  Tabla 6.1: Percentiles obtenidos por simulación cuando la proporción estimada es p = 0,2 según sea la probabilidad de responder a la pregunta de interés (&alpha;)
+</div>
 <table class="tabla-0601">
-
-<caption>Tabla 6.1: Percentiles obtenidos por simulación cuando la proporción estimada es p = 0,2 según sea la probabilidad de responder a la pregunta de interés (&alpha;)</caption>
 
 <colgroup>
   <col style="width: 10%;">
@@ -161,18 +161,24 @@ Hemos simulado el número de síes que se obtendrían para diferentes valores de
 </div>
 ```
 
-Si, por ejemplo, $\alpha = 0.5$ (el resultado de lanzar una moneda), el 95 % de las veces el número de <<síes>> se encuentra entre 570 y 630. Si es 570 entendemos que 70 son los síes verdaderos y nuestra estimación de los que responden "sí" a la pregunta de interés será 70/500 = 14 %. En el Apéndice 6.B se deduce la relación entre el valor de $\alpha$ y la varianza de la estimación.
+Si, por ejemplo, $\alpha = 0.5$ (el resultado de lanzar una moneda), el 95 % de las veces el número de "síes" se encuentra entre 570 y 630. Si es 570 entendemos que 70 son los síes verdaderos y nuestra estimación de los que responden "sí" a la pregunta de interés será 70/500 = 14 %. En el Apéndice 6.B se deduce la relación entre el valor de $\alpha$ y la varianza de la estimación.
 
 ### Encuestas "informales" {.unnumbered}
 
 Si en un programa de televisión dicen: "Salimos a la calle y preguntamos la opinión de los ciudadanos sobre..." conviene ser escépticos. Más allá del tamaño de la muestra --que suele ser muy reducido--, los que pasan por ese sitio a esa hora y se prestan a responder delante de la cámara no son una muestra representativa de la población. Casi siempre es evidente que se trata de un *divertimento*. Lo grave es cuando en un trabajo académico se realiza una encuesta más o menos de este tipo y se pretende dar a los resultados un valor que no tienen (a veces incluyendo niveles de confianza y márgenes de error).
 
-También, en algunas ocasiones se nos pide que rellenemos un cuestionario dando nuestra opinión sobre un producto o servicio. En general, solo responden quienes están muy descontentos o muy satisfechos. La encuesta puede servir para detectar esos casos extremos, pero es evidente que sus resultados no se pueden extrapolar al conjunto de los clientes. Incluso puede ocurrir que este tipo de cuestionarios se ponga a disposición del público solo para <<quedar bien>>, para dar la impresión de que interesa su opinión, pero solo para eso.
+También, en algunas ocasiones se nos pide que rellenemos un cuestionario dando nuestra opinión sobre un producto o servicio. En general, solo responden quienes están muy descontentos o muy satisfechos. La encuesta puede servir para detectar esos casos extremos, pero es evidente que sus resultados no se pueden extrapolar al conjunto de los clientes. Incluso puede ocurrir que este tipo de cuestionarios se ponga a disposición del público solo para "quedar bien", para dar la impresión de que interesa su opinión, pero solo para eso.
+
+::: {style="height: 1px;"}
+:::
 
 ::: callout-note
 ## Hacer un estudio estadístico no es hacer una encuesta
 
 Algunas personas piensan que realizar un estudio estadístico exige realizar una encuesta. En absoluto. La  estadística va mucho más allá de las encuestas. Muchas veces los datos que se necesitan ya existen (aunque quizá no sea fácil encontrarlos) o hay que obtenerlos realizando experimentos.
+:::
+
+::: {style="height: 1px;"}
 :::
 
 ### Conocer la opinión sin hacer encuestas {.unnumbered}
@@ -205,9 +211,9 @@ A la probabilidad de rechazar injustamente un lote que cumple con los requisitos
 
 ### Curva característica de un plan de muestreo {.unnumbered}
 
-\noindent Dado un plan de muestreo, \index{Plan de muestreo! curva característica} es decir, dados los valores de $n$ (número de unidades a inspeccionar) y $c$ (número máximo de defectos tolerado), la mejor forma de visualizar su comportamiento es mediante la curva que representa la probabilidad de aceptar el lote en función de la proporción de defectos que contiene. Esta curva se denomina **curva característica del plan de muestreo**.
+Dado un plan de muestreo, es decir, dados los valores de $n$ (número de unidades a inspeccionar) y $c$ (número máximo de defectos tolerado), la mejor forma de visualizar su comportamiento es mediante la curva que representa la probabilidad de aceptar el lote en función de la proporción de defectos que contiene. Esta curva se denomina **curva característica del plan de muestreo**.
 
-La [@fig-curvaCaracteristica_100_5]. muestra su construcción para el plan definido por $n=100$ y $c=5$ utilizando una hoja de cálculo. En la columna A se indica la proporción de defectos en el lote ($p$) y en la columna C la probabilidad de aceptarlo: $\text{P}(X \leq 5; n=100; p=p)$. También se incluye la que sería la <<curva ideal>>, con una probabilidad de aceptación igual a 1 para cualquier valor de la proporción de defectos menor o igual a 0,05, e igual a cero para valores mayores de esa proporción, pero esta curva solo se puede conseguir inspeccionando el lote completo. 
+La [@fig-curvaCaracteristica_100_5]. muestra su construcción para el plan definido por $n=100$ y $c=5$ utilizando una hoja de cálculo. En la columna A se indica la proporción de defectos en el lote ($p$) y en la columna C la probabilidad de aceptarlo: $\text{P}(X \leq 5; n=100; p=p)$. También se incluye la que sería la "curva ideal", con una probabilidad de aceptación igual a 1 para cualquier valor de la proporción de defectos menor o igual a 0,05, e igual a cero para valores mayores de esa proporción, pero esta curva solo se puede conseguir inspeccionando el lote completo. 
 
 ![Construcción de la curva característica del plan de muestreo definido por n = 100 y c = 5. En trazo negro se muestra la que sería la curva ideal si se está dispuesto a tolerar un 5 % de defectos.](Figuras/f0601_curvaCaracteristica_100_5.png){#fig-curvaCaracteristica_100_5 .fig-normal3 fig-align="center" width="90%"}
 
@@ -217,7 +223,7 @@ La curva característica también sirve para observar que un plan de muestreo no
 
 ### Otra vez insistimos: Atención a como se selecciona la muestra {.unnumbered}
 
-\noindent La selección de la muestra para que sea representativa del conjunto que se desea evaluar suele ser el eslabón más débil de la cadena. Dar instrucciones de <<elegir al azar>>, sin más, puede ser interpretado como elegir con preferencia lo que está más a mano, lo cual puede ser representativo de una parte, pero no del todo. Además, puede ser una parte especialmente ``mimada'', si el proveedor conoce esa práctica.
+La selección de la muestra para que sea representativa del conjunto que se desea evaluar suele ser el eslabón más débil de la cadena. Dar instrucciones de "elegir al azar", sin más, puede ser interpretado como elegir con preferencia lo que está más a mano, lo cual puede ser representativo de una parte, pero no del todo. Además, puede ser una parte especialmente "mimada", si el proveedor conoce esa práctica.
 
 Conviene dar instrucciones precisas de cómo debe seleccionarse la muestra para que sea representativa de todo el conjunto, aunque esto puede ser mucho más laborioso que hacerlo a discreción del inspector. Si esas instrucciones se dan de manera que se puede verificar su cumplimiento, quizá mediante algún tipo de muestreo sistemático si las unidades están numeradas, estaremos más seguros de que el muestreo se ha ejecutado correctamente.
 
@@ -237,7 +243,7 @@ Los sondeos electorales se basan en encuestas realizadas varios días, o incluso
 
 Los indecisos suelen representar un porcentaje importante de la población y, dependiendo de lo que estos acaben votando, los resultados serán unos u otros. Realizar las estimaciones ignorando a los indecisos no es una buena idea, porque estos acabarán votando (al menos una gran parte). Suponer que entre los indecisos se reproducirán las mismas proporciones que entre los que ya han decidido su voto también es mucho suponer.
 
-Las empresas especializadas en realizar sondeos electorales tienen sus procedimientos para asignar el voto a los indecisos. Las entrevistas empiezan con preguntas <<fáciles>> (edad, profesión,...) que permiten asignar un cierto perfil socioeconómico a los entrevistados. A continuación, se pueden hacer preguntas más relacionadas con la ideología, como su opinión sobre un tema polémico en el que derecha e izquierda tienen opiniones contrapuestas, su valoración de algunos líderes políticos o a quién votó en las últimas elecciones. La respuesta a estas preguntas marca un perfil al que se asigna un voto. La correcta asignación de este voto responde más a conocimientos relacionados con la sociología y con la política que con la estadística, y en esa asignación está el éxito o el fracaso de los resultados del sondeo. 
+Las empresas especializadas en realizar sondeos electorales tienen sus procedimientos para asignar el voto a los indecisos. Las entrevistas empiezan con preguntas "fáciles" (edad, profesión,...) que permiten asignar un cierto perfil socioeconómico a los entrevistados. A continuación, se pueden hacer preguntas más relacionadas con la ideología, como su opinión sobre un tema polémico en el que derecha e izquierda tienen opiniones contrapuestas, su valoración de algunos líderes políticos o a quién votó en las últimas elecciones. La respuesta a estas preguntas marca un perfil al que se asigna un voto. La correcta asignación de este voto responde más a conocimientos relacionados con la sociología y con la política que con la estadística, y en esa asignación está el éxito o el fracaso de los resultados del sondeo. 
 
 #### La falta de sinceridad en las respuestas {.unnumbered}
 
@@ -257,7 +263,7 @@ A pesar de las dificultades comentadas, las empresas especializadas saben cómo 
 
 ## Apéndice 6.B: El precio de la confidencialidad {.unnumbered}
 
-Sea $p$ el verdadero valor de la proporción estimada, y $\alpha$ la probabilidad de que el encuestado deba responder a la pregunta de interés. La probabilidad de obtener un <<sí>> como respuesta es: 
+Sea $p$ el verdadero valor de la proporción estimada, y $\alpha$ la probabilidad de que el encuestado deba responder a la pregunta de interés. La probabilidad de obtener un "sí" como respuesta es: 
 $$P_{si} = (1 - \alpha) + \alpha \cdot p $$
 Despejamos $p$:
 $$p = \frac{P_{si}-(1-\alpha)}{\alpha} $$
@@ -265,7 +271,7 @@ Cuando tenemos los resultados de la encuesta, no tenemos el valor poblacional de
 $$\hat{p} = \frac{\hat{P}_{si}-(1-\alpha)}{\alpha} $$
 Recordando que $\mathrm{V}(aX + b) = a^2 \mathrm{V}(X)$ (Apéndice 5.A):
 $$\mathrm V(\hat{p}) = \mathrm V \left ( \frac{\hat{P}_{si} - (1 - \alpha)}{\alpha} \right) = \frac{1}{\alpha^2} \mathrm V (\hat{P}_{si})$$
-Como $\hat{P}_{si}$ es una proporción referida a una variable aleatoria con distribución binomial (número de entrevistados que responden <<sí>>), tenemos que su varianza es:
+Como $\hat{P}_{si}$ es una proporción referida a una variable aleatoria con distribución binomial (número de entrevistados que responden "sí"), tenemos que su varianza es:
 $$\mathrm V (\hat{P}_{si}) = \frac{P_{si} (1 - P_{si})}{n} $$
 Sustituyendo en la expresión anterior de $\mathrm V(\hat{p})$:
 $$\mathrm V (\hat{p}) = \frac{P_{si} (1 - P_{si})}{n \cdot \alpha^2} $$
@@ -293,7 +299,7 @@ Los valores de AQL y $1-\alpha$ así como RQL y $\beta$ definen dos puntos en el
 
 Las expresiones que usamos para deducir los valores de $n$ y $c$ en función de AQL, RQL, $\alpha$ y $\beta$ se encuentran en la [@fig-calculoPlanMuestreo]. No parece fácil despejar los valores de $n$ y $c$ de esas expresiones, pero podemos elaborar un programa que para todas las parejas de valores $n$ y $c$ (dentro de unos límites, por ejemplo $n \leq 200$ y $c \leq 6$) identifique la que corresponde al plan que mejor se adapta a los requisitos establecidos.
 
-![Curva característica del plan de muestreo ($n=87$, $c=2$) que mejor se adapta a los puntos previamente definidos.](Figuras/f0604_calculoPlanMuestreo.png){#fig-calculoPlanMuestreo .fig-normal3 fig-align="center" width="55%"}
+![Curva característica del plan de muestreo ($n=87$, $c=2$) que mejor se adapta a los puntos previamente definidos.](Figuras/f0604_calculoPlanMuestreo.png){#fig-calculoPlanMuestreo .fig-normal3 fig-align="center" width="60%"}
 
 El tema de los planes de inspección por muestreo no se acaba aquí. Existen otros tipos de plan como los de muestreo doble, en los que tras tomar una primera muestra el lote se acepta si el número de defectos es menor o igual que un valor $c_1$ y se rechaza si es mayor o igual que $c_2$, mientras que si está entre $c_1$ y $c_2$ se saca otra muestra y se toma una decisión a la vista del número de defectos total. Estos planes tienen la ventaja de que exigen menos esfuerzo de inspección si el lote es muy bueno o muy malo, dedicando más esfuerzo a los lotes que son dudosos.
 

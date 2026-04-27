@@ -1,0 +1,65 @@
+/*Figura 2.1*/
+/*=======================================*/
+
+.fig-normal_0201 {
+  margin-top: 0.4em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+.fig-normal_0201 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
+  padding-top: 7px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_0201 img {
+  width: 525px;
+}
+
+/*Figura 2.2*/
+/*=======================================*/
+
+.fig-normal_0202 {
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+  text-align: center;
+}
+.fig-normal_0202 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
+  padding-top: 7px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_0202 img {
+  width: 475px;
+}
+
+/*Figura 2.3*/
+/*=======================================*/
+
+.fig-normal_0203 {
+  margin-top: 0.8em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+.fig-normal_0203 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
+  padding-top: 7px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_0203 img {
+  width: 290px;
+}

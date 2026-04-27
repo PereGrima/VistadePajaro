@@ -73,6 +73,7 @@ format:
     css:
       - styles.css
       - figuras.css
+      - figuras_02.css
       - figuras_07.css
       - figuras_08.css
       - figuras_09.css

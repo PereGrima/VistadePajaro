@@ -688,7 +688,6 @@ Que el coste de la vida aumente por encima de los salarios significa que el pode
 </div>
 </div>
 ```
-
 ![Salarios y poder adquisitivo. Los salarios se duplican en 10 años, pero la inflación es del 15% anual.](Figuras_03/f0000_figuraFantasma2.png){#fig-salariosPoderAdq .fig-normal_0310_Fantasma fig-align="center"}
 
 #### Valores que presentan estacionalidad {.unnumbered}
@@ -869,7 +868,7 @@ La [@fig-diagramaBarras] utiliza un diagrama de barras para mostrar el número d
 
 ### Gráficos de pastel, y de dónut {.unnumbered}
 
-Otra forma de representar el tamaño de cada una de las partes son los gráficos de pastel (también se usan otros nombres[^03_graficos-6], como el de la izquierda de la figura \ref{donutPiePoblacion}, donde se representa la población en cada uno de los cinco continentes. Este tipo de diagrama nunca ha tenido mucho predicamento en el ámbito científico-técnico, donde en general se prefieren los diagramas de barras, aunque sí es utilizado en economía y gestión de empresas. Últimamente se está viendo desplazado por el llamado gráfico de dónut (seguimos en la pastelería), en el que la información se ve más clara y se ahorra tinta [@fig-donutPiePoblacion] derecha).
+Otra forma de representar el tamaño de cada una de las partes son los gráficos de pastel (también se usan otros nombres[^03_graficos-6], como el de la izquierda de la [@fig-donutPiePoblacion], donde se representa la población en cada uno de los cinco continentes. Este tipo de diagrama nunca ha tenido mucho predicamento en el ámbito científico-técnico, donde en general se prefieren los diagramas de barras, aunque sí es utilizado en economía y gestión de empresas. Últimamente se está viendo desplazado por el llamado gráfico de dónut (seguimos en la pastelería), en el que la información se ve más clara y se ahorra tinta [@fig-donutPiePoblacion] derecha).
 
 [^03_graficos-6]: <small>Otras denominaciones habituales son: diagrama circular, gráfico de sectores, diagrama de tarta o diagrama de quesitos.</small>
 

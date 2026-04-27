@@ -105,6 +105,13 @@ window.Quarto = {
 
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="figuras.css">
+<link rel="stylesheet" href="figuras_02.css">
+<link rel="stylesheet" href="figuras_03.css">
+<link rel="stylesheet" href="figuras_04.css">
+<link rel="stylesheet" href="figuras_05.css">
+<link rel="stylesheet" href="figuras_07.css">
+<link rel="stylesheet" href="figuras_08.css">
+<link rel="stylesheet" href="figuras_09.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -371,10 +378,10 @@ window.Quarto = {
 <p>Existen conjuntos que se pueden considerar poblaciones numeradas, como los <span class="math inline">\(n\)</span> taxis de una ciudad identificados con un número de licencia que va de 1 a <span class="math inline">\(n\)</span>. En este caso, una muestra de números de licencia se puede considerar obtenida de una distribución equiprobable. Veremos más adelante que, con los valores de muestras relativamente pequeñas, podemos estimar con mucha precisión el número de taxis que hay en una ciudad.</p>
 <p>En estos casos en que la población está formada por números enteros correlativos del 1 al <span class="math inline">\(n\)</span>, deducir el valor de la esperanza matemática es casi inmediato, el de la varianza es un poco más entretenido<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Las expresiones que se obtienen son: <span class="math display">\[\mathrm{E}(X) = \frac{n+1}{2} \;\;\;\; \;\;\;\; \mathrm{V}(X) = \frac{n^2-1}{12}\]</span></p>
 <p>La suma de variables aleatorias equiprobables no es una variable de ese mismo tipo. La <a href="#fig-sumaEqui" class="quarto-xref">Figura&nbsp;<span>5.1</span></a> muestra la distribución del valor obtenido al lanzar un dado junto con la correspondiente a la suma de los valores obtenidos al lanzar ocho. En este último caso, el perfil del diagrama de barras seguro que le recuerda a una distribución muy conocida de la que hablaremos con detalle más adelante.</p>
-<div id="fig-sumaEqui" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-sumaEqui" class="fig-normal_0501 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-sumaEqui-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_05/f0501_sumaEqui.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+<img src="Figuras_05/f0501_sumaEqui.png" class="fig-normal_0501 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sumaEqui-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;5.1: Distribuciones de probabilidad del resultado de lanzar un dado y del valor de la suma obtenida al lanzar 8 dados.
@@ -383,7 +390,7 @@ Figura&nbsp;5.1: Distribuciones de probabilidad del resultado de lanzar un dado 
 </div>
 <p>Un último detalle. Los valores de la esperanza matemática y la varianza de la distribución de la suma se deducen fácilmente aplicando las reglas para operar con variables aleatorias. Sea <span class="math inline">\(X\)</span> el resultado de lanzar un dado y <span class="math inline">\(X_8\)</span> la suma del resultado obtenido al lanzar 8 dados. Tenemos: <span class="math display">\[\begin{equation*}
     \begin{split}
-        &amp;\mathrm E(X) = \frac{n+1}{2} = 3.5; \; \qquad \; \mathrm V(X) = \frac{n^2+1}{12} = \frac{35}{12} \\[5pt]
+        &amp;\mathrm E(X) = \frac{n+1}{2} = 3{,}5; \; \qquad \; \mathrm V(X) = \frac{n^2+1}{12} = \frac{35}{12} \\[5pt]
         &amp;\mathrm E(X_8) = 8 \cdot E(X) = 28; \;\;\!  \quad \mathrm V(X_8) = 8 \cdot \mathrm V(X) = \frac{70}{3}\\[-1pt]
     \end{split}     
 \end{equation*}\]</span></p>
@@ -392,7 +399,7 @@ Figura&nbsp;5.1: Distribuciones de probabilidad del resultado de lanzar un dado 
 <h2 data-number="5.2" class="anchored" data-anchor-id="distribución-binomial"><span class="header-section-number">5.2</span> Distribución binomial</h2>
 <p>Vamos a calcular la probabilidad de que, al lanzar cinco veces una moneda al aire, aparezcan –en cualquier orden– dos caras y tres cruces. Sabemos que la probabilidad de que salga cara (C) es igual a la de que salga cruz (+) e igual a 0,5. La probabilidad de que en dos lanzamientos salga cara <strong>y</strong> cara es <span class="math inline">\(0.5 \cdot 0.5\)</span> (son sucesos independientes, aplicamos la regla de la “<strong>y</strong>”). La probabilidad de tener la secuencia CC+++ es igual a <span class="math inline">\(0,5^2 \cdot  0.5^3\)</span>.</p>
 <p>También podríamos escribir <span class="math inline">\(0.5^5\)</span> pero nos interesa separar las probabilidades de cada uno de los dos resultados posibles para que sea más fácil generalizar la expresión que vamos a obtener. Si planteamos dos secuencias, por ejemplo +C+C+ y C+C++ la probabilidad de obtener la primera <strong>o</strong> la segunda (no se pueden dar las dos a la vez, aplicamos la regla de la <strong>o</strong>) es igual a <span class="math inline">\(0.5^2 \cdot  0.5^3 + 0.5^2 \cdot  0.5^3\)</span>.</p>
-<p>Para calcular la probabilidad de obtener dos caras en cinco lanzamientos, habrá que sumar la probabilidad de que salgan esas dos caras en un orden concreto tantas veces como ordenaciones se pueden realizar con dos caras y tres cruces. Si los cinco resultados fueran distintos, el número de ordenaciones posibles sería igual a las permutaciones de 5 (5!), pero como hay tres repetidos por un lado (las tres cruces) y dos por otro (las dos caras) hay que dividir por las permutaciones de esos valores ya que esas no cuentan. Es un caso de permutaciones con repetición: <span class="math display">\[\mathrm P_5^{3,2}=\frac{5!}{2! \cdot 3!} = 10\]</span> Por tanto, la probabilidad de que salgan <span class="math inline">\(X=2\)</span> caras es igual a: <span class="math display">\[\mathrm P(X=2) = \frac{5!}{2! \cdot 3!} \; 0.5^2 \ 0.5^3 = 0,3125\]</span></p>
+<p>Para calcular la probabilidad de obtener dos caras en cinco lanzamientos, habrá que sumar la probabilidad de que salgan esas dos caras en un orden concreto tantas veces como ordenaciones se pueden realizar con dos caras y tres cruces. Si los cinco resultados fueran distintos, el número de ordenaciones posibles sería igual a las permutaciones de 5 (5!), pero como hay tres repetidos por un lado (las tres cruces) y dos por otro (las dos caras) hay que dividir por las permutaciones de esos valores ya que esas no cuentan. Es un caso de permutaciones con repetición: <span class="math display">\[\mathrm P_5^{3,2}=\frac{5!}{2! \cdot 3!} = 10\]</span> Por tanto, la probabilidad de que salgan <span class="math inline">\(X=2\)</span> caras es igual a: <span class="math display">\[\mathrm P(X=2) = \frac{5!}{2! \cdot 3!} \; 0{,}5^2 \ 0{,}5^3 = 0{,}3125\]</span></p>
 <p>¿Para qué sirve calcular esta probabilidad? A no ser que nos dediquemos a apostar sobre el resultado de lanzar monedas parece que sirve de poco, pero no es así. Esta situación se puede generalizar de la siguiente forma:</p>
 <ul>
 <li><p>Realizamos <span class="math inline">\(n\)</span> ejecuciones independientes. Esto significa que el resultado de una ejecución no está afectado por el resultado de las anteriores. En nuestro caso, que salga cara o cruz no depende de lo que haya salido antes.</p></li>
@@ -468,11 +475,11 @@ Figura&nbsp;5.1: Distribuciones de probabilidad del resultado de lanzar un dado 
 </table>
 
 </div>
-<p>La <a href="#fig-ejemplosDistBinomial" class="quarto-xref">Figura&nbsp;<span>5.2</span></a> muestra distribuciones binomiales con los parámetros que se indican. Con <span class="math inline">\(p=0.5\)</span> la distribución siempre es simétrica respecto al valor medio de <span class="math inline">\(X\)</span>. Se observa que –como era de esperar– si <span class="math inline">\(p &lt; 0.5\)</span> son más probables los valores bajos, y si <span class="math inline">\(p&gt;0.5\)</span> son más probables los altos. Con <span class="math inline">\(p=0.5\)</span> si <span class="math inline">\(n=10\)</span> la probabilidad $ P(X=0)$ (por ejemplo: probabilidad de cero caras al lanzar 10 veces una moneda) es muy pequeña, pero se nota en la representación gráfica. Con <span class="math inline">\(n=50\)</span> y manteniendo <span class="math inline">\(p=0.5\)</span> esa probabilidad es prácticamente nula. En esto la intuición no falla.</p>
-<div id="fig-ejemplosDistBinomial" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<p>La <a href="#fig-ejemplosDistBinomial" class="quarto-xref">Figura&nbsp;<span>5.2</span></a> muestra distribuciones binomiales con los parámetros que se indican. Con <span class="math inline">\(p=0.5\)</span> la distribución siempre es simétrica respecto al valor medio de <span class="math inline">\(X\)</span>. Se observa que –como era de esperar– si <span class="math inline">\(p &lt; 0.5\)</span> son más probables los valores bajos, y si <span class="math inline">\(p&gt;0{,}5\)</span> son más probables los altos. Con <span class="math inline">\(p=0{,}5\)</span> si <span class="math inline">\(n=10\)</span> la probabilidad <span class="math inline">\(\mathrm P(X=0)\)</span> (por ejemplo: probabilidad de cero caras al lanzar 10 veces una moneda) es muy pequeña, pero se nota en la representación gráfica. Con <span class="math inline">\(n=50\)</span> y manteniendo <span class="math inline">\(p=0{,}5\)</span> esa probabilidad es prácticamente nula. En esto la intuición no falla.</p>
+<div id="fig-ejemplosDistBinomial" class="fig-normal_0502 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ejemplosDistBinomial-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_05/f0502_ejemplosDistBinomial.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+<img src="Figuras_05/f0502_ejemplosDistBinomial.png" class="fig-normal_0502 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ejemplosDistBinomial-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;5.2: Distribuciones de probabilidad binomial con los parámetros que se indican.
@@ -487,23 +494,23 @@ Figura&nbsp;5.2: Distribuciones de probabilidad binomial con los parámetros que
 <li><p>Número de transacciones bancarias erróneas si se realizan <span class="math inline">\(n\)</span> y la probabilidad de que una sea errónea es <span class="math inline">\(p\)</span>.</p></li>
 <li><p>Número de enfermos que se curan de un conjunto de <span class="math inline">\(n\)</span> que han seguido un tratamiento que cura a una proporción <span class="math inline">\(p\)</span> de los enfermos que lo siguen.</p></li>
 </ul>
-<p>Si un lote de 500 piezas ha sido fabricado con una máquina que produce –a largo plazo– el 1% de unidades defectuosas (la probabilidad de que una unidad sea defectuosa es 0,01), quizá alguien estará tentado a decir que en ese lote habrá cinco piezas defectuosas, pero en realidad es imposible saber cuántas habrá. Lo que sí podemos hacer es calcular la probabilidad de que haya 0, 1, 2, 3,… Solo tenemos que aplicar la fórmula que acabamos de ver. Por ejemplo, la probabilidad de que haya exactamente cinco unidades defectuosas es: <span class="math display">\[ \mathrm P(X=5) = \frac{500!}{5! \cdot 495!} \; 0.01^5 \ 0.99^{495} = 0.1764\]</span> No intente calcular los factoriales que aparecen en la fórmula, debe simplificar antes de hacer los cálculos o, mejor, use una calculadora avanzada, aplicaciones en línea o una hoja de cálculo, como en la <a href="#fig-binomialGoogle" class="quarto-xref">Figura&nbsp;<span>5.3</span></a>.</p>
-<div id="fig-binomialGoogle" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<p>Si un lote de 500 piezas ha sido fabricado con una máquina que produce –a largo plazo– el 1% de unidades defectuosas (la probabilidad de que una unidad sea defectuosa es 0,01), quizá alguien estará tentado a decir que en ese lote habrá cinco piezas defectuosas, pero en realidad es imposible saber cuántas habrá. Lo que sí podemos hacer es calcular la probabilidad de que haya 0, 1, 2, 3,… Solo tenemos que aplicar la fórmula que acabamos de ver. Por ejemplo, la probabilidad de que haya exactamente cinco unidades defectuosas es: <span class="math display">\[ \mathrm P(X=5) = \frac{500!}{5! \cdot 495!} \; 0{,}01^5 \ 0{,}99^{495} = 0{,}1764\]</span> No intente calcular los factoriales que aparecen en la fórmula, debe simplificar antes de hacer los cálculos o, mejor, use una calculadora avanzada, aplicaciones en línea o una hoja de cálculo, como en la <a href="#fig-binomialGoogle" class="quarto-xref">Figura&nbsp;<span>5.3</span></a>.</p>
+<div id="fig-binomialGoogle" class="fig-normal_0503 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-binomialGoogle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_05/f0503_binomialGoogle.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+<img src="Figuras_05/f0503_binomialGoogle.png" class="fig-normal_0503 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-binomialGoogle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;5.3: Distribución binomial. Determinación de la probabilidad de que la variable aleatoria tome un valor concreto (con <em>Google Sheets</em>).
 </figcaption>
 </figure>
 </div>
-<p>En muchos casos, el interés no está en la probabilidad de tener un número concreto, sino en la de tener ese valor como máximo. En nuestro ejemplo, la probabilidad de tener como máximo 5 defectos será: <span class="math display">\[\mathrm P(X \leq 5) = \sum_{i=0}^{5}\frac{500!}{i! \cdot (500-i)!} \; 0,01^i \ 0,99^{500-i} = 0.616\]</span></p>
+<p>En muchos casos, el interés no está en la probabilidad de tener un número concreto, sino en la de tener ese valor como máximo. En nuestro ejemplo, la probabilidad de tener como máximo 5 defectos será: <span class="math display">\[\mathrm P(X \leq 5) = \sum_{i=0}^{5}\frac{500!}{i! \cdot (500-i)!} \; 0{,}01^i \ 0{,}99^{500-i} = 0{,}616\]</span></p>
 <p>En estos casos, es obligado el uso de métodos de cálculo automáticos. Si usamos una hoja de cálculo hay que poner un 1 (o la palabra “VERDADERO”) como último parámetro para obtener la probabilidad acumulada (<a href="#fig-binomialGoogle_2" class="quarto-xref">Figura&nbsp;<span>5.4</span></a>).</p>
-<div id="fig-binomialGoogle_2" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-binomialGoogle_2" class="fig-normal_0504 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-binomialGoogle_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_05/f0504_binomialGoogle_2.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+<img src="Figuras_05/f0504_binomialGoogle_2.png" class="fig-normal_0504 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-binomialGoogle_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;5.4: Distribución binomial. Determinación de la probabilidad acumulada hasta un cierto valor (con <em>Google Sheets</em>).
@@ -511,11 +518,11 @@ Figura&nbsp;5.4: Distribución binomial. Determinación de la probabilidad acumu
 </figure>
 </div>
 <p>Si lo que interesa es la probabilidad de que la variable tome valores mayores a uno determinado, lo podemos calcular a través del complementario. Así, en nuestro caso, la probabilidad de tener más de cinco defectos será:</p>
-<p><span class="math display">\[\mathrm P(X &gt; 5) = 1 - \mathrm P(X \leq 5) = 1-0.616 = 0{,}384\]</span> Si lo que interesa es la probabilidad de tener cinco o más defectos, tendremos que calcular el complementario de cuatro o menos: <span class="math display">\[ \mathrm P(X \geq 5) = 1 - \mathrm P(X \leq 4) = 0{,}4396\]</span> Ejemplos de cálculo de probabilidades para variables que siguen una distribución binomial son:</p>
+<p><span class="math display">\[\mathrm P(X &gt; 5) = 1 - \mathrm P(X \leq 5) = 1-0{,}616 = 0{,}384\]</span> Si lo que interesa es la probabilidad de tener cinco o más defectos, tendremos que calcular el complementario de cuatro o menos: <span class="math display">\[ \mathrm P(X \geq 5) = 1 - \mathrm P(X \leq 4) = 0{,}4396\]</span> Ejemplos de cálculo de probabilidades para variables que siguen una distribución binomial son:</p>
 <ul>
-<li><p>Probabilidad de que se realicen más de 25 ventas en 100 acciones comerciales, si la probabilidad de que una acción comercial derive en venta es del 25%: <span class="math inline">\(\mathrm P(X&gt;25; \; n=100; \; p=0.25) =\)</span> <span class="math inline">\(=1 - \mathrm P(X \leq 25;\; n=100; \; p=0{,}25) = 0{,}4465\)</span>. Observe que el resultado no es igual al 50%.</p></li>
-<li><p>Probabilidad de que, si se tienen cuatro hijos, dos sean niños y los otros dos sean niñas: <span class="math inline">\(\mathrm P(X = 2; n=4; p=0.5) = 0,375\)</span>. Es más probable que no se produzca ese equilibrio en el reparto.</p></li>
-<li><p>Si la probabilidad de que una transacción bancaria sea errónea es del 0,01% y un día se realizan 20.000, calcular la probabilidad de que alguna sea errónea. Se puede calcular considerando que nuestra variable sigue una distribución binomial: <span class="math inline">\(1 - \mathrm P(X = 0; \; n=20\,000; \; p=0,0001) = 0{,}8647\)</span>, o simplemente calculando: <span class="math inline">\(1- 0{,}9999^{20\,000}=0{,}8647\)</span> (<span class="math inline">\(1 -\)</span> todas buenas).</p></li>
+<li><p>Probabilidad de que se realicen más de 25 ventas en 100 acciones comerciales, si la probabilidad de que una acción comercial derive en venta es del 25%: <span class="math inline">\(\mathrm P(X&gt;25; \; n=100; \; p=0{,}25) =\)</span> <span class="math inline">\(=1 - \mathrm P(X \leq 25;\; n=100; \; p=0{,}25) = 0{,}4465\)</span>. Observe que el resultado no es igual al 50%.</p></li>
+<li><p>Probabilidad de que, si se tienen cuatro hijos, dos sean niños y los otros dos sean niñas: <span class="math inline">\(\mathrm P(X = 2; n=4; p=0.5) = 0{,}375\)</span>. Es más probable que no se produzca ese equilibrio en el reparto.</p></li>
+<li><p>Si la probabilidad de que una transacción bancaria sea errónea es del 0,01% y un día se realizan 20.000, calcular la probabilidad de que alguna sea errónea. Se puede calcular considerando que nuestra variable sigue una distribución binomial: <span class="math inline">\(1 - \mathrm P(X = 0; \; n=20\,000; \; p=0{,}0001) = 0{,}8647\)</span>, o simplemente calculando: <span class="math inline">\(1- 0{,}9999^{20\,000}=0{,}8647\)</span> (<span class="math inline">\(1 -\)</span> todas buenas).</p></li>
 <li><p>Si la probabilidad de que un enfermo que sigue un determinado tratamiento se cure es del 30 %, calcular la probabilidad de que, si lo siguen 10 enfermos, se curen más de la mitad. <span class="math inline">\(\mathrm P(X &gt; 5; \; n=10; \; p=0{,}3) = 1 - \mathrm P(X \leq 5; n=10; p=0{,}3) = 0{,}04735\)</span>.</p></li>
 </ul>
 <p>Finalmente, si <span class="math inline">\(X\)</span> sigue una distribución binomial su valor esperado es <span class="math inline">\(\mathrm E(X)=np\)</span> y su varianza es <span class="math inline">\(\mathrm V(X) = np(1-p)\)</span>. En el Apéndice 5.A encontrará la justificación.</p>
@@ -523,7 +530,7 @@ Figura&nbsp;5.4: Distribución binomial. Determinación de la probabilidad acumu
 <h3 class="unnumbered anchored" data-anchor-id="aplicación-de-la-distribución-binomial-overbooking-sale-a-cuenta">Aplicación de la distribución binomial: <em>Overbooking</em> ¿sale a cuenta?</h3>
 <p>Supongamos que para un vuelo que tiene 180 plazas se venden 182 billetes porque se sabe que el 2 % de los pasajeros no se presenta<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p>
 <p>Podemos modelizar esta situación como 182 experimentos independientes, cada uno con dos resultados posibles: “éxito” (no se presenta) y “fracaso” (se presenta), con probabilidades 0,02 y 0,98 respectivamente.</p>
-<p>La probabilidad que nos interesa es la de tener <span class="math inline">\(X \geq 2\)</span> “éxitos” al realizar <span class="math inline">\(n=182\)</span> experimentos con una probabilidad de éxito <span class="math inline">\(p = 0.02\)</span>. Sabemos que ese número de éxitos sigue una distribución binomial, por tanto: <span class="math display">\[P(X \geq 2) = 1 - P(X \leq 1) = 1 - \text{B}(x=1; \; n=182; \; p=0{,}02)=0{,}8554\]</span> Si el precio del billete es de 500 $ y el coste de la indemnización que se debe pagar a cada pasajero sin plaza es de 2.000 $, se puede calcular la esperanza matemática del beneficio extra que produce vender dos billetes más que plazas disponibles.</p>
+<p>La probabilidad que nos interesa es la de tener <span class="math inline">\(X \geq 2\)</span> “éxitos” al realizar <span class="math inline">\(n=182\)</span> experimentos con una probabilidad de éxito <span class="math inline">\(p = 0{,}02\)</span>. Sabemos que ese número de éxitos sigue una distribución binomial, por tanto: <span class="math display">\[P(X \geq 2) = 1 - P(X \leq 1) = 1 - \text{B}(x=1; \; n=182; \; p=0{,}02)=0{,}8554\]</span> Si el precio del billete es de 500 $ y el coste de la indemnización que se debe pagar a cada pasajero sin plaza es de 2.000 $, se puede calcular la esperanza matemática del beneficio extra que produce vender dos billetes más que plazas disponibles.</p>
 <p>Para ello construimos una tabla con los valores que puede tomar la variable aleatoria (número de pasajeros que no se presentan, <span class="math inline">\(X\)</span>), junto con las probabilidades correspondientes. En este caso, consideramos que los valores que puede tomar <span class="math inline">\(X\)</span> son 0, 1 y 2 o más, puesto que el beneficio es siempre el mismo (igual a los ingresos de los billetes vendidos de más) cuando los que no se presentan son dos o más pasajeros.</p>
 <div id="tbl-Beneficio" ;="" class="tabla-wrapper_T0502 anchored">
 
@@ -561,7 +568,7 @@ Figura&nbsp;5.4: Distribución binomial. Determinación de la probabilidad acumu
 </table>
 
 </div>
-<p><br> Por tanto, a partir de los valores de la <a href="#tbl-Beneficio">Tabla 5.2</a> la esperanza matemática del beneficio extra será: <span class="math display">\[\text{E}(B) = 0.025 \cdot (-3000) + 0,119 \cdot (-1000) + 0,855 \cdot 1000 = 660.24\, \$ \]</span></p>
+<p><br> Por tanto, a partir de los valores de la <a href="#tbl-Beneficio">Tabla 5.2</a> la esperanza matemática del beneficio extra será: <span class="math display">\[\text{E}(B) = 0{,}025 \cdot (-3000) + 0{,}119 \cdot (-1000) + 0{,}855 \cdot 1000 = 660{,}24\, \$ \]</span></p>
 <p>También se puede determinar el número de billetes conviene vender para maximizar la esperanza matemática de beneficio extra.</p>
 <p>Calculando –tal como hemos visto– esa esperanza matemática en función del número de billetes vendidos, se obtiene que si se venden 181 es de 448,36 $, si se venden 183 es de 302,88 $ y si se venden 184 ya resulta negativa. Con los valores supuestos conviene 182 billetes.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -581,13 +588,13 @@ Figura&nbsp;5.4: Distribución binomial. Determinación de la probabilidad acumu
 </section>
 <section id="distribución-de-poisson" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="distribución-de-poisson"><span class="header-section-number">5.3</span> Distribución de Poisson</h2>
-<p>Supongamos que una máquina funciona <span class="math inline">\(n=28\,000\)</span> segundos (algo menos de ocho horas) al día y que la probabilidad de que sufra una avería durante un segundo dado es <span class="math inline">\(p=0.0001\)</span>. El número de averías diarias que tendrá esa máquina es una variable aleatoria, <span class="math inline">\(Y_1\)</span>, con distribución binomial y con los valores de <span class="math inline">\(n\)</span> y <span class="math inline">\(p\)</span> indicados.</p>
-<p>Durante un segundo la probabilidad de avería es muy pequeña, pero como durante un día está funcionando muchos segundos la probabilidad de que se averíe alguna vez ya no lo es tanto. La esperanza matemática (valor medio) del número de averías diarias es <span class="math inline">\(\mathrm E(Y_1) = np = 2.8\)</span>. La probabilidad de tener desde cero hasta seis averías se encuentra en la primera fila de la <a href="#tbl-binoPoisson">Tabla 5.3</a>.</p>
-<p>Si tenemos otra máquina que solo funciona la mitad del tiempo, <span class="math inline">\(n =14\,000\)</span> segundos al día, pero su probabilidad de avería en cada segundo es el doble, <span class="math inline">\(p = 0,0002\)</span>, el número de averías diarias será una nueva variable aleatoria, <span class="math inline">\(Y_2\)</span>, obviamente también con distribución binomial aunque con distintos valores de los parámetros <span class="math inline">\(n\)</span> y <span class="math inline">\(p\)</span>. Puede parecer que, como funciona menos tiempo, el número de averías será menor, pero como la probabilidad de avería es mayor, el resultados no está tan claro. En realidad, la esperanza matemática del número de averías diarias es exactamente la misma en los dos casos y la varianza también es prácticamente idéntica (<span class="math inline">\(\mathrm V(Y_1) = 2,79972\)</span> y <span class="math inline">\(\mathrm V(Y_2) = 2,79944\)</span>). Además, las probabilidades asociadas a cada uno de los valores del número de averías diarias son casi las mismas (segunda fila de la <a href="#tbl-binoPoisson">Tabla 5.3</a>). En realidad, las dos variables tienen un comportamiento prácticamente idéntico.</p>
+<p>Supongamos que una máquina funciona <span class="math inline">\(n=28\,000\)</span> segundos (algo menos de ocho horas) al día y que la probabilidad de que sufra una avería durante un segundo dado es <span class="math inline">\(p=0{,}0001\)</span>. El número de averías diarias que tendrá esa máquina es una variable aleatoria, <span class="math inline">\(Y_1\)</span>, con distribución binomial y con los valores de <span class="math inline">\(n\)</span> y <span class="math inline">\(p\)</span> indicados.</p>
+<p>Durante un segundo la probabilidad de avería es muy pequeña, pero como durante un día está funcionando muchos segundos la probabilidad de que se averíe alguna vez ya no lo es tanto. La esperanza matemática (valor medio) del número de averías diarias es <span class="math inline">\(\mathrm E(Y_1) = np = 2{,}8\)</span>. La probabilidad de tener desde cero hasta seis averías se encuentra en la primera fila de la <a href="#tbl-binoPoisson">Tabla 5.3</a>.</p>
+<p>Si tenemos otra máquina que solo funciona la mitad del tiempo, <span class="math inline">\(n =14\,000\)</span> segundos al día, pero su probabilidad de avería en cada segundo es el doble, <span class="math inline">\(p = 0{,}0002\)</span>, el número de averías diarias será una nueva variable aleatoria, <span class="math inline">\(Y_2\)</span>, obviamente también con distribución binomial aunque con distintos valores de los parámetros <span class="math inline">\(n\)</span> y <span class="math inline">\(p\)</span>. Puede parecer que, como funciona menos tiempo, el número de averías será menor, pero como la probabilidad de avería es mayor, el resultados no está tan claro. En realidad, la esperanza matemática del número de averías diarias es exactamente la misma en los dos casos y la varianza también es prácticamente idéntica (<span class="math inline">\(\mathrm V(Y_1) = 2{,}79972\)</span> y <span class="math inline">\(\mathrm V(Y_2) = 2{,}79944\)</span>). Además, las probabilidades asociadas a cada uno de los valores del número de averías diarias son casi las mismas (segunda fila de la <a href="#tbl-binoPoisson">Tabla 5.3</a>). En realidad, las dos variables tienen un comportamiento prácticamente idéntico.</p>
 <section id="la-distribución-de-poisson-como-límite-de-la-binomial" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="la-distribución-de-poisson-como-límite-de-la-binomial">La distribución de Poisson como límite de la binomial</h3>
 <p>Esta similitud entre ambas distribuciones se debe a que, cuando <span class="math inline">\(n\)</span> se hace muy grande y <span class="math inline">\(p\)</span> muy pequeña, la distribución binomial tiende a una nueva distribución que solo depende del producto <span class="math inline">\(np\)</span> y que llamamos <strong>distribución de Poisson</strong>. Esta nueva distribución queda definida con un solo parámetro, <span class="math inline">\(\lambda = np\)</span> y su función de probabilidad es: <span class="math display">\[\mathrm P(x) = \frac{e^{-\lambda}\lambda^x}{x!} \]</span></p>
-<p>En los ejemplos que estamos considerando, <span class="math inline">\(\lambda = 2.8\)</span> y las probabilidades que se obtienen para el número de averías diarias se encuentran en la tercera fila de la <a href="#tbl-binoPoisson">Tabla 5.3</a>. Los valores son realmente muy parecidos a los obtenidos anteriormente.</p>
+<p>En los ejemplos que estamos considerando, <span class="math inline">\(\lambda = 2{,}8\)</span> y las probabilidades que se obtienen para el número de averías diarias se encuentran en la tercera fila de la <a href="#tbl-binoPoisson">Tabla 5.3</a>. Los valores son realmente muy parecidos a los obtenidos anteriormente.</p>
 <div id="tbl-binoPoisson" class="tabla-wrapper_T0503 anchored">
 
 <table class="tabla-0503 caption-top table">
@@ -747,10 +754,10 @@ Figura&nbsp;5.4: Distribución binomial. Determinación de la probabilidad acumu
 <section id="más-ejemplos-de-los-muertos-por-coz-de-caballo-en-el-ejercito-prusiano-a-los-goles-en-la-liga-española-de-fútbol" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="más-ejemplos-de-los-muertos-por-coz-de-caballo-en-el-ejercito-prusiano-a-los-goles-en-la-liga-española-de-fútbol">Más ejemplos: De los muertos por coz de caballo en el ejercito prusiano a los goles en la liga española de fútbol</h3>
 <p>En 1898, el economista y estadístico ruso Ladislaus Bortkiewicz publicó un libro<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> mostrando que la distribución de Poisson puede ser usada para explicar la regularidad estadística que se aprecia en la ocurrencia de sucesos raros. Utilizó datos sobre suicidios y muertes accidentales en diversas circunstancias, pero su ejemplo más famoso es el del número de soldados muertos por coz de caballo en 14 regimientos del ejército prusiano durante un periodo de 20 años. La tabla de la <a href="#fig-tablaCozCaballo" class="quarto-xref">Figura&nbsp;<span>5.5</span></a> reproduce estos datos tal como aparecen en su libro.</p>
-<div id="fig-tablaCozCaballo" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-tablaCozCaballo" class="fig-normal_0505 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-tablaCozCaballo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_05/f0505_tablaCozCaballo.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+<img src="Figuras_05/f0505_tablaCozCaballo.png" class="fig-normal_0505 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tablaCozCaballo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;5.5: Tabla del libro de L. Bortkiewicz donde se indican los muertos por coz de caballo en el ejército prusiano ordenados por regimiento (filas) y año (columnas).
@@ -831,22 +838,22 @@ observada</th>
 </div>
 <p>Puestos a buscar unos datos más acordes con nuestros tiempos, podemos volver al mundo del fútbol y analizar la distribución del número de goles que marca cada equipo en los partidos de la Primera División de la liga española.</p>
 <p>La <a href="#fig-golesLiga0809" class="quarto-xref">Figura&nbsp;<span>5.6</span></a> muestra los resultados de todos los partidos de la temporada 2008-2009. Tenemos los resultados de 380 partidos y, en cada uno de ellos, el número de goles que ha marcado cada equipo.</p>
-<div id="fig-golesLiga0809" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-golesLiga0809" class="fig-normal_0506 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-golesLiga0809-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_05/f0506_golesLiga0809.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+<img src="Figuras_05/f0506_golesLiga0809.png" class="fig-normal_0506 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-golesLiga0809-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;5.6: Resultados de todos los partidos de la primera división de la liga española en la temporada 2008-2009. (Diario La Vanguardia 01/06/2009, pág. 44).
 </figcaption>
 </figure>
 </div>
-<p>El primer diagrama de la <a href="#fig-golesFutbol0913" class="quarto-xref">Figura&nbsp;<span>5.7</span></a> representa estos resultados de la temporada 2008-09. El resto corresponden a las temporadas siguientes, excepto el último, que se ha construido con valores generados aleatoriamente de una distribución de Poisson con <span class="math inline">\(\lambda = 1.4\)</span>, que es el promedio de los goles marcados por cada equipo en cada partido en las temporadas consideradas. Observe que tiene un aspecto muy similar al de los datos reales.</p>
+<p>El primer diagrama de la <a href="#fig-golesFutbol0913" class="quarto-xref">Figura&nbsp;<span>5.7</span></a> representa estos resultados de la temporada 2008-09. El resto corresponden a las temporadas siguientes, excepto el último, que se ha construido con valores generados aleatoriamente de una distribución de Poisson con <span class="math inline">\(\lambda = 1{,}4\)</span>, que es el promedio de los goles marcados por cada equipo en cada partido en las temporadas consideradas. Observe que tiene un aspecto muy similar al de los datos reales.</p>
 <p>Nadie sabe cuántos goles marcará cada equipo en un partido de fútbol; pero, si analizamos ese valor para una temporada completa, presenta una regularidad sorprendente que explica muy bien la distribución de Poisson.</p>
-<div id="fig-golesFutbol0913" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-golesFutbol0913" class="fig-normal_0507 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-golesFutbol0913-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_05/f0507_golesFutbol0913.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+<img src="Figuras_05/f0507_golesFutbol0913.png" class="fig-normal_0507 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-golesFutbol0913-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;5.7: Goles marcados por cada equipo en cada partido de la temporada que se indica en la primera división de la liga española.
@@ -904,10 +911,10 @@ contrarios:</td>
 <section id="distribución-uniforme" class="level2" data-number="5.4">
 <h2 data-number="5.4" class="anchored" data-anchor-id="distribución-uniforme"><span class="header-section-number">5.4</span> Distribución uniforme</h2>
 <p>Es la más sencilla para las variables aleatorias continuas. Su función densidad de probabilidad, <span class="math inline">\(f(x)\)</span>, es constante en todo el rango en el que está definida. Si <span class="math inline">\(X\)</span> puede variar entre <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> seguro que <span class="math inline">\(f(x) = \frac{1}{b-a}\)</span> para que el área sea igual a uno (<a href="#fig-distribucionUniforme" class="quarto-xref">Figura&nbsp;<span>5.8</span></a>). Escribimos: <span class="math inline">\(X \sim \text{U}(a, b)\)</span>.</p>
-<div id="fig-distribucionUniforme" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-distribucionUniforme" class="fig-normal_0508 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-distribucionUniforme-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_05/f0508_distribucionUniforme.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:65.0%">
+<img src="Figuras_05/f0508_distribucionUniforme.png" class="fig-normal_0508 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-distribucionUniforme-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;5.8: Distribución uniforme definida en el intervalo (<em>a, b</em>).).
@@ -939,10 +946,10 @@ Figura&nbsp;5.8: Distribución uniforme definida en el intervalo (<em>a, b</em>)
 </div>
 </div>
 <p>El primer histograma de la <a href="#fig-sumaUniformes" class="quarto-xref">Figura&nbsp;<span>5.9</span></a> representa <span class="math inline">\(100\,000\)</span> valores generados aleatoriamente de una distribución <span class="math inline">\(\text{U}(0; 1)\)</span>. El segundo –donde aparece claramente una distribución triangular– es la suma de dos variables aleatorias como la representada anteriormente. Los otros dos histogramas corresponden a la suma de 4 y de 8 de estas variables. A medida que aumenta el número de sumandos, el perfil del histograma se parece cada vez más a una distribución omnipresente cuando se estudia la variabilidad. Es la que comentamos a continuación.</p>
-<div id="fig-sumaUniformes" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-sumaUniformes" class="fig-normal_0509 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-sumaUniformes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_05/f0509_sumaUniformes.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+<img src="Figuras_05/f0509_sumaUniformes.png" class="fig-normal_0509 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sumaUniformes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;5.9: Suma de distribuciones uniformes definidas en el intervalo 0, 1.
@@ -953,11 +960,11 @@ Figura&nbsp;5.9: Suma de distribuciones uniformes definidas en el intervalo 0, 1
 <section id="distribución-normal" class="level2" data-number="5.5">
 <h2 data-number="5.5" class="anchored" data-anchor-id="distribución-normal"><span class="header-section-number">5.5</span> Distribución Normal</h2>
 <p>La distribución Normal describe un tipo de variabilidad muy habitual en la naturaleza. Es la que se da cuando la mayoría de los valores se encuentran agrupados en torno a su valor medio y, a medida que nos alejamos de ese valor –tanto por un lado como por otro–, las observaciones son cada vez más escasas.</p>
-<p>Adolphe Quetelet (1796-1874), uno de los pioneros de la estadística moderna, destacó por su interés en estudiar la diversidad en las medidas del cuerpo humano. Uno de los conjuntos de datos más famosos que analizó es el que contiene el perímetro torácico de 5738 soldados escoceses<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>. En la figura <a href="#fig-QueteletData" class="quarto-xref">Figura&nbsp;<span>5.10</span></a> tenemos el histograma de esos datos al que se ha superpuesto una curva que se adapta a su perfil, también representada de manera aislada a la derecha. Esta es la curva que representa la distribución Normal, con la misma media (<span class="math inline">\(\mu = 39.8\)</span> pulgadas) y la misma desviación típica (<span class="math inline">\(\sigma = 2.1\)</span> pulgadas) que los datos. Es razonable considerar que los valores analizados han sido obtenidos de la población representada por esa curva, que se puede entender como el perfil de un histograma construido con muchísimos –decimos “infinitos”– datos y con una anchura de los intervalos muy pequeña, tendiendo a cero.</p>
-<div id="fig-QueteletData" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<p>Adolphe Quetelet (1796-1874), uno de los pioneros de la estadística moderna, destacó por su interés en estudiar la diversidad en las medidas del cuerpo humano. Uno de los conjuntos de datos más famosos que analizó es el que contiene el perímetro torácico de 5738 soldados escoceses<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>. En la <a href="#fig-QueteletData" class="quarto-xref">Figura&nbsp;<span>5.10</span></a> tenemos el histograma de esos datos al que se ha superpuesto una curva que se adapta a su perfil, también representada de manera aislada a la derecha. Esta es la curva que representa la distribución Normal, con la misma media (<span class="math inline">\(\mu = 39{,}8\)</span> pulgadas) y la misma desviación típica (<span class="math inline">\(\sigma = 2{,}1\)</span> pulgadas) que los datos. Es razonable considerar que los valores analizados han sido obtenidos de la población representada por esa curva, que se puede entender como el perfil de un histograma construido con muchísimos –decimos “infinitos”– datos y con una anchura de los intervalos muy pequeña, tendiendo a cero.</p>
+<div id="fig-QueteletData" class="fig-normal_0510 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-QueteletData-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_05/f0510_QueteletData.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+<img src="Figuras_05/f0510_QueteletData.png" class="fig-normal_0510 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-QueteletData-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;5.10: Histograma y distribución Normal que mejor se adapta a los datos del perímetro torácico analizados por Quetelet.
@@ -980,12 +987,12 @@ Figura&nbsp;5.10: Histograma y distribución Normal que mejor se adapta a los da
 <section id="descripción-y-geometría" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="descripción-y-geometría">Descripción y geometría</h3>
 <p>La función que describe la distribución Normal, es decir, su función densidad de probabilidad, es[^8]: <span class="math display">\[f(x) = \frac{1}{\sigma\sqrt{2 \pi}} e^{-\frac{(x-\mu)^2}{2 \sigma^2}} \]</span> [^8]: El primero en deducirla, como límite de la distribución binomial cuando <span class="math inline">\(n \rightarrow \infty\)</span> y $ 0 &lt; p &lt; 1$, fue el matemático francés Abraham de Moivre en 1733. Posteriormente, Gauss puso de manifiesto su utilidad para describir los errores de medición y su nombre quedó asociado a esta distribución. La deducción no es elemental, los interesados le pueden dar un primer vistazo consultando la Wikipedia: “De Moivre–Laplace theorem”&gt;&gt;“, en inglés</p>
-<p>Puede observarse que <span class="math inline">\(f(x)\)</span> solo depende de dos parámetros: <span class="math inline">\(\mu\)</span> y <span class="math inline">\(\sigma\)</span>, siendo $ E(X)=$ y $ V(X)=^2<span class="math inline">\(, por tanto, esos dos parámetros son su media (\)</span><span class="math inline">\() y su desviación típica (\)</span>$). La notación que usamos para referirnos a una variable aleatoria con distribución Normal es: <span class="math inline">\(X \sim \text{N} (\mu; \sigma)\)</span>.</p>
+<p>Puede observarse que <span class="math inline">\(f(x)\)</span> solo depende de dos parámetros: <span class="math inline">\(\mu\)</span> y <span class="math inline">\(\sigma\)</span>, siendo <span class="math inline">\(\mathrm E(X)=\mu\$ y \$ \mathrm V(X)=\sigma\^2\)</span>, por tanto, esos dos parámetros son su media (<span class="math inline">\(\mu\)</span>) y su desviación típica (<span class="math inline">\(\sigma\)</span>). La notación que usamos para referirnos a una variable aleatoria con distribución Normal es: <span class="math inline">\(X \sim \text{N} (\mu; \sigma)\)</span>.</p>
 <p>La distribución está centrada en <span class="math inline">\(X=\mu\)</span> y el valor de <span class="math inline">\(\sigma\)</span> coincide con la distancia entre <span class="math inline">\(\mu\)</span> y los valores de <span class="math inline">\(x\)</span> donde se encuentran los puntos de inflexión de la curva (pasa de cóncava a convexa)<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>, tal como se indica en la <a href="#fig-geomNormal" class="quarto-xref">Figura&nbsp;<span>5.11</span></a>. Observe que en las distribuciones de la derecha, solo la de arriba representa una distribución con <span class="math inline">\(\sigma = 2\)</span>. Cuando se calculan probabilidades vale la pena realizar un pequeño dibujo de la distribución y marcar la zona correspondiente al área que se está buscando. Si el dibujo se ha realizado manteniendo las proporciones que debe tener (naturalmente, no hace falta que sea muy exacto) la primera evaluación realizada a la vista de ese esquema debe ser coherente con el resultado de los cálculos.</p>
-<div id="fig-geomNormal" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-geomNormal" class="fig-normal_0511 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-geomNormal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_05/f0511_geomNormal.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+<img src="Figuras_05/f0511_geomNormal.png" class="fig-normal_0511 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-geomNormal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;5.11: Desviación típica en una distribución Normal. A la derecha, si se pretende representar una distribución con <span class="math inline">\(\sigma = 2\)</span>, la de abajo está claramente mal dibujada.
@@ -993,10 +1000,10 @@ Figura&nbsp;5.11: Desviación típica en una distribución Normal. A la derecha,
 </figure>
 </div>
 <p>Si dos distribuciones tienen la misma desviación típica, <span class="math inline">\(\sigma\)</span>, tienen también la misma forma y deslizándolas sobre el eje de las <span class="math inline">\(x\)</span> se pueden superponer. Si tienen la misma media, <span class="math inline">\(\mu\)</span> pero distinta <span class="math inline">\(\sigma\)</span> están centradas en el mismo valor, pero la de menor <span class="math inline">\(\sigma\)</span> se verá más esbelta (<a href="#fig-Normales" class="quarto-xref">Figura&nbsp;<span>5.12</span></a>).</p>
-<div id="fig-Normales" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-Normales" class="fig-normal_0512 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Normales-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_05/f0512_Normales.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+<img src="Figuras_05/f0512_Normales.png" class="fig-normal_0512 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Normales-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;5.12: Desviación típica en una distribución Normal. A la derecha, si se pretende representar una distribución con <span class="math inline">\(\sigma = 2\)</span>, la de abajo está claramente mal dibujada.
@@ -1031,7 +1038,7 @@ Figura&nbsp;5.12: Desviación típica en una distribución Normal. A la derecha,
 <div id="fig-PearsonData" class="fig-normal_0513 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-PearsonData-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_05/f0513_PearsonData.png" class="fig-normal_0513 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+<img src="Figuras_05/f0513_PearsonData.png" class="fig-normal_0513 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-PearsonData-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;5.13: Histogramas de las estaturas de 1375 mujeres y también de las de una hija de cada una de ellas. Datos recopilados por Karl Pearson a finales del siglo XIX.
@@ -1041,10 +1048,10 @@ Figura&nbsp;5.13: Histogramas de las estaturas de 1375 mujeres y también de las
 <p>Pero, además de por explicar muy bien un tipo de variabilidad que observamos en nuestro entorno, hay otra razón por la que la distribución Normal es muy importante: a partir de cierto tamaño de muestra, su media –que es la materia prima con que trabajamos en muchos análisis estadísticos– puede considerarse una variable aleatoria con distribución Normal, con independencia de cuál sea la distribución de la que provengan los datos de esa muestra.</p>
 <p>Ya hemos visto (<a href="#fig-sumaUniformes" class="quarto-xref">Figura&nbsp;<span>5.9</span></a>) que la suma de variables aleatorias con distribución uniforme va tomando el aspecto de una distribución Normal a medida que aumenta el número de sumandos. Lo mismo ocurre con la media, que no es más que esa suma dividida por una constante.</p>
 <p>Podemos repetir este análisis, pero ahora con la variable “resultado obtenido al lanzar un dado”, que sigue una distribución equiprobable. Esta es una distribución totalmente distinta de la Normal, no solo todos los valores tienen la misma probabilidad de ocurrir, sino que, además, es una variable discreta. Esta distribución está representada en el primer diagrama de la <a href="#fig-sumaEquiprobable" class="quarto-xref">Figura&nbsp;<span>5.14</span></a>; en el segundo tenemos la distribución de los valores medios que se pueden obtener al lanzar dos dados. En este caso ya no todos los posibles valores tienen la misma probabilidad de salir: para que la media sea igual a uno tienen que salir dos unos, lo cual es menos probable que obtener una media de 3,5, ya que hay más resultados que conducen a ese valor. Si lanzamos cuatro dados todavía es más difícil obtener valores en los extremos. Si consideramos la media de los valores obtenidos al lanzar ocho dados, el perfil de la campana ya es claramente reconocible.</p>
-<div id="fig-sumaEquiprobable" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-sumaEquiprobable" class="fig-normal_0514 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-sumaEquiprobable-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_05/f0514_sumaEquiprobable.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+<img src="Figuras_05/f0514_sumaEquiprobable.png" class="fig-normal_0514 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sumaEquiprobable-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;5.14: La distribución de la media de valores de una distribución equiprobable tiende a la distribución Normal a medida que aumenta el tamaño de la muestra.
@@ -1071,7 +1078,7 @@ Figura&nbsp;5.14: La distribución de la media de valores de una distribución e
 <div id="fig-calProbNormal" class="fig-normal_0515 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-calProbNormal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_05/f0515_calProbNormal.png" class="fig-normal_0515 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_05/f0515_calProbNormal.png" class="fig-normal_0515 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-calProbNormal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;5.15: Cálculo de probabilidades en la distribución Normal.
@@ -1094,9 +1101,9 @@ Figura&nbsp;5.15: Cálculo de probabilidades en la distribución Normal.
 </div>
 <p>Cuando se buscan probabilidades hay que tener claro qué información proporciona el instrumento que se está utilizando. Las hojas de cálculo habituales dan probabilidades acumuladas hasta un valor (área a la izquierda de <span class="math inline">\(x\)</span>). Si <span class="math inline">\(X \sim \mathrm{N}(\mu=10; \; \sigma = 2)\)</span> tenemos:</p>
 <ul>
-<li><p><span class="math inline">\(\text{P}(X &lt; 7)\)</span> <br> Probabilidad acumulada hasta el valor de <span class="math inline">\(X = 7\)</span>. <img src="Figuras_05/f05sn_ProbNormal_1.png" id="fig-calProbNormal" class="fig-normal3 img-fluid quarto-figure quarto-figure-center anchored" style="width:100.0%"> El cuarto valor dentro del paréntesis indica si se desea obtener la probabilidad acumulada (VERDADERO o 1) o el valor de la función densidad de probabilidad (FALSO o 0). Si se calculan probabilidades en una variable continua, siempre hay que poner 1. El valor de la función densidad de probabilidad solo interesa si queremos dibujar la curva de la campana.</p></li>
-<li><p><span class="math inline">\(\text{P}(X &gt; 7)\)</span> <br> Como el área total bajo la campana es igual a 1 y la variable solo puede ser mayor o menor que 7 (no hay posibilidades intermedias), podemos escribir: <span class="math inline">\(\mathrm{P}(X &gt; 7) = 1-  \mathrm{P}(X &lt; 7)\)</span> <img src="Figuras_05/f05sn_ProbNormal_2.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center" style="width:100.0%"></p></li>
-<li><p><span class="math inline">\(\text{P}(8 &lt; X &lt; 13)\)</span> <br> Es igual a <span class="math inline">\(\text{P}(X &lt; 13) - \text{P}(X &lt; 8)\)</span> <img src="Figuras_05/f05sn_ProbNormal_3.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center" style="width:100.0%"></p></li>
+<li><p><span class="math inline">\(\text{P}(X &lt; 7)\)</span> <br> Probabilidad acumulada hasta el valor de <span class="math inline">\(X = 7\)</span>. <img src="Figuras_05/f05sn_ProbNormal_1.png" id="fig-calProbNormal" class="fig-normal_0500a img-fluid quarto-figure quarto-figure-center anchored"> El cuarto valor dentro del paréntesis indica si se desea obtener la probabilidad acumulada (VERDADERO o 1) o el valor de la función densidad de probabilidad (FALSO o 0). Si se calculan probabilidades en una variable continua, siempre hay que poner 1. El valor de la función densidad de probabilidad solo interesa si queremos dibujar la curva de la campana.</p></li>
+<li><p><span class="math inline">\(\text{P}(X &gt; 7)\)</span> <br> Como el área total bajo la campana es igual a 1 y la variable solo puede ser mayor o menor que 7 (no hay posibilidades intermedias), podemos escribir: <span class="math inline">\(\mathrm{P}(X &gt; 7) = 1-  \mathrm{P}(X &lt; 7)\)</span> <img src="Figuras_05/f05sn_ProbNormal_2.png" class="fig-normal_0500b img-fluid quarto-figure quarto-figure-center"></p></li>
+<li><p><span class="math inline">\(\text{P}(8 &lt; X &lt; 13)\)</span> <br> Es igual a <span class="math inline">\(\text{P}(X &lt; 13) - \text{P}(X &lt; 8)\)</span> <img src="Figuras_05/f05sn_ProbNormal_3.png" class="fig-normal_0500c img-fluid quarto-figure quarto-figure-center"></p></li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1123,10 +1130,10 @@ Figura&nbsp;5.15: Cálculo de probabilidades en la distribución Normal.
 <p>Consiste en un tablero dispuesto en posición vertical en cuya parte superior se coloca un conjunto de bolas que se van dejando caer a través de una zona de clavijas colocadas al tresbolillo (<a href="#fig-quincunx" class="quarto-xref">Figura&nbsp;<span>5.16</span></a>, izquierda). Al descender, las bolas van chocando contra las clavijas y tras cada choque caen a derecha o izquierda al azar, entrando finalmente en una zona de pequeños canales donde se van acumulando. Se observa que la mayoría de las bolas se acumulan en los canales más cercanos al punto donde se dejan caer, disminuyendo su frecuencia a medida que nos alejamos de ese punto, tanto por un lado como por el otro.</p>
 <p>En la derecha de la <a href="#fig-quincunx" class="quarto-xref">Figura&nbsp;<span>5.16</span></a> tenemos el esquema de una bola que va a caer por una zona de clavijas con 4 filas y que acabará en uno de los compartimientos numerados del 0 al 4. Calcular la probabilidad de que caiga en cada uno de ellos es fácil si lo relacionamos con el problema del número de caras que se obtienen al lanzar <span class="math inline">\(n\)</span> veces una moneda al aire.</p>
 <p>En efecto, para que caiga en el compartimento 4 la bola tiene que rebotar siempre hacia la derecha. Como después de cada choque tiene una probabilidad del 50 % de ir para cada lado, la probabilidad de que esto ocurra es la misma que la de obtener 4 caras al lanzar 4 veces una moneda al aire.</p>
-<div id="fig-quincunx" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-quincunx" class="fig-normal_0516 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-quincunx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_05/f0516_quincunx.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%">
+<img src="Figuras_05/f0516_quincunx.png" class="fig-normal_0516 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-quincunx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;5.16: Quincunx con finalidad didáctica y esquema de caida de una bola por un tresbolillo de 4 filas.
@@ -1178,25 +1185,75 @@ Figura&nbsp;5.16: Quincunx con finalidad didáctica y esquema de caida de una bo
 </table>
 
 </div>
-<p>Este argumento se puede generalizar para cualquier número de filas. En internet es fácil encontrar simuladores de <em>quincunx</em> como el de la <a href="#fig-quincunxSimulador" class="quarto-xref">Figura&nbsp;<span>5.17</span></a> que tiene 14 filas y en el que hemos dejado caer 3566 bolas ( aunque en el histograma solo suman 3552 porque 14 todavía están en camino). Podemos calcular las probabilidades de que caigan en cada compartimento y a partir de estas, comparar las frecuencias teóricas con las observadas.</p>
-<div id="fig-quincunxSimulador" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-quincunxSimulador-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_05/f0517_quincunxSimulador.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<p>Este argumento se puede generalizar para cualquier número de filas. En internet es fácil encontrar simuladores de <em>quincunx</em> como el de la <a href="#fig-quincunxSim" class="quarto-xref">Figura&nbsp;<span>5.17</span></a> que tiene 14 filas y en el que hemos dejado caer 3566 bolas ( aunque en el histograma solo suman 3552 porque 14 todavía están en camino). Podemos calcular las probabilidades de que caigan en cada compartimento y a partir de estas, comparar las frecuencias teóricas con las observadas.</p>
+<div class="tabla-wrapper_T0310">
+<div style="display: flex; gap: 0rem; align-items: center;">
+
+<!-- IMAGEN -->
+  <div style="flex: 0.75; text-align: center;">
+    <img src="Figuras_05/f0517_quincunxSim.png" style="width: 275px; height: auto;">
+  </div>
+  
+  
+  <!-- TABLA -->
+  <div style="flex: 1.15;">
+    <!-- <table style="border-collapse: collapse; width: 100%; text-align: center;"> -->
+    <table class="tabla-0517">
+
+<colgroup>
+  <col style="width: 16%;">
+  <col style="width: 32%;">
+  <col style="width: 26%;">
+  <col style="width: 26%;">
+</colgroup>
+  
+  <thead>
+<tr>
+  <th>Canal</th>
+  <th>Probabilidad</th>
+  <th>Frecuencia teórica</th>
+  <th>Frecuencia observada</th>
+</tr>
+  </thead>
+  <tbody>
+ <tr><td>0 </td> <td> 0,0001 </td> <td>   0 </td> <td>   0 </td> </tr>
+ <tr><td>1 </td> <td> 0,0009 </td> <td>   3 </td> <td>   2 </td> </tr>
+ <tr><td>2 </td> <td> 0,0056 </td> <td>  20 </td> <td>  21 </td> </tr>
+ <tr><td>3 </td> <td> 0,0222 </td> <td>  79 </td> <td>  79 </td> </tr>
+ <tr><td>4 </td> <td> 0,0611 </td> <td> 217 </td> <td> 219 </td> </tr>
+ <tr><td>5 </td> <td> 0,1222 </td> <td> 434 </td> <td> 445 </td> </tr>
+ <tr><td>6 </td> <td> 0,1833 </td> <td> 651 </td> <td> 670 </td> </tr>
+ <tr><td>7 </td> <td> 0,2095 </td> <td> 744 </td> <td> 724 </td> </tr>
+ <tr><td>8 </td> <td> 0,1833 </td> <td> 651 </td> <td> 669 </td> </tr>
+ <tr><td>9 </td> <td> 0,1222 </td> <td> 434 </td> <td> 442 </td> </tr>
+<tr><td>10 </td> <td> 0,0611 </td> <td> 217 </td> <td> 183 </td> </tr>
+<tr><td>11 </td> <td> 0,0222 </td> <td>  79 </td> <td>  81 </td> </tr>
+<tr><td>12 </td> <td> 0,0056 </td> <td>  20 </td> <td>  16 </td> </tr>
+<tr><td>13 </td> <td> 0,0009 </td> <td>   3 </td> <td>   1 </td> </tr>
+<tr><td>14 </td> <td> 0,0001 </td> <td>   0 </td> <td>   0 </td> </tr>
+  </tbody>
+</table>
+  </div>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-quincunxSimulador-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+</div>
+<div id="fig-quincunxSim" class="fig-normal_0310_Fantasma quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-quincunxSim-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figuras_05/f0000_figuraFantasma.png" class="fig-normal_0310_Fantasma img-fluid quarto-figure quarto-figure-center figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-quincunxSim-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;5.17: <a href="https://www.mathsisfun.com/data/quincunx.html">Simulador de quincunx</a> y tabla con las frecuencias teóricas y observadas.
 </figcaption>
 </figure>
 </div>
-<p>La <a href="#fig-binoNormal" class="quarto-xref">Figura&nbsp;<span>5.18</span></a> (izquierda) compara las frecuencias teóricas y las observadas en nuestro caso con 14 filas y después de que hayan caído 3552 bolas. A la derecha tenemos las probabilidades teóricas si se tienen 100 filas. En este caso, con <span class="math inline">\(n=100\)</span> y <span class="math inline">\(p=0.5\)</span>, tenemos que: <span class="math inline">\(\mu = np=50\)</span> y <span class="math inline">\(\sigma = \sqrt {n p(1-p)}=\sqrt {100 \cdot 0.25}= 5\)</span>. Superponiendo una distribución Normal con esos mismos parámetros, los perfiles de las dos distribuciones prácticamente coinciden. A medida que <span class="math inline">\(n\)</span> va creciendo, cada vez se parecen más. Cuando <span class="math inline">\(n \rightarrow \infty\)</span> ambas distribuciones tienden a coincidir.</p>
-<div id="fig-binoNormal" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<p>La <a href="#fig-binoNormal" class="quarto-xref">Figura&nbsp;<span>5.18</span></a> (izquierda) compara las frecuencias teóricas y las observadas en nuestro caso con 14 filas y después de que hayan caído 3552 bolas. A la derecha tenemos las probabilidades teóricas si se tienen 100 filas. En este caso, con <span class="math inline">\(n=100\)</span> y <span class="math inline">\(p=0{,}5\)</span>, tenemos que: <span class="math inline">\(\mu = np=50\)</span> y <span class="math inline">\(\sigma = \sqrt {n p(1-p)}=\sqrt {100 \cdot 0{,}25}= 5\)</span>. Superponiendo una distribución Normal con esos mismos parámetros, los perfiles de las dos distribuciones prácticamente coinciden. A medida que <span class="math inline">\(n\)</span> va creciendo, cada vez se parecen más. Cuando <span class="math inline">\(n \rightarrow \infty\)</span> ambas distribuciones tienden a coincidir.</p>
+<div id="fig-binoNormal" class="fig-normal_0518 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-binoNormal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_05/f0518_binoNormal.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_05/f0518_binoNormal.png" class="fig-normal_0518 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-binoNormal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;5.18: Resultados de la <a href="#fig-quincunxSimulador" class="quarto-xref">Figura&nbsp;<span>5.17</span></a> y probabilidades en un quincunx que tenga 100 filas de clavijas (101 canales), con la distribución Normal superpuesta.
+Figura&nbsp;5.18: Resultados de la <span class="quarto-unresolved-ref">?fig-quincunxSimulador</span> y probabilidades en un quincunx que tenga 100 filas de clavijas (101 canales), con la distribución Normal superpuesta.
 </figcaption>
 </figure>
 </div>
@@ -1205,11 +1262,11 @@ Figura&nbsp;5.18: Resultados de la <a href="#fig-quincunxSimulador" class="quart
 <h3 class="unnumbered anchored" data-anchor-id="la-distribución-normal-como-aproximación-a-la-binomial">La distribución Normal como aproximación a la binomial</h3>
 <p>Hasta la aparición de los ordenadores, el cálculo de probabilidades con la distribución binomial podía ser muy laborioso, especialmente si se trataba de calcular probabilidades acumuladas con valores grandes de <span class="math inline">\(n\)</span> y <span class="math inline">\(x\)</span>. Usar la distribución Normal como aproximación a la binomial facilita mucho los cálculos, aunque actualmente su interés, más que para facilitar los cálculos, tiene que ver con la justificación de algunas expresiones que utilizamos para los intervalos de confianza.</p>
 <p>Sabemos que si <span class="math inline">\(X \sim \text{Bin} (n; p)\)</span> los valores de su esperanza matemática y su varianza son: <span class="math inline">\(\text{E}(X) = np\)</span> y <span class="math inline">\(\text{V}(X) = np(1-p)\)</span>. Si aproximamos <span class="math inline">\(X\)</span> a una distribución Normal tenemos que <span class="math inline">\(X \sim N(np; \sqrt{np(1-p)})\)</span>. Lo aproximado es la Normalidad de la distribución, los valores de la esperanza matemática y la desviación típica son los valores exactos.</p>
-<p>La <a href="#fig-aproxBinoNormal" class="quarto-xref">Figura&nbsp;<span>5.19</span></a> muestra las probabilidades correspondientes a algunos valores de una variable con distribución binomial y su aproximación con la distribución Normal. Observe que cuando se utiliza la distribución Normal se aplica la llamada “corrección por continuidad”. La probabilidad de <span class="math inline">\(X=6\)</span> calculada con la distribución Normal sería igual a cero si no aplicamos esa corrección. Lo que hacemos es: <span class="math inline">\(\mathrm P(X=6) = \mathrm P(X &lt; 6.5) - \mathrm P(X &lt; 5.5)\)</span> ya que la probabilidad de que <span class="math inline">\(X\)</span> esté entre 5,5 y 6,5 es una buena aproximación de <span class="math inline">\(\mathrm P(X=6)\)</span>. También <span class="math inline">\(\mathrm P(X&lt;3) = \mathrm P(X&lt;2.5)\)</span> y <span class="math inline">\(\mathrm P(4 \leq X \leq 5)\)</span> será igual a <span class="math inline">\(\mathrm P(X &lt; 5.5) - \mathrm P(X &lt; 3.5)\)</span>.</p>
-<div id="fig-aproxBinoNormal" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<p>La <a href="#fig-aproxBinoNormal" class="quarto-xref">Figura&nbsp;<span>5.19</span></a> muestra las probabilidades correspondientes a algunos valores de una variable con distribución binomial y su aproximación con la distribución Normal. Observe que cuando se utiliza la distribución Normal se aplica la llamada “corrección por continuidad”. La probabilidad de <span class="math inline">\(X=6\)</span> calculada con la distribución Normal sería igual a cero si no aplicamos esa corrección. Lo que hacemos es: <span class="math inline">\(\mathrm P(X=6) = \mathrm P(X &lt; 6{,}5) - \mathrm P(X &lt; 5{,}5)\)</span> ya que la probabilidad de que <span class="math inline">\(X\)</span> esté entre 5,5 y 6,5 es una buena aproximación de <span class="math inline">\(\mathrm P(X=6)\)</span>. También <span class="math inline">\(\mathrm P(X&lt;3) = \mathrm P(X&lt;2{,}5)\)</span> y <span class="math inline">\(\mathrm P(4 \leq X \leq 5)\)</span> será igual a <span class="math inline">\(\mathrm P(X &lt; 5{,}5) - \mathrm P(X &lt; 3{,}5)\)</span>.</p>
+<div id="fig-aproxBinoNormal" class="fig-normal_0519 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-aproxBinoNormal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_05/f0519_aproxBinoNormal.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_05/f0519_aproxBinoNormal.png" class="fig-normal_0519 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-aproxBinoNormal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;5.19: Probabilidades en una distribución binomial aproximadas a través de una Normal. En la distribución Normal: <span class="math inline">\(\sigma = \sqrt{np(1-p)} = 1.54919\)</span>.
@@ -1234,11 +1291,11 @@ Figura&nbsp;5.19: Probabilidades en una distribución binomial aproximadas a tra
 <section id="apéndice-5.a-por-qué-bastan-las-tablas-de-la-z-sim-textn0-1" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="apéndice-5.a-por-qué-bastan-las-tablas-de-la-z-sim-textn0-1">Apéndice 5.A: ¿Por qué bastan las tablas de la <span class="math inline">\(Z \sim \text{N}(0; 1)\)</span>?</h2>
 <p>Aunque las tablas estadísticas ya son algo del pasado, es interesante ver por qué habiendo infinitas distribuciones Normales (tantas como parejas <span class="math inline">\(\mu\)</span>, $$) basta la tabla de solo una para poder calcular probabilidades en todas ellas.</p>
-<p>Lo veremos con razonamientos básicamente geométricos. Sea <span class="math inline">\(X \sim \text{N}(\mu; \sigma)\)</span> y deseamos calcular <span class="math inline">\(P(X&gt;x)\)</span>. Si definimos <span class="math inline">\(Y = X - \mu\)</span>, está claro que <span class="math inline">\(Y \sim N(0; \sigma)\)</span>, y con ayuda de la figura <a href="#fig-Normal01_1" class="quarto-xref">Figura&nbsp;<span>5.20</span></a> es fácil observar que <span class="math inline">\(P(X&gt;x)=P(Y&gt;x-\mu)\)</span> ya que la forma de las dos distribuciones es idéntica y al punto <span class="math inline">\(x\)</span> en la distribución de <span class="math inline">\(X\)</span> le corresponde <span class="math inline">\(x-\mu\)</span> en la de <span class="math inline">\(Y\)</span>.</p>
+<p>Lo veremos con razonamientos básicamente geométricos. Sea <span class="math inline">\(X \sim \text{N}(\mu; \sigma)\)</span> y deseamos calcular <span class="math inline">\(P(X&gt;x)\)</span>. Si definimos <span class="math inline">\(Y = X - \mu\)</span>, está claro que <span class="math inline">\(Y \sim N(0; \sigma)\)</span>, y con ayuda de la <a href="#fig-Normal01_1" class="quarto-xref">Figura&nbsp;<span>5.20</span></a> es fácil observar que <span class="math inline">\(P(X&gt;x)=P(Y&gt;x-\mu)\)</span> ya que la forma de las dos distribuciones es idéntica y al punto <span class="math inline">\(x\)</span> en la distribución de <span class="math inline">\(X\)</span> le corresponde <span class="math inline">\(x-\mu\)</span> en la de <span class="math inline">\(Y\)</span>.</p>
 <div id="fig-Normal01_1" class="fig-normal_0520 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Normal01_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_05/f0520_Normal01_1.png" class="fig-normal_0520 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_05/f0520_Normal01_1.png" class="fig-normal_0520 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Normal01_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;5.20: Transformación de <span class="math inline">\(X \sim N(\mu; \sigma)\)</span> en <span class="math inline">\(Y \sim N(0; \sigma)\)</span>.
@@ -1250,7 +1307,7 @@ Figura&nbsp;5.20: Transformación de <span class="math inline">\(X \sim N(\mu; \
 <div id="fig-Normal01_2" class="fig-normal_0521 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Normal01_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_05/f0521_Normal01_2.png" class="fig-normal_0521 img-fluid quarto-figure quarto-figure-center figure-img" style="width:65.0%">
+<img src="Figuras_05/f0521_Normal01_2.png" class="fig-normal_0521 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Normal01_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;5.21: Distribución Normal con <span class="math inline">\(\mu\)</span>=0 y con $$=1 o <span class="math inline">\(\sigma = k\)</span> según la escala.
@@ -1259,10 +1316,10 @@ Figura&nbsp;5.21: Distribución Normal con <span class="math inline">\(\mu\)</sp
 </div>
 <p>Recordando que la función densidad de probabilidad de <span class="math inline">\(Y \sim \text{N}(0; \sigma)\)</span> es: <span class="math display">\[f(y) = \frac{1}{\sigma \sqrt{2 \pi}}e^{- \frac{y^2}{2\sigma^2}}\]</span> se deduce que: <span class="math display">\[f(ky) = \frac{1}{k\sigma \sqrt{2 \pi}}e^{- \frac{k^2y^2}{2 k^2 \sigma^2}} = \frac{1}{k} \cdot \frac{1}{\sigma \sqrt{2 \pi}}e^{- \frac{y^2}{2\sigma^2}} = \frac{1}{k}f(y)\]</span> Por tanto, las campanas se pueden representar de forma idéntica multiplicando por <span class="math inline">\(k\)</span> el eje de abscisas y dividiendo por el mismo valor el de ordenadas (que no hemos representado).</p>
 <p>Si hacemos <span class="math inline">\(k= \frac{1}{\sigma}\)</span> tendremos <span class="math inline">\(Z = \frac{Y}{\sigma}\)</span>, o lo que es lo mismo: <span class="math inline">\(Z = (X-\mu)/ \sigma\)</span>. Por lo comentado anteriormente, la distribución de <span class="math inline">\(Z\)</span> se puede representar con la misma campana que la utilizada para la distribución de <span class="math inline">\(Y\)</span> (<a href="#fig-Normal01_3" class="quarto-xref">Figura&nbsp;<span>5.22</span></a>).</p>
-<div id="fig-Normal01_3" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-Normal01_3" class="fig-normal_0522 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Normal01_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_05/f0522_Normal01_3.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:65.0%">
+<img src="Figuras_05/f0522_Normal01_3.png" class="fig-normal_0522 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Normal01_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;5.22: Transformación de <span class="math inline">\(Y \sim N(0; \sigma)\)</span> en <span class="math inline">\(Z \sim N(0; 1)\)</span>.
@@ -1274,7 +1331,7 @@ Figura&nbsp;5.22: Transformación de <span class="math inline">\(Y \sim N(0; \si
 <section id="apéndice-5.b-esperanza-y-varianza-de-una-variable-con-distribución-binomial" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="apéndice-5.b-esperanza-y-varianza-de-una-variable-con-distribución-binomial">Apéndice 5.B: Esperanza y varianza de una variable con distribución binomial</h2>
 <p>Una variable aleatoria <span class="math inline">\(Y\)</span> sigue una distribución de Bernoulli cuando solo puede tomar dos valores: 1 (“éxito”) con probabilidad <span class="math inline">\(p\)</span> y 0 (“fracaso”) con probabilidad <span class="math inline">\(1-p\)</span>. En la <a href="#tbl-bernouilli">Tabla 5.7</a> se deduce que <span class="math inline">\(E(Y) = p\)</span> y <span class="math inline">\(V(Y) = p(1-p)\)</span>.</p>
-<div id="tbl-bernouilli" class="tabla-wrapper_0507 anchored">
+<div id="tbl-bernouilli" class="tabla-wrapper_T0507 anchored">
 
 <table class="tabla-0507 caption-top table">
 <caption>Tabla 5.7: Deducción de la esperanza y la varianza de una variable de Bernouilli.</caption>
@@ -1335,7 +1392,7 @@ Figura&nbsp;5.22: Transformación de <span class="math inline">\(Y \sim N(0; \si
         &amp;\mathrm{V}(X) =  \frac{2n^3 + 3n^2 +n}{6n} - \frac{(n+1)^2}{4} = \frac{n^2-1}{12} \\
 \end{split}     
 \end{equation*}\]</span>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Por ejemplo, <span class="math inline">\(\mathrm P(X=3) = \displaystyle\frac{10{!}}{7{!}\,3{!}}0.5^3 \cdot 0.5^7\)</span> = 0,117.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Por ejemplo, <span class="math inline">\(\mathrm P(X=3) = \displaystyle\frac{10{!}}{7{!}\,3{!}}0{,}5^3 \cdot 0{,}5^7\)</span> = 0,117.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>En rigor, debería decir: “la probabilidad de que un pasajero no se presente es del 2 %”. ¿Cuál es la probabilidad de que todos los que se presenten tengan plaza?<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn4"><p>No está claro que en la práctica esta sea siempre una hipótesis razonable. Quizá, con el paso del tiempo, tiende a tener más averías, o se realiza una revisión a fondo y pasa a tener menos. Si no está claro que las hipótesis se cumplan, seguramente es mejor tomar los resultados como valores orientativos.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn5"><p>Se puede consultar <a href="https://archive.org/details/dasgesetzderklei00bortrich">en línea</a>.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>

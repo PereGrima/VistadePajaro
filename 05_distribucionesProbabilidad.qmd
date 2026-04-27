@@ -27,11 +27,11 @@ En estos casos en que la población está formada por números enteros correlati
 
 La suma de variables aleatorias equiprobables no es una variable de ese mismo tipo. La [@fig-sumaEqui] muestra la distribución del valor obtenido al lanzar un dado junto con la correspondiente a la suma de los valores obtenidos al lanzar ocho. En este último caso, el perfil del diagrama de barras seguro que le recuerda a una distribución muy conocida de la que hablaremos con detalle más adelante.
 
-![Distribuciones de probabilidad del resultado de lanzar un dado y del valor de la suma obtenida al lanzar 8 dados.](Figuras_05/f0501_sumaEqui.png){#fig-sumaEqui .fig-normal3 fig-align="center" width="90%"}
+![Distribuciones de probabilidad del resultado de lanzar un dado y del valor de la suma obtenida al lanzar 8 dados.](Figuras_05/f0501_sumaEqui.png){#fig-sumaEqui .fig-normal_0501 fig-align="center"}
 
 Un último detalle. Los valores de la esperanza matemática y la varianza de la distribución de la suma se deducen fácilmente aplicando las reglas para operar con variables aleatorias. Sea $X$ el resultado de lanzar un dado y $X_8$ la suma del resultado obtenido al lanzar 8 dados. Tenemos: \begin{equation*}
     \begin{split}
-        &\mathrm E(X) = \frac{n+1}{2} = 3.5; \; \qquad \; \mathrm V(X) = \frac{n^2+1}{12} = \frac{35}{12} \\[5pt]
+        &\mathrm E(X) = \frac{n+1}{2} = 3{,}5; \; \qquad \; \mathrm V(X) = \frac{n^2+1}{12} = \frac{35}{12} \\[5pt]
         &\mathrm E(X_8) = 8 \cdot E(X) = 28; \;\;\!  \quad \mathrm V(X_8) = 8 \cdot \mathrm V(X) = \frac{70}{3}\\[-1pt]
     \end{split}     
  \end{equation*}
@@ -42,7 +42,7 @@ Vamos a calcular la probabilidad de que, al lanzar cinco veces una moneda al air
 
 También podríamos escribir $0.5^5$ pero nos interesa separar las probabilidades de cada uno de los dos resultados posibles para que sea más fácil generalizar la expresión que vamos a obtener. Si planteamos dos secuencias, por ejemplo +C+C+ y C+C++ la probabilidad de obtener la primera **o** la segunda (no se pueden dar las dos a la vez, aplicamos la regla de la **o**) es igual a $0.5^2 \cdot  0.5^3 + 0.5^2 \cdot  0.5^3$.
 
-Para calcular la probabilidad de obtener dos caras en cinco lanzamientos, habrá que sumar la probabilidad de que salgan esas dos caras en un orden concreto tantas veces como ordenaciones se pueden realizar con dos caras y tres cruces. Si los cinco resultados fueran distintos, el número de ordenaciones posibles sería igual a las permutaciones de 5 (5!), pero como hay tres repetidos por un lado (las tres cruces) y dos por otro (las dos caras) hay que dividir por las permutaciones de esos valores ya que esas no cuentan. Es un caso de permutaciones con repetición: $$\mathrm P_5^{3,2}=\frac{5!}{2! \cdot 3!} = 10$$ Por tanto, la probabilidad de que salgan $X=2$ caras es igual a: $$\mathrm P(X=2) = \frac{5!}{2! \cdot 3!} \; 0.5^2 \ 0.5^3 = 0,3125$$
+Para calcular la probabilidad de obtener dos caras en cinco lanzamientos, habrá que sumar la probabilidad de que salgan esas dos caras en un orden concreto tantas veces como ordenaciones se pueden realizar con dos caras y tres cruces. Si los cinco resultados fueran distintos, el número de ordenaciones posibles sería igual a las permutaciones de 5 (5!), pero como hay tres repetidos por un lado (las tres cruces) y dos por otro (las dos caras) hay que dividir por las permutaciones de esos valores ya que esas no cuentan. Es un caso de permutaciones con repetición: $$\mathrm P_5^{3,2}=\frac{5!}{2! \cdot 3!} = 10$$ Por tanto, la probabilidad de que salgan $X=2$ caras es igual a: $$\mathrm P(X=2) = \frac{5!}{2! \cdot 3!} \; 0{,}5^2 \ 0{,}5^3 = 0{,}3125$$
 
 ¿Para qué sirve calcular esta probabilidad? A no ser que nos dediquemos a apostar sobre el resultado de lanzar monedas parece que sirve de poco, pero no es así. Esta situación se puede generalizar de la siguiente forma:
 
@@ -54,7 +54,7 @@ Para calcular la probabilidad de obtener dos caras en cinco lanzamientos, habrá
 
 Cuando se cumplen estas tres condiciones, decimos que la variable aleatoria "número de éxitos al realizar $n$ ejecuciones" sigue una **distribución binomial** y podemos calcular fácilmente la probabilidad asociada a cada uno de los valores que puede tomar usando la fórmula que hemos deducido en el ejemplo de las monedas. Generalizando para $n$ ejecuciones, $x$ éxitos y una probabilidad de éxito igual a $p$ tenemos: $$\mathrm P(X=x) = \frac{n!}{x! \cdot (n-x)!} \; p^x \ (1-p)^{(n-x)}$$ Ahora es fácil calcular las probabilidades de obtener $x$ caras al realizar, por ejemplo, $n=10$ lanzamientos. Son las que se indican en la [Tabla 5.1](#tbl-caraCruz)[^05_distribucionesprobabilidad-2].
 
-[^05_distribucionesprobabilidad-2]: Por ejemplo, $\mathrm P(X=3) = \displaystyle\frac{10{!}}{7{!}\,3{!}}0.5^3 \cdot 0.5^7$ = 0,117.
+[^05_distribucionesprobabilidad-2]: Por ejemplo, $\mathrm P(X=3) = \displaystyle\frac{10{!}}{7{!}\,3{!}}0{,}5^3 \cdot 0{,}5^7$ = 0,117.
 
 <!-- comentario vacío -->
 
@@ -72,8 +72,8 @@ Cuando se cumplen estas tres condiciones, decimos que la variable aleatoria "nú
 </colgroup>
 <thead>
 <tr>
-  <th>Núm. de caras</th>
-  <th>Probabilidad</th>
+<th>Núm. de caras</th>
+<th>Probabilidad</th>
 </tr>
 </thead>
 <tbody>
@@ -92,9 +92,9 @@ Cuando se cumplen estas tres condiciones, decimos que la variable aleatoria "nú
 </table>
 </div>
 ```
-La [@fig-ejemplosDistBinomial] muestra distribuciones binomiales con los parámetros que se indican. Con $p=0.5$ la distribución siempre es simétrica respecto al valor medio de $X$. Se observa que --como era de esperar-- si $p < 0.5$ son más probables los valores bajos, y si $p>0.5$ son más probables los altos. Con $p=0.5$ si $n=10$ la probabilidad \$ \mathrm P(X=0)\$ (por ejemplo: probabilidad de cero caras al lanzar 10 veces una moneda) es muy pequeña, pero se nota en la representación gráfica. Con $n=50$ y manteniendo $p=0.5$ esa probabilidad es prácticamente nula. En esto la intuición no falla.
+La [@fig-ejemplosDistBinomial] muestra distribuciones binomiales con los parámetros que se indican. Con $p=0.5$ la distribución siempre es simétrica respecto al valor medio de $X$. Se observa que --como era de esperar-- si $p < 0.5$ son más probables los valores bajos, y si $p>0{,}5$ son más probables los altos. Con $p=0{,}5$ si $n=10$ la probabilidad $\mathrm P(X=0)$ (por ejemplo: probabilidad de cero caras al lanzar 10 veces una moneda) es muy pequeña, pero se nota en la representación gráfica. Con $n=50$ y manteniendo $p=0{,}5$ esa probabilidad es prácticamente nula. En esto la intuición no falla.
 
-![Distribuciones de probabilidad binomial con los parámetros que se indican.](Figuras_05/f0502_ejemplosDistBinomial.png){#fig-ejemplosDistBinomial .fig-normal3 fig-align="center" width="90%"}
+![Distribuciones de probabilidad binomial con los parámetros que se indican.](Figuras_05/f0502_ejemplosDistBinomial.png){#fig-ejemplosDistBinomial .fig-normal_0502 fig-align="center"}
 
 Ejemplos de variables aleatorias que siguen una distribución binomial son:
 
@@ -108,25 +108,25 @@ Ejemplos de variables aleatorias que siguen una distribución binomial son:
 
 -   Número de enfermos que se curan de un conjunto de $n$ que han seguido un tratamiento que cura a una proporción $p$ de los enfermos que lo siguen.
 
-Si un lote de 500 piezas ha sido fabricado con una máquina que produce --a largo plazo-- el 1% de unidades defectuosas (la probabilidad de que una unidad sea defectuosa es 0,01), quizá alguien estará tentado a decir que en ese lote habrá cinco piezas defectuosas, pero en realidad es imposible saber cuántas habrá. Lo que sí podemos hacer es calcular la probabilidad de que haya 0, 1, 2, 3,... Solo tenemos que aplicar la fórmula que acabamos de ver. Por ejemplo, la probabilidad de que haya exactamente cinco unidades defectuosas es: $$ \mathrm P(X=5) = \frac{500!}{5! \cdot 495!} \; 0.01^5 \ 0.99^{495} = 0.1764$$ No intente calcular los factoriales que aparecen en la fórmula, debe simplificar antes de hacer los cálculos o, mejor, use una calculadora avanzada, aplicaciones en línea o una hoja de cálculo, como en la [@fig-binomialGoogle].
+Si un lote de 500 piezas ha sido fabricado con una máquina que produce --a largo plazo-- el 1% de unidades defectuosas (la probabilidad de que una unidad sea defectuosa es 0,01), quizá alguien estará tentado a decir que en ese lote habrá cinco piezas defectuosas, pero en realidad es imposible saber cuántas habrá. Lo que sí podemos hacer es calcular la probabilidad de que haya 0, 1, 2, 3,... Solo tenemos que aplicar la fórmula que acabamos de ver. Por ejemplo, la probabilidad de que haya exactamente cinco unidades defectuosas es: $$ \mathrm P(X=5) = \frac{500!}{5! \cdot 495!} \; 0{,}01^5 \ 0{,}99^{495} = 0{,}1764$$ No intente calcular los factoriales que aparecen en la fórmula, debe simplificar antes de hacer los cálculos o, mejor, use una calculadora avanzada, aplicaciones en línea o una hoja de cálculo, como en la [@fig-binomialGoogle].
 
-![Distribución binomial. Determinación de la probabilidad de que la variable aleatoria tome un valor concreto (con *Google Sheets*).](Figuras_05/f0503_binomialGoogle.png){#fig-binomialGoogle .fig-normal3 fig-align="center" width="80%"}
+![Distribución binomial. Determinación de la probabilidad de que la variable aleatoria tome un valor concreto (con *Google Sheets*).](Figuras_05/f0503_binomialGoogle.png){#fig-binomialGoogle .fig-normal_0503 fig-align="center"}
 
-En muchos casos, el interés no está en la probabilidad de tener un número concreto, sino en la de tener ese valor como máximo. En nuestro ejemplo, la probabilidad de tener como máximo 5 defectos será: $$\mathrm P(X \leq 5) = \sum_{i=0}^{5}\frac{500!}{i! \cdot (500-i)!} \; 0,01^i \ 0,99^{500-i} = 0.616$$
+En muchos casos, el interés no está en la probabilidad de tener un número concreto, sino en la de tener ese valor como máximo. En nuestro ejemplo, la probabilidad de tener como máximo 5 defectos será: $$\mathrm P(X \leq 5) = \sum_{i=0}^{5}\frac{500!}{i! \cdot (500-i)!} \; 0{,}01^i \ 0{,}99^{500-i} = 0{,}616$$
 
 En estos casos, es obligado el uso de métodos de cálculo automáticos. Si usamos una hoja de cálculo hay que poner un 1 (o la palabra "VERDADERO") como último parámetro para obtener la probabilidad acumulada ([@fig-binomialGoogle_2]).
 
-![Distribución binomial. Determinación de la probabilidad acumulada hasta un cierto valor (con *Google Sheets*).](Figuras_05/f0504_binomialGoogle_2.png){#fig-binomialGoogle_2 .fig-normal3 fig-align="center" width="80%"}
+![Distribución binomial. Determinación de la probabilidad acumulada hasta un cierto valor (con *Google Sheets*).](Figuras_05/f0504_binomialGoogle_2.png){#fig-binomialGoogle_2 .fig-normal_0504 fig-align="center"}
 
 Si lo que interesa es la probabilidad de que la variable tome valores mayores a uno determinado, lo podemos calcular a través del complementario. Así, en nuestro caso, la probabilidad de tener más de cinco defectos será:
 
-$$\mathrm P(X > 5) = 1 - \mathrm P(X \leq 5) = 1-0.616 = 0{,}384$$ Si lo que interesa es la probabilidad de tener cinco o más defectos, tendremos que calcular el complementario de cuatro o menos: $$ \mathrm P(X \geq 5) = 1 - \mathrm P(X \leq 4) = 0{,}4396$$ Ejemplos de cálculo de probabilidades para variables que siguen una distribución binomial son:
+$$\mathrm P(X > 5) = 1 - \mathrm P(X \leq 5) = 1-0{,}616 = 0{,}384$$ Si lo que interesa es la probabilidad de tener cinco o más defectos, tendremos que calcular el complementario de cuatro o menos: $$ \mathrm P(X \geq 5) = 1 - \mathrm P(X \leq 4) = 0{,}4396$$ Ejemplos de cálculo de probabilidades para variables que siguen una distribución binomial son:
 
--   Probabilidad de que se realicen más de 25 ventas en 100 acciones comerciales, si la probabilidad de que una acción comercial derive en venta es del 25%: $\mathrm P(X>25; \; n=100; \; p=0.25) =$ $=1 - \mathrm P(X \leq 25;\; n=100; \; p=0{,}25) = 0{,}4465$. Observe que el resultado no es igual al 50%.
+-   Probabilidad de que se realicen más de 25 ventas en 100 acciones comerciales, si la probabilidad de que una acción comercial derive en venta es del 25%: $\mathrm P(X>25; \; n=100; \; p=0{,}25) =$ $=1 - \mathrm P(X \leq 25;\; n=100; \; p=0{,}25) = 0{,}4465$. Observe que el resultado no es igual al 50%.
 
--   Probabilidad de que, si se tienen cuatro hijos, dos sean niños y los otros dos sean niñas: $\mathrm P(X = 2; n=4; p=0.5) = 0,375$. Es más probable que no se produzca ese equilibrio en el reparto.
+-   Probabilidad de que, si se tienen cuatro hijos, dos sean niños y los otros dos sean niñas: $\mathrm P(X = 2; n=4; p=0.5) = 0{,}375$. Es más probable que no se produzca ese equilibrio en el reparto.
 
--   Si la probabilidad de que una transacción bancaria sea errónea es del 0,01% y un día se realizan 20.000, calcular la probabilidad de que alguna sea errónea. Se puede calcular considerando que nuestra variable sigue una distribución binomial: $1 - \mathrm P(X = 0; \; n=20\,000; \; p=0,0001) = 0{,}8647$, o simplemente calculando: $1- 0{,}9999^{20\,000}=0{,}8647$ ($1 -$ todas buenas).
+-   Si la probabilidad de que una transacción bancaria sea errónea es del 0,01% y un día se realizan 20.000, calcular la probabilidad de que alguna sea errónea. Se puede calcular considerando que nuestra variable sigue una distribución binomial: $1 - \mathrm P(X = 0; \; n=20\,000; \; p=0{,}0001) = 0{,}8647$, o simplemente calculando: $1- 0{,}9999^{20\,000}=0{,}8647$ ($1 -$ todas buenas).
 
 -   Si la probabilidad de que un enfermo que sigue un determinado tratamiento se cure es del 30 %, calcular la probabilidad de que, si lo siguen 10 enfermos, se curen más de la mitad. $\mathrm P(X > 5; \; n=10; \; p=0{,}3) = 1 - \mathrm P(X \leq 5; n=10; p=0{,}3) = 0{,}04735$.
 
@@ -140,7 +140,7 @@ Supongamos que para un vuelo que tiene 180 plazas se venden 182 billetes porque 
 
 Podemos modelizar esta situación como 182 experimentos independientes, cada uno con dos resultados posibles: "éxito" (no se presenta) y "fracaso" (se presenta), con probabilidades 0,02 y 0,98 respectivamente.
 
-La probabilidad que nos interesa es la de tener $X \geq 2$ "éxitos" al realizar $n=182$ experimentos con una probabilidad de éxito $p = 0.02$. Sabemos que ese número de éxitos sigue una distribución binomial, por tanto: $$P(X \geq 2) = 1 - P(X \leq 1) = 1 - \text{B}(x=1; \; n=182; \; p=0{,}02)=0{,}8554$$ Si el precio del billete es de 500 \$ y el coste de la indemnización que se debe pagar a cada pasajero sin plaza es de 2.000 \$, se puede calcular la esperanza matemática del beneficio extra que produce vender dos billetes más que plazas disponibles.
+La probabilidad que nos interesa es la de tener $X \geq 2$ "éxitos" al realizar $n=182$ experimentos con una probabilidad de éxito $p = 0{,}02$. Sabemos que ese número de éxitos sigue una distribución binomial, por tanto: $$P(X \geq 2) = 1 - P(X \leq 1) = 1 - \text{B}(x=1; \; n=182; \; p=0{,}02)=0{,}8554$$ Si el precio del billete es de 500 \$ y el coste de la indemnización que se debe pagar a cada pasajero sin plaza es de 2.000 \$, se puede calcular la esperanza matemática del beneficio extra que produce vender dos billetes más que plazas disponibles.
 
 Para ello construimos una tabla con los valores que puede tomar la variable aleatoria (número de pasajeros que no se presentan, $X$), junto con las probabilidades correspondientes. En este caso, consideramos que los valores que puede tomar $X$ son 0, 1 y 2 o más, puesto que el beneficio es siempre el mismo (igual a los ingresos de los billetes vendidos de más) cuando los que no se presentan son dos o más pasajeros.
 
@@ -170,7 +170,7 @@ Para ello construimos una tabla con los valores que puede tomar la variable alea
 </table>
 </div>
 ```
-<br> Por tanto, a partir de los valores de la [Tabla 5.2](#tbl-Beneficio) la esperanza matemática del beneficio extra será: $$\text{E}(B) = 0.025 \cdot (-3000) + 0,119 \cdot (-1000) + 0,855 \cdot 1000 = 660.24\, \$ $$
+<br> Por tanto, a partir de los valores de la [Tabla 5.2](#tbl-Beneficio) la esperanza matemática del beneficio extra será: $$\text{E}(B) = 0{,}025 \cdot (-3000) + 0{,}119 \cdot (-1000) + 0{,}855 \cdot 1000 = 660{,}24\, \$ $$
 
 También se puede determinar el número de billetes conviene vender para maximizar la esperanza matemática de beneficio extra.
 
@@ -184,17 +184,17 @@ Es una simplificación considerar que todos los pasajeros viajan de forma indepe
 
 ## Distribución de Poisson
 
-Supongamos que una máquina funciona $n=28\,000$ segundos (algo menos de ocho horas) al día y que la probabilidad de que sufra una avería durante un segundo dado es $p=0.0001$. El número de averías diarias que tendrá esa máquina es una variable aleatoria, $Y_1$, con distribución binomial y con los valores de $n$ y $p$ indicados.
+Supongamos que una máquina funciona $n=28\,000$ segundos (algo menos de ocho horas) al día y que la probabilidad de que sufra una avería durante un segundo dado es $p=0{,}0001$. El número de averías diarias que tendrá esa máquina es una variable aleatoria, $Y_1$, con distribución binomial y con los valores de $n$ y $p$ indicados.
 
-Durante un segundo la probabilidad de avería es muy pequeña, pero como durante un día está funcionando muchos segundos la probabilidad de que se averíe alguna vez ya no lo es tanto. La esperanza matemática (valor medio) del número de averías diarias es $\mathrm E(Y_1) = np = 2.8$. La probabilidad de tener desde cero hasta seis averías se encuentra en la primera fila de la [Tabla 5.3](#tbl-binoPoisson).
+Durante un segundo la probabilidad de avería es muy pequeña, pero como durante un día está funcionando muchos segundos la probabilidad de que se averíe alguna vez ya no lo es tanto. La esperanza matemática (valor medio) del número de averías diarias es $\mathrm E(Y_1) = np = 2{,}8$. La probabilidad de tener desde cero hasta seis averías se encuentra en la primera fila de la [Tabla 5.3](#tbl-binoPoisson).
 
-Si tenemos otra máquina que solo funciona la mitad del tiempo, $n =14\,000$ segundos al día, pero su probabilidad de avería en cada segundo es el doble, $p = 0,0002$, el número de averías diarias será una nueva variable aleatoria, $Y_2$, obviamente también con distribución binomial aunque con distintos valores de los parámetros $n$ y $p$. Puede parecer que, como funciona menos tiempo, el número de averías será menor, pero como la probabilidad de avería es mayor, el resultados no está tan claro. En realidad, la esperanza matemática del número de averías diarias es exactamente la misma en los dos casos y la varianza también es prácticamente idéntica ($\mathrm V(Y_1) = 2,79972$ y $\mathrm V(Y_2) = 2,79944$). Además, las probabilidades asociadas a cada uno de los valores del número de averías diarias son casi las mismas (segunda fila de la [Tabla 5.3](#tbl-binoPoisson)). En realidad, las dos variables tienen un comportamiento prácticamente idéntico.
+Si tenemos otra máquina que solo funciona la mitad del tiempo, $n =14\,000$ segundos al día, pero su probabilidad de avería en cada segundo es el doble, $p = 0{,}0002$, el número de averías diarias será una nueva variable aleatoria, $Y_2$, obviamente también con distribución binomial aunque con distintos valores de los parámetros $n$ y $p$. Puede parecer que, como funciona menos tiempo, el número de averías será menor, pero como la probabilidad de avería es mayor, el resultados no está tan claro. En realidad, la esperanza matemática del número de averías diarias es exactamente la misma en los dos casos y la varianza también es prácticamente idéntica ($\mathrm V(Y_1) = 2{,}79972$ y $\mathrm V(Y_2) = 2{,}79944$). Además, las probabilidades asociadas a cada uno de los valores del número de averías diarias son casi las mismas (segunda fila de la [Tabla 5.3](#tbl-binoPoisson)). En realidad, las dos variables tienen un comportamiento prácticamente idéntico.
 
 ### La distribución de Poisson como límite de la binomial {.unnumbered}
 
 Esta similitud entre ambas distribuciones se debe a que, cuando $n$ se hace muy grande y $p$ muy pequeña, la distribución binomial tiende a una nueva distribución que solo depende del producto $np$ y que llamamos **distribución de Poisson**. Esta nueva distribución queda definida con un solo parámetro, $\lambda = np$ y su función de probabilidad es: $$\mathrm P(x) = \frac{e^{-\lambda}\lambda^x}{x!} $$
 
-En los ejemplos que estamos considerando, $\lambda = 2.8$ y las probabilidades que se obtienen para el número de averías diarias se encuentran en la tercera fila de la [Tabla 5.3](#tbl-binoPoisson). Los valores son realmente muy parecidos a los obtenidos anteriormente.
+En los ejemplos que estamos considerando, $\lambda = 2{,}8$ y las probabilidades que se obtienen para el número de averías diarias se encuentran en la tercera fila de la [Tabla 5.3](#tbl-binoPoisson). Los valores son realmente muy parecidos a los obtenidos anteriormente.
 
 ```{=html}
 <div id="tbl-binoPoisson" class="tabla-wrapper_T0503">
@@ -344,7 +344,7 @@ En 1898, el economista y estadístico ruso Ladislaus Bortkiewicz publicó un lib
 
 [^05_distribucionesprobabilidad-5]: Se puede consultar [en línea](https://archive.org/details/dasgesetzderklei00bortrich).
 
-![Tabla del libro de L. Bortkiewicz donde se indican los muertos por coz de caballo en el ejército prusiano ordenados por regimiento (filas) y año (columnas).](Figuras_05/f0505_tablaCozCaballo.png){#fig-tablaCozCaballo .fig-normal3 fig-align="center" width="90%"}
+![Tabla del libro de L. Bortkiewicz donde se indican los muertos por coz de caballo en el ejército prusiano ordenados por regimiento (filas) y año (columnas).](Figuras_05/f0505_tablaCozCaballo.png){#fig-tablaCozCaballo .fig-normal_0505 fig-align="center"}
 
 En el regimiento G (primera fila) no murió nadie en el año 75 (1875), murieron dos soldados en el 76, otros dos en el 77, etc. El número total de soldados muertos es la suma de todos los valores que aparecen en la tabla y es igual a 196. Como hay 280 casillas (14 filas $\times$ 20 columnas) el número medio de soldados muertos por regimiento y año es de $196/280 = 0{,}7$.
 
@@ -387,13 +387,13 @@ Puestos a buscar unos datos más acordes con nuestros tiempos, podemos volver al
 
 La [@fig-golesLiga0809] muestra los resultados de todos los partidos de la temporada 2008-2009. Tenemos los resultados de 380 partidos y, en cada uno de ellos, el número de goles que ha marcado cada equipo.
 
-![Resultados de todos los partidos de la primera división de la liga española en la temporada 2008-2009. (Diario La Vanguardia 01/06/2009, pág. 44).](Figuras_05/f0506_golesLiga0809.png){#fig-golesLiga0809 .fig-normal3 fig-align="center" width="90%"}
+![Resultados de todos los partidos de la primera división de la liga española en la temporada 2008-2009. (Diario La Vanguardia 01/06/2009, pág. 44).](Figuras_05/f0506_golesLiga0809.png){#fig-golesLiga0809 .fig-normal_0506 fig-align="center"}
 
-El primer diagrama de la [@fig-golesFutbol0913] representa estos resultados de la temporada 2008-09. El resto corresponden a las temporadas siguientes, excepto el último, que se ha construido con valores generados aleatoriamente de una distribución de Poisson con $\lambda = 1.4$, que es el promedio de los goles marcados por cada equipo en cada partido en las temporadas consideradas. Observe que tiene un aspecto muy similar al de los datos reales.
+El primer diagrama de la [@fig-golesFutbol0913] representa estos resultados de la temporada 2008-09. El resto corresponden a las temporadas siguientes, excepto el último, que se ha construido con valores generados aleatoriamente de una distribución de Poisson con $\lambda = 1{,}4$, que es el promedio de los goles marcados por cada equipo en cada partido en las temporadas consideradas. Observe que tiene un aspecto muy similar al de los datos reales.
 
 Nadie sabe cuántos goles marcará cada equipo en un partido de fútbol; pero, si analizamos ese valor para una temporada completa, presenta una regularidad sorprendente que explica muy bien la distribución de Poisson.
 
-![Goles marcados por cada equipo en cada partido de la temporada que se indica en la primera división de la liga española.](Figuras_05/f0507_golesFutbol0913.png){#fig-golesFutbol0913 .fig-normal3 fig-align="center" width="90%"}
+![Goles marcados por cada equipo en cada partido de la temporada que se indica en la primera división de la liga española.](Figuras_05/f0507_golesFutbol0913.png){#fig-golesFutbol0913 .fig-normal_0507 fig-align="center"}
 
 ### Binomial y Poisson {.unnumbered}
 
@@ -442,7 +442,7 @@ Distinguir cuando una variable sigue una distribución binomial o de Poisson sue
 
 Es la más sencilla para las variables aleatorias continuas. Su función densidad de probabilidad, $f(x)$, es constante en todo el rango en el que está definida. Si $X$ puede variar entre $a$ y $b$ seguro que $f(x) = \frac{1}{b-a}$ para que el área sea igual a uno ([@fig-distribucionUniforme]). Escribimos: $X \sim \text{U}(a, b)$.
 
-![Distribución uniforme definida en el intervalo (<em>a, b</em>).).](Figuras_05/f0508_distribucionUniforme.png){#fig-distribucionUniforme .fig-normal3 fig-align="center" width="65%"}
+![Distribución uniforme definida en el intervalo (<em>a, b</em>).).](Figuras_05/f0508_distribucionUniforme.png){#fig-distribucionUniforme .fig-normal_0508 fig-align="center"}
 
 En la práctica no es habitual encontrarse con patrones de variabilidad que tengan ese tipo de comportamiento, pero estos números aleatorios sirven de base para generar los de otras distribuciones de probabilidad y así poder realizar simulaciones si el software que estamos utilizando no los tiene ya incorporados. Más adelante veremos cómo generar valores de una distribución Normal partiendo de los de una distribución uniforme definida entre 0 y 1.
 
@@ -471,17 +471,17 @@ Si $X \sim \text{U}(a, b)$ e $Y \sim \text{U}(c, d)$ con $b-a=d-c$ (las dos tien
 
 El primer histograma de la [@fig-sumaUniformes] representa $100\,000$ valores generados aleatoriamente de una distribución $\text{U}(0; 1)$. El segundo --donde aparece claramente una distribución triangular-- es la suma de dos variables aleatorias como la representada anteriormente. Los otros dos histogramas corresponden a la suma de 4 y de 8 de estas variables. A medida que aumenta el número de sumandos, el perfil del histograma se parece cada vez más a una distribución omnipresente cuando se estudia la variabilidad. Es la que comentamos a continuación.
 
-![Suma de distribuciones uniformes definidas en el intervalo 0, 1.](Figuras_05/f0509_sumaUniformes.png){#fig-sumaUniformes .fig-normal3 fig-align="center" width="90%"}
+![Suma de distribuciones uniformes definidas en el intervalo 0, 1.](Figuras_05/f0509_sumaUniformes.png){#fig-sumaUniformes .fig-normal_0509 fig-align="center"}
 
 ## Distribución Normal
 
 La distribución Normal describe un tipo de variabilidad muy habitual en la naturaleza. Es la que se da cuando la mayoría de los valores se encuentran agrupados en torno a su valor medio y, a medida que nos alejamos de ese valor --tanto por un lado como por otro--, las observaciones son cada vez más escasas.
 
-Adolphe Quetelet (1796-1874), uno de los pioneros de la estadística moderna, destacó por su interés en estudiar la diversidad en las medidas del cuerpo humano. Uno de los conjuntos de datos más famosos que analizó es el que contiene el perímetro torácico de 5738 soldados escoceses[^05_distribucionesprobabilidad-7]. En la figura [@fig-QueteletData] tenemos el histograma de esos datos al que se ha superpuesto una curva que se adapta a su perfil, también representada de manera aislada a la derecha. Esta es la curva que representa la distribución Normal, con la misma media ($\mu = 39.8$ pulgadas) y la misma desviación típica ($\sigma = 2.1$ pulgadas) que los datos. Es razonable considerar que los valores analizados han sido obtenidos de la población representada por esa curva, que se puede entender como el perfil de un histograma construido con muchísimos --decimos "infinitos"-- datos y con una anchura de los intervalos muy pequeña, tendiendo a cero.
+Adolphe Quetelet (1796-1874), uno de los pioneros de la estadística moderna, destacó por su interés en estudiar la diversidad en las medidas del cuerpo humano. Uno de los conjuntos de datos más famosos que analizó es el que contiene el perímetro torácico de 5738 soldados escoceses[^05_distribucionesprobabilidad-7]. En la [@fig-QueteletData] tenemos el histograma de esos datos al que se ha superpuesto una curva que se adapta a su perfil, también representada de manera aislada a la derecha. Esta es la curva que representa la distribución Normal, con la misma media ($\mu = 39{,}8$ pulgadas) y la misma desviación típica ($\sigma = 2{,}1$ pulgadas) que los datos. Es razonable considerar que los valores analizados han sido obtenidos de la población representada por esa curva, que se puede entender como el perfil de un histograma construido con muchísimos --decimos "infinitos"-- datos y con una anchura de los intervalos muy pequeña, tendiendo a cero.
 
 [^05_distribucionesprobabilidad-7]: Estos datos se pueden ver en: Paul F. Velleman y David C. Hoaglin (1981): "Applications, Basics, and Computing of Exploratory Data Analysis" Duxbury Press, pág. 259. [Publicación original](https://books.google.es/books?id=yDMoAAAAYAAJ), ver página 400.
 
-![Histograma y distribución Normal que mejor se adapta a los datos del perímetro torácico analizados por Quetelet.](Figuras_05/f0510_QueteletData.png){#fig-QueteletData .fig-normal3 fig-align="center" width="90%"}
+![Histograma y distribución Normal que mejor se adapta a los datos del perímetro torácico analizados por Quetelet.](Figuras_05/f0510_QueteletData.png){#fig-QueteletData .fig-normal_0510 fig-align="center"}
 
 ::: callout-note
 ## El nombre de la distribución Normal
@@ -493,17 +493,17 @@ Llamar "normal" a esta distribución no fue muy buena idea. Ocupa un lugar muy d
 
 La función que describe la distribución Normal, es decir, su función densidad de probabilidad, es\[\^8\]: $$f(x) = \frac{1}{\sigma\sqrt{2 \pi}} e^{-\frac{(x-\mu)^2}{2 \sigma^2}} $$ \[\^8\]: El primero en deducirla, como límite de la distribución binomial cuando $n \rightarrow \infty$ y \$ 0 \< p \< 1\$, fue el matemático francés Abraham de Moivre en 1733. Posteriormente, Gauss puso de manifiesto su utilidad para describir los errores de medición y su nombre quedó asociado a esta distribución. La deducción no es elemental, los interesados le pueden dar un primer vistazo consultando la Wikipedia: "De Moivre–Laplace theorem"\>\>", en inglés
 
-Puede observarse que $f(x)$ solo depende de dos parámetros: $\mu$ y $\sigma$, siendo \$ \mathrm E(X)=\mu\$ y \$ \mathrm V(X)=\sigma\^2$, por tanto, esos dos parámetros son su media ($\mu$) y su desviación típica ($\sigma\$). La notación que usamos para referirnos a una variable aleatoria con distribución Normal es: $X \sim \text{N} (\mu; \sigma)$.
+Puede observarse que $f(x)$ solo depende de dos parámetros: $\mu$ y $\sigma$, siendo $\mathrm E(X)=\mu\$ y \$ \mathrm V(X)=\sigma\^2$, por tanto, esos dos parámetros son su media ($\mu$) y su desviación típica ($\sigma$). La notación que usamos para referirnos a una variable aleatoria con distribución Normal es: $X \sim \text{N} (\mu; \sigma)$.
 
 La distribución está centrada en $X=\mu$ y el valor de $\sigma$ coincide con la distancia entre $\mu$ y los valores de $x$ donde se encuentran los puntos de inflexión de la curva (pasa de cóncava a convexa)[^05_distribucionesprobabilidad-8], tal como se indica en la [@fig-geomNormal]. Observe que en las distribuciones de la derecha, solo la de arriba representa una distribución con $\sigma = 2$. Cuando se calculan probabilidades vale la pena realizar un pequeño dibujo de la distribución y marcar la zona correspondiente al área que se está buscando. Si el dibujo se ha realizado manteniendo las proporciones que debe tener (naturalmente, no hace falta que sea muy exacto) la primera evaluación realizada a la vista de ese esquema debe ser coherente con el resultado de los cálculos.
 
 [^05_distribucionesprobabilidad-8]: Que está centrada en $\mu$ es fácil de deducir a la vista de su función densidad de probabilidad, ya que el valor de $x$ solo aparece en el exponente de $e$ de la forma $(x-\mu)^2$ de manera que las diferencias respecto a $\mu$ producen el mismo resultado tanto si son positivas como negativas. También es fácil deducir que el máximo de $f(x)$ está en $X=\mu$ ya que en este caso el exponente de $e$ --que es negativo-- es igual a cero. La demostración de que tiene puntos de inflexión en $\mu \pm \sigma$ no es tan evidente, se trata de un problema de derivación de funciones, sencillo pero un poco farragoso, que se puede ver [aquí](https://statproofbook.github.io/P/norm-infl.html).
 
-![Desviación típica en una distribución Normal. A la derecha, si se pretende representar una distribución con $\sigma = 2$, la de abajo está claramente mal dibujada.](Figuras_05/f0511_geomNormal.png){#fig-geomNormal .fig-normal3 fig-align="center" width="90%"}
+![Desviación típica en una distribución Normal. A la derecha, si se pretende representar una distribución con $\sigma = 2$, la de abajo está claramente mal dibujada.](Figuras_05/f0511_geomNormal.png){#fig-geomNormal .fig-normal_0511 fig-align="center"}
 
 Si dos distribuciones tienen la misma desviación típica, $\sigma$, tienen también la misma forma y deslizándolas sobre el eje de las $x$ se pueden superponer. Si tienen la misma media, $\mu$ pero distinta $\sigma$ están centradas en el mismo valor, pero la de menor $\sigma$ se verá más esbelta ([@fig-Normales]).
 
-![Desviación típica en una distribución Normal. A la derecha, si se pretende representar una distribución con $\sigma = 2$, la de abajo está claramente mal dibujada.](Figuras_05/f0512_Normales.png){#fig-Normales .fig-normal3 fig-align="center" width="90%"}
+![Desviación típica en una distribución Normal. A la derecha, si se pretende representar una distribución con $\sigma = 2$, la de abajo está claramente mal dibujada.](Figuras_05/f0512_Normales.png){#fig-Normales .fig-normal_0512 fig-align="center"}
 
 ::: callout-note
 ## El área bajo la campana siempre debe ser igual a 1.
@@ -527,7 +527,7 @@ Seguramente el ejemplo al que más recurrimos en las clases de estadística es e
 
 [^05_distribucionesprobabilidad-9]: Información detallada sobre este conjunto de datos y sobre como obtenerlos se encuentra en: S. Weisberg: "Applied Linear Regression" 4ª.edición (2014). Ed. Wiley, pág. 2.
 
-![Histogramas de las estaturas de 1375 mujeres y también de las de una hija de cada una de ellas. Datos recopilados por Karl Pearson a finales del siglo XIX.](Figuras_05/f0513_PearsonData.png){#fig-PearsonData .fig-normal_0513 fig-align="center" width="90%"}
+![Histogramas de las estaturas de 1375 mujeres y también de las de una hija de cada una de ellas. Datos recopilados por Karl Pearson a finales del siglo XIX.](Figuras_05/f0513_PearsonData.png){#fig-PearsonData .fig-normal_0513 fig-align="center"}
 
 Pero, además de por explicar muy bien un tipo de variabilidad que observamos en nuestro entorno, hay otra razón por la que la distribución Normal es muy importante: a partir de cierto tamaño de muestra, su media --que es la materia prima con que trabajamos en muchos análisis estadísticos-- puede considerarse una variable aleatoria con distribución Normal, con independencia de cuál sea la distribución de la que provengan los datos de esa muestra.
 
@@ -535,7 +535,7 @@ Ya hemos visto ([@fig-sumaUniformes]) que la suma de variables aleatorias con di
 
 Podemos repetir este análisis, pero ahora con la variable "resultado obtenido al lanzar un dado", que sigue una distribución equiprobable. Esta es una distribución totalmente distinta de la Normal, no solo todos los valores tienen la misma probabilidad de ocurrir, sino que, además, es una variable discreta. Esta distribución está representada en el primer diagrama de la [@fig-sumaEquiprobable]; en el segundo tenemos la distribución de los valores medios que se pueden obtener al lanzar dos dados. En este caso ya no todos los posibles valores tienen la misma probabilidad de salir: para que la media sea igual a uno tienen que salir dos unos, lo cual es menos probable que obtener una media de 3,5, ya que hay más resultados que conducen a ese valor. Si lanzamos cuatro dados todavía es más difícil obtener valores en los extremos. Si consideramos la media de los valores obtenidos al lanzar ocho dados, el perfil de la campana ya es claramente reconocible.
 
-![La distribución de la media de valores de una distribución equiprobable tiende a la distribución Normal a medida que aumenta el tamaño de la muestra.](Figuras_05/f0514_sumaEquiprobable.png){#fig-sumaEquiprobable .fig-normal3 fig-align="center" width="90%"}
+![La distribución de la media de valores de una distribución equiprobable tiende a la distribución Normal a medida que aumenta el tamaño de la muestra.](Figuras_05/f0514_sumaEquiprobable.png){#fig-sumaEquiprobable .fig-normal_0514 fig-align="center"}
 
 ::: callout-note
 ## El teorema central del límite
@@ -547,7 +547,7 @@ La formalización de que la suma de variables aleatorias independientes de cualq
 
 Como ocurre con todas las variables aleatorias continuas, la probabilidad de que tome valores dentro de un intervalo es igual al área bajo la curva de su función densidad de probabilidad en ese intervalo ([@fig-calProbNormal]).
 
-![Cálculo de probabilidades en la distribución Normal.](Figuras_05/f0515_calProbNormal.png){#fig-calProbNormal .fig-normal_0515 fig-align="center" width="100%"}
+![Cálculo de probabilidades en la distribución Normal.](Figuras_05/f0515_calProbNormal.png){#fig-calProbNormal .fig-normal_0515 fig-align="center"}
 
 En general, esas áreas se calculan integrando la función entre los límites establecidos, pero en el caso de la Normal esto no es posible, ya que su función densidad de probabilidad, $f(x)$, no tiene primitiva; es decir, no existe ninguna función cuya derivada sea $f(x)$. Naturalmente, se puede integrar por métodos numéricos, y los programas de *software* estadístico, las hojas de cálculo o las calculadoras avanzadas lo hacen sin ningún problema.
 
@@ -559,11 +559,11 @@ Porque $\mathrm{P}(X=a)=0$. Análogamente, $\mathrm{P}(a \leq X \leq b) = \mathr
 
 Cuando se buscan probabilidades hay que tener claro qué información proporciona el instrumento que se está utilizando. Las hojas de cálculo habituales dan probabilidades acumuladas hasta un valor (área a la izquierda de $x$). Si $X \sim \mathrm{N}(\mu=10; \; \sigma = 2)$ tenemos:
 
--   $\text{P}(X < 7)$ <br> Probabilidad acumulada hasta el valor de $X = 7$. ![](Figuras_05/f05sn_ProbNormal_1.png){#fig-calProbNormal .fig-normal3 fig-align="center" width="100%"} El cuarto valor dentro del paréntesis indica si se desea obtener la probabilidad acumulada (VERDADERO o 1) o el valor de la función densidad de probabilidad (FALSO o 0). Si se calculan probabilidades en una variable continua, siempre hay que poner 1. El valor de la función densidad de probabilidad solo interesa si queremos dibujar la curva de la campana.
+-   $\text{P}(X < 7)$ <br> Probabilidad acumulada hasta el valor de $X = 7$. ![](Figuras_05/f05sn_ProbNormal_1.png){#fig-calProbNormal .fig-normal_0500a fig-align="center"} El cuarto valor dentro del paréntesis indica si se desea obtener la probabilidad acumulada (VERDADERO o 1) o el valor de la función densidad de probabilidad (FALSO o 0). Si se calculan probabilidades en una variable continua, siempre hay que poner 1. El valor de la función densidad de probabilidad solo interesa si queremos dibujar la curva de la campana.
 
--   $\text{P}(X > 7)$ <br> Como el área total bajo la campana es igual a 1 y la variable solo puede ser mayor o menor que 7 (no hay posibilidades intermedias), podemos escribir: $\mathrm{P}(X > 7) = 1-  \mathrm{P}(X < 7)$ ![](Figuras_05/f05sn_ProbNormal_2.png){.fig-normal3 fig-align="center" width="100%"}
+-   $\text{P}(X > 7)$ <br> Como el área total bajo la campana es igual a 1 y la variable solo puede ser mayor o menor que 7 (no hay posibilidades intermedias), podemos escribir: $\mathrm{P}(X > 7) = 1-  \mathrm{P}(X < 7)$ ![](Figuras_05/f05sn_ProbNormal_2.png){.fig-normal_0500b fig-align="center"}
 
--   $\text{P}(8 < X < 13)$ <br> Es igual a $\text{P}(X < 13) - \text{P}(X < 8)$ ![](Figuras_05/f05sn_ProbNormal_3.png){.fig-normal3 fig-align="center" width="100%"}
+-   $\text{P}(8 < X < 13)$ <br> Es igual a $\text{P}(X < 13) - \text{P}(X < 8)$ ![](Figuras_05/f05sn_ProbNormal_3.png){.fig-normal_0500c fig-align="center"}
 
 ::: callout-note
 ## No es necesario dar tantos decimales
@@ -573,15 +573,11 @@ Aunque los medios de cálculo pueden dar muchos decimales, no es necesario --ni 
 
 ### La distribución Normal estandarizada: N(0; 1) {.unnumbered}
 
-Resulta que si $X \sim \text{N}(\mu; \sigma)$ entonces la nueva variable aleatoria: 
-$$Z = \frac{X-\mu}{\sigma}$$ 
-sigue una distribución $\text{N}(0; 1)$, con independencia de cuáles sean los valores[^05_distribucionesprobabilidad-10] de $\mu$ y de $\sigma$. A esta distribución N(0; 1) la llamamos Normal estandarizada y tiene unas propiedades que nos resultan muy útiles; en particular, resulta que (ver justificación en Apéndice 5.A):
+Resulta que si $X \sim \text{N}(\mu; \sigma)$ entonces la nueva variable aleatoria: $$Z = \frac{X-\mu}{\sigma}$$ sigue una distribución $\text{N}(0; 1)$, con independencia de cuáles sean los valores[^05_distribucionesprobabilidad-10] de $\mu$ y de $\sigma$. A esta distribución N(0; 1) la llamamos Normal estandarizada y tiene unas propiedades que nos resultan muy útiles; en particular, resulta que (ver justificación en Apéndice 5.A):
 
 [^05_distribucionesprobabilidad-10]: $\displaystyle \text{E} \left ( \frac{X - \mu}{\sigma} \right) = \frac{1}{\sigma} \text{E} (X - \mu) = \frac{1}{\sigma} \left[  \text{E}(X)  - \text{E}(\mu) \right] = 0$, ya que: $\text{E}(X) \!= \! \mu$ y $\text{E}(\mu) \!= \! \mu$. $\displaystyle \text{V} \left ( \frac{X - \mu}{\sigma} \right) = \frac{1}{\sigma^2} \text{V} (X - \mu) = \frac{1}{\sigma^2} \left[  \text{V}(X)  - \text{V}(\mu) \right] = \frac{\sigma^2}{\sigma^2} = 1$, ya que: $\text{V}(X) \!= \! \sigma^2$ y $\text{V}(\mu) \!= \! 0$. También usamos la propiedad de que una combinación lineal de variables aleatorias con distribución Normal también sigue una Normal, pero la teoría necesaria para su demostración va más allá de un curso introductorio.
 
-$$\text{P}(X > x) = \text{P} \left ( Z > \frac{x - \mu}{\sigma} \right)$$
-Esto nos permite determinar probabilidades asociadas a cualquier variable con distribución Normal, teniendo tabuladas solo las de la distribución N(0; 1), que caben en una sola hoja. Por ejemplo, si $X \sim \text{N} (10; 2)$, para determinar la probabilidad de que $ X > 10{,}5$ hacemos: 
-$$\text{P}(X>10{,}5) = \text{P} \left ( Z > \frac{10{,}5 - 10}{2} \right ) = \text{P}(Z>0{,}25) = 0{,}4013$$ Las tablas ya apenas se usan para calcular probabilidades, pero usaremos esta propiedad de la distribución N(0; 1) en el capítulo 7, para introducir la expresión de los calcular intervalos de confianza.
+$$\text{P}(X > x) = \text{P} \left ( Z > \frac{x - \mu}{\sigma} \right)$$ Esto nos permite determinar probabilidades asociadas a cualquier variable con distribución Normal, teniendo tabuladas solo las de la distribución N(0; 1), que caben en una sola hoja. Por ejemplo, si $X \sim \text{N} (10; 2)$, para determinar la probabilidad de que \$ X \> 10{,}5\$ hacemos: $$\text{P}(X>10{,}5) = \text{P} \left ( Z > \frac{10{,}5 - 10}{2} \right ) = \text{P}(Z>0{,}25) = 0{,}4013$$ Las tablas ya apenas se usan para calcular probabilidades, pero usaremos esta propiedad de la distribución N(0; 1) en el capítulo 7, para introducir la expresión de los calcular intervalos de confianza.
 
 ### De la binomial a la Normal a través del Quincunx {.unnumbered}
 
@@ -593,7 +589,7 @@ En la derecha de la [@fig-quincunx] tenemos el esquema de una bola que va a caer
 
 En efecto, para que caiga en el compartimento 4 la bola tiene que rebotar siempre hacia la derecha. Como después de cada choque tiene una probabilidad del 50 % de ir para cada lado, la probabilidad de que esto ocurra es la misma que la de obtener 4 caras al lanzar 4 veces una moneda al aire.
 
-![Quincunx con finalidad didáctica y esquema de caida de una bola por un tresbolillo de 4 filas.](Figuras_05/f0516_quincunx.png){#fig-quincunx .fig-normal3 fig-align="center" width="70%"}
+![Quincunx con finalidad didáctica y esquema de caida de una bola por un tresbolillo de 4 filas.](Figuras_05/f0516_quincunx.png){#fig-quincunx .fig-normal_0516 fig-align="center"}
 
 Para que caiga en el compartimento 3 debe ir tres veces hacia la derecha y una hacia la izquierda, no importa en que clavija vaya hacia un lado o hacia el otro. La probabilidad de que esto ocurra es la misma que la de tener 3 caras al lanzar 4 veces una moneda al aire. Para que caiga en el compartimento 2 debe rebotar dos veces a la derecha y otras dos a la izquierda. Tampoco importa en qué clavijas rebote hacia un lado o hacia otro, por lo que esta probabilidad es la misma que la de obtener 2 caras al lanzar la moneda 4 veces. Siguiendo con este razonamiento (o quedándonos aquí y asignando las probabilidades que faltan por simetría) obtenemos los valores de la [Tabla 5.6](#tbl-BinoPoisson).
 
@@ -636,13 +632,65 @@ Para que caiga en el compartimento 3 debe ir tres veces hacia la derecha y una h
 </table>
 </div>
 ```
-Este argumento se puede generalizar para cualquier número de filas. En internet es fácil encontrar simuladores de *quincunx* como el de la [@fig-quincunxSimulador] que tiene 14 filas y en el que hemos dejado caer 3566 bolas ( aunque en el histograma solo suman 3552 porque 14 todavía están en camino). Podemos calcular las probabilidades de que caigan en cada compartimento y a partir de estas, comparar las frecuencias teóricas con las observadas.
+Este argumento se puede generalizar para cualquier número de filas. En internet es fácil encontrar simuladores de *quincunx* como el de la [@fig-quincunxSim] que tiene 14 filas y en el que hemos dejado caer 3566 bolas ( aunque en el histograma solo suman 3552 porque 14 todavía están en camino). Podemos calcular las probabilidades de que caigan en cada compartimento y a partir de estas, comparar las frecuencias teóricas con las observadas.
 
-![[Simulador de quincunx](https://www.mathsisfun.com/data/quincunx.html) y tabla con las frecuencias teóricas y observadas.](Figuras_05/f0517_quincunxSimulador.png){#fig-quincunxSimulador .fig-normal3 fig-align="center" width="100%"}
+```{=html}
+<div class="tabla-wrapper_T0310">
+<div style="display: flex; gap: 0rem; align-items: center;">
 
-La [@fig-binoNormal] (izquierda) compara las frecuencias teóricas y las observadas en nuestro caso con 14 filas y después de que hayan caído 3552 bolas. A la derecha tenemos las probabilidades teóricas si se tienen 100 filas. En este caso, con $n=100$ y $p=0.5$, tenemos que: $\mu = np=50$ y $\sigma = \sqrt {n p(1-p)}=\sqrt {100 \cdot 0.25}= 5$. Superponiendo una distribución Normal con esos mismos parámetros, los perfiles de las dos distribuciones prácticamente coinciden. A medida que $n$ va creciendo, cada vez se parecen más. Cuando $n \rightarrow \infty$ ambas distribuciones tienden a coincidir.
+<!-- IMAGEN -->
+  <div style="flex: 0.75; text-align: center;">
+    <img src="Figuras_05/f0517_quincunxSim.png" style="width: 275px; height: auto;">
+  </div>
+  
+  
+  <!-- TABLA -->
+  <div style="flex: 1.15;">
+    <!-- <table style="border-collapse: collapse; width: 100%; text-align: center;"> -->
+    <table class="tabla-0517">
 
-![Resultados de la [@fig-quincunxSimulador] y probabilidades en un quincunx que tenga 100 filas de clavijas (101 canales), con la distribución Normal superpuesta.](Figuras_05/f0518_binoNormal.png){#fig-binoNormal .fig-normal3 fig-align="center" width="100%"}
+<colgroup>
+  <col style="width: 16%;">
+  <col style="width: 32%;">
+  <col style="width: 26%;">
+  <col style="width: 26%;">
+</colgroup>
+  
+  <thead>
+<tr>
+  <th>Canal</th>
+  <th>Probabilidad</th>
+  <th>Frecuencia teórica</th>
+  <th>Frecuencia observada</th>
+</tr>
+  </thead>
+  <tbody>
+ <tr><td>0 </td> <td> 0,0001 </td> <td>   0 </td> <td>   0 </td> </tr>
+ <tr><td>1 </td> <td> 0,0009 </td> <td>   3 </td> <td>   2 </td> </tr>
+ <tr><td>2 </td> <td> 0,0056 </td> <td>  20 </td> <td>  21 </td> </tr>
+ <tr><td>3 </td> <td> 0,0222 </td> <td>  79 </td> <td>  79 </td> </tr>
+ <tr><td>4 </td> <td> 0,0611 </td> <td> 217 </td> <td> 219 </td> </tr>
+ <tr><td>5 </td> <td> 0,1222 </td> <td> 434 </td> <td> 445 </td> </tr>
+ <tr><td>6 </td> <td> 0,1833 </td> <td> 651 </td> <td> 670 </td> </tr>
+ <tr><td>7 </td> <td> 0,2095 </td> <td> 744 </td> <td> 724 </td> </tr>
+ <tr><td>8 </td> <td> 0,1833 </td> <td> 651 </td> <td> 669 </td> </tr>
+ <tr><td>9 </td> <td> 0,1222 </td> <td> 434 </td> <td> 442 </td> </tr>
+<tr><td>10 </td> <td> 0,0611 </td> <td> 217 </td> <td> 183 </td> </tr>
+<tr><td>11 </td> <td> 0,0222 </td> <td>  79 </td> <td>  81 </td> </tr>
+<tr><td>12 </td> <td> 0,0056 </td> <td>  20 </td> <td>  16 </td> </tr>
+<tr><td>13 </td> <td> 0,0009 </td> <td>   3 </td> <td>   1 </td> </tr>
+<tr><td>14 </td> <td> 0,0001 </td> <td>   0 </td> <td>   0 </td> </tr>
+  </tbody>
+</table>
+  </div>
+</div>
+</div>
+```
+![[Simulador de quincunx](https://www.mathsisfun.com/data/quincunx.html) y tabla con las frecuencias teóricas y observadas.](Figuras_05/f0000_figuraFantasma.png){#fig-quincunxSim .fig-normal_0310_Fantasma fig-align="center"}
+
+La [@fig-binoNormal] (izquierda) compara las frecuencias teóricas y las observadas en nuestro caso con 14 filas y después de que hayan caído 3552 bolas. A la derecha tenemos las probabilidades teóricas si se tienen 100 filas. En este caso, con $n=100$ y $p=0{,}5$, tenemos que: $\mu = np=50$ y $\sigma = \sqrt {n p(1-p)}=\sqrt {100 \cdot 0{,}25}= 5$. Superponiendo una distribución Normal con esos mismos parámetros, los perfiles de las dos distribuciones prácticamente coinciden. A medida que $n$ va creciendo, cada vez se parecen más. Cuando $n \rightarrow \infty$ ambas distribuciones tienden a coincidir.
+
+![Resultados de la [@fig-quincunxSimulador] y probabilidades en un quincunx que tenga 100 filas de clavijas (101 canales), con la distribución Normal superpuesta.](Figuras_05/f0518_binoNormal.png){#fig-binoNormal .fig-normal_0518 fig-align="center"}
 
 ### La distribución Normal como aproximación a la binomial {.unnumbered}
 
@@ -650,9 +698,9 @@ Hasta la aparición de los ordenadores, el cálculo de probabilidades con la dis
 
 Sabemos que si $X \sim \text{Bin} (n; p)$ los valores de su esperanza matemática y su varianza son: $\text{E}(X) = np$ y $\text{V}(X) = np(1-p)$. Si aproximamos $X$ a una distribución Normal tenemos que $X \sim N(np; \sqrt{np(1-p)})$. Lo aproximado es la Normalidad de la distribución, los valores de la esperanza matemática y la desviación típica son los valores exactos.
 
-La [@fig-aproxBinoNormal] muestra las probabilidades correspondientes a algunos valores de una variable con distribución binomial y su aproximación con la distribución Normal. Observe que cuando se utiliza la distribución Normal se aplica la llamada "corrección por continuidad". La probabilidad de $X=6$ calculada con la distribución Normal sería igual a cero si no aplicamos esa corrección. Lo que hacemos es: $\mathrm P(X=6) = \mathrm P(X < 6.5) - \mathrm P(X < 5.5)$ ya que la probabilidad de que $X$ esté entre 5,5 y 6,5 es una buena aproximación de $\mathrm P(X=6)$. También $\mathrm P(X<3) = \mathrm P(X<2.5)$ y $\mathrm P(4 \leq X \leq 5)$ será igual a $\mathrm P(X < 5.5) - \mathrm P(X < 3.5)$.
+La [@fig-aproxBinoNormal] muestra las probabilidades correspondientes a algunos valores de una variable con distribución binomial y su aproximación con la distribución Normal. Observe que cuando se utiliza la distribución Normal se aplica la llamada "corrección por continuidad". La probabilidad de $X=6$ calculada con la distribución Normal sería igual a cero si no aplicamos esa corrección. Lo que hacemos es: $\mathrm P(X=6) = \mathrm P(X < 6{,}5) - \mathrm P(X < 5{,}5)$ ya que la probabilidad de que $X$ esté entre 5,5 y 6,5 es una buena aproximación de $\mathrm P(X=6)$. También $\mathrm P(X<3) = \mathrm P(X<2{,}5)$ y $\mathrm P(4 \leq X \leq 5)$ será igual a $\mathrm P(X < 5{,}5) - \mathrm P(X < 3{,}5)$.
 
-![Probabilidades en una distribución binomial aproximadas a través de una Normal. En la distribución Normal: $\sigma = \sqrt{np(1-p)} = 1.54919$.](Figuras_05/f0519_aproxBinoNormal.png){#fig-aproxBinoNormal .fig-normal3 fig-align="center" width="100%"}
+![Probabilidades en una distribución binomial aproximadas a través de una Normal. En la distribución Normal: $\sigma = \sqrt{np(1-p)} = 1.54919$.](Figuras_05/f0519_aproxBinoNormal.png){#fig-aproxBinoNormal .fig-normal_0519 fig-align="center"}
 
 ::: callout-note
 ## Los modelos y la realidad
@@ -664,21 +712,21 @@ Dicen los expertos que la esfera es una de las formas geométricas más abundant
 
 Aunque las tablas estadísticas ya son algo del pasado, es interesante ver por qué habiendo infinitas distribuciones Normales (tantas como parejas $\mu$, \$\sigma \$) basta la tabla de solo una para poder calcular probabilidades en todas ellas.
 
-Lo veremos con razonamientos básicamente geométricos. Sea $X \sim \text{N}(\mu; \sigma)$ y deseamos calcular $P(X>x)$. Si definimos $Y = X - \mu$, está claro que $Y \sim N(0; \sigma)$, y con ayuda de la figura [@fig-Normal01_1] es fácil observar que $P(X>x)=P(Y>x-\mu)$ ya que la forma de las dos distribuciones es idéntica y al punto $x$ en la distribución de $X$ le corresponde $x-\mu$ en la de $Y$.
+Lo veremos con razonamientos básicamente geométricos. Sea $X \sim \text{N}(\mu; \sigma)$ y deseamos calcular $P(X>x)$. Si definimos $Y = X - \mu$, está claro que $Y \sim N(0; \sigma)$, y con ayuda de la [@fig-Normal01_1] es fácil observar que $P(X>x)=P(Y>x-\mu)$ ya que la forma de las dos distribuciones es idéntica y al punto $x$ en la distribución de $X$ le corresponde $x-\mu$ en la de $Y$.
 
-![Transformación de $X \sim N(\mu; \sigma)$ en $Y \sim N(0; \sigma)$.](Figuras_05/f0520_Normal01_1.png){#fig-Normal01_1 .fig-normal_0520 fig-align="center" width="100%"}
+![Transformación de $X \sim N(\mu; \sigma)$ en $Y \sim N(0; \sigma)$.](Figuras_05/f0520_Normal01_1.png){#fig-Normal01_1 .fig-normal_0520 fig-align="center"}
 
 Si $Y \sim \text{N}(0; \sigma)$ y $k$ es una constante, entonces $kY \sim \text{N}(0; k\sigma)$ ya que $\text{E}(kY) = k\text{E}(Y) = 0$ y $\text{V}(kY) = k^2 \sigma^2$. Veamos ahora cómo representar la distribución de $kY$.
 
 Si representamos $f(Y)$ y $f(kY)$ utilizando los mismos ejes, las formas de las distribuciones serán distintas, por tener distinto valor de \$ \sigma \$. Pero también podemos representarlas usando la misma forma para la distribución (la misma campana) y cambiar las escalas de los ejes, tal como se indica en la [@fig-Normal01_2].
 
-![Distribución Normal con $\mu$=0 y con \$\sigma \$=1 o $\sigma = k$ según la escala.](Figuras_05/f0521_Normal01_2.png){#fig-Normal01_2 .fig-normal_0521 fig-align="center" width="65%"}
+![Distribución Normal con $\mu$=0 y con \$\sigma \$=1 o $\sigma = k$ según la escala.](Figuras_05/f0521_Normal01_2.png){#fig-Normal01_2 .fig-normal_0521 fig-align="center"}
 
 Recordando que la función densidad de probabilidad de $Y \sim \text{N}(0; \sigma)$ es: $$f(y) = \frac{1}{\sigma \sqrt{2 \pi}}e^{- \frac{y^2}{2\sigma^2}}$$ se deduce que: $$f(ky) = \frac{1}{k\sigma \sqrt{2 \pi}}e^{- \frac{k^2y^2}{2 k^2 \sigma^2}} = \frac{1}{k} \cdot \frac{1}{\sigma \sqrt{2 \pi}}e^{- \frac{y^2}{2\sigma^2}} = \frac{1}{k}f(y)$$ Por tanto, las campanas se pueden representar de forma idéntica multiplicando por $k$ el eje de abscisas y dividiendo por el mismo valor el de ordenadas (que no hemos representado).
 
 Si hacemos $k= \frac{1}{\sigma}$ tendremos $Z = \frac{Y}{\sigma}$, o lo que es lo mismo: $Z = (X-\mu)/ \sigma$. Por lo comentado anteriormente, la distribución de $Z$ se puede representar con la misma campana que la utilizada para la distribución de $Y$ ([@fig-Normal01_3]).
 
-![Transformación de $Y \sim N(0; \sigma)$ en $Z \sim N(0; 1)$.](Figuras_05/f0522_Normal01_3.png){#fig-Normal01_3 .fig-normal3 fig-align="center" width="65%"}
+![Transformación de $Y \sim N(0; \sigma)$ en $Z \sim N(0; 1)$.](Figuras_05/f0522_Normal01_3.png){#fig-Normal01_3 .fig-normal_0522 fig-align="center"}
 
 Si la forma de las campanas es la misma, y solo hemos sustituido el punto $x - \mu$ por el $\frac{x - \mu}{\sigma}$, resulta claro que $P \left( Z > \frac{x -\mu}{\sigma} \right) = P\left( Y > X - \mu \right)$ y, por tanto, $P\left( X>x\right) = P\left(Z> \frac{x-\mu}{\sigma}\right)$.
 
@@ -687,7 +735,7 @@ Si la forma de las campanas es la misma, y solo hemos sustituido el punto $x - \
 Una variable aleatoria $Y$ sigue una distribución de Bernoulli cuando solo puede tomar dos valores: 1 ("éxito") con probabilidad $p$ y 0 ("fracaso") con probabilidad $1-p$. En la [Tabla 5.7](#tbl-bernouilli) se deduce que $E(Y) = p$ y $V(Y) = p(1-p)$.
 
 ```{=html}
-<div id="tbl-bernouilli" class="tabla-wrapper_0507">
+<div id="tbl-bernouilli" class="tabla-wrapper_T0507">
 <table class="tabla-0507">
 
 <caption>Tabla 5.7: Deducción de la esperanza y la varianza de una variable de Bernouilli.</caption>

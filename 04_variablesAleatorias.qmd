@@ -111,9 +111,9 @@ En teoria, claro, porque en la práctica no hay infinitos. Podemos pensar en una
 ::: {style="height: 12px;"}
 :::
 
-Una forma clara de visualizar las características de una variable aleatoria discreta es representar su función de probabilidad. En la [@fig-ejemplosFuncionProbabilidad]) (izquierda), la variable aleatoria es el número de pasajeros que no se presentan a la salida de su vuelo si se han vendido $n=180$ billetes y la probabilidad de que un pasajero no se presente es $p=0.01$. En la figura de la derecha, la variable es el número de paradas por causas imprevistas que se producen en una línea de producción durante una semana laboral (5 días) sabiendo que, por esas causas, se para en promedio una vez cada dos días.
+Una forma clara de visualizar las características de una variable aleatoria discreta es representar su función de probabilidad. En la [@fig-ejemplosFuncionProbabilidad]) (izquierda), la variable aleatoria es el número de pasajeros que no se presentan a la salida de su vuelo si se han vendido $n=180$ billetes y la probabilidad de que un pasajero no se presente es $p=0{,}01$. En la figura de la derecha, la variable es el número de paradas por causas imprevistas que se producen en una línea de producción durante una semana laboral (5 días) sabiendo que, por esas causas, se para en promedio una vez cada dos días.
 
-![Representación de funciones de probabilidad de variables discretas.](Figuras_04/f0401_ejemplosFuncionProbabilidad.png){#fig-ejemplosFuncionProbabilidad .fig-normal3 fig-align="center" width="90%"}
+![Representación de funciones de probabilidad de variables discretas.](Figuras_04/f0401_ejemplosFuncionProbabilidad.png){#fig-ejemplosFuncionProbabilidad .fig-normal_0401 fig-align="center"}
 
 En el siguiente capítulo veremos que calcular estas probabilidades es mucho más fácil de lo que parece.
 
@@ -151,13 +151,13 @@ Supongamos que tenemos una muestra de 5000 valores de una variable aleatoria $X$
 
 En el lado derecho tenemos el mismo histograma pero con la densidad de frecuencia. Es inmediato deducir que su valor entre 0,5 y 0,6 es igual a 0,59, que multiplicado por la anchura del intervalo (0,1) nos da la frecuencia relativa y también el área de esa barra. La suma de las frecuencias relativas debe ser igual a 1 y, por tanto, también la suma de las áreas de todas las barras.
 
-![Histograma con frecuencias absolutas (izquierda) y con densidad de frecuencia (derecha).](Figuras_04/f0402_densidadDeFrecuencia.png){#fig-densidadDeFrecuencia .fig-normal3 fig-align="center" width="95%"}
+![Histograma con frecuencias absolutas (izquierda) y con densidad de frecuencia (derecha).](Figuras_04/f0402_densidadDeFrecuencia.png){#fig-densidadDeFrecuencia .fig-normal_0402 fig-align="center"}
 
 ### De la densidad de frecuencia a la densidad de probabilidad {.unnumbered}
 
 Está claro que si en el eje de ordenadas tenemos la densidad de frecuencia, el cálculo de la frecuencia relativa se convierte en un cálculo de áreas. En la [@fig-areasProbabilidades] (izquierda), el área de la zona sombreada es igual a la frecuencia relativa entre 0,5 y 1,5. En la derecha hemos superpuesto dos líneas que parece razonable considerar que representan a la población de la que provienen esos datos. La función que describe esas líneas es la \textbf{función densidad de probabilidad}. Respecto a las muestras hablamos de **frecuencia**, mientras que en el contexto de las poblaciones, usamos el término **probabilidad**.
 
-![Histograma con frecuencias absolutas (izquierda) y con densidad de frecuencia (derecha).](Figuras_04/f0403_areasProbabilidades.png){#fig-areasProbabilidades .fig-normal3 fig-align="center" width="95%"}
+![Histograma con frecuencias absolutas (izquierda) y con densidad de frecuencia (derecha).](Figuras_04/f0403_areasProbabilidades.png){#fig-areasProbabilidades .fig-normal_0403 fig-align="center"}
 
 En este caso, la función densidad de probabilidad $f(x)$ es: \begin{equation*}
     f(x) = \left \{
@@ -168,11 +168,11 @@ En este caso, la función densidad de probabilidad $f(x)$ es: \begin{equation*}
     \right.
 \end{equation*}
 
-En la muestra, la frecuencia relativa entre 0,5 y 1,5 es igual al área de las barras que se encuentran entre esos valores. Para la población, la probabilidad de que \$ X \$ se encuentre en ese intervalo es igual al área que definida en el triángulo. Esta área se puede calcular haciendo: $$P(0,5 \leq x \leq 1,5) = \int_{0,5}^1 x \; dx + \int_1^{1,5}(2-x) \; dx =\frac{3}{4}$$
+En la muestra, la frecuencia relativa entre 0,5 y 1,5 es igual al área de las barras que se encuentran entre esos valores. Para la población, la probabilidad de que \$ X \$ se encuentre en ese intervalo es igual al área que definida en el triángulo. Esta área se puede calcular haciendo: $$P(0{,}5 \leq x \leq 1{,}5) = \int_{0{,}5}^1 x \; dx + \int_1^{1{,}5}(2-x) \; dx =\frac{3}{4}$$
 
-Si la función densidad de probabilidad tiene una forma tan sencilla como la que acabamos de ver, podemos calcular las áreas haciendo integrales o también aplicando reglas de geometría. La probabilidad de tener valores mayores de 1,5 es: $$P(X > 1.5) = \int_{1.5}^{2}(2-x) \; dx = 0.125$$
+Si la función densidad de probabilidad tiene una forma tan sencilla como la que acabamos de ver, podemos calcular las áreas haciendo integrales o también aplicando reglas de geometría. La probabilidad de tener valores mayores de 1,5 es: $$P(X > 1{,}5) = \int_{1{,}5}^{2}(2-x) \; dx = 0{,}125$$
 
-Pero también, observando que la altura del triángulo para $x=1.5$ es igual a 0,5, el área entre 1,5 y 2 será: $0.5 \times 0.5/2 = 0.125$.
+Pero también, observando que la altura del triángulo para $x=1{,}5$ es igual a 0,5, el área entre 1,5 y 2 será: $0{,}5 \times 0{,}5/2 = 0{,}125$.
 
 Si la expresión de $f(x)$ es más complicada --que es lo que suele ocurrir en la práctica--, el cálculo de las áreas puede ser más laborioso, pero el planteamiento es exactamente el mismo.
 
@@ -253,7 +253,7 @@ $$\text{E}(X) = \sum_{i=1}^k  x_i \, p(x_i)$$ En el caso que habíamos comentado
 </table>
 </div>
 ```
-Tenemos que $\text{E}(X) = -0.93$ € por tanto, en promedio, perderemos 0,93 € por cada boleto que compremos. Si los compráramos todos nos costarían 10.000 € y nos tocarán 700, habríamos perdido 9.300 €, exactamente 0,93 por boleto.
+Tenemos que $\text{E}(X) = -0{,}93$ € por tanto, en promedio, perderemos 0,93 € por cada boleto que compremos. Si los compráramos todos nos costarían 10.000 € y nos tocarán 700, habríamos perdido 9.300 €, exactamente 0,93 por boleto.
 
 #### Variables aleatorias continuas {.unnumbered}
 
@@ -261,7 +261,7 @@ Se calcula mediante una expresión análoga a la que hemos visto para las variab
 
 Si la distribución no es simétrica, como en la figura [@fig-ejercicio], el cálculo ya no es tan inmediato.
 
-![Función densidad de probabilidad con forma triangular.](Figuras_04/f0404_ejercicio.png){#fig-ejercicio .fig-normal3 fig-align="center" width="60%"}
+![Función densidad de probabilidad con forma triangular.](Figuras_04/f0404_ejercicio.png){#fig-ejercicio .fig-normal_0404 fig-align="center"}
 
 Esta función se puede escribir de la forma:
 
@@ -270,12 +270,12 @@ Esta función se puede escribir de la forma:
     f(x) = \left \{
     \begin{aligned}
         \frac{x}{10}\;\; & \quad\text{para}\;\; 0<x \leq 4 \\
-        2-0.4x & \quad\text{para}\;\; 4<x \leq 5 
+        2-0{,}4x & \quad\text{para}\;\; 4<x \leq 5 
     \end{aligned}
     \right.
 \end{equation*}
 ```
-Podemos comprobar que está bien definida: siempre toma valores positivos y el área que define es igual a 1. Su esperanza matemática es: $$\text{E}(X) = \int_{0}^{4} x \frac{x}{10} \,\mathrm{d}x + \int_{4}^{5} x (2 -0.4x) \,\mathrm{d}x = 3$$
+Podemos comprobar que está bien definida: siempre toma valores positivos y el área que define es igual a 1. Su esperanza matemática es: $$\text{E}(X) = \int_{0}^{4} x \frac{x}{10} \,\mathrm{d}x + \int_{4}^{5} x (2 -0{,}4x) \,\mathrm{d}x = 3$$
 
 ::: {style="height: 3px;"}
 :::
@@ -344,12 +344,11 @@ También se calcula con una expresión similar a la que usamos para calcular la 
 </table>
 </div>
 ```
-
 El resultado, V(<i>X</i>)=20,9951 €<sup>2</sup>, es la varianza de los valores del beneficio que se obtendría con cada boleto si los compramos todos.
 
 De forma análoga, para las variables aleatorias continuas tenemos: $$\text{V}(X) = \int_{-\infty}^{\infty} [x - \text{E}(X)]^2 \, f(x) \, \mathrm{d}x$$ En la distribución de la [@fig-ejercicio] tenemos:
 
-$$ \text{V}(X) = \int_{0}^{4} (x-3)^2 \frac{x}{10} \, \mathrm{d}x + \int_{4}^{5} (x-3)^2  (2 -0.4x) \, \mathrm{d}x = \frac{7}{6}$$ Ciertamente, este valor de la varianza no nos dice nada[^04_variablesaleatorias-5], pero lo podemos comparar con el que se obtiene para la distribución de la [@fig-areasProbabilidades] que deberá ser menor, al ser también menor el rango en que se mueve. En este caso, como $E(X)=1$, tenemos:
+$$ \text{V}(X) = \int_{0}^{4} (x-3)^2 \frac{x}{10} \, \mathrm{d}x + \int_{4}^{5} (x-3)^2  (2 -0{,}4x) \, \mathrm{d}x = \frac{7}{6}$$ Ciertamente, este valor de la varianza no nos dice nada[^04_variablesaleatorias-5], pero lo podemos comparar con el que se obtiene para la distribución de la [@fig-areasProbabilidades] que deberá ser menor, al ser también menor el rango en que se mueve. En este caso, como $E(X)=1$, tenemos:
 
 [^04_variablesaleatorias-5]: Aunque algo sí que dice. Existe una curiosa propiedad denominada desigualdad de Chebyshev, que afirma que la probabilidad de que una variable aleatoria (con varianza finita, para ser rigurosos) se encuentre en el intervalo $\mu \pm k\sigma$ es como mínimo de $1-1/k^2$. Por tanto, en nuestro caso, a la vista del valor de la varianza y tomando $k=\sqrt{2}$, podemos afirmar que la probabilidad de que la variable se encuentre en el intervalo \$3 \pm \sqrt{2} \sqrt{7/6} \$ (es decir: $3 \pm 1.5275$) es, como mínimo, del 50%. Haciendo el cálculo exacto resulta ser del 84,7%.
 
@@ -363,9 +362,9 @@ La moda es el valor de $x$ para el cual $f(x)$ tiene un máximo. Si existen dos 
 
 La mediana es el valor que tiene una probabilidad del 50% de ser superado. Si la distribución es simétrica, la mediana coincide con la esperanza matemática; así pues, en el primer ejemplo la mediana es igual a 1.
 
-En el segundo ejemplo no es evidente cuál es ese valor, pero a la vista de la geometría de la distribución podemos asegurar que será menor que 4 y por tanto nos centramos en la primera parte de la expresión. Podemos escribir: $$\int_{0}^{Me} \frac{x}{10} \, \mathrm{d}x = 0.5$$ Y de esta expresión despejamos el valor de la mediana, obteniendo $Me = \sqrt{10}$.
+En el segundo ejemplo no es evidente cuál es ese valor, pero a la vista de la geometría de la distribución podemos asegurar que será menor que 4 y por tanto nos centramos en la primera parte de la expresión. Podemos escribir: $$\int_{0}^{Me} \frac{x}{10} \, \mathrm{d}x = 0{,}5$$ Y de esta expresión despejamos el valor de la mediana, obteniendo $Me = \sqrt{10}$.
 
-Si la forma de la distribución de probabilidad es geométricamente sencilla, este cálculo también se puede realizar aplicando reglas de geometría. Por ejemplo, el primer cuartil $Q_1$ verificará: $$ \frac{Q_1 \cdot f(Q_1)}{2} = 0.25 $$ Es decir, $Q_1 \cdot \frac{Q_1}{10} = 0.5$, luego $Q_1 = \sqrt{5}$.
+Si la forma de la distribución de probabilidad es geométricamente sencilla, este cálculo también se puede realizar aplicando reglas de geometría. Por ejemplo, el primer cuartil $Q_1$ verificará: $$\frac{Q_1 \cdot f(Q_1)}{2} = 0{,}25$$ Es decir, $Q_1 \cdot \frac{Q_1}{10} = 0.5$, luego $Q_1 = \sqrt{5}$.
 
 ## Operaciones con variables aleatorias
 
@@ -393,7 +392,6 @@ Puede comprobarlo generando números aleatorios en una columna de una hoja de c�
 ::: {style="height: 1px;"}
 :::
 
-
 ### No es lo mismo sumar $k$ veces que multiplicar por $k$ {.unnumbered}
 
 El resultado es el mismo cuando las cantidades a que nos referimos son magnitudes constantes. Para saber cuántos huevos hay en 8 docenas, como el número de huevos en una docena es una constante, podemos sumar 12 huevos 8 veces o multiplicar 12 por 8 (¡evidente!). Pero, si lo que tenemos es una variable aleatoria, como el peso de un huevo, esto ya no es verdad.
@@ -418,11 +416,11 @@ $\qquad \qquad \qquad \qquad \qquad  \text{E}(12X)=12 \cdot \text{E}(X)$ $\qquad
 
 Vamos a ver que estas fórmulas reflejan lo que ocurre en la realidad a través de una mirada intuitiva al problema. Cuando formamos una docena de huevos, aunque tomemos uno singularmente pequeño, no hay que temer que esta docena salga con un peso muy por debajo del valor medio, ya que seguramente también habrá otros con un peso por encima de lo normal, de manera que los grandes compensarán el peso de los pequeños y viceversa ([@fig-huevos1]).
 
-![Una docena de huevos (exagerando las diferencias).](Figuras_04/f0405_huevos1.png){#fig-huevos1 .fig-normal3 fig-align="center" width="90%"}
+![Una docena de huevos (exagerando las diferencias).](Figuras_04/f0405_huevos1.png){#fig-huevos1 .fig-normal_0405 fig-align="center"}
 
 Sin embargo, en la variable "peso de un huevo multiplicado por 12", si el huevo elegido resulta ser pequeño, es como tener una docena de huevos pequeños, y si es grande sería como una docena de huevos grandes, con lo que tendremos pesos totales con más dispersión que en el caso anterior, ya que en este caso no se compensan los grandes con los pequeños ([@fig-huevos2]).
 
-![Un huevo multiplicado por 12. Si es pequeño es como tener una docena de huevos pequeños. Igual si es grande.](Figuras_04/f0406_huevos2.png){#fig-huevos2 .fig-normal3 fig-align="center" width="100%"}
+![Un huevo multiplicado por 12. Si es pequeño es como tener una docena de huevos pequeños. Igual si es grande.](Figuras_04/f0406_huevos2.png){#fig-huevos2 .fig-normal_0406 fig-align="center"}
 
 Por tanto, tiene más dispersión la variable aleatoria "peso de un huevo multiplicado por 12" que la variable "peso de una docena". Y si la variabilidad es distinta, las variables son distintas.
 
@@ -454,17 +452,17 @@ Pero si la probabilidad no es la misma para todos los casos posibles entonces no
 
 Es igual al producto de las probabilidades de que ocurra cada uno de ellos si la ocurrencia de uno no altera la probabilidad de ocurrencia del otro (decimos que son **independientes**). Veamos algunos ejemplos:
 
--   Si el 40% de la población está a favor de una determinada política del gobierno y elegimos a 3 personas al azar, la probabilidad de que las tres estén a favor será igual a la probabilidad de que lo esté el primero **y** el segundo **y** el tercero, es decir: $0.4^3 = 0.064$, **pero** si elegimos a tres personas del mismo grupo familiar esta regla ya no funciona porque los resultados no se pueden considerar independientes. Si uno está a favor es más probable que los otros también lo estén, porque los grupos familiares suelen tener un mismo perfil ideológico.
+-   Si el 40% de la población está a favor de una determinada política del gobierno y elegimos a 3 personas al azar, la probabilidad de que las tres estén a favor será igual a la probabilidad de que lo esté el primero **y** el segundo **y** el tercero, es decir: $0{,}4^3 = 0{,}064$, **pero** si elegimos a tres personas del mismo grupo familiar esta regla ya no funciona porque los resultados no se pueden considerar independientes. Si uno está a favor es más probable que los otros también lo estén, porque los grupos familiares suelen tener un mismo perfil ideológico.
 
--   La probabilidad de que al lanzar dos veces una moneda salga cara y cara es $0,5 \cdot 0,5$ porque la probabilidad de que la segunda sea cara no está afectada por el resultado obtenido en la primera, pero si la probabilidad de sacar un as de una baraja es 1/12, la probabilidad de sacar dos ases no es $(1/12)^2$ porque la probabilidad de que la segunda sea un as depende de si lo ha sido la primera.
+-   La probabilidad de que al lanzar dos veces una moneda salga cara y cara es $0{,}5 \cdot 0{,}5$ porque la probabilidad de que la segunda sea cara no está afectada por el resultado obtenido en la primera, pero si la probabilidad de sacar un as de una baraja es 1/12, la probabilidad de sacar dos ases no es $(1/12)^2$ porque la probabilidad de que la segunda sea un as depende de si lo ha sido la primera.
 
--   En una zona llueve el 40% de los días. La probabilidad de que llueva dos días tomados al azar es $0.4^2$, pero esa no es la probabilidad de que llueva dos días seguidos, porque la probabilidad de que llueva un día seguramente es mayor si ha llovido el día anterior.
+-   En una zona llueve el 40% de los días. La probabilidad de que llueva dos días tomados al azar es $0{,}4^2$, pero esa no es la probabilidad de que llueva dos días seguidos, porque la probabilidad de que llueva un día seguramente es mayor si ha llovido el día anterior.
 
 ### Probabilidad de que ocurra un suceso *u* otro. (Regla de la *o*) {.unnumbered}
 
 Es la suma de las probabilidades de ocurrencia de cada uno de ellos, siempre y cuando no puedan ocurrir los dos a la vez, en cuyo caso habrá que restar esa probabilidad. Ejemplos:
 
--   Un producto puede tener dos tipos de defecto, el A y el B, con $P(A)=0.08$ y $P(B)=0.07$. Si ambos defectos son incompatibles (por ejemplo, o pesa mucho o pesa poco), la probabilidad de que una unidad sea defectuosa (tenga el defecto A o el B) es $P(A)+P(B) = 0.15$. Supongamos ahora que sí puede tener los dos tipos de defecto (por ejemplo, sucio y rallado) y supongamos que las probabilidades son $P(A)=0.6$ y $P(B)=0.7$. En este caso, la probabilidad de que un producto sea defectuoso es igual a $P(A)+P(B) - P(A y B)= 0.88$. Con los números que hemos puesto no se nos puede olvidar restar la probabilidad de que ocurran los dos sucesos a la vez, porque si no lo hacemos la probabilidad saldría mayor que 1.
+-   Un producto puede tener dos tipos de defecto, el A y el B, con $P(A)=0.08$ y $P(B)=0.07$. Si ambos defectos son incompatibles (por ejemplo, o pesa mucho o pesa poco), la probabilidad de que una unidad sea defectuosa (tenga el defecto A o el B) es $P(A)+P(B) = 0.15$. Supongamos ahora que sí puede tener los dos tipos de defecto (por ejemplo, sucio y rallado) y supongamos que las probabilidades son $P(A)=0{,}6$ y $P(B)=0{,}7$. En este caso, la probabilidad de que un producto sea defectuoso es igual a $P(A)+P(B) - P(A\; y \; B)= 0{,}88$. Con los números que hemos puesto no se nos puede olvidar restar la probabilidad de que ocurran los dos sucesos a la vez, porque si no lo hacemos la probabilidad saldría mayor que 1.
 
 -   Elegimos una carta de la baraja, ¿cuál es la probabilidad de que sea de copas o de espadas? La probabilidad de que sea de copas es 1/4 y la misma que sea de espadas. Como no puede ser las dos cosas a la vez, la probabilidad de que sea de copas o de espadas es: 1/4 + 1/4 = 1/2. Pero, ¿cuál es la probabilidad de que sea un as o del palo de copas? La probabilidad de que sea un as es 1/12 y de que sea de copas 1/4, pero también puede ser las dos cosas a la vez con una probabilidad 1/48. Por tanto, la probabilidad buscada es: $1/12 + 1/4 -1/48 = 15/48$
 
@@ -472,9 +470,9 @@ Es la suma de las probabilidades de ocurrencia de cada uno de ellos, siempre y c
 
 Si el conjunto de resultados posibles se puede dividir en dos grupos y la probabilidad de que esté es un grupo es $p$, la probabilidad de que esté en el otro, al que llamamos complementario, es $1-p$.
 
-A veces es mucho más fácil calcular la probabilidad del complementario. Por ejemplo, ¿cuál es la probabilidad de que al lanzar 5 veces una moneda al aire salga alguna cara? Se podría calcular la probabilidad de que salga una, dos, tres, cuatro y cinco caras y sumar esos resultados, pero es más rápido calcular la probabilidad de que solo salgan cruces, que es $0.5^5 = 0.03124$, por lo que la probabilidad buscada es: $1-0,03124 = 0,96875$.
+A veces es mucho más fácil calcular la probabilidad del complementario. Por ejemplo, ¿cuál es la probabilidad de que al lanzar 5 veces una moneda al aire salga alguna cara? Se podría calcular la probabilidad de que salga una, dos, tres, cuatro y cinco caras y sumar esos resultados, pero es más rápido calcular la probabilidad de que solo salgan cruces, que es $0{,}5^5 = 0{,}03124$, por lo que la probabilidad buscada es: $1-0{,}03124 = 0{,}96875$.
 
-La probabilidad de que, siguiendo un cierto tratamiento, un enfermo se cure antes de un mes es del 10%. Si se aplica el tratamiento a un grupo de 10 enfermos, ¿cuál es la probabilidad de que alguno se cure antes de un mes? De forma análoga al ejemplo anterior, lo más fácil es calcular la probabilidad de que ninguno se cure: $0.9^{10}$ y el valor que buscamos será $1 - 0,9^{10} = 0.65$.
+La probabilidad de que, siguiendo un cierto tratamiento, un enfermo se cure antes de un mes es del 10%. Si se aplica el tratamiento a un grupo de 10 enfermos, ¿cuál es la probabilidad de que alguno se cure antes de un mes? De forma análoga al ejemplo anterior, lo más fácil es calcular la probabilidad de que ninguno se cure: $0{,}9^{10}$ y el valor que buscamos será $1 - 0{,}9^{10} = 0{,}65$.
 
 ::: callout-note
 ## El valor de la probabilidad
@@ -510,9 +508,9 @@ Supongamos que debemos construir muchos circuitos como el que hemos comentado y 
 
 Parece que si el objetivo es $I = 10\,A$ y tenemos $V = 100\,V$, recordando la ley de Ohm, deberemos pedir las resistencias de $R_n = V/I = 100V/10A = 10\,\Omega$, pero no es así. Para minimizar el número de defectos debemos pedir las resistencias con $R_n = 11\,\Omega$.
 
-El valor de $R$ que hace que circulen 7$\,A$ es $R = V/I = 100V/7A = 14.3\,\Omega$, y para que circulen 13$\,A$ debe ser: $R = V/I = 100V/13\,A = 7.7\,\Omega$. Si colocamos una resistencia de más de 14,3$\,\Omega$ pasarán menos de 7$\,A$ y el circuito será defectuoso. Por otro lado, si colocamos una de menos de 7,7$\,\Omega$ pasarán más de 13 $A$ y también será defectuoso. Debemos alejarnos de esos dos extremos y para ello lo mejor es pedir las resistencias con un valor nominal que esté en el centro de ese intervalo, es decir: $(7.7\,\Omega + 14.3\,\Omega)/2 = 11\,\Omega$.
+El valor de $R$ que hace que circulen 7$\,A$ es $R = V/I = 100V/7A = 14{,}3\,\Omega$, y para que circulen 13$\,A$ debe ser: $R = V/I = 100V/13\,A = 7{,}7\,\Omega$. Si colocamos una resistencia de más de 14{,}3$\,\Omega$ pasarán menos de 7$\,A$ y el circuito será defectuoso. Por otro lado, si colocamos una de menos de 7,7$\,\Omega$ pasarán más de 13 $A$ y también será defectuoso. Debemos alejarnos de esos dos extremos y para ello lo mejor es pedir las resistencias con un valor nominal que esté en el centro de ese intervalo, es decir: $(7{,}7\,\Omega + 14{,}3\,\Omega)/2 = 11\,\Omega$.
 
-![El valor de $R_n$ no debe ser de 10 sino de 11$\,\Omega$.](Figuras_04/f0407_circuito.png){#fig-circuito .fig-normal3 fig-align="center" width="90%"}
+![El valor de $R_n$ no debe ser de 10 sino de 11$\,\Omega$.](Figuras_04/f0407_circuito.png){#fig-circuito .fig-normal_0407 fig-align="center"}
 
 ## Apéndice 4.B: Esperanza matemática para reparto justo {.unnumbered}
 
@@ -530,15 +528,15 @@ Una solución podría ser que se lo quede todo el que va ganando, o que se lo re
 
 3.  La siguiente partida la gana B y a continuación vuelve a ganar B. En este caso acaban 2 a 3 y B gana el juego. La probabilidad de que esto ocurra también es: 0,5·0,5 = 0,25.
 
-![Posibles resultados si se siguiera jugando.](Figuras_04/f0408_partida.png){#fig-partida .fig-normal3 fig-align="center" width="85%"}
+![Posibles resultados si se siguiera jugando.](Figuras_04/f0408_partida.png){#fig-partida .fig-normal_0408 fig-align="center"}
 
 Por tanto, si pudieran seguir jugando, la probabilidad de que ganara A sería 0,75 (0,50 + 0,25), mientras que para B sería 0,25. Podemos considerar que el premio es una variable aleatoria que puede tomar solo dos valores: 0 y 40. Si pudieran seguir jugando, la esperanza matemática del premio para cada jugador sería:
 
 ```{=tex}
 \begin{equation*}
     \begin{split}
-        \text{para A}:\;\;\text{E}(P_A) &= 40 \cdot 0.75 + 0 \cdot 0.25 = 30 \\
-        \text{para B}:\;\;\text{E}(P_B) &= 0 \cdot 0.75 + 40 \cdot 0.25 = 10
+        \text{para A}:\;\;\text{E}(P_A) &= 40 \cdot 0{,}75 + 0 \cdot 0{,}25 = 30 \\
+        \text{para B}:\;\;\text{E}(P_B) &= 0 \cdot 0{,}75 + 40 \cdot 0{,}25 = 10
     \end{split}
 \end{equation*}
 ```
@@ -598,14 +596,14 @@ Para realizar los cálculos consideramos que un año tiene 365 días (ignoramos 
 <tbody>
   <tr>
     <td>2</td>
-    <td>$$Q(2) = \frac{365}{365} \cdot \frac{364}{365} =  0.9973$$</td>
+    <td>$$Q(2) = \frac{365}{365} \cdot \frac{364}{365} =  0{,}9973$$</td>
 	</tr>
   <tr>
   <td></td> <td>La primera ha podido nacer cualquier día del año (365 casos favorables sobre 365 casos posibles) y la segunda también cualquier día menos el día que nació la primera.</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>$$Q(3) = \frac{365}{365} \cdot \frac{364}{365} \cdot \frac{363}{365} =  0.9918$$</td>
+    <td>$$Q(3) = \frac{365}{365} \cdot \frac{364}{365} \cdot \frac{363}{365} =  0{,}9918$$</td>
   </tr>
   <tr>
     <td></td>
@@ -614,7 +612,7 @@ Para realizar los cálculos consideramos que un año tiene 365 días (ignoramos 
 
   <tr>
     <td>4</td>
-    <td>$$Q(4) = \frac{365}{365} \cdot \frac{364}{365} \cdot \frac{363}{365} \cdot \frac{362}{365} =  0.9836$$</td>
+    <td>$$Q(4) = \frac{365}{365} \cdot \frac{364}{365} \cdot \frac{363}{365} \cdot \frac{362}{365} =  0{,}9836$$</td>
   </tr>
 
   <tr>
@@ -629,7 +627,7 @@ Para realizar los cálculos consideramos que un año tiene 365 días (ignoramos 
 
   <tr>
     <td>30</td>
-    <td>$$Q(30) = \frac{365}{365} \cdot \frac{364}{365} \cdot \frac{363}{365} \cdot \frac{362}{365} \cdots \frac{336}{365} =  0.2937$$</td>
+    <td>$$Q(30) = \frac{365}{365} \cdot \frac{364}{365} \cdot \frac{363}{365} \cdot \frac{362}{365} \cdots \frac{336}{365} =  0{,}2937$$</td>
 	</tr>
 
 </tbody>
@@ -637,10 +635,10 @@ Para realizar los cálculos consideramos que un año tiene 365 días (ignoramos 
 </table>
 </div>
 ```
-En un grupo de 30 personas solo se pueden dar dos situaciones: todos han nacido en días diferentes o, como mínimo, dos han nacido el mismo día, no pueden haber situaciones intermedias. Por tanto, si la probabilidad de que todos hayan nacido en días diferentes es $Q(30) = 0.2937$, la de que dos o más hayan nacido el mismo día será: $$ P(30) = 1- Q(30) = 1-0.2937 = 0.7063 $$
+En un grupo de 30 personas solo se pueden dar dos situaciones: todos han nacido en días diferentes o, como mínimo, dos han nacido el mismo día, no pueden haber situaciones intermedias. Por tanto, si la probabilidad de que todos hayan nacido en días diferentes es $Q(30) = 0.2937$, la de que dos o más hayan nacido el mismo día será: $$ P(30) = 1- Q(30) = 1-0{,}2937 = 0{,}7063 $$
 
 Es inmediato deducir que la expresión general para $P(n)$ es: $$P(n) = 1-Q(n) = 1- \frac{365!}{365^n(365-n)!} $$
 
 Con ayuda de una hoja de cálculo se puede contruir la curva que relaciona la probabilidad de coincidencia con el número de personas ([@fig-probabilidadCoincidencia]).
 
-![Construcción de la curva que relaciona la probabilidad de coincidencia en la fecha del cumpleaños y el número de personas en un grupo.](Figuras_04/f0409_probabilidadCoincidencia.png){#fig-probabilidadCoincidencia .fig-normal3 fig-align="center" width="90%"}
+![Construcción de la curva que relaciona la probabilidad de coincidencia en la fecha del cumpleaños y el número de personas en un grupo.](Figuras_04/f0409_probabilidadCoincidencia.png){#fig-probabilidadCoincidencia .fig-normal_0409 fig-align="center"}

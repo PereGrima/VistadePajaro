@@ -104,6 +104,17 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="figuras.css">
+<link rel="stylesheet" href="figuras_02.css">
+<link rel="stylesheet" href="figuras_03.css">
+<link rel="stylesheet" href="figuras_04.css">
+<link rel="stylesheet" href="figuras_05.css">
+<link rel="stylesheet" href="figuras_06.css">
+<link rel="stylesheet" href="figuras_07.css">
+<link rel="stylesheet" href="figuras_08.css">
+<link rel="stylesheet" href="figuras_09.css">
+<link rel="stylesheet" href="figuras_10.css">
+<link rel="stylesheet" href="figuras_11.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -376,10 +387,10 @@ window.Quarto = {
 <p>La fórmula que aparece en los libros de física sobre el alcance de un tiro parabólico es un modelo determinista. Dando valores a las variables que intervienen (ángulo, velocidad inicial) se obtiene el valor exacto del alcance. Estos modelos pertenecen al ámbito de la teoría o son una simplificación de la realidad. En la práctica intervienen otras variables no controladas, o no somos capaces de fijar las variables que intervienen en el valor exacto que deben tener, por lo que el resultado siempre está afectado por una cierta incertidumbre.</p>
 <p>En los modelos estadísticos esa incertidumbre está explícita. Sabemos que el volumen de madera que se puede obtener de un árbol depende de su altura y del diámetro del tronco, pero dados los valores de estas variables no podemos determinar “exactamente” el volumen de madera que se va a obtener. A partir de los volúmenes y de las características de otros árboles similares podemos crear un modelo estadístico.</p>
 <p>En un modelo estadístico entendemos que la ecuación obtenida indica –con mayor o menor precisión– la zona en que se encuentra la respuesta para un determinado valor de la variable regresora. Si tenemos <span class="math inline">\(n\)</span> puntos, el modelo de regresión lineal simple lo escribimos de la forma: <span class="math display">\[y_i = b_0 + b_1 x_i + e_i \quad \text{para} \quad i = 1, 2, \dots, n\]</span> Donde el verdadero valor de la respuesta, <span class="math inline">\(y_i\)</span>, es igual al punto sobre la recta más un valor <span class="math inline">\(e_i\)</span> que llamamos residuo y que no podemos prever. Al punto sobre la recta le llamamos “valor estimado” y para distinguirlo del valor real le colocamos una especie de gorro encima: <span class="math inline">\(\hat{y}_i\)</span>. Por tanto, también podemos escribir: <span class="math display">\[\hat{y}_i = b_0 + b_1 x_i \quad \text{para} \quad i = 1, 2, \cdots, n\]</span> La <a href="#fig-resiRecta" class="quarto-xref">Figura&nbsp;<span>11.1</span></a> (izquierda) contiene un diagrama bivariante con 6 puntos y su recta ajustada, mostrando el residuo correspondiente a cada punto. A la derecha tenemos la ecuación de la recta y la identificación de sus parámetros.</p>
-<div id="fig-resiRecta" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-resiRecta" class="fig-normal_1101 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-resiRecta-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_11/f1101_resiRecta.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_11/f1101_resiRecta.png" class="fig-normal_1101 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-resiRecta-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;11.1: Para cada punto se indica su residuo. A la derecha, ecuación de la recta.
@@ -395,10 +406,10 @@ Figura&nbsp;11.1: Para cada punto se indica su residuo. A la derecha, ecuación 
 <h3 class="unnumbered anchored" data-anchor-id="a-ojo">A ojo</h3>
 <p>Se traza la recta directamente sobre el papel o se identifican dos puntos de paso y a partir de ellos se calculan los coeficientes del modelo.</p>
 <p>A pesar de sus evidentes limitaciones, si solo se trata de tener la recta no es un método tan malo como parece. Con un poco de práctica el ajuste no será muy distinto del “perfecto” y no se cometerán errores de bulto debido a la presencia de valores anómalos, cosa que sí puede ocurrir si se tratan los datos de forma automática sin mirarlos.</p>
-<div id="fig-regresionAOjo" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-regresionAOjo" class="fig-normal_1102 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-regresionAOjo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_11/f1102_regresionAOjo.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_11/f1102_regresionAOjo.png" class="fig-normal_1102 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-regresionAOjo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;11.2: Ajuste a ojo y el que minimiza la suma de los cuadrados de los residuos.
@@ -441,11 +452,11 @@ Figura&nbsp;11.2: Ajuste a ojo y el que minimiza la suma de los cuadrados de los
 </section>
 <section id="método-de-ishikawa" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="método-de-ishikawa">Método de Ishikawa</h3>
-<p>Se identifica el primer y el tercer cuartil de los valores de <span class="math inline">\(X\)</span> <span class="math inline">\((X_{Q1}\)</span> y <span class="math inline">\(X_{Q3})\)</span>, e igual para los valores de <span class="math inline">\(Y\)</span> <span class="math inline">\((Y_{Q1}\)</span> y <span class="math inline">\(Y_{Q3})\)</span>. Se traza la recta por los puntos <span class="math inline">\((X_{Q1}\)</span>,;<span class="math inline">\(Y_{Q1})\)</span> y <span class="math inline">\((X_{Q3}\)</span>,;<span class="math inline">\(Y_{Q3})\)</span>. Se obtiene una recta muy razonable sin necesidad de realizar cálculos ni de aplicar fórmulas de las que se desconoce su lógica.</p>
-<div id="fig-regresionIshikawa" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<p>Se identifica el primer y el tercer cuartil de los valores de <span class="math inline">\(X\)</span> <span class="math inline">\((X_{Q1} \;\, y \;\, X_{Q3})\)</span>, e igual para los valores de <span class="math inline">\(Y\)</span> <span class="math inline">\((Y_{Q1} \;\, y \;\, Y_{Q3})\)</span>. Se traza la recta por los puntos <span class="math inline">\((X_{Q1},\;Y_{Q1})\)</span> y <span class="math inline">\((X_{Q3},\;Y_{Q3})\)</span>. Se obtiene una recta muy razonable sin necesidad de realizar cálculos ni de aplicar fórmulas de las que se desconoce su lógica.</p>
+<div id="fig-regresionIshikawa" class="fig-normal_1103 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-regresionIshikawa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_11/f1103_regresionIshikawa.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_11/f1103_regresionIshikawa.png" class="fig-normal_1103 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-regresionIshikawa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;11.3: Ajuste por el método de Ishikawa y el que minimiza la suma de los cuadrados de los residuos.
@@ -501,11 +512,11 @@ Figura&nbsp;11.3: Ajuste por el método de Ishikawa y el que minimiza la suma de
 <section id="haciendo-que-la-suma-de-los-residuos-sea-igual-a-cero" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="haciendo-que-la-suma-de-los-residuos-sea-igual-a-cero">Haciendo que la suma de los residuos sea igual a cero</h3>
 <p>Se trata de obtener los valores de <span class="math inline">\(b_0\)</span> y <span class="math inline">\(b_1\)</span> que cumplen la expresión: <span class="math display">\[\sum_{i=1}^n \left[ Y_i - (b_0 + b_1 X_i) \right]= 0\]</span> que es equivalente a: <span class="math inline">\(n\bar{Y} - nb_0 - b_1 n \bar{X} = 0\)</span>. Por tanto, con cualquier par de valores <span class="math inline">\(b_0\)</span> y <span class="math inline">\(b_1\)</span> que verifiquen la expresión <span class="math inline">\(\bar{Y} = b_0 + b_1 \bar{X}\)</span>, es decir, con cualquier recta que pase por (<span class="math inline">\(\bar{X}\)</span>, <span class="math inline">\(\bar{Y}\)</span>) tendremos una suma de residuos igual a cero.</p>
-<p>Que haya infinitas rectas que cumplan esa condición es una mala señal, porque seguro que no todas son adecuadas. Para los valores representados en la <a href="#fig-residuosSuma" class="quarto-xref">Figura&nbsp;<span>11.4</span></a> tenemos que <span class="math inline">\(\bar{X}= 6\)</span> y <span class="math inline">\(\bar{Y}= 9\)</span>. Rectas que hacen que la suma de los residuos sea igual a cero son, por ejemplo, la que tiene coeficientes <span class="math inline">\(b_0=9\)</span> y <span class="math inline">\(b_1=0\)</span>, es decir: <span class="math inline">\(Y = 9\)</span>, o también <span class="math inline">\(b_0 = 12\)</span> y <span class="math inline">\(b_1 = -0.5\)</span>, es decir: <span class="math inline">\(Y = 12 -0.5X\)</span> y ambas son claramente muy malos ajustes. <br></p>
-<div id="fig-residuosSuma" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<p>Que haya infinitas rectas que cumplan esa condición es una mala señal, porque seguro que no todas son adecuadas. Para los valores representados en la <a href="#fig-residuosSuma" class="quarto-xref">Figura&nbsp;<span>11.4</span></a> tenemos que <span class="math inline">\(\bar{X}= 6\;\)</span> y <span class="math inline">\(\;\bar{Y}= 9\)</span>. Rectas que hacen que la suma de los residuos sea igual a cero son, por ejemplo, la que tiene coeficientes <span class="math inline">\(b_0=9\)</span> y <span class="math inline">\(b_1=0\)</span>, es decir: <span class="math inline">\(Y = 9\)</span>, o también <span class="math inline">\(b_0 = 12\)</span> y <span class="math inline">\(b_1 = -0{,}5\)</span>, es decir: <span class="math inline">\(Y = 12 -0{,}5X\)</span> y ambas son claramente muy malos ajustes. <br></p>
+<div id="fig-residuosSuma" class="fig-normal_1104 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-residuosSuma-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_11/f1104_residuosSuma.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_11/f1104_residuosSuma.png" class="fig-normal_1104 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-residuosSuma-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;11.4: Dos ajustes -claramente muy malos- con suma de residuos igual a cero.
@@ -548,10 +559,10 @@ Figura&nbsp;11.4: Dos ajustes -claramente muy malos- con suma de residuos igual 
 <p>Se trata de minimizar: <span class="math display">\[S=\sum_{i=1}^n \left| Y_i - (b_0 + b_1 X_i) \right|\]</span></p>
 <p>Puede no tener solución única, pero los resultados posibles son mucho más razonables que en el caso anterior. Un problema específico de este caso es que no existen expresiones analíticas para los coeficientes debido a las dificultades en el manejo de la función “valor absoluto”.</p>
 <p>La <a href="#fig-residuosValorAbsoluto" class="quarto-xref">Figura&nbsp;<span>11.5</span></a> muestra dos diagramas con los mismos 4 puntos y las rectas que cumplen el criterio establecido, en todas ellas la suma del valor absoluto de los residuos es igual a 2. La línea azul, que es la misma en los dos diagramas, es la que también minimiza la suma de los cuadrados de los residuos.</p>
-<div id="fig-residuosValorAbsoluto" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-residuosValorAbsoluto" class="fig-normal_1105 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-residuosValorAbsoluto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_11/f1105_residuosValorAbsoluto.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+<img src="Figuras_11/f1105_residuosValorAbsoluto.png" class="fig-normal_1105 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-residuosValorAbsoluto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;11.5: Posibles rectas que minimizan la suma de los residuos en valor absoluto.
@@ -598,10 +609,10 @@ Figura&nbsp;11.5: Posibles rectas que minimizan la suma de los residuos en valor
 \end{equation*}\]</span>
 <p>En vez de decir que el criterio de ajuste ha sido “minimizar la suma de los cuadrados de los residuos”, simplemente decimos que hemos ajustado por “mínimos cuadrados”. Este es el método usado en la inmensa mayoría de los casos, produce un ajuste equilibrado de la nube de puntos y está en perfecta sintonía con otras técnicas y medidas que se construyen con criterios similares. Un inconveniente de este método es que el modelo obtenido es sensible a la presencia de valores anómalos, cosa que no ocurre si se minimiza la suma de valores absolutos.</p>
 <p>En la primera fila de la <a href="#fig-residuosMinimosCuadrados" class="quarto-xref">Figura&nbsp;<span>11.6</span></a> tenemos una situación típica en la que el ajuste por mínimos cuadrados da un mejor resultado que minimizando la suma del valor absoluto. Sin embargo, en la segunda fila tenemos un caso de puntos perfectamente alineados excepto uno que muy probablemente sería un valor anómalo. Si minimizamos el valor absoluto de los residuos, el ajuste ignora el valor anómalo mientras que ajustando por mínimos cuadrados el valor anómalo tiene una notable influencia sobre la recta ajustada.</p>
-<div id="fig-residuosMinimosCuadrados" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-residuosMinimosCuadrados" class="fig-normal_1106 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-residuosMinimosCuadrados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_11/f1106_residuosMinimosCuadrados.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+<img src="Figuras_11/f1106_residuosMinimosCuadrados.png" class="fig-normal_1106 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-residuosMinimosCuadrados-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;11.6: Ajustes obtenidos minimizando la suma de valores absolutos y la suma de los cuadrados de los residuos.
@@ -648,10 +659,10 @@ Figura&nbsp;11.6: Ajustes obtenidos minimizando la suma de valores absolutos y l
 <h3 class="unnumbered anchored" data-anchor-id="sin-fórmulas">Sin fórmulas</h3>
 <p>Realizamos a ojo una primera estimación del valor de los coeficientes. A continuación, mediante un pequeño programa –o también usando una hoja de cálculo–, hacemos un barrido de los valores de <span class="math inline">\(b_0\)</span> y <span class="math inline">\(b_1\)</span> en torno a los estimados, identificando el par que minimiza la suma de los cuadrados de los residuos.</p>
 <p>Vayamos al diagrama de la <a href="#fig-coeficientesSinFormulas" class="quarto-xref">Figura&nbsp;<span>11.7</span></a> (izquierda) que ya habíamos visto en las figuras <a href="#fig-regresionAOjo" class="quarto-xref">Figura&nbsp;<span>11.2</span></a> y <a href="#fig-regresionIshikawa" class="quarto-xref">Figura&nbsp;<span>11.3</span></a>. La recta ajustada a ojo pasa por los puntos (-4,75; 0) y (5,75; 60) por lo que sus coeficientes son: <span class="math inline">\(b_1\)</span> = 5,71 y <span class="math inline">\(b_0\)</span> = 27,14. Sería mucha casualidad que esos fueran los valores exactos que estamos buscando, pero no andarán muy lejos. Vamos a crear una malla de valores de <span class="math inline">\(b_0\)</span> y <span class="math inline">\(b_1\)</span>. Los valores de <span class="math inline">\(b_1\)</span> variarán de 2 a 8 con incrementos de 0,1 y para cada uno de esos, los de <span class="math inline">\(b_0\)</span> irán de 20 a 35 también en saltos de 0,1. A cada combinación de esos dos valores corresponde una recta, y a cada recta una suma de los cuadrados de los residuos. El par de valores que minimizan esa suma de cuadrados son: <span class="math inline">\(b_0\)</span> = 27,0 y <span class="math inline">\(b_1\)</span> = 4,9.</p>
-<div id="fig-coeficientesSinFormulas" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-coeficientesSinFormulas" class="fig-normal_1107 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-coeficientesSinFormulas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_11/f1107_coeficientesSinFormulas.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_11/f1107_coeficientesSinFormulas.png" class="fig-normal_1107 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-coeficientesSinFormulas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;11.7: Recta ajustada a ojo (izquierda) y suma de los cuadrados de los residuos para cada par de valores <span class="math inline">\(b_0\)</span> y <span class="math inline">\(b_1\)</span>. En rojo, valores que la minimizan (derecha).
@@ -662,8 +673,8 @@ Figura&nbsp;11.7: Recta ajustada a ojo (izquierda) y suma de los cuadrados de lo
 </section>
 <section id="usando-fórmulas" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="usando-fórmulas">Usando fórmulas</h3>
-<p>En el diagrama que representa la relación entre <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> cada punto <span class="math inline">\(i\)</span> puede ser identificado por sus coordenadas <span class="math inline">\((x_i, y_i)\)</span> con <span class="math inline">\(1 \leq i \leq n\)</span> siendo <span class="math inline">\(n\)</span> el número total de puntos.</p>
-<p>Cada uno de los puntos tiene un residuo asociado <span class="math inline">\(e_i\)</span> y ese residuo es la diferencia entre el valor real de <span class="math inline">\(y\)</span>, es decir, <span class="math inline">\(y_i\)</span> y su valor estimado <span class="math inline">\(\hat{y}_i\)</span>, que es el que estará sobre la recta y será igual a <span class="math inline">\(b_0 + b_1 x_i\)</span>. Por tanto, el valor del residuo asociado al punto <span class="math inline">\(i\)</span> lo podemos escribir de la forma: <span class="math display">\[e_i = y_i - \left( b_0 + b_1 x_i \right)\]</span> y la suma de los cuadrados de los residuos, <span class="math inline">\(S\)</span>, será: <span class="math display">\[S = \sum_{i=1}^n \left(y_i - b_0 - b_1 x_i \right )^2\]</span> Tanto los valores de <span class="math inline">\(y_i\)</span> como los de <span class="math inline">\(x_i\)</span> vienen dados. La suma de cuadrados <span class="math inline">\(S\)</span> es función de los valores de <span class="math inline">\(b_0\)</span> y de <span class="math inline">\(b_1\)</span>. Se trata de hallar los valores de <span class="math inline">\(b_0\)</span> y de <span class="math inline">\(b_1\)</span> que minimizan esa suma de cuadrados. El mínimo lo tendremos en el punto en que la derivada de <span class="math inline">\(S \left(b_0, b_1 \right )\)</span> respecto a <span class="math inline">\(b_0\)</span> y respecto a <span class="math inline">\(b_1\)</span> es igual a cero. Seguro que es un mínimo porque el máximo no está definido.</p>
+<p>En el diagrama que representa la relación entre <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> cada punto <span class="math inline">\(i\)</span> puede ser identificado por sus coordenadas <span class="math inline">\((x_i, \, y_i)\)</span> con <span class="math inline">\(1 \leq i \leq n\)</span> siendo <span class="math inline">\(n\)</span> el número total de puntos.</p>
+<p>Cada uno de los puntos tiene un residuo asociado <span class="math inline">\(e_i\)</span> y ese residuo es la diferencia entre el valor real de <span class="math inline">\(y\)</span>, es decir, <span class="math inline">\(y_i\)</span> y su valor estimado <span class="math inline">\(\hat{y}_i\)</span>, que es el que estará sobre la recta y será igual a <span class="math inline">\(b_0 + b_1 x_i\)</span>. Por tanto, el valor del residuo asociado al punto <span class="math inline">\(i\)</span> lo podemos escribir de la forma: <span class="math display">\[e_i = y_i - \left( b_0 + b_1 x_i \right)\]</span> y la suma de los cuadrados de los residuos, <span class="math inline">\(S\)</span>, será: <span class="math display">\[S = \sum_{i=1}^n \left(y_i - b_0 - b_1 x_i \right )^2\]</span> Tanto los valores de <span class="math inline">\(y_i\)</span> como los de <span class="math inline">\(x_i\)</span> vienen dados. La suma de cuadrados <span class="math inline">\(S\)</span> es función de los valores de <span class="math inline">\(b_0\)</span> y de <span class="math inline">\(b_1\)</span>. Se trata de hallar los valores de <span class="math inline">\(b_0\)</span> y de <span class="math inline">\(b_1\)</span> que minimizan esa suma de cuadrados. El mínimo lo tendremos en el punto en que la derivada de <span class="math inline">\(S \left(b_0,\, b_1 \right )\)</span> respecto a <span class="math inline">\(b_0\)</span> y respecto a <span class="math inline">\(b_1\)</span> es igual a cero. Seguro que es un mínimo porque el máximo no está definido.</p>
 <p><span class="math display">\[\frac{\partial S}{\partial b_0} = -2 \sum_{i=1}^n \left(y_i - b_0 - b_1 x_i \right )\]</span></p>
 <p><span class="math display">\[\frac{\partial S}{\partial b_1} = -2 \sum_{i=1}^n \left(y_i - b_0 - b_1 x_i \right ) x_i\]</span> Igualando a cero estas expresiones:</p>
 <p><span id="eq-11.1"><span class="math display">\[\sum_{i=1}^n y_i - nb_0 - b_1 \sum_{i=1}^n x_i = 0 \tag{11.1}\]</span></span></p>
@@ -693,7 +704,7 @@ Figura&nbsp;11.7: Recta ajustada a ojo (izquierda) y suma de los cuadrados de lo
 <p><span id="eq-11.5"><span class="math display">\[b_1 = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sum (x_i - \bar{x})^2} \tag{11.5}\]</span></span></p>
 <p>A partir de la ecuación <a href="#eq-11.5" class="quarto-xref"><span>11.5</span></a> y recordando las expresiones de la covarianza y del coeficiente de correlación, llegamos a una expresión que también se ve con frecuencia en los libros de texto, seguramente porque una calculadora sencilla da directamente los tres valores que intervienen:</p>
 <p><span id="eq-11.6"><span class="math display">\[b_1 = \frac{Cov(XY)}{s_X^2} = \frac{r_{XY} s_X s_Y}{s_X^2} = r_{XY} \frac{s_Y}{s_X} \tag{11.6}\]</span></span></p>
-<p>Calculando los coeficientes que corresponden a los datos de la <a href="#fig-coeficientesSinFormulas" class="quarto-xref">Figura&nbsp;<span>11.7</span></a> se obtiene: <span id="eq-11.7"><span class="math display">\[b_0 = 26,9615 \qquad  \qquad b_1 = 4,8616 \tag{11.7}\]</span></span></p>
+<p>Calculando los coeficientes que corresponden a los datos de la <a href="#fig-coeficientesSinFormulas" class="quarto-xref">Figura&nbsp;<span>11.7</span></a> se obtiene: <span id="eq-11.7"><span class="math display">\[b_0 = 26{,}9615 \qquad  \qquad b_1 = 4{,}8616 \tag{11.7}\]</span></span></p>
 <p>Ahora sí, con todos los decimales que queramos, aunque dar más decimales de los que tienen los datos es añadir números que no aportan ninguna información, dan una falsa sensación de precisión y complican la lectura del resultado.</p>
 <div style="height: 1px;">
 
@@ -716,10 +727,10 @@ Figura&nbsp;11.7: Recta ajustada a ojo (izquierda) y suma de los cuadrados de lo
 <section id="sec-calidadAjuste" class="level2" data-number="11.4">
 <h2 data-number="11.4" class="anchored" data-anchor-id="sec-calidadAjuste"><span class="header-section-number">11.4</span> Calidad del ajuste</h2>
 <p>El gráfico de la izquierda de la <a href="#fig-ArbolMano" class="quarto-xref">Figura&nbsp;<span>11.8</span></a> muestra la relación entre la longitud de la circunferencia (<span class="math inline">\(X\)</span>) de los troncos de un determinado tipo de árbol y el volumen de madera (<span class="math inline">\(Y\)</span>) que se puede obtener de ellos<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Se observa que a más circunferencia mayor volumen de madera, tal como era de esperar, y la ecuación de la recta ajustada es útil para estimar cuánta madera se obtendrá de un tronco de determinado diámetro. Sin embargo, el gráfico de la derecha se ha realizado con los datos de un estudio<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> donde se analiza la relación entre la edad al morir y la longitud de cierta línea de la mano, a partir de una muestra de 50 personas fallecidas. A la vista del diagrama queda claro que no hay ninguna relación entre ambas variables. En este caso el modelo ajustado no sirve para nada. Pero los dos modelos tienen el mismo aspecto y solo a la vista del valor de sus coeficientes es imposible saber cuál de los dos es útil.</p>
-<div id="fig-ArbolMano" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-ArbolMano" class="fig-normal_1108 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ArbolMano-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_11/f1108_ArbolMano.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_11/f1108_ArbolMano.png" class="fig-normal_1108 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ArbolMano-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;11.8: Relación muy clara y relación inexistente, situaciones que no pueden distinguirse solo a la vista del modelo ajustado.
@@ -731,7 +742,7 @@ Figura&nbsp;11.8: Relación muy clara y relación inexistente, situaciones que n
 <p>A continuación calculamos la suma de los cuadrados de los residuos correspondientes a nuestra recta ajustada (la que minimiza la suma de los cuadrados de los residuos) y le llamamos <span class="math inline">\(Q_R\)</span>. Cuanto mejor sea el ajuste menor será el valor de <span class="math inline">\(Q_R\)</span> y mayor la diferencia entre <span class="math inline">\(Q_Y\)</span> y <span class="math inline">\(Q_R\)</span>.</p>
 <p>El valor de <span class="math inline">\(R^2\)</span> es igual a la proporción de <span class="math inline">\(Q_Y\)</span> explicada por <span class="math inline">\(X\)</span>, es decir, la proporción en que disminuye <span class="math inline">\(Q_Y\)</span> gracias a la introducción de <span class="math inline">\(X\)</span> como variable explicativa, es decir: <span class="math display">\[ R^2 = \frac{Q_Y - Q_R}{Q_Y} \]</span></p>
 <p>Veamos este cálculo en un ejemplo con datos sencillos. En la <a href="#fig-R2" class="quarto-xref">Figura&nbsp;<span>11.9</span></a> tenemos 5 puntos que podrían representar la relación entre el peso y la estatura de 5 individuos. Si, ignorando la información aportada por la estatura, siempre damos una estimación del peso igual a su valor medio, será como ajustar a una recta horizontal y tendremos una suma de los cuadrados de los residuos <span class="math inline">\(Q_Y = 56\)</span>. Sin embargo, si utilizamos la información que aporta la estatura y realizamos el ajuste minimizando la suma de los cuadrados de los residuos tenemos <span class="math inline">\(Q_R = 16\)</span>.</p>
-<p>Hemos reducido la suma de los cuadrados de los residuos de 56 a 16, por tanto: <span class="math display">\[R^2 = \frac{Q_Y - Q_R}{Q_Y} = \frac{56 - 16}{56} = 0.7143\]</span> Normalmente nos referimos a este valor como un porcentaje. En este caso sería el 71,43 %. En los ejemplos de la <a href="#fig-ArbolMano" class="quarto-xref">Figura&nbsp;<span>11.8</span></a> estos valores son del 93,5 % (volumen de madera) y 1,5 % (edad al morir).</p>
+<p>Hemos reducido la suma de los cuadrados de los residuos de 56 a 16, por tanto: <span class="math display">\[R^2 = \frac{Q_Y - Q_R}{Q_Y} = \frac{56 - 16}{56} = 0{,}7143\]</span> Normalmente nos referimos a este valor como un porcentaje. En este caso sería el 71,43 %. En los ejemplos de la <a href="#fig-ArbolMano" class="quarto-xref">Figura&nbsp;<span>11.8</span></a> estos valores son del 93,5 % (volumen de madera) y 1,5 % (edad al morir).</p>
 <div style="height: 1px;">
 
 </div>
@@ -751,10 +762,10 @@ Figura&nbsp;11.8: Relación muy clara y relación inexistente, situaciones que n
 <div style="height: 1px;">
 
 </div>
-<div id="fig-R2" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-R2" class="fig-normal_1109 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-R2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_11/f1109_R2.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_11/f1109_R2.png" class="fig-normal_1109 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-R2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;11.9: Aprovechando la información aportada por la estatura disminuimos la suma de los cuadrados de los residuos.
@@ -766,11 +777,11 @@ Figura&nbsp;11.9: Aprovechando la información aportada por la estatura disminui
 <h2 data-number="11.5" class="anchored" data-anchor-id="análisis-de-los-residuos"><span class="header-section-number">11.5</span> Análisis de los residuos</h2>
 <p>Antes de dar por bueno un ajuste conviene examinar el comportamiento de los residuos. Igual que en el lenguaje habitual, los residuos son aquello que se descarta, lo que no se aprovecha; por eso debemos asegurarnos de que no contienen información relevante.</p>
 <p>Los residuos se deben comportar de manera aleatoria, sin que se pueda apreciar en ellos ningún tipo de patrón o de comportamiento predecible. Si muestran algún tipo de regularidad, significa que aún contienen información, y esa información debe incorporarse al modelo en lugar de desecharse.</p>
-<p>Una forma habitual de analizar el comportamiento de los residuos es representarlos gráficamente en un diagrama bivariante frente a los valores previstos. En la <a href="#fig-analisisResiduos" class="quarto-xref">Figura&nbsp;<span>11.10</span></a> se muestra la relación entre dos variables, <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span>, que a primera vista puede parecer lineal y, de hecho, si se ajusta a una recta se obtiene un coeficiente de determinación muy alto (<span class="math inline">\(R^2=99.35\%)\)</span>. Sin embargo, en el gráfico de residuos frente a valores previstos vemos que los residuos tienen un comportamiento que no es aleatorio: para valores previstos que están en los extremos de su rango de variación, los residuos son positivos, mientras que en los valores centrales son negativos. Realmente, esto ya se ve mirando con detalle los puntos con la recta ajustada. Los puntos muestran una cierta curvatura que no capta el modelo lineal. Esa discrepancia entre el comportamiento de los puntos y la recta ajustada se ve de una forma mucho más clara en el gráfico de residuos en función de los valores sobre la recta.</p>
-<div id="fig-analisisResiduos" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<p>Una forma habitual de analizar el comportamiento de los residuos es representarlos gráficamente en un diagrama bivariante frente a los valores previstos. En la <a href="#fig-analisisResiduos" class="quarto-xref">Figura&nbsp;<span>11.10</span></a> se muestra la relación entre dos variables, <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span>, que a primera vista puede parecer lineal y, de hecho, si se ajusta a una recta se obtiene un coeficiente de determinación muy alto (<span class="math inline">\(R^2=99{,}35\%)\)</span>. Sin embargo, en el gráfico de residuos frente a valores previstos vemos que los residuos tienen un comportamiento que no es aleatorio: para valores previstos que están en los extremos de su rango de variación, los residuos son positivos, mientras que en los valores centrales son negativos. Realmente, esto ya se ve mirando con detalle los puntos con la recta ajustada. Los puntos muestran una cierta curvatura que no capta el modelo lineal. Esa discrepancia entre el comportamiento de los puntos y la recta ajustada se ve de una forma mucho más clara en el gráfico de residuos en función de los valores sobre la recta.</p>
+<div id="fig-analisisResiduos" class="fig-normal_1110 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-analisisResiduos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_11/f1110_analisisResiduos.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_11/f1110_analisisResiduos.png" class="fig-normal_1110 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-analisisResiduos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;11.10: El gráfico de residuos frente a valores previstos pone de manifiesto de forma clara que la relación entre <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> no es lineal.
@@ -778,11 +789,11 @@ Figura&nbsp;11.10: El gráfico de residuos frente a valores previstos pone de ma
 </figure>
 </div>
 <p>Lo que esperamos es que los puntos se distribuyan aleatoriamente en torno a la recta, no que en una zona estén por encima y en otra por debajo. En la <a href="#fig-residuosModCuadra" class="quarto-xref">Figura&nbsp;<span>11.11</span></a> los puntos se han ajustado a un modelo cuadrático. En este caso, la línea ajustada pasa por en medio de los puntos y el gráfico de residuos frente a valores previstos no muestra ningún patrón previsible.</p>
-<p>Con este modelo cuadrático el ajuste mejora ligeramente —ahora <span class="math inline">\(R^2=99.79\%\)</span>—, pero lo más importante es que hemos identificado el tipo de relación existente entre las variables analizadas.</p>
-<div id="fig-residuosModCuadra" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<p>Con este modelo cuadrático el ajuste mejora ligeramente —ahora <span class="math inline">\(R^2=99{,}79\%\)</span>—, pero lo más importante es que hemos identificado el tipo de relación existente entre las variables analizadas.</p>
+<div id="fig-residuosModCuadra" class="fig-normal_1111 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-residuosModCuadra-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_11/f1111_residuosModCuadra.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_11/f1111_residuosModCuadra.png" class="fig-normal_1111 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-residuosModCuadra-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;11.11: Ajuste a un modelo cuadrático y gráfico de residuos frente a valores previstos.
@@ -793,12 +804,12 @@ Figura&nbsp;11.11: Ajuste a un modelo cuadrático y gráfico de residuos frente 
 <section id="relación-no-lineal-entre-x-e-y" class="level2" data-number="11.6">
 <h2 data-number="11.6" class="anchored" data-anchor-id="relación-no-lineal-entre-x-e-y"><span class="header-section-number">11.6</span> Relación no lineal entre <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span></h2>
 <p>Si a la vista del diagrama bivariante se observa que la relación entre <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> no es lineal, se puede utilizar el aspecto de la nube de puntos y el conocimiento del fenómeno que se estudia para plantear un modelo que se ajuste a los datos. Los modelos polinómicos de segundo grado son muy versátiles y pueden ser una buena opción. También se puede ajustar a modelos linealizables transformando los valores de <span class="math inline">\(X\)</span>, los de <span class="math inline">\(Y\)</span>, o ambos. Si nuestros datos se ajustan a una función del tipo <span class="math inline">\(y = \beta_0 e^{\beta_1 x}\)</span>, podemos realizar el cambio <span class="math inline">\(y' = \ln y\)</span> obteniendo el modelo lineal: <span class="math inline">\(y' = \ln \beta_0 + \beta_1 x\)</span> a partir del cual se deducen de forma inmediata los coeficientes del modelo original<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p>
-<p>La <a href="#fig-molinoViento" class="quarto-xref">Figura&nbsp;<span>11.12</span></a> (izquierda) muestra los datos de producción de electricidad de un aerogenerador según sea la velocidad del viento<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>. Se observa una relación no lineal ya que cuando la velocidad del viento es baja, pequeños incrementos en la velocidad tienen un impacto importante en la producción de electricidad, mientras que para velocidades altas la producción tiende a estabilizarse. Ajustando a una parábola se obtiene <span class="math inline">\(y = -1,156 + 0,7229x -0,03812x^2\)</span> con un coeficiente de determinación <span class="math inline">\(R^2 = 96,8\%\)</span>, lo cual no está nada mal.</p>
-<p>Otra opción es estudiar la producción de electricidad en función de la inversa de la velocidad del viento (figura de la derecha). Creamos la variable <span class="math inline">\(x' = 1/x\)</span> y obtenemos el ajuste: <span class="math inline">\(y = 2,979 - 6,935x'\)</span>, es decir: <span class="math inline">\(y = 2.979 - 6.935/x\)</span>, con un <span class="math inline">\(R^2 = 97.9\%\)</span>, que es también un valor excelente con un modelo más compacto. Trabajar con la inversa de <span class="math inline">\(x\)</span> puede ser una buena alternativa al modelo cuadrático.</p>
-<div id="fig-molinoViento" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<p>La <a href="#fig-molinoViento" class="quarto-xref">Figura&nbsp;<span>11.12</span></a> (izquierda) muestra los datos de producción de electricidad de un aerogenerador según sea la velocidad del viento<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>. Se observa una relación no lineal ya que cuando la velocidad del viento es baja, pequeños incrementos en la velocidad tienen un impacto importante en la producción de electricidad, mientras que para velocidades altas la producción tiende a estabilizarse. Ajustando a una parábola se obtiene <span class="math inline">\(y = -1{,}156 + 0{,}7229x -0{,}03812x^2\)</span> con un coeficiente de determinación <span class="math inline">\(R^2 = 96{,}8\%\)</span>, lo cual no está nada mal.</p>
+<p>Otra opción es estudiar la producción de electricidad en función de la inversa de la velocidad del viento (figura de la derecha). Creamos la variable <span class="math inline">\(x' = 1/x\)</span> y obtenemos el ajuste: <span class="math inline">\(y = 2{,}979 - 6{,}935x'\)</span>, es decir: <span class="math inline">\(y = 2{,}979 - 6{,}935/x\)</span>, con un <span class="math inline">\(R^2 = 97{,}9\%\)</span>, que es también un valor excelente con un modelo más compacto. Trabajar con la inversa de <span class="math inline">\(x\)</span> puede ser una buena alternativa al modelo cuadrático.</p>
+<div id="fig-molinoViento" class="fig-normal_1112 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-molinoViento-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_11/f1112_molinoViento.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_11/f1112_molinoViento.png" class="fig-normal_1112 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-molinoViento-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;11.12: La relación se linealiza con el cambio de variable: <span class="math inline">\(x' = 1/x\)</span>
@@ -807,10 +818,10 @@ Figura&nbsp;11.12: La relación se linealiza con el cambio de variable: <span cl
 </div>
 <p>Pero tampoco se debe abusar de las transformaciones. Volviendo a los datos de la <a href="#fig-residuosSuma" class="quarto-xref">Figura&nbsp;<span>11.4</span></a> donde a partir de los pesos de 5 personas (efectivamente son muy pocas, es solo un ejemplo) queremos modelar la relación entre peso y estatura, el modelo lineal es el más razonable (<a href="#fig-ajustePolinomio" class="quarto-xref">Figura&nbsp;<span>11.13</span></a>). Si ajustamos los datos a un modelo cuadrático se tiene un máximo de peso en torno a una estatura de 175 cm lo cual no concuerda con lo que ya sabemos sobre esta relación. El polinomio de tercer grado presenta una forma que tampoco es razonable y el de cuarto grado es un modelo con 5 parámetros (los 4 coeficientes y la ordenada en el origen) y como tenemos 5 puntos, ajusta perfectamente, pero ni es un modelo razonable ni sirve para estimar el peso de un individuo a partir de su altura (sí lo explica para los 5 individuos usados para construir el modelo, pero para esos ya lo sabíamos).</p>
 <p>Recuerde que dos puntos se ajustan perfectamente a un modelo con dos parámetros (una recta), tres puntos a un modelo con tres parámetros… etc. Estos son modelos que explican muy bien lo que ya se sabe, pero son inútiles para hacer predicciones, que es lo que –en general– se pretende.</p>
-<div id="fig-ajustePolinomio" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-ajustePolinomio" class="fig-normal_1113 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ajustePolinomio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_11/f1113_ajustePolinomio.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_11/f1113_ajustePolinomio.png" class="fig-normal_1113 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ajustePolinomio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;11.13: Ir aumentando el grado del polinomio produce modelos con ajustes “forzados” que no sirven para hacer previsiones.
@@ -821,10 +832,10 @@ Figura&nbsp;11.13: Ir aumentando el grado del polinomio produce modelos con ajus
 <section id="transformación-logarítmica" class="level2" data-number="11.7">
 <h2 data-number="11.7" class="anchored" data-anchor-id="transformación-logarítmica"><span class="header-section-number">11.7</span> Transformación logarítmica</h2>
 <p>En algunos casos, los valores de <span class="math inline">\(X\)</span>, los de <span class="math inline">\(Y\)</span>, o ambos, siguen una distribución asimétrica, con valores que aparecen agrupados cerca del origen y muy dispersos hacia los valores altos. Un ejemplo típico de esta situación se da al analizar la relación entre el peso del cerebro y el peso del cuerpo en 62 especies de mamíferos<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>. La mayoría de esos mamíferos pesan poco –la mediana es 3,34 kg– pero algunos, como los elefantes, pesan varias toneladas y algo similar ocurre con el peso de los cerebros. Al realizar el diagrama bivariante del peso del cerebro (<span class="math inline">\(Y\)</span>) frente al peso de cuerpo (<span class="math inline">\(X\)</span>) prácticamente todos los puntos aparecen amontonados en la zona próxima al origen (<a href="#fig-brainBodyOriginal" class="quarto-xref">Figura&nbsp;<span>11.14</span></a>). En estas condiciones ajustar un modelo de regresión no tiene sentido, porque la mayoría de datos actúan como un solo punto y los que están alejados tienen una gran influencia sobre la recta ajustada.</p>
-<div id="fig-brainBodyOriginal" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-brainBodyOriginal" class="fig-normal_1114 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-brainBodyOriginal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_11/f1114_brainBodyOriginal.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_11/f1114_brainBodyOriginal.png" class="fig-normal_1114 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-brainBodyOriginal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;11.14: Diagrama bivariante, con histogramas marginales, del peso del cerebro frente al peso del cuerpo de 62 especies de mamíferos.
@@ -836,11 +847,11 @@ Figura&nbsp;11.14: Diagrama bivariante, con histogramas marginales, del peso del
 <li><p>Restringe la validez del modelo, ya no valdrá para todos los mamíferos considerados.</p></li>
 <li><p>Al eliminar esos valores y reescalar el gráfico aparecen otros valores anómalos: la persona humana (que da más reparo eliminar), la jirafa, el caballo, la vaca… y al final nos vamos quedando sin puntos.</p></li>
 </ol>
-<p>En casos como este, la transformación logarítmica “estira” los datos permitiendo un ajuste en el que todos los puntos tienen una influencia similar. Realizando esta transformación en nuestros datos se obtiene –casi parece un milagro– una nube de puntos tal como esperamos tener cuando ajustamos a una recta. El modelo obtenido es: <span class="math display">\[\log(Y) = 0,9271 + 0,7517 \log(X) \quad \text{con} \quad R^2 = 91,95\%\]</span> Volviendo a las variables originales nos queda (el peso del cuerpo está en kg y el del cerebro en g): <span class="math display">\[Y = 8,45 \cdot X^{3/4}\]</span></p>
-<div id="fig-brainBodyTransfo" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<p>En casos como este, la transformación logarítmica “estira” los datos permitiendo un ajuste en el que todos los puntos tienen una influencia similar. Realizando esta transformación en nuestros datos se obtiene –casi parece un milagro– una nube de puntos tal como esperamos tener cuando ajustamos a una recta. El modelo obtenido es: <span class="math display">\[\log(Y) = 0{,}9271 + 0{,}7517 \log(X) \quad \text{con} \quad R^2 = 91{,}95\%\]</span> Volviendo a las variables originales nos queda (el peso del cuerpo está en kg y el del cerebro en g): <span class="math display">\[Y = 8{,}45 \cdot X^{3/4}\]</span></p>
+<div id="fig-brainBodyTransfo" class="fig-normal_1115 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-brainBodyTransfo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_11/f1115_brainBodyTransfo.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_11/f1115_brainBodyTransfo.png" class="fig-normal_1115 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-brainBodyTransfo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;11.15: Peso del cerebro frente al peso del cuerpo antes y después de la transformación logarítmica.
@@ -869,21 +880,21 @@ Figura&nbsp;11.15: Peso del cerebro frente al peso del cuerpo antes y después d
 <section id="las-cosas-se-complican-lo-que-tenemos-es-una-muestra" class="level2" data-number="11.8">
 <h2 data-number="11.8" class="anchored" data-anchor-id="las-cosas-se-complican-lo-que-tenemos-es-una-muestra"><span class="header-section-number">11.8</span> Las cosas se complican: Lo que tenemos es una muestra</h2>
 <p>La interpretación de los resultados se complica cuando caemos en la cuenta de que los datos disponibles son solo una muestra de la población de interés. Supongamos que deseamos estudiar la relación entre el peso y la estatura de los jóvenes de cierta edad (haríamos bien en separar hombres y mujeres, pero aquí vamos a ignorar ese aspecto, que trataremos en el siguiente capítulo) y que disponemos de una muestra de 20 jóvenes. Con los datos de esa muestra ajustamos una recta como se ha realizado en la figura <a href="#fig-unaRegresionVA" class="quarto-xref">Figura&nbsp;<span>11.16</span></a> pero, en realidad, esa no es la recta que andamos buscando. Si hubiéramos tomado otra muestra, la recta sería otra –distinta– pero tan válida como la primera. Entonces, ¿cómo se interpreta la recta obtenida?</p>
-<div id="fig-unaRegresionVA" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-unaRegresionVA" class="fig-normal_1116 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-unaRegresionVA-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_11/f1116_unaRegresionVA.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%">
+<img src="Figuras_11/f1116_unaRegresionVA.png" class="fig-normal_1116 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-unaRegresionVA-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;11.16: Recta ajustada a partir de los datos de una muestra.
 </figcaption>
 </figure>
 </div>
-<p>Como en otros casos, una forma de ver lo que ocurre es simulando. En los diagramas de la <a href="#fig-regresionVariablesAleatorias" class="quarto-xref">Figura&nbsp;<span>11.17</span></a> las estaturas (<span class="math inline">\(X\)</span>) se han generado aleatoriamente de una distribución N(170; 8) y a cada estatura se le ha asignado un peso (<span class="math inline">\(Y\)</span>) mediante la expresión <span class="math inline">\(Y = X -100 +e\)</span>, donde <span class="math inline">\(e\)</span> es un valor también generado aleatoriamente de una distribución N(0;,5). Tanto los valores de la estatura (en cm) como los obtenidos para los pesos (en kg) son valores razonables para una población joven. Hemos repetido la simulación 6 veces y, como es natural, cada vez hemos obtenido unos datos distintos y, por tanto, también una recta ajustada distinta.</p>
-<div id="fig-regresionVariablesAleatorias" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<p>Como en otros casos, una forma de ver lo que ocurre es simulando. En los diagramas de la <a href="#fig-regresionVariablesAleatorias" class="quarto-xref">Figura&nbsp;<span>11.17</span></a> las estaturas (<span class="math inline">\(X\)</span>) se han generado aleatoriamente de una distribución N(170; 8) y a cada estatura se le ha asignado un peso (<span class="math inline">\(Y\)</span>) mediante la expresión <span class="math inline">\(Y = X -100 +e\)</span>, donde <span class="math inline">\(e\)</span> es un valor también generado aleatoriamente de una distribución N(0; 5). Tanto los valores de la estatura (en cm) como los obtenidos para los pesos (en kg) son valores razonables para una población joven. Hemos repetido la simulación 6 veces y, como es natural, cada vez hemos obtenido unos datos distintos y, por tanto, también una recta ajustada distinta.</p>
+<div id="fig-regresionVariablesAleatorias" class="fig-normal_1117 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-regresionVariablesAleatorias-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_11/f1117_regresionVariablesAleatorias.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_11/f1117_regresionVariablesAleatorias.png" class="fig-normal_1117 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-regresionVariablesAleatorias-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;11.17: Rectas ajustadas a partir de muestras de n=20 datos de una misma población. La línea negra representa el modelo teórico.
@@ -891,10 +902,10 @@ Figura&nbsp;11.17: Rectas ajustadas a partir de muestras de n=20 datos de una mi
 </figure>
 </div>
 <p>En la <a href="#fig-regreVAsuperpuestas" class="quarto-xref">Figura&nbsp;<span>11.18</span></a> (izquierda) se han superpuesto los 6 diagramas anteriores pudiéndose observar el haz de rectas que se obtiene. A la derecha tenemos la misma situación superponiendo 50 simulaciones (cada una con 20 datos) añadiendo, de color verde, la recta que representa el modelo teórico, es decir, la población.</p>
-<div id="fig-regreVAsuperpuestas" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-regreVAsuperpuestas" class="fig-normal_1118 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-regreVAsuperpuestas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_11/f1118_regreVAsuperpuestas.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_11/f1118_regreVAsuperpuestas.png" class="fig-normal_1118 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-regreVAsuperpuestas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;11.18: Superposición de 6 (izquierda) y 50 (derecha) simulaciones de conjuntos de 20 datos del modelo representado con una línea verde.
@@ -905,10 +916,10 @@ Figura&nbsp;11.18: Superposición de 6 (izquierda) y 50 (derecha) simulaciones d
 <section id="distribución-de-los-coeficientes" class="level2" data-number="11.9">
 <h2 data-number="11.9" class="anchored" data-anchor-id="distribución-de-los-coeficientes"><span class="header-section-number">11.9</span> Distribución de los coeficientes</h2>
 <p>La buena noticia distribución} es que si los datos cumplen ciertas condiciones –que en general se cumplirán– los valores de los coeficientes pertenecen a distribuciones Normales con parámetros conocidos<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>. Siguiendo con el ejemplo anterior hemos repetido 10.000 veces la simulación obteniendo otras tantas rectas ajustadas. La <a href="#fig-distribucionCoeficientes" class="quarto-xref">Figura&nbsp;<span>11.19</span></a> muestra los histogramas de los 10.000 valores obtenidos para <span class="math inline">\(b_0\)</span> y <span class="math inline">\(b_1\)</span>.</p>
-<div id="fig-distribucionCoeficientes" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-distribucionCoeficientes" class="fig-normal_1119 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-distribucionCoeficientes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_11/f1119_distribucionCoeficientes.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_11/f1119_distribucionCoeficientes.png" class="fig-normal_1119 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-distribucionCoeficientes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;11.19: Distribución de los coeficientes.
@@ -921,10 +932,10 @@ Figura&nbsp;11.19: Distribución de los coeficientes.
 <li><p><strong>Desviación típica de la respuesta (</strong><span class="math inline">\(\sigma\)</span>)}: A mayor variabilidad de la respuesta mayor incertidumbre y mayor variabilidad en la distribución de los coeficientes.</p></li>
 <li><p><strong>El rango de variación de</strong> <span class="math inline">\(x\)</span>: Si los valores de de la variable regresora están muy próximos a su media habrá mayor variabilidad en la distribución de los coeficientes. Quizá este aspecto no es tan intuitivo como los anteriores, pero se entiende muy bien a la vista de un gráfico como el de la <a href="#fig-regreRangoX" class="quarto-xref">Figura&nbsp;<span>11.20</span></a>. En la izquierda tenemos el mismo gráfico que en la <a href="#fig-regreVAsuperpuestas" class="quarto-xref">Figura&nbsp;<span>11.18</span></a> con valores de <span class="math inline">\(X\)</span> generados de una distribución N(170; 8) mientras que en el de la derecha se ha construido de la misma forma pero los valores de <span class="math inline">\(X\)</span> se han generado de una N(170; 3). Al tener menos variabilidad en los valores de <span class="math inline">\(X\)</span> tenemos mayor variabilidad en los coeficientes.</p></li>
 </ul>
-<div id="fig-regreRangoX" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-regreRangoX" class="fig-normal_1120 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-regreRangoX-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_11/f1120_regreRangoX.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_11/f1120_regreRangoX.png" class="fig-normal_1120 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-regreRangoX-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;11.20: La variabilidad de las rectas ajustadas depende del rango de X.
@@ -949,10 +960,10 @@ Figura&nbsp;11.20: La variabilidad de las rectas ajustadas depende del rango de 
 <section id="visión-intuitiva" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="visión-intuitiva">Visión intuitiva</h3>
 <p>Usaremos los datos que ya vimos (apartado #sec-calidadAjuste) sobre el volumen de madera que se obtiene de un árbol en función del diámetro de su tronco y sobre la edad al morir en función de la longitud de una línea de la mano. La <a href="#fig-ArbolManoModelos" class="quarto-xref">Figura&nbsp;<span>11.21</span></a> contiene las rectas ajustadas y algunos valores característicos de cada situación. Aunque a la vista de los gráficos ya se ve claro que en el caso del volumen de madera la pendiente es significativa y en el de la línea de la mano no lo es, vamos a comprobar por simulación que estamos en lo cierto.</p>
-<div id="fig-ArbolManoModelos" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-ArbolManoModelos" class="fig-normal_1121 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ArbolManoModelos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_11/f1121_ArbolManoModelos.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_11/f1121_ArbolManoModelos.png" class="fig-normal_1121 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ArbolManoModelos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;11.21: Modelos ajustados y valores característicos de cada conjunto de datos.
@@ -960,13 +971,13 @@ Figura&nbsp;11.21: Modelos ajustados y valores característicos de cada conjunto
 </figure>
 </div>
 <p>Si no hay ninguna relación entre la variable regresora (<span class="math inline">\(X\)</span>) y la respuesta (<span class="math inline">\(Y\)</span>), la pendiente de la recta estará en torno a cero (será igual a cero en la población, que en estos casos son modelos teóricos). Para ver lo que significa “en torno a cero” podemos simular nubes de puntos manteniendo las características de <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> y suponiendo que no existe ninguna relación entre ellas.</p>
-<p>En el caso del volumen de madera empezamos generando 31 números aleatorios (una cantidad igual a nuestro tamaño de muestra) que asignamos al diámetro de los troncos. Para que estos datos se puedan considerar del mismo tipo de los que tenemos en la muestra es razonable generarlos de una distribución Normal con la media <span class="math inline">\((\bar{x} = 13.25)\)</span> y la desviación típica <span class="math inline">\((s_X = 3.2)\)</span> de los valores que aparecen en la muestra, es decir: <span class="math inline">\(X \sim N(13.25; 3.2)\)</span>. A continuación, a cada valor de <span class="math inline">\(X\)</span> le hacemos corresponder un valor de <span class="math inline">\(Y\)</span> igual a la media de los valores disponibles <span class="math inline">\((\bar{y} = 30.2)\)</span> añadiendo un número aleatorio de una distribución Normal con media cero (ni sube ni baja de forma sistemática el valor de la respuesta) y una desviación típica igual a la que presentan los residuos del modelo ajustado <span class="math inline">\((s_R = 4.25)\)</span>. Por tanto, tendremos: <span class="math inline">\(Y = 30.2 + N(0; 4.25)\)</span>.</p>
-<p>Para el modelo de la edad al morir hacemos exactamente lo mismo con los valores que corresponden: <span class="math inline">\(n=50\)</span>; <span class="math inline">\(\bar{x}=9.2\)</span>; <span class="math inline">\(s_X = 1.27\)</span>; <span class="math inline">\(s_R=14.15\)</span>; <span class="math inline">\(\bar{y}=66.7\)</span>.</p>
+<p>En el caso del volumen de madera empezamos generando 31 números aleatorios (una cantidad igual a nuestro tamaño de muestra) que asignamos al diámetro de los troncos. Para que estos datos se puedan considerar del mismo tipo de los que tenemos en la muestra es razonable generarlos de una distribución Normal con la media <span class="math inline">\((\bar{x} = 13{,}25)\)</span> y la desviación típica <span class="math inline">\((s_X = 3{,}2)\)</span> de los valores que aparecen en la muestra, es decir: <span class="math inline">\(X \sim N(13{,}25; 3{,}2)\)</span>. A continuación, a cada valor de <span class="math inline">\(X\)</span> le hacemos corresponder un valor de <span class="math inline">\(Y\)</span> igual a la media de los valores disponibles <span class="math inline">\((\bar{y} = 30{,}2)\)</span> añadiendo un número aleatorio de una distribución Normal con media cero (ni sube ni baja de forma sistemática el valor de la respuesta) y una desviación típica igual a la que presentan los residuos del modelo ajustado <span class="math inline">\((s_R = 4{,}25)\)</span>. Por tanto, tendremos: <span class="math inline">\(Y = 30{,}2 + N(0; 4{,}25)\)</span>.</p>
+<p>Para el modelo de la edad al morir hacemos exactamente lo mismo con los valores que corresponden: <span class="math inline">\(n=50\)</span>; <span class="math inline">\(\bar{x}=9{,}2\)</span>; <span class="math inline">\(s_X = 1{,}27\)</span>; <span class="math inline">\(s_R=14{,}15\)</span>; <span class="math inline">\(\bar{y}=66{,}7\)</span>.</p>
 <p>Para cada conjunto de puntos simulados se ha calculado la recta ajustada. En los dos casos la simulación se ha repetido 50 veces y en los diagramas de la <a href="#fig-pruebasSignaficacion" class="quarto-xref">Figura&nbsp;<span>11.22</span></a> se han ido acumulando tanto los puntos como las rectas ajustadas. También se ha añadido, de color verde, la línea correspondiente a los datos de la muestra. Está muy claro que en el caso del volumen de madera, la recta ajustada con los datos de la muestra no se puede confundir con los generados aleatoriamente suponiendo que no hay relación entre ambas variables. Sin embargo, en el caso de la edad al morir, la recta que corresponde a los datos disponibles se confunde con las que hemos simulado, por tanto, el valor de la pendiente queda explicado por la variabilidad intrínseca de los datos, diremos que esa diferencia no es estadísticamente significativa.</p>
-<div id="fig-pruebasSignaficacion" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-pruebasSignaficacion" class="fig-normal_1122 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pruebasSignaficacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_11/f1122_pruebasSignaficacion.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_11/f1122_pruebasSignaficacion.png" class="fig-normal_1122 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pruebasSignaficacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;11.22: Rectas ajustadas considerando que no hay relación entre las variables y recta obtenida con los datos de la muestra (color verde).
@@ -1019,10 +1030,10 @@ Figura&nbsp;11.22: Rectas ajustadas considerando que no hay relación entre las 
 <section id="resultados-presentados-por-los-paquetes-de-software-estadístico" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="resultados-presentados-por-los-paquetes-de-software-estadístico">Resultados presentados por los paquetes de software estadístico</h4>
 <p>En general, además de presentar los coeficientes del modelo también presentan los <span class="math inline">\(p\)</span>-valores asociados a los contrastes que hemos comentado. La <a href="#fig-salidaSoftwareRegresion" class="quarto-xref">Figura&nbsp;<span>11.23</span></a> muestra parte de la salida que proporciona Minitab en los dos casos que estamos considerando. Tal como hemos visto, el <strong>T-value</strong> que aparece en el listado es simplemente el cociente entre el coeficiente (<strong>Coef</strong>) y su desviación típica (<strong>SE Coef</strong>) y el p-valor (<strong>P-Value</strong>) es el área de cola –multiplicada por 2, ya que es una prueba bilateral– que deja ese T-Value en una distribución t-Student con <span class="math inline">\(n-2\)</span> grados de libertad, siendo <span class="math inline">\(n\)</span> el número de puntos usados en cada caso.</p>
-<div id="fig-salidaSoftwareRegresion" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-salidaSoftwareRegresion" class="fig-normal_1123 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-salidaSoftwareRegresion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_11/f1123_salidaSoftwareRegresion.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_11/f1123_salidaSoftwareRegresion.png" class="fig-normal_1123 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-salidaSoftwareRegresion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;11.23: Salida del paquete de software estadístico Minitab al ajustar modelos de regresión en los dos ejemplos que hemos visto.
@@ -1082,10 +1093,10 @@ Figura&nbsp;11.23: Salida del paquete de software estadístico Minitab al ajusta
 
 </div>
 <p>La <a href="#fig-pendiente1" class="quarto-xref">Figura&nbsp;<span>11.24</span></a> (izquierda) muestra el diagrama bivariante de los valores medidos frente a los reales con su recta ajustada. El aparato estará bien calibrado si –en promedio– el valor de la concentración medida es igual a la concentración real. Es decir, si los datos se ajustan al modelo: <span class="math inline">\(y = x\)</span>.</p>
-<div id="fig-pendiente1" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-pendiente1" class="fig-normal_1124 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pendiente1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_11/f1124_pendiente1.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_11/f1124_pendiente1.png" class="fig-normal_1124 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pendiente1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;11.24: La recta ajustada no se confunde con las de pendiente igual a 1.
@@ -1093,17 +1104,17 @@ Figura&nbsp;11.24: La recta ajustada no se confunde con las de pendiente igual a
 </figure>
 </div>
 <p>Usando Minitab tenemos los coeficientes del modelo y la prueba de significación para sus valores (<a href="#fig-salidaConcentracion" class="quarto-xref">Figura&nbsp;<span>11.25</span></a>, izquierda).</p>
-<div id="fig-salidaConcentracion" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-salidaConcentracion" class="fig-normal_1125 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-salidaConcentracion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_11/f1125_salidaConcentracion.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_11/f1125_salidaConcentracion.png" class="fig-normal_1125 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-salidaConcentracion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;11.25: Ajuste habitual (mínimos cuadrados) y forzando a que la recta pase por el origen.
 </figcaption>
 </figure>
 </div>
-<p>Vemos que la ordenada en el origen (Minitab le llama “Constant” pero ya dijimos que esta no nos parece una denominación adecuada) no es significativamente distinta de cero por lo que hemos recalculado el modelo sin ese término. En el nuevo modelo el valor de <span class="math inline">\(b_1\)</span> (coeficiente de la concentración real) es claramente significativo (significativamente distinto de cero) pero no es eso lo que nos preocupa. Lo que queremos saber es si es significativamente distinto de 1. Minitab no lo hace automáticamente pero es muy fácil hacerlo a mano: <span class="math display">\[T =  \frac{b_1-1}{s_{b_1}} = \frac{0.95351-1}{0.00598} = -7.77\]</span> Si efectivamente <span class="math inline">\(\beta_1 = 1\)</span> el valor de <span class="math inline">\(T\)</span> pertenece a una distribución <span class="math inline">\(t\)</span>-Student, pero si lo fuera su valor estaría comprendido aproximadamente entre -2 y 2, y el valor que hemos obtenido está muy lejos de este intervalo. Por tanto, la hipótesis nula de que <span class="math inline">\(\beta_1=1\)</span> queda descartada. El aparato no está bien calibrado.</p>
+<p>Vemos que la ordenada en el origen (Minitab le llama “Constant” pero ya dijimos que esta no nos parece una denominación adecuada) no es significativamente distinta de cero por lo que hemos recalculado el modelo sin ese término. En el nuevo modelo el valor de <span class="math inline">\(b_1\)</span> (coeficiente de la concentración real) es claramente significativo (significativamente distinto de cero) pero no es eso lo que nos preocupa. Lo que queremos saber es si es significativamente distinto de 1. Minitab no lo hace automáticamente pero es muy fácil hacerlo a mano: <span class="math display">\[T =  \frac{b_1-1}{s_{b_1}} = \frac{0{,}95351-1}{0{,}00598} = -7{,}77\]</span> Si efectivamente <span class="math inline">\(\beta_1 = 1\)</span> el valor de <span class="math inline">\(T\)</span> pertenece a una distribución <span class="math inline">\(t\)</span>-Student, pero si lo fuera su valor estaría comprendido aproximadamente entre -2 y 2, y el valor que hemos obtenido está muy lejos de este intervalo. Por tanto, la hipótesis nula de que <span class="math inline">\(\beta_1=1\)</span> queda descartada. El aparato no está bien calibrado.</p>
 <p>En la <a href="#fig-pendiente1" class="quarto-xref">Figura&nbsp;<span>11.24</span></a> (derecha) se han representado las rectas ajustadas (color azul) de valores de la concentración medida (<span class="math inline">\(y\)</span>) en función de la concentración real (<span class="math inline">\(x\)</span>) generados con el modelo <span class="math inline">\(y = x + e\)</span> siendo <span class="math inline">\(e\)</span> valores de una distribución Normal con media cero y una desviación típica igual a la que presentan los residuos del modelo obtenido. La recta ajustada con los datos reales aparece de color verde (es la misma que tenemos en el diagrama de la izquierda), se ve que no se confunde con las generadas aleatoriamente suponiendo que el aparato está bien calibrado, a partir de una concentración de 50 tiende a dar valores menores que los reales.</p>
 </section>
 </section>
@@ -1111,13 +1122,13 @@ Figura&nbsp;11.25: Ajuste habitual (mínimos cuadrados) y forzando a que la rect
 <section id="intervalos-de-confianza-para-la-respuesta" class="level2" data-number="11.11">
 <h2 data-number="11.11" class="anchored" data-anchor-id="intervalos-de-confianza-para-la-respuesta"><span class="header-section-number">11.11</span> Intervalos de confianza para la respuesta</h2>
 <p>Volvamos a los datos del diámetro de los troncos y el volumen de madera que se extrajo de cada uno de ellos.</p>
-<p>Con la información disponible, la mejor predicción que podemos hacer del volumen de madera (<span class="math inline">\(Y\)</span>) que se obtendrá de un tronco de circunferencia <span class="math inline">\(X\)</span> es el valor que nos da la recta ajustada para ese valor de <span class="math inline">\(X\)</span>. Como el modelo ajustado es <span class="math inline">\(Y = -36.94 + 5.066  X\)</span> nuestra apuesta para el volumen de madera que se puede obtener de un tronco con una circunferencia de 20 in será: <span class="math inline">\(Y = -36.94 + 5.066 \cdot 20 = 64.4\)</span>, así de fácil.</p>
-<p>Pero ya sabemos que es mejor dar un intervalo de confianza que una predicción puntual. De acuerdo con los supuestos realizados sobre el comportamiento de los datos, para cada valor de <span class="math inline">\(X\)</span>, los valores de <span class="math inline">\(Y\)</span> siguen una distribución Normal centrada en la estimación puntual y con una desviación típica cuyo estimador es la desviación típica de los residuos. Sabemos que en una distribución Normal el 95 % de las observaciones están en el intervalo <span class="math inline">\(\mu \pm 1.96\sigma\)</span>. Si, como es habitual, ajustamos el modelo con un número de puntos no muy pequeño (en nuestro caso <span class="math inline">\(n=31\)</span>) podemos identificar <span class="math inline">\(\sigma\)</span> con su estimador <span class="math inline">\(s_R\)</span> y redondeando el 1,96 a 2 podemos establecer con un cálculo rápido que el intervalo de confianza del 95 % para la predicción es: <span class="math inline">\(\hat{y} \pm 2s_R\)</span>. Con nuestros números: <span class="math inline">\(64,4 \pm 2 \cdot 4,25 = (54,9;  73,9)\)</span></p>
+<p>Con la información disponible, la mejor predicción que podemos hacer del volumen de madera (<span class="math inline">\(Y\)</span>) que se obtendrá de un tronco de circunferencia <span class="math inline">\(X\)</span> es el valor que nos da la recta ajustada para ese valor de <span class="math inline">\(X\)</span>. Como el modelo ajustado es <span class="math inline">\(Y = -36.94 + 5.066  X\)</span> nuestra apuesta para el volumen de madera que se puede obtener de un tronco con una circunferencia de 20 in será: <span class="math inline">\(Y = -36{,}94 + 5{,}066 \cdot 20 = 64{,}4\)</span>, así de fácil.</p>
+<p>Pero ya sabemos que es mejor dar un intervalo de confianza que una predicción puntual. De acuerdo con los supuestos realizados sobre el comportamiento de los datos, para cada valor de <span class="math inline">\(X\)</span>, los valores de <span class="math inline">\(Y\)</span> siguen una distribución Normal centrada en la estimación puntual y con una desviación típica cuyo estimador es la desviación típica de los residuos. Sabemos que en una distribución Normal el 95 % de las observaciones están en el intervalo <span class="math inline">\(\mu \pm 1{,}96\sigma\)</span>. Si, como es habitual, ajustamos el modelo con un número de puntos no muy pequeño (en nuestro caso <span class="math inline">\(n=31\)</span>) podemos identificar <span class="math inline">\(\sigma\)</span> con su estimador <span class="math inline">\(s_R\)</span> y redondeando el 1,96 a 2 podemos establecer con un cálculo rápido que el intervalo de confianza del 95 % para la predicción es: <span class="math inline">\(\hat{y} \pm 2s_R\)</span>. Con nuestros números: <span class="math inline">\(64{,}4 \pm 2 \cdot 4{,}25 = (54{,}9;  73{,}9)\)</span></p>
 <p>Pero, naturalmente, lo más rápido y lo más cómodo es pedirle la predicción al paquete de software que ha realizado el ajuste. También se le puede pedir que represente las bandas de confianza para el modelo ajustado, tal como están representadas en la <a href="#fig-bandasConfianza" class="quarto-xref">Figura&nbsp;<span>11.26</span></a>.</p>
-<div id="fig-bandasConfianza" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-bandasConfianza" class="fig-normal_1126 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-bandasConfianza-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_11/f1126_bandasConfianza.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
+<img src="Figuras_11/f1126_bandasConfianza.png" class="fig-normal_1126 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bandasConfianza-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;11.26: Recta ajustada y bandas de confianza del 95 %
@@ -1167,10 +1178,10 @@ Figura&nbsp;11.26: Recta ajustada y bandas de confianza del 95 %
 <section id="ignorar-la-autocorrelación-de-las-observaciones" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="ignorar-la-autocorrelación-de-las-observaciones">Ignorar la autocorrelación de las observaciones</h4>
 <p>Cuando las observaciones se presentan en orden cronológico y el valor de una depende del de la anterior, como la evolución de la temperatura mínima diaria, los modelos de regresión no sirven para hacer previsiones. En el gráfico de la <a href="#fig-extrapolarSerieTiempo" class="quarto-xref">Figura&nbsp;<span>11.27</span></a> (derecha) una previsión a ojo mejora la que proporciona el modelo ajustado (la línea a trazos corresponde a un modelo cuadrático). Para estos casos tenemos otras herramientas que llamamos de análisis de series de tiempo, que tienen en cuenta la posible estacionalidad o periodicidad de los datos, además de su tendencia.</p>
-<div id="fig-extrapolarSerieTiempo" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-extrapolarSerieTiempo" class="fig-normal_1127 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-extrapolarSerieTiempo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_11/f1127_extrapolarSerieTiempo.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_11/f1127_extrapolarSerieTiempo.png" class="fig-normal_1127 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-extrapolarSerieTiempo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;11.27: No se debe extrapolar fuera del rango de variación de los datos ni usar modelos de regresión para hacer previsiones de datos obtenidos en orden cronológico.
@@ -1233,10 +1244,10 @@ Figura&nbsp;11.27: No se debe extrapolar fuera del rango de variación de los da
 <section id="apéndice-11.c-datos-que-no-cumplen-las-condiciones-requeridas" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="apéndice-11.c-datos-que-no-cumplen-las-condiciones-requeridas">APÉNDICE 11.C: Datos que no cumplen las condiciones requeridas</h2>
 <p>Se puede representar un triángulo en unos ejes de coordenadas generando 6 números aleatorios y agrupándolos en 3 parejas cada una de las cuales define un vértice. Hemos repetido esta operación 500 veces generando los números aleatorios de una distribución U(0; 150). De los 500 triángulos resultantes, hemos calculado su área y su perímetro. En la <a href="#fig-triangulos" class="quarto-xref">Figura&nbsp;<span>11.28</span></a> (izquierda) tenemos el diagrama bivariante de los resultados obtenidos.</p>
-<div id="fig-triangulos" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-triangulos" class="fig-normal_1128 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-triangulos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_11/f1128_triangulos.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_11/f1128_triangulos.png" class="fig-normal_1128 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-triangulos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;11.28: Datos que no cumplen las condiciones exigidas para realizar estimaciones de la forma habitual.
@@ -1247,10 +1258,10 @@ Figura&nbsp;11.28: Datos que no cumplen las condiciones exigidas para realizar e
 <p>En nuestro caso esa varianza claramente no es constante. Para valores bajos del perímetro hay muy poca variabilidad en el área (siempre pequeña) pero perímetros grandes pueden corresponder tanto a triángulos con área grande como con área pequeña cuando dos de sus ángulos son muy pequeños. En este tipo de situación no vale la teoría que hemos desarrollado.</p>
 <p>A la vista de la representación de los datos ya es evidente que la varianza no es constante, pero también el análisis de los residuos pone de manifiesto que algo falla: el gráfico de residuos frente a valores previstos (a la derecha) tiene forma de embudo, síntoma de una patología que llamamos <em>heterocedasticidad</em> y que significa que la variabilidad de <span class="math inline">\(Y\)</span> aumenta al aumentar el valor de <span class="math inline">\(X\)</span>.</p>
 <p>Una solución puede ser transformar los datos. El precio a pagar es que el modelo puede parecer caprichoso y poco interpretable. Con estos datos, si realizamos la transformación <span class="math inline">\(Y = \sqrt[3]{\text{Área}}\)</span>, no los deja en perfecto estado pero los arregla bastante (<a href="#fig-triangulosTransfo" class="quarto-xref">Figura&nbsp;<span>11.29</span></a>).</p>
-<div id="fig-triangulosTransfo" class="fig-normal6 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-triangulosTransfo" class="fig-normal_1129 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-triangulosTransfo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras_11/f1129_triangulosTransfo.png" class="fig-normal6 img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<img src="Figuras_11/f1129_triangulosTransfo.png" class="fig-normal_1129 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-triangulosTransfo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;11.29: Transformando los valores de alguna de las variables –o de ambas– se puede mejorar su comportamiento.

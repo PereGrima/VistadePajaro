@@ -82,6 +82,7 @@ format:
       - figuras_08.css
       - figuras_09.css
       - figuras_10.css
+      - figuras_11.css
     include-in-header:
       - text: |
           <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">

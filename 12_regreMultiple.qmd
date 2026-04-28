@@ -8,11 +8,11 @@ La respuesta es sencilla, es como la regresión simple pero con más de una vari
 
 De esta forma se amplían las posibilidades de explicar el comportamiento de la respuesta o de realizar previsiones sobre cuál será su valor en unas determinadas condiciones. Incluso las variables que, de manera aislada, no servirían para un modelo de regresión simple pueden resultar muy útiles cuando se combinan con otras en una regresión múltiple.
 
-En la [@fig-ventajasRM] tenemos una variable $y$ que muestra una cierta relación con $x_1$ ($R^2 = 0{,}65$) pero prácticamente ninguna con $x_2$ ($R^2 = 0{,}12$), sin embargo, usando las dos en un modelo de regresión múltiple la explicación del comportamiento de $y$ es muy buena, obteniéndose un valor de $R^2 = 0{,}98$.
+En la [@fig-ventajasRM] tenemos una variable $y$ que muestra una cierta relación con $x_1$ $\left( R^2 = 0{,}65 \right)$  pero prácticamente ninguna con $x_2$ $\left(R^2 = 0{,}12  \right)$, sin embargo, usando las dos en un modelo de regresión múltiple la explicación del comportamiento de $y$ es muy buena, obteniéndose un valor de $R^2 = 0{,}98$.
 
 Observe que de la misma forma que un modelo de regresión simple se ajusta a una línea, con dos variables se ajusta a un plano, y podríamos seguir hasta espacios con tantas dimensiones como variables regresoras. En la [@fig-ventajasRM] los puntos están muy pegados a la superficie ajustada, ayuda a verlo la línea vertical que sale de cada punto y que indica su distancia a la superficie, es decir, su residuo.
 
-![Las variables $x_1$ y $x_2$ conjuntamente explican mucho mejor la respuesta que considerándolas por separado.](Figuras_12/f1201_ventajasRM.png){#fig-ventajasRM .fig-normal0 fig-align="center" width="95%"}
+![Las variables $x_1$ y $x_2$ conjuntamente explican mucho mejor la respuesta que considerándolas por separado.](Figuras_12/f1201_ventajasRM.png){#fig-ventajasRM .fig-normal_1201 fig-align="center"}
 
 ## Variables candidatas y variables elegidas
 
@@ -65,8 +65,7 @@ Identificar cuales conviene incluir no es trivial. La [Tabla 12.1](#tbl-datosYX1
 </table>
 </div>
 ```
-
-![Respuesta frente a tres posibles variables regresoras. Se incluyen los valores del coeficiente de correlación.](Figuras_12/f1202_YX1X2X3.png){#fig-YX1X2X3 .fig-normal6 fig-align="center" width="95%"}
+![Respuesta frente a tres posibles variables regresoras. Se incluyen los valores del coeficiente de correlación.](Figuras_12/f1202_YX1X2X3.png){#fig-YX1X2X3 .fig-normal_1202 fig-align="center"}
 
 Si para realizar previsiones sobre el valor de $y$ solo pudiéramos elegir una de esas tres posibles variables regresoras, la elegida sería, sin ninguna duda, $x_2$, por ser la que presenta mayor correlación con la respuesta. Pero ¿y si pudiera elegir dos? Si está pensando que serían $x_2$ y $x_1$ —las dos más correlacionadas con la respuesta—, se equivoca. Las dos variables que mejor explican el comportamiento de $y$ son $x_1$ y $x_3$. Exactamente tenemos que: $y = x_1 + x_3$. Puede comprobarlo echando un vistazo a los valores de la tabla.
 
@@ -116,13 +115,13 @@ El modelo puede incluir variables cualitativas pero no tratadas como si fueran c
 
 Supongamos que tenemos los datos correspondientes al peso, la estatura y el sexo de 20 individuos. Se trata de encontrar una ecuación para explicar el peso en función de la estatura y el sexo. Lo primero será echar un vistazo a los datos a través de un gráfico. En este caso basta con un diagrama bivariante usando distinto símbolo según el sexo ([@fig-varCualitativa], primer cuadrante). Está claro que tanto la estatura como el sexo influyen en el peso.
 
-![Modelos para ajustar datos con una variable cualitativa.](Figuras_12/f1203_varCualitativa.png){#fig-varCualitativa .fig-normal0 fig-align="center" width="100%"}
+![Modelos para ajustar datos con una variable cualitativa.](Figuras_12/f1203_varCualitativa.png){#fig-varCualitativa .fig-normal_1203 fig-align="center"}
 
 Si ignoramos la variable "Sexo" podemos ajustar un modelo del peso solo en función de la estatura, el mismo para hombres que para mujeres ([@fig-varCualitativa], segundo cuadrante), pero es una lástima ignorar la influencia de una variable que sabemos que también afecta.
 
 Cuando tenemos una variable cualitativa que solo tiene dos categorías se puede introducir en el modelo codificándola con valores numéricos. Para facilitar la interpretación de los resultados lo mejor es codificar un valor como 0 y el otro como 1. En este caso convenimos: Mujer = 0 y Hombre = 1. Ajustando el modelo de regresión se obtiene:
 
-![](Figuras_12/f12035_modeloCualitativa_1.png){.fig-normal0 fig-align="center" width="80%"}
+![](Figuras_12/f12035_modeloCualitativa_1.png){.fig-normal_1200a width=475px fig-align="center"}
 
 Del resultado anterior se deduce que sí hay diferencias debido al sexo, ya que el coeficiente de esta variable es significativo. Sustituyéndola por sus valores 0 y 1, se obtienen los modelos específicos para mujeres y hombres:
 
@@ -134,7 +133,7 @@ Así de sencillo. El problema es que ajustando el modelo de esta forma la pendie
 
 Si queremos que las pendientes de las rectas puedan ser distintas deberemos incluir el producto de la variable cualitativa por las otras variables regresoras (en este caso solo la altura). De esta forma se obtiene:
 
-![](Figuras_12/f12036_modeloCualitativa_2.png){.fig-normal0 fig-align="center" width="82%"}
+![](Figuras_12/f12036_modeloCualitativa_2.png){.fig-normal_1200b width=500px fig-align="center"}
 
 La significación del término Altura\*Sexo pone de manifiesto la diferencia en las pendientes de las rectas. Los modelos que se obtienen son:
 
@@ -144,7 +143,6 @@ La significación del término Altura\*Sexo pone de manifiesto la diferencia en 
 En la [@fig-varCualitativa], cuarto cuadrante, tenemos su representación gráfica. Seguro que ahora nos quedamos más tranquilos con los ajustes obtenidos.
 
 ¿Y si la variable cualitativa tiene más de dos valores distintos? La regla general es que una variable cualitativa con $k$ valores debe sustituirse por $k-1$ variables binarias que toman valores 0 y 1. En el caso de la variable "día de la semana", como $k=7$ habrá que sustituirla por 6 variables binarias tal como se indica en la [Tabla 12.2](#tbl-VariablesCodificadas).
-
 
 ```{=html}
 <div id="tbl-VariablesCodificadas" class="tabla-wrapper_T1201">
@@ -180,7 +178,6 @@ En la [@fig-varCualitativa], cuarto cuadrante, tenemos su representación gráfi
 </table>
 </div>
 ```
-
 Si el número de observaciones de que se dispone no da para estimar con solvencia tantos coeficientes, una opción podría ser usar los días clasificados solo como laborables y festivos. Si esta división tiene interés en el marco de la situación que se está analizando, el análisis será más sencillo y la presentación de los resultados se podrá realizar de una forma más clara y compacta, lo cual también es importante.
 
 ## Medidas de calidad del ajuste en regresión múltiple
@@ -267,7 +264,7 @@ Ya hemos visto que por dos puntos pasa una recta (modelo con dos parámetros: $b
 
 Lo podemos ver gráficamente si en vez de cuatro variables distintas consideramos una y tres transformaciones de la misma, que es como tener cuatro variables regresoras. En la [@fig-puntosIgualParametros] (izquierda) tenemos cinco puntos y a la derecha esos mismos puntos con una curva que los ajusta perfectamente. No importa dónde estén esos puntos, siempre se pueden ajustar perfectamente a un polinomio de cuarto grado.
 
-![Cinco puntos se ajustan perfectamente a un polinomio de cuarto grado. No importa cuales sean esos puntos.](Figuras_12/f1204_puntosIgualParametros.png){#fig-puntosIgualParametros .fig-normal0 fig-align="center" width="100%"}
+![Cinco puntos se ajustan perfectamente a un polinomio de cuarto grado. No importa cuales sean esos puntos.](Figuras_12/f1204_puntosIgualParametros.png){#fig-puntosIgualParametros .fig-normal_1204 fig-align="center"}
 
 ::: callout-note
 ## Si el modelo se comporta demasiado bien, seguramente algo está mal
@@ -283,7 +280,7 @@ Si existen valores anómalos y estos pasan desapercibidos, el modelo obtenido pu
 
 Analizando las variables una a una se pueden identificar valores anómalos en cada una de ellas. Si tenemos un individuo que mide 2,30 m podemos decir que estamos ante un valor anómalo, pero si mide 1,85 diremos que es un individuo alto pero no un valor anómalo. Por otro lado, si una persona pesa 55 kg podemos pensar que está delgada, pero no que es un error. Sin embargo, si la persona que mide 1,85 pesa 55 kg --no analizándolas una a una, sino las dos a la vez-- está claro que estamos ante un valor anómalo ([@fig-anomalia2D]).
 
-![Valor anómalo que se detecta al realizar un diagrama bivariante, pero no analizando las variables una a una.](Figuras_12/f1205_anomalia2D.png){#fig-anomalia2D .fig-normal6 fig-align="center" width="100%"}
+![Valor anómalo que se detecta al realizar un diagrama bivariante, pero no analizando las variables una a una.](Figuras_12/f1205_anomalia2D.png){#fig-anomalia2D .fig-normal_1205 fig-align="center"}
 
 En la regresión simple estos casos se ven fácilmente realizando diagramas bivariantes, pero en regresión múltiple una observación puede ser anómala debido a los valores que toman varias de sus variables asociadas y esto no es fácil de ver gráficamente. Los valores pueden ser anómalos por dos razones:
 
@@ -300,7 +297,6 @@ El planteamiento matricial del cálculo de los coeficientes pone de manifiesto u
 ### Regresión simple {.unnumbered}
 
 Un modelo de regresión simple se puede escribir de manera compacta usando vectores y matrices (ambos en negrita) de la forma: $$\mathbf{Y} = \mathbf{X} \; \mathbf{b} + \mathbf{e} $$ Siendo $\mathbf{Y}$ el vector de respuestas, $\mathbf{b}$ el de coeficientes --que en el caso de la regresión simple tiene solo dos elementos--, $\mathbf{e}$ es el vector de residuos y $\mathbf{X}$ una matriz con dos columnas, en la primera contiene solo unos y la segunda los valores de la variable regresora. También podemos ignorar el vector de residuos y referirnos a los valores estimados: $\mathbf{\hat{Y}} = \mathbf{X} \; \mathbf{b}$. Veamos un ejemplo con números muy sencillos:
-
 
 ```{=html}
 <div class="tabla-wrapper_T1200">
@@ -325,7 +321,6 @@ Un modelo de regresión simple se puede escribir de manera compacta usando vecto
 </table>
 </div>
 ```
-
 Matricialmente escribimos el modelo de la forma:
 
 ```{=tex}
@@ -368,9 +363,9 @@ Matricialmente escribimos el modelo de la forma:
     \end{split}
 \end{equation*}
 ```
-Como solo tenemos tres observaciones, podemos representar en un espacio de tres dimensiones los vectores correspondientes a la respuesta **Y** y a las columnas de la matriz **X**, que llamamos **U** (vector de unos) y {$\textbf{X}_{\textbf{1}}$} (valores de la variable regresora) tal como se representa en la parte superior de la [@fig-vectores].
+Como solo tenemos tres observaciones, podemos representar en un espacio de tres dimensiones los vectores correspondientes a la respuesta **Y** y a las columnas de la matriz **X**, que llamamos **U** (vector de unos) y $\textbf{X}_{\textbf{1}}$ (valores de la variable regresora) tal como se representa en la parte superior de la [@fig-vectores].
 
-![Visión geométrica del planteamiento matricial de un sencillo modelo de regresión simple e identificación del vector de valores previstos.](Figuras_12/f1206_vectores.png){#fig-vectores .fig-normal6 fig-align="center" width="85%"}
+![Visión geométrica del planteamiento matricial de un sencillo modelo de regresión simple e identificación del vector de valores previstos.](Figuras_12/f1206_vectores.png){#fig-vectores .fig-normal_1206 fig-align="center"}
 
 Los vectores **U** y $\textbf{X}_{\textbf{1}}$ definen el plano que pasa por los puntos (0, 0, 0), (1, 1, 1) y (5, 0, 4). El vector correspondiente a los valores previstos $\mathbf{\hat{Y}}$ estará situado en ese mismo plano ya que es una combinación lineal de los vectores que aparecen en la matriz **X**: $$\mathbf{\hat{Y}}  = b_0 \cdot \mathbf{U} + b_1 \cdot \mathbf{X_1}$$ Por otra parte, minimizar la suma de los cuadrados de los residuos equivale a minimizar el módulo del vector: \$\mathbf{e} = \mathbf{Y} - \mathbf{\hat{Y}} \$. La forma de conseguirlo es haciendo que sea perpendicular al plano definido por $\mathbf{U}$ y $\mathbf{X_1}$. La ecuación de este plano se puede deducir teniendo en cuenta que pasa por los puntos (0, 0, 0), (1, 1, 1) y (5, 0, 4). Su expresión es: $$4x + y -5z = 0$$ y el punto de corte en este plano de una recta perpendicular trazada desde el punto (3, 1, 5) es: (29/7, 9/7, 25/7).
 
@@ -540,7 +535,6 @@ Veamos un ejemplo con números muy sencillos. Tenemos cinco observaciones y dos 
 </table>
 </div>
 ```
-
 Siguiendo el procedimiento que hemos visto:
 
 ```{=tex}

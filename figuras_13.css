@@ -1,0 +1,109 @@
+/*Figura 13.1*/
+/*=======================================*/
+
+.fig-normal_1301 {
+  margin-top: 0.4em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+.fig-normal_1301 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
+  padding-top: 7px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_1301 img {
+  width: 620px;
+}
+
+/*Figura 13.2*/
+/*=======================================*/
+
+.fig-normal_1302 {
+  margin-top: 0.8em;
+  margin-bottom: 0.1em;
+  text-align: center;
+}
+.fig-normal_1302 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.2; 
+  padding-top: 5px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_1302 img {
+  width: 650px;
+}
+
+/*Figura 13.3*/
+/*=======================================*/
+
+.fig-normal_1303 {
+  margin-top: 0.8em;
+  margin-bottom: 0.1em;
+  text-align: center;
+}
+.fig-normal_1303 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.2; 
+  padding-top: 5px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_1303 img {
+  width: 620px;
+}
+
+/*Figura 13.4*/
+/*=======================================*/
+
+.fig-normal_1304 {
+  margin-top: 0.8em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+.fig-normal_1304 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.2; 
+  padding-top: 7px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_1304 img {
+  width: 400px;
+}
+
+/*Figura 13.5*/
+/*=======================================*/
+
+.fig-normal_1305 {
+  margin-top: 0.8em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+.fig-normal_1305 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.1; 
+  padding-top: 7px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_1305 img {
+  width: 630px;
+}

@@ -26,13 +26,13 @@ Aunque están en formato Excel y son fáciles de manejar, hay que reorganizarlos
 
 Tener muchos datos a veces complica los análisis gráficos porque solo se observa una gran mancha de puntos en la que es imposible distinguir nada en particular. La [@fig-lunaLlena] muestra, para los años 2020-2023, el número de nacimientos por día de la semana, identificando con una línea horizontal negra el valor del percentil del 90% en cada grupo. Los valores correspondientes a días de luna llena --que aparecen identificados con un cuadrado rojo-- no destacan por ser singularmente altos. Realizando unos cálculos rápidos, en cada año tenemos 12-13 días de luna llena y un 10% de esos días (entre 1 y 2) deberían tener un número de nacimientos superior al percentil del 90%, y esto es lo que observamos.
 
-![Nacimientos en la Comunidad de Madrid por día de la semana en los años 2020-2023. La raya horizontal representa el percentil del 90% para los valores de ese día/año.](Figuras/f1301_lunaLlena.png){#fig-lunaLlena .fig-normal1 fig-align="center" width="100%"}
+![Nacimientos en la Comunidad de Madrid por día de la semana en los años 2020-2023. La raya horizontal representa el percentil del 90% para los valores de ese día/año.](Figuras/f1301_lunaLlena.png){#fig-lunaLlena .fig-normal_1301 fig-align="center"}
 
 Hemos dividido los datos por día de la semana porque se observa una clara disminución del número de nacimientos los fines de semana (y también los días festivos, aunque eso no lo hemos tenido en cuenta), seguramente debido al aumento de partos programados que siempre se realizan en día laborable.
 
 A veces buscando una cosa se encuentran otras, igual o más interesantes. En la [@fig-boxPlotLuna] se observa una disminución del número de nacimientos a partir de la crisis de 2008, y también que la diferencia entre los días laborables y fines de semana va aumentando hasta esa fecha y después parece tender a disminuir aunque se sigue manteniendo.
 
-![Número de nacimientos anuales los días entre semana (rojo) y los fines de semana (azul). Se han eliminado algunos valores claramente anómalos.](Figuras/f1302_boxPlotLuna.png){#fig-boxPlotLuna .fig-normal3 fig-align="center" width="100%"}
+![Número de nacimientos anuales los días entre semana (rojo) y los fines de semana (azul). Se han eliminado algunos valores claramente anómalos.](Figuras/f1302_boxPlotLuna.png){#fig-boxPlotLuna .fig-normal_1302 fig-align="center"}
 
 En esta línea de nacimientos y hospitales también se puede comparar la proporción de nacimientos por cesárea por región, por países, o por hospitales dentro de cada país, aunque no está claro que sea fácil conseguir los datos.
 
@@ -96,7 +96,7 @@ Por otra parte, medir la duración de una pila en una linterna no es trivial. La
 
 Una opción puede ser usar una célula fotoeléctrica (CF) y un despertador, con un montaje como el que se muestra en la [@fig-celulaFotoelectrica].
 
-![Esquema del montaje para medir la duración de una pila en una linterna.](Figuras/f1303_celulaFotoelectrica.png){#fig-celulaFotoelectrica .fig-normal3 fig-align="center" width="100%"}
+![Esquema del montaje para medir la duración de una pila en una linterna.](Figuras/f1303_celulaFotoelectrica.png){#fig-celulaFotoelectrica .fig-normal_1303 fig-align="center"}
 
 La CF actúa como un interruptor que permanece cerrado cuando la cantidad de luz que recibe está por encima de un cierto umbral. Este umbral se puede fijar al valor que se desee, aunque ese valor es poco importante si se mantiene constante.
 
@@ -104,7 +104,7 @@ La pila que se coloca en el despertador hace contacto normal en un extremo, pero
 
 Naturalmente, la linterna y la célula fotoeléctrica deben estar dentro de una caja opaca, tal como se muestra en la [@fig-cajaConLinterna].
 
-![Esquema del montaje para medir la duración de una pila en una linterna.](Figuras/f1304_cajaConLinterna.png){#fig-cajaConLinterna .fig-normal3 fig-align="center" width="75%"}
+![Esquema del montaje para medir la duración de una pila en una linterna.](Figuras/f1304_cajaConLinterna.png){#fig-cajaConLinterna .fig-normal_1304 fig-align="center"}
 
 Después de tener la duración de todas las pilas[^13_epilogo-3] en orden aleatorio --para que, si el orden de medida tiene alguna influencia, esta se difumine en los valores de las dos marcas--, solo habrá que representar los valores gráficamente, valorar lo que se hace con los posibles valores anómalos (¿por qué se han producido?: ¿error?, ¿pila con duración excepcional?) y seguramente con eso sea suficiente. En caso de duda, se puede realizar un test, que en este caso será el de la $t$ de Student para comparar las medias de muestras independientes, o uno basado en la diferencia en la suma de los números de orden que corresponden a cada grupo cuando se ordenan todos los resultados de menor a mayor.
 
@@ -148,9 +148,9 @@ Naturalmente, todos los factores que puedan afectar a la duración de las flores
 
 ::: {#fig-fotoflores}
 ::: {layout-ncol="2"}
-![](Figuras/f1305a_rosasMesa.png){width="60%"}
+![](Figuras/f1305a_rosasMesa.png){width="360px"}
 
-![](Figuras/f1305b_dosRosas.jpg){width="37.5%"}
+![](Figuras/f1305b_dosRosas.jpg){width="225px"}
 :::
 
 Mesa con 12 parejas de rosas (una con aspirina y la otra sin) dispuestas todas ellas al azar. A la derecha una pareja al cabo de unos días.

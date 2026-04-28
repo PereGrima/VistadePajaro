@@ -105,7 +105,14 @@ window.Quarto = {
 
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="figuras.css">
+<link rel="stylesheet" href="figuras_02.css">
+<link rel="stylesheet" href="figuras_03.css">
+<link rel="stylesheet" href="figuras_04.css">
+<link rel="stylesheet" href="figuras_05.css">
+<link rel="stylesheet" href="figuras_06.css">
 <link rel="stylesheet" href="figuras_07.css">
+<link rel="stylesheet" href="figuras_08.css">
+<link rel="stylesheet" href="figuras_09.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -579,16 +586,16 @@ window.Quarto = {
 <p>Si estamos dispuestos a tolerar un 5 % de unidades defectuosas, podemos tomar una muestra de 100 unidades y si aparecen como máximo 5 defectos (el 5 %) considerar que el lote es correcto, mientras que si se encuentran más de 5 considerar que no cumple con lo pactado y devolverlo o realizar las acciones que se hayan establecido si esto sucede.</p>
 <p>Parece que este procedimiento, al tolerar el mismo porcentaje de defectos en la muestra que en el lote, es el más justo, pero tiene algunos inconvenientes. Vamos a echar mano del cálculo de probabilidades para analizar lo que puede suceder.</p>
 <p>Supongamos que recibimos un lote con el 3 % de unidades defectuosas. Como está por debajo del 5 % deberíamos aceptarlo, pero puede ocurrir que –por casualidad– caigan muchas unidades defectuosas en la muestra y rechacemos el lote de manera injusta. Si el tamaño del lote es mucho mayor que el de la muestra -que es lo habitual– podemos considerar constante la probabilidad de que al extraer una unidad esta sea defectuosa<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> y podemos usar la distribución binomial para calcular la probabilidad de devolver “injustamente” ese lote con el 3 % de defectos. Sea <span class="math inline">\(X\)</span> el número de defectos encontrado en una muestra de <span class="math inline">\(n=100\)</span> unidades. Tenemos:</p>
-<p><span class="math display">\[\mathrm P(X &gt; 5; n=100; p=0.03) = 0.2115\]</span> También puede ocurrir que un lote que no cumple con lo establecido sea aceptado. Si el porcentaje de defectos es del 6% la probabilidad de ser aceptado es: <span class="math display">\[\mathrm P(X \leq 5; n=100; p=0.06) = 0.4407 \]</span> A la probabilidad de rechazar injustamente un lote que cumple con los requisitos establecidos se le denomina <strong>riesgo del vendedor</strong>, y la probabilidad de aceptarlo cuando no los cumple es el <strong>riesgo del comprador</strong>. En un contexto más general, se habla de falso positivo y falso negativo.</p>
+<p><span class="math display">\[\mathrm P(X &gt; 5; n=100; p=0{,}03) = 0{,}2115\]</span> También puede ocurrir que un lote que no cumple con lo establecido sea aceptado. Si el porcentaje de defectos es del 6% la probabilidad de ser aceptado es: <span class="math display">\[\mathrm P(X \leq 5; n=100; p=0{,}06) = 0{,}4407 \]</span> A la probabilidad de rechazar injustamente un lote que cumple con los requisitos establecidos se le denomina <strong>riesgo del vendedor</strong>, y la probabilidad de aceptarlo cuando no los cumple es el <strong>riesgo del comprador</strong>. En un contexto más general, se habla de falso positivo y falso negativo.</p>
 </section>
 <section id="curva-característica-de-un-plan-de-muestreo" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="curva-característica-de-un-plan-de-muestreo">Curva característica de un plan de muestreo</h3>
 <p>Dado un plan de muestreo, es decir, dados los valores de <span class="math inline">\(n\)</span> (número de unidades a inspeccionar) y <span class="math inline">\(c\)</span> (número máximo de defectos tolerado), la mejor forma de visualizar su comportamiento es mediante la curva que representa la probabilidad de aceptar el lote en función de la proporción de defectos que contiene. Esta curva se denomina <strong>curva característica del plan de muestreo</strong>.</p>
-<p>La <a href="#fig-curvaCaracteristica_100_5" class="quarto-xref">Figura&nbsp;<span>6.1</span></a>. muestra su construcción para el plan definido por <span class="math inline">\(n=100\)</span> y <span class="math inline">\(c=5\)</span> utilizando una hoja de cálculo. En la columna A se indica la proporción de defectos en el lote (<span class="math inline">\(p\)</span>) y en la columna C la probabilidad de aceptarlo: <span class="math inline">\(\text{P}(X \leq 5; n=100; p=p)\)</span>. También se incluye la que sería la “curva ideal”, con una probabilidad de aceptación igual a 1 para cualquier valor de la proporción de defectos menor o igual a 0,05, e igual a cero para valores mayores de esa proporción, pero esta curva solo se puede conseguir inspeccionando el lote completo.</p>
-<div id="fig-curvaCaracteristica_100_5" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<p>La <a href="#fig-curvaCaracteristica_100_5" class="quarto-xref">Figura&nbsp;<span>6.1</span></a>. muestra su construcción para el plan definido por <span class="math inline">\(n=100\)</span> y <span class="math inline">\(c=5\)</span> utilizando una hoja de cálculo. En la columna A se indica la proporción de defectos en el lote (<span class="math inline">\(p\)</span>) y en la columna C la probabilidad de aceptarlo: <span class="math inline">\(\text{P}(X \leq 5; \; n=100; \; p=p)\)</span>. También se incluye la que sería la “curva ideal”, con una probabilidad de aceptación igual a 1 para cualquier valor de la proporción de defectos menor o igual a 0,05, e igual a cero para valores mayores de esa proporción, pero esta curva solo se puede conseguir inspeccionando el lote completo.</p>
+<div id="fig-curvaCaracteristica_100_5" class="fig-normal_0601 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-curvaCaracteristica_100_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras/f0601_curvaCaracteristica_100_5.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+<img src="Figuras/f0601_curvaCaracteristica_100_5.png" class="fig-normal_0601 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-curvaCaracteristica_100_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;6.1: Construcción de la curva característica del plan de muestreo definido por n = 100 y c = 5. En trazo negro se muestra la que sería la curva ideal si se está dispuesto a tolerar un 5 % de defectos.
@@ -596,10 +603,10 @@ Figura&nbsp;6.1: Construcción de la curva característica del plan de muestreo 
 </figure>
 </div>
 <p>La curva característica también sirve para observar que un plan de muestreo no es necesariamente más riguroso por el hecho de no tolerar ni un solo defecto en la muestra (<span class="math inline">\(c=0\)</span>). La <a href="#fig-curvaCaracteristica_Compara" class="quarto-xref">Figura&nbsp;<span>6.2</span></a> añade la curva correspondiente al plan definido por <span class="math inline">\(n=10\)</span> y <span class="math inline">\(c=0\)</span>, donde puede observarse que la probabilidad de aceptación es muy alta para proporciones de defectos por encima de lo establecido. Esta figura también incluye la curva correspondiente al plan definido por <span class="math inline">\(n=500\)</span> y <span class="math inline">\(c=25\)</span>. A medida que aumenta el tamaño de la muestra, manteniendo una proporción de defectos igual a la permitida en el lote, la curva característica se va acercando a la curva ideal.</p>
-<div id="fig-curvaCaracteristica_Compara" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-curvaCaracteristica_Compara" class="fig-normal_0602 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-curvaCaracteristica_Compara-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras/f0602_curvaCaracteristica_Compara.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+<img src="Figuras/f0602_curvaCaracteristica_Compara.png" class="fig-normal_0602 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-curvaCaracteristica_Compara-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;6.2: Curvas características de los planes de muestreo que se indican. A medida que se aumenta el tamaño de la muestra, la curva se va acercando a la curva ideal.
@@ -657,10 +664,10 @@ Figura&nbsp;6.2: Curvas características de los planes de muestreo que se indica
 </ul>
 <p>Podemos asignar valores más bajos a <span class="math inline">\(\alpha\)</span> y <span class="math inline">\(\beta\)</span> pero cuanto menores sean estos (menos riesgos queramos correr) mayor saldrá el tamaño de la muestra.</p>
 <p>Los valores de AQL y <span class="math inline">\(1-\alpha\)</span> así como RQL y <span class="math inline">\(\beta\)</span> definen dos puntos en el gráfico de probabilidad de aceptación frente a la proporción de unidades defectuosas (<a href="#fig-puntosClave" class="quarto-xref">Figura&nbsp;<span>6.3</span></a>). Se trata de encontrar los valores de <span class="math inline">\(n\)</span> y <span class="math inline">\(c\)</span> que corresponden a la curva característica que más se acerca a esos puntos. Con los valores de la figura, este plan es el definido por <span class="math inline">\(n=87\)</span> y <span class="math inline">\(c=2\)</span>.</p>
-<div id="fig-puntosClave" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-puntosClave" class="fig-normal_0603 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-puntosClave-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras/f0603_puntosClave.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+<img src="Figuras/f0603_puntosClave.png" class="fig-normal_0603 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-puntosClave-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;6.3: Curva característica del plan de muestreo (<span class="math inline">\(n=87\)</span>, <span class="math inline">\(c=2\)</span>) que mejor se adapta a los puntos previamente definidos.
@@ -668,10 +675,10 @@ Figura&nbsp;6.3: Curva característica del plan de muestreo (<span class="math i
 </figure>
 </div>
 <p>Las expresiones que usamos para deducir los valores de <span class="math inline">\(n\)</span> y <span class="math inline">\(c\)</span> en función de AQL, RQL, <span class="math inline">\(\alpha\)</span> y <span class="math inline">\(\beta\)</span> se encuentran en la <a href="#fig-calculoPlanMuestreo" class="quarto-xref">Figura&nbsp;<span>6.4</span></a>. No parece fácil despejar los valores de <span class="math inline">\(n\)</span> y <span class="math inline">\(c\)</span> de esas expresiones, pero podemos elaborar un programa que para todas las parejas de valores <span class="math inline">\(n\)</span> y <span class="math inline">\(c\)</span> (dentro de unos límites, por ejemplo <span class="math inline">\(n \leq 200\)</span> y <span class="math inline">\(c \leq 6\)</span>) identifique la que corresponde al plan que mejor se adapta a los requisitos establecidos.</p>
-<div id="fig-calculoPlanMuestreo" class="fig-normal3 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-calculoPlanMuestreo" class="fig-normal_0604 quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-calculoPlanMuestreo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figuras/f0604_calculoPlanMuestreo.png" class="fig-normal3 img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+<img src="Figuras/f0604_calculoPlanMuestreo.png" class="fig-normal_0604 img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-calculoPlanMuestreo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;6.4: Curva característica del plan de muestreo (<span class="math inline">\(n=87\)</span>, <span class="math inline">\(c=2\)</span>) que mejor se adapta a los puntos previamente definidos.

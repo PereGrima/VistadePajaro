@@ -1,0 +1,175 @@
+/*Figura 10.1*/
+/*=======================================*/
+
+.fig-normal_1001 {
+  margin-top: 0.4em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+.fig-normal_1001 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
+  padding-top: 7px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_1001 img {
+  width: 350px;
+}
+
+/*Figura 10.2*/
+/*=======================================*/
+
+.fig-normal_1002 {
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+  text-align: center;
+}
+.fig-normal_1002 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
+  padding-top: 7px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_1002 img {
+  width: 650px;
+}
+
+/*Figura 10.3*/
+/*=======================================*/
+
+.fig-normal_1003 {
+  margin-top: 0.8em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+.fig-normal_1003 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
+  padding-top: 7px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_1003 img {
+  width: 525px;
+}
+
+/*Figura 10.4*/
+/*=======================================*/
+
+.fig-normal_1004 {
+  margin-top: 0.8em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+.fig-normal_1004 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
+  padding-top: 7px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_1004 img {
+  width: 575px;
+}
+
+/*Figura 10.5*/
+/*=======================================*/
+
+.fig-normal_1005 {
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+.fig-normal_1005 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
+  padding-top: 7px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_1005 img {
+  width: 350px;
+}
+
+/*Figura 10.6*/
+/*=======================================*/
+
+.fig-normal_1006 {
+  margin-top: 0.8em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+.fig-normal_1006 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
+  padding-top: 7px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_1006 img {
+  width: 375px;
+}
+
+/*Figura 10.7*/
+/*=======================================*/
+
+.fig-normal_1007 {
+  margin-top: 0.8em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+.fig-normal_1007 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
+  padding-top: 7px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_1007 img {
+  width: 550px;
+}
+
+/*Figura 10.8*/
+/*=======================================*/
+
+.fig-normal_1008 {
+  margin-top: 0.8em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+.fig-normal_1008 figcaption {
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.97em;
+  line-height: 1.15; 
+  padding-top: 7px;
+  padding-bottom: 20px;
+  color: #666 !important;
+}
+
+.fig-normal_1008 img {
+  width: 575px;
+}

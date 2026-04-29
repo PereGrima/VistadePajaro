@@ -635,7 +635,7 @@ Para realizar los cálculos consideramos que un año tiene 365 días (ignoramos 
 </table>
 </div>
 ```
-En un grupo de 30 personas solo se pueden dar dos situaciones: todos han nacido en días diferentes o, como mínimo, dos han nacido el mismo día, no pueden haber situaciones intermedias. Por tanto, si la probabilidad de que todos hayan nacido en días diferentes es $Q(30) = 0.2937$, la de que dos o más hayan nacido el mismo día será: $$ P(30) = 1- Q(30) = 1-0{,}2937 = 0{,}7063 $$
+En un grupo de 30 personas solo se pueden dar dos situaciones: todos han nacido en días diferentes o, como mínimo, dos han nacido el mismo día, no puede haber situaciones intermedias. Por tanto, si la probabilidad de que todos hayan nacido en días diferentes es $Q(30) = 0.2937$, la de que dos o más hayan nacido el mismo día será: $$ P(30) = 1- Q(30) = 1-0{,}2937 = 0{,}7063 $$
 
 Es inmediato deducir que la expresión general para $P(n)$ es: $$P(n) = 1-Q(n) = 1- \frac{365!}{365^n(365-n)!} $$
 

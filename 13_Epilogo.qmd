@@ -26,7 +26,7 @@ Aunque están en formato Excel y son fáciles de manejar, hay que reorganizarlos
 
 Tener muchos datos a veces complica los análisis gráficos porque solo se observa una gran mancha de puntos en la que es imposible distinguir nada en particular. La [@fig-lunaLlena] muestra, para los años 2020-2023, el número de nacimientos por día de la semana, identificando con una línea horizontal negra el valor del percentil del 90% en cada grupo. Los valores correspondientes a días de luna llena --que aparecen identificados con un cuadrado rojo-- no destacan por ser singularmente altos. Realizando unos cálculos rápidos, en cada año tenemos 12-13 días de luna llena y un 10% de esos días (entre 1 y 2) deberían tener un número de nacimientos superior al percentil del 90%, y esto es lo que observamos.
 
-![Nacimientos en la Comunidad de Madrid por día de la semana en los años 2020-2023. La raya horizontal representa el percentil del 90% para los valores de ese día/año.](Figuras/f1301_lunaLlena.png){#fig-lunaLlena .fig-normal_1301 fig-align="center"}
+![Nacimientos en la Comunidad de Madrid por día de la semana en los años 2020-2023. La raya horizontal representa el percentil del 90% para los valores de ese día/año. Los puntos rojos corresponden a los días de luna llena.](Figuras/f1301_lunaLlena.png){#fig-lunaLlena .fig-normal_1301 fig-align="center"}
 
 Hemos dividido los datos por día de la semana porque se observa una clara disminución del número de nacimientos los fines de semana (y también los días festivos, aunque eso no lo hemos tenido en cuenta), seguramente debido al aumento de partos programados que siempre se realizan en día laborable.
 

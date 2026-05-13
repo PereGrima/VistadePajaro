@@ -7,9 +7,7 @@ book:
   title: |
       <span style="font-size: 1.5em;">Estadística</span><br>
       <span style="font-size: 1em;">Entender - Aplicar - Enseñar</span>
-  subtitle:
-      De momento son pruebas  #  <span style="font-size: 1em;">Entender - Aplicar - Enseñar</span>
-  # date: today
+    # date: today
   # date-format: medium
   # author: "Roberto Behar G. / Pere Grima"
   sidebar:

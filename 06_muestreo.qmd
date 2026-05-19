@@ -62,9 +62,9 @@ Por otro lado, es posible obtener muestras representativas sin selección aleato
 
 ### ¿Como saber si mi muestra es representativa? {.unnumbered}
 
-No existen pruebas formales para verificar la representatividad de una muestra, y es una lástima, porque en muchos estudios estadísticos, donde hay profusión de test de todo tipo, se pasa por alto la justificación de la representatividad de la muestra como si esta fuera una característica innata de todas las muestras y no fuera necesario justificarla.
+No existen pruebas formales para verificar la representatividad de una muestra, y es una lástima, porque en muchos estudios estadísticos, donde abundan test de todo tipo, se pasa por alto la justificación de la representatividad de la muestra como si esta fuera una característica innata de todas las muestras y no fuera necesario justificarla.
 
-Una forma de validar la representatividad es comprobar que se resiste un duro interrogatorio que lo ponga en duda. Imagínese que le cuestionan esa representatividad por todas las razones que pueda imaginar (por ejemplo, usted solo ha entrevistado a los que vio con actitud de querer colaborar, y esos tendían a tener un determinada opinión...). Solo si es capaz de rebatir de manera convincente todas y cada una de esas objeciones, podrá considerar que su muestra es razonablemente representativa.
+Una forma de validar la representatividad consiste en comprobar que se resiste un duro interrogatorio que lo ponga en duda. Imagínese que le cuestionan esa representatividad por todas las razones que pueda imaginar (por ejemplo, que usted solo ha entrevistado a los que vio con actitud de querer colaborar, y que esos tendían a compartir una determinada opinión). Solo si es capaz de rebatir de manera convincente todas y cada una de esas objeciones podrá considerar que su muestra es razonablemente representativa.
 
 ## Encuestas. Aspectos a tener en cuenta
 
@@ -192,8 +192,7 @@ Supongamos que recibimos un lote con el 3 % de unidades defectuosas. Como está 
 
 [^06_muestreo-3]: El muestreo se realiza sin reposición, de manera que la proporción de unidades defectuosas va cambiando a medida que las vamos extrayendo. Sin embargo, si el tamaño del lote es mucho mayor que el de la muestra, los cambios en la proporción de defectos serán muy pequeños, de manera que pueden ser ignorados y considerar que la proporción se mantiene constante.}
 
-$$\mathrm P(X > 5; n=100; p=0{,}03) = 0{,}2115$$ 
-También puede ocurrir que un lote que no cumple con lo establecido sea aceptado. Si el porcentaje de defectos es del 6% la probabilidad de ser aceptado es: $$\mathrm P(X \leq 5; n=100; p=0{,}06) = 0{,}4407 $$ A la probabilidad de rechazar injustamente un lote que cumple con los requisitos establecidos se le denomina **riesgo del vendedor**, y la probabilidad de aceptarlo cuando no los cumple es el **riesgo del comprador**. En un contexto más general, se habla de falso positivo y falso negativo.
+$$\mathrm P(X > 5; n=100; p=0{,}03) = 0{,}2115$$ También puede ocurrir que un lote que no cumple con lo establecido sea aceptado. Si el porcentaje de defectos es del 6% la probabilidad de ser aceptado es: $$\mathrm P(X \leq 5; n=100; p=0{,}06) = 0{,}4407 $$ A la probabilidad de rechazar injustamente un lote que cumple con los requisitos establecidos se le denomina **riesgo del vendedor**, y la probabilidad de aceptarlo cuando no los cumple es el **riesgo del comprador**. En un contexto más general, se habla de falso positivo y falso negativo.
 
 ### Curva característica de un plan de muestreo {.unnumbered}
 
